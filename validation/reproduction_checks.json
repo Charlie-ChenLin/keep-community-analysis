@@ -3,8 +3,14 @@
   "missing_data_guidance_passed": true,
   "report_build_without_raw_data": true,
   "make_reproduce_passed": true,
-  "model_results_match": true,
-  "executed_notebook_cells": 9,
-  "pdf_pages": 20,
+  "primary_and_extension_results_match": true,
+  "executed_notebook_cells": {
+    "分析过程.ipynb": 9,
+    "扩展实验.ipynb": 10
+  },
+  "primary_numerical_checks": 13,
+  "extension_numerical_checks": 16,
+  "pdf_pages": 29,
+  "pptx_slides": 23,
   "python": "3.12.7"
 }

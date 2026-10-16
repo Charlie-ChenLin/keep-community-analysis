@@ -27,21 +27,23 @@ def evaluation_template():
 
 def main():
     evaluation_template()
-    nb=nbformat.read(ROOT/'分析过程.ipynb',4);nbformat.validate(nb)
-    cells=[c for c in nb.cells if c.cell_type=='code']
-    assert all(c.execution_count is not None for c in cells)
-    assert not any(o.output_type=='error' for c in cells for o in c.outputs)
-    assert len(fitz.open(ROOT/'分析报告.pdf'))==20
-    assert len(Presentation(ROOT/'演示文稿.pptx').slides)==16
+    for name in ['分析过程.ipynb','扩展实验.ipynb']:
+        nb=nbformat.read(ROOT/name,4);nbformat.validate(nb)
+        cells=[c for c in nb.cells if c.cell_type=='code']
+        assert all(c.execution_count is not None for c in cells)
+        assert not any(o.output_type=='error' for c in cells for o in c.outputs)
+    layout=json.loads((ROOT/'results/report_manifest.json').read_text())
+    assert len(fitz.open(ROOT/'分析报告.pdf'))==layout['pages']
+    assert len(Presentation(ROOT/'演示文稿.pptx').slides)==layout['slides']
     checks=json.loads((ROOT/'validation/numerical_checks.json').read_text());assert all(c['passed'] for c in checks)
     geometry=json.loads((ROOT/'validation/report_geometry.json').read_text());assert not geometry['overflow']
     files=[]
-    for name in ['README.md','DATA.md','.gitignore','Makefile','requirements.txt','2026Data/README.md','2026Data/Keep Data/README.md','2026Data/Keep Data/.gitkeep','references/README.md','references/.gitkeep','分析报告.pdf','分析报告.html','分析报告_可编辑.docx','演示文稿.pptx','汇报讲稿.txt','分析过程.ipynb','分析过程.html','互评报告模板.docx','小组项目作业.pdf']:
+    for name in ['README.md','DATA.md','.gitignore','Makefile','requirements.txt','2026Data/README.md','2026Data/Keep Data/README.md','2026Data/Keep Data/.gitkeep','references/README.md','references/.gitkeep','分析报告.pdf','分析报告.html','分析报告_可编辑.docx','演示文稿.pptx','汇报讲稿.txt','分析过程.ipynb','分析过程.html','扩展实验.ipynb','扩展实验.html','互评报告模板.docx','小组项目作业.pdf']:
         p=ROOT/name;assert p.exists(),p;files.append((p,name))
     # Optional presentation PDF only if it matches the current slide count.
     p=ROOT/'演示文稿.pdf'
     if p.exists():
-        assert len(fitz.open(p))==16
+        assert len(fitz.open(p))==layout['slides']
         assert p.stat().st_mtime >= (ROOT/'演示文稿.pptx').stat().st_mtime, 'Re-export the updated PPTX before packaging.'
         files.append((p,p.name))
     for folder,exts in [('code',{'.py','.json','.txt','.applescript'}),('results',{'.csv','.json','.log'}),('figures',{'.png'}),('validation',{'.json','.log','.png'})]:

@@ -58,7 +58,7 @@ def report_pages():
     add('SOCIAL MEDIA DATA ANALYSIS · 小组项目',TITLE,
         f'<div class="subtitle">{SUBTITLE}</div><div class="coverline"></div>'
         f'<p class="byline">{CFG["group"]}<br>{CFG["members"]}</p>'
-        '<div class="cover-meta">课程：社交媒体与网络分析<br>资料范围：课程提供的 Keep 社区帖子及评论<br>帖子发布时间：2020-11—2020-12（UTC）<br>分析完成日期：2026-10-16</div>'
+        f'<div class="cover-meta">课程：社交媒体与网络分析<br>资料范围：课程提供的 Keep 社区帖子及评论<br>帖子发布时间：2020-11—2020-12（UTC）<br>分析更新日期：{CFG.get("analysis_date", "2026-10-16")}</div>'
         '<h2>摘要</h2>'+para(f'本研究以Keep社区100位作者的9,532条帖子为样本，考察文本表达与点赞表现的关系。通过词典编码，将正文转换为长度、自律/目标词、社交称呼/互助词、积极表达词及问号等变量，并以ln(1+点赞数)为因变量建立作者与日期固定效应模型。在此基础上，利用去重后的11,595条评论构建有向加权互动网络，分析用户间的互动分布。')+
         para(f'回归结果表明，在控制作者、发帖日期、内容形式等因素后，五项核心文本特征的联合检验未达到统计显著水平（p={S["models"]["joint_focal_p"]:.3f}），对模型解释度的增量为{100*S["models"]["incremental_r2_text"]:.3f}个百分点。积极表达词呈负向关联，但经BH多重检验校正后q={MAIN.loc["positive_expression","q_bh_focal"]:.3f}，且PPML计数模型的置信区间包含零，说明这一关联的证据仍不充分。')+
         para(f'评论网络呈现较高的互动接收集中度，前10位账号接收了{pct(N["top10_received_share"])}的事件。这一结果受到样本选取与建边规则影响，适用于描述已采集的互动关系。总体而言，现有数据尚不足以支持通过特定词汇稳定提高点赞的策略；后续研究可结合曝光记录和用户层面的对照实验，进一步检验表达方式与互动质量的关系。')+
@@ -260,7 +260,8 @@ def report_pages():
         note(CFG['role_note'])+
         para('课程作业要求提交报告PDF、演示PPT及必要附件，压缩包命名为“第几组-社交媒体分析报告.zip”。原文件注明11月10日23:59提交、11月15日前完成个人互评，但未标明年份，具体时间以课程平台通知为准。')+
         note('本附录保留组号、成员和学号占位。分工表为待调整建议，须依据实际人数与贡献填写；每位成员应参与汇报，并独立完成个人互评。'))
-    return pages
+    from report_extensions import extend_report
+    return extend_report(pages,{'para':para,'table':table,'fig':fig,'note':note,'box':box,'ul':ul})
 
 
 def write_html(pages):
@@ -297,7 +298,7 @@ def write_docx(pages):
 
 
 def slide_specs():
-    return [
+    specs=[
       (TITLE,[SUBTITLE,CFG['group']+' · '+CFG['members'],'100位作者 · 9,532条帖子 · 11,595条去重评论'],None,
        '先介绍研究题目和成员。说明研究使用课程提供的Keep数据，帖子实际发表于2020年11—12月UTC，而不是文件名中的2022年。点赞是平台内反馈，不能代表运动效果。'),
       ('研究问题：表达方式与点赞有关吗？',['RQ1：帖子、表达方式与点赞如何分布？','RQ2：同一作者的文本特征与点赞是否相关？','RQ3：评论连接了谁，互动是否集中？'],None,
@@ -331,6 +332,8 @@ def slide_specs():
       ('小组分工与讨论',['成员A【待填写】：研究问题与背景（1—3页）','成员B【待填写】：数据与文本（4—7页）','成员C【待填写】：模型与检验（8—11页）','成员D【待填写】：网络、建议与总结（12—16页）','此为建议分工，须按真实人数和贡献修订。'],None,
        '感谢听众并进入讨论。每名组员应汇报自己实际负责的内容。请在提交前替换姓名、组号与学号，并修改为真实贡献。互评需每人独立据实完成，模板不代表完成记录。')
     ]
+    from report_extensions import extend_slides
+    return extend_slides(specs)
 
 
 def set_run_font(run,size=20,color=DARK,bold=False):
@@ -367,9 +370,10 @@ def write_slides():
         textbox(slide,.55,7.02,11.8,.25,'Keep课程样本；观察性分析。全部数值与口径见分析报告及附带结果。',size=10,color='#71818B')
         textbox(slide,12.25,7.02,.6,.25,str(i),size=10,color=BLUE)
         slide.notes_slide.notes_text_frame.text=speaker
-        notes.append(f'第{i}页　{title}\n建议用时：'+('30秒' if i in [1,16] else '45—60秒')+'\n'+speaker+'\n')
+        notes.append(f'第{i}页　{title}\n建议用时：'+('30秒' if i in [1,len(specs)] else '45—60秒')+'\n'+speaker+'\n')
     prs.save(ROOT/'演示文稿.pptx')
-    (ROOT/'汇报讲稿.txt').write_text('建议总时长约12—15分钟，按课程时间限制调整。\n组号/成员待定，分工只是可修改建议。\n\n'+'\n'.join(notes),encoding='utf-8')
+    duration='18—22' if len(specs)>16 else '12—15'
+    (ROOT/'汇报讲稿.txt').write_text(f'完整版建议总时长约{duration}分钟，按课程时间限制选取内容。\n组号/成员待定，分工只是可修改建议。\n\n'+'\n'.join(notes),encoding='utf-8')
 
 
 def notebook():

@@ -1,0 +1,91 @@
+[
+  {
+    "check": "扩展配置哈希对应本次分析",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "按媒体正文覆盖计数核对",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "主题权重非负且逐帖归一",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "主导主题数与占比核对",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "主题回归设计矩阵满秩",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "探索性主题回归BH校正复算",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "作者分组训练测试无重叠",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "作者分组每帖恰好一次留出",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "时间留出日期严格分离",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "全部16组留出MAE、RMSE、R²独立复算",
+    "passed": true,
+    "detail": {
+      "max_error": 4.440892098500626e-16
+    }
+  },
+  {
+    "check": "配对作者聚类自助区间用重复次数法复算",
+    "passed": true,
+    "detail": {
+      "max_error": 9.367506770274758e-17
+    }
+  },
+  {
+    "check": "作者剔除的三例与直接最小二乘一致",
+    "passed": true,
+    "detail": {
+      "max_error": 2.138168114784733e-13
+    }
+  },
+  {
+    "check": "预测TF-IDF的IDF仅对应训练正文计数",
+    "passed": true,
+    "detail": {
+      "training_documents": 7098,
+      "vocabulary": 12000
+    }
+  },
+  {
+    "check": "回复角色加总对应原网络事件",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "7天评论占比以全部去重评论复算",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "全部窗口网络与原结果一致",
+    "passed": true,
+    "detail": null
+  }
+]

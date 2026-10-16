@@ -16,6 +16,9 @@
 /results/post_features.csv
 /results/model_diagnostics.csv
 /results/text_coding_review.csv
+/results/extension_post_topics.csv
+/results/extension_predictions.csv
+/results/extension_topic_examples.csv
 
 # Environment, caches and transient export logs.
 .DS_Store

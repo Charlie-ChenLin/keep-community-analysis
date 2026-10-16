@@ -1,0 +1,69 @@
+{
+  "config_sha256": "454e32b48d9eb8eac64592173047619343893f892b1193b8bc6c2029803ea37d",
+  "as_of": "2026-10-17",
+  "sklearn_version": "1.5.1",
+  "coverage": {
+    "authors_without_visible_body": 5,
+    "authors_all_bodies_visible": 26,
+    "author_visible_share_median": 0.8428842504743833,
+    "missing_body_media_counts": {
+      "img": 1391,
+      "none": 2490,
+      "txt": 0,
+      "video": 103
+    },
+    "textual_body_rows": 5414
+  },
+  "topics": {
+    "documents": 2470,
+    "fitted_documents": 2478,
+    "near_zero_contribution_documents": 8,
+    "authors": 86,
+    "vocabulary": 1046,
+    "topics": 5,
+    "iterations": 37,
+    "converged": true,
+    "mean_top10_jaccard": 1.0,
+    "reference_topic": 2,
+    "joint_topic_p": 0.16567261471075317,
+    "regression_r2": 0.6122953430600628,
+    "regression_rank": 170,
+    "regression_parameters": 170,
+    "note": "主题回归和区间以本次拟合的主题特征为给定输入，未计入主题估计本身的不确定性。"
+  },
+  "prediction": {
+    "temporal_train_n": 7098,
+    "temporal_test_n": 2434,
+    "group_folds": 5,
+    "metrics_scale": "ln(1+点赞数)",
+    "temporal_test_start": "2020-12-15",
+    "hyperparameters_selected_on_test": false,
+    "interval_scope": "固定留出预测的作者聚类自助区间，不包含重新训练带来的变异。"
+  },
+  "influence": {
+    "deletions": 100,
+    "focal_terms": 5,
+    "max_coefficient_error_against_full_ols": 1.6356881127332912e-13
+  },
+  "comments": {
+    "collected_comments": 11595,
+    "median_lag_hours": 11.308333333333334,
+    "within_24_hours_share": 0.6449331608451919,
+    "within_7_days_share": 0.8219922380336352,
+    "reply_events": 4902,
+    "reply_role_counts": {
+      "其他用户回复帖主": 444,
+      "其他用户彼此回复": 97,
+      "帖主回复其他用户": 4361,
+      "根评论指向帖主": 6609
+    },
+    "incoming_root_threads": 6609,
+    "threads_with_observed_author_reply": 3770,
+    "observed_author_reply_thread_share": 0.5704342563171433,
+    "conditional_author_reply_median_hours": 2.0533333333333337,
+    "missing_direct_reply_comment_reference": 781,
+    "missing_parent_reference": 0,
+    "note": "比例以已采集记录为分母；未观测到帖主回应不等于实际未回应，时序也不是完整评论增长曲线。"
+  },
+  "elapsed_seconds": 4.46
+}
