@@ -1,0 +1,71 @@
+[
+  {
+    "check": "帖子行数、主键及特征行数一致",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "重复评论均完全相同",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "全部评论可关联帖子",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "点赞基本统计独立复算",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "浏览数异常计数",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "非覆盖帖评论数量保留缺失",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "独立矩阵算法复核5项系数、聚类标准误、p值及区间",
+    "passed": true,
+    "detail": {
+      "max_abs_error": 2.2432056212551288e-13,
+      "clusters": 100,
+      "rank": 182
+    }
+  },
+  {
+    "check": "网络事件与评论数核对",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "网络方向不含自环",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "节点入强度、出强度及边权总和一致",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "互惠率按有反向边的有向边占比独立复算",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "主模型与PPML设计矩阵满秩",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "PPML已收敛",
+    "passed": true,
+    "detail": ""
+  }
+]

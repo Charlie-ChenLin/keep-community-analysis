@@ -1,0 +1,88 @@
+{
+  "post_rows": 9532,
+  "authors": 100,
+  "comment_rows_raw": 13511,
+  "comment_rows_clean": 11595,
+  "comment_duplicate_rows": 1916,
+  "comment_authors": 2910,
+  "posts_with_collected_comments": 1323,
+  "missing_content": 3984,
+  "content_available": 5548,
+  "likes_exceed_views": 8286,
+  "post_time_utc_min": "2020-11-01T00:06:00Z",
+  "post_time_utc_max": "2020-12-31T23:58:49Z",
+  "post_time_local_min": "2020-11-01 08:06:00+08:00",
+  "post_time_local_max": "2021-01-01 07:58:49+08:00",
+  "comment_time_local_min": "2020-11-01 09:58:45+08:00",
+  "comment_time_local_max": "2021-08-26 11:14:15+08:00",
+  "likes_zero_share": 0.03787242971044901,
+  "likes_mean": 37.05318925723878,
+  "likes_median": 25.0,
+  "likes_max": 5126,
+  "likes_variance_mean": 164.79135674005454,
+  "top_author_post_count": 783,
+  "comment_unmatched_posts": 0,
+  "source_scope": "课程提供的100位作者样本，抽样机制不明；无抽样框与统一采集时点；非2022年或2026年样本",
+  "models": {
+    "incremental_r2_text": 0.0006456958849436756,
+    "joint_focal_F": 1.7522020673724363,
+    "joint_focal_p": 0.12979354832337936,
+    "trim_threshold_likes_p99": 227.38000000000102,
+    "ppml_converged": true,
+    "main_clusters": 100
+  },
+  "network": {
+    "nodes": 2932,
+    "edges": 4069,
+    "events": 11511,
+    "self_loops_removed": 84,
+    "unresolved": 0,
+    "before_post_removed": 0,
+    "density": 0.0004734868319693096,
+    "reciprocity": 0.4964364708773654,
+    "weak_components": 35,
+    "largest_weak_component": 2768,
+    "largest_weak_component_share": 0.9440654843110505,
+    "root_comment_events": 6609,
+    "reply_events": 4902,
+    "reply_only_nodes": 1074,
+    "reply_only_edges": 1271,
+    "reply_only_reciprocity": 0.2989771833202203,
+    "top10_received_share": 0.5400920858309444,
+    "top1_received_share": 0.11971158022760837,
+    "to_sample_author_share": 0.612892016332204,
+    "sample_author_nodes": 77,
+    "comment_actor_union": 2946
+  },
+  "provenance": [
+    {
+      "file": "2026Data/Keep Data/sample_post_2022.csv",
+      "sha256": "74f2ed2878852f00618db3ae0b9f8c468a4f760e603dcb98c8a286a47919582c",
+      "bytes": 2084274
+    },
+    {
+      "file": "2026Data/Keep Data/sample_comment_2022.csv",
+      "sha256": "7a7a7e1f2462fc457ed7110266fbacbd2998f0f302f86eef7ca1202c9da53355",
+      "bytes": 2723421
+    },
+    {
+      "file": "code/text_dictionary.json",
+      "sha256": "286863310b58f95b49fe39d6bb6492816ed6a7df5b83c8f460a9c96cb5e0912b",
+      "bytes": 812
+    },
+    {
+      "file": "code/stopwords.txt",
+      "sha256": "b11ff810ee5c8934dc46b57f3a1ba85457e3893e89acdafb5cd286570fe793a3",
+      "bytes": 9131
+    }
+  ],
+  "versions": {
+    "pandas": "2.2.2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "statsmodels": "0.14.2",
+    "networkx": "3.3",
+    "jieba": "0.42.1",
+    "matplotlib": "3.9.2"
+  }
+}

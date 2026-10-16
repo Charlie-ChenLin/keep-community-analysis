@@ -1,0 +1,20 @@
+# Course-supplied datasets and teaching materials stay local.
+/2026Data/
+/references/
+/reference_text/
+/小组项目作业.pdf
+*.zip
+
+# Row-level records and text excerpts are reproducible from the local inputs.
+/results/post_features.csv
+/results/model_diagnostics.csv
+/results/text_coding_review.csv
+
+# Environment, caches and transient export logs.
+.DS_Store
+__pycache__/
+*.py[cod]
+*.cache
+*.log
+/.venv/
+/validation/submission_manifest.json
