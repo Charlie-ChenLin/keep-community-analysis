@@ -1,6 +1,13 @@
 # Course-supplied datasets and teaching materials stay local.
-/2026Data/
-/references/
+/2026Data/*
+!/2026Data/README.md
+!/2026Data/Keep Data/
+/2026Data/Keep Data/*
+!/2026Data/Keep Data/.gitkeep
+!/2026Data/Keep Data/README.md
+/references/*
+!/references/.gitkeep
+!/references/README.md
 /reference_text/
 /小组项目作业.pdf
 *.zip
@@ -17,4 +24,6 @@ __pycache__/
 *.cache
 *.log
 /.venv/
+/.env
+/.env.*
 /validation/submission_manifest.json

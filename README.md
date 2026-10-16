@@ -1,95 +1,132 @@
-# Keep 社区文本与互动网络小组项目
+# Keep 社区文本表达与互动分析
 
-已按照《小组项目作业.pdf》完成描述统计、非结构化文本转结构化、回归、文本与网络分析、结果解释和建议。全部产出位于本目录，原始输入未修改。
+本项目基于课程提供的Keep社区数据，研究帖子表达方式与点赞数的关系，并利用评论数据分析用户间的互动结构。分析包括数据清洗、描述统计、文本编码、固定效应回归、稳健性检验及有向加权网络分析。
 
-本仓库公开项目代码、报告和汇总结果。课程原始数据、逐帖记录、讲义与本地提交ZIP未上传；完整计算的输入文件及校验值见[数据说明](DATA.md)。
+研究题目：**什么样的健身分享更容易获得点赞？**
 
-## 先看哪些文件
+## 报告与主要发现
 
-- `分析报告.pdf`：20页正式报告。
-- `演示文稿.pptx`：16页可编辑演示稿，每页含演讲者备注。
-- `汇报讲稿.txt`：逐页讲稿和建议用时。
-- `分析报告_可编辑.docx`：方便填成员信息及修改文字；分页以正式PDF为准。
-- `分析报告.html`：正式PDF的同源排版稿，需要与`figures/`同目录使用。
-- `分析过程.ipynb`、`分析过程.html`：已从头执行并保留输出的分析过程及无需Jupyter的浏览版本。
-- `results/`、`figures/`：可检查的特征、统计表、模型结果和7张图。
-- `code/`：清洗、词典、分析、独立验证、排版和打包程序。
-- `validation/`：独立数值复核、页面布局核查、运行日志和预览图。
+- [分析报告 PDF](分析报告.pdf)：正式报告，20页。
+- [可编辑报告 DOCX](分析报告_可编辑.docx)：与HTML/PDF使用同一文字来源。
+- [演示文稿 PPTX](演示文稿.pptx)及[阅读版 PDF](演示文稿.pdf)：16页，附演讲者备注；逐页讲稿见`汇报讲稿.txt`。
+- [分析过程 Notebook](分析过程.ipynb)及[静态 HTML](分析过程.html)：保存已执行的代码、表格和图形。
 
-## 提交前填写
+样本包含100位作者的9,532条帖子，以及去重后的11,595条评论。主模型控制作者、发帖日期、内容形式等因素后，五项核心文本特征的联合检验不显著（p=0.130）。积极表达词虽呈负向关联，但经BH校正后q=0.079，且PPML计数模型的置信区间包含零。现有证据尚不足以支持通过特定词汇稳定提高点赞的策略。
 
-组号、小组成员姓名及学号暂未确定，封面和末页已保留`【待填写】`占位。
+评论网络包含2,932个有边节点、4,069条有向边，前10位账号接收54.0%的互动事件。该集中度受到样本边界和建边规则影响，仅用于描述已采集的互动关系。
 
-`code/project_config.json`保存这些信息和可调整的四人分工建议。请按实际人数、完成情况和课程汇报时长修改。它不代表真实贡献记录。更新配置后可重建报告和PPT；也可直接修改DOCX/PPTX。DOCX的手工修改不会自动进入HTML/PDF。
+## 项目结构
 
-原作业要求每位成员参与汇报；每人的互评必须依据真实贡献独立完成。`互评报告模板.docx`是空白模板，并未代填评价。ZIP名中的组号也要更换。
-
-课程PDF写明11月10日23:59提交、11月15日前互评，但没有明确年份；本项目不推断该日期是否适用于当前学期，请以课程平台通知为准。
-
-## 研究结论与口径
-
-研究题目：什么样的健身分享更容易获得点赞？
-
-- 使用课程提供的100位作者、9532条帖子；抽样机制未知。帖子发布时间为2020年11—12月UTC，本地时间末尾跨至2021-01-01；不是2022/2026年样本。
-- 评论13511行中1916行为完全重复，去重后11595条。仅1323帖有采集到的评论，其余不赋为零评论。
-- 3984帖无可用正文；保留并设置指示变量。8286帖点赞高于浏览数，因字段口径不可确认，不计算点赞率。
-- 主模型控制作者、日期、形式、业务类型、时段及辅助文本标记，按100位作者聚类。五项核心文本特征联合检验p=0.130；积极表达词原始p=0.016，BH q=0.079，PPML区间跨零。没有充分证据支持稳定的高赞词汇策略。
-- 评论网络2932节点、4069边、11511次非自我互动，前10位接收54.0%。结果受作者抽样和根评论建边规则影响，不是平台总体影响力。
-- 文本词典只是字面代理。40个分层检查单元由Codex辅助核查语义边界，非独立人工双编码，不声称准确率。
-
-## 运行环境
-
-推荐Python 3.11；分析实际使用版本见`results/summary.json`。安装：
-
-```bash
-python -m pip install -r requirements.txt
+```text
+.
+├── README.md                       # 项目说明与复现步骤
+├── DATA.md                         # 输入来源、观测时间与SHA-256
+├── Makefile                        # 分步执行和完整复现命令
+├── requirements.txt                # Python依赖
+├── 2026Data/
+│   ├── README.md
+│   ├── Keep Data/
+│   │   ├── .gitkeep
+│   │   ├── sample_post_2022.csv      # 自行放入；不跟踪
+│   │   └── sample_comment_2022.csv   # 自行放入；不跟踪
+│   └── KeepData_dictionary.pdf      # 可选字段字典；不跟踪
+├── references/                     # 本地课程讲义；含放置说明
+├── code/
+│   ├── check_inputs.py             # 输入检查，不依赖分析库
+│   ├── analyze.py                  # 清洗、文本、模型、网络与图表
+│   ├── text_dictionary.json         # 词典及操作性定义
+│   ├── annotate_review.py          # 辅助语义抽查记录
+│   ├── validate.py                 # 独立数值核查
+│   ├── project_config.json         # 题目、成员和分工占位
+│   ├── build_deliverables.py        # 报告、演示稿及Notebook构建
+│   ├── render_outputs.py           # HTML转PDF与版面检查
+│   ├── export_notebook.py          # Notebook静态HTML导出
+│   ├── export_slides.applescript    # macOS下PowerPoint原生导出
+│   └── package_submission.py       # 本地课程提交包
+├── results/                        # 汇总结果与匿名网络表
+├── figures/                        # 7张分析图
+├── validation/                     # 数值核查、版面核查与预览
+├── 分析报告.{html,pdf}
+├── 分析报告_可编辑.docx
+├── 分析过程.{ipynb,html}
+├── 演示文稿.{pptx,pdf}
+├── 汇报讲稿.txt
+└── 互评报告模板.docx
 ```
 
-不需要在线API、爬虫、数据库或付费模型。统计分析可以离线运行。PDF打印需本机Chrome/Chromium与Playwright；字体推荐可显示中文的TrueType字体。Mac默认字体路径是`/Library/Fonts/Arial Unicode.ttf`，其他系统可设置：
+公开仓库保留代码、报告、汇总统计和匿名网络结果。课程原始数据、逐帖特征、评论文本抽查记录、讲义原件及包含这些文件的提交ZIP保留在本地，具体范围见[数据说明](DATA.md)。数据目录及说明文件已纳入版本控制，克隆后可直接放入输入文件。
+
+## 安装与数据配置
+
+建议使用Python 3.11或3.12。在仓库根目录创建环境并安装依赖：
 
 ```bash
-export REPORT_FONT='/你的中文字体绝对路径.ttf'
-export CHROME_PATH='/你的Chrome或Chromium可执行文件路径'
+python3.12 -m venv .venv
+source .venv/bin/activate
+make install
 ```
 
-## 完整复现
+Windows可使用`.venv\Scripts\activate`激活环境；没有Make时可按下表直接运行Python命令。
 
-先进入本目录，再按顺序执行：
+将两份课程CSV放入`2026Data/Keep Data/`，保持原文件名，然后执行：
 
 ```bash
-python code/analyze.py
-python code/annotate_review.py
-python code/validate.py
-python code/build_deliverables.py
-python -m jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=600 分析过程.ipynb
-python code/export_notebook.py
-python code/render_outputs.py
-python code/package_submission.py
+make check-data
 ```
 
-`build_deliverables.py`会重新生成Notebook模板，故其后需要执行Notebook。每个代码单元和模型均实际运行；报告和PPT读取同一批已生成的结果，不使用演示数据。模型为确定性计算；分层抽查和网络布局的随机种子为20261016。
+该命令检查文件是否齐全，并核对DATA.md记录的SHA-256。文件名含“2022”，但帖子实际发表于2020年11—12月（UTC）；本地日期的末尾跨至2021-01-01。分析不使用其余课程数据集。
 
-如果只修改组员配置而不想重跑Notebook，在Python中调用`build_deliverables.write_html(build_deliverables.report_pages())`、`write_docx(...)`和`write_slides()`，再运行`render_outputs.py`与`package_submission.py`即可。直接运行构建脚本的标准完整流程更方便复现。
+## 复现分析
 
-分析输入路径为`2026Data/Keep Data/`。停用词在工作目录可读取课程微博数据中的原文件；提交包使用相同内容的`code/stopwords.txt`，无需其余数据集。根目录数据字典和`references/`中的课程参考资料仅在ZIP中额外随附。
+完成输入配置后，运行：
 
-`演示文稿.pdf`若存在，是PowerPoint原生导出的便携阅读副本，重建PPT后需要用PowerPoint重新导出；不是核心复现步骤的必需输入。PPTX本身始终由本地Python脚本生成。
+```bash
+make reproduce
+```
 
-Mac已安装PowerPoint时，可执行`osascript code/export_slides.applescript "$PWD/演示文稿.pptx" "$PWD/演示文稿.pdf"`重新导出。打包程序会检查已有演示PDF是否晚于PPTX，以免附上旧版本。
+命令按顺序完成统计分析、Notebook执行、报告导出和PPTX生成。完整计算不调用在线API。分层抽查和网络布局使用固定随机种子20261016，实际分析库版本见`results/summary.json`。
 
-## 可复核文件
+| 目标 | 用途 | 对应命令 |
+| --- | --- | --- |
+| `make analyze` | 清洗、文本编码、全部模型、网络与数值核查 | `python code/analyze.py`，再运行`annotate_review.py`、`validate.py` |
+| `make validate` | 独立复核现有数值结果 | `python code/validate.py` |
+| `make notebook` | 重新执行Notebook并导出静态HTML | `python -m jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=600 分析过程.ipynb`，再运行`code/export_notebook.py` |
+| `make report` | 根据已有结果生成HTML、DOCX和PDF | `python code/build_deliverables.py --report-only`，再运行`code/render_outputs.py` |
+| `make slides` | 根据已有结果生成PPTX与讲稿 | `python code/build_deliverables.py --slides-only` |
+| `make slides-pdf` | 可选：用PowerPoint导出PPT阅读版 | 仅适用于已安装PowerPoint的macOS |
 
-| 文件 | 说明 |
-| --- | --- |
-| `results/summary.json` | 时间范围、数据质量计数、网络统计、原文件哈希、实际库版本 |
-| `results/post_features.csv` | 每帖一行的模型输入，作者匿名化 |
-| `code/text_dictionary.json` | 完整词表与匹配定义 |
-| `results/text_coding_review.csv` | 40个检查单元及辅助语义判断 |
-| `results/regression_coefficients.csv` | 主模型、基础规格、全部敏感性规格的系数、SE、p、95%区间及主模型BH q |
-| `results/model_fit.csv` | 样本量、作者数、矩阵秩、R²、聚类自由度和PPML收敛情况 |
-| `results/network_edges.csv` | 匿名有向加权边表 |
-| `results/network_nodes.csv` | 匿名节点、入出度、加权入出度及PageRank |
-| `validation/numerical_checks.json` | 13项独立数值核查，含手算聚类协方差与t推断 |
-| `validation/report_geometry.json` | HTML各页正文与页脚位置，核对溢出 |
+`make report`和`make slides`可以使用仓库现有汇总结果，无需原始CSV。只改报告文字时，使用`make report`即可保留已执行的Notebook和现有演示稿。无参数运行`build_deliverables.py`则会重建全部交付物及Notebook模板，之后需要重新执行Notebook。
 
-参考文献与讲义页码均列于报告。本地作业包不包含未使用的B站、微博、密室、知乎等数据集。公开仓库的文件范围见DATA.md；课程提交和个人互评由小组另行完成。
+PDF导出需要Chrome/Chromium。脚本优先使用`CHROME_PATH`指定的浏览器或本机Chrome；没有本机浏览器时，可安装Playwright提供的Chromium：
+
+```bash
+python -m playwright install chromium
+```
+
+图表需要中文字体。macOS默认使用`/Library/Fonts/Arial Unicode.ttf`；其他系统可安装中文字体，并按需设置：
+
+```bash
+export REPORT_FONT='/绝对路径/中文字体.ttf'
+export CHROME_PATH='/绝对路径/Chrome或Chromium可执行文件'
+```
+
+`REPORT_FONT`用于Matplotlib图表。HTML/PDF使用系统中的中文字体；跨系统导出时应检查字体是否正确显示。PPTX重建后，原有演示PDF需要重新导出。
+
+## 方法与核查
+
+- 正文中的词典变量是字面表达的代理，不是心理或情感量表。40个分层检查单元由Codex辅助核查语义边界，未采用独立人工双编码。
+- 正文缺失的3,984帖保留并设指示变量；仅1,323帖有采集到的评论，其余不赋为零评论。
+- 点赞与记录浏览数的统计口径无法确认，因此不计算点赞率。
+- 主模型采用作者与日期固定效应，标准误按100位作者聚类；五项核心特征进行BH校正。
+- `validation/numerical_checks.json`记录13项独立核查，包括另一套矩阵计算对系数、聚类标准误、p值和置信区间的复算。
+- `validation/report_geometry.json`记录PDF来源HTML的正文与页脚位置；预览图用于人工检查排版。
+
+主要结果文件为`results/regression_coefficients.csv`、`results/model_fit.csv`、`results/text_features_summary.csv`及`results/summary.json`。原始输入与逐帖中间文件需要本地数据；公开仓库中的Notebook保留了可直接阅读的执行输出。
+
+## 课程提交
+
+组号、姓名、学号和实际分工尚未确定，统一保存在`code/project_config.json`中。请按真实情况填写后重新生成报告和演示稿；DOCX/PPTX中的直接修改不会自动写回代码来源。
+
+`make submission`用于生成本地课程提交ZIP，还需要作业PDF、字段字典和参考讲义，放置方式见`references/README.md`。压缩包包含原始课程数据，已通过`.gitignore`排除。若目录内存在演示PDF，打包前需确认它已根据最新PPTX导出。
+
+`互评报告模板.docx`仅为空白模板，须由各成员依据实际贡献独立填写。原作业PDF注明11月10日23:59提交、11月15日前互评，但未标明年份，具体日期以课程平台通知为准。

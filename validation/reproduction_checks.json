@@ -1,0 +1,10 @@
+{
+  "public_input_directories_present": true,
+  "missing_data_guidance_passed": true,
+  "report_build_without_raw_data": true,
+  "make_reproduce_passed": true,
+  "model_results_match": true,
+  "executed_notebook_cells": 9,
+  "pdf_pages": 20,
+  "python": "3.12.7"
+}

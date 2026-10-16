@@ -12,10 +12,12 @@ ROOT=Path(__file__).resolve().parents[1]
 
 async def render():
     chrome=os.environ.get('CHROME_PATH') or shutil.which('google-chrome') or shutil.which('chromium')
-    if not chrome:
+    if not chrome and Path('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome').is_file():
         chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
     async with async_playwright() as pw:
-        browser=await pw.chromium.launch(executable_path=chrome,headless=True)
+        launch_options={'headless':True}
+        if chrome:launch_options['executable_path']=chrome
+        browser=await pw.chromium.launch(**launch_options)
         page=await browser.new_page(viewport={'width':1100,'height':1200},device_scale_factor=1)
         await page.goto((ROOT/'分析报告.html').as_uri(),wait_until='networkidle')
         await page.evaluate('document.fonts.ready')
