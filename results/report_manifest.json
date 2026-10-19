@@ -1,6 +1,6 @@
 {
-  "pages": 36,
-  "slides": 23,
+  "pages": 33,
+  "slides": 21,
   "report": "分析报告.html",
   "pdf": "分析报告.pdf",
   "pptx": "演示文稿.pptx",
@@ -43,14 +43,13 @@
         "4.2",
         "4.3",
         "4.4",
-        "4.5",
-        "4.6"
+        "4.5"
       ]
     },
     {
       "number": 5,
       "title": "文本与网络分析",
-      "page": 18,
+      "page": 17,
       "subsections": [
         "5.1",
         "5.2",
@@ -64,22 +63,20 @@
     {
       "number": 6,
       "title": "结果与解释",
-      "page": 25,
+      "page": 24,
       "subsections": [
         "6.1",
         "6.2",
         "6.3",
         "6.4",
         "6.5",
-        "6.6",
-        "6.7",
-        "6.8"
+        "6.6"
       ]
     },
     {
       "number": 7,
       "title": "建议",
-      "page": 33,
+      "page": 30,
       "subsections": [
         "7.1",
         "7.2"
@@ -228,19 +225,11 @@
       "chapter": 4
     },
     {
-      "level": 2,
-      "section": "4.6",
-      "title": "样本外预测实验设计",
-      "anchor": "section-4-6",
-      "page": 17,
-      "chapter": 4
-    },
-    {
       "level": 1,
       "section": "",
       "title": "第五章 文本与网络分析",
       "anchor": "chapter-5",
-      "page": 18,
+      "page": 17,
       "chapter": 5
     },
     {
@@ -248,7 +237,7 @@
       "section": "5.1",
       "title": "TF-IDF表示与NMF主题建模",
       "anchor": "section-5-1",
-      "page": 18,
+      "page": 17,
       "chapter": 5
     },
     {
@@ -256,7 +245,7 @@
       "section": "5.2",
       "title": "主题分布及其作者集中度",
       "anchor": "section-5-2",
-      "page": 19,
+      "page": 18,
       "chapter": 5
     },
     {
@@ -264,7 +253,7 @@
       "section": "5.3",
       "title": "评论关系识别与建图规则",
       "anchor": "section-5-3",
-      "page": 20,
+      "page": 19,
       "chapter": 5
     },
     {
@@ -272,7 +261,7 @@
       "section": "5.4",
       "title": "网络连通性与互惠性",
       "anchor": "section-5-4",
-      "page": 21,
+      "page": 20,
       "chapter": 5
     },
     {
@@ -280,7 +269,7 @@
       "section": "5.5",
       "title": "互动接收的集中度",
       "anchor": "section-5-5",
-      "page": 22,
+      "page": 21,
       "chapter": 5
     },
     {
@@ -288,7 +277,7 @@
       "section": "5.6",
       "title": "评论时序与互动角色",
       "anchor": "section-5-6",
-      "page": 23,
+      "page": 22,
       "chapter": 5
     },
     {
@@ -296,7 +285,7 @@
       "section": "5.7",
       "title": "评论观察窗口的敏感性",
       "anchor": "section-5-7",
-      "page": 24,
+      "page": 23,
       "chapter": 5
     },
     {
@@ -304,7 +293,7 @@
       "section": "",
       "title": "第六章 结果与解释",
       "anchor": "chapter-6",
-      "page": 25,
+      "page": 24,
       "chapter": 6
     },
     {
@@ -312,7 +301,7 @@
       "section": "6.1",
       "title": "主回归结果",
       "anchor": "section-6-1",
-      "page": 25,
+      "page": 24,
       "chapter": 6
     },
     {
@@ -320,7 +309,7 @@
       "section": "6.2",
       "title": "回归系数的量级与解释",
       "anchor": "section-6-2",
-      "page": 26,
+      "page": 25,
       "chapter": 6
     },
     {
@@ -328,7 +317,7 @@
       "section": "6.3",
       "title": "样本与模型设定的稳健性",
       "anchor": "section-6-3",
-      "page": 27,
+      "page": 26,
       "chapter": 6
     },
     {
@@ -336,7 +325,7 @@
       "section": "6.4",
       "title": "逐作者剔除的敏感性",
       "anchor": "section-6-4",
-      "page": 28,
+      "page": 27,
       "chapter": 6
     },
     {
@@ -344,31 +333,15 @@
       "section": "6.5",
       "title": "主题权重的回归检验",
       "anchor": "section-6-5",
-      "page": 29,
+      "page": 28,
       "chapter": 6
     },
     {
       "level": 2,
       "section": "6.6",
-      "title": "留出预测结果",
-      "anchor": "section-6-6",
-      "page": 30,
-      "chapter": 6
-    },
-    {
-      "level": 2,
-      "section": "6.7",
-      "title": "预测不确定性与重复文本检验",
-      "anchor": "section-6-7",
-      "page": 31,
-      "chapter": 6
-    },
-    {
-      "level": 2,
-      "section": "6.8",
       "title": "综合讨论与研究局限",
-      "anchor": "section-6-8",
-      "page": 32,
+      "anchor": "section-6-6",
+      "page": 29,
       "chapter": 6
     },
     {
@@ -376,7 +349,7 @@
       "section": "",
       "title": "第七章 建议",
       "anchor": "chapter-7",
-      "page": 33,
+      "page": 30,
       "chapter": 7
     },
     {
@@ -384,7 +357,7 @@
       "section": "7.1",
       "title": "内容表达与社区互动建议",
       "anchor": "section-7-1",
-      "page": 33,
+      "page": 30,
       "chapter": 7
     },
     {
@@ -392,7 +365,7 @@
       "section": "7.2",
       "title": "后续研究与对照实验方案",
       "anchor": "section-7-2",
-      "page": 34,
+      "page": 31,
       "chapter": 7
     },
     {
@@ -400,7 +373,7 @@
       "section": "",
       "title": "参考文献与复现说明",
       "anchor": "references",
-      "page": 35,
+      "page": 32,
       "chapter": 8
     },
     {
@@ -408,7 +381,7 @@
       "section": "",
       "title": "附录：课程要求与小组分工",
       "anchor": "appendix",
-      "page": 36,
+      "page": 33,
       "chapter": 8
     }
   ]

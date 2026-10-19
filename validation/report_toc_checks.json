@@ -1,15 +1,15 @@
 {
   "scope": "Seven-chapter structure, contents links and rendered report layout.",
-  "report_pages": 36,
+  "report_pages": 33,
   "chapters": 7,
-  "subsections": 31,
+  "subsections": 28,
   "toc_pages": [
     2,
     3
   ],
-  "toc_entries": 40,
-  "pdf_link_targets_verified": 40,
-  "pdf_target_headings_verified": 40,
-  "pdf_outline_entries": 40,
+  "toc_entries": 37,
+  "pdf_link_targets_verified": 37,
+  "pdf_target_headings_verified": 37,
+  "pdf_outline_entries": 37,
   "report_geometry_no_overflow": true
 }

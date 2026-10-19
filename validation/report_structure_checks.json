@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "comparison_commit": "6b45e36827a4cbb5828be8322017af987fbf973f",
+  "comparison_commit": "34b203c4479f7b0eee1afba4dbc6c63ac979070e",
   "chapters_in_requested_order": [
     "研究题目",
     "研究问题的意义",
@@ -10,16 +10,24 @@
     "结果与解释",
     "建议"
   ],
-  "subsections": 31,
-  "html_links_verified": 40,
+  "subsections": 28,
+  "report_pages": 33,
+  "html_links_verified": 37,
   "docx_chapter_headings": 7,
-  "docx_numbered_subsection_headings": 31,
-  "docx_hyperlinks_and_page_reference_fields_verified": 40,
-  "original_analytical_tables_retained": 32,
-  "course_requirement_mapping_updated": true,
-  "original_figures_retained": 13,
+  "docx_numbered_subsection_headings": 28,
+  "docx_hyperlinks_and_page_reference_fields_verified": 37,
+  "prediction_sections_removed": [
+    "4.6 样本外预测实验设计",
+    "6.6 留出预测结果",
+    "6.7 预测不确定性与重复文本检验"
+  ],
+  "prediction_research_question_and_narrative_removed": true,
+  "remaining_comparable_tables_unchanged": 27,
+  "retained_figures_unchanged": 11,
   "figure_numbers_sequential": true,
-  "statistical_results_notebooks_and_slides_unchanged": true,
-  "make_report_without_raw_data_passed": true,
-  "clean_rebuild_html_and_manifest_match": true
+  "statistical_results_and_experiment_notebooks_unchanged": true,
+  "slides": 21,
+  "slides_and_speaker_notes_prediction_branch_absent": true,
+  "make_report_and_slides_without_raw_data_passed": true,
+  "clean_rebuild_html_manifest_and_slide_text_match": true
 }

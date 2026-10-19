@@ -35,8 +35,8 @@ def organize_report(pages, ui, title):
         '有助于识别哪些表面差异可能来自作者构成，避免把高赞帖中常见的词语直接解释为有效的表达策略。')
     rationale += para(
         '在方法层面，正文缺失、评论采集范围和累计点赞观察时长共同决定了分析能够回答的问题。'
-        '本研究据此结合可复现的词典编码、固定效应回归、主题建模与样本外预测，'
-        '分别检验内容的条件关联和预测信息，并用评论网络补充描述用户之间的回应关系。')
+        '本研究据此结合可复现的词典编码、固定效应回归与主题建模，'
+        '考察不同层次的文本表示与点赞的条件关联，并用评论网络补充描述用户之间的回应关系。')
     rationale += para(
         '在实践层面，研究为内容提示和社区互动方案提供评估依据。若某些表达的关联并不稳定，'
         '就不宜仅凭词频或单一模型的显著性推广固定文案；若互动主要围绕帖主展开，'
@@ -72,7 +72,6 @@ def organize_report(pages, ui, title):
         ['RQ1：内容与反馈如何分布？', '点赞明显长尾，内容形式之间存在原始差异；正文覆盖不均，低频文本特征的作者内变动有限。'],
         ['RQ2：文本与点赞是否相关？', '五项核心特征联合检验p=0.130，新增解释度为0.065个百分点。积极表达词的负系数经BH校正后证据不足，且PPML区间包含零。'],
         ['RQ3：评论如何连接用户？', '前10位账号接收54.0%的互动事件，89.0%的明确回复由帖主发出；结构指标受到建边范围与评论窗口影响。'],
-        ['RQ4：文本能否改善预测？', '词典及字符文本的配对误差差异区间均包含零，两类留出评估未显示明确、稳定的文本增益。'],
     ], [34, 66])
     discussion += str(conclusion[2])
     discussion += '<h2>研究局限</h2>' + str(conclusion[6]) + str(conclusion[7])
@@ -117,7 +116,7 @@ def organize_report(pages, ui, title):
     topic += '<h2>研究路径</h2>' + para(
         '研究先描述样本与反馈分布，再将非结构化正文转换为可检验的变量，'
         '通过作者与日期固定效应回归考察条件关联。主题建模用于补充识别内容模式，'
-        '时间留出与作者分组评估用于检验文本的预测信息，评论网络则用于描述回应关系。'
+        '主题权重进一步进入回归以检验其条件关联，评论网络则用于描述回应关系。'
         '最后综合各类证据，讨论结论的适用范围并提出后续建议。')
     topic += note('数据使用范围为2026Data/Keep Data内的两份课程CSV；文件名中的“2022”不作为实际观测年份。')
 
@@ -138,7 +137,6 @@ def organize_report(pages, ui, title):
             ('语义测量局限与抽查', take('词典编码的语义局限与抽查')),
             ('从组间差异到作者内比较', take('从组间差异到作者内比较')),
             ('固定效应模型与统计推断', take('固定效应模型与统计推断')),
-            ('样本外预测实验设计', take('文本特征能否改善样本外预测？')),
         ],
         [
             ('TF-IDF表示与NMF主题建模', take('TF-IDF与非负矩阵分解的主题分析')),
@@ -155,8 +153,6 @@ def organize_report(pages, ui, title):
             ('样本与模型设定的稳健性', take('积极表达的负关联对模型设定敏感')),
             ('逐作者剔除的敏感性', take('逐作者剔除后的系数敏感性')),
             ('主题权重的回归检验', topic_regression),
-            ('留出预测结果', take('留出预测中的文本增益有限')),
-            ('预测不确定性与重复文本检验', take('预测增益的不确定性与重复文本敏感性')),
             ('综合讨论与研究局限', discussion),
         ],
         [('内容表达与社区互动建议', recommendations), ('后续研究与对照实验方案', future_design)],
@@ -188,13 +184,13 @@ def organize_report(pages, ui, title):
     appendix = appendix.replace('数据、描述统计与文本分析部分；代码及Notebook', '第3章；清洗代码及已执行Notebook')
     appendix = appendix.replace('文本编码、主题与回归部分；特征表及模型结果', '第4章与第6章；特征表及模型结果')
     appendix = appendix.replace('已完成词典内容分析、分词统计及评论网络', '第5章；主题建模与有向加权评论网络')
-    appendix = appendix.replace('回归、预测及网络结果的解释与讨论', '第6章结果解释与第7章建议')
+    appendix = appendix.replace('回归及网络结果的解释与讨论', '第6章结果解释与第7章建议')
     for heading, anchor, body in [('参考文献与复现说明', 'references', reference),
                                   ('附录：课程要求与小组分工', 'appendix', appendix)]:
         output.append({'kicker': '参考资料' if anchor == 'references' else '附录',
                        'title': heading, 'anchor': anchor, 'body': body})
     assert used == set(sources), f'Unplaced report sections: {set(sources)-used}'
-    assert figures == 13, figures
+    assert figures == 11, figures
     return add_contents(output)
 
 

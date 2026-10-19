@@ -71,41 +71,7 @@ def extend_report(pages,ui):
         para(f'积极表达词在100次剔除中均为负，系数范围为[{positive.min_coefficient:.3f}, {positive.max_coefficient:.3f}]，说明其OLS负向点估计并非由单一作者决定。但符号稳定不能替代统计推断，原BH校正和PPML结果仍显示证据有限。社交称呼/互助词在{int(social.positive_runs)}次剔除后转为正值，与原系数接近零的结果一致。')+
         note('逐作者结果及以主模型聚类标准误为单位的系数变化见extension_author_influence.csv。'))
 
-    metrics=load('prediction_metrics');difference=load('prediction_differences');folds=load('prediction_folds')
-    prediction_design=section('样本外预测对照','文本特征能否改善样本外预测？',
-        para('固定效应回归主要回答给定控制项后的关联问题，较高的样本内R²不意味着文本能够改善新样本预测。为补充这一判断，本研究在相同划分下比较四种预测模型，考察逐步加入文本后的误差变化。所有模型设置均在本次留出结果生成前固定，未根据测试集表现调参。')+
-        table(['模型','输入与设定'],[
-            ['训练集均值','对所有测试帖预测训练集ln(1+点赞数)的均值。'],
-            ['结构化基线','作者编号、性别、Keep值、等级、会员、内容形式、业务类型、时段、星期、日期序号和话题标记。'],
-            ['结构化＋词典','在结构化基线上增加五项核心文本特征、正文可用状态、表情与课程标记。'],
-            ['结构化＋词典＋字符文本','进一步加入正文字符2—4元组TF-IDF，词项至少出现于3条训练帖，最多12,000项。']], [30,70])+
-        para('后三种模型均采用岭回归，正则化参数固定为10。类别编码、数值标准化及TF-IDF词表与逆文档频率均只在训练集中拟合，再应用于测试集。字符表示用于减少对人工词典及分词的依赖。')+
-        table(['划分','训练与测试范围','主要回答的问题'],[
-            ['时间留出','2020-12-15之前的7,098帖训练，之后的2,434帖测试；测试集含88位作者，其中87位在训练集中出现。','对较晚发布、主要来自已见作者的帖子，文本是否提供增量信息？'],
-            ['作者分组五折','按作者分为5折，每位作者的全部帖子只进入一个测试折，训练与测试作者不重叠。[8]','对未参与训练的作者，文本是否有助于泛化？']], [20,48,32])+
-        note('目标为采集时点的累计点赞，作者属性也缺少历史时戳。因此，“时间留出”是回顾性样本外检验，不代表按真实上线时点预测未来7天点赞的效果。'))
-    main_metrics=metrics.loc[metrics.subset.eq('全部留出帖')]
-    metric_rows=[]
-    for r in main_metrics.itertuples():metric_rows.append([r.split,r.label,f'{r.mae:.4f}',f'{r.rmse:.4f}',f'{r.r2:.3f}'])
-    prediction_results=section('样本外预测结果','留出预测中的文本增益有限',
-        fig('10_prediction_comparison','图10　两种划分下四类模型的留出MAE。误差均在ln(1+点赞数)尺度计算，越小越好。')+
-        table(['划分','模型','MAE','RMSE','R²'],metric_rows,[20,38,14,14,14])+
-        para('结构化基线在两种划分中均明显优于训练集均值，说明现有作者与帖子元数据具有一定的样本外预测信息。时间留出中，加入词典和字符文本后MAE均未低于结构化基线；作者分组五折中，改进幅度则很小，且不同文本表示的排序并不一致。')+
-        note('两种划分面向不同对象，不宜把误差差距全部归因于单一因素；样本内固定效应R²也不与此表R²直接比较。'))
-    interval_rows=[]
-    for r in difference.loc[difference.reference.eq('structured')].itertuples():
-        interval_rows.append([r.split,'词典' if r.enhanced=='dictionary' else '词典＋字符文本',f'{r.delta_mae:+.4f}',f'[{r.ci_low:+.4f}, {r.ci_high:+.4f}]'])
-    novel_rows=[]
-    for split in ['时间留出','作者分组五折']:
-        part=metrics.loc[metrics.split.eq(split)&metrics.subset.eq('未见过的正文')].set_index('model')
-        novel_rows.append([split,str(int(part.iloc[0].n)),f'{part.loc["structured","mae"]:.4f}',f'{part.loc["dictionary","mae"]:.4f}',f'{part.loc["char_text","mae"]:.4f}'])
-    prediction_uncertainty=section('预测误差与敏感性','预测增益的不确定性与重复文本敏感性',
-        fig('11_prediction_uncertainty','图11　增强模型相对基线的MAE差，负值表示误差降低。区间为2,000次按作者聚类重采样的95%百分位区间。')+
-        table(['划分','相对结构化基线','ΔMAE','95%区间'],interval_rows,[23,29,16,32])+
-        para('在固定的留出预测上，按作者保留全部帖子进行配对重采样，以兼顾同一作者内的相关性和各模型对同一帖的预测差异。所有比较区间均包含零，当前评估未显示明确的文本增益。区间没有重新训练模型，因此仅反映给定预测结果下的评估样本不确定性。')+
-        table(['未见正文子集','N','结构化MAE','＋词典','＋字符文本'],novel_rows,[25,12,21,21,21])+
-        para('另限制测试正文至少10个字符，且清理后文本不与该训练集中的正文完全相同，以检查重复模板是否影响判断。时间留出中，字符模型优于词典模型，但仍未优于结构化基线；作者分组中，字符模型未优于词典模型，模型排序未呈现一致优势。这一限制只能排除完全重复文本，不能消除近似改写或共同话题带来的相似性。'))
-    new['积极表达的负关联对模型设定敏感']=[influence_page,prediction_design,prediction_results,prediction_uncertainty]
+    new['积极表达的负关联对模型设定敏感']=[influence_page]
 
     comments=s['comments'];network=load('window_networks');reply_share=comments['reply_role_counts']['帖主回复其他用户']/comments['reply_events']
     comment_roles=section('评论时序与角色','多数明确回复由帖主发出',
@@ -127,20 +93,18 @@ def extend_report(pages,ui):
     # Update the reader-facing argument to cover the new experiments.
     cover=BeautifulSoup(pages[0]['body'],'html.parser');paragraphs=cover.find_all('p',recursive=False)
     abstract=[p for p in paragraphs if 'byline' not in p.get('class',[]) and 'note' not in p.get('class',[])]
-    abstract[0].string='本研究以Keep社区100位作者的9,532条帖子及去重后的11,595条评论为样本，考察文本表达与互动反馈的关系。研究首先将正文转换为词典特征并估计作者与日期固定效应模型，继而通过NMF主题分析、逐作者剔除和两类样本外预测实验检验结果，最后结合评论时序与回复角色分析互动网络。'
-    abstract[1].string='五项核心文本特征的联合检验不显著（p=0.130），新增解释度为0.065个百分点。积极表达词呈负向关联，但BH校正后q=0.079，PPML区间也包含零。主题回归未提供更明确的关联证据；加入词典或字符文本后，两种留出评估的误差变化区间均包含零，未显示稳定的预测增益。'
+    abstract[0].string='本研究以Keep社区100位作者的9,532条帖子及去重后的11,595条评论为样本，考察文本表达与互动反馈的关系。研究将正文转换为词典特征并估计作者与日期固定效应模型，通过调整样本范围、更换模型及逐作者剔除开展敏感性检验；进一步采用TF-IDF与NMF识别内容主题，并结合评论时序与回复角色分析互动网络。'
+    abstract[1].string='五项核心文本特征的联合检验不显著（p=0.130），新增解释度为0.065个百分点。积极表达词呈负向关联，但BH校正后q=0.079，PPML区间也包含零。主题权重的联合检验p=0.166，各项经BH校正后均未达到5%显著性水平，现有结果尚不足以支持特定字面表达或内容主题与点赞存在明确、稳定的关联。'
     abstract[2].string=f'已采集的明确回复中，{reply_share:.1%}由帖主发给其他用户，表明交流主要围绕帖主展开。网络前10位账号接收54.0%的互动，但该比例和互惠率随评论窗口变化。总体而言，现有数据尚不足以支持固定的高赞表达策略；更完整的曝光、内容及关系记录有助于进一步检验这一问题。'
     pages[0]['body']=str(cover)
-    pages[1]['body']=pages[1]['body'].replace('</tbody></table>','<tr><td>RQ4</td><td>文本特征能否改善样本外点赞预测？</td><td>时间留出、作者分组五折、配对误差区间</td></tr></tbody></table>',1)
-    pages[1]['body']+=note('主题建模、预测对照、作者剔除及评论时序为2026-10-17追加的探索性分析，保留原五项核心检验作为主分析。主题数、预测划分及正则化强度在本轮首次拟合前固定；主题名称和基准依据文本内容与频数确定。')
+    pages[1]['body']+=note('主题建模、作者剔除及评论时序为2026-10-17追加的探索性分析，保留原五项核心检验作为主分析。主题数在本轮首次拟合前固定；主题名称和基准依据文本内容与频数确定。')
     conclusion=pages[-3]['body']
     conclusion=conclusion.replace('<h2>后续研究设计</h2>',
-        '<h2>扩展实验的综合判断</h2>'+para('字面词典、潜在主题和字符文本从不同层面表示内容，结果均未提供稳定、明确的点赞增量证据。逐作者剔除说明积极表达的OLS负向点估计并非单一作者造成，但这一结果仍未通过原多重检验和计数模型比较。评论角色与时间窗口分析则表明，互动结构的解释需要考虑帖主回应及晚期评论的纳入范围。')+'<h2>后续研究设计</h2>')
+        '<h2>扩展分析的综合判断</h2>'+para('词典特征与潜在主题分别从字面表达和内容模式刻画正文，两类回归均未提供明确、稳定的点赞关联证据。逐作者剔除说明积极表达词的OLS负向点估计并非由单一作者决定，但这一发现仍需结合BH校正与PPML结果理解。评论角色和时间窗口分析则表明，网络互惠性与接收集中度的解释，需要考虑帖主回应及晚期评论的纳入范围。')+'<h2>后续研究设计</h2>')
     pages[-3]['body']=conclusion
     pages[-2]['body']=pages[-2]['body'].replace('</div>',
-        para('[7] scikit-learn官方文档：NMF（1.5系列），用于非负矩阵分解与主题提取。<a href="https://scikit-learn.org/1.5/modules/generated/sklearn.decomposition.NMF.html">官方链接</a>。访问：2026-10-17。')+
-        para('[8] scikit-learn官方文档：GroupKFold及交叉验证（1.5系列），用于按作者隔离训练与测试。<a href="https://scikit-learn.org/1.5/modules/generated/sklearn.model_selection.GroupKFold.html">官方链接</a>。访问：2026-10-17。')+'</div>',1)
-    pages[-1]['body']=pages[-1]['body'].replace('报告02—07及代码、Notebook','数据、描述统计与文本分析部分；代码及Notebook').replace('报告05—13；post_features.csv与回归结果','文本编码、主题与回归部分；特征表及模型结果').replace('报告10—17；明确不显著结果及局限','回归、预测及网络结果的解释与讨论').replace('16页PPTX','23页PPTX')
+        para('[7] scikit-learn官方文档：NMF（1.5系列），用于非负矩阵分解与主题提取。<a href="https://scikit-learn.org/1.5/modules/generated/sklearn.decomposition.NMF.html">官方链接</a>。访问：2026-10-17。')+'</div>',1)
+    pages[-1]['body']=pages[-1]['body'].replace('报告02—07及代码、Notebook','数据、描述统计与文本分析部分；代码及Notebook').replace('报告05—13；post_features.csv与回归结果','文本编码、主题与回归部分；特征表及模型结果').replace('报告10—17；明确不显著结果及局限','回归及网络结果的解释与讨论').replace('16页PPTX','21页PPTX')
     out=[]
     for p in pages:
         out.append(p);out.extend(new.get(p['title'],[]))
@@ -177,17 +141,7 @@ def extend_slides(specs):
         '逐次剔除1位作者，重复100次主模型估计。',
         '积极表达词始终为负，范围[-0.100,-0.074]。',
         '符号稳定不能替代BH校正和PPML结果；社交词在11次剔除后转正。'],'12_author_influence',
-        '这一检查考察是否某一个作者决定结果，不新增100轮显著性判断。原始主检验和探索性检验保持分开。'),
-        ('预测对照：文本是否帮助样本外泛化？',[
-            '时间留出：7,098帖训练、2,434帖测试。',
-            '作者分组五折：同一作者只在一个测试折出现。',
-            '同一划分比较均值、结构化、加词典、加字符文本；编码仅拟合训练集。'],None,
-            '岭回归alpha固定10，未在测试集调参。字符TF-IDF是2至4元组。因标签观察窗与作者属性历史时戳缺失，这不是实际部署评估。'),
-        ('两种留出评估均未显示稳定的文本增益',[
-            '时间留出MAE：结构化0.5641，加字符文本0.5656。',
-            '作者分组MAE：结构化0.7180，加字符文本0.7164。',
-            '配对作者聚类区间均跨0；未见正文子集也未改变判断。'],'10_prediction_comparison',
-            '误差尺度为ln(1+点赞数)。区间以2000次作者聚类重采样固定预测结果得到，未重新训练模型。指标表及全部模型对照见报告。')]
+        '这一检查考察是否某一个作者决定结果，不新增100轮显著性判断。原始主检验和探索性检验保持分开。')]
     new['互动集中，但样本边界影响很大']=[('网络互惠主要体现围绕帖主的回应',[
         '已采集评论中64.5%在24小时内，82.2%在7天内。',
         '4,902次明确回复中，89.0%由帖主发出；用户彼此回复仅2.0%。',
@@ -196,16 +150,14 @@ def extend_slides(specs):
     out=[]
     for s0 in specs:
         out.append(s0);out.extend(new.get(s0[0],[]))
-    title,bullets,img,speaker=out[1]
-    out[1]=(title,bullets+['RQ4：文本能否改善样本外点赞预测？'],img,speaker.replace('三个问题','四个问题'))
     for i,(title,bullets,img,speaker) in enumerate(out):
         if title=='主结果：没有明确的高赞用词公式':title='主结果：核心文本特征的关联证据有限'
         speaker=speaker.replace('报告第09节','报告中的模型设定部分')
         if title=='小组分工与讨论':
             bullets=['成员A【待填写】：研究问题与背景（1—3页）','成员B【待填写】：数据、文本与主题（4—10页）',
-                '成员C【待填写】：回归、预测与检验（11—17页）','成员D【待填写】：网络、建议与总结（18—23页）','建议分工须按真实人数和贡献修订。']
+                '成员C【待填写】：回归、检验与测量核查（11—15页）','成员D【待填写】：网络、建议与总结（16—21页）','建议分工须按真实人数和贡献修订。']
         if title=='结论、局限与可复现性':
-            bullets[0]='词典、主题与留出评估均未提供稳定的文本增益证据。'
-            speaker='回到四个研究问题，概括内容分布、条件关联、预测增量和互动结构的结果。扩展分析为探索性工作，完整参数及输出见附带Notebook与代码。'
+            bullets[0]='词典特征与主题权重的回归均未提供明确、稳定的点赞关联证据。'
+            speaker='回到三个研究问题，概括内容分布、条件关联和互动结构的结果。主题、作者剔除及评论时序属于探索性补充，完整参数及输出见附带Notebook与代码。'
         out[i]=(title,bullets,img,speaker)
     return out
