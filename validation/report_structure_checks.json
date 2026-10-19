@@ -1,6 +1,7 @@
 {
   "date": "2026-10-19",
-  "comparison_commit": "34b203c4479f7b0eee1afba4dbc6c63ac979070e",
+  "comparison_commit": "e33b92af04cb4c29911e247b5bb3120d5a5a410c",
+  "title": "Keep社区中的内容表达与互动反馈",
   "chapters_in_requested_order": [
     "研究题目",
     "研究问题的意义",
@@ -10,24 +11,28 @@
     "结果与解释",
     "建议"
   ],
-  "subsections": 28,
-  "report_pages": 33,
-  "html_links_verified": 37,
-  "docx_chapter_headings": 7,
-  "docx_numbered_subsection_headings": 28,
-  "docx_hyperlinks_and_page_reference_fields_verified": 37,
-  "prediction_sections_removed": [
-    "4.6 样本外预测实验设计",
-    "6.6 留出预测结果",
-    "6.7 预测不确定性与重复文本检验"
+  "research_questions": [
+    "样本帖子、表达方式及点赞如何分布？",
+    "不同文本特征与点赞是否相关？",
+    "采集到的评论主要表达什么、如何连接用户？互动集中在哪里？"
   ],
-  "prediction_research_question_and_narrative_removed": true,
-  "remaining_comparable_tables_unchanged": 27,
-  "retained_figures_unchanged": 11,
+  "subsections": 30,
+  "report_pages": 35,
+  "slides": 24,
+  "html_and_pdf_directory_entries": 39,
+  "word_chapter_headings": 7,
+  "word_numbered_subsections": 30,
+  "word_internal_links_and_page_fields": 39,
+  "coding_precedes_feature_distribution": true,
+  "main_regression_completed_in_chapter_4": true,
+  "topic_model_and_regression_in_chapter_5": true,
+  "comment_content_and_network_both_answer_rq3": true,
+  "discussion_and_recommendations_refocused": true,
+  "unchanged_comparable_analytical_tables": 24,
+  "previous_11_figures_retained": true,
+  "current_figures": 13,
   "figure_numbers_sequential": true,
-  "statistical_results_and_experiment_notebooks_unchanged": true,
-  "slides": 21,
-  "slides_and_speaker_notes_prediction_branch_absent": true,
-  "make_report_and_slides_without_raw_data_passed": true,
-  "clean_rebuild_html_manifest_and_slide_text_match": true
+  "original_regression_network_results_and_two_notebooks_unchanged": true,
+  "new_comment_notebook_executed_cells": 5,
+  "new_comment_checks_passed": 19
 }

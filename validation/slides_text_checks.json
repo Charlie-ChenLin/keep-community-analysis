@@ -1,7 +1,8 @@
 {
-  "slides": 21,
+  "slides": 24,
   "missing_text": [],
   "out_of_bounds": [],
   "powerpoint_native_export": true,
-  "prediction_branch_absent": true
+  "prediction_branch_absent": true,
+  "comment_content_analysis_present": true
 }

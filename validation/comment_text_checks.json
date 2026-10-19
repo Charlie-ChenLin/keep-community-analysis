@@ -1,0 +1,78 @@
+[
+  {
+    "check": "唯一评论、去重规模及关联",
+    "passed": true
+  },
+  {
+    "check": "缺失、用户与帖子分母",
+    "passed": true
+  },
+  {
+    "check": "仅标记或符号计数",
+    "passed": true
+  },
+  {
+    "check": "清理后字符数中位数",
+    "passed": true
+  },
+  {
+    "check": "全部评论：鼓励或赞许词",
+    "passed": true
+  },
+  {
+    "check": "全部评论：感谢词",
+    "passed": true
+  },
+  {
+    "check": "全部评论：问候词",
+    "passed": true
+  },
+  {
+    "check": "全部评论：问号",
+    "passed": true
+  },
+  {
+    "check": "其他用户发言：鼓励或赞许词",
+    "passed": true
+  },
+  {
+    "check": "其他用户发言：感谢词",
+    "passed": true
+  },
+  {
+    "check": "其他用户发言：问候词",
+    "passed": true
+  },
+  {
+    "check": "其他用户发言：问号",
+    "passed": true
+  },
+  {
+    "check": "帖主发言：鼓励或赞许词",
+    "passed": true
+  },
+  {
+    "check": "帖主发言：感谢词",
+    "passed": true
+  },
+  {
+    "check": "帖主发言：问候词",
+    "passed": true
+  },
+  {
+    "check": "帖主发言：问号",
+    "passed": true
+  },
+  {
+    "check": "20个词项的独立聚合复算",
+    "passed": true
+  },
+  {
+    "check": "词项分母与用户覆盖",
+    "passed": true
+  },
+  {
+    "check": "角色评论互斥且覆盖全部记录",
+    "passed": true
+  }
+]

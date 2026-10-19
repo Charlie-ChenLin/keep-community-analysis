@@ -1,0 +1,65 @@
+{
+  "analysis_date": "2026-10-19",
+  "raw_comments": 13511,
+  "comments": 11595,
+  "duplicate_ids_removed": 1916,
+  "missing_content": 0,
+  "senders": 2910,
+  "posts": 1323,
+  "lexical_comments": 10222,
+  "markers_or_symbols_only": 1373,
+  "markers_or_symbols_only_share": 0.11841310909874946,
+  "bracket_marker_comments": 3370,
+  "median_clean_length": 6.0,
+  "p75_clean_length": 10.0,
+  "repeated_normalized_text_comments": 3362,
+  "unique_normalized_texts": 8709,
+  "roles": {
+    "其他用户发言": {
+      "comments": 7192,
+      "senders": 2847
+    },
+    "帖主发言": {
+      "comments": 4403,
+      "senders": 64
+    }
+  },
+  "features": {
+    "encouragement": {
+      "label": "鼓励或赞许词",
+      "hits": 1413,
+      "share": 0.12186287192755497,
+      "senders_hit": 876
+    },
+    "thanks": {
+      "label": "感谢词",
+      "hits": 389,
+      "share": 0.033548943510133676,
+      "senders_hit": 68
+    },
+    "greeting": {
+      "label": "问候词",
+      "hits": 551,
+      "share": 0.047520482966796035,
+      "senders_hit": 136
+    },
+    "question": {
+      "label": "问号",
+      "hits": 427,
+      "share": 0.03682621819749892,
+      "senders_hit": 200
+    }
+  },
+  "source_sha256": {
+    "2026Data/Keep Data/sample_comment_2022.csv": "7a7a7e1f2462fc457ed7110266fbacbd2998f0f302f86eef7ca1202c9da53355",
+    "2026Data/Keep Data/sample_post_2022.csv": "74f2ed2878852f00618db3ae0b9f8c468a4f760e603dcb98c8a286a47919582c",
+    "code/comment_text_config.json": "9fe33dfa892e72fea4cc4d2cb78ce5e535b10464b9e13826f1db5d02693f31e1",
+    "code/stopwords.txt": "b11ff810ee5c8934dc46b57f3a1ba85457e3893e89acdafb5cd286570fe793a3"
+  },
+  "definitions": {
+    "term_frequency": "含该词的评论数，每条评论至多计一次；另报告去重发言用户数。",
+    "roles": "发言者是否为所属帖子作者；包括根评论、明确回复和自我互动，不等同于网络中的回复角色。",
+    "features": "四项规则可重叠，分母均为该角色全部已采集评论；未命中不等于没有该语义。",
+    "text_scope": "保留不同评论ID下的重复短句和84次自我互动；与非自我网络事件分母不同。"
+  }
+}

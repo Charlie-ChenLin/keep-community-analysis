@@ -254,7 +254,7 @@ def report_pages():
             ['非结构化数据转结构化后回归','报告05—13；post_features.csv与回归结果'],
             ['至少一种文本或网络分析','已完成词典内容分析、分词统计及评论网络'],
             ['解释和建议','报告10—17；明确不显著结果及局限'],
-            ['Presentation全员参与','16页PPTX、逐页讲稿及建议分工表'],
+            ['Presentation全员参与',f'{len(slide_specs())}页PPTX、逐页讲稿及建议分工表'],
             ['PDF、PPT及必要文件打包','提交包ZIP含报告、演示稿、代码、数据、结果与复现说明']], [35,65])+
         '<h2>汇报分工建议</h2>'+table(['成员占位','建议负责内容','PPT页码'],[[r['member'],r['work'],r['slides']] for r in CFG['roles']],[25,55,20])+
         note(CFG['role_note'])+
@@ -263,7 +263,7 @@ def report_pages():
     from report_extensions import extend_report
     pages=extend_report(pages,{'para':para,'table':table,'fig':fig,'note':note,'box':box,'ul':ul})
     from report_structure import organize_report
-    return organize_report(pages,{'para':para,'table':table,'note':note,'box':box},TITLE)
+    return organize_report(pages,{'para':para,'table':table,'note':note,'box':box,'fig':fig},TITLE)
 
 
 def write_html(pages):
@@ -429,7 +429,7 @@ def write_slides():
         slide.notes_slide.notes_text_frame.text=speaker
         notes.append(f'第{i}页　{title}\n建议用时：'+('30秒' if i in [1,len(specs)] else '45—60秒')+'\n'+speaker+'\n')
     prs.save(ROOT/'演示文稿.pptx')
-    duration='16—20' if len(specs)>16 else '12—15'
+    duration='18—22' if len(specs)>21 else '16—20' if len(specs)>16 else '12—15'
     (ROOT/'汇报讲稿.txt').write_text(f'完整版建议总时长约{duration}分钟，按课程时间限制选取内容。\n组号/成员待定，分工只是可修改建议。\n\n'+'\n'.join(notes),encoding='utf-8')
 
 

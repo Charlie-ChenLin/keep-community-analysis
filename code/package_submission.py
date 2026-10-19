@@ -11,9 +11,16 @@ from docx import Document
 ROOT=Path(__file__).resolve().parents[1]
 
 def evaluation_template():
-    if (ROOT/'互评报告模板.docx').exists():return
+    title=json.loads((ROOT/'code/project_config.json').read_text())['title']
+    if (ROOT/'互评报告模板.docx').exists():
+        d=Document(ROOT/'互评报告模板.docx')
+        for p in d.paragraphs:
+            if '研究题目：什么样的健身分享更容易获得点赞？' in p.text:
+                p.text=p.text.replace('研究题目：什么样的健身分享更容易获得点赞？','研究题目：'+title)
+                d.save(ROOT/'互评报告模板.docx')
+        return
     d=Document();d.add_heading('小组成员工作分工互评报告（空白模板）',0)
-    d.add_paragraph('组号：【待填写】　评价人：【待填写姓名/学号】\n研究题目：什么样的健身分享更容易获得点赞？')
+    d.add_paragraph('组号：【待填写】　评价人：【待填写姓名/学号】\n研究题目：'+title)
     d.add_paragraph('请各成员依据真实工作独立填写。本文件仅为模板，未完成任何实际评价；建议分工不等于实际贡献。')
     t=d.add_table(rows=1,cols=5);t.style='Light Shading Accent 1'
     for c,s in zip(t.rows[0].cells,['成员','实际完成内容','具体文件/工作证据','协作情况','总体评价（按课程标准）']):c.text=s
@@ -27,7 +34,7 @@ def evaluation_template():
 
 def main():
     evaluation_template()
-    for name in ['分析过程.ipynb','扩展实验.ipynb']:
+    for name in ['分析过程.ipynb','扩展实验.ipynb','评论文本分析.ipynb']:
         nb=nbformat.read(ROOT/name,4);nbformat.validate(nb)
         cells=[c for c in nb.cells if c.cell_type=='code']
         assert all(c.execution_count is not None for c in cells)
@@ -36,11 +43,14 @@ def main():
     assert len(fitz.open(ROOT/'分析报告.pdf'))==layout['pages']
     assert len(Presentation(ROOT/'演示文稿.pptx').slides)==layout['slides']
     checks=json.loads((ROOT/'validation/numerical_checks.json').read_text());assert all(c['passed'] for c in checks)
+    comment_checks=json.loads((ROOT/'validation/comment_text_checks.json').read_text());assert all(c['passed'] for c in comment_checks)
     geometry=json.loads((ROOT/'validation/report_geometry.json').read_text());assert not geometry['overflow']
     files=[]
     for name in ['README.md','DATA.md','.gitignore','Makefile','requirements.txt','2026Data/README.md','2026Data/Keep Data/README.md','2026Data/Keep Data/.gitkeep','references/README.md','references/.gitkeep','分析报告.pdf','分析报告.html','分析报告_可编辑.docx','演示文稿.pptx','汇报讲稿.txt','分析过程.ipynb','分析过程.html','扩展实验.ipynb','扩展实验.html','互评报告模板.docx','小组项目作业.pdf']:
         p=ROOT/name;assert p.exists(),p;files.append((p,name))
     # Optional presentation PDF only if it matches the current slide count.
+    for name in ['评论文本分析.ipynb','评论文本分析.html']:
+        p=ROOT/name;assert p.exists(),p;files.append((p,name))
     p=ROOT/'演示文稿.pdf'
     if p.exists():
         assert len(fitz.open(p))==layout['slides']
