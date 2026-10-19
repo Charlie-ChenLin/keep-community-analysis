@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-19",
+  "scope": "Table of contents and report rendering; statistical analyses unchanged.",
+  "report_pages": 30,
+  "toc_page": 2,
+  "toc_entries": 28,
+  "pdf_link_targets_verified": 28,
+  "pdf_target_headings_verified": 28,
+  "docx_hyperlinks_verified": 28,
+  "docx_page_reference_fields_verified": 28,
+  "docx_update_fields_on_open": true,
+  "original_cover_and_28_sections_unchanged": true,
+  "report_geometry_no_overflow": true
+}

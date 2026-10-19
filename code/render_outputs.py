@@ -27,6 +27,7 @@ async def render():
         if bad:raise ValueError('Report content overlaps footer: '+str(bad))
         await page.pdf(path=str(ROOT/'分析报告.pdf'),print_background=True,prefer_css_page_size=True)
         await page.locator('#page-1').screenshot(path=str(ROOT/'validation/report_cover.png'))
+        await page.locator('#page-2').screenshot(path=str(ROOT/'validation/report_toc.png'))
         # A readable notebook HTML is for inspection and portable review, not a second report.
         await browser.close()
     doc=fitz.open(ROOT/'分析报告.pdf')
