@@ -1,7 +1,415 @@
 {
-  "pages": 30,
+  "pages": 36,
   "slides": 23,
   "report": "分析报告.html",
   "pdf": "分析报告.pdf",
-  "pptx": "演示文稿.pptx"
+  "pptx": "演示文稿.pptx",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "研究题目",
+      "page": 4,
+      "subsections": [
+        "1.1"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "研究问题的意义",
+      "page": 5,
+      "subsections": [
+        "2.1",
+        "2.2"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "描述性统计分析",
+      "page": 7,
+      "subsections": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "非结构化数据的结构化与回归分析",
+      "page": 12,
+      "subsections": [
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "文本与网络分析",
+      "page": 18,
+      "subsections": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "结果与解释",
+      "page": 25,
+      "subsections": [
+        "6.1",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5",
+        "6.6",
+        "6.7",
+        "6.8"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "建议",
+      "page": 33,
+      "subsections": [
+        "7.1",
+        "7.2"
+      ]
+    }
+  ],
+  "toc_pages": [
+    2,
+    3
+  ],
+  "contents": [
+    {
+      "level": 1,
+      "section": "",
+      "title": "第一章 研究题目",
+      "anchor": "chapter-1",
+      "page": 4,
+      "chapter": 1
+    },
+    {
+      "level": 2,
+      "section": "1.1",
+      "title": "研究题目与分析范围",
+      "anchor": "section-1-1",
+      "page": 4,
+      "chapter": 1
+    },
+    {
+      "level": 1,
+      "section": "",
+      "title": "第二章 研究问题的意义",
+      "anchor": "chapter-2",
+      "page": 5,
+      "chapter": 2
+    },
+    {
+      "level": 2,
+      "section": "2.1",
+      "title": "研究背景与研究意义",
+      "anchor": "section-2-1",
+      "page": 5,
+      "chapter": 2
+    },
+    {
+      "level": 2,
+      "section": "2.2",
+      "title": "研究问题与分析目标",
+      "anchor": "section-2-2",
+      "page": 6,
+      "chapter": 2
+    },
+    {
+      "level": 1,
+      "section": "",
+      "title": "第三章 描述性统计分析",
+      "anchor": "chapter-3",
+      "page": 7,
+      "chapter": 3
+    },
+    {
+      "level": 2,
+      "section": "3.1",
+      "title": "数据来源、样本范围与清洗",
+      "anchor": "section-3-1",
+      "page": 7,
+      "chapter": 3
+    },
+    {
+      "level": 2,
+      "section": "3.2",
+      "title": "正文覆盖与缺失分布",
+      "anchor": "section-3-2",
+      "page": 8,
+      "chapter": 3
+    },
+    {
+      "level": 2,
+      "section": "3.3",
+      "title": "点赞分布与作者发帖差异",
+      "anchor": "section-3-3",
+      "page": 9,
+      "chapter": 3
+    },
+    {
+      "level": 2,
+      "section": "3.4",
+      "title": "内容形式与点赞表现",
+      "anchor": "section-3-4",
+      "page": 10,
+      "chapter": 3
+    },
+    {
+      "level": 2,
+      "section": "3.5",
+      "title": "文本特征的分布与作者覆盖",
+      "anchor": "section-3-5",
+      "page": 11,
+      "chapter": 3
+    },
+    {
+      "level": 1,
+      "section": "",
+      "title": "第四章 非结构化数据的结构化与回归分析",
+      "anchor": "chapter-4",
+      "page": 12,
+      "chapter": 4
+    },
+    {
+      "level": 2,
+      "section": "4.1",
+      "title": "正文预处理与变量构建",
+      "anchor": "section-4-1",
+      "page": 12,
+      "chapter": 4
+    },
+    {
+      "level": 2,
+      "section": "4.2",
+      "title": "词典编码规则与解释范围",
+      "anchor": "section-4-2",
+      "page": 13,
+      "chapter": 4
+    },
+    {
+      "level": 2,
+      "section": "4.3",
+      "title": "语义测量局限与抽查",
+      "anchor": "section-4-3",
+      "page": 14,
+      "chapter": 4
+    },
+    {
+      "level": 2,
+      "section": "4.4",
+      "title": "从组间差异到作者内比较",
+      "anchor": "section-4-4",
+      "page": 15,
+      "chapter": 4
+    },
+    {
+      "level": 2,
+      "section": "4.5",
+      "title": "固定效应模型与统计推断",
+      "anchor": "section-4-5",
+      "page": 16,
+      "chapter": 4
+    },
+    {
+      "level": 2,
+      "section": "4.6",
+      "title": "样本外预测实验设计",
+      "anchor": "section-4-6",
+      "page": 17,
+      "chapter": 4
+    },
+    {
+      "level": 1,
+      "section": "",
+      "title": "第五章 文本与网络分析",
+      "anchor": "chapter-5",
+      "page": 18,
+      "chapter": 5
+    },
+    {
+      "level": 2,
+      "section": "5.1",
+      "title": "TF-IDF表示与NMF主题建模",
+      "anchor": "section-5-1",
+      "page": 18,
+      "chapter": 5
+    },
+    {
+      "level": 2,
+      "section": "5.2",
+      "title": "主题分布及其作者集中度",
+      "anchor": "section-5-2",
+      "page": 19,
+      "chapter": 5
+    },
+    {
+      "level": 2,
+      "section": "5.3",
+      "title": "评论关系识别与建图规则",
+      "anchor": "section-5-3",
+      "page": 20,
+      "chapter": 5
+    },
+    {
+      "level": 2,
+      "section": "5.4",
+      "title": "网络连通性与互惠性",
+      "anchor": "section-5-4",
+      "page": 21,
+      "chapter": 5
+    },
+    {
+      "level": 2,
+      "section": "5.5",
+      "title": "互动接收的集中度",
+      "anchor": "section-5-5",
+      "page": 22,
+      "chapter": 5
+    },
+    {
+      "level": 2,
+      "section": "5.6",
+      "title": "评论时序与互动角色",
+      "anchor": "section-5-6",
+      "page": 23,
+      "chapter": 5
+    },
+    {
+      "level": 2,
+      "section": "5.7",
+      "title": "评论观察窗口的敏感性",
+      "anchor": "section-5-7",
+      "page": 24,
+      "chapter": 5
+    },
+    {
+      "level": 1,
+      "section": "",
+      "title": "第六章 结果与解释",
+      "anchor": "chapter-6",
+      "page": 25,
+      "chapter": 6
+    },
+    {
+      "level": 2,
+      "section": "6.1",
+      "title": "主回归结果",
+      "anchor": "section-6-1",
+      "page": 25,
+      "chapter": 6
+    },
+    {
+      "level": 2,
+      "section": "6.2",
+      "title": "回归系数的量级与解释",
+      "anchor": "section-6-2",
+      "page": 26,
+      "chapter": 6
+    },
+    {
+      "level": 2,
+      "section": "6.3",
+      "title": "样本与模型设定的稳健性",
+      "anchor": "section-6-3",
+      "page": 27,
+      "chapter": 6
+    },
+    {
+      "level": 2,
+      "section": "6.4",
+      "title": "逐作者剔除的敏感性",
+      "anchor": "section-6-4",
+      "page": 28,
+      "chapter": 6
+    },
+    {
+      "level": 2,
+      "section": "6.5",
+      "title": "主题权重的回归检验",
+      "anchor": "section-6-5",
+      "page": 29,
+      "chapter": 6
+    },
+    {
+      "level": 2,
+      "section": "6.6",
+      "title": "留出预测结果",
+      "anchor": "section-6-6",
+      "page": 30,
+      "chapter": 6
+    },
+    {
+      "level": 2,
+      "section": "6.7",
+      "title": "预测不确定性与重复文本检验",
+      "anchor": "section-6-7",
+      "page": 31,
+      "chapter": 6
+    },
+    {
+      "level": 2,
+      "section": "6.8",
+      "title": "综合讨论与研究局限",
+      "anchor": "section-6-8",
+      "page": 32,
+      "chapter": 6
+    },
+    {
+      "level": 1,
+      "section": "",
+      "title": "第七章 建议",
+      "anchor": "chapter-7",
+      "page": 33,
+      "chapter": 7
+    },
+    {
+      "level": 2,
+      "section": "7.1",
+      "title": "内容表达与社区互动建议",
+      "anchor": "section-7-1",
+      "page": 33,
+      "chapter": 7
+    },
+    {
+      "level": 2,
+      "section": "7.2",
+      "title": "后续研究与对照实验方案",
+      "anchor": "section-7-2",
+      "page": 34,
+      "chapter": 7
+    },
+    {
+      "level": 1,
+      "section": "",
+      "title": "参考文献与复现说明",
+      "anchor": "references",
+      "page": 35,
+      "chapter": 8
+    },
+    {
+      "level": 1,
+      "section": "",
+      "title": "附录：课程要求与小组分工",
+      "anchor": "appendix",
+      "page": 36,
+      "chapter": 8
+    }
+  ]
 }

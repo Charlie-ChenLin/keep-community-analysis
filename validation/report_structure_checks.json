@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-19",
+  "comparison_commit": "6b45e36827a4cbb5828be8322017af987fbf973f",
+  "chapters_in_requested_order": [
+    "研究题目",
+    "研究问题的意义",
+    "描述性统计分析",
+    "非结构化数据的结构化与回归分析",
+    "文本与网络分析",
+    "结果与解释",
+    "建议"
+  ],
+  "subsections": 31,
+  "html_links_verified": 40,
+  "docx_chapter_headings": 7,
+  "docx_numbered_subsection_headings": 31,
+  "docx_hyperlinks_and_page_reference_fields_verified": 40,
+  "original_analytical_tables_retained": 32,
+  "course_requirement_mapping_updated": true,
+  "original_figures_retained": 13,
+  "figure_numbers_sequential": true,
+  "statistical_results_notebooks_and_slides_unchanged": true,
+  "make_report_without_raw_data_passed": true,
+  "clean_rebuild_html_and_manifest_match": true
+}

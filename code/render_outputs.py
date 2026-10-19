@@ -27,12 +27,36 @@ async def render():
         if bad:raise ValueError('Report content overlaps footer: '+str(bad))
         await page.pdf(path=str(ROOT/'分析报告.pdf'),print_background=True,prefer_css_page_size=True)
         await page.locator('#page-1').screenshot(path=str(ROOT/'validation/report_cover.png'))
-        await page.locator('#page-2').screenshot(path=str(ROOT/'validation/report_toc.png'))
+        manifest=json.loads((ROOT/'results/report_manifest.json').read_text())
+        for index,physical in enumerate(manifest['toc_pages'],1):
+            name='report_toc.png' if index==1 else f'report_toc_{index}.png'
+            await page.locator(f'#page-{physical}').screenshot(path=str(ROOT/'validation'/name))
+        for chapter in manifest['chapters']:
+            await page.locator(f'#page-{chapter["page"]}').screenshot(
+                path=str(ROOT/f'validation/report_chapter_{chapter["number"]}.png'))
         # A readable notebook HTML is for inspection and portable review, not a second report.
         await browser.close()
     doc=fitz.open(ROOT/'分析报告.pdf')
-    expected=json.loads((ROOT/'results/report_manifest.json').read_text())['pages']
+    expected=manifest['pages']
     assert len(doc)==expected,(len(doc),expected)
+    entries=manifest['contents'];pdf_links=[]
+    for physical in manifest['toc_pages']:pdf_links.extend(doc[physical-1].get_links())
+    assert len(pdf_links)==len(entries),(len(pdf_links),len(entries))
+    for entry,link in zip(entries,pdf_links):
+        assert link['page']==entry['page']-1,(entry,link)
+        assert link['nameddest']==entry['anchor'],(entry,link)
+        target=''.join(doc[entry['page']-1].get_text().split())
+        assert ''.join(entry['title'].split()) in target,entry
+    doc.set_toc([[e['level'],f'{e["section"]} {e["title"]}'.strip(),e['page']] for e in entries])
+    doc.saveIncr()
+    (ROOT/'validation/report_toc_checks.json').write_text(json.dumps({
+        'scope':'Seven-chapter structure, contents links and rendered report layout.',
+        'report_pages':len(doc),'chapters':len(manifest['chapters']),
+        'subsections':sum(len(c['subsections']) for c in manifest['chapters']),
+        'toc_pages':manifest['toc_pages'],'toc_entries':len(entries),
+        'pdf_link_targets_verified':len(pdf_links),'pdf_target_headings_verified':len(entries),
+        'pdf_outline_entries':len(doc.get_toc()),'report_geometry_no_overflow':not bad,
+    },ensure_ascii=False,indent=2)+'\n')
     previews=[]
     for i,p in enumerate(doc):
         assert p.get_text().strip(),'Empty PDF page'

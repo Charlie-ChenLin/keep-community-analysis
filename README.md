@@ -6,7 +6,7 @@
 
 ## 报告与主要发现
 
-- [分析报告 PDF](分析报告.pdf)：正式报告，30页，封面后附可点击跳转的目录，含扩展分析与计算实验。
+- [分析报告 PDF](分析报告.pdf)：正式报告，36页，按七章组织，附两级目录、页内跳转及PDF书签，含扩展分析与计算实验。
 - [可编辑报告 DOCX](分析报告_可编辑.docx)：与HTML/PDF使用同一文字来源。
 - [演示文稿 PPTX](演示文稿.pptx)及[阅读版 PDF](演示文稿.pdf)：23页，附演讲者备注；逐页讲稿见`汇报讲稿.txt`。
 - [分析过程 Notebook](分析过程.ipynb)及[静态 HTML](分析过程.html)：保存已执行的代码、表格和图形。
@@ -17,6 +17,8 @@
 评论网络包含2,932个有边节点、4,069条有向边，前10位账号接收54.0%的互动事件。该集中度受到样本边界和建边规则影响，仅用于描述已采集的互动关系。
 
 2026-10-17新增的分析进一步表明：主题回归未提供明确增量证据；在时间留出和作者分组五折中，加入词典或字符文本后的配对误差区间均包含零。明确回复主要由帖主发出（89.0%），首周网络的互惠率为74.1%，与全部记录构成的49.6%不同。新增结果作为探索性补充，保留原五项检验作为主分析。
+
+报告正文依次为：研究题目、研究问题的意义、描述性统计分析、非结构化数据的结构化与回归分析、文本与网络分析、结果与解释、建议。七章下设31个小节；研究设计与模型设定置于第四章，回归及预测结果集中在第六章讨论。参考文献与分工附录列于正文之后。
 
 ## 项目结构
 
@@ -46,6 +48,7 @@
 │   ├── validate_extensions.py      # 扩展结果与训练IDF的独立核查
 │   ├── build_extension_notebook.py # 扩展实验Notebook构建
 │   ├── report_extensions.py        # 将扩展证据整合进报告与PPT
+│   ├── report_structure.py         # 七章编排、分节与两级目录
 │   ├── project_config.json         # 题目、成员和分工占位
 │   ├── build_deliverables.py        # 报告、演示稿及Notebook构建
 │   ├── render_outputs.py           # HTML转PDF与版面检查
@@ -133,6 +136,7 @@ export CHROME_PATH='/绝对路径/Chrome或Chromium可执行文件'
 - `validation/numerical_checks.json`记录13项独立核查，包括另一套矩阵计算对系数、聚类标准误、p值和置信区间的复算。
 - `validation/extension_checks.json`记录16项扩展核查：主题权重、留出划分、16组误差指标、作者聚类自助区间、作者剔除的直接最小二乘比较，以及训练集TF-IDF逆文档频率复算。
 - `validation/report_geometry.json`记录PDF来源HTML的正文与页脚位置；预览图用于人工检查排版。
+- `validation/report_toc_checks.json`核对七章、31个小节及40个目录链接的实际PDF目标；`report_structure_checks.json`记录重组前后分析表格与图形的完整性及Word标题层级。
 
 主要结果文件为`results/regression_coefficients.csv`、`results/model_fit.csv`、`results/text_features_summary.csv`及`results/summary.json`。原始输入与逐帖中间文件需要本地数据；公开仓库中的Notebook保留了可直接阅读的执行输出。
 

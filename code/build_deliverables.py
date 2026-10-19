@@ -262,26 +262,24 @@ def report_pages():
         note('本附录保留组号、成员和学号占位。分工表为待调整建议，须依据实际人数与贡献填写；每位成员应参与汇报，并独立完成个人互评。'))
     from report_extensions import extend_report
     pages=extend_report(pages,{'para':para,'table':table,'fig':fig,'note':note,'box':box,'ul':ul})
-    entries=[{'section':p['kicker'].split(' · ')[0],'title':p['title'],'page':i}
-             for i,p in enumerate(pages[1:],3)]
-    links=''.join(
-        f'<a class="toc-entry" href="#page-{e["page"]}">'
-        f'<span class="toc-number">{esc(e["section"])}</span>'
-        f'<span class="toc-title">{esc(e["title"])}</span>'
-        f'<span class="toc-leader" aria-hidden="true"></span>'
-        f'<span class="toc-page">{e["page"]}</span></a>' for e in entries)
-    pages.insert(1,{'kicker':'CONTENTS · 目录','title':'目录',
-                    'body':'<nav class="toc" aria-label="报告目录">'+links+'</nav>',
-                    'toc_entries':entries})
-    return pages
+    from report_structure import organize_report
+    return organize_report(pages,{'para':para,'table':table,'note':note,'box':box},TITLE)
 
 
 def write_html(pages):
     css='''@page{size:A4;margin:0}*{box-sizing:border-box}body{margin:0;background:#e9edf0;color:#243746;font-family:"PingFang SC","Microsoft YaHei","Arial Unicode MS",sans-serif;font-size:10.2pt;line-height:1.72}.page{position:relative;width:210mm;height:297mm;padding:15mm 18mm 18mm;background:white;margin:8mm auto;break-after:page;overflow:visible}.page:last-child{break-after:auto}.kicker{color:#356D9A;font-size:9pt;letter-spacing:.8px;margin:0 0 3mm}h1{font-size:22pt;font-weight:650;line-height:1.4;margin:0 0 6mm;color:#213444}h2{font-size:12.5pt;color:#356D9A;margin:5mm 0 2mm}p{margin:0 0 3mm}ul{padding-left:5mm;margin:2mm 0 4mm}li{margin-bottom:2mm}table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:9pt;line-height:1.55;margin:3mm 0 4mm}th{background:#eaf0f5;color:#254c68;text-align:left;font-weight:600}td,th{padding:2mm 2.1mm;border-bottom:.2mm solid #dce4e9;vertical-align:top;overflow-wrap:anywhere}.note,figcaption{font-size:8.5pt;color:#627581;line-height:1.6}.callout{border-left:1mm solid #B88425;background:#f7f5ee;padding:3mm 4mm;margin:4mm 0}.callout p{margin:1mm 0 0}.formula,.pipeline{padding:4mm;background:#f3f6f8;font-size:10pt;line-height:1.8;margin:4mm 0;overflow-wrap:anywhere}figure{margin:4mm 0}figure img{display:block;width:100%;height:auto;max-height:122mm;object-fit:contain}figcaption{margin-top:2mm}footer{position:absolute;bottom:9mm;left:18mm;right:18mm;border-top:.2mm solid #dce4e9;padding-top:2mm;display:flex;justify-content:space-between;font-size:8pt;color:#71818b}.subtitle{font-size:15pt;color:#356D9A;margin:3mm 0 6mm}.coverline{width:24mm;height:1.5mm;background:#B88425;margin:8mm 0}.byline{font-size:13pt;line-height:1.8}.cover-meta{font-size:10pt;color:#627581;margin:6mm 0 7mm}.references{font-size:9pt;line-height:1.65}a{color:#356D9A;text-decoration:none}@media print{body{background:white}.page{margin:0;box-shadow:none}}'''
-    css+='''.toc{margin-top:2mm}.toc-entry{display:flex;align-items:baseline;gap:2mm;min-height:7.1mm;line-height:1.65;font-size:10pt;color:#243746}.toc-number{flex:0 0 7mm;color:#356D9A;font-variant-numeric:tabular-nums}.toc-title{flex:0 1 auto}.toc-leader{flex:1 1 5mm;border-bottom:.25mm dotted #becbd3;min-width:4mm;align-self:baseline}.toc-page{flex:0 0 7mm;text-align:right;font-variant-numeric:tabular-nums}.toc-entry:hover .toc-title{text-decoration:underline}'''
+    css+='''.chapter-title{font-size:20pt;margin-bottom:5mm;line-height:1.45}.section-title{font-size:20pt;font-weight:650;color:#213444;line-height:1.45;margin:0 0 6mm}.chapter-title+.section-title{font-size:14pt;color:#356D9A;margin-bottom:5mm}h3{font-size:12.5pt;color:#356D9A;margin:5mm 0 2mm}.toc{margin-top:2mm}.toc-entry{display:flex;align-items:baseline;gap:2mm;min-height:7.4mm;line-height:1.65;font-size:10pt;color:#243746}.toc-level-1{font-weight:650;color:#254c68;margin-top:3mm}.toc-level-1:first-child{margin-top:0}.toc-level-2{padding-left:5mm}.toc-title{flex:0 1 auto}.toc-leader{flex:1 1 5mm;border-bottom:.25mm dotted #becbd3;min-width:4mm;align-self:baseline}.toc-page{flex:0 0 7mm;text-align:right;font-variant-numeric:tabular-nums}.toc-entry:hover .toc-title{text-decoration:underline}'''
     parts=['<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>'+esc(TITLE)+'</title><style>'+css+'</style><body>']
     for i,p in enumerate(pages,1):
-        parts.append(f'<section class="page" id="page-{i}"><main><div class="kicker">{p["kicker"]}</div><h1>{p["title"]}</h1>{p["body"]}</main><footer><span>Keep 社区文本与互动网络分析 · {esc(CFG["group"])}</span><span>{i:02d} / {len(pages):02d}</span></footer></section>')
+        if p.get('chapter'):
+            kicker=p['chapter_name'].split(' ',1)[0] if p['chapter_start'] else p['chapter_name']
+            heading=(f'<h1 class="chapter-title" id="chapter-{p["chapter"]}">{esc(p["chapter_name"].split(" ",1)[1])}</h1>'
+                     if p['chapter_start'] else '')
+            heading+=f'<h2 class="section-title" id="{p["anchor"]}">{p["section"]}　{esc(p["title"])}</h2>'
+        else:
+            kicker=p['kicker'];anchor=f' id="{p["anchor"]}"' if p.get('anchor') else ''
+            heading=f'<h1{anchor}>{esc(p["title"])}</h1>'
+        parts.append(f'<section class="page" id="page-{i}"><main><div class="kicker">{esc(kicker)}</div>{heading}{p["body"]}</main><footer><span>Keep 社区文本与互动网络分析 · {esc(CFG["group"])}</span><span>{i:02d} / {len(pages):02d}</span></footer></section>')
     parts.append('</body></html>');(ROOT/'分析报告.html').write_text(''.join(parts),encoding='utf-8')
 
 
@@ -289,28 +287,48 @@ def write_docx(pages):
     from bs4 import BeautifulSoup, NavigableString
     from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER, WD_LINE_SPACING
     doc=Document();sec=doc.sections[0];sec.top_margin=Cm(1.8);sec.bottom_margin=Cm(1.8);sec.left_margin=Cm(2);sec.right_margin=Cm(2)
+    sec.page_width=Cm(21);sec.page_height=Cm(29.7)
     style=doc.styles['Normal'];style.font.name='Microsoft YaHei';style.font.size=DPt(10)
     style.element.rPr.rFonts.set(qn('w:eastAsia'),'Microsoft YaHei')
+    for name,size in [('Heading 1',18),('Heading 2',15),('Heading 3',11.5)]:
+        style=doc.styles[name];style.font.name='Microsoft YaHei';style.font.size=DPt(size)
+        style.element.get_or_add_rPr().rFonts.set(qn('w:eastAsia'),'Microsoft YaHei')
     update_fields=DOxmlElement('w:updateFields');update_fields.set(qn('w:val'),'true')
     doc.settings.element.append(update_fields)
+    bookmark_id=0
+    def bookmark(heading,anchor):
+        nonlocal bookmark_id
+        bookmark_id+=1
+        start=DOxmlElement('w:bookmarkStart');start.set(qn('w:id'),str(bookmark_id));start.set(qn('w:name'),anchor.replace('-','_'))
+        heading._p.insert(1 if heading._p.pPr is not None else 0,start)
+        end=DOxmlElement('w:bookmarkEnd');end.set(qn('w:id'),str(bookmark_id));heading._p.append(end)
     for i,page in enumerate(pages):
         if i:doc.add_page_break()
-        doc.add_paragraph(page['kicker'],'Subtitle')
-        heading=doc.add_heading(page['title'],0 if i==0 or 'toc_entries' in page else 1)
-        bookmark=DOxmlElement('w:bookmarkStart');bookmark.set(qn('w:id'),str(i+1));bookmark.set(qn('w:name'),f'page_{i+1}')
-        heading._p.insert(1,bookmark)
-        bookmark_end=DOxmlElement('w:bookmarkEnd');bookmark_end.set(qn('w:id'),str(i+1));heading._p.append(bookmark_end)
+        if page.get('chapter'):
+            if page['chapter_start']:
+                heading=doc.add_heading(page['chapter_name'],1);bookmark(heading,f'chapter-{page["chapter"]}')
+            else:doc.add_paragraph(page['chapter_name'],'Subtitle')
+            heading=doc.add_heading(f'{page["section"]}　{page["title"]}',2);bookmark(heading,page['anchor'])
+        else:
+            doc.add_paragraph(page['kicker'],'Subtitle')
+            heading=doc.add_heading(page['title'],0 if i==0 or 'toc_entries' in page else 1)
+            if page.get('anchor'):bookmark(heading,page['anchor'])
         if 'toc_entries' in page:
             for entry in page['toc_entries']:
                 p=doc.add_paragraph();fmt=p.paragraph_format
-                fmt.space_after=DPt(0);fmt.line_spacing_rule=WD_LINE_SPACING.EXACTLY;fmt.line_spacing=DPt(20)
+                fmt.space_after=DPt(0);fmt.space_before=DPt(6 if entry['level']==1 else 0)
+                fmt.line_spacing_rule=WD_LINE_SPACING.EXACTLY;fmt.line_spacing=DPt(20)
+                if entry['level']==2:fmt.left_indent=Cm(.5)
                 fmt.tab_stops.add_tab_stop(Cm(17),WD_TAB_ALIGNMENT.RIGHT,WD_TAB_LEADER.DOTS)
-                link=DOxmlElement('w:hyperlink');link.set(qn('w:anchor'),f'page_{entry["page"]}')
+                anchor=entry['anchor'].replace('-','_')
+                link=DOxmlElement('w:hyperlink');link.set(qn('w:anchor'),anchor)
                 run=DOxmlElement('w:r');props=DOxmlElement('w:rPr')
                 color=DOxmlElement('w:color');color.set(qn('w:val'),'243746');props.append(color)
-                run.append(props);text=DOxmlElement('w:t');text.text=f'{entry["section"]}  {entry["title"]}';run.append(text)
+                if entry['level']==1:props.append(DOxmlElement('w:b'))
+                run.append(props);text=DOxmlElement('w:t')
+                text.text=f'{entry["section"]}  {entry["title"]}' if entry['section'] else entry['title'];run.append(text)
                 link.append(run);p._p.append(link);p.add_run('\t')
-                field=DOxmlElement('w:fldSimple');field.set(qn('w:instr'),f'PAGEREF page_{entry["page"]} \\h')
+                field=DOxmlElement('w:fldSimple');field.set(qn('w:instr'),f'PAGEREF {anchor} \\h')
                 field.set(qn('w:dirty'),'true')
                 value=DOxmlElement('w:r');text=DOxmlElement('w:t');text.text=str(entry['page']);value.append(text)
                 field.append(value);p._p.append(field)
@@ -325,7 +343,11 @@ def write_docx(pages):
                 for r in rows:
                     cells=t.add_row().cells
                     for c,text in zip(cells,r.find_all(['td','th'])):c.text=text.get_text(' ',strip=True)
-            elif el.name=='h2':doc.add_heading(el.get_text(),2)
+            elif el.name=='h2':
+                if i==0:
+                    run=doc.add_paragraph().add_run(el.get_text());run.bold=True;run.font.size=DPt(11.5)
+                else:doc.add_heading(el.get_text(),2)
+            elif el.name=='h3':doc.add_heading(el.get_text(),3)
             elif el.name=='ul':
                 for li in el.find_all('li',recursive=False):doc.add_paragraph(li.get_text(' ',strip=True),'List Bullet')
             else:doc.add_paragraph(el.get_text('\n',strip=True))
@@ -452,7 +474,16 @@ def main():
     pages=report_pages();write_html(pages);write_docx(pages)
     if not args.report_only:
         write_slides();notebook()
-    (ROOT/'results/report_manifest.json').write_text(json.dumps({'pages':len(pages),'slides':len(slide_specs()),'report':'分析报告.html','pdf':'分析报告.pdf','pptx':'演示文稿.pptx'},ensure_ascii=False,indent=2))
+    contents=[entry for page in pages for entry in page.get('toc_entries',[])]
+    chapters=[{'number':page['chapter'],'title':page['chapter_name'].split(' ',1)[1],
+               'page':page['physical_page'],
+               'subsections':[p['section'] for p in pages if p.get('chapter')==page['chapter']]}
+              for page in pages if page.get('chapter_start')]
+    (ROOT/'results/report_manifest.json').write_text(json.dumps({
+        'pages':len(pages),'slides':len(slide_specs()),'report':'分析报告.html',
+        'pdf':'分析报告.pdf','pptx':'演示文稿.pptx','chapters':chapters,
+        'toc_pages':[i for i,page in enumerate(pages,1) if 'toc_entries' in page],
+        'contents':contents},ensure_ascii=False,indent=2))
     print('Built',len(pages),'report pages.' if args.report_only else 'report pages, slides and notebook template.')
 
 if __name__=='__main__':main()

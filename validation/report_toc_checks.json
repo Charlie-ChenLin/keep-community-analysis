@@ -1,14 +1,15 @@
 {
-  "date": "2026-10-19",
-  "scope": "Table of contents and report rendering; statistical analyses unchanged.",
-  "report_pages": 30,
-  "toc_page": 2,
-  "toc_entries": 28,
-  "pdf_link_targets_verified": 28,
-  "pdf_target_headings_verified": 28,
-  "docx_hyperlinks_verified": 28,
-  "docx_page_reference_fields_verified": 28,
-  "docx_update_fields_on_open": true,
-  "original_cover_and_28_sections_unchanged": true,
+  "scope": "Seven-chapter structure, contents links and rendered report layout.",
+  "report_pages": 36,
+  "chapters": 7,
+  "subsections": 31,
+  "toc_pages": [
+    2,
+    3
+  ],
+  "toc_entries": 40,
+  "pdf_link_targets_verified": 40,
+  "pdf_target_headings_verified": 40,
+  "pdf_outline_entries": 40,
   "report_geometry_no_overflow": true
 }
