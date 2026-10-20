@@ -1,0 +1,32 @@
+{
+  "analysis_date": "2026-10-20",
+  "topic_comparison": {
+    "documents": 2470,
+    "authors": 86,
+    "vocabulary_and_model_unchanged": true
+  },
+  "direct_reply_comparison": {
+    "raw_comments": 13511,
+    "deduplicated_comments": 11595,
+    "all_roots_including_self": 6651,
+    "external_roots": 6609,
+    "eligible_post_authors": 77,
+    "matched_owner_direct_reply_events_all_delays": 3609,
+    "matched_owner_direct_reply_events_within_window": 3606,
+    "roots_with_observed_direct_reply": 3568,
+    "roots_with_tied_first_reply_timestamp": 0,
+    "window_hours_after_root_comment": 168,
+    "missing_direct_reply_reference_all_comments": 781,
+    "note": "未见符合条件的直接回复不等于实际未回复。根评论起算窗口不同于原网络的发帖后7天窗口。"
+  },
+  "source_sha256": {
+    "2026Data/Keep Data/sample_post_2022.csv": "74f2ed2878852f00618db3ae0b9f8c468a4f760e603dcb98c8a286a47919582c",
+    "2026Data/Keep Data/sample_comment_2022.csv": "7a7a7e1f2462fc457ed7110266fbacbd2998f0f302f86eef7ca1202c9da53355",
+    "results/extension_post_topics.csv": "b4162fabd04eec0191fd431322246d26263a35bcfdd91fcb6e77b40f2be003f5",
+    "code/comment_text_config.json": "9fe33dfa892e72fea4cc4d2cb78ce5e535b10464b9e13826f1db5d02693f31e1",
+    "code/topic_labels.json": "890f4cb33845a556a5c961b697998b614dd81dfe501eec15102f7d89bac93b40",
+    "code/supplemental_config.json": "fe37e50c8c27f15960436e82c388e2b6515655c927fef68bf5801a1f71180b38"
+  },
+  "interpretation": "两项描述性补充，不重新估计主回归或主题模型；不进行显著性检验，不识别语义链条或因果。",
+  "export_scope": "仅导出聚合表；逐条文本、用户ID及根评论—回复配对不公开。"
+}

@@ -1,24 +1,32 @@
 {
   "date": "2026-10-20",
-  "scope": "Document content, links, layout and unchanged-file verification only.",
-  "report_pages": 24,
+  "scope": "Document verification plus source binding for two separately executed descriptive supplements.",
+  "report_pages": 25,
   "existing_figures_in_same_order": 13,
   "figure_numbers_sequential": true,
   "html_text_preserved_in_pdf": true,
   "html_text_preserved_in_docx": true,
   "word_images": 13,
-  "word_directory_bookmarks_and_links": 25,
+  "word_directory_bookmarks_and_links": 26,
+  "pdf_outline_entries": 26,
   "local_source_links_resolve": true,
   "body_text_within_page_bounds": true,
-  "original_artifacts_sha256_verified": 58,
-  "original_reports_slides_results_figures_and_notebooks_unchanged": true,
+  "appendix_removed": true,
+  "research_questions_presented_as_table": true,
   "seven_body_chapters_preserved": true,
   "post_topics_in_chapter_4": true,
   "comment_text_and_network_in_chapter_5": true,
   "predictions_excluded": true,
-  "no_raw_data_read_or_statistical_recalculation": true,
-  "assignment_requirements_mapped": true,
+  "required_course_analysis_components_retained": true,
   "members_and_actual_contributions_left_unfilled": true,
+  "original_artifacts_sha256_verified": 58,
+  "original_reports_slides_results_figures_and_notebooks_unchanged": true,
+  "original_models_not_refitted": true,
+  "supplemental_analyses_authorized_and_executed": true,
+  "supplemental_report_tables_match_executed_outputs": true,
+  "supplemental_independent_checks_passed": 14,
+  "supplemental_notebook_executed_code_cells": 5,
+  "supplemental_notebook_outputs_visually_reviewed": true,
   "references_final_section": true,
   "source_snapshot": {
     "figures/01_sample_and_likes.png": "7ddd0f89afdbeee303d3e6f7a296c22784d07abf0cddcf9699579fbf5ce90e38",
@@ -80,19 +88,19 @@
     "评论文本分析.html": "f8481c2cb914d88a02379c4cf1a00357611d5bbe9055adb3173e985e35c62350",
     "评论文本分析.ipynb": "a09e3e9885b9e9774417b6cf0fab0911c82b09189dd4203b260e550545fb7c13"
   },
-  "manuscript_sha256": "88ffe0db3a54c6184dd3dcb6994e37c08edb742d4fbbfbe2ed667bd916668a6f",
+  "manuscript_sha256": "eaeb908c471e8d0d230b2b9f5280a19093676adbe89fabf8a74bbfbe4362603a",
   "output_sha256": {
-    ".html": "2d7de7e8d2ed3d069481e47b1d47b80f11684ff25992a7e11f6227067e3dd5f5",
-    ".docx": "1f19def4257f97605ed3b87f221894a03d901de5e31c24108a7b5d3c70944daa",
-    ".pdf": "c659db8d5d1f33c5b8e2a268dc3824b6ad63ad3c3f65aa66bfa68ac598bacb32"
+    ".html": "043e104862f9af35c3f487ecaaccf0c0b830f51edfdf298462c8af7979084928",
+    ".docx": "bda31bb57c00fbfb478daef1c7ec4082e948b135834795ff4e90fc5b449803df",
+    ".pdf": "3e829ef4f81f71a57f75b35357e3008d6869503fd99b8ebb9aaf6e8664db5982"
   },
   "visual_review": [
     "cover.png",
     "contents.png",
-    "4_4.png",
-    "5_1.png",
-    "5_3.png",
-    "7_1.png",
-    "topic_table.png"
+    "1_.png",
+    "4_5.png",
+    "5_5.png",
+    "notebook_topics.png",
+    "notebook_replies.png"
   ]
 }

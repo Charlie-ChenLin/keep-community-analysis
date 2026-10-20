@@ -7,6 +7,7 @@
 ## 报告与主要发现
 
 - **独立新版（consulting-analysis Phase 2）**：[PDF](分析报告_Phase2_中文新版.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版.docx)、[Markdown原稿](分析报告_Phase2_中文新版.md)、[HTML](分析报告_Phase2_中文新版.html)。保留原有七章和13张图，按发现、证据、解释及业务含义组织段落；帖子主题仍在第四章，评论文本与网络仍在第五章。旧版报告及演示稿保留。
+- 新版已删除附录，第一章以表格列明RQ与方法；第4.5节补充主题的作者等权比较，第5.5节补充根评论与帖主直接回复的词语顺序。新增结果见[补充分析Notebook](补充分析.ipynb)及[静态HTML](补充分析.html)，均属于描述性补充，不重新拟合原模型。
 - [分析报告 PDF](分析报告.pdf)：正式报告，35页，按七章组织，附两级目录、页内跳转及PDF书签。
 - [可编辑报告 DOCX](分析报告_可编辑.docx)：与HTML/PDF使用同一文字来源。
 - [演示文稿 PPTX](演示文稿.pptx)及[阅读版 PDF](演示文稿.pdf)：24页，附演讲者备注；逐页讲稿见`汇报讲稿.txt`。
@@ -22,7 +23,7 @@
 
 三个研究问题为：RQ1，样本帖子、表达方式及点赞如何分布；RQ2，不同文本特征与点赞是否相关；RQ3，采集到的评论主要表达什么、如何连接用户，互动集中在哪里。
 
-报告保留七章、下设30个小节。第三章提供样本分布与数据边界；第四章统一回答RQ2，依次完成文本编码、特征分布、词典回归、敏感性检验及帖子主题分析与主题回归（第4.11—4.13节）；第五章“评论文本与互动网络分析”专门回答RQ3，先分析评论内容（第5.1—5.2节），再分析用户连接与互动集中度（第5.3—5.7节）；第六章综合解释证据及其适用范围；第七章提出与发现对应的建议。参考文献与分工附录列于正文之后。
+旧版报告保留七章、下设30个小节。第三章提供样本分布与数据边界；第四章统一回答RQ2，依次完成文本编码、特征分布、词典回归、敏感性检验及帖子主题分析与主题回归（第4.11—4.13节）；第五章“评论文本与互动网络分析”专门回答RQ3，先分析评论内容（第5.1—5.2节），再分析用户连接与互动集中度（第5.3—5.7节）；第六章综合解释证据及其适用范围；第七章提出与发现对应的建议。旧版的参考文献与分工附录仍保留，新版已删除附录。
 
 2026-10-19增加评论文本分析：11,595条评论来自2,910位发言者，清理后字符数中位数为6，11.8%仅有标记或符号。其他用户发言的鼓励或赞许词命中率为16.9%，帖主发言的感谢词命中率为7.9%。字面规则可重叠，未经过独立人工语义效度验证，不用于测量情感或社会支持；内容与网络也未构成已验证的因果链条。
 
@@ -61,6 +62,11 @@
 │   ├── comment_text_config.json    # 评论字面规则与分析口径
 │   ├── validate_comment_text.py    # 从原始输入独立复算19项检查
 │   ├── build_comment_notebook.py   # 评论文本分析Notebook构建
+│   ├── analyze_supplements.py     # 作者等权主题与评论直接回应配对
+│   ├── supplemental_config.json   # 两项补充的预设口径与时间窗
+│   ├── validate_supplements.py    # 14项独立聚合与指向核查
+│   ├── build_supplemental_notebook.py # 补充分析Notebook构建
+│   ├── build_phase2_report.py     # 新版Markdown独立导出
 │   ├── project_config.json         # 题目、成员和分工占位
 │   ├── build_deliverables.py        # 报告、演示稿及Notebook构建
 │   ├── render_outputs.py           # HTML转PDF与版面检查
@@ -75,6 +81,7 @@
 ├── 分析过程.{ipynb,html}
 ├── 扩展实验.{ipynb,html}
 ├── 评论文本分析.{ipynb,html}
+├── 补充分析.{ipynb,html}
 ├── 演示文稿.{pptx,pdf}
 ├── 汇报讲稿.txt
 └── 互评报告模板.docx
@@ -110,7 +117,7 @@ make check-data
 make reproduce
 ```
 
-命令按顺序完成主分析、扩展实验、评论文本分析、三个Notebook的执行、报告导出和PPTX生成。完整计算不调用在线API。原分析的随机种子为20261016，扩展分析为20261017；实际库版本分别见`results/summary.json`和`results/extension_summary.json`。评论内容分析不进行随机抽样，来源校验值与口径见`results/comment_text_summary.json`。
+命令按顺序完成主分析、扩展实验、评论文本分析、补充分析、四个Notebook的执行、两版报告导出和PPTX生成。完整计算不调用在线API。原分析的随机种子为20261016，扩展分析为20261017；实际库版本分别见`results/summary.json`和`results/extension_summary.json`。评论内容与本轮补充分析不进行随机抽样，来源校验值与口径分别见`results/comment_text_summary.json`和`results/supplemental_summary.json`。
 
 | 目标 | 用途 | 对应命令 |
 | --- | --- | --- |
@@ -118,6 +125,8 @@ make reproduce
 | `make validate` | 独立复核现有数值结果 | `python code/validate.py` |
 | `make experiments` | 执行五类扩展分析及16项扩展核查 | `python code/extend_analysis.py`，再运行`code/validate_extensions.py` |
 | `make comments` | 计算评论文本汇总、两张图及19项核查 | `python code/analyze_comment_text.py`，再运行`code/validate_comment_text.py` |
+| `make supplemental` | 冻结主题的作者权重比较、评论直接回应及14项核查 | `python code/analyze_supplements.py`，再运行`code/validate_supplements.py` |
+| `make supplemental-notebook` | 构建并执行补充分析Notebook，导出静态HTML | `python code/build_supplemental_notebook.py`，执行`补充分析.ipynb`后导出 |
 | `make comment-notebook` | 构建、执行评论文本Notebook并导出HTML | `python code/build_comment_notebook.py`，执行`评论文本分析.ipynb`后导出 |
 | `make notebook` | 重新执行Notebook并导出静态HTML | `python -m jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=600 分析过程.ipynb`，再运行`code/export_notebook.py` |
 | `make extension-notebook` | 构建、执行扩展实验Notebook并导出HTML | `python code/build_extension_notebook.py`，执行`扩展实验.ipynb`后运行`code/export_notebook.py --input 扩展实验.ipynb` |
@@ -127,7 +136,11 @@ make reproduce
 
 `make report`和`make slides`可以使用仓库现有汇总结果，无需原始CSV。只改报告文字时，使用`make report`即可保留已执行的Notebook和现有演示稿。无参数运行`build_deliverables.py`则会重建全部交付物及Notebook模板，之后需要重新执行Notebook。
 
-独立新版的正文来源为`分析报告_Phase2_中文新版.md`。运行`make report-phase2`只将该原稿和既有PNG导出为同名HTML、DOCX、PDF，并核对目录链接，不读取原始CSV、不执行统计或重新绘图，也不覆盖旧版。它不属于`make reproduce`的分析流水线，需在已有图表就位后单独导出。
+独立新版的正文来源为`分析报告_Phase2_中文新版.md`。运行`make report-phase2`只将该原稿和既有PNG导出为同名HTML、DOCX、PDF，并核对目录链接，不读取原始CSV、不执行统计或重新绘图，也不覆盖旧版。该目标只负责文档导出，需在已有图表就位后执行；完整的`make reproduce`会在最后调用它。
+
+补充计算由独立目标`make supplemental`执行，口径保存在`code/supplemental_config.json`。主题比较需要已有的本地`results/extension_post_topics.csv`；缺少时先运行`make experiments`生成，完整的`make reproduce`已按此顺序安排，并在末尾导出新版报告。新增评论比较以每条外来根评论为单位，只纳入ID、用户指向、所属帖子和时间均匹配的帖主直接回复，168小时从根评论起算；这与原网络从发帖起算的首周窗口不同。聚合结果可公开阅读，原始文本、真实用户ID及配对明细不导出。
+
+补充表中的`observed_direct_replies`是观察到符合条件直接回复的根评论数，每条根评论最多计1次；感谢率以这些已观察到直接回复的根评论为分母。涉及帖主数和去重发言人数均可在命中、未命中两组重叠，不能跨组相加。主题表的占比差为作者等权占比减去帖子等权占比，使用未舍入数值计算。
 
 PDF导出需要Chrome/Chromium。脚本优先使用`CHROME_PATH`指定的浏览器或本机Chrome；没有本机浏览器时，可安装Playwright提供的Chromium：
 

@@ -1,5 +1,5 @@
 {
-  "scope": "Editorial source mapping only; all empirical values are inherited from existing project outputs.",
+  "scope": "Existing project results plus two separately executed and independently checked descriptive supplements, synthesized with consulting-analysis Phase 2.",
   "skill": "consulting-analysis / Phase 2",
   "research_questions": {
     "RQ1": {
@@ -20,7 +20,8 @@
         "4.1",
         "4.2",
         "4.3",
-        "4.4"
+        "4.4",
+        "4.5"
       ],
       "sources": [
         "results/regression_coefficients.csv",
@@ -29,7 +30,8 @@
         "results/extension_topics.csv",
         "results/extension_topic_regression.csv",
         "results/extension_author_influence_summary.csv",
-        "code/text_dictionary.json"
+        "code/text_dictionary.json",
+        "results/supplemental_topic_author_weighting.csv"
       ]
     },
     "RQ3": {
@@ -37,7 +39,8 @@
         "5.1",
         "5.2",
         "5.3",
-        "5.4"
+        "5.4",
+        "5.5"
       ],
       "sources": [
         "results/comment_text_summary.json",
@@ -47,7 +50,8 @@
         "results/extension_comment_roles.csv",
         "results/extension_comment_timing.csv",
         "results/extension_window_networks.csv",
-        "code/comment_text_config.json"
+        "code/comment_text_config.json",
+        "results/supplemental_direct_reply_language.csv"
       ]
     }
   },
@@ -127,10 +131,30 @@
       "claim": "首周网络互惠率74.1%",
       "source": "results/extension_window_networks.csv",
       "locator": "发帖后7天内 / reciprocity"
+    },
+    {
+      "claim": "作者等权后靠墙静蹲记录0.6%、运动与训练交流52.6%",
+      "source": "results/supplemental_topic_author_weighting.csv",
+      "locator": "author_equal_share"
+    },
+    {
+      "claim": "鼓励或赞许词命中根评论1,180条，观察到直接回复513条、43.5%",
+      "source": "results/supplemental_direct_reply_language.csv",
+      "locator": "命中鼓励或赞许词 / roots, observed_direct_replies, observed_direct_reply_share"
+    },
+    {
+      "claim": "最早观测直接回复中的感谢词命中率26.7%与6.4%",
+      "source": "results/supplemental_direct_reply_language.csv",
+      "locator": "thanks_among_observed_first_replies"
+    },
+    {
+      "claim": "感谢词顺序共现占各组全部根评论的11.6%与3.6%",
+      "source": "results/supplemental_direct_reply_language.csv",
+      "locator": "thanks_first_reply_share_all_roots"
     }
   ],
   "interpretation_status": {
-    "sample_facts": "Descriptive results, fitted coefficients, intervals and previously computed diagnostics.",
+    "sample_facts": "Descriptive results, fitted coefficients, intervals and previously computed diagnostics. Includes author-balanced dominant-topic shares and ID/time-matched direct-reply lexical sequences.",
     "possible_explanations": [
       "作者与情境构成",
       "采集或记录生成方式",
@@ -147,7 +171,7 @@
       "因果识别",
       "平台总体代表性",
       "语义量表有效性",
-      "固定鼓励—感谢链条",
+      "普遍的鼓励—感谢语义机制",
       "留存或运动效果",
       "干预收益"
     ]
@@ -174,6 +198,19 @@
     "results/summary.json": "643880bd5cb0262f658588aabc7bdeb24ba08e45a1e02a87ca2ec22a493839e8",
     "results/text_features_summary.csv": "65a0a3b1aa1780e613516c2ef2cd076e6f243e5395dd8ee58d2852dc15fb5cd2",
     "分析报告.html": "e164b4a61bd4d60272f2641cdd0bb8f1f539ec1d8d9a1b09b5087ce45c07c5c0",
-    "小组项目作业.pdf": "6ca35ac805016fb0a5aeef73e36253e422410f74167c8ae673db50e0b7941ac2"
+    "小组项目作业.pdf": "6ca35ac805016fb0a5aeef73e36253e422410f74167c8ae673db50e0b7941ac2",
+    "results/supplemental_topic_author_weighting.csv": "d5bd6708b876aa751f2bee5e294391ee12985aa78704805f77accae4adabfb7d",
+    "results/supplemental_direct_reply_language.csv": "b3d5c86cee0d4f80bdbc00d61fa2219b1ff05b79dfcbf82d218bd1b5805dd786",
+    "results/supplemental_summary.json": "530b5d18dab5c7b851a6b8c1ebe7ccb3bd2690f8c733ccbf627904d3b8cfeaea",
+    "code/supplemental_config.json": "fe37e50c8c27f15960436e82c388e2b6515655c927fef68bf5801a1f71180b38",
+    "code/analyze_supplements.py": "e2165652d37ca7a83b0fb1887e07979e9ff144d4e360d22f8dfeab269a78dc34",
+    "code/validate_supplements.py": "5aba1132298c17a8fcdd5165cf583e5a1930c531c99e94a52c93ebde8bd350fa"
+  },
+  "supplemental_execution": {
+    "notebook": "补充分析.ipynb",
+    "script": "code/analyze_supplements.py",
+    "configuration": "code/supplemental_config.json",
+    "independent_checks": "validation/supplemental_checks.json",
+    "checks_passed": 14
   }
 }

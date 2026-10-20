@@ -1,6 +1,6 @@
 {
-  "pages": 24,
-  "heading_links_verified": 25,
+  "pages": 25,
+  "heading_links_verified": 26,
   "directory_page_numbers_verified": true,
   "existing_pngs_loaded": [
     {
@@ -59,13 +59,16 @@
   "preview_pages": {
     "cover": 1,
     "contents": 2,
+    "1_": 3,
     "4_4": 11,
-    "5_1": 13,
-    "5_3": 15,
-    "7_1": 20
+    "4_5": 12,
+    "5_1": 14,
+    "5_3": 16,
+    "5_5": 18,
+    "7_1": 22
   },
-  "outline_entries": 25,
+  "outline_entries": 26,
   "source_markdown": "分析报告_Phase2_中文新版.md",
-  "source_sha256": "88ffe0db3a54c6184dd3dcb6994e37c08edb742d4fbbfbe2ed667bd916668a6f",
+  "source_sha256": "eaeb908c471e8d0d230b2b9f5280a19093676adbe89fabf8a74bbfbe4362603a",
   "scope": "Document rendering only; no analytical modules, raw inputs or chart generation."
 }

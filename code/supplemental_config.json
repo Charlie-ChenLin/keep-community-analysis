@@ -1,0 +1,19 @@
+{
+  "analysis_date": "2026-10-20",
+  "topic_comparison": {
+    "source": "results/extension_post_topics.csv",
+    "components": ["topic_0", "topic_1", "topic_2", "topic_3", "topic_4"],
+    "classification": "沿用既有主题权重的最大值；不重新拟合NMF或调整主题数。",
+    "weighting": "帖子等权；先计算每位作者的主导主题占比，再对86位作者等权平均。"
+  },
+  "comment_responses": {
+    "maximum_delay_hours": 168,
+    "root": "replyUserId、reply、parentId均缺失，且发言者不是所属帖主。",
+    "direct_reply": "帖主发言，reply直接等于根评论ID，replyUserId等于根评论作者，postId与parentId均匹配。",
+    "first_reply": "根评论之后168小时内最早观测到的直接回复时点；同一最早时点若有多条，任一命中感谢词即记命中。",
+    "missing_id_tokens": ["", "null"],
+    "exposure": "沿用comment_text_config.json中鼓励或赞许词规则。",
+    "outcome": "是否观察到直接回复；已观察到直接回复的根评论中，首次回复时点是否命中感谢词。",
+    "interpretation": "逐条指向及时间匹配后的描述统计，不进行因果推断、显著性检验或业务效果估计。"
+  }
+}

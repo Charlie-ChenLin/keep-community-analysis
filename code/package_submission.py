@@ -34,7 +34,7 @@ def evaluation_template():
 
 def main():
     evaluation_template()
-    for name in ['分析过程.ipynb','扩展实验.ipynb','评论文本分析.ipynb']:
+    for name in ['分析过程.ipynb','扩展实验.ipynb','评论文本分析.ipynb','补充分析.ipynb']:
         nb=nbformat.read(ROOT/name,4);nbformat.validate(nb)
         cells=[c for c in nb.cells if c.cell_type=='code']
         assert all(c.execution_count is not None for c in cells)
@@ -44,12 +44,13 @@ def main():
     assert len(Presentation(ROOT/'演示文稿.pptx').slides)==layout['slides']
     checks=json.loads((ROOT/'validation/numerical_checks.json').read_text());assert all(c['passed'] for c in checks)
     comment_checks=json.loads((ROOT/'validation/comment_text_checks.json').read_text());assert all(c['passed'] for c in comment_checks)
+    supplemental_checks=json.loads((ROOT/'validation/supplemental_checks.json').read_text());assert all(c['passed'] for c in supplemental_checks)
     geometry=json.loads((ROOT/'validation/report_geometry.json').read_text());assert not geometry['overflow']
     files=[]
     for name in ['README.md','DATA.md','.gitignore','Makefile','requirements.txt','2026Data/README.md','2026Data/Keep Data/README.md','2026Data/Keep Data/.gitkeep','references/README.md','references/.gitkeep','分析报告.pdf','分析报告.html','分析报告_可编辑.docx','演示文稿.pptx','汇报讲稿.txt','分析过程.ipynb','分析过程.html','扩展实验.ipynb','扩展实验.html','互评报告模板.docx','小组项目作业.pdf']:
         p=ROOT/name;assert p.exists(),p;files.append((p,name))
     # Optional presentation PDF only if it matches the current slide count.
-    for name in ['评论文本分析.ipynb','评论文本分析.html']:
+    for name in ['评论文本分析.ipynb','评论文本分析.html','补充分析.ipynb','补充分析.html']:
         p=ROOT/name;assert p.exists(),p;files.append((p,name))
     # Keep the separately authored Phase 2 edition alongside the original report.
     for suffix in ['.md','.html','.docx','.pdf']:

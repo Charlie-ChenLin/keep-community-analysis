@@ -292,7 +292,7 @@ font-family:Arial,sans-serif;display:flex;justify-content:space-between">
     VALIDATION.mkdir(parents=True, exist_ok=True)
     preview_pages = {'cover': 1, 'contents': next(i + 1 for i, p in enumerate(pdf) if '目录' in p.get_text())}
     for heading in headings:
-        if heading['title'].startswith(('4.4 ', '5.1 ', '5.3 ', '7.1 ')):
+        if heading['title'].startswith(('1. ', '4.4 ', '4.5 ', '5.1 ', '5.3 ', '5.5 ', '7.1 ')):
             preview_pages[heading['title'].split()[0].replace('.', '_')] = by_id[heading['id']]
     for label, physical in preview_pages.items():
         pix = pdf[physical - 1].get_pixmap(matrix=fitz.Matrix(1.3, 1.3), alpha=False)
