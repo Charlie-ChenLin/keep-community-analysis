@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 
 ROOT=Path(__file__).resolve().parents[1]
 CHAPTERS=['研究题目','研究问题的意义','描述性统计分析','非结构化数据的结构化与回归分析',
-          '文本与网络分析','结果与解释','建议']
+          '评论文本与互动网络分析','结果与解释','建议']
 CHINESE_NUMBERS='一二三四五六七'
 RQ1='样本帖子、表达方式及点赞如何分布？'
 RQ2='不同文本特征与点赞是否相关？'
@@ -62,8 +62,8 @@ def organize_report(pages,ui,title):
         '这两类证据可以相互补充，但不能据此比较内容与关系对点赞的因果贡献。')
     questions=table(['编号','研究问题','对应分析'],[
         ['RQ1',RQ1,'第3章描述统计；第4.3节编码后特征分布。'],
-        ['RQ2',RQ2,'第4章词典主回归与敏感性检验；第5.1—5.3节主题分析及回归。'],
-        ['RQ3',RQ3,'第5.4—5.5节评论文本；第5.6—5.10节评论网络。'],
+        ['RQ2',RQ2,'第4章：词典主回归、敏感性检验、帖子主题分析及主题回归。'],
+        ['RQ3',RQ3,'第5.1—5.2节评论文本；第5.3—5.7节评论网络。'],
     ],[10,49,41])
     questions+='<h2>研究概念与可观测变量</h2>'+para('RQ2区分字面表达与内容模式。正文长度用于描述表达规模；'
         '自律与目标词对应健身记录中的目标、过程线索；社交称呼与互助词对应显式称呼或共同参与的线索；'
@@ -85,11 +85,11 @@ def organize_report(pages,ui,title):
     topic_regression+='<h2>与主回归的关系</h2>'+para('本节以2,470条有效正文为条件，主回归则使用全部9,532条帖子。'
         '两者的样本范围与文本表示均有差别，不能把两个不显著结果视为同一检验的重复验证，也不直接比较模型R²。'
         '在当前子样本中，主题权重尚未提供明确的额外关联证据；这一判断不能外推到缺少有效正文的帖子。')
-    topic_method=para('本章继续回答RQ2，并在第5.4节转向RQ3。词典特征检验预先界定的字面表达，'
+    topic_method=para('本节从内容主题补充回答RQ2。前面的词典回归检验预先界定的字面表达，'
         '主题分析概括正文主要谈论的内容。通过这一补充，可以考察内容模式与点赞的条件关联，'
         '同时保留两类文本表示各自的测量范围。')+take('TF-IDF与非负矩阵分解的主题分析')
 
-    comment_words=para('本节开始回答RQ3，先描述评论内容，再分析关系结构。文本统计使用全部11,595条去重评论，'
+    comment_words=para('本章专门回答RQ3，先描述评论内容，再分析关系结构。分析对象由帖子正文转向已采集的评论。文本统计使用全部11,595条去重评论，'
         '保留不同评论ID下的重复短句及84次自我互动；后续网络另行排除自我事件。')
     comment_words+=table(['环节','处理与口径'],[
         ['文本清理','统一全半角与空白，移除URL和方括号标记；没有汉字、字母或数字的记录另列为仅标记或符号。'],
@@ -170,9 +170,10 @@ def organize_report(pages,ui,title):
          ('主回归结果',take('核心文本特征的关联证据有限')),
          ('回归系数的量级与解释',take('回归系数的量级与解释')),
          ('样本与模型设定的稳健性',take('积极表达的负关联对模型设定敏感')),
-         ('逐作者剔除的敏感性',take('逐作者剔除后的系数敏感性'))],
-        [('文本主题分析的目的与方法',topic_method),('主题分布及其作者集中度',topic_description),
-         ('主题权重与点赞的条件关联',topic_regression),('评论文本的范围与常见词语',comment_words),
+         ('逐作者剔除的敏感性',take('逐作者剔除后的系数敏感性')),
+         ('帖子主题分析的目的与方法',topic_method),('帖子主题分布及作者集中度',topic_description),
+         ('主题权重与点赞的条件关联',topic_regression)],
+        [('评论文本的范围与常见词语',comment_words),
          ('评论字面表达与发言角色',comment_expressions),('评论关系识别与建图规则',network_rules),
          ('网络连通性与互惠性',take('评论互动网络的连通性与互惠性')),
          ('互动接收的集中度',str(concentration)),('评论时序与回应角色',take('多数明确回复由帖主发出')),
@@ -186,9 +187,15 @@ def organize_report(pages,ui,title):
         for index,(heading,body) in enumerate(sections,1):
             section=f'{chapter}.{index}'
             body=body.replace('文本测量核查部分','第4.4节').replace('第13节','第4.4节')
+            if section=='4.1':
+                body=para('本章以帖子正文为分析对象，围绕RQ2依次构建词典特征、估计主回归，'
+                          '并在第4.11—4.13节开展帖子主题分析及主题回归。各部分共同考察文本与点赞的条件关联。')+body
             if section=='4.10':
-                body+=para('本章完成了字面表达的测量、作者内比较与敏感性检验。下一章先从内容主题补充回答RQ2，'
-                           '随后转向评论文本和用户关系，回答RQ3。')
+                body+=para('以上完成了字面表达的测量、作者内比较与敏感性检验。以下从帖子内容主题补充回答RQ2，'
+                           '依次说明主题建模、主题分布与主题权重回归。')
+            if section=='4.13':
+                body+=para('至此，帖子文本的字面特征与内容主题均已完成结构化及回归检验。下一章转向评论文本与用户连接，'
+                           '独立回答RQ3。')
             soup=BeautifulSoup(body,'html.parser')
             for h in soup.find_all('h2'):h.name='h3'
             for caption in soup.find_all('figcaption'):
@@ -200,8 +207,8 @@ def organize_report(pages,ui,title):
     appendix=take('课程要求与小组分工')
     appendix=appendix.replace('封面、研究背景；成员留待真实填写','第1—2章及封面；成员待据实填写')
     appendix=appendix.replace('数据、描述统计与文本分析部分；代码及Notebook','第3章及第4.3节；代码与已执行Notebook')
-    appendix=appendix.replace('文本编码、主题与回归部分；特征表及模型结果','第4章与第5.1—5.3节；特征表及模型结果')
-    appendix=appendix.replace('已完成词典内容分析、分词统计及评论网络','第5章；帖子主题、评论文本与评论网络')
+    appendix=appendix.replace('文本编码、主题与回归部分；特征表及模型结果','第4章；词典及帖子主题的结构化与回归结果')
+    appendix=appendix.replace('已完成词典内容分析、分词统计及评论网络','第4.11—4.13节帖子主题；第5章评论文本与评论网络')
     appendix=appendix.replace('回归及网络结果的解释与讨论','第6章综合解释与第7章建议')
     for heading,anchor,body in [('参考文献与复现说明','references',reference),('附录：课程要求与小组分工','appendix',appendix)]:
         output.append({'kicker':'参考资料' if anchor=='references' else '附录','title':heading,'anchor':anchor,'body':body})

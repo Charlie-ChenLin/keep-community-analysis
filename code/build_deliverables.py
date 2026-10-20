@@ -409,11 +409,12 @@ def textbox(slide,x,y,w,h,text,size=20,color=DARK,bold=False):
 
 def write_slides():
     from PIL import Image
+    from report_extensions import slide_section_label
     prs=Presentation();prs.slide_width=Inches(13.3333);prs.slide_height=Inches(7.5)
     specs=slide_specs();notes=[]
     for i,(title,bullets,img,speaker) in enumerate(specs,1):
         slide=prs.slides.add_slide(prs.slide_layouts[6]);slide.background.fill.solid();slide.background.fill.fore_color.rgb=RGBColor(255,255,255)
-        textbox(slide,.55,.28,12,.3,f'KEEP COMMUNITY  /  小组项目  /  {i:02d}',size=11,color=BLUE)
+        textbox(slide,.55,.28,12,.3,f'KEEP COMMUNITY  /  {slide_section_label(title)}  /  {i:02d}',size=11,color=BLUE)
         textbox(slide,.55,.82,12.2,.9,title,size=30 if i!=1 else 34,bold=True)
         if img:
             path=ROOT/'figures'/(img+'.png');w,h=Image.open(path).size

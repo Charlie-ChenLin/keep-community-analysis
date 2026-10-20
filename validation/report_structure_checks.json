@@ -1,13 +1,13 @@
 {
-  "date": "2026-10-19",
-  "comparison_commit": "e33b92af04cb4c29911e247b5bb3120d5a5a410c",
+  "date": "2026-10-20",
+  "comparison_commit": "4cae9eb0ea8923d648f1c305e88fb7d2cca7f405",
   "title": "Keep社区中的内容表达与互动反馈",
   "chapters_in_requested_order": [
     "研究题目",
     "研究问题的意义",
     "描述性统计分析",
     "非结构化数据的结构化与回归分析",
-    "文本与网络分析",
+    "评论文本与互动网络分析",
     "结果与解释",
     "建议"
   ],
@@ -23,16 +23,39 @@
   "word_chapter_headings": 7,
   "word_numbered_subsections": 30,
   "word_internal_links_and_page_fields": 39,
-  "coding_precedes_feature_distribution": true,
-  "main_regression_completed_in_chapter_4": true,
-  "topic_model_and_regression_in_chapter_5": true,
-  "comment_content_and_network_both_answer_rq3": true,
-  "discussion_and_recommendations_refocused": true,
-  "unchanged_comparable_analytical_tables": 24,
-  "previous_11_figures_retained": true,
+  "chapter_4_subsections": 13,
+  "chapter_5_subsections": 7,
+  "post_topic_sections_in_chapter_4": [
+    "4.11",
+    "4.12",
+    "4.13"
+  ],
+  "comment_sections_in_chapter_5": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5",
+    "5.6",
+    "5.7"
+  ],
+  "post_topics_and_comments_separated": true,
+  "rq2_entirely_in_chapter_4": true,
+  "rq3_entirely_in_chapter_5": true,
+  "stale_section_references_removed": true,
+  "unchanged_comparable_analytical_tables": 31,
+  "changed_tables": [
+    "research_question_chapter_mapping",
+    "assignment_requirement_chapter_mapping"
+  ],
+  "figures_unchanged_and_in_same_order": true,
   "current_figures": 13,
-  "figure_numbers_sequential": true,
-  "original_regression_network_results_and_two_notebooks_unchanged": true,
-  "new_comment_notebook_executed_cells": 5,
-  "new_comment_checks_passed": 19
+  "numerical_results_figures_and_three_executed_notebooks_unchanged": true,
+  "visual_review": [
+    "report_toc.png",
+    "report_toc_2.png",
+    "report_chapter_5.png",
+    "report_section_4_11.png",
+    "slide15.png"
+  ]
 }

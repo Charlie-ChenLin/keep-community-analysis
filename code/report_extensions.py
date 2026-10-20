@@ -182,13 +182,19 @@ def extend_slides(specs):
     out=[indexed[key] for key in order]
     for i,(title,bullets,img,speaker) in enumerate(out):
         if title=='主结果：没有明确的高赞用词公式':title='主结果：核心文本特征的关联证据有限'
+        if title=='NMF补充识别内容表达模式':
+            title='帖子主题：NMF识别内容模式'
+            speaker='这一页属于RQ2，与第四章的词典回归共同研究帖子正文。'+speaker
+        if title=='主题回归仍未提供明确的增量证据':
+            title='帖子主题与点赞：主题权重回归'
+            speaker='帖子主题分析及回归集中于报告第4.11—4.13节；下一部分转向第五章的评论分析。'+speaker
         speaker=speaker.replace('报告第09节','报告中的模型设定部分')
         if title=='研究问题：表达方式与点赞有关吗？':
             title='三个研究问题：分布、关联与互动'
             bullets=['RQ1：样本帖子、表达方式及点赞如何分布？',
                      'RQ2：不同文本特征与点赞是否相关？',
                      'RQ3：评论主要表达什么、如何连接用户？互动集中在哪里？']
-            speaker='RQ1由描述统计回答；RQ2由词典主回归、主题分析与主题回归回答；RQ3同时采用评论内容描述和网络分析。研究围绕帖子内容关联与评论互动两条线展开。'
+            speaker='RQ1由描述统计回答；RQ2的词典主回归、帖子主题分析与主题回归统一放在第四章；RQ3的评论内容与网络分析统一放在第五章。研究围绕帖子内容关联与评论互动两条线展开。'
         if title=='研究意义与计划':
             title='研究逻辑：帖子关联与评论互动'
             bullets=['帖子层面：描述差异 → 字面特征回归 → 主题补充。',
@@ -214,3 +220,11 @@ def extend_slides(specs):
             speaker='说明两条分析线各自的适用范围。评论文本采用描述性规则，不把命中率当作情感或社会支持量表；也不将评论的关系结构用于解释点赞回归的系数。'
         out[i]=(title,bullets,img,speaker)
     return out
+
+
+def slide_section_label(title):
+    if title.startswith('帖子主题'):
+        return 'RQ2 · 帖子文本与点赞'
+    if title.startswith(('评论文本：','评论内容：','评论网络：','互动集中，','网络互惠')):
+        return 'RQ3 · 评论内容与关系'
+    return '小组项目'

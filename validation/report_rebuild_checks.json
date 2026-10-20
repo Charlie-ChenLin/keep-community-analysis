@@ -1,13 +1,10 @@
 {
-  "scope": "New comment analysis and revised deliverables; existing regression and network estimates reused.",
-  "command": "make comments comment-notebook report slides",
-  "clean_snapshot_passed": true,
-  "only_two_raw_csv_inputs_required": true,
-  "row_level_cached_outputs_not_required": true,
-  "comment_summary_and_tables_match": true,
+  "date": "2026-10-20",
+  "scope": "Chapter separation only; analytical calculations reused unchanged.",
+  "command": "make report slides",
+  "clean_snapshot_without_raw_data_passed": true,
   "report_html_and_manifest_match": true,
   "slide_text_match": true,
-  "executed_comment_notebook_cells": 5,
   "report_pages": 35,
   "slides": 24
 }

@@ -47,13 +47,16 @@
         "4.7",
         "4.8",
         "4.9",
-        "4.10"
+        "4.10",
+        "4.11",
+        "4.12",
+        "4.13"
       ]
     },
     {
       "number": 5,
-      "title": "文本与网络分析",
-      "page": 21,
+      "title": "评论文本与互动网络分析",
+      "page": 24,
       "subsections": [
         "5.1",
         "5.2",
@@ -61,10 +64,7 @@
         "5.4",
         "5.5",
         "5.6",
-        "5.7",
-        "5.8",
-        "5.9",
-        "5.10"
+        "5.7"
       ]
     },
     {
@@ -259,90 +259,90 @@
       "chapter": 4
     },
     {
+      "level": 2,
+      "section": "4.11",
+      "title": "帖子主题分析的目的与方法",
+      "anchor": "section-4-11",
+      "page": 21,
+      "chapter": 4
+    },
+    {
+      "level": 2,
+      "section": "4.12",
+      "title": "帖子主题分布及作者集中度",
+      "anchor": "section-4-12",
+      "page": 22,
+      "chapter": 4
+    },
+    {
+      "level": 2,
+      "section": "4.13",
+      "title": "主题权重与点赞的条件关联",
+      "anchor": "section-4-13",
+      "page": 23,
+      "chapter": 4
+    },
+    {
       "level": 1,
       "section": "",
-      "title": "第五章 文本与网络分析",
+      "title": "第五章 评论文本与互动网络分析",
       "anchor": "chapter-5",
-      "page": 21,
-      "chapter": 5
-    },
-    {
-      "level": 2,
-      "section": "5.1",
-      "title": "文本主题分析的目的与方法",
-      "anchor": "section-5-1",
-      "page": 21,
-      "chapter": 5
-    },
-    {
-      "level": 2,
-      "section": "5.2",
-      "title": "主题分布及其作者集中度",
-      "anchor": "section-5-2",
-      "page": 22,
-      "chapter": 5
-    },
-    {
-      "level": 2,
-      "section": "5.3",
-      "title": "主题权重与点赞的条件关联",
-      "anchor": "section-5-3",
-      "page": 23,
-      "chapter": 5
-    },
-    {
-      "level": 2,
-      "section": "5.4",
-      "title": "评论文本的范围与常见词语",
-      "anchor": "section-5-4",
       "page": 24,
       "chapter": 5
     },
     {
       "level": 2,
-      "section": "5.5",
+      "section": "5.1",
+      "title": "评论文本的范围与常见词语",
+      "anchor": "section-5-1",
+      "page": 24,
+      "chapter": 5
+    },
+    {
+      "level": 2,
+      "section": "5.2",
       "title": "评论字面表达与发言角色",
-      "anchor": "section-5-5",
+      "anchor": "section-5-2",
       "page": 25,
       "chapter": 5
     },
     {
       "level": 2,
-      "section": "5.6",
+      "section": "5.3",
       "title": "评论关系识别与建图规则",
-      "anchor": "section-5-6",
+      "anchor": "section-5-3",
       "page": 26,
       "chapter": 5
     },
     {
       "level": 2,
-      "section": "5.7",
+      "section": "5.4",
       "title": "网络连通性与互惠性",
-      "anchor": "section-5-7",
+      "anchor": "section-5-4",
       "page": 27,
       "chapter": 5
     },
     {
       "level": 2,
-      "section": "5.8",
+      "section": "5.5",
       "title": "互动接收的集中度",
-      "anchor": "section-5-8",
+      "anchor": "section-5-5",
       "page": 28,
       "chapter": 5
     },
     {
       "level": 2,
-      "section": "5.9",
+      "section": "5.6",
       "title": "评论时序与回应角色",
-      "anchor": "section-5-9",
+      "anchor": "section-5-6",
       "page": 29,
       "chapter": 5
     },
     {
       "level": 2,
-      "section": "5.10",
+      "section": "5.7",
       "title": "评论观察窗口的敏感性",
-      "anchor": "section-5-10",
+      "anchor": "section-5-7",
       "page": 30,
       "chapter": 5
     },
