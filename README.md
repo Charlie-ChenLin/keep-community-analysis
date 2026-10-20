@@ -6,8 +6,9 @@
 
 ## 报告与主要发现
 
+- **业务重写版 `_v2`（data-analysis-report-writer）**：[PDF](分析报告_Phase2_中文新版_v2.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版_v2.docx)、[Markdown](分析报告_Phase2_中文新版_v2.md)、[HTML](分析报告_Phase2_中文新版_v2.html)。沿用全部既有计算和13张图，以执行摘要提出决策判断；评论部分按语言、直接回复、网络与时间窗口衔接；建议补充优先级、交付成果及实施条件。未重算数据，前两版均保留。
 - **独立新版（consulting-analysis Phase 2）**：[PDF](分析报告_Phase2_中文新版.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版.docx)、[Markdown原稿](分析报告_Phase2_中文新版.md)、[HTML](分析报告_Phase2_中文新版.html)。保留原有七章和13张图，按发现、证据、解释及业务含义组织段落；帖子主题仍在第四章，评论文本与网络仍在第五章。旧版报告及演示稿保留。
-- 新版已删除附录，第一章以表格列明RQ与方法；第4.5节补充主题的作者等权比较，第5.5节补充根评论与帖主直接回复的词语顺序。新增结果见[补充分析Notebook](补充分析.ipynb)及[静态HTML](补充分析.html)，均属于描述性补充，不重新拟合原模型。
+- Phase 2版已删除附录，第一章以表格列明RQ与方法；第4.5节补充主题的作者等权比较，第5.5节补充根评论与帖主直接回复的词语顺序（业务重写版将其移至第5.2节）。相关结果见[补充分析Notebook](补充分析.ipynb)及[静态HTML](补充分析.html)，均属于描述性补充，不重新拟合原模型。
 - [分析报告 PDF](分析报告.pdf)：正式报告，35页，按七章组织，附两级目录、页内跳转及PDF书签。
 - [可编辑报告 DOCX](分析报告_可编辑.docx)：与HTML/PDF使用同一文字来源。
 - [演示文稿 PPTX](演示文稿.pptx)及[阅读版 PDF](演示文稿.pdf)：24页，附演讲者备注；逐页讲稿见`汇报讲稿.txt`。
@@ -78,6 +79,8 @@
 ├── validation/                     # 数值核查、版面核查与预览
 ├── 分析报告.{html,pdf}
 ├── 分析报告_可编辑.docx
+├── 分析报告_Phase2_中文新版.{md,html,pdf,docx}
+├── 分析报告_Phase2_中文新版_v2.{md,html,pdf,docx}
 ├── 分析过程.{ipynb,html}
 ├── 扩展实验.{ipynb,html}
 ├── 评论文本分析.{ipynb,html}
@@ -137,6 +140,8 @@ make reproduce
 `make report`和`make slides`可以使用仓库现有汇总结果，无需原始CSV。只改报告文字时，使用`make report`即可保留已执行的Notebook和现有演示稿。无参数运行`build_deliverables.py`则会重建全部交付物及Notebook模板，之后需要重新执行Notebook。
 
 独立新版的正文来源为`分析报告_Phase2_中文新版.md`。运行`make report-phase2`只将该原稿和既有PNG导出为同名HTML、DOCX、PDF，并核对目录链接，不读取原始CSV、不执行统计或重新绘图，也不覆盖旧版。该目标只负责文档导出，需在已有图表就位后执行；完整的`make reproduce`会在最后调用它。
+
+业务重写版另存为`分析报告_Phase2_中文新版_v2.md`，使用`make report-v2`导出同名HTML、DOCX和PDF。该命令只处理文稿及既有图片，不运行数据分析或Notebook，也不覆盖前两版；目录核查和预览保存在`validation/report_v2/`。该版本保留七个主体章节、RQ表格及主题与评论分章，不设附录，将综合结论集中在第六章，并以第七章的具体行动收束全文。
 
 补充计算由独立目标`make supplemental`执行，口径保存在`code/supplemental_config.json`。主题比较需要已有的本地`results/extension_post_topics.csv`；缺少时先运行`make experiments`生成，完整的`make reproduce`已按此顺序安排，并在末尾导出新版报告。新增评论比较以每条外来根评论为单位，只纳入ID、用户指向、所属帖子和时间均匹配的帖主直接回复，168小时从根评论起算；这与原网络从发帖起算的首周窗口不同。聚合结果可公开阅读，原始文本、真实用户ID及配对明细不导出。
 

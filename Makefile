@@ -1,9 +1,10 @@
 PYTHON ?= python
 .DEFAULT_GOAL := help
 .NOTPARALLEL:
-.PHONY: help install check-data analyze validate experiments comments comment-notebook extension-notebook supplemental supplemental-notebook notebook report report-phase2 slides slides-pdf reproduce submission
+.PHONY: help install check-data analyze validate experiments comments comment-notebook extension-notebook supplemental supplemental-notebook notebook report report-phase2 report-v2 slides slides-pdf reproduce submission
 
 help:
+	@printf '%s\n' 'make report-v2  仅将业务重写版Markdown导出为_v2文件'
 	@printf '%s\n' 'make supplemental  主题作者权重、评论直接回应及独立核查' 'make supplemental-notebook  执行补充分析Notebook并导出HTML'
 	@printf '%s\n' 'make report-phase2  只导出独立中文新版，不重算、不覆盖旧版'
 	@printf '%s\n' 'make install      安装Python依赖' 'make check-data   检查本地课程CSV及SHA-256' 'make analyze      清洗、文本编码、回归、网络及数值核查' 'make experiments  执行扩展分析与预测对照' 'make comments     评论文本汇总、图表与独立核查' 'make comment-notebook    执行评论文本Notebook并导出HTML' 'make notebook     执行主分析Notebook' 'make extension-notebook  执行扩展实验Notebook' 'make report       用已有结果生成报告HTML、DOCX和PDF' 'make slides       用已有结果生成PPTX及讲稿' 'make slides-pdf   macOS下用PowerPoint导出演示PDF' 'make reproduce    依次完成分析、Notebook、报告和PPTX' 'make submission   使用本地课程原件打包提交ZIP'
@@ -59,6 +60,9 @@ report:
 
 report-phase2:
 	$(PYTHON) code/build_phase2_report.py
+
+report-v2:
+	$(PYTHON) code/build_phase2_report.py --stem 分析报告_Phase2_中文新版_v2 --validation-dir validation/report_v2
 
 slides:
 	$(PYTHON) code/build_deliverables.py --slides-only

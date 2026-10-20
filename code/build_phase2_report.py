@@ -1,10 +1,11 @@
-"""Render the separate Phase 2 manuscript; never run analytical code.
+"""Render separately named Markdown report editions; never run analytical code.
 
 Inputs are the Markdown manuscript and existing PNGs only. Outputs have their
 own names, so the original report, slides, notebooks and numerical results stay
 untouched.
 """
 from pathlib import Path
+import argparse
 import asyncio
 import hashlib
 import html
@@ -23,7 +24,8 @@ from playwright.async_api import async_playwright
 import pymupdf as fitz
 
 ROOT = Path(__file__).resolve().parents[1]
-STEM = '分析报告_Phase2_中文新版'
+DEFAULT_STEM = '分析报告_Phase2_中文新版'
+STEM = DEFAULT_STEM
 VALIDATION = ROOT / 'validation' / 'phase2_report'
 
 CSS = """
@@ -114,7 +116,7 @@ def write_html(soup, headings):
     for node in list(soup.contents):
         if isinstance(node, NavigableString) and not node.strip():
             continue
-        if getattr(node, 'name', None) == 'h2' and node.get_text() != '摘要':
+        if getattr(node, 'name', None) == 'h2' and node.get_text() not in ['摘要', '执行摘要']:
             if not inserted_toc:
                 nav = out.new_tag('nav', attrs={'class': 'toc'})
                 title = out.new_tag('h2'); title.string = '目录'; nav.append(title)
@@ -292,7 +294,7 @@ font-family:Arial,sans-serif;display:flex;justify-content:space-between">
     VALIDATION.mkdir(parents=True, exist_ok=True)
     preview_pages = {'cover': 1, 'contents': next(i + 1 for i, p in enumerate(pdf) if '目录' in p.get_text())}
     for heading in headings:
-        if heading['title'].startswith(('1. ', '4.4 ', '4.5 ', '5.1 ', '5.3 ', '5.5 ', '7.1 ')):
+        if heading['title'].startswith(('1. ', '4.2 ', '4.4 ', '4.5 ', '5.1 ', '5.2 ', '5.3 ', '5.5 ', '7.1 ')):
             preview_pages[heading['title'].split()[0].replace('.', '_')] = by_id[heading['id']]
     for label, physical in preview_pages.items():
         pix = pdf[physical - 1].get_pixmap(matrix=fitz.Matrix(1.3, 1.3), alpha=False)
@@ -304,6 +306,16 @@ font-family:Arial,sans-serif;display:flex;justify-content:space-between">
 
 
 def main():
+    global STEM, VALIDATION
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--stem', default=DEFAULT_STEM, help='Report filename without an extension.')
+    parser.add_argument('--validation-dir', help='Directory for document checks and page previews.')
+    args = parser.parse_args()
+    if Path(args.stem).name != args.stem:
+        parser.error('--stem must be a filename without directory components.')
+    STEM = args.stem
+    VALIDATION = (ROOT/args.validation_dir if args.validation_dir else
+                  ROOT/'validation'/('phase2_report' if STEM == DEFAULT_STEM else STEM))
     source, manuscript, headings = read_manuscript()
     html_soup = write_html(manuscript, headings)
     write_docx(html_soup, headings)
@@ -312,7 +324,7 @@ def main():
     checks['source_sha256'] = hashlib.sha256(source.read_bytes()).hexdigest()
     checks['scope'] = 'Document rendering only; no analytical modules, raw inputs or chart generation.'
     (VALIDATION / 'render_checks.json').write_text(json.dumps(checks, ensure_ascii=False, indent=2) + '\n')
-    print(f'Created separate Phase 2 report: {checks["pages"]} PDF pages, {len(checks["existing_pngs_loaded"])} existing figures.')
+    print(f'Created {STEM}: {checks["pages"]} PDF pages, {len(checks["existing_pngs_loaded"])} existing figures.')
 
 
 if __name__ == '__main__':
