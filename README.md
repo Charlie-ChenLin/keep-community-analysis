@@ -6,6 +6,7 @@
 
 ## 报告与主要发现
 
+- **独立新版（consulting-analysis Phase 2）**：[PDF](分析报告_Phase2_中文新版.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版.docx)、[Markdown原稿](分析报告_Phase2_中文新版.md)、[HTML](分析报告_Phase2_中文新版.html)。保留原有七章和13张图，按发现、证据、解释及业务含义组织段落；帖子主题仍在第四章，评论文本与网络仍在第五章。旧版报告及演示稿保留。
 - [分析报告 PDF](分析报告.pdf)：正式报告，35页，按七章组织，附两级目录、页内跳转及PDF书签。
 - [可编辑报告 DOCX](分析报告_可编辑.docx)：与HTML/PDF使用同一文字来源。
 - [演示文稿 PPTX](演示文稿.pptx)及[阅读版 PDF](演示文稿.pdf)：24页，附演讲者备注；逐页讲稿见`汇报讲稿.txt`。
@@ -125,6 +126,8 @@ make reproduce
 | `make slides-pdf` | 可选：用PowerPoint导出PPT阅读版 | 仅适用于已安装PowerPoint的macOS |
 
 `make report`和`make slides`可以使用仓库现有汇总结果，无需原始CSV。只改报告文字时，使用`make report`即可保留已执行的Notebook和现有演示稿。无参数运行`build_deliverables.py`则会重建全部交付物及Notebook模板，之后需要重新执行Notebook。
+
+独立新版的正文来源为`分析报告_Phase2_中文新版.md`。运行`make report-phase2`只将该原稿和既有PNG导出为同名HTML、DOCX、PDF，并核对目录链接，不读取原始CSV、不执行统计或重新绘图，也不覆盖旧版。它不属于`make reproduce`的分析流水线，需在已有图表就位后单独导出。
 
 PDF导出需要Chrome/Chromium。脚本优先使用`CHROME_PATH`指定的浏览器或本机Chrome；没有本机浏览器时，可安装Playwright提供的Chromium：
 

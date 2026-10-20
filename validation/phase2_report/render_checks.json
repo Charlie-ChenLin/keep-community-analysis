@@ -1,0 +1,71 @@
+{
+  "pages": 24,
+  "heading_links_verified": 25,
+  "directory_page_numbers_verified": true,
+  "existing_pngs_loaded": [
+    {
+      "src": "figures/08_text_coverage.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/01_sample_and_likes.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/02_media_summary.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/03_text_features.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/04_main_coefficients.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/05_robustness.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/12_author_influence.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/09_topics.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/14_comment_words.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/15_comment_expressions.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/06_comment_network.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/07_network_concentration.png",
+      "loaded": true
+    },
+    {
+      "src": "figures/13_comment_timing_roles.png",
+      "loaded": true
+    }
+  ],
+  "preview_pages": {
+    "cover": 1,
+    "contents": 2,
+    "4_4": 11,
+    "5_1": 13,
+    "5_3": 15,
+    "7_1": 20
+  },
+  "outline_entries": 25,
+  "source_markdown": "分析报告_Phase2_中文新版.md",
+  "source_sha256": "88ffe0db3a54c6184dd3dcb6994e37c08edb742d4fbbfbe2ed667bd916668a6f",
+  "scope": "Document rendering only; no analytical modules, raw inputs or chart generation."
+}

@@ -51,6 +51,10 @@ def main():
     # Optional presentation PDF only if it matches the current slide count.
     for name in ['评论文本分析.ipynb','评论文本分析.html']:
         p=ROOT/name;assert p.exists(),p;files.append((p,name))
+    # Keep the separately authored Phase 2 edition alongside the original report.
+    for suffix in ['.md','.html','.docx','.pdf']:
+        p=ROOT/('分析报告_Phase2_中文新版'+suffix)
+        if p.exists():files.append((p,p.name))
     p=ROOT/'演示文稿.pdf'
     if p.exists():
         assert len(fitz.open(p))==layout['slides']
@@ -59,6 +63,8 @@ def main():
     for folder,exts in [('code',{'.py','.json','.txt','.applescript'}),('results',{'.csv','.json','.log'}),('figures',{'.png'}),('validation',{'.json','.log','.png'})]:
         for p in sorted((ROOT/folder).iterdir()):
             if p.is_file() and p.suffix in exts and p.name!='submission_manifest.json':files.append((p,str(p.relative_to(ROOT))))
+    for p in sorted((ROOT/'validation/phase2_report').glob('*')):
+        if p.is_file() and p.suffix in {'.json','.png'}:files.append((p,str(p.relative_to(ROOT))))
     for name in ['sample_post_2022.csv','sample_comment_2022.csv']:
         p=ROOT/'2026Data/Keep Data'/name;files.append((p,str(p.relative_to(ROOT))))
     p=ROOT/'2026Data/KeepData_dictionary.pdf';files.append((p,str(p.relative_to(ROOT))))
