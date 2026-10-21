@@ -1,0 +1,50 @@
+{
+  "protected_inputs_unchanged": {
+    "files": 88,
+    "changed": []
+  },
+  "all_13_figure_numbers_and_source_files_preserved": true,
+  "original_numerical_table_bodies_preserved": [
+    "main_coefficients",
+    "sensitivity",
+    "topics",
+    "media",
+    "paired_replies",
+    "comment_features",
+    "network_windows"
+  ],
+  "account_examples_verified_against_existing_node_table": true,
+  "raw_likes_comparisons_and_density_verified": true,
+  "all_local_evidence_links_resolve": true,
+  "pdf_all_manuscript_paragraphs_present": true,
+  "pdf_text_within_page_bounds": true,
+  "pdf_pages": 21,
+  "pdf_outline_entries": 31,
+  "toc_pages_and_bookmarks_verified": true,
+  "editable_docx_has_all_13_figures": true,
+  "output_sha256": {
+    ".md": "05c14a7f14dc90fbf75e810a376375c3caa75561434158c485308c99e3852d60",
+    ".html": "2202ce08e49ec3b5b073597ba9372bed60930b8891831e1ff08d48d77a4391f0",
+    ".pdf": "06a50a4d15715c4f5aed26f1758dcbbdea09c0ca257d3f71b20481a08ce8f64e",
+    ".docx": "d9992c07f47364ec695f682638915f74e6f2e7f4404e7ec366a380ab9a72086a"
+  },
+  "editorial_review": {
+    "language": "Whole-report review including appendix: state findings, explain observed structure; remove speculative misinterpretation rebuttals; keep actual collection and measurement conditions.",
+    "network_semantics": "All three graph scopes define accounts, directions, repeated-event treatment and weights; no invented community detection or real-world influence.",
+    "scope": "Existing evidence only; no data cleaning, model fitting, chart generation or new data.",
+    "research_meaning": "Explain observable content and comment activity without assuming an operations, management or consulting audience."
+  },
+  "visual_review": {
+    "final_pages_reviewed": [
+      14,
+      17
+    ],
+    "confirmed": [
+      "network structure explained through results and insight",
+      "conclusion uses independent research perspective",
+      "figures, captions, tables and body text remain readable"
+    ]
+  },
+  "independent_analyst_perspective_verified": true,
+  "results_and_insights_wording_verified": true
+}

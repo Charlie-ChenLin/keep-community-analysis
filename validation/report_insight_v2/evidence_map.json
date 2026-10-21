@@ -1,0 +1,67 @@
+[
+  {
+    "chapter": "开篇、第二章",
+    "insight": "原始用词优势在控制作者和情境后未保留，积极表达方向反转",
+    "sources": [
+      "results/text_features_summary.csv",
+      "results/regression_coefficients.csv",
+      "results/model_fit.csv",
+      "results/extension_author_influence_summary.csv"
+    ],
+    "interpretation_limit": "构成与情境是解释线索，不识别词语因果效果"
+  },
+  {
+    "chapter": "第一章",
+    "insight": "正文覆盖、媒体和作者产量影响比较，未采集评论不能当零",
+    "sources": [
+      "results/summary.json",
+      "results/extension_summary.json",
+      "results/media_summary.csv",
+      "DATA.md"
+    ],
+    "interpretation_limit": "历史课程样本，抽样及统一观察时点未知"
+  },
+  {
+    "chapter": "第三章",
+    "insight": "训练与生活表达并存，小主题可能受少数高产作者影响",
+    "sources": [
+      "results/extension_topics.csv",
+      "results/supplemental_topic_author_weighting.csv",
+      "results/extension_topic_regression.csv"
+    ],
+    "interpretation_limit": "主题来自有效正文；不是用户分群或偏好测量"
+  },
+  {
+    "chapter": "第四章",
+    "insight": "语言角色及配对支持部分赞许后接感谢；感谢内容与回应覆盖呈不同格局",
+    "sources": [
+      "results/comment_text_summary.json",
+      "results/comment_text_features.csv",
+      "results/comment_text_terms.csv",
+      "results/supplemental_direct_reply_language.csv",
+      "code/analyze_supplements.py"
+    ],
+    "interpretation_limit": "字面规则与已采集直接回复；组间不作因果比较"
+  },
+  {
+    "chapter": "第五章",
+    "insight": "围绕帖主的往来为主；弱连通广与低直接连接并存；相似事件量可有不同参与面",
+    "sources": [
+      "code/analyze.py",
+      "code/extend_analysis.py",
+      "results/summary.json",
+      "results/network_nodes.csv",
+      "results/extension_comment_roles.csv",
+      "results/extension_window_networks.csv"
+    ],
+    "interpretation_limit": "基于账号、评论方向与事件计数，解释样本内关系分布"
+  },
+  {
+    "chapter": "第六章",
+    "insight": "综合作者构成、内容结构、帖主回应与参与广度，联系内容情境和具体对话",
+    "sources": [
+      "第二至五章已列证据"
+    ],
+    "interpretation_limit": "研究对象为已采集的历史样本，解释以现有内容和关系记录为基础"
+  }
+]

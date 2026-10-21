@@ -6,6 +6,7 @@
 
 ## 报告与主要发现
 
+- **独立分析师重写版 `_insight_v2`**：[PDF（21页）](分析报告_Phase2_中文新版_insight_v2.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版_insight_v2.docx)、[Markdown](分析报告_Phase2_中文新版_insight_v2.md)、[HTML](分析报告_Phase2_中文新版_insight_v2.html)。以观察结果和对应洞察解释文字表达、作者构成、评论承接与参与广度，评论网络明确账号、方向、事件次数及不同观察范围的含义。沿用原有计算与13张图，详细统计和测量口径集中于附录，历史版本保留。重新导出：`python validation/report_insight_v2/render_report.py`；核查与证据映射见同目录。
 - **业务重写版 `_v2`（data-analysis-report-writer）**：[PDF](分析报告_Phase2_中文新版_v2.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版_v2.docx)、[Markdown](分析报告_Phase2_中文新版_v2.md)、[HTML](分析报告_Phase2_中文新版_v2.html)。沿用全部既有计算和13张图，以执行摘要提出决策判断；评论部分按语言、直接回复、网络与时间窗口衔接；建议补充优先级、交付成果及实施条件。未重算数据，前两版均保留。
 - **独立新版（consulting-analysis Phase 2）**：[PDF](分析报告_Phase2_中文新版.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版.docx)、[Markdown原稿](分析报告_Phase2_中文新版.md)、[HTML](分析报告_Phase2_中文新版.html)。保留原有七章和13张图，按发现、证据、解释及业务含义组织段落；帖子主题仍在第四章，评论文本与网络仍在第五章。旧版报告及演示稿保留。
 - Phase 2版已删除附录，第一章以表格列明RQ与方法；第4.5节补充主题的作者等权比较，第5.5节补充根评论与帖主直接回复的词语顺序（业务重写版将其移至第5.2节）。相关结果见[补充分析Notebook](补充分析.ipynb)及[静态HTML](补充分析.html)，均属于描述性补充，不重新拟合原模型。
