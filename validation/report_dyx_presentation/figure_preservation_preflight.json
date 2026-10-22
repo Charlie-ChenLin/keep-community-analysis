@@ -1,0 +1,80 @@
+[
+  {
+    "source_pdf_page": 4,
+    "width": 2023,
+    "height": 661,
+    "matching_repository_figure": "figures/08_text_coverage.png"
+  },
+  {
+    "source_pdf_page": 4,
+    "width": 2024,
+    "height": 659,
+    "matching_repository_figure": "figures/01_sample_and_likes.png"
+  },
+  {
+    "source_pdf_page": 5,
+    "width": 1971,
+    "height": 640,
+    "matching_repository_figure": "figures/02_media_summary.png"
+  },
+  {
+    "source_pdf_page": 5,
+    "width": 2027,
+    "height": 698,
+    "matching_repository_figure": "figures/03_text_features.png"
+  },
+  {
+    "source_pdf_page": 6,
+    "width": 1723,
+    "height": 678,
+    "matching_repository_figure": "figures/04_main_coefficients.png"
+  },
+  {
+    "source_pdf_page": 7,
+    "width": 2141,
+    "height": 659,
+    "matching_repository_figure": "figures/05_robustness.png"
+  },
+  {
+    "source_pdf_page": 7,
+    "width": 1799,
+    "height": 679,
+    "matching_repository_figure": "figures/12_author_influence.png"
+  },
+  {
+    "source_pdf_page": 8,
+    "width": 1932,
+    "height": 697,
+    "matching_repository_figure": "figures/09_topics.png"
+  },
+  {
+    "source_pdf_page": 9,
+    "width": 1913,
+    "height": 774,
+    "matching_repository_figure": "figures/14_comment_words.png"
+  },
+  {
+    "source_pdf_page": 10,
+    "width": 1913,
+    "height": 641,
+    "matching_repository_figure": "figures/15_comment_expressions.png"
+  },
+  {
+    "source_pdf_page": 11,
+    "width": 1569,
+    "height": 870,
+    "matching_repository_figure": "figures/06_comment_network.png"
+  },
+  {
+    "source_pdf_page": 12,
+    "width": 1970,
+    "height": 660,
+    "matching_repository_figure": "figures/07_network_concentration.png"
+  },
+  {
+    "source_pdf_page": 13,
+    "width": 2026,
+    "height": 660,
+    "matching_repository_figure": "figures/13_comment_timing_roles.png"
+  }
+]

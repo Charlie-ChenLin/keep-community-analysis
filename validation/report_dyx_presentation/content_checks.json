@@ -1,0 +1,56 @@
+{
+  "source_commit": "b6c31d20fbe59b096de568e8b6cd93aa395283bb",
+  "source_authority": "Visible content of the dyx revised PDF; Markdown is not the content authority.",
+  "source_characters_accounted_for_once": 18431,
+  "non_whitespace_content_characters": 17826,
+  "html_ordered_text_matches_recovered_pdf_content": true,
+  "docx_ordered_text_matches_recovered_pdf_content": true,
+  "all_paragraphs_present_in_rendered_pdf": true,
+  "table_count": 17,
+  "all_table_cells_preserved": true,
+  "figures": 13,
+  "all_exported_figure_pixels_and_order_preserved": true,
+  "pages": 26,
+  "toc_entries": 46,
+  "toc_page_numbers_verified": true,
+  "pdf_text_within_page_bounds": true,
+  "protected_inputs_unchanged": 121,
+  "formatting_changes_only": [
+    "Fonts and hierarchy",
+    "Blue-grey palette",
+    "Page size and margins",
+    "Chapter pagination",
+    "Table widths and repeat-header consolidation",
+    "Full-width original figures and attached captions",
+    "Contents, page numbers and bookmarks",
+    "Paragraph and reference line reflow"
+  ],
+  "output_sha256": {
+    ".md": "8fe9ce70d5ef151beca13d35e632f702a43a6a96bb6ddd4f83e783e8a5b2c892",
+    ".html": "688f79dc6a6fccd1430eb22a811aa8a7500954eb47264ffe294d217ddea67c19",
+    ".pdf": "2bf6b949ed6ac439d0103a5ceb1cb8a7c473bf7e141abbb7deb1764498259da2",
+    ".docx": "8c6acfcfd2253221047c551e02384e310a14256e0530bda49d255bd9063d3dfb"
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      5,
+      10,
+      17,
+      21,
+      22,
+      26
+    ],
+    "checked": [
+      "Title fits on one line",
+      "Contents fits on one page",
+      "Tables use readable column widths",
+      "Table introduction stays with table",
+      "Figure captions stay attached",
+      "Original figure labels readable",
+      "Final appendix and references fit without clipping"
+    ]
+  }
+}

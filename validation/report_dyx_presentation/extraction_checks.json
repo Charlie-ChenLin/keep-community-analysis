@@ -1,0 +1,14 @@
+{
+  "source_character_ids_covered_once": 18431,
+  "source_pdf": "分析报告_Phase2_中文新版_insight_v2_修改版.pdf",
+  "source_pdf_sha256": "60466ae9331d6ea3af579d2e4b5020a0ed44754624c89a92d6c9dc040d0a7346",
+  "source_commit": "b6c31d20fbe59b096de568e8b6cd93aa395283bb",
+  "output_markdown": "分析报告_Phase2_中文新版_insight_v2_修改版_排版优化.md",
+  "body_characters": 17826,
+  "duplicate_table_header_characters": 52,
+  "missing_characters": {},
+  "extra_characters": {},
+  "figures": 13,
+  "tables": 17,
+  "excluded_layout": "Original running page numbers and repeated table headers; whitespace reflow."
+}
