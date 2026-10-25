@@ -1,0 +1,19 @@
+{
+  "source_report": "分析报告_Phase2_中文新版_insight_v2_修改版_排版优化.pdf",
+  "source_report_sha256": "2bf6b949ed6ac439d0103a5ceb1cb8a7c473bf7e141abbb7deb1764498259da2",
+  "slides": 37,
+  "chapters": 6,
+  "notes_on_every_slide": true,
+  "native_charts": 10,
+  "content_review": "All 37 slides, 37 notes and 10 native chart datasets independently checked against the specified report. No substantive numeric, denominator, time-window, significance or causal-interpretation errors found.",
+  "key_checks": [
+    "M1/M2/M3 R-squared distinguished from 0.065 percentage-point text increment",
+    "Positive-expression raw p=0.016 versus BH q=0.079",
+    "Root-comment reply coverage versus gratitude share among observed replies",
+    "Post-based versus root-comment-based seven-day windows",
+    "57.0% thread participation versus 3568/6609 direct-reply coverage",
+    "No repetition of source typo naming life theme as the largest theme"
+  ],
+  "source_report_modified": false,
+  "user_preference": "All final checks and rendering run in background; no further desktop presentation windows."
+}

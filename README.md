@@ -6,6 +6,7 @@
 
 ## 报告与主要发现
 
+- **新版汇报（章节清晰、讲述增强）**：[PPTX（37页）](演示文稿_Phase2_章节清晰_讲述增强版.pptx)、[PDF预览](演示文稿_Phase2_章节清晰_讲述增强版.pdf)、[逐页讲稿](演示文稿_Phase2_章节清晰_讲述增强版_逐页讲稿.txt)。以[排版优化版报告](分析报告_Phase2_中文新版_insight_v2_修改版_排版优化.pdf)为依据，分为研究设计与样本、文字表达与点赞、主题与作者构成、评论语言与直接承接、评论网络与互动形态、综合结论与建议六章。包含总目录、章节过渡页、常驻章名和源报告位置；核心页补充分析过程、数值结果和解释，每页另附演讲者备注。10个统计图为可编辑原生图表，原有24页演示稿保留。生成脚本见`code/build_insight_presentation.js`（依赖`pptxgenjs`与`jszip`），验证记录见`validation/slides_insight_v2/`。
 - **独立分析师重写版 `_insight_v2`**：[PDF（21页）](分析报告_Phase2_中文新版_insight_v2.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版_insight_v2.docx)、[Markdown](分析报告_Phase2_中文新版_insight_v2.md)、[HTML](分析报告_Phase2_中文新版_insight_v2.html)。以观察结果和对应洞察解释文字表达、作者构成、评论承接与参与广度，评论网络明确账号、方向、事件次数及不同观察范围的含义。沿用原有计算与13张图，详细统计和测量口径集中于附录，历史版本保留。重新导出：`python validation/report_insight_v2/render_report.py`；核查与证据映射见同目录。
 - **业务重写版 `_v2`（data-analysis-report-writer）**：[PDF](分析报告_Phase2_中文新版_v2.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版_v2.docx)、[Markdown](分析报告_Phase2_中文新版_v2.md)、[HTML](分析报告_Phase2_中文新版_v2.html)。沿用全部既有计算和13张图，以执行摘要提出决策判断；评论部分按语言、直接回复、网络与时间窗口衔接；建议补充优先级、交付成果及实施条件。未重算数据，前两版均保留。
 - **独立新版（consulting-analysis Phase 2）**：[PDF](分析报告_Phase2_中文新版.pdf)、[可编辑DOCX](分析报告_Phase2_中文新版.docx)、[Markdown原稿](分析报告_Phase2_中文新版.md)、[HTML](分析报告_Phase2_中文新版.html)。保留原有七章和13张图，按发现、证据、解释及业务含义组织段落；帖子主题仍在第四章，评论文本与网络仍在第五章。旧版报告及演示稿保留。

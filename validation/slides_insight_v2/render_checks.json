@@ -1,0 +1,22 @@
+{
+  "mode": "background_only_no_GUI",
+  "renderer": "LibreOffice headless",
+  "pdf_pages": 37,
+  "pdf_sha256": "b3da209d7ca4357419a408d3d0bf316c82533c4b604c4cfeb871506cea0f5302",
+  "missing_body_text": [],
+  "missing_chart_labels": [],
+  "chart_pages_checked": [
+    5,
+    6,
+    9,
+    15,
+    16,
+    20,
+    22,
+    25,
+    27
+  ],
+  "contact_sheets": 4,
+  "visual_review": "PASS: all 37 slides inspected in contact sheets; 15 dense/chart slides inspected at full resolution. One label collision on slide 16 was fixed with horizontal grouped bars, then re-rendered and inspected. No remaining overflow, truncation or overlap found.",
+  "revised_slide": 16
+}

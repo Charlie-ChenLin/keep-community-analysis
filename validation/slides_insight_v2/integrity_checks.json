@@ -1,0 +1,342 @@
+{
+  "checked_at_utc": "2026-10-25T05:54:58.368046+00:00",
+  "mode": "background_only_no_GUI",
+  "pptx": "projects/group/演示文稿_Phase2_章节清晰_讲述增强版.pptx",
+  "pptx_sha256": "6de1b6fcf6708797f3a66e81635b7ec0c61d3bf1340e20a7935bb95aca26c30e",
+  "result": "PASS_WITH_DOCUMENTED_PPTXGENJS_EXCEPTION",
+  "slides": 37,
+  "native_charts": 10,
+  "sections": [
+    "导读",
+    "01 研究设计与样本",
+    "02 文字表达与点赞",
+    "03 主题与作者构成",
+    "04 评论语言与直接承接",
+    "05 评论网络与互动形态",
+    "06 综合结论与建议",
+    "附录与参考"
+  ],
+  "strict_xsd": {
+    "parts_checked": 92,
+    "parts_passed": 91,
+    "unexpected_failures": [],
+    "documented_compatibility_exceptions": [
+      {
+        "part": "ppt/presentation.xml",
+        "errors": [
+          "<string>:2:0:ERROR:SCHEMASV:SCHEMAV_ELEMENT_CONTENT: Element '{http://schemas.openxmlformats.org/presentationml/2006/main}notesMasterIdLst': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/presentationml/2006/main}sldSz, {http://schemas.openxmlformats.org/presentationml/2006/main}notesSz )."
+        ]
+      }
+    ],
+    "exception_reason": "pptx skill requires preserving pptxgenjs notesMasterIdLst directly after sldIdLst; do not reorder this element."
+  },
+  "internal_relationships": {
+    "checked": 219,
+    "missing_targets": []
+  },
+  "chart_checks": [
+    {
+      "part": "ppt/charts/chart1.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart10.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart2.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart3.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart4.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart5.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart6.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart7.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart8.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart9.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    }
+  ],
+  "notes": {
+    "slides_checked": 37,
+    "all_nonempty": true,
+    "minimum_body_characters": 115,
+    "details": [
+      {
+        "slide": 1,
+        "part": "ppt/notesSlides/notesSlide1.xml",
+        "body_characters": 186,
+        "body_nonempty": true
+      },
+      {
+        "slide": 2,
+        "part": "ppt/notesSlides/notesSlide2.xml",
+        "body_characters": 167,
+        "body_nonempty": true
+      },
+      {
+        "slide": 3,
+        "part": "ppt/notesSlides/notesSlide3.xml",
+        "body_characters": 132,
+        "body_nonempty": true
+      },
+      {
+        "slide": 4,
+        "part": "ppt/notesSlides/notesSlide4.xml",
+        "body_characters": 227,
+        "body_nonempty": true
+      },
+      {
+        "slide": 5,
+        "part": "ppt/notesSlides/notesSlide5.xml",
+        "body_characters": 194,
+        "body_nonempty": true
+      },
+      {
+        "slide": 6,
+        "part": "ppt/notesSlides/notesSlide6.xml",
+        "body_characters": 193,
+        "body_nonempty": true
+      },
+      {
+        "slide": 7,
+        "part": "ppt/notesSlides/notesSlide7.xml",
+        "body_characters": 139,
+        "body_nonempty": true
+      },
+      {
+        "slide": 8,
+        "part": "ppt/notesSlides/notesSlide8.xml",
+        "body_characters": 176,
+        "body_nonempty": true
+      },
+      {
+        "slide": 9,
+        "part": "ppt/notesSlides/notesSlide9.xml",
+        "body_characters": 201,
+        "body_nonempty": true
+      },
+      {
+        "slide": 10,
+        "part": "ppt/notesSlides/notesSlide10.xml",
+        "body_characters": 199,
+        "body_nonempty": true
+      },
+      {
+        "slide": 11,
+        "part": "ppt/notesSlides/notesSlide11.xml",
+        "body_characters": 224,
+        "body_nonempty": true
+      },
+      {
+        "slide": 12,
+        "part": "ppt/notesSlides/notesSlide12.xml",
+        "body_characters": 211,
+        "body_nonempty": true
+      },
+      {
+        "slide": 13,
+        "part": "ppt/notesSlides/notesSlide13.xml",
+        "body_characters": 216,
+        "body_nonempty": true
+      },
+      {
+        "slide": 14,
+        "part": "ppt/notesSlides/notesSlide14.xml",
+        "body_characters": 144,
+        "body_nonempty": true
+      },
+      {
+        "slide": 15,
+        "part": "ppt/notesSlides/notesSlide15.xml",
+        "body_characters": 201,
+        "body_nonempty": true
+      },
+      {
+        "slide": 16,
+        "part": "ppt/notesSlides/notesSlide16.xml",
+        "body_characters": 189,
+        "body_nonempty": true
+      },
+      {
+        "slide": 17,
+        "part": "ppt/notesSlides/notesSlide17.xml",
+        "body_characters": 185,
+        "body_nonempty": true
+      },
+      {
+        "slide": 18,
+        "part": "ppt/notesSlides/notesSlide18.xml",
+        "body_characters": 139,
+        "body_nonempty": true
+      },
+      {
+        "slide": 19,
+        "part": "ppt/notesSlides/notesSlide19.xml",
+        "body_characters": 186,
+        "body_nonempty": true
+      },
+      {
+        "slide": 20,
+        "part": "ppt/notesSlides/notesSlide20.xml",
+        "body_characters": 178,
+        "body_nonempty": true
+      },
+      {
+        "slide": 21,
+        "part": "ppt/notesSlides/notesSlide21.xml",
+        "body_characters": 216,
+        "body_nonempty": true
+      },
+      {
+        "slide": 22,
+        "part": "ppt/notesSlides/notesSlide22.xml",
+        "body_characters": 219,
+        "body_nonempty": true
+      },
+      {
+        "slide": 23,
+        "part": "ppt/notesSlides/notesSlide23.xml",
+        "body_characters": 148,
+        "body_nonempty": true
+      },
+      {
+        "slide": 24,
+        "part": "ppt/notesSlides/notesSlide24.xml",
+        "body_characters": 216,
+        "body_nonempty": true
+      },
+      {
+        "slide": 25,
+        "part": "ppt/notesSlides/notesSlide25.xml",
+        "body_characters": 206,
+        "body_nonempty": true
+      },
+      {
+        "slide": 26,
+        "part": "ppt/notesSlides/notesSlide26.xml",
+        "body_characters": 201,
+        "body_nonempty": true
+      },
+      {
+        "slide": 27,
+        "part": "ppt/notesSlides/notesSlide27.xml",
+        "body_characters": 209,
+        "body_nonempty": true
+      },
+      {
+        "slide": 28,
+        "part": "ppt/notesSlides/notesSlide28.xml",
+        "body_characters": 213,
+        "body_nonempty": true
+      },
+      {
+        "slide": 29,
+        "part": "ppt/notesSlides/notesSlide29.xml",
+        "body_characters": 143,
+        "body_nonempty": true
+      },
+      {
+        "slide": 30,
+        "part": "ppt/notesSlides/notesSlide30.xml",
+        "body_characters": 193,
+        "body_nonempty": true
+      },
+      {
+        "slide": 31,
+        "part": "ppt/notesSlides/notesSlide31.xml",
+        "body_characters": 201,
+        "body_nonempty": true
+      },
+      {
+        "slide": 32,
+        "part": "ppt/notesSlides/notesSlide32.xml",
+        "body_characters": 196,
+        "body_nonempty": true
+      },
+      {
+        "slide": 33,
+        "part": "ppt/notesSlides/notesSlide33.xml",
+        "body_characters": 209,
+        "body_nonempty": true
+      },
+      {
+        "slide": 34,
+        "part": "ppt/notesSlides/notesSlide34.xml",
+        "body_characters": 200,
+        "body_nonempty": true
+      },
+      {
+        "slide": 35,
+        "part": "ppt/notesSlides/notesSlide35.xml",
+        "body_characters": 188,
+        "body_nonempty": true
+      },
+      {
+        "slide": 36,
+        "part": "ppt/notesSlides/notesSlide36.xml",
+        "body_characters": 165,
+        "body_nonempty": true
+      },
+      {
+        "slide": 37,
+        "part": "ppt/notesSlides/notesSlide37.xml",
+        "body_characters": 115,
+        "body_nonempty": true
+      }
+    ]
+  },
+  "geometry": {
+    "negative_extents": [],
+    "out_of_bounds_shapes": [],
+    "canvas_inches": [
+      13.333333333333334,
+      7.5
+    ]
+  },
+  "scope_note": "Package integrity, strict XML, relationships, notes and shape bounds only. No desktop application opened; this is not a rasterized visual review.",
+  "latest_focused_recheck": {
+    "change": "Slide 16 chart5 switched to horizontal grouped bars with label font adjustment; values and narrative unchanged.",
+    "part": "ppt/charts/chart5.xml",
+    "bar_direction": "bar",
+    "strict_xsd_passed": true,
+    "axis_references": [
+      "2094734554",
+      "2094734552"
+    ],
+    "undeclared_axes": [],
+    "all_10_chart_xsd_rechecked": true,
+    "previous_pptx_sha256": "57734c573396fef998a57e9224430be8012e84d7a6ffa393ba0d82dd63f278fe",
+    "other_checks": "Existing relationships, notes, sections and shape bounds conclusions preserved for the chart-only revision.",
+    "mode": "background_only_no_GUI"
+  }
+}
