@@ -1,0 +1,70 @@
+{
+  "presented_slides": 18,
+  "hidden_slides": 0,
+  "appendix_slides": 0,
+  "speech_seconds": 1030,
+  "transition_buffer_seconds": 50,
+  "total_target_seconds": 1080,
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "研究设计与样本",
+      "slides": [
+        3,
+        4
+      ],
+      "seconds": 105
+    },
+    {
+      "chapter": 2,
+      "title": "文字表达与点赞",
+      "slides": [
+        5,
+        6,
+        7
+      ],
+      "seconds": 225
+    },
+    {
+      "chapter": 3,
+      "title": "主题与作者构成",
+      "slides": [
+        8,
+        9
+      ],
+      "seconds": 120
+    },
+    {
+      "chapter": 4,
+      "title": "评论语言与直接承接",
+      "slides": [
+        10,
+        11
+      ],
+      "seconds": 135
+    },
+    {
+      "chapter": 5,
+      "title": "评论网络与互动形态",
+      "slides": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "seconds": 225
+    },
+    {
+      "chapter": 6,
+      "title": "综合结论与建议",
+      "slides": [
+        16,
+        17,
+        18
+      ],
+      "seconds": 150
+    }
+  ],
+  "narration_characters": 3239,
+  "timing_note": "逐页建议时间是排练预算，包含讲解与指图；另留50秒给转场、换人及停顿，实际以排练为准。"
+}

@@ -1,0 +1,27 @@
+{
+  "source_report": "分析报告_Phase2_中文新版_insight_v2_修改版_排版优化.pdf",
+  "source_report_sha256": "2bf6b949ed6ac439d0103a5ceb1cb8a7c473bf7e141abbb7deb1764498259da2",
+  "presented_slides": 18,
+  "appendix_slides": 0,
+  "hidden_slides": 0,
+  "chapters": 6,
+  "notes_on_every_slide": true,
+  "native_charts": 6,
+  "content_review": "All 18 slides and speeches independently checked against source report; core estimates, multiple-testing, topic weighting, direct-reply denominators and network timing boundaries retained without substantive errors.",
+  "timing_review": {
+    "speech_seconds": 1030,
+    "transition_buffer_seconds": 50,
+    "target_seconds": 1080,
+    "speech_characters": 3239,
+    "assessment": "Suitable for a 15–20 minute technical classroom talk with pointing at figures, numerical interpretation and pauses; approximately 15–16 minutes if read continuously at 210–230 characters/minute including transitions. Timing is a rehearsal budget, not a guarantee."
+  },
+  "key_checks": [
+    "Positive expression raw 57.29/35.76 versus adjusted -8.2% on conditional geometric mean of likes+1",
+    "Raw p=.016 versus BH q=.079; joint p=.130; text increment .065 percentage points",
+    "Topic author equal weighting 3.4% to .6%; topic joint p=.166",
+    "Root-comment reply coverage 43.5/56.3 versus gratitude among observed replies 26.7/6.4",
+    "Comment timing starts at post; paired reply and thread first-response interval start at root comment",
+    "All 18 pages are presented content; no hidden or reserve slides"
+  ],
+  "user_preference": "Background checks and headless rendering only. No desktop presentation application opened."
+}

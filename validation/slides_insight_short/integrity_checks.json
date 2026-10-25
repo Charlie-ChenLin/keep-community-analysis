@@ -1,0 +1,231 @@
+{
+  "checked_at_utc": "2026-10-25T06:09:26.382758+00:00",
+  "mode": "background_only_no_GUI",
+  "pptx": "projects/group/演示文稿_Phase2_15-20分钟精简版.pptx",
+  "pptx_sha256": "a7d977f2805f7c82d95726097d4afb9f2074d0a29daf5e25d2a78612f78ca615",
+  "result": "PASS_WITH_DOCUMENTED_PPTXGENJS_EXCEPTION",
+  "slides": 18,
+  "native_charts": 6,
+  "sections": [
+    "导读",
+    "01 研究设计与样本",
+    "02 文字表达与点赞",
+    "03 主题与作者构成",
+    "04 评论语言与直接承接",
+    "05 评论网络与互动形态",
+    "06 综合结论与建议"
+  ],
+  "hidden_slides": {
+    "count": 0,
+    "slide_numbers": [],
+    "expected_count": 0
+  },
+  "strict_xsd": {
+    "parts_checked": 50,
+    "parts_passed": 49,
+    "unexpected_failures": [],
+    "documented_compatibility_exceptions": [
+      {
+        "part": "ppt/presentation.xml",
+        "errors": [
+          "<string>:2:0:ERROR:SCHEMASV:SCHEMAV_ELEMENT_CONTENT: Element '{http://schemas.openxmlformats.org/presentationml/2006/main}notesMasterIdLst': This element is not expected. Expected is one of ( {http://schemas.openxmlformats.org/presentationml/2006/main}sldSz, {http://schemas.openxmlformats.org/presentationml/2006/main}notesSz )."
+        ]
+      }
+    ],
+    "exception_reason": "pptx skill requires preserving pptxgenjs notesMasterIdLst directly after sldIdLst; do not reorder this element."
+  },
+  "internal_relationships": {
+    "checked": 116,
+    "missing_targets": []
+  },
+  "chart_checks": [
+    {
+      "part": "ppt/charts/chart1.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart2.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart3.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart4.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart5.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    },
+    {
+      "part": "ppt/charts/chart6.xml",
+      "strict_xsd_passed": true,
+      "unresolved_axes": []
+    }
+  ],
+  "notes": {
+    "slides_checked": 18,
+    "all_nonempty": true,
+    "minimum_body_characters": 110,
+    "details": [
+      {
+        "slide": 1,
+        "part": "ppt/notesSlides/notesSlide1.xml",
+        "body_characters": 110,
+        "body_nonempty": true
+      },
+      {
+        "slide": 2,
+        "part": "ppt/notesSlides/notesSlide2.xml",
+        "body_characters": 143,
+        "body_nonempty": true
+      },
+      {
+        "slide": 3,
+        "part": "ppt/notesSlides/notesSlide3.xml",
+        "body_characters": 222,
+        "body_nonempty": true
+      },
+      {
+        "slide": 4,
+        "part": "ppt/notesSlides/notesSlide4.xml",
+        "body_characters": 162,
+        "body_nonempty": true
+      },
+      {
+        "slide": 5,
+        "part": "ppt/notesSlides/notesSlide5.xml",
+        "body_characters": 218,
+        "body_nonempty": true
+      },
+      {
+        "slide": 6,
+        "part": "ppt/notesSlides/notesSlide6.xml",
+        "body_characters": 221,
+        "body_nonempty": true
+      },
+      {
+        "slide": 7,
+        "part": "ppt/notesSlides/notesSlide7.xml",
+        "body_characters": 230,
+        "body_nonempty": true
+      },
+      {
+        "slide": 8,
+        "part": "ppt/notesSlides/notesSlide8.xml",
+        "body_characters": 208,
+        "body_nonempty": true
+      },
+      {
+        "slide": 9,
+        "part": "ppt/notesSlides/notesSlide9.xml",
+        "body_characters": 199,
+        "body_nonempty": true
+      },
+      {
+        "slide": 10,
+        "part": "ppt/notesSlides/notesSlide10.xml",
+        "body_characters": 178,
+        "body_nonempty": true
+      },
+      {
+        "slide": 11,
+        "part": "ppt/notesSlides/notesSlide11.xml",
+        "body_characters": 239,
+        "body_nonempty": true
+      },
+      {
+        "slide": 12,
+        "part": "ppt/notesSlides/notesSlide12.xml",
+        "body_characters": 204,
+        "body_nonempty": true
+      },
+      {
+        "slide": 13,
+        "part": "ppt/notesSlides/notesSlide13.xml",
+        "body_characters": 164,
+        "body_nonempty": true
+      },
+      {
+        "slide": 14,
+        "part": "ppt/notesSlides/notesSlide14.xml",
+        "body_characters": 203,
+        "body_nonempty": true
+      },
+      {
+        "slide": 15,
+        "part": "ppt/notesSlides/notesSlide15.xml",
+        "body_characters": 218,
+        "body_nonempty": true
+      },
+      {
+        "slide": 16,
+        "part": "ppt/notesSlides/notesSlide16.xml",
+        "body_characters": 204,
+        "body_nonempty": true
+      },
+      {
+        "slide": 17,
+        "part": "ppt/notesSlides/notesSlide17.xml",
+        "body_characters": 181,
+        "body_nonempty": true
+      },
+      {
+        "slide": 18,
+        "part": "ppt/notesSlides/notesSlide18.xml",
+        "body_characters": 115,
+        "body_nonempty": true
+      }
+    ]
+  },
+  "geometry": {
+    "negative_extents": [],
+    "out_of_bounds_shapes": [],
+    "canvas_inches": [
+      13.333333333333334,
+      7.5
+    ]
+  },
+  "scope_note": "Package integrity, strict XML, relationships, notes and shape bounds only. No desktop application opened; this is not a rasterized visual review.",
+  "latest_focused_recheck": {
+    "change": "Slide 6 conditional geometric mean wording; slide 14 card spacing; slide 15 thread first-reply time origin.",
+    "slides_rechecked": [
+      {
+        "slide": 6,
+        "strict_slide_xsd_passed": true,
+        "strict_notes_xsd_passed": true,
+        "errors": []
+      },
+      {
+        "slide": 14,
+        "strict_slide_xsd_passed": true,
+        "strict_notes_xsd_passed": true,
+        "errors": []
+      },
+      {
+        "slide": 15,
+        "strict_slide_xsd_passed": true,
+        "strict_notes_xsd_passed": true,
+        "errors": []
+      }
+    ],
+    "all_notes_rechecked": true,
+    "all_slide_bounds_and_negative_extents_rechecked": true,
+    "all_18_slides_visible": true,
+    "semantic_checks": {
+      "slide6": "8.2% lower conditional geometric mean of 1+likes, after author/date/context adjustment; association, not causal effect.",
+      "slide14": "1,378 events/53 senders vs 1,275 events/1,091 senders; volume and breadth distinct.",
+      "slide15": "Comment timing starts at post; direct pairing and thread first reply start at root comment; 2.05 hours conditional on threads with observed owner participation."
+    },
+    "previous_pptx_sha256": "26f46c29aef156b217ddab8d0807c8e72175c7b52d98cb455c447b29f1f0ccc6",
+    "other_checks": "Previously passed unchanged chart, relationship and remaining XML checks retained for this text/spacing-only revision.",
+    "mode": "background_only_no_GUI"
+  }
+}
