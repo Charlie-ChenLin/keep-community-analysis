@@ -1,0 +1,142 @@
+{
+  "pdf_pages": 12,
+  "questions": 28,
+  "question_pages": {
+    "M10": 2,
+    "M11": 2,
+    "M12": 2,
+    "M01": 3,
+    "M02": 3,
+    "M03": 3,
+    "M05": 4,
+    "M06": 4,
+    "M07": 4,
+    "M08": 5,
+    "M09": 5,
+    "M04": 5,
+    "T01": 6,
+    "T02": 6,
+    "T03": 6,
+    "T04": 7,
+    "T05": 7,
+    "T06": 7,
+    "T07": 8,
+    "T08": 8,
+    "N01": 9,
+    "N02": 9,
+    "N03": 9,
+    "N04": 10,
+    "N05": 10,
+    "N06": 10,
+    "N07": 11,
+    "N08": 11
+  },
+  "geometry": [
+    {
+      "page": 1,
+      "mainBottom": 869.875,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 2,
+      "mainBottom": 863.984375,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 3,
+      "mainBottom": 764.53125,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 4,
+      "mainBottom": 764.53125,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 5,
+      "mainBottom": 764.53125,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 6,
+      "mainBottom": 764.53125,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 7,
+      "mainBottom": 844.09375,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 8,
+      "mainBottom": 601.171875,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 9,
+      "mainBottom": 764.53125,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 10,
+      "mainBottom": 824.203125,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 11,
+      "mainBottom": 583.390625,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    },
+    {
+      "page": 12,
+      "mainBottom": 797.484375,
+      "footerTop": 1077.640625,
+      "clientHeight": 1123,
+      "scrollHeight": 1123
+    }
+  ],
+  "overflow": [],
+  "missing_question_text": [],
+  "bookmark_entries": 33,
+  "first_page_links_verified": 8,
+  "pdf_sha256": "ec12a66c11b05fdb65f24950f531fbfb73ed3c919ee9bdf5497ee52d418ba8bb",
+  "visual_review": "Passed: all 12 full-resolution pages inspected; independent model review pp2–5, topic review pp6–8, network review pp9–11. Final N05 subject clarification verified on p10.",
+  "full_resolution_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "question_content_review": "All 28 questions checked against frozen project outputs and primary method sources.",
+  "bookmark_entries_verified": 33
+}

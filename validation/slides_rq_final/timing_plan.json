@@ -1,0 +1,121 @@
+{
+  "rq_blocks": [
+    {
+      "question": "RQ1",
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "question": "RQ2",
+      "pages": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "question": "RQ3",
+      "pages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    }
+  ],
+  "main_slides": 25,
+  "appendix_slides": 0,
+  "hidden_slides": 0,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "研究背景、意义与研究问题",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "number": 2,
+      "title": "数据来源、清洗与分析方法",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "number": 3,
+      "title": "数据覆盖与描述统计",
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "number": 4,
+      "title": "文字表达与点赞的关联",
+      "pages": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "number": 5,
+      "title": "帖子主题与点赞的关联",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "number": 6,
+      "title": "评论的主要内容",
+      "pages": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "number": 7,
+      "title": "评论区的网络结构",
+      "pages": [
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "number": 8,
+      "title": "研究结论与局限",
+      "pages": [
+        24
+      ]
+    }
+  ],
+  "speech_seconds": 770,
+  "transition_seconds": 30,
+  "target_seconds": 800,
+  "short_seconds": 630,
+  "narration_characters": 3579,
+  "note": "每页以半分钟左右为基础；方程与主要推断页可稍长。表格保留供看与核对，口头只解释关键比较。时间需排练校准。"
+}
