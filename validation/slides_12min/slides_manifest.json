@@ -1,0 +1,3199 @@
+[
+  {
+    "page": 1,
+    "originalPage": 1,
+    "title": "Keep社区内容表达与互动反馈分析",
+    "chapter": 0,
+    "chapterName": "封面",
+    "subsection": "封面",
+    "question": null,
+    "rq": "RQ1 · RQ2 · RQ3",
+    "source": "课程小组汇报",
+    "foot": "社交媒体网络分析 · 课程小组汇报",
+    "appendix": false,
+    "text": [
+      {
+        "text": "社交媒体网络分析 · 课程小组汇报",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "01 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "Keep 社区",
+        "x": 0.75,
+        "y": 0.7,
+        "w": 9,
+        "h": 0.5,
+        "size": 25
+      },
+      {
+        "text": "内容表达与\n互动反馈分析",
+        "x": 0.75,
+        "y": 1.72,
+        "w": 10.7,
+        "h": 1.75,
+        "size": 40
+      },
+      {
+        "text": "哪些内容获得反馈，评论又如何形成往来？",
+        "x": 0.8,
+        "y": 4.12,
+        "w": 11.7,
+        "h": 0.65,
+        "size": 24
+      },
+      {
+        "text": "陈霖  ·  董依心",
+        "x": 0.8,
+        "y": 5.96,
+        "w": 9,
+        "h": 0.45,
+        "size": 21
+      }
+    ],
+    "charts": [],
+    "speech": "我们围绕三个问题，看Keep里的内容分布、文字与点赞的关联，以及评论如何形成往来。",
+    "seconds": 10,
+    "shortSeconds": 10,
+    "focus": "开场直接点出三个研究问题。"
+  },
+  {
+    "page": 2,
+    "originalPage": 2,
+    "title": "研究背景、问题与预期",
+    "chapter": 1,
+    "chapterName": "研究背景、意义与研究问题",
+    "subsection": "研究背景、意义与研究问题",
+    "question": null,
+    "rq": "RQ1 · RQ2 · RQ3",
+    "source": "原报告§1；同伴版研究设计页",
+    "foot": "预期是待检验的可能解释，后文按相同RQ编号逐项回答。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "研究设计与数据",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "研究背景、意义与研究问题",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "研究背景、问题与预期",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "预期是待检验的可能解释，后文按相同RQ编号逐项回答。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "02 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "健身社区里，什么内容受到关注，人们又怎样交流？",
+        "x": 0.7,
+        "y": 1.78,
+        "w": 11.9,
+        "h": 0.5,
+        "size": 25
+      },
+      {
+        "text": "Keep既承载训练与打卡，也包含经验和生活分享。点赞是可见反馈，\n评论则记录了谁在留言、谁在接话；理解反馈需要把内容和参与者一起看。",
+        "x": 0.72,
+        "y": 2.43,
+        "w": 11.8,
+        "h": 0.69,
+        "size": 17.5
+      },
+      {
+        "text": "三个具体问题",
+        "x": 0.87,
+        "y": 3.3,
+        "w": 5.6,
+        "h": 0.33,
+        "size": 16
+      },
+      {
+        "text": "对应预期：可能出现的结果",
+        "x": 7.02,
+        "y": 3.3,
+        "w": 5.4,
+        "h": 0.33,
+        "size": 16
+      },
+      {
+        "text": "RQ1  样本主要呈现什么内容，点赞怎样分布？",
+        "x": 0.87,
+        "y": 4,
+        "w": 5.85,
+        "h": 0.56,
+        "size": 17.5
+      },
+      {
+        "text": "媒体反馈可能不同，高赞帖可能拉高均值；\n正文也可能同时包含运动与生活分享。",
+        "x": 7.02,
+        "y": 3.95,
+        "w": 5.4,
+        "h": 0.65,
+        "size": 16.5
+      },
+      {
+        "text": "RQ2  文字线索与主题是否与点赞有关？",
+        "x": 0.87,
+        "y": 4.97,
+        "w": 5.85,
+        "h": 0.56,
+        "size": 17.5
+      },
+      {
+        "text": "自律、积极表达或提问可能对应较高点赞；\n调整作者与情境后，这些差异也可能减弱。",
+        "x": 7.02,
+        "y": 4.92,
+        "w": 5.4,
+        "h": 0.65,
+        "size": 16.5
+      },
+      {
+        "text": "RQ3  评论说什么，谁回应谁，参与面多广？",
+        "x": 0.87,
+        "y": 5.9399999999999995,
+        "w": 5.85,
+        "h": 0.56,
+        "size": 17.5
+      },
+      {
+        "text": "读者可能更多鼓励，帖主更多回应；\n高评论量也可能来自少数人的反复往来。",
+        "x": 7.02,
+        "y": 5.89,
+        "w": 5.4,
+        "h": 0.65,
+        "size": 16.5
+      }
+    ],
+    "charts": [],
+    "speech": "总问题是，健身社区里什么内容受到关注，人们怎样交流。Keep既有训练打卡，也有生活分享，因此不能只看某个词或总评论量。我们拆为三个问题：RQ1描述样本内容和点赞分布；RQ2检验文字、主题与点赞的关联；RQ3看评论内容、回复方向和参与范围。右栏是可能的解释，后文通过数据判断是否成立；页眉会持续标出正在回答的RQ。",
+    "seconds": 35,
+    "shortSeconds": 35,
+    "focus": "总问题→三项RQ→对应预期，不提前把预期当结论。"
+  },
+  {
+    "page": 3,
+    "originalPage": 3,
+    "title": "数据来源与清洗",
+    "chapter": 2,
+    "chapterName": "数据来源、清洗与分析方法",
+    "subsection": "数据来源、清洗与分析方法",
+    "question": null,
+    "rq": "支撑 RQ1 / RQ2 / RQ3",
+    "source": "summary.json；原报告§2—3",
+    "foot": "课程100位作者样本；帖子发表于2020年11—12月（UTC），评论最晚至2021年8月。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "研究设计与数据",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "数据来源、清洗与分析方法",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "数据来源与清洗",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "课程100位作者样本；帖子发表于2020年11—12月（UTC），评论最晚至2021年8月。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "03 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "9,532",
+        "x": 0.72,
+        "y": 1.83,
+        "w": 3.5,
+        "h": 0.65,
+        "size": 34
+      },
+      {
+        "text": "帖子 · 100位作者",
+        "x": 0.72,
+        "y": 2.62,
+        "w": 3.5,
+        "h": 0.45,
+        "size": 15.5
+      },
+      {
+        "text": "11,595",
+        "x": 4.78,
+        "y": 1.83,
+        "w": 3.5,
+        "h": 0.65,
+        "size": 34
+      },
+      {
+        "text": "去重后评论",
+        "x": 4.78,
+        "y": 2.62,
+        "w": 3.5,
+        "h": 0.45,
+        "size": 15.5
+      },
+      {
+        "text": "1,323",
+        "x": 8.85,
+        "y": 1.83,
+        "w": 3.5,
+        "h": 0.65,
+        "size": 34
+      },
+      {
+        "text": "有采集到评论的帖子",
+        "x": 8.85,
+        "y": 2.62,
+        "w": 3.5,
+        "h": 0.45,
+        "size": 15.5
+      },
+      {
+        "text": "核查发现 处理方式 分析含义 1,916行重复评论 按评论ID去重，无字段冲突 避免同一发言被重复计入 3,984帖缺可用正文 保留；文字计数设0并另作标记 不能把缺失当作真实无文字 8,286帖点赞高于记录浏览数 使用累计点赞，不计算点赞率 不解释为曝光转化效率",
+        "x": 0.68,
+        "y": 3.35,
+        "w": 12,
+        "h": 2.48,
+        "size": 15.5
+      },
+      {
+        "text": "正文覆盖随媒体和作者而不同。主题结果仅代表2,470条有效正文、86位作者，\n不能当作全部9,532帖的内容比例；没有采到，也不等于没有发生。",
+        "x": 0.75,
+        "y": 6.15,
+        "w": 11.8,
+        "h": 0.77,
+        "size": 17
+      }
+    ],
+    "charts": [],
+    "speech": "样本有9,532帖、100位作者，以及去重后的11,595条评论。我们去除重复评论，保留缺失正文并作标记；点赞与浏览口径不一致，因此不算点赞率。另外，正文覆盖随媒体和作者而不同，后面的主题结果只代表2,470条有效正文、86位作者。没有采到，不等于没有发生，也不能把这个子样本当成全部内容。",
+    "seconds": 40,
+    "shortSeconds": 40,
+    "focus": "交代清洗与分析范围；不逐行读表。"
+  },
+  {
+    "page": 4,
+    "originalPage": 5,
+    "title": "图片和视频帖点赞更高，整体分布同时存在长尾",
+    "chapter": 3,
+    "chapterName": "数据覆盖与描述统计",
+    "subsection": "数据覆盖与描述统计",
+    "question": "RQ1",
+    "rq": "回答 RQ1",
+    "source": "media_summary.csv；descriptive_statistics.csv；既有post_features分布汇总",
+    "foot": "两图为原始描述；右图显示各点赞区间的帖子数，区间宽度不同，不表示概率密度。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ1  内容与点赞的分布",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "数据覆盖与描述统计",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "图片和视频帖点赞更高，整体分布同时存在长尾",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "两图为原始描述；右图显示各点赞区间的帖子数，区间宽度不同，不表示概率密度。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "04 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "不同媒体的平均点赞",
+        "x": 0.75,
+        "y": 1.85,
+        "w": 5.8,
+        "h": 0.38,
+        "size": 18
+      },
+      {
+        "text": "点赞区间中的帖子数",
+        "x": 6.96,
+        "y": 1.85,
+        "w": 5.8,
+        "h": 0.38,
+        "size": 18
+      },
+      {
+        "text": "均值37.05  ·  中位数25  ·  95%分位109.45  ·  最高5,126",
+        "x": 0.76,
+        "y": 5.35,
+        "w": 11.8,
+        "h": 0.42,
+        "size": 18
+      },
+      {
+        "text": "少量高赞帖拉高平均数，均值不能代表普通帖；媒体均值也相差约一个数量级。",
+        "x": 0.76,
+        "y": 6.02,
+        "w": 11.8,
+        "h": 0.48,
+        "size": 18
+      },
+      {
+        "text": "媒体形式和点赞分布说明了反馈的基本差异；接着看有正文的帖子主要在写什么。",
+        "x": 0.76,
+        "y": 6.59,
+        "w": 11.8,
+        "h": 0.32,
+        "size": 15.5
+      }
+    ],
+    "charts": [
+      {
+        "type": "bar",
+        "data": [
+          {
+            "name": "平均点赞",
+            "labels": [
+              [
+                "图片",
+                "视频",
+                "纯文字",
+                "无媒体"
+              ]
+            ],
+            "values": [
+              51.03,
+              48.05,
+              7.94,
+              3.91
+            ],
+            "_dataIndex": 0
+          }
+        ],
+        "options": {
+          "x": 0.66,
+          "y": 2.36,
+          "w": 5.77,
+          "h": 2.76,
+          "fontFace": "Arial Unicode MS",
+          "showTitle": false,
+          "showLegend": false,
+          "legendPos": "b",
+          "legendFontFace": "Arial Unicode MS",
+          "legendFontSize": 11.5,
+          "catAxisLabelFontFace": "Arial Unicode MS",
+          "catAxisLabelFontSize": 12,
+          "valAxisLabelFontFace": "Arial Unicode MS",
+          "valAxisLabelFontSize": 10.5,
+          "catAxisLabelColor": "20332F",
+          "valAxisLabelColor": "65756F",
+          "catAxisLineShow": false,
+          "valAxisLineShow": false,
+          "catGridLine": {
+            "style": "none"
+          },
+          "valGridLine": {
+            "color": "E7ECE9",
+            "width": 0.5
+          },
+          "showValue": true,
+          "dataLabelFontFace": "Arial Unicode MS",
+          "dataLabelFontSize": 12,
+          "dataLabelColor": "20332F",
+          "dataLabelFormatCode": "0.00",
+          "showCatName": false,
+          "showSerName": false,
+          "chartColors": [
+            "245C4F"
+          ],
+          "showBorder": false,
+          "showShadow": false,
+          "showMarker": false,
+          "valAxisMinVal": 0,
+          "gapSizePct": 75,
+          "barDir": "col",
+          "valAxisMaxVal": 60,
+          "_type": "bar",
+          "objectName": "Chart 0",
+          "barGrouping": "clustered",
+          "bar3DShape": "box",
+          "lineDataSymbol": "circle",
+          "displayBlanksAs": "span",
+          "radarStyle": "standard",
+          "lineDataSymbolSize": 6,
+          "lineDataSymbolLineSize": 9525,
+          "serGridLine": {
+            "style": "none"
+          },
+          "serAxisLineShow": true,
+          "v3DRotX": 30,
+          "v3DRotY": 30,
+          "v3DPerspective": 30,
+          "barGapWidthPct": 150,
+          "barGapDepthPct": 150,
+          "chartColorsOpacity": null,
+          "border": null,
+          "plotArea": {
+            "border": null,
+            "fill": {
+              "color": null,
+              "transparency": null
+            }
+          },
+          "chartArea": {
+            "border": null,
+            "roundedCorners": true
+          },
+          "dataBorder": null,
+          "lineSize": 2,
+          "valAxisMajorUnit": null,
+          "catAxisMultiLevelLabels": false
+        }
+      },
+      {
+        "type": "bar",
+        "data": [
+          {
+            "name": "帖子数",
+            "labels": [
+              [
+                "0",
+                "1–4",
+                "5–9",
+                "10–24",
+                "25–49",
+                "50–99",
+                "100–199",
+                "200–499",
+                "500+"
+              ]
+            ],
+            "values": [
+              361,
+              2298,
+              977,
+              1089,
+              2203,
+              2019,
+              438,
+              141,
+              6
+            ],
+            "_dataIndex": 0
+          }
+        ],
+        "options": {
+          "x": 6.85,
+          "y": 2.36,
+          "w": 5.84,
+          "h": 2.76,
+          "fontFace": "Arial Unicode MS",
+          "showTitle": false,
+          "showLegend": false,
+          "legendPos": "b",
+          "legendFontFace": "Arial Unicode MS",
+          "legendFontSize": 11.5,
+          "catAxisLabelFontFace": "Arial Unicode MS",
+          "catAxisLabelFontSize": 9.5,
+          "valAxisLabelFontFace": "Arial Unicode MS",
+          "valAxisLabelFontSize": 10.5,
+          "catAxisLabelColor": "20332F",
+          "valAxisLabelColor": "65756F",
+          "catAxisLineShow": false,
+          "valAxisLineShow": false,
+          "catGridLine": {
+            "style": "none"
+          },
+          "valGridLine": {
+            "color": "E7ECE9",
+            "width": 0.5
+          },
+          "showValue": false,
+          "dataLabelFontFace": "Arial Unicode MS",
+          "dataLabelFontSize": 12,
+          "dataLabelColor": "20332F",
+          "dataLabelFormatCode": "0.0",
+          "showCatName": false,
+          "showSerName": false,
+          "chartColors": [
+            "245C4F"
+          ],
+          "showBorder": false,
+          "showShadow": false,
+          "showMarker": false,
+          "valAxisMinVal": 0,
+          "gapSizePct": 25,
+          "barDir": "col",
+          "valAxisMaxVal": 2500,
+          "catAxisLabelRotate": 0,
+          "_type": "bar",
+          "objectName": "Chart 1",
+          "barGrouping": "clustered",
+          "bar3DShape": "box",
+          "lineDataSymbol": "circle",
+          "displayBlanksAs": "span",
+          "radarStyle": "standard",
+          "lineDataSymbolSize": 6,
+          "lineDataSymbolLineSize": 9525,
+          "serGridLine": {
+            "style": "none"
+          },
+          "serAxisLineShow": true,
+          "v3DRotX": 30,
+          "v3DRotY": 30,
+          "v3DPerspective": 30,
+          "barGapWidthPct": 150,
+          "barGapDepthPct": 150,
+          "chartColorsOpacity": null,
+          "border": null,
+          "plotArea": {
+            "border": null,
+            "fill": {
+              "color": null,
+              "transparency": null
+            }
+          },
+          "chartArea": {
+            "border": null,
+            "roundedCorners": true
+          },
+          "dataBorder": null,
+          "lineSize": 2,
+          "valAxisMajorUnit": null,
+          "catAxisMultiLevelLabels": false
+        }
+      }
+    ],
+    "speech": "图片和视频帖平均约51和48个赞，文字与无媒体约8和4个。整体分布中，大量帖子在低区间，少量高赞拖出长尾：均值37，中位数25，最高超过五千。因此描述普通帖不能只报平均数，还要同时看中位数与尾部。媒体和反馈的分布已经看到，接着进入正文内容，看这些帖子主要讨论什么。",
+    "seconds": 35,
+    "shortSeconds": 35,
+    "focus": "只回答分布，不提前讲控制模型。"
+  },
+  {
+    "page": 5,
+    "originalPage": 6,
+    "title": "帖子正文主题主要包括运动和生活",
+    "chapter": 3,
+    "chapterName": "数据覆盖与描述统计",
+    "subsection": "帖子主题与作者构成",
+    "question": "RQ1",
+    "rq": "回答 RQ1",
+    "source": "extension_topics.csv；extension_summary.json；topic_labels.json",
+    "foot": "TF-IDF + NMF，主题数预先固定为5；名称依据词项与正文确定，不参考点赞。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ1  内容与点赞的分布",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "帖子主题与作者构成",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "帖子正文主题主要包括运动和生活",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "TF-IDF + NMF，主题数预先固定为5；名称依据词项与正文确定，不参考点赞。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "05 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "2,470帖 · 86位作者",
+        "x": 8.28,
+        "y": 1.96,
+        "w": 4.4,
+        "h": 0.43,
+        "size": 22
+      },
+      {
+        "text": "训练交流：运动、减脂、训练、拉伸\n生活问候：人生、生活、早安、美好",
+        "x": 8.28,
+        "y": 2.74,
+        "w": 4.39,
+        "h": 1.02,
+        "size": 17.5
+      },
+      {
+        "text": "前两类合计88.5%。这批有效正文不仅讨论如何训练，也经常写感受、生活和问候，不能把健身社区里的文字都当成运动成绩记录。",
+        "x": 8.28,
+        "y": 4.1,
+        "w": 4.39,
+        "h": 1.58,
+        "size": 18
+      },
+      {
+        "text": "占比按每帖权重最大的主题归类。同一作者可写多个主题，内容量大也可能是某些人写得多。",
+        "x": 0.74,
+        "y": 6.4,
+        "w": 11.9,
+        "h": 0.56,
+        "size": 17
+      }
+    ],
+    "charts": [
+      {
+        "type": "bar",
+        "data": [
+          {
+            "name": "主导主题占比",
+            "labels": [
+              [
+                "运动与训练交流",
+                "生活感悟与问候",
+                "跑步与训练打卡",
+                "靠墙静蹲记录",
+                "骑行里程记录"
+              ]
+            ],
+            "values": [
+              52.71255060728745,
+              35.82995951417004,
+              4.574898785425101,
+              3.4412955465587043,
+              3.4412955465587043
+            ],
+            "_dataIndex": 0
+          }
+        ],
+        "options": {
+          "x": 0.64,
+          "y": 2,
+          "w": 7.15,
+          "h": 4.25,
+          "fontFace": "Arial Unicode MS",
+          "showTitle": false,
+          "showLegend": false,
+          "legendPos": "b",
+          "legendFontFace": "Arial Unicode MS",
+          "legendFontSize": 11.5,
+          "catAxisLabelFontFace": "Arial Unicode MS",
+          "catAxisLabelFontSize": 12.5,
+          "valAxisLabelFontFace": "Arial Unicode MS",
+          "valAxisLabelFontSize": 10.5,
+          "catAxisLabelColor": "20332F",
+          "valAxisLabelColor": "65756F",
+          "catAxisLineShow": false,
+          "valAxisLineShow": false,
+          "catGridLine": {
+            "style": "none"
+          },
+          "valGridLine": {
+            "color": "E7ECE9",
+            "width": 0.5
+          },
+          "showValue": true,
+          "dataLabelFontFace": "Arial Unicode MS",
+          "dataLabelFontSize": 12,
+          "dataLabelColor": "20332F",
+          "dataLabelFormatCode": "0.0\"%\"",
+          "showCatName": false,
+          "showSerName": false,
+          "chartColors": [
+            "245C4F"
+          ],
+          "showBorder": false,
+          "showShadow": false,
+          "showMarker": false,
+          "valAxisMinVal": 0,
+          "gapSizePct": 75,
+          "catAxisOrientation": "maxMin",
+          "catAxisLabelPos": "low",
+          "valAxisLabelPos": "low",
+          "barDir": "bar",
+          "valAxisMaxVal": 60,
+          "_type": "bar",
+          "objectName": "Chart 0",
+          "barGrouping": "clustered",
+          "bar3DShape": "box",
+          "lineDataSymbol": "circle",
+          "displayBlanksAs": "span",
+          "radarStyle": "standard",
+          "lineDataSymbolSize": 6,
+          "lineDataSymbolLineSize": 9525,
+          "serGridLine": {
+            "style": "none"
+          },
+          "serAxisLineShow": true,
+          "v3DRotX": 30,
+          "v3DRotY": 30,
+          "v3DPerspective": 30,
+          "barGapWidthPct": 150,
+          "barGapDepthPct": 150,
+          "chartColorsOpacity": null,
+          "border": null,
+          "plotArea": {
+            "border": null,
+            "fill": {
+              "color": null,
+              "transparency": null
+            }
+          },
+          "chartArea": {
+            "border": null,
+            "roundedCorners": true
+          },
+          "dataBorder": null,
+          "lineSize": 2,
+          "valAxisMajorUnit": null,
+          "catAxisMultiLevelLabels": false
+        }
+      }
+    ],
+    "speech": "有效正文提取了五类主题，训练交流占52.7%，生活感悟和问候占35.8%，合计88.5%。所以这批Keep文字不只有打卡和运动成绩，也有大量日常表达。这里按每帖权重最大的主题统计篇幅，一人可以贡献很多帖。要判断某种内容是否普遍，还要看它是不是被少数高产作者放大。",
+    "seconds": 35,
+    "shortSeconds": 35,
+    "focus": "先解释两大主题的真实内容，再引出作者等权。"
+  },
+  {
+    "page": 6,
+    "originalPage": 7,
+    "title": "常见内容，也可能是少数人的高频记录",
+    "chapter": 3,
+    "chapterName": "数据覆盖与描述统计",
+    "subsection": "帖子主题与作者构成",
+    "question": "RQ1",
+    "rq": "回答 RQ1",
+    "source": "supplemental_topic_author_weighting.csv；extension_topics.csv",
+    "foot": "两组沿用同一主题分类；作者等权先计算每人的主题比例，再对86位作者平均。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ1  内容与点赞的分布",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "帖子主题与作者构成",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "常见内容，也可能是少数人的高频记录",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "两组沿用同一主题分类；作者等权先计算每人的主题比例，再对86位作者平均。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "06 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "静蹲：3.4% → 0.6%",
+        "x": 8.3,
+        "y": 2,
+        "w": 4.35,
+        "h": 0.58,
+        "size": 26
+      },
+      {
+        "text": "85条主导文档中，78条来自同一作者。按帖看是在统计这种记录出现了多少次；作者等权后，才减少了高产作者的重复贡献。",
+        "x": 8.3,
+        "y": 2.95,
+        "w": 4.35,
+        "h": 1.59,
+        "size": 18
+      },
+      {
+        "text": "训练52.7% → 52.6%，生活35.8% → 38.2%。两条主要内容线仍在，变化集中在部分小主题。",
+        "x": 8.3,
+        "y": 5.08,
+        "w": 4.35,
+        "h": 1.27,
+        "size": 17.5
+      },
+      {
+        "text": "训练和生活是两条主要内容线；部分小主题的份额，则会被少数作者的持续记录放大。",
+        "x": 0.75,
+        "y": 6.56,
+        "w": 11.85,
+        "h": 0.37,
+        "size": 17
+      }
+    ],
+    "charts": [
+      {
+        "type": "bar",
+        "data": [
+          {
+            "name": "按帖子统计",
+            "labels": [
+              [
+                "运动与训练交流",
+                "生活感悟与问候",
+                "跑步与训练打卡",
+                "靠墙静蹲记录",
+                "骑行里程记录"
+              ]
+            ],
+            "values": [
+              52.71255060728745,
+              35.82995951417004,
+              4.574898785425101,
+              3.4412955465587043,
+              3.4412955465587043
+            ],
+            "_dataIndex": 0
+          },
+          {
+            "name": "每位作者等权",
+            "labels": [
+              [
+                "运动与训练交流",
+                "生活感悟与问候",
+                "跑步与训练打卡",
+                "靠墙静蹲记录",
+                "骑行里程记录"
+              ]
+            ],
+            "values": [
+              52.63472333887843,
+              38.15643148325583,
+              5.679415469687451,
+              0.6178214221439395,
+              2.911608286034348
+            ],
+            "_dataIndex": 1
+          }
+        ],
+        "options": {
+          "x": 0.64,
+          "y": 1.98,
+          "w": 7.2,
+          "h": 4.45,
+          "fontFace": "Arial Unicode MS",
+          "showTitle": false,
+          "showLegend": true,
+          "legendPos": "b",
+          "legendFontFace": "Arial Unicode MS",
+          "legendFontSize": 11.5,
+          "catAxisLabelFontFace": "Arial Unicode MS",
+          "catAxisLabelFontSize": 11.8,
+          "valAxisLabelFontFace": "Arial Unicode MS",
+          "valAxisLabelFontSize": 10.5,
+          "catAxisLabelColor": "20332F",
+          "valAxisLabelColor": "65756F",
+          "catAxisLineShow": false,
+          "valAxisLineShow": false,
+          "catGridLine": {
+            "style": "none"
+          },
+          "valGridLine": {
+            "color": "E7ECE9",
+            "width": 0.5
+          },
+          "showValue": true,
+          "dataLabelFontFace": "Arial Unicode MS",
+          "dataLabelFontSize": 12,
+          "dataLabelColor": "20332F",
+          "dataLabelFormatCode": "0.0\"%\"",
+          "showCatName": false,
+          "showSerName": false,
+          "chartColors": [
+            "245C4F",
+            "B97339"
+          ],
+          "showBorder": false,
+          "showShadow": false,
+          "showMarker": false,
+          "valAxisMinVal": 0,
+          "gapSizePct": 50,
+          "catAxisOrientation": "maxMin",
+          "catAxisLabelPos": "low",
+          "valAxisLabelPos": "low",
+          "barDir": "bar",
+          "valAxisMaxVal": 60,
+          "_type": "bar",
+          "objectName": "Chart 0",
+          "barGrouping": "clustered",
+          "bar3DShape": "box",
+          "lineDataSymbol": "circle",
+          "displayBlanksAs": "span",
+          "radarStyle": "standard",
+          "lineDataSymbolSize": 6,
+          "lineDataSymbolLineSize": 9525,
+          "serGridLine": {
+            "style": "none"
+          },
+          "serAxisLineShow": true,
+          "v3DRotX": 30,
+          "v3DRotY": 30,
+          "v3DPerspective": 30,
+          "barGapWidthPct": 150,
+          "barGapDepthPct": 150,
+          "chartColorsOpacity": null,
+          "border": null,
+          "plotArea": {
+            "border": null,
+            "fill": {
+              "color": null,
+              "transparency": null
+            }
+          },
+          "chartArea": {
+            "border": null,
+            "roundedCorners": true
+          },
+          "dataBorder": null,
+          "lineSize": 2,
+          "valAxisMajorUnit": null,
+          "catAxisMultiLevelLabels": false
+        }
+      }
+    ],
+    "speech": "静蹲按帖子统计占3.4%，让每位作者等权后只剩0.6%。85帖里78帖来自一人，所以这里的常见更多反映一位作者的持续记录。训练和生活两大主题换权重后仍占主要份额。这一步让RQ1的内容分布更准确：既看到训练与生活并存，也分清一种主题是很多人都在写，还是少数人反复记录。",
+    "seconds": 30,
+    "shortSeconds": 30,
+    "focus": "把作者权重作为内容分布的校准，完成RQ1的描述。"
+  },
+  {
+    "page": 7,
+    "originalPage": 8,
+    "title": "RQ1的回答：这批帖子的内容和点赞怎样分布",
+    "chapter": 3,
+    "chapterName": "数据覆盖与描述统计",
+    "subsection": "数据覆盖与描述统计",
+    "question": "RQ1",
+    "rq": "回答 RQ1 · 本题结论",
+    "source": "样本、媒体分布、主题与作者权重结果",
+    "foot": "范围：9,532帖；主题比例仅代表2,470条有效正文、86位作者。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ1  内容与点赞的分布",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "数据覆盖与描述统计",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "RQ1的回答：这批帖子的内容和点赞怎样分布",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "范围：9,532帖；主题比例仅代表2,470条有效正文、86位作者。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "07 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "媒体不同，收到的点赞并不均匀。",
+        "x": 0.78,
+        "y": 1.92,
+        "w": 11.7,
+        "h": 0.46,
+        "size": 25
+      },
+      {
+        "text": "图片和视频帖平均约51、48赞，文字与无媒体约8、4赞。整体均值37.05高于中位数25，少量高赞把分布拉出长尾；单用平均数会高估普通帖子的反馈水平。",
+        "x": 0.8,
+        "y": 2.6,
+        "w": 11.65,
+        "h": 1,
+        "size": 19
+      },
+      {
+        "text": "正文同时包含训练交流和生活分享，篇幅也受作者影响。",
+        "x": 0.78,
+        "y": 4.02,
+        "w": 11.7,
+        "h": 0.48,
+        "size": 24
+      },
+      {
+        "text": "训练交流52.7%、生活问候35.8%，作者等权后仍是两条主线。静蹲却由3.4%降至0.6%，其中85帖有78帖来自一人：这种记录出现多，不等于很多作者都在写。",
+        "x": 0.8,
+        "y": 4.71,
+        "w": 11.65,
+        "h": 1.02,
+        "size": 19
+      },
+      {
+        "text": "RQ2接着问：把媒体、作者与日期一起纳入比较后，文字或主题与点赞还有多大关联？",
+        "x": 0.94,
+        "y": 6.28,
+        "w": 11.55,
+        "h": 0.36,
+        "size": 17
+      }
+    ],
+    "charts": [],
+    "speech": "RQ1显示，图片和视频帖的平均点赞较高，整体存在长尾。正文以训练和生活为主，部分小主题则被少数高产作者放大。接下来检验文字与点赞的关联。",
+    "seconds": 15,
+    "shortSeconds": 15,
+    "focus": "只收束两项发现；不重报前页统计。"
+  },
+  {
+    "page": 8,
+    "originalPage": 9,
+    "title": "怎样把文字表达放进点赞比较",
+    "chapter": 4,
+    "chapterName": "文字表达与点赞的关联",
+    "subsection": "文字表达与点赞的关联",
+    "question": "RQ2",
+    "rq": "回答 RQ2 · 变量定义",
+    "source": "text_dictionary.json；analyze.py；extend_analysis.py",
+    "foot": "文字词表只识别字面线索，不是情绪量表；特征可重叠。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ2  文字、主题与点赞的关联",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "文字表达与点赞的关联",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "怎样把文字表达放进点赞比较",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "文字词表只识别字面线索，不是情绪量表；特征可重叠。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "08 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "五项文字变量 定义与例子 正文长度 L ln(1+清理后字符数) 自律 / 目标 D 坚持、自律、目标、第N天等词表或模式 社交 / 互助 S 大家、小伙伴、谢谢、一起等词表 积极表达 P 开心、快乐、喜欢、哈哈等词表 问号 Q 全角或半角问号，出现记1",
+        "x": 0.68,
+        "y": 1.94,
+        "w": 6.6,
+        "h": 3.54,
+        "size": 15.5
+      },
+      {
+        "text": "除长度外，命中记1；一帖可同时命中多个词类。",
+        "x": 0.75,
+        "y": 5.72,
+        "w": 6.5,
+        "h": 0.6,
+        "size": 14.5
+      },
+      {
+        "text": "比较什么结果？",
+        "x": 7.75,
+        "y": 2.02,
+        "w": 4.85,
+        "h": 0.36,
+        "size": 20
+      },
+      {
+        "text": "点赞分布有长尾，因此模型采用 ln(1+点赞数)，减少少量极端高赞对比较的影响。",
+        "x": 7.75,
+        "y": 2.6,
+        "w": 4.85,
+        "h": 1.12,
+        "size": 18
+      },
+      {
+        "text": "怎样判断文字的额外关联？",
+        "x": 7.75,
+        "y": 4.25,
+        "w": 4.85,
+        "h": 0.36,
+        "size": 20
+      },
+      {
+        "text": "先看命中与未命中的均值及媒体构成，再同时调整作者、日期和发布情境，检查原始差异是否保留。",
+        "x": 7.75,
+        "y": 4.83,
+        "w": 4.85,
+        "h": 1.12,
+        "size": 18
+      },
+      {
+        "text": "用词检验之后，再加入RQ1已经识别的主题权重，检查整篇内容是否补充点赞关联。",
+        "x": 7.75,
+        "y": 6.12,
+        "w": 4.85,
+        "h": 0.7,
+        "size": 16
+      }
+    ],
+    "charts": [],
+    "speech": "RQ2先定义五项文字线索：长度取对数，自律、社交、积极表达和问号命中记一，各项可以重叠。结果用一加点赞的对数。先看原始均值和构成，再调整作者、日期和情境；最后加入主题权重，检查整篇内容的关联。",
+    "seconds": 32,
+    "shortSeconds": 32,
+    "focus": "定义变量与比较顺序；词表示例留给听众看。"
+  },
+  {
+    "page": 9,
+    "originalPage": 10,
+    "title": "分组均值较高，但文字与媒体构成混在一起",
+    "chapter": 4,
+    "chapterName": "文字表达与点赞的关联",
+    "subsection": "文字表达与点赞的关联",
+    "question": "RQ2",
+    "rq": "回答 RQ2 · 原始比较",
+    "source": "text_features_summary.csv；既有post_features媒体构成汇总",
+    "foot": "变量已在第8页定义；组别与特征可重叠，分组均值尚未调整作者和发布情境。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ2  文字、主题与点赞的关联",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "文字表达与点赞的关联",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "分组均值较高，但文字与媒体构成混在一起",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "变量已在第8页定义；组别与特征可重叠，分组均值尚未调整作者和发布情境。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "09 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "积极表达组的进一步比较",
+        "x": 8.28,
+        "y": 1.91,
+        "w": 4.4,
+        "h": 0.4,
+        "size": 20
+      },
+      {
+        "text": "组别 帖数 图片/视频 命中 574 94.9% 未命中 8,958 69.1%",
+        "x": 8.25,
+        "y": 2.58,
+        "w": 4.43,
+        "h": 1.71,
+        "size": 14.5
+      },
+      {
+        "text": "57.29 vs 35.76 个赞，\n同时伴随媒体构成差异。\n命中组分布于64位作者，\n未命中组覆盖100位作者。",
+        "x": 8.3,
+        "y": 4.69,
+        "w": 4.34,
+        "h": 1.5,
+        "size": 17.5
+      },
+      {
+        "text": "下一步：同时控制媒体、作者和日期，比较这些用词是否仍有额外关联。",
+        "x": 0.73,
+        "y": 6.45,
+        "w": 11.9,
+        "h": 0.5,
+        "size": 18
+      }
+    ],
+    "charts": [
+      {
+        "type": "bar",
+        "data": [
+          {
+            "name": "命中",
+            "labels": [
+              [
+                "自律 / 目标",
+                "社交 / 互助",
+                "积极表达",
+                "问号"
+              ]
+            ],
+            "values": [
+              63.672748004561,
+              89.95597484276729,
+              57.285714285714285,
+              111.152
+            ],
+            "_dataIndex": 0
+          },
+          {
+            "name": "未命中",
+            "labels": [
+              [
+                "自律 / 目标",
+                "社交 / 互助",
+                "积极表达",
+                "问号"
+              ]
+            ],
+            "values": [
+              34.35586366262276,
+              36.155766563533554,
+              35.75675373967403,
+              36.06856596151802
+            ],
+            "_dataIndex": 1
+          }
+        ],
+        "options": {
+          "x": 0.63,
+          "y": 2,
+          "w": 7.2,
+          "h": 3.8,
+          "fontFace": "Arial Unicode MS",
+          "showTitle": false,
+          "showLegend": true,
+          "legendPos": "b",
+          "legendFontFace": "Arial Unicode MS",
+          "legendFontSize": 11.5,
+          "catAxisLabelFontFace": "Arial Unicode MS",
+          "catAxisLabelFontSize": 12,
+          "valAxisLabelFontFace": "Arial Unicode MS",
+          "valAxisLabelFontSize": 10.5,
+          "catAxisLabelColor": "20332F",
+          "valAxisLabelColor": "65756F",
+          "catAxisLineShow": false,
+          "valAxisLineShow": false,
+          "catGridLine": {
+            "style": "none"
+          },
+          "valGridLine": {
+            "color": "E7ECE9",
+            "width": 0.5
+          },
+          "showValue": true,
+          "dataLabelFontFace": "Arial Unicode MS",
+          "dataLabelFontSize": 12,
+          "dataLabelColor": "20332F",
+          "dataLabelFormatCode": "0.0",
+          "showCatName": false,
+          "showSerName": false,
+          "chartColors": [
+            "245C4F",
+            "AFBCB5"
+          ],
+          "showBorder": false,
+          "showShadow": false,
+          "showMarker": false,
+          "valAxisMinVal": 0,
+          "gapSizePct": 75,
+          "barDir": "col",
+          "valAxisMaxVal": 130,
+          "_type": "bar",
+          "objectName": "Chart 0",
+          "barGrouping": "clustered",
+          "bar3DShape": "box",
+          "lineDataSymbol": "circle",
+          "displayBlanksAs": "span",
+          "radarStyle": "standard",
+          "lineDataSymbolSize": 6,
+          "lineDataSymbolLineSize": 9525,
+          "serGridLine": {
+            "style": "none"
+          },
+          "serAxisLineShow": true,
+          "v3DRotX": 30,
+          "v3DRotY": 30,
+          "v3DPerspective": 30,
+          "barGapWidthPct": 150,
+          "barGapDepthPct": 150,
+          "chartColorsOpacity": null,
+          "border": null,
+          "plotArea": {
+            "border": null,
+            "fill": {
+              "color": null,
+              "transparency": null
+            }
+          },
+          "chartArea": {
+            "border": null,
+            "roundedCorners": true
+          },
+          "dataBorder": null,
+          "lineSize": 2,
+          "valAxisMajorUnit": null,
+          "catAxisMultiLevelLabels": false
+        }
+      }
+    ],
+    "speech": "四类表达的命中组平均点赞都更高，但组别构成也不同。积极表达组约57赞、未命中约36赞，图片或视频占比却分别为94.9%和69.1%。因此，下一步把文字、媒体、作者和日期一起纳入模型，判断用词是否还有额外关联。",
+    "seconds": 28,
+    "shortSeconds": 28,
+    "focus": "只讲积极表达这一例，解释为什么需要调整比较。"
+  },
+  {
+    "page": 10,
+    "originalPage": 11,
+    "title": "用作者与日期固定效应，进一步改善比较",
+    "chapter": 4,
+    "chapterName": "文字表达与点赞的关联",
+    "subsection": "文字表达与点赞的关联",
+    "question": "RQ2",
+    "rq": "回答 RQ2 · 回归设定",
+    "source": "analyze.py formula()/models()；model_fit.csv",
+    "foot": "主分析为OLS；N=9,532、100位作者，标准误按作者聚类，五项核心系数采用BH校正。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ2  文字、主题与点赞的关联",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "文字表达与点赞的关联",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "用作者与日期固定效应，进一步改善比较",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "主分析为OLS；N=9,532、100位作者，标准误按作者聚类，五项核心系数采用BH校正。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "10 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "M3：ln(1 + 点赞数) = β′X + γ′C + α作者 + δ日期 + ε",
+        "x": 0.89,
+        "y": 2.12,
+        "w": 11.58,
+        "h": 0.47,
+        "size": 23
+      },
+      {
+        "text": "X：长度、自律、社交、积极、问号。C：正文可用、话题、表情数、课程分享，以及媒体、业务类型、时段。",
+        "x": 0.75,
+        "y": 3.03,
+        "w": 11.85,
+        "h": 0.6,
+        "size": 15.5
+      },
+      {
+        "text": "模型 调整范围 R² 积极表达系数 / 原始p M1 X + C + 已记录作者属性 0.563 −0.050 / 0.285 M2 X + C + 作者固定效应 0.685 −0.087 / 0.016 M3 主模型 X + C + 作者、日期固定效应 0.688 −0.086 / 0.016",
+        "x": 0.68,
+        "y": 3.88,
+        "w": 12,
+        "h": 2.04,
+        "size": 15.5
+      },
+      {
+        "text": "加入作者固定效应后拟合度提高，提示作者差异值得考虑；积极表达在M1中就已为负。",
+        "x": 0.75,
+        "y": 6.22,
+        "w": 11.85,
+        "h": 0.5,
+        "size": 17.5
+      },
+      {
+        "text": "这里比较的是调整后的对数结果，不能把与原始均值的差别单独归因于某一个控制项。",
+        "x": 0.75,
+        "y": 6.72,
+        "w": 11.85,
+        "h": 0.25,
+        "size": 12.8
+      }
+    ],
+    "charts": [],
+    "speech": "这页写出具体方程。M3以一加点赞数的对数为结果，X是五项文字线索，C是已记录情境，另加作者和日期固定效应。作者效应让比较更多利用同一作者不同帖子间的变化。M1到M2的拟合度由0.563升到0.685，说明作者差异有助于拟合。但积极表达在M1中就已为负，不能把原始均值与M3的差别单独归因于加入作者效应。下一页的系数、区间和显著性都对应M3。",
+    "seconds": 40,
+    "shortSeconds": 40,
+    "focus": "读方程的组成，明确下一页是哪一个模型的推断。"
+  },
+  {
+    "page": 11,
+    "originalPage": 12,
+    "title": "M3没有保留原始用词优势，单项线索也需要校正",
+    "chapter": 4,
+    "chapterName": "文字表达与点赞的关联",
+    "subsection": "文字表达与点赞的关联",
+    "question": "RQ2",
+    "rq": "回答 RQ2 · 主结果",
+    "source": "regression_coefficients.csv M3；summary.json models",
+    "foot": "表中为M3的作者聚类推断；95%区间与p为原始值，BH q同时考虑五项核心检验。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ2  文字、主题与点赞的关联",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "文字表达与点赞的关联",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "M3没有保留原始用词优势，单项线索也需要校正",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "表中为M3的作者聚类推断；95%区间与p为原始值，BH q同时考虑五项核心检验。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "11 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "文字特征 系数β 原始95%区间 p BH q 长度 ln(1+字数) 0.028 [−0.008, 0.064] 0.130 0.293 自律 / 目标 −0.119 [−0.293, 0.054] 0.176 0.293 社交 / 互助 −0.004 [−0.131, 0.122] 0.946 0.946 积极表达 −0.086 [−0.155, −0.016] 0.016 0.079 问号 0.108 [−0.100, 0.316] 0.307 0.383",
+        "x": 0.66,
+        "y": 1.98,
+        "w": 8.3,
+        "h": 3.12,
+        "size": 14.6
+      },
+      {
+        "text": "积极表达：β = −0.086",
+        "x": 9.22,
+        "y": 2.02,
+        "w": 3.42,
+        "h": 0.77,
+        "size": 21
+      },
+      {
+        "text": "原始p = 0.016\nBH q = 0.079",
+        "x": 9.22,
+        "y": 3.15,
+        "w": 3.42,
+        "h": 0.85,
+        "size": 21
+      },
+      {
+        "text": "单项区间不跨0，\n但五项一起校正后，\n证据未达到5%标准。",
+        "x": 9.22,
+        "y": 4.41,
+        "w": 3.42,
+        "h": 1.25,
+        "size": 18
+      },
+      {
+        "text": "五项文字线索仅增加0.065个百分点R²，联合检验 p = 0.130。",
+        "x": 0.73,
+        "y": 5.78,
+        "w": 11.9,
+        "h": 0.42,
+        "size": 18
+      },
+      {
+        "text": "原始均值优势没有在调整后的比较中保留；这不足以推出“积极用词降低点赞”。",
+        "x": 0.73,
+        "y": 6.31,
+        "w": 11.9,
+        "h": 0.44,
+        "size": 17
+      },
+      {
+        "text": "还要核查：负向方向是否依赖缺失正文、极端高赞帖或某一位作者？",
+        "x": 0.73,
+        "y": 6.78,
+        "w": 11.9,
+        "h": 0.23,
+        "size": 12.5
+      }
+    ],
+    "charts": [],
+    "speech": "这是M3的完整五项结果。积极表达系数负0.086，原始区间不跨零，p为0.016；但五项一起做BH校正后，q为0.079，未达到5%标准。这两个判断并不矛盾：前者看单项，后者考虑同时尝试多项线索。五项新增解释度仅0.065个百分点，联合p为0.130。我们能说原始用词优势没有保留，不能说积极用词导致点赞下降。接着排查这个负向方向是否由缺失、极端值或单个作者主导。",
+    "seconds": 45,
+    "shortSeconds": 45,
+    "focus": "解释p与q的区别、整组新增解释，以及为什么继续做敏感性分析。"
+  },
+  {
+    "page": 12,
+    "originalPage": 13,
+    "title": "换样本和模型后，积极表达的方向是否改变？",
+    "chapter": 4,
+    "chapterName": "文字表达与点赞的关联",
+    "subsection": "文字表达与点赞的关联",
+    "question": "RQ2",
+    "rq": "回答 RQ2 · 敏感性",
+    "source": "regression_coefficients.csv；model_fit.csv；extension_author_influence_summary.csv",
+    "foot": "聚焦积极表达；区间和p为各设定原始值，不代替M3的BH主分析结论。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ2  文字、主题与点赞的关联",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "文字表达与点赞的关联",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "换样本和模型后，积极表达的方向是否改变？",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "聚焦积极表达；区间和p为各设定原始值，不代替M3的BH主分析结论。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "12 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "设定 N 系数 原始95%区间 p M3主模型 9,532 −0.086 [−0.155, −0.016] 0.016 仅可见正文 5,548 −0.090 [−0.164, −0.015] 0.019 去最高1%点赞 9,436 −0.082 [−0.152, −0.012] 0.022 作者等权 9,532 −0.128 [−0.219, −0.036] 0.007 PPML计数模型 9,532 −0.135 [−0.299, 0.028] 0.103",
+        "x": 0.68,
+        "y": 2.02,
+        "w": 8.5,
+        "h": 3.24,
+        "size": 14.5
+      },
+      {
+        "text": "方向不依赖一种样本处理",
+        "x": 9.55,
+        "y": 2.05,
+        "w": 3.1,
+        "h": 0.36,
+        "size": 20
+      },
+      {
+        "text": "可见正文、去高赞、作者等权后均为负；100次逐作者剔除也全部为负。",
+        "x": 9.55,
+        "y": 2.63,
+        "w": 3.1,
+        "h": 1.12,
+        "size": 16.5
+      },
+      {
+        "text": "计数尺度上仍不精确",
+        "x": 9.55,
+        "y": 4.12,
+        "w": 3.1,
+        "h": 0.36,
+        "size": 20
+      },
+      {
+        "text": "PPML区间跨0，不能把方向一致升级成已验证的稳定负效应。",
+        "x": 9.55,
+        "y": 4.7,
+        "w": 3.1,
+        "h": 1.12,
+        "size": 16.5
+      },
+      {
+        "text": "逐作者剔除系数范围：[−0.100, −0.074]。PPML拟合 E[点赞 | 条件] = exp(线性项)。",
+        "x": 0.74,
+        "y": 6.15,
+        "w": 11.9,
+        "h": 0.4,
+        "size": 15.5
+      },
+      {
+        "text": "沿用RQ1已经识别的主题权重，检验它们能否补充指定用词以外的点赞关联。",
+        "x": 0.74,
+        "y": 6.65,
+        "w": 11.9,
+        "h": 0.33,
+        "size": 16.5
+      }
+    ],
+    "charts": [],
+    "speech": "可见正文、去高赞和作者等权后，积极表达系数都为负；逐作者剔除也一样。但PPML直接拟合点赞计数，区间跨零。方向一致还不足以确认稳定负效应。词典只抓指定字眼，接着看整篇内容的主题能否补充关联。",
+    "seconds": 32,
+    "shortSeconds": 32,
+    "focus": "保留敏感性与PPML判断，不逐项报系数和p值。"
+  },
+  {
+    "page": 13,
+    "originalPage": 14,
+    "title": "主题权重能否补充用词以外的点赞关联？",
+    "chapter": 5,
+    "chapterName": "帖子主题与点赞的关联",
+    "subsection": "帖子主题与点赞的关联",
+    "question": "RQ2",
+    "rq": "回答 RQ2 · 主题回归",
+    "source": "extension_topic_regression.csv；extend_analysis.py；extension_summary.json",
+    "foot": "同一子样本N=2,470、86位作者；按作者聚类。回归使用连续主题权重，不是主导主题虚拟变量。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ2  文字、主题与点赞的关联",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "帖子主题与点赞的关联",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "主题权重能否补充用词以外的点赞关联？",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "同一子样本N=2,470、86位作者；按作者聚类。回归使用连续主题权重，不是主导主题虚拟变量。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "13 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "主题模型：M3原有线性项 + Σ θₖwₖ（省去“运动与训练交流”权重作为参照）",
+        "x": 0.86,
+        "y": 2.03,
+        "w": 11.63,
+        "h": 0.35,
+        "size": 18
+      },
+      {
+        "text": "相对训练交流的主题权重 系数θ 原始95%区间 p BH q 靠墙静蹲记录 −0.315 [−0.636, 0.005] 0.054 0.107 骑行里程记录 0.018 [−0.523, 0.558] 0.948 0.948 跑步与训练打卡 −0.471 [−1.048, 0.105] 0.108 0.144 生活感悟与问候 −0.144 [−0.278, −0.010] 0.035 0.107",
+        "x": 0.68,
+        "y": 2.92,
+        "w": 12,
+        "h": 2.55,
+        "size": 16
+      },
+      {
+        "text": "生活问候权重相对训练交流增加10个百分点时，“1+点赞”的条件几何均值点估计约低1.4%。",
+        "x": 0.76,
+        "y": 5.66,
+        "w": 11.83,
+        "h": 0.48,
+        "size": 17
+      },
+      {
+        "text": "但其原始p = 0.035、BH q = 0.107；四项主题联合 p = 0.166，尚不能把点估计当成稳定的主题反馈排序。",
+        "x": 0.76,
+        "y": 6.24,
+        "w": 11.83,
+        "h": 0.48,
+        "size": 16.5
+      },
+      {
+        "text": "权重范围0–1，系数按100个百分点计；区间未计入主题估计本身的不确定性。",
+        "x": 0.76,
+        "y": 6.86,
+        "w": 11.83,
+        "h": 0.2,
+        "size": 11.2
+      }
+    ],
+    "charts": [],
+    "speech": "在M3原有项之外增加四项连续主题权重，以训练交流为参照。生活问候相对训练增加十个百分点，点估计对应一加点赞的条件几何均值约低1.4%；但校正后q为0.107，主题联合p为0.166。宽区间和校正结果不足以支持稳定的主题点赞排序。把它与前面的用词结果合起来，才能完成RQ2关于文字和主题关联的回答。",
+    "seconds": 42,
+    "shortSeconds": 42,
+    "focus": "只检验主题与点赞的关联，不复述RQ1的主题份额。"
+  },
+  {
+    "page": 14,
+    "originalPage": 15,
+    "title": "RQ2的回答：用词和主题与点赞的关联有多稳",
+    "chapter": 5,
+    "chapterName": "帖子主题与点赞的关联",
+    "subsection": "帖子主题与点赞的关联",
+    "question": "RQ2",
+    "rq": "回答 RQ2 · 本题结论",
+    "source": "M3、敏感性与连续主题权重回归结果",
+    "foot": "结果为观察性关联；词典与主题只覆盖部分文字信息，缺少真实曝光等条件。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ2  文字、主题与点赞的关联",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "帖子主题与点赞的关联",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "RQ2的回答：用词和主题与点赞的关联有多稳",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "结果为观察性关联；词典与主题只覆盖部分文字信息，缺少真实曝光等条件。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "14 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "原始用词差异同时带着媒体与作者差异。",
+        "x": 0.78,
+        "y": 1.91,
+        "w": 11.7,
+        "h": 0.47,
+        "size": 24
+      },
+      {
+        "text": "积极表达命中组的图片/视频占比94.9%，未命中组69.1%。M3调整后积极表达系数为−0.086、BH q=0.079；五项文字线索仅新增0.065个百分点R²，联合p=0.130。",
+        "x": 0.8,
+        "y": 2.58,
+        "w": 11.65,
+        "h": 1,
+        "size": 18.5
+      },
+      {
+        "text": "换样本后的方向较一致，主题也没有补出稳定优势。",
+        "x": 0.78,
+        "y": 3.99,
+        "w": 11.7,
+        "h": 0.47,
+        "size": 24
+      },
+      {
+        "text": "积极表达在多种处理下均为负，但PPML区间跨0；主题权重联合p=0.166。现有记录对这些用词和主题的额外点赞关联，仍缺少足够稳定的证据；这不等于证明文字内容普遍无效。",
+        "x": 0.8,
+        "y": 4.65,
+        "w": 11.65,
+        "h": 1.04,
+        "size": 18.5
+      },
+      {
+        "text": "RQ3转向另一种反馈：评论里，用户说了什么，留言怎样被回应，又由多少人参与？",
+        "x": 0.94,
+        "y": 6.27,
+        "w": 11.55,
+        "h": 0.37,
+        "size": 17
+      }
+    ],
+    "charts": [],
+    "speech": "RQ2没有找到这些用词和主题具有稳定点赞优势的证据。调整后的负向结果也不能解释成积极表达降低点赞，更不能说文字普遍无效。下面看评论这种更具体的反馈。",
+    "seconds": 18,
+    "shortSeconds": 18,
+    "focus": "给出RQ2回答与解释边界，不重复表中数字。"
+  },
+  {
+    "page": 15,
+    "originalPage": 16,
+    "title": "评论长度、词频与发言者角色",
+    "chapter": 6,
+    "chapterName": "评论的主要内容",
+    "subsection": "评论的主要内容",
+    "question": "RQ3",
+    "rq": "回答 RQ3 · 谁说什么",
+    "source": "comment_text_features.csv；comment_text_terms.csv；comment_text_summary.json",
+    "foot": "词类命中率以各角色全部发言为分母，可重叠；角色按所在帖子确定。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ3  评论中的回应与参与",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "评论的主要内容",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "评论长度、词频与发言者角色",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "词类命中率以各角色全部发言为分母，可重叠；角色按所在帖子确定。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "15 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "评论长度中位数：6字符",
+        "x": 8.2,
+        "y": 1.99,
+        "w": 4.45,
+        "h": 0.7,
+        "size": 24
+      },
+      {
+        "text": "“加油”612条 / 431人\n“谢谢”359条 / 53人",
+        "x": 8.2,
+        "y": 3.07,
+        "w": 4.45,
+        "h": 0.91,
+        "size": 18
+      },
+      {
+        "text": "“加油”的使用面更广，“谢谢”的重复使用更集中。再按角色看，读者更常赞许，帖主更常感谢；只看词频，会把参与广度和重复回话混在一起。",
+        "x": 8.2,
+        "y": 4.42,
+        "w": 4.45,
+        "h": 1.78,
+        "size": 17.5
+      },
+      {
+        "text": "所以下一步把根评论与帖主回复配对：鼓励是否更易被回复，回复里又怎样表达？",
+        "x": 0.74,
+        "y": 6.48,
+        "w": 11.9,
+        "h": 0.46,
+        "size": 17.5
+      }
+    ],
+    "charts": [
+      {
+        "type": "bar",
+        "data": [
+          {
+            "name": "其他用户（7,192条）",
+            "labels": [
+              [
+                "鼓励 / 赞许",
+                "感谢",
+                "问候",
+                "问号"
+              ]
+            ],
+            "values": [
+              16.879866518353726,
+              0.5839822024471636,
+              4.365962180200222,
+              4.14349276974416
+            ],
+            "_dataIndex": 0
+          },
+          {
+            "name": "帖主（4,403条）",
+            "labels": [
+              [
+                "鼓励 / 赞许",
+                "感谢",
+                "问候",
+                "问号"
+              ]
+            ],
+            "values": [
+              4.519645696116284,
+              7.880990233931411,
+              5.382693617987735,
+              2.9298205768794006
+            ],
+            "_dataIndex": 1
+          }
+        ],
+        "options": {
+          "x": 0.64,
+          "y": 2.04,
+          "w": 7.1,
+          "h": 3.85,
+          "fontFace": "Arial Unicode MS",
+          "showTitle": false,
+          "showLegend": true,
+          "legendPos": "b",
+          "legendFontFace": "Arial Unicode MS",
+          "legendFontSize": 11.5,
+          "catAxisLabelFontFace": "Arial Unicode MS",
+          "catAxisLabelFontSize": 12.5,
+          "valAxisLabelFontFace": "Arial Unicode MS",
+          "valAxisLabelFontSize": 10.5,
+          "catAxisLabelColor": "20332F",
+          "valAxisLabelColor": "65756F",
+          "catAxisLineShow": false,
+          "valAxisLineShow": false,
+          "catGridLine": {
+            "style": "none"
+          },
+          "valGridLine": {
+            "color": "E7ECE9",
+            "width": 0.5
+          },
+          "showValue": true,
+          "dataLabelFontFace": "Arial Unicode MS",
+          "dataLabelFontSize": 12,
+          "dataLabelColor": "20332F",
+          "dataLabelFormatCode": "0.0\"%\"",
+          "showCatName": false,
+          "showSerName": false,
+          "chartColors": [
+            "245C4F",
+            "B97339"
+          ],
+          "showBorder": false,
+          "showShadow": false,
+          "showMarker": false,
+          "valAxisMinVal": 0,
+          "gapSizePct": 75,
+          "barDir": "col",
+          "valAxisMaxVal": 20,
+          "_type": "bar",
+          "objectName": "Chart 0",
+          "barGrouping": "clustered",
+          "bar3DShape": "box",
+          "lineDataSymbol": "circle",
+          "displayBlanksAs": "span",
+          "radarStyle": "standard",
+          "lineDataSymbolSize": 6,
+          "lineDataSymbolLineSize": 9525,
+          "serGridLine": {
+            "style": "none"
+          },
+          "serAxisLineShow": true,
+          "v3DRotX": 30,
+          "v3DRotY": 30,
+          "v3DPerspective": 30,
+          "barGapWidthPct": 150,
+          "barGapDepthPct": 150,
+          "chartColorsOpacity": null,
+          "border": null,
+          "plotArea": {
+            "border": null,
+            "fill": {
+              "color": null,
+              "transparency": null
+            }
+          },
+          "chartArea": {
+            "border": null,
+            "roundedCorners": true
+          },
+          "dataBorder": null,
+          "lineSize": 2,
+          "valAxisMajorUnit": null,
+          "catAxisMultiLevelLabels": false
+        }
+      }
+    ],
+    "speech": "评论中位长度六个字符。“加油”涉及431人，“谢谢”只有53人，前者使用面更广，后者更集中。按角色看，读者更常赞许，帖主更常感谢。但总体词频还不能告诉我们某条留言怎样被回，所以下一步逐条配对。",
+    "seconds": 30,
+    "shortSeconds": 30,
+    "focus": "解释发言人数与角色差异，不逐项读图中比例。"
+  },
+  {
+    "page": 16,
+    "originalPage": 18,
+    "title": "鼓励留言是否更容易得到回应？感谢与回复覆盖不同",
+    "chapter": 6,
+    "chapterName": "评论的主要内容",
+    "subsection": "评论的主要内容",
+    "question": "RQ3",
+    "rq": "回答 RQ3 · 直接配对",
+    "source": "supplemental_direct_reply_language.csv",
+    "foot": "描述性对照，未作显著性或因果检验；未观察到回复，不等于实际没有回复。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ3  评论中的回应与参与",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "评论的主要内容",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "鼓励留言是否更容易得到回应？感谢与回复覆盖不同",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "描述性对照，未作显著性或因果检验；未观察到回复，不等于实际没有回复。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "16 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "配对规则：6,609条外来根评论；从留言发出起7天内，查找明确指向该条留言的帖主直接回复。\n根评论指直接发在帖子下、未指定回复对象的留言；有回复时，只取最早一条。",
+        "x": 0.85,
+        "y": 1.87,
+        "w": 11.64,
+        "h": 0.5,
+        "size": 14.5
+      },
+      {
+        "text": "多少留言观察到7天内直接回复？",
+        "x": 0.74,
+        "y": 2.65,
+        "w": 5.8,
+        "h": 0.36,
+        "size": 18.5
+      },
+      {
+        "text": "已回复记录中，最早回复多少含感谢？",
+        "x": 7,
+        "y": 2.65,
+        "w": 5.7,
+        "h": 0.36,
+        "size": 18.5
+      },
+      {
+        "text": "分母：各组全部外来根评论\n513 / 1,180；3,055 / 5,429",
+        "x": 0.82,
+        "y": 5.13,
+        "w": 5.5,
+        "h": 0.68,
+        "size": 13.7
+      },
+      {
+        "text": "分母：已观察到直接回复的记录\n137 / 513；195 / 3,055",
+        "x": 7.09,
+        "y": 5.13,
+        "w": 5.5,
+        "h": 0.68,
+        "size": 13.7
+      },
+      {
+        "text": "鼓励组的观测回复覆盖低12.8个百分点；但在已回复记录中，感谢词占比高20.3个百分点。",
+        "x": 0.76,
+        "y": 5.99,
+        "w": 11.85,
+        "h": 0.43,
+        "size": 17.5
+      },
+      {
+        "text": "回复时更常致谢，不等于鼓励更容易被回。作者和留言情境可能不同；接下来看看谁在接话。",
+        "x": 0.76,
+        "y": 6.49,
+        "w": 11.85,
+        "h": 0.48,
+        "size": 16.5
+      }
+    ],
+    "charts": [
+      {
+        "type": "bar",
+        "data": [
+          {
+            "name": "观测回复覆盖",
+            "labels": [
+              [
+                "鼓励 / 赞许",
+                "未命中该词类"
+              ]
+            ],
+            "values": [
+              43.4745763,
+              56.2718733
+            ],
+            "_dataIndex": 0
+          }
+        ],
+        "options": {
+          "x": 0.65,
+          "y": 3.15,
+          "w": 5.8,
+          "h": 1.87,
+          "fontFace": "Arial Unicode MS",
+          "showTitle": false,
+          "showLegend": false,
+          "legendPos": "b",
+          "legendFontFace": "Arial Unicode MS",
+          "legendFontSize": 11.5,
+          "catAxisLabelFontFace": "Arial Unicode MS",
+          "catAxisLabelFontSize": 12,
+          "valAxisLabelFontFace": "Arial Unicode MS",
+          "valAxisLabelFontSize": 10.5,
+          "catAxisLabelColor": "20332F",
+          "valAxisLabelColor": "65756F",
+          "catAxisLineShow": false,
+          "valAxisLineShow": false,
+          "catGridLine": {
+            "style": "none"
+          },
+          "valGridLine": {
+            "color": "E7ECE9",
+            "width": 0.5
+          },
+          "showValue": true,
+          "dataLabelFontFace": "Arial Unicode MS",
+          "dataLabelFontSize": 12,
+          "dataLabelColor": "20332F",
+          "dataLabelFormatCode": "0.0\"%\"",
+          "showCatName": false,
+          "showSerName": false,
+          "chartColors": [
+            "245C4F"
+          ],
+          "showBorder": false,
+          "showShadow": false,
+          "showMarker": false,
+          "valAxisMinVal": 0,
+          "gapSizePct": 75,
+          "catAxisOrientation": "maxMin",
+          "catAxisLabelPos": "low",
+          "valAxisLabelPos": "low",
+          "barDir": "bar",
+          "valAxisMaxVal": 70,
+          "_type": "bar",
+          "objectName": "Chart 0",
+          "barGrouping": "clustered",
+          "bar3DShape": "box",
+          "lineDataSymbol": "circle",
+          "displayBlanksAs": "span",
+          "radarStyle": "standard",
+          "lineDataSymbolSize": 6,
+          "lineDataSymbolLineSize": 9525,
+          "serGridLine": {
+            "style": "none"
+          },
+          "serAxisLineShow": true,
+          "v3DRotX": 30,
+          "v3DRotY": 30,
+          "v3DPerspective": 30,
+          "barGapWidthPct": 150,
+          "barGapDepthPct": 150,
+          "chartColorsOpacity": null,
+          "border": null,
+          "plotArea": {
+            "border": null,
+            "fill": {
+              "color": null,
+              "transparency": null
+            }
+          },
+          "chartArea": {
+            "border": null,
+            "roundedCorners": true
+          },
+          "dataBorder": null,
+          "lineSize": 2,
+          "valAxisMajorUnit": null,
+          "catAxisMultiLevelLabels": false
+        }
+      },
+      {
+        "type": "bar",
+        "data": [
+          {
+            "name": "首回含感谢",
+            "labels": [
+              [
+                "鼓励 / 赞许",
+                "未命中该词类"
+              ]
+            ],
+            "values": [
+              26.705653,
+              6.3829787
+            ],
+            "_dataIndex": 0
+          }
+        ],
+        "options": {
+          "x": 6.92,
+          "y": 3.15,
+          "w": 5.8,
+          "h": 1.87,
+          "fontFace": "Arial Unicode MS",
+          "showTitle": false,
+          "showLegend": false,
+          "legendPos": "b",
+          "legendFontFace": "Arial Unicode MS",
+          "legendFontSize": 11.5,
+          "catAxisLabelFontFace": "Arial Unicode MS",
+          "catAxisLabelFontSize": 12,
+          "valAxisLabelFontFace": "Arial Unicode MS",
+          "valAxisLabelFontSize": 10.5,
+          "catAxisLabelColor": "20332F",
+          "valAxisLabelColor": "65756F",
+          "catAxisLineShow": false,
+          "valAxisLineShow": false,
+          "catGridLine": {
+            "style": "none"
+          },
+          "valGridLine": {
+            "color": "E7ECE9",
+            "width": 0.5
+          },
+          "showValue": true,
+          "dataLabelFontFace": "Arial Unicode MS",
+          "dataLabelFontSize": 12,
+          "dataLabelColor": "20332F",
+          "dataLabelFormatCode": "0.0\"%\"",
+          "showCatName": false,
+          "showSerName": false,
+          "chartColors": [
+            "B97339"
+          ],
+          "showBorder": false,
+          "showShadow": false,
+          "showMarker": false,
+          "valAxisMinVal": 0,
+          "gapSizePct": 75,
+          "catAxisOrientation": "maxMin",
+          "catAxisLabelPos": "low",
+          "valAxisLabelPos": "low",
+          "barDir": "bar",
+          "valAxisMaxVal": 70,
+          "_type": "bar",
+          "objectName": "Chart 1",
+          "barGrouping": "clustered",
+          "bar3DShape": "box",
+          "lineDataSymbol": "circle",
+          "displayBlanksAs": "span",
+          "radarStyle": "standard",
+          "lineDataSymbolSize": 6,
+          "lineDataSymbolLineSize": 9525,
+          "serGridLine": {
+            "style": "none"
+          },
+          "serAxisLineShow": true,
+          "v3DRotX": 30,
+          "v3DRotY": 30,
+          "v3DPerspective": 30,
+          "barGapWidthPct": 150,
+          "barGapDepthPct": 150,
+          "chartColorsOpacity": null,
+          "border": null,
+          "plotArea": {
+            "border": null,
+            "fill": {
+              "color": null,
+              "transparency": null
+            }
+          },
+          "chartArea": {
+            "border": null,
+            "roundedCorners": true
+          },
+          "dataBorder": null,
+          "lineSize": 2,
+          "valAxisMajorUnit": null,
+          "catAxisMultiLevelLabels": false
+        }
+      }
+    ],
+    "speech": "以6,609条外来根评论为单位，从留言发出起七天内查找帖主的直接回复，有回复时只取最早一条。左图看全部根评论：鼓励组的观测回复比例是43.5%，低于56.3%。右图只看已回复记录：鼓励组首回含感谢为26.7%，高于6.4%。所以，更常感谢不等于更容易被回。这只是描述性对照，接着看回复怎样形成账号之间的往来。",
+    "seconds": 45,
+    "shortSeconds": 45,
+    "focus": "先交代配对规则，再解释两张图的不同分母；不讲线程参与。"
+  },
+  {
+    "page": 17,
+    "originalPage": 19,
+    "title": "评论关系网络：间接相连广，直接联系仍稀疏",
+    "chapter": 7,
+    "chapterName": "评论区的网络结构",
+    "subsection": "评论区的网络结构",
+    "question": "RQ3",
+    "rq": "回答 RQ3 · 网络结构",
+    "source": "summary.json network；figures/06_comment_network.png",
+    "foot": "节点为账号；根评论者→帖主，明确回复者→被回复用户；同向多次互动累加为边权。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ3  评论中的回应与参与",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "评论区的网络结构",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "评论关系网络：间接相连广，直接联系仍稀疏",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "节点为账号；根评论者→帖主，明确回复者→被回复用户；同向多次互动累加为边权。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "17 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "2,932个有边账号 · 4,069条有向边",
+        "x": 7.87,
+        "y": 1.95,
+        "w": 4.8,
+        "h": 0.78,
+        "size": 21
+      },
+      {
+        "text": "排除84次自我互动后，11,511次事件合并成有向边；图中省略箭头，金色为样本帖作者。",
+        "x": 7.87,
+        "y": 3.04,
+        "w": 4.8,
+        "h": 1.04,
+        "size": 16.5
+      },
+      {
+        "text": "共同面向帖主留言，就能把许多账号间接连起。忽略方向后，94.4%处于最大连通部分；密度0.0473%，直接往来仍局限于少量账号配对。",
+        "x": 7.87,
+        "y": 4.32,
+        "w": 4.8,
+        "h": 1.4,
+        "size": 17.5
+      },
+      {
+        "text": "这张图回答了账号怎样被连起来。谁在回复谁，下一页再把明确回复单独取出比较。",
+        "x": 7.87,
+        "y": 6.03,
+        "w": 4.8,
+        "h": 0.8,
+        "size": 17
+      }
+    ],
+    "charts": [],
+    "speech": "根评论连到帖主，明确回复连到被回复账号，多次互动累加为边权，并排除自我互动。忽略方向后，94.4%的账号处于最大连通部分，但密度仅0.0473%：许多人通过帖主间接相连，直接往来却很稀疏。下一页再看谁在接话。",
+    "seconds": 30,
+    "shortSeconds": 30,
+    "focus": "说明建边规则与结构结论，账号数和边数留在图旁核对。"
+  },
+  {
+    "page": 18,
+    "originalPage": 20,
+    "title": "回话主要围绕帖主展开，用户彼此回复较少",
+    "chapter": 7,
+    "chapterName": "评论区的网络结构",
+    "subsection": "评论区的网络结构",
+    "question": "RQ3",
+    "rq": "回答 RQ3 · 谁在接话",
+    "source": "extension_comment_roles.csv；summary.json network",
+    "foot": "分母为4,902次非自我明确回复，排除6,609条根评论；89%不是全部评论的回复率。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ3  评论中的回应与参与",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "评论区的网络结构",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "回话主要围绕帖主展开，用户彼此回复较少",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "分母为4,902次非自我明确回复，排除6,609条根评论；89%不是全部评论的回复率。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "18 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "4,361次 · 89.0%",
+        "x": 8.22,
+        "y": 1.99,
+        "w": 4.45,
+        "h": 0.67,
+        "size": 29
+      },
+      {
+        "text": "读者面向帖主留言后，明确回话大多由帖主发出。其他用户彼此回复只有97次，占2.0%。",
+        "x": 8.22,
+        "y": 3.04,
+        "w": 4.45,
+        "h": 1.3,
+        "size": 18
+      },
+      {
+        "text": "因此，这批评论更常表现为“向帖主留言—帖主回应”，其他参与者相互回复的份额很小。",
+        "x": 8.22,
+        "y": 4.73,
+        "w": 4.45,
+        "h": 1.37,
+        "size": 18
+      },
+      {
+        "text": "还需要分清：围绕一个账号有很多发言，究竟来自更多人，还是已有发送者反复出现？",
+        "x": 0.75,
+        "y": 6.46,
+        "w": 11.85,
+        "h": 0.49,
+        "size": 17.5
+      }
+    ],
+    "charts": [
+      {
+        "type": "bar",
+        "data": [
+          {
+            "name": "明确回复构成",
+            "labels": [
+              [
+                "帖主 → 其他用户",
+                "其他用户 → 帖主",
+                "其他用户 → 其他用户"
+              ]
+            ],
+            "values": [
+              88.96368829049368,
+              9.057527539779683,
+              1.9787841697266422
+            ],
+            "_dataIndex": 0
+          }
+        ],
+        "options": {
+          "x": 0.64,
+          "y": 2.07,
+          "w": 7.1,
+          "h": 3.86,
+          "fontFace": "Arial Unicode MS",
+          "showTitle": false,
+          "showLegend": false,
+          "legendPos": "b",
+          "legendFontFace": "Arial Unicode MS",
+          "legendFontSize": 11.5,
+          "catAxisLabelFontFace": "Arial Unicode MS",
+          "catAxisLabelFontSize": 12.5,
+          "valAxisLabelFontFace": "Arial Unicode MS",
+          "valAxisLabelFontSize": 10.5,
+          "catAxisLabelColor": "20332F",
+          "valAxisLabelColor": "65756F",
+          "catAxisLineShow": false,
+          "valAxisLineShow": false,
+          "catGridLine": {
+            "style": "none"
+          },
+          "valGridLine": {
+            "color": "E7ECE9",
+            "width": 0.5
+          },
+          "showValue": true,
+          "dataLabelFontFace": "Arial Unicode MS",
+          "dataLabelFontSize": 12,
+          "dataLabelColor": "20332F",
+          "dataLabelFormatCode": "0.0\"%\"",
+          "showCatName": false,
+          "showSerName": false,
+          "chartColors": [
+            "245C4F"
+          ],
+          "showBorder": false,
+          "showShadow": false,
+          "showMarker": false,
+          "valAxisMinVal": 0,
+          "gapSizePct": 75,
+          "catAxisOrientation": "maxMin",
+          "catAxisLabelPos": "low",
+          "valAxisLabelPos": "low",
+          "barDir": "bar",
+          "valAxisMaxVal": 100,
+          "_type": "bar",
+          "objectName": "Chart 0",
+          "barGrouping": "clustered",
+          "bar3DShape": "box",
+          "lineDataSymbol": "circle",
+          "displayBlanksAs": "span",
+          "radarStyle": "standard",
+          "lineDataSymbolSize": 6,
+          "lineDataSymbolLineSize": 9525,
+          "serGridLine": {
+            "style": "none"
+          },
+          "serAxisLineShow": true,
+          "v3DRotX": 30,
+          "v3DRotY": 30,
+          "v3DPerspective": 30,
+          "barGapWidthPct": 150,
+          "barGapDepthPct": 150,
+          "chartColorsOpacity": null,
+          "border": null,
+          "plotArea": {
+            "border": null,
+            "fill": {
+              "color": null,
+              "transparency": null
+            }
+          },
+          "chartArea": {
+            "border": null,
+            "roundedCorners": true
+          },
+          "dataBorder": null,
+          "lineSize": 2,
+          "valAxisMajorUnit": null,
+          "catAxisMultiLevelLabels": false
+        }
+      }
+    ],
+    "speech": "明确回复中，89%由帖主发给其他用户，用户彼此回复只有2%。这些往来主要是读者面向帖主留言、帖主接话。注意，89%是回复事件构成，不是留言被回率。下一页再看高留言量来自多少人。",
+    "seconds": 25,
+    "shortSeconds": 25,
+    "focus": "用回复方向解释网络，再转入次数和参与人数。"
+  },
+  {
+    "page": 19,
+    "originalPage": 21,
+    "title": "高互动量可能来自接触面广，或少数人反复往来",
+    "chapter": 7,
+    "chapterName": "评论区的网络结构",
+    "subsection": "评论区的网络结构",
+    "question": "RQ3",
+    "rq": "回答 RQ3 · 次数与参与面",
+    "source": "network_nodes.csv；summary.json network",
+    "foot": "次数为收到的非自我互动事件，人数为不同发送者；“非样本帖作者”不等于从不发帖。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ3  评论中的回应与参与",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "评论区的网络结构",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "高互动量可能来自接触面广，或少数人反复往来",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "次数为收到的非自我互动事件，人数为不同发送者；“非样本帖作者”不等于从不发帖。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "19 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "前10位账号接收了54.0%的互动。判断这种集中意味着什么，需把次数和人数放在一起。",
+        "x": 0.75,
+        "y": 1.84,
+        "w": 11.9,
+        "h": 0.58,
+        "size": 18
+      },
+      {
+        "text": "匿名账号 样本帖作者 接收事件次数 不同发送者 这段记录中的突出形态 U1528 是 1,378 53 已有发送者反复留言 U0948 是 1,275 1,091 收到更多不同账号的留言 U0112 否 180 4 与极少数账号集中往来",
+        "x": 0.68,
+        "y": 2.72,
+        "w": 12,
+        "h": 2.64,
+        "size": 16.5
+      },
+      {
+        "text": "U1528与U0948接收次数接近，前者只有53位发送者，后者有1,091位。相同“声量”背后，可以是很不一样的参与范围。",
+        "x": 0.76,
+        "y": 5.66,
+        "w": 11.85,
+        "h": 0.55,
+        "size": 18
+      },
+      {
+        "text": "U0112的180次只来自4人。看评论区有多热闹，不能只数留言，还要看有多少人在参与。",
+        "x": 0.76,
+        "y": 6.35,
+        "w": 11.85,
+        "h": 0.57,
+        "size": 18
+      }
+    ],
+    "charts": [],
+    "speech": "U1528收到1,378次，来自53人；U0948收到1,275次，却来自1,091人。两者次数接近，参与范围差别很大。U0112的180次只来自4人，也说明高互动量可能是少数人反复出现。次数和不同发送者人数要一起看，才能判断这些留言由多广的参与面构成。",
+    "seconds": 30,
+    "shortSeconds": 30,
+    "focus": "用两个主要账号解释次数与人数；第三例点到即可，直接收束RQ3。"
+  },
+  {
+    "page": 20,
+    "originalPage": 23,
+    "title": "RQ3的回答：评论主要怎样形成往来",
+    "chapter": 7,
+    "chapterName": "评论区的网络结构",
+    "subsection": "评论区的网络结构",
+    "question": "RQ3",
+    "rq": "回答 RQ3 · 本题结论",
+    "source": "评论语言、直接配对、账号网络与参与人数结果",
+    "foot": "评论与网络均基于已采集记录；未观察到回复不等于实际没有回复。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "RQ3  评论中的回应与参与",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "评论区的网络结构",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "RQ3的回答：评论主要怎样形成往来",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "评论与网络均基于已采集记录；未观察到回复不等于实际没有回复。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "20 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "读者更常鼓励，帖主更常感谢；逐条配对后，含义更清楚。",
+        "x": 0.8,
+        "y": 1.9,
+        "w": 11.65,
+        "h": 0.46,
+        "size": 23
+      },
+      {
+        "text": "直接配对进一步说明：鼓励组已回复记录中的感谢占比更高，但观测回复覆盖反而较低。回复怎样表达，与多少留言得到回应，需要分开判断。",
+        "x": 0.82,
+        "y": 2.53,
+        "w": 11.6,
+        "h": 0.88,
+        "size": 18.5
+      },
+      {
+        "text": "这些发言主要围绕帖主组织，热闹的来源也不一样。",
+        "x": 0.8,
+        "y": 3.73,
+        "w": 11.65,
+        "h": 0.46,
+        "size": 23
+      },
+      {
+        "text": "89%的明确回复由帖主发给其他用户，用户相互回复仅2%。接收次数接近的账号，可以来自53人或1,091人；所以留言量既可能反映广泛参与，也可能是已有发送者反复出现。",
+        "x": 0.82,
+        "y": 4.36,
+        "w": 11.6,
+        "h": 1.01,
+        "size": 18.5
+      },
+      {
+        "text": "看评论区是否热闹，既要看留言有没有得到回应，也要看这些往来涉及多少人。",
+        "x": 0.95,
+        "y": 6.07,
+        "w": 11.52,
+        "h": 0.55,
+        "size": 17
+      }
+    ],
+    "charts": [],
+    "speech": "RQ3显示，更常感谢不等于更容易被回。回话主要围绕帖主展开，而高留言量既可能来自广泛参与，也可能来自少数人反复留言。回复覆盖、回复内容和参与人数，需要分开判断。",
+    "seconds": 20,
+    "shortSeconds": 20,
+    "focus": "收束回应、方向和参与面，不再引入时序。"
+  },
+  {
+    "page": 21,
+    "originalPage": 24,
+    "title": "研究局限：哪些判断还不能由这批记录回答",
+    "chapter": 8,
+    "chapterName": "研究结论与局限",
+    "subsection": "研究结论与局限",
+    "question": null,
+    "rq": "解释范围与后续改进",
+    "source": "原报告§9.3—9.4；数据与模型口径核查",
+    "foot": "下一步是补齐记录和统一观察窗口；若检验表达或回复做法的效果，需要另行设计实验。",
+    "appendix": false,
+    "text": [
+      {
+        "text": "共同局限与后续改进",
+        "x": 0.58,
+        "y": 0.3,
+        "w": 8.8,
+        "h": 0.3,
+        "size": 13
+      },
+      {
+        "text": "研究结论与局限",
+        "x": 9.12,
+        "y": 0.3,
+        "w": 3.62,
+        "h": 0.3,
+        "size": 11
+      },
+      {
+        "text": "研究局限：哪些判断还不能由这批记录回答",
+        "x": 0.58,
+        "y": 0.88,
+        "w": 12.15,
+        "h": 0.67,
+        "size": 28
+      },
+      {
+        "text": "下一步是补齐记录和统一观察窗口；若检验表达或回复做法的效果，需要另行设计实验。",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "21 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "限制 它怎样影响结论 下一步需要什么 100位作者，抽样机制不明 不能把样本内容比例和回复结构直接推广到全Keep 更清楚的抽样框与作者覆盖 正文、评论覆盖不全 主题与网络代表不同子样本；未采到不等于未发生 补齐正文、评论、图像和视频内容 曝光、粉丝与采集时点缺失 累计点赞仍受未观测差异影响，固定效应不等于因果识别 统一发帖后7天，并记录实际曝光 词典与主题只是内容的部分表征 不能据用词判断情绪；主题区间未计入模型估计不确定性 语义复核、重复抽样与独立验证",
+        "x": 0.68,
+        "y": 1.96,
+        "w": 12,
+        "h": 4.1499999999999995,
+        "size": 15.5
+      },
+      {
+        "text": "后续先统一观察窗口，完整记录内容、参与人数和实际回复，再检验具体做法能否改变反馈。",
+        "x": 0.76,
+        "y": 6.43,
+        "w": 11.85,
+        "h": 0.58,
+        "size": 18
+      }
+    ],
+    "charts": [],
+    "speech": "这些结论来自100位作者，正文和评论覆盖也不完整，不能推广到全平台。缺少曝光和统一观察时点，回归仍然是关联。后续需要补齐记录、统一观察窗口，再验证具体做法能否改变反馈。",
+    "seconds": 25,
+    "shortSeconds": 25,
+    "focus": "只讲样本与覆盖、观察性关联以及对应改进。"
+  },
+  {
+    "page": 22,
+    "originalPage": 25,
+    "title": "成员分工 / Credit",
+    "chapter": 0,
+    "chapterName": "成员分工",
+    "subsection": "Credit",
+    "question": null,
+    "rq": "",
+    "source": "用户确认的实际分工",
+    "foot": "成员分工 · Credit",
+    "appendix": false,
+    "text": [
+      {
+        "text": "成员分工 · Credit",
+        "x": 0.58,
+        "y": 7.09,
+        "w": 11.36,
+        "h": 0.22,
+        "size": 9
+      },
+      {
+        "text": "22 / 22",
+        "x": 11.99,
+        "y": 7.07,
+        "w": 0.77,
+        "h": 0.25,
+        "size": 10
+      },
+      {
+        "text": "成员分工 / Credit",
+        "x": 0.78,
+        "y": 0.78,
+        "w": 11.8,
+        "h": 0.7,
+        "size": 35
+      },
+      {
+        "text": "陈霖",
+        "x": 1.03,
+        "y": 2.61,
+        "w": 5.18,
+        "h": 0.6,
+        "size": 31
+      },
+      {
+        "text": "问题的提出\n数据清洗\nRQ1：内容与点赞的分布",
+        "x": 1.03,
+        "y": 3.57,
+        "w": 5.18,
+        "h": 1.98,
+        "size": 21
+      },
+      {
+        "text": "董依心（dyx）",
+        "x": 7.1,
+        "y": 2.61,
+        "w": 5.18,
+        "h": 0.6,
+        "size": 31
+      },
+      {
+        "text": "RQ2：文字、主题与点赞的关联\nRQ3：评论中的回应与参与",
+        "x": 7.1,
+        "y": 3.57,
+        "w": 5.18,
+        "h": 1.98,
+        "size": 20.5
+      }
+    ],
+    "charts": [],
+    "speech": "陈霖负责问题提出、清洗和RQ1，董依心负责RQ2与RQ3。谢谢大家。",
+    "seconds": 8,
+    "shortSeconds": 8,
+    "kind": "credit",
+    "focus": "按确认分工署名。"
+  }
+]

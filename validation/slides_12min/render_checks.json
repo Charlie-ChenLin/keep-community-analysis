@@ -1,0 +1,23 @@
+{
+  "pptx_slides": 22,
+  "main_slides": 22,
+  "research_slides": 21,
+  "credit_slides": 1,
+  "appendix_slides": 0,
+  "hidden_slides": 0,
+  "native_charts": 9,
+  "all_slides_have_notes": true,
+  "sources_unchanged": true,
+  "shapes_outside_slide": [],
+  "missing_text": [],
+  "missing_chart_labels": [],
+  "text_outside_pdf_page": [],
+  "pptx_sha256": "73a3e29d29173fd98cc8708ae003298e79453f530da6ce9deee3611dd4cdb54f",
+  "pdf_sha256": "6bd78c4f75a08241f154903e6a63923a25eae436f92f939bfec044f26f06b361",
+  "renderer": "LibreOffice headless, background-only PDF export",
+  "visual_review": "Passed: all 22 pages reviewed at full resolution after background rendering; final page 19 wording checked again.",
+  "office_package_validation": "All validations PASSED",
+  "existing_pptx_pdf_preserved": true,
+  "existing_files_verified": 25,
+  "target_seconds": 680
+}
