@@ -1,0 +1,117 @@
+{
+  "rq_blocks": [
+    {
+      "question": "RQ1",
+      "pages": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "question": "RQ2",
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "question": "RQ3",
+      "pages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    }
+  ],
+  "main_slides": 23,
+  "appendix_slides": 0,
+  "hidden_slides": 0,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "研究背景、意义与研究问题",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "number": 2,
+      "title": "数据来源、清洗与分析方法",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "number": 3,
+      "title": "数据覆盖与描述统计",
+      "pages": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "number": 4,
+      "title": "文字表达与点赞的关联",
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "number": 5,
+      "title": "帖子主题与点赞的关联",
+      "pages": [
+        13,
+        14
+      ]
+    },
+    {
+      "number": 6,
+      "title": "评论的主要内容",
+      "pages": [
+        15,
+        16
+      ]
+    },
+    {
+      "number": 7,
+      "title": "评论区的网络结构",
+      "pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "number": 8,
+      "title": "研究结论与局限",
+      "pages": [
+        22
+      ]
+    }
+  ],
+  "speech_seconds": 664,
+  "transition_seconds": 30,
+  "target_seconds": 694,
+  "short_seconds": 694,
+  "narration_characters": 2469,
+  "note": "23页dyx合并版；讲述预算11分04秒，另留30秒转场，总目标11分34秒，距12分钟余26秒。表格和窗口比较供核对，口头解释关键发现；时长以排练为准。"
+}

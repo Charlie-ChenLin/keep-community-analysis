@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "term": "self_discipline",
+      "model": "M3_作者与日期固定效应",
+      "coef": -0.11922494082182715,
+      "ci_low": -0.2926292528774581,
+      "ci_high": 0.05417937123380383,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "self_discipline",
+      "model": "R1_仅可见正文",
+      "coef": -0.1349572274354286,
+      "ci_low": -0.2779396086425957,
+      "ci_high": 0.008025153771738514,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "self_discipline",
+      "model": "R2_去除最高1%点赞",
+      "coef": -0.11273927987012058,
+      "ci_low": -0.2862228814337895,
+      "ci_high": 0.06074432169354835,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "self_discipline",
+      "model": "R3_作者等权",
+      "coef": 0.009779093141710514,
+      "ci_low": -0.11755588602382108,
+      "ci_high": 0.13711407230724212,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "self_discipline",
+      "model": "R4_PPML计数模型",
+      "coef": -0.016822897089187282,
+      "ci_low": -0.23309462404807352,
+      "ci_high": 0.19944882986969897,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "social_address",
+      "model": "M3_作者与日期固定效应",
+      "coef": -0.004338472406973604,
+      "ci_low": -0.13065834927461642,
+      "ci_high": 0.12198140446066921,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "social_address",
+      "model": "R1_仅可见正文",
+      "coef": 0.03557366381650534,
+      "ci_low": -0.09623374032913645,
+      "ci_high": 0.16738106796214713,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "social_address",
+      "model": "R2_去除最高1%点赞",
+      "coef": 0.006576924075816615,
+      "ci_low": -0.12668000346150074,
+      "ci_high": 0.13983385161313397,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "social_address",
+      "model": "R3_作者等权",
+      "coef": -0.020833124879270998,
+      "ci_low": -0.15430347817862414,
+      "ci_high": 0.11263722842008214,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "social_address",
+      "model": "R4_PPML计数模型",
+      "coef": -0.09563077272117546,
+      "ci_low": -0.30608258398006516,
+      "ci_high": 0.11482103853771425,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "positive_expression",
+      "model": "M3_作者与日期固定效应",
+      "coef": -0.08551585485493182,
+      "ci_low": -0.1546485793243155,
+      "ci_high": -0.016383130385548145,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "positive_expression",
+      "model": "R1_仅可见正文",
+      "coef": -0.08968960103843765,
+      "ci_low": -0.16398138117667962,
+      "ci_high": -0.015397820900195675,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "positive_expression",
+      "model": "R2_去除最高1%点赞",
+      "coef": -0.08194154364821854,
+      "ci_low": -0.15182755783322016,
+      "ci_high": -0.012055529463216905,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "positive_expression",
+      "model": "R3_作者等权",
+      "coef": -0.1278845337202884,
+      "ci_low": -0.21943067768691155,
+      "ci_high": -0.03633838975366527,
+      "native_cache_and_workbook_match_source": true
+    },
+    {
+      "term": "positive_expression",
+      "model": "R4_PPML计数模型",
+      "coef": -0.1353112808112246,
+      "ci_low": -0.298611904604182,
+      "ci_high": 0.027989342981732834,
+      "native_cache_and_workbook_match_source": true
+    }
+  ],
+  "all_passed": true
+}

@@ -13,7 +13,11 @@ STEM = 'Keep社区内容表达与互动反馈_12分钟版'
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--soffice', default=os.environ.get('SOFFICE_PATH') or shutil.which('soffice'))
+    parser.add_argument('--stem', default=STEM, help='Presentation basename within this project.')
     args = parser.parse_args()
+    stem = args.stem
+    if Path(stem).name != stem:
+        parser.error('--stem must be a filename basename.')
     if not args.soffice:
         parser.error('Set SOFFICE_PATH or pass --soffice to a LibreOffice executable.')
     # A temporary profile and output folder keep the user's open documents and
@@ -24,13 +28,13 @@ def main():
             args.soffice, '-env:UserInstallation=' + (work / 'profile').as_uri(),
             '--headless', '--norestore', '--nodefault', '--nofirststartwizard',
             '--convert-to', 'pdf:impress_pdf_Export', '--outdir', str(work),
-            str(ROOT / (STEM + '.pptx')),
+            str(ROOT / (stem + '.pptx')),
         ], check=True, timeout=90, capture_output=True, text=True)
-        pdf = work / (STEM + '.pdf')
+        pdf = work / (stem + '.pdf')
         if not pdf.is_file():
             raise RuntimeError('Background export did not produce a PDF.')
-        shutil.copyfile(pdf, ROOT / (STEM + '.pdf'))
-    print(ROOT / (STEM + '.pdf'))
+        shutil.copyfile(pdf, ROOT / (stem + '.pdf'))
+    print(ROOT / (stem + '.pdf'))
 
 
 if __name__ == '__main__':

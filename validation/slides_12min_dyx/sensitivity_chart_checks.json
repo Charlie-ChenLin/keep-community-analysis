@@ -1,0 +1,23 @@
+[
+  {
+    "part": "ppt/charts/chart7.xml",
+    "term": "self_discipline",
+    "horizontalErrors": 5,
+    "zeroReference": true,
+    "intervalRepresentation": "native scatter line series with worksheet-linked endpoints"
+  },
+  {
+    "part": "ppt/charts/chart8.xml",
+    "term": "social_address",
+    "horizontalErrors": 5,
+    "zeroReference": true,
+    "intervalRepresentation": "native scatter line series with worksheet-linked endpoints"
+  },
+  {
+    "part": "ppt/charts/chart9.xml",
+    "term": "positive_expression",
+    "horizontalErrors": 5,
+    "zeroReference": true,
+    "intervalRepresentation": "native scatter line series with worksheet-linked endpoints"
+  }
+]
