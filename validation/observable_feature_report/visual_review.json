@@ -1,0 +1,47 @@
+{
+  "all_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "full_page_detail_reviewed": [
+    8,
+    9,
+    10,
+    11,
+    18,
+    22
+  ],
+  "reused_source_figures_reviewed": 7,
+  "all_figure_display_widths_points": 486,
+  "caption_numbering": "14 image labels and 14 paired captions agree",
+  "no_small_shrunk_figures": true,
+  "word_review": "OOXML and native editable table structure checked; no Word/Office rendering invoked",
+  "pdf_embedded_fonts": [
+    "Arial Unicode MS Regular",
+    "Helvetica"
+  ],
+  "notes": "All 25 pages checked in contact sheets. Repaired page-bottom image shrinking; inspected final changed pages at page resolution."
+}

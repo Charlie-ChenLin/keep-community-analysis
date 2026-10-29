@@ -1,0 +1,44 @@
+{
+  "scope_version": "observable_features_and_interaction_v1",
+  "scope_definition_sha256": "944794ef36a882e213ec34455d08efc75520583c642262183a15bb8cb520eb0a",
+  "study_title": "Keep社区帖子特征与互动反馈",
+  "human_semantic_review": {
+    "status": "not_conducted_in_current_study",
+    "current_delivery_requires_human_annotation": false,
+    "completed_human_coders": 0,
+    "note": "本轮研究采用不依赖人工语义分类的范围；人审工具和候选手册仅保留为后续资源，不计为已完成验证。"
+  },
+  "research_questions": [
+    {
+      "id": "RQ1",
+      "text": "样本的正文可观察范围、媒体形式、tag和点赞如何分布？"
+    },
+    {
+      "id": "RQ2",
+      "text": "固定词项命中、问号和正文长度与点赞是否存在条件关联，结论对样本口径及控制项如何变化？"
+    },
+    {
+      "id": "RQ3",
+      "text": "已采集评论的字面线索、直接回复方向及用户连接如何分布？"
+    }
+  ],
+  "main_evidence": [
+    "可观察特征分布",
+    "三种正文口径的既有模型并列比较",
+    "固定效应与作者聚类",
+    "作者支持、少帖作者、tag和共线性复核",
+    "评论词项、明确回复与有向加权网络描述"
+  ],
+  "exploratory_only": [
+    "NMF词共现成分与旧成分回归",
+    "成分多标记阈值及结构敏感性",
+    "17内容叶与15表达行为候选框架",
+    "同基座AI编码预检验与失败的识别器原型"
+  ],
+  "model_estimates_changed": false,
+  "dictionary_terms_or_matching_rules_changed": false,
+  "historical_freeze_records_unchanged": true,
+  "current_scope_supersedes_previous_human_review_plan": true,
+  "historical_human_tool_status": "classification_human_validation_status.json retains its earlier pending snapshot; it is not the requirement or completion status of the current study.",
+  "delivery_format": "pdf_report"
+}

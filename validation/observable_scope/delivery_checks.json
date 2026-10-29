@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "frozen_input_count": 10,
+  "frozen_inputs_unchanged": true,
+  "model_results_reused_without_reselection": true,
+  "human_semantic_review": "not_conducted_in_current_study",
+  "current_delivery_requires_human_annotation": false,
+  "delivery_format": "pdf_report",
+  "classification_material_in_exploratory_appendices": true,
+  "report": {
+    "分析报告_字面特征与互动结构版": {
+      "pages": 25,
+      "editable_word_tables": 23,
+      "figures": 14,
+      "all_pages_have_text": true,
+      "pdf_sha256": "fc50b838c09d809a98151e3db0b1341239ed550e40233934b34bfe1d6fea5ebe"
+    }
+  },
+  "limitation": "本检查核对输入、数值呈现、文稿结构和PDF；不代表人工语义效度验证。"
+}

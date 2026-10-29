@@ -1,0 +1,12 @@
+{
+  "code/text_dictionary.json": "286863310b58f95b49fe39d6bb6492816ed6a7df5b83c8f460a9c96cb5e0912b",
+  "code/classify_rebuilt_posts.py": "d8d83c8ed6f9d2ee2d1f45c7d0594565c1596ceaa409b5a3c815e3ab10e28242",
+  "code/classification_codebook_v1.json": "a5792bc359f918f405d9c5b45051b1746f7123e1855e068d136d807fd36fdeb4",
+  "code/classification_recognizer_v1.json": "dce1f55fd06365b4f9213e6c0fd58eef48fd0451ce2771d91b1602f158257539",
+  "validation/classification_rebuild/freeze_record.json": "66dfb29209a2a513435559ed4cba054c22a72c170ea0053bdb8d94351fe889df",
+  "results/teacher_complete_body_model.json": "c7177a1cde9ff706f4038e97a606f3b07e6ff6369e40c7d025aec1bc2ab4acf0",
+  "results/teacher_feedback_dictionary.json": "4926f667d702b809731e7cb5a8f883039aba4b216794ff7666586729ec475588",
+  "results/teacher_author_tags_summary.json": "c58e5aea5b1ca602cc105a53bff749f17291267b02969499bb509543525a0418",
+  "results/comment_text_summary.json": "ec18a5fa667c8b831827b2ceb0a8cd9cf0efd6001a3954adf2fcf09bc2ffede7",
+  "results/supplemental_summary.json": "530b5d18dab5c7b851a6b8c1ebe7ccb3bd2690f8c733ccbf627904d3b8cfeaea"
+}

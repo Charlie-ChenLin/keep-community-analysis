@@ -1,9 +1,10 @@
 PYTHON ?= python
 .DEFAULT_GOAL := help
 .NOTPARALLEL:
-.PHONY: help install check-data analyze validate experiments comments comment-notebook extension-notebook supplemental supplemental-notebook notebook report report-phase2 report-v2 slides slides-pdf reproduce submission teacher-feedback teacher-feedback-report teacher-revision classification-evaluate classification-report
+.PHONY: help install check-data analyze validate experiments comments comment-notebook extension-notebook supplemental supplemental-notebook notebook report report-phase2 report-v2 slides slides-pdf reproduce submission teacher-feedback teacher-feedback-report teacher-revision classification-evaluate classification-report observable-revision
 
 help:
+	@printf '%s\n' 'make observable-revision  生成并核查当前正式PDF报告（字面特征和互动结构，不要求人工语义标注）'
 	@printf '%s\n' 'make classification-evaluate  复算冻结分类的AI预检验与覆盖审计（需本地私有编码和模型）' 'make classification-report  用已有聚合证据导出分类重建报告与编码手册'
 	@printf '%s\n' 'make teacher-revision  用已有复核证据生成修订报告、PPT、讲稿和改动说明（不覆盖旧版）'
 	@printf '%s\n' 'make teacher-feedback  复现老师意见与方法复核（保留旧模型）' 'make teacher-feedback-report  用已有复核结果导出Markdown、HTML和PDF'
@@ -14,6 +15,10 @@ help:
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
+
+observable-revision:
+	$(PYTHON) code/build_observable_feature_report.py
+	$(PYTHON) code/validate_observable_scope_delivery.py
 
 classification-evaluate:
 	$(PYTHON) code/evaluate_rebuilt_classification.py

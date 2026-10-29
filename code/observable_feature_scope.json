@@ -1,0 +1,42 @@
+{
+  "version": "observable_features_and_interaction_v1",
+  "title": "Keep社区帖子特征与互动反馈",
+  "subtitle": "可观察字面特征、点赞关联与评论互动结构",
+  "human_semantic_review": {
+    "status": "not_conducted_in_current_study",
+    "current_delivery_requires_human_annotation": false,
+    "completed_human_coders": 0,
+    "note": "本轮研究采用不依赖人工语义分类的范围；人审工具和候选手册仅保留为后续资源，不计为已完成验证。"
+  },
+  "feature_labels": {
+    "log_length": "正文长度 ln(1+字数)",
+    "self_discipline": "坚持等词项命中（A）",
+    "social_address": "大家等词项命中（B）",
+    "positive_expression": "开心等词项命中（C）",
+    "question": "问号出现（D）"
+  },
+  "feature_short_labels": {
+    "log_length": "正文长度",
+    "self_discipline": "坚持等词项（A）",
+    "social_address": "大家等词项（B）",
+    "positive_expression": "开心等词项（C）",
+    "question": "问号（D）"
+  },
+  "research_questions": [
+    {"id": "RQ1", "text": "样本的正文可观察范围、媒体形式、tag和点赞如何分布？"},
+    {"id": "RQ2", "text": "固定词项命中、问号和正文长度与点赞是否存在条件关联，结论对样本口径及控制项如何变化？"},
+    {"id": "RQ3", "text": "已采集评论的字面线索、直接回复方向及用户连接如何分布？"}
+  ],
+  "main_evidence": ["可观察特征分布", "三种正文口径的既有模型并列比较", "固定效应与作者聚类", "作者支持、少帖作者、tag和共线性复核", "评论词项、明确回复与有向加权网络描述"],
+  "exploratory_only": ["NMF词共现成分与旧成分回归", "成分多标记阈值及结构敏感性", "17内容叶与15表达行为候选框架", "同基座AI编码预检验与失败的识别器原型"],
+  "interpretation_rules": [
+    "A—C原按直观含义编制，缺少独立词表评审与语义验证；改名只收窄解释，本版沿用固定的探索性操作指标，不声称分组自然或最优。",
+    "保持既有清理、词项、匹配方法、控制项和估计值；内部旧变量名只作代码标识。",
+    "四条规则可交叉命中，既不互斥也不穷尽；不把未命中率称为分类错误率。",
+    "词项命中与问号是操作性字面特征，不直接测人格、情绪、真实提问或社会支持。",
+    "三种正文口径并列披露；不因联合p=0.040而追认某口径为事前确定的唯一主模型。",
+    "BH仅在每个模型内对五项检验校正，不覆盖全部探索；观察性关联不作因果或增赞承诺。",
+    "NMF和候选分类仅在探索性附录展示，不作真实主题占比或正式类别效应。",
+    "未进行人工语义复核；计算与文件核查不称为语义效度验证。"
+  ]
+}

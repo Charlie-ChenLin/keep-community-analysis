@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "report_md_sha256": "67c9d0b3f67323c99d566cce1ad4402c896e25c4e7e7ada9b8f67fa7c217cf7c",
+  "independent_narrative_review": {
+    "main_results_do_not_depend_on_semantic_classification": true,
+    "neutral_renaming_does_not_claim_construct_validity": true,
+    "three_body_scopes_parallel_and_posthoc_exploration_disclosed": true,
+    "comments_describe_words_and_observed_reply_edges_not_support": true,
+    "human_semantic_review_not_conducted_and_not_required_for_delivery": true,
+    "early_candidate_framework_identified_as_historical": true
+  },
+  "visual_review": {
+    "all_25_pages_checked_in_contact_sheets": true,
+    "figure_widths_verified": 14,
+    "old_source_figures_and_new_lexical_labels_reviewed": true
+  },
+  "delivery_format": "pdf_report",
+  "note": "研究范围与数值呈现审查，不是人工语义标签验证。"
+}
