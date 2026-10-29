@@ -1,0 +1,197 @@
+{
+  "codebook_sha256": "a5792bc359f918f405d9c5b45051b1746f7123e1855e068d136d807fd36fdeb4",
+  "development_n": 160,
+  "calibration_n": 80,
+  "content_leaf_count": 17,
+  "domain_parent_codes": [
+    "d_exercise",
+    "d_body",
+    "d_food",
+    "d_life",
+    "d_tools",
+    "d_other"
+  ],
+  "function_count": 15,
+  "changes": [
+    {
+      "issue": "开发内容遗漏消费交易和装修",
+      "evidence_ids": [
+        "D003",
+        "D128",
+        "C001",
+        "C006",
+        "C007",
+        "C071",
+        "C078"
+      ],
+      "decision": "增加commerce/home_housing叶并明确归d_life的展示聚合；原开发与严格draft校准不覆盖，另保存v1编码。"
+    },
+    {
+      "issue": "感谢、供给交易和虚构段子不被12功能覆盖",
+      "evidence_ids": [
+        "C007",
+        "C037",
+        "C075",
+        "C006",
+        "C030",
+        "C044",
+        "C080"
+      ],
+      "decision": "新增3个明确行为/开放残余；开发回查阳性仍0，标低支持、不承诺可自动识别。"
+    },
+    {
+      "issue": "谐音愿望和梦中体验易误推实际状态",
+      "evidence_ids": [
+        "C006",
+        "C030",
+        "C044",
+        "C080"
+      ],
+      "decision": "撤C006未来意愿、C030身体体验；添加具体其他行为并清理已解决的不确定项。"
+    },
+    {
+      "issue": "领域/行为与真实事实必须分开",
+      "evidence_ids": [
+        "C030",
+        "C044",
+        "C048",
+        "C078",
+        "C080"
+      ],
+      "decision": "内容对象允许虚构/否定；不据此推断实际行动、疾病、人格、关系或支持。"
+    }
+  ],
+  "holdout_has_not_been_released": true,
+  "counts": {
+    "domains": [
+      {
+        "code": "d_exercise",
+        "label": "运动与身体活动",
+        "development_posts": 61,
+        "calibration_posts": 16
+      },
+      {
+        "code": "d_body",
+        "label": "身体状态、体重与外形",
+        "development_posts": 32,
+        "calibration_posts": 11
+      },
+      {
+        "code": "d_food",
+        "label": "饮食、食物与营养",
+        "development_posts": 11,
+        "calibration_posts": 19
+      },
+      {
+        "code": "d_life",
+        "label": "生活、关系与社会文化话题",
+        "development_posts": 63,
+        "calibration_posts": 37
+      },
+      {
+        "code": "d_tools",
+        "label": "工具、服务与记录奖励机制",
+        "development_posts": 2,
+        "calibration_posts": 2
+      },
+      {
+        "code": "d_other",
+        "label": "其他明确内容",
+        "development_posts": 0,
+        "calibration_posts": 0
+      }
+    ],
+    "functions": [
+      {
+        "code": "f_activity_update",
+        "label": "行动、进度与日常事件呈报",
+        "development_posts": 67,
+        "calibration_posts": 42
+      },
+      {
+        "code": "f_experience_report",
+        "label": "身体感受与主观体验自述",
+        "development_posts": 35,
+        "calibration_posts": 15
+      },
+      {
+        "code": "f_future_intention",
+        "label": "计划、目标与期待",
+        "development_posts": 14,
+        "calibration_posts": 7
+      },
+      {
+        "code": "f_explanation",
+        "label": "可泛化信息与机制解释",
+        "development_posts": 12,
+        "calibration_posts": 4
+      },
+      {
+        "code": "f_practical_guidance",
+        "label": "方法与可执行建议",
+        "development_posts": 12,
+        "calibration_posts": 1
+      },
+      {
+        "code": "f_reflection",
+        "label": "概括性议论、格言与价值主张",
+        "development_posts": 31,
+        "calibration_posts": 14
+      },
+      {
+        "code": "f_exhortation",
+        "label": "行动号召与自我提醒",
+        "development_posts": 20,
+        "calibration_posts": 5
+      },
+      {
+        "code": "f_greeting_wish",
+        "label": "寒暄与祝愿",
+        "development_posts": 13,
+        "calibration_posts": 6
+      },
+      {
+        "code": "f_relational_bid",
+        "label": "明确联络或共同参与邀请",
+        "development_posts": 2,
+        "calibration_posts": 0
+      },
+      {
+        "code": "f_reader_response_request",
+        "label": "明确面向他人的回应征询",
+        "development_posts": 2,
+        "calibration_posts": 1
+      },
+      {
+        "code": "f_appraisal",
+        "label": "明确对象评价、褒贬与致敬",
+        "development_posts": 17,
+        "calibration_posts": 16
+      },
+      {
+        "code": "f_caption",
+        "label": "指称式题注与景象描写",
+        "development_posts": 10,
+        "calibration_posts": 9
+      },
+      {
+        "code": "f_gratitude",
+        "label": "明确感谢表达",
+        "development_posts": 0,
+        "calibration_posts": 2
+      },
+      {
+        "code": "f_sale_offer",
+        "label": "商品服务供给与交易告知",
+        "development_posts": 0,
+        "calibration_posts": 1
+      },
+      {
+        "code": "f_other_expression",
+        "label": "其他可辨识表达行为",
+        "development_posts": 0,
+        "calibration_posts": 4
+      }
+    ]
+  }
+}

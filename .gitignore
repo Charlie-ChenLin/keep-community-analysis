@@ -19,6 +19,14 @@
 /results/extension_post_topics.csv
 /results/extension_predictions.csv
 /results/extension_topic_examples.csv
+/validation/teacher_feedback/*_private.csv
+/validation/teacher_feedback/mplconfig/
+/validation/classification_rebuild/private/
+/results/rebuilt_content_features.csv
+/results/rebuilt_prediction_holdout.csv
+/code/label_review_annotations.json
+/validation/**/mplconfig/
+/validation/classification_rebuild/results/
 
 # Environment, caches and transient export logs.
 .DS_Store

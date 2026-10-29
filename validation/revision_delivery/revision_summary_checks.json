@@ -1,0 +1,12 @@
+{
+  "pages": 2,
+  "available_deliverables": [
+    "分析报告_老师意见修订版.md",
+    "分析报告_老师意见修订版.pdf",
+    "分析报告_老师意见修订版.docx",
+    "Keep社区内容表达与互动反馈_老师意见修订版.pptx",
+    "Keep社区内容表达与互动反馈_老师意见修订版_逐页讲稿.txt"
+  ],
+  "summary_sha256": "9385465461e336e006c28a234f376d82f23c8047dfef6a4243f2020cb7bb83c5",
+  "classification_status": "candidate; not validated full-sample semantic labels"
+}

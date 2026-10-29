@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "one-to-one raw/saved post coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "anonymous authors map one-to-one to source authors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all saved body dictionary indicators independently reproduced",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "saved body lengths independently reproduced",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all hashtag values parsed as arrays of strings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "saved has_tag agrees with nonempty parsed array",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "author count distribution independently reproduced from raw IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "appending tags cannot lose existing body dictionary hits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "baseline_body design full column rank",
+      "passed": true,
+      "detail": {
+        "rank": 182,
+        "columns": 182
+      }
+    },
+    {
+      "check": "baseline_body expected row count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "baseline coefficients agree with saved main model",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "baseline cluster SE agree with saved main model",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "authors_ge5 design full column rank",
+      "passed": true,
+      "detail": {
+        "rank": 177,
+        "columns": 177
+      }
+    },
+    {
+      "check": "authors_ge5 expected row count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "authors_ge10 design full column rank",
+      "passed": true,
+      "detail": {
+        "rank": 169,
+        "columns": 169
+      }
+    },
+    {
+      "check": "authors_ge10 expected row count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "body_tag_identity_controls design full column rank",
+      "passed": true,
+      "detail": {
+        "rank": 191,
+        "columns": 191
+      }
+    },
+    {
+      "check": "body_tag_identity_controls expected row count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "body_plus_tags_recoded design full column rank",
+      "passed": true,
+      "detail": {
+        "rank": 182,
+        "columns": 182
+      }
+    },
+    {
+      "check": "body_plus_tags_recoded expected row count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all original source files unchanged",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

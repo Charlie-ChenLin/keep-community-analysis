@@ -1,0 +1,130 @@
+{
+  "fitted_documents": 2478,
+  "assigned": 2470,
+  "unique_clean_texts_fitted": 2374,
+  "duplicate_text_rows_beyond_first": 104,
+  "largest_exact_template_documents": 28,
+  "top10_exact_templates_documents": 93,
+  "frozen_weight_max_error": 1.1102230246251565e-16,
+  "reconstruction_relative_error_quantiles": {
+    "0.25": 0.9856539446157757,
+    "0.5": 0.9987956596406289,
+    "0.75": 0.99974619432363,
+    "0.9": 0.9999485107019487
+  },
+  "retained_token_coverage_quantiles": {
+    "0.25": 0.4,
+    "0.5": 0.6,
+    "0.75": 0.75,
+    "0.9": 1.0
+  },
+  "k_values_checked": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "selection_note": "K was fixed at 5 in the old configuration. These alternative fits diagnose dependence on K/weighting; no K is selected by likes, fit error alone, or significance. No replacement taxonomy is declared validated.",
+  "weight_note": "Normalized document weights are relative component contributions, not probabilities of label correctness. Even a value of 1 can follow from poor reconstruction of a sparse document.",
+  "dedup_note": "Exact cleaned-text deduplication only; near-duplicate templates remain. Same vocabulary/IDF used across alternatives.",
+  "author_weight_note": "Frobenius NMF trained on X_i/sqrt(n_author), so author objective weights sum equally. IDF is still from original rows; this is a scoped diagnostic, not a fully author-balanced text pipeline.",
+  "component_comparisons": [
+    {
+      "fit": "original_k5",
+      "original_component": 0,
+      "matched_component": 0,
+      "cosine_similarity": 0.9999999999999996
+    },
+    {
+      "fit": "original_k5",
+      "original_component": 1,
+      "matched_component": 1,
+      "cosine_similarity": 1.0000000000000004
+    },
+    {
+      "fit": "original_k5",
+      "original_component": 2,
+      "matched_component": 2,
+      "cosine_similarity": 0.9999999999999989
+    },
+    {
+      "fit": "original_k5",
+      "original_component": 3,
+      "matched_component": 3,
+      "cosine_similarity": 0.9999999999999983
+    },
+    {
+      "fit": "original_k5",
+      "original_component": 4,
+      "matched_component": 4,
+      "cosine_similarity": 1.000000000000001
+    },
+    {
+      "fit": "exact_text_deduplicated_k5",
+      "original_component": 0,
+      "matched_component": 4,
+      "cosine_similarity": 0.006642895053314615
+    },
+    {
+      "fit": "exact_text_deduplicated_k5",
+      "original_component": 1,
+      "matched_component": 0,
+      "cosine_similarity": 0.99966430542209
+    },
+    {
+      "fit": "exact_text_deduplicated_k5",
+      "original_component": 2,
+      "matched_component": 1,
+      "cosine_similarity": 0.899761576832723
+    },
+    {
+      "fit": "exact_text_deduplicated_k5",
+      "original_component": 3,
+      "matched_component": 2,
+      "cosine_similarity": 0.9848358915004427
+    },
+    {
+      "fit": "exact_text_deduplicated_k5",
+      "original_component": 4,
+      "matched_component": 3,
+      "cosine_similarity": 0.9903528688908722
+    },
+    {
+      "fit": "author_equal_objective_k5",
+      "original_component": 0,
+      "matched_component": 0,
+      "cosine_similarity": 0.0003051358488964239
+    },
+    {
+      "fit": "author_equal_objective_k5",
+      "original_component": 1,
+      "matched_component": 3,
+      "cosine_similarity": 0.036489635494816035
+    },
+    {
+      "fit": "author_equal_objective_k5",
+      "original_component": 2,
+      "matched_component": 4,
+      "cosine_similarity": 0.35526815676844536
+    },
+    {
+      "fit": "author_equal_objective_k5",
+      "original_component": 3,
+      "matched_component": 1,
+      "cosine_similarity": 0.8867431452724219
+    },
+    {
+      "fit": "author_equal_objective_k5",
+      "original_component": 4,
+      "matched_component": 2,
+      "cosine_similarity": 0.08523006022451123
+    }
+  ],
+  "source_hashes": {
+    "code/extension_config.json": "454e32b48d9eb8eac64592173047619343893f892b1193b8bc6c2029803ea37d",
+    "code/stopwords.txt": "b11ff810ee5c8934dc46b57f3a1ba85457e3893e89acdafb5cd286570fe793a3",
+    "results/extension_post_topics.csv": "b4162fabd04eec0191fd431322246d26263a35bcfdd91fcb6e77b40f2be003f5"
+  }
+}

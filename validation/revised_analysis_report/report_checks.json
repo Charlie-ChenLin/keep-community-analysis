@@ -1,0 +1,104 @@
+{
+  "source": "分析报告_Phase2_中文新版_insight_v2_修改版_排版优化.md",
+  "pdf_pages": 25,
+  "figures": 14,
+  "docx_tables": 21,
+  "docx_inline_images": 14,
+  "required_claims_present": true,
+  "comments_and_network_verbatim": true,
+  "text_outside_safe_page": [],
+  "sources_unchanged": true,
+  "chapter_starts": [
+    {
+      "title": "Keep社区中的字面表达与互动反馈",
+      "page": 1
+    },
+    {
+      "title": "目录",
+      "page": 2
+    },
+    {
+      "title": "1. 研究背景、意义与研究问题",
+      "page": 3
+    },
+    {
+      "title": "2. 数据来源、清洗与分析方法",
+      "page": 4
+    },
+    {
+      "title": "3. 这批数据如何影响内容与评论的比较",
+      "page": 6
+    },
+    {
+      "title": "4. 字面表达的关联对正文可观测范围敏感",
+      "page": 8
+    },
+    {
+      "title": "5. 五个用词成分不能直接当作完整内容分类",
+      "page": 11
+    },
+    {
+      "title": "6. 鼓励与感谢有角色分工，回应覆盖另有差别",
+      "page": 14
+    },
+    {
+      "title": "7. 评论区围绕帖主往来，互动量与人数需分看",
+      "page": 16
+    },
+    {
+      "title": "8. 对表达与互动的整体理解",
+      "page": 19
+    },
+    {
+      "title": "9. 建议、局限与后续研究",
+      "page": 20
+    },
+    {
+      "title": "附录A　模型口径与复现证据",
+      "page": 21
+    },
+    {
+      "title": "附录B　成员分工",
+      "page": 24
+    },
+    {
+      "title": "参考文献",
+      "page": 25
+    }
+  ],
+  "visual_review": "All final pages reviewed by author; lead reviewed contact sheets and selected full-resolution pages. All 25 page images identical after successful integrated rebuild.",
+  "new_report_sha256": {
+    "md": "fed1d7c970b0899be2ec557a7f3513f4489841adad98578846ca7addf22e6e79",
+    "html": "ae8d86014583223e69b0abd423924e5c819ad7eb289c7ae430586fadc21e41f8",
+    "docx": "28cfec732b164b92eff938d355efd7737fb1d94f9f8c41319d842d70b88cb08c",
+    "pdf": "d13dee8c68579a1dd7761d922db3d89afbd0bba96a897eb4f4e1800baa85bcab"
+  },
+  "protected_inputs": {
+    "分析报告_Phase2_中文新版_insight_v2_修改版_排版优化.md": "8fe9ce70d5ef151beca13d35e632f702a43a6a96bb6ddd4f83e783e8a5b2c892",
+    "方法复核与修订结论.md": "94329194fc281f1f5cff479028bcd4ace871a7e07260b013e48db624fa4be293",
+    "results/teacher_label_coverage_summary.json": "fa8212bb03e3c6eed6df7772e89c33095dce74c4d0c223e28afc9830f0cf395a",
+    "results/teacher_topic_structure_summary.json": "2f1466cb8c7a45cb45e66f012b56eb47ad578dce7948eb4ce1bd436f0ea14262",
+    "results/teacher_author_tags_validation.json": "7d7e782bbda5f5014a9d7498f3a0bbba53e52bac9291802b7f7d945bbeac6edc",
+    "results/teacher_feedback_dictionary.json": "4926f667d702b809731e7cb5a8f883039aba4b216794ff7666586729ec475588",
+    "results/teacher_author_tags_summary.json": "c58e5aea5b1ca602cc105a53bff749f17291267b02969499bb509543525a0418",
+    "results/teacher_complete_body_model.json": "c7177a1cde9ff706f4038e97a606f3b07e6ff6369e40c7d025aec1bc2ab4acf0",
+    "results/teacher_topic_summary.json": "7e7884083ace9bbc7d8334d434d6ea5eead816f28e5f596e15a775ace8a9fdb6",
+    "results/teacher_topic_author_support.json": "de2e3b90e3ccde30e68d983001a3ec3d78d6b5e868896a7e57189d81dc8942a7",
+    "figures/06_comment_network.png": "d70eea3a8b654548e1c4c426690eab662ec55596d9c9a2c945cd702acc62b125",
+    "figures/08_text_coverage.png": "21201560eaa109e12ed96f5b6747eba7af1e370b88dc5cfecfcd67fc8e72677a",
+    "figures/15_comment_expressions.png": "09b8cee7ceb72bbb2ace07bf090733aad7c93be9620bfe6048d6ac534fbb1fb1",
+    "figures/01_sample_and_likes.png": "7ddd0f89afdbeee303d3e6f7a296c22784d07abf0cddcf9699579fbf5ce90e38",
+    "figures/11_prediction_uncertainty.png": "ff11a111799b95eee2e2ae274a11a4cbad00e0dc11d8dd2f84aa06b12d771ab5",
+    "figures/03_text_features.png": "3375df0f3eff041cc24e1db7887b84603c30ca9a21188cd2fb5afcd0ab7cf9c8",
+    "figures/14_comment_words.png": "3c120245d5267259ad7c5881c6c826cd1873d22dadec95797eb0d6d0c9b3724c",
+    "figures/07_network_concentration.png": "a0947266f3be6880c10458a9ee3a9e9ea09e458ee62728c0f1824e7bb6c95585",
+    "figures/04_main_coefficients.png": "3c6e2e4bad980caa346dedd86a404321802899c046201bf393c1535194a87250",
+    "figures/13_comment_timing_roles.png": "8608ff9c22b83ebcba1f92e964261203c4331d22071e7add9ab3cf54d22c5bc5",
+    "figures/09_topics.png": "afd9ebe5c49703a383596a03dd6aa8963422315a63c468ad5ee830e0631aac66",
+    "figures/05_robustness.png": "ef720fd4057f9d710c803559c2ec2c0322dc02e69e200493ce76f2249f26deff",
+    "figures/02_media_summary.png": "464e191f4ef76006104da8d469bd25e5edfc20cdbfa9d7d2b7d0790936faea28",
+    "figures/12_author_influence.png": "bca45bee671d85502bdb5f602ec9e5e8ea030874ddaf02a6d827dbcd439d2679",
+    "figures/10_prediction_comparison.png": "d7b049adc371f26b50301a688fd7360fad00569ee205f908ec10c04ad499877b"
+  },
+  "visual_review_passed": true
+}

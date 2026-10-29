@@ -1,0 +1,483 @@
+{
+  "method": "独立上下文AI开放归纳初筛；完整阅读160条开发正文与12条空正文控制；不是人工金标准。仅用正文，不读旧分类、标签、点赞、NMF或后续数据包。",
+  "unit_and_counts": {
+    "development_records": 160,
+    "empty_controls": 12,
+    "all_records": 172,
+    "development_state_counts": {
+      "insufficient": 7,
+      "explicit_content": 124,
+      "domain_unspecified": 29
+    },
+    "control_state_counts": {
+      "empty": 12
+    },
+    "domain_assignments_development": 171,
+    "multi_label": true,
+    "frequency_denominator": 160,
+    "frequency_note": "按有该域的正文条数计，正文可多标签，领域频数之和不等于160。"
+  },
+  "domains": [
+    {
+      "code": "exercise",
+      "label": "运动与身体活动",
+      "definition": "以具体身体活动、运动、训练方案、赛事、体适能目标或运动经验为可辨话题；作者和被描述者均可为活动主体。",
+      "rationale": [
+        "跑步、骑行、步行、力量、划船、舞蹈、拉伸、靠墙练习、马拉松等统一上位域",
+        "项目仅可作后续子类，不为互斥平级领域",
+        "一般行走也属于身体活动，不强求训练动机"
+      ],
+      "boundaries": [
+        "汗、疲累、场所、打卡或品牌不单独证明运动",
+        "单字练未给身体动作或项目时保留未指明"
+      ],
+      "status": "candidate",
+      "frequency": 61,
+      "share_of_development": 0.3812,
+      "example_ids": [
+        "D006",
+        "D033",
+        "D073",
+        "D083",
+        "D116",
+        "D139"
+      ],
+      "nearest_confusion": [
+        "body：感觉本身不能倒推运动",
+        "weight：减脂可未给运动行为",
+        "platform：等级奖励未必运动"
+      ]
+    },
+    {
+      "code": "weight",
+      "label": "体重、减脂与身体形态管理",
+      "definition": "体重数值、胖瘦、脂肪或肌肉形态，以及改变或评价身形的明确目标、经历或建议。",
+      "rationale": [
+        "减脂、减肥、体重升降、围度、紧致、塑身、胸肌外观",
+        "允许与运动、饮食共同出现"
+      ],
+      "boundaries": [
+        "训练某部位本身未表达形态目标时只标运动",
+        "营养词或食材不能单独证明减重目标"
+      ],
+      "status": "candidate",
+      "frequency": 14,
+      "share_of_development": 0.0875,
+      "example_ids": [
+        "D012",
+        "D015",
+        "D041",
+        "D042",
+        "D107",
+        "D115"
+      ],
+      "nearest_confusion": [
+        "exercise：运动方法与身体变化目标不同",
+        "food：膳食与体重管理可以独立"
+      ]
+    },
+    {
+      "code": "food",
+      "label": "饮食、食物与营养",
+      "definition": "围绕食物、用餐、食材采购、饮食欲望、膳食安排或营养摄取的实际主题。",
+      "rationale": [
+        "菜品、早餐、外卖计划、买菜、想吃好吃的",
+        "碳水、蛋白质、餐次、饮食控制"
+      ],
+      "boundaries": [
+        "背景食物或类比不机械增加标签",
+        "食材不能证明是减脂餐或实际热量"
+      ],
+      "status": "candidate",
+      "frequency": 11,
+      "share_of_development": 0.0688,
+      "example_ids": [
+        "D007",
+        "D036",
+        "D066",
+        "D088",
+        "D120",
+        "D128"
+      ],
+      "nearest_confusion": [
+        "weight：饮食不必服务减脂",
+        "body：进食后的症状可主要是健康主题"
+      ]
+    },
+    {
+      "code": "body",
+      "label": "身体感受、健康与休息",
+      "definition": "明确身体感觉、症状、健康保护、体力精力、疲累或休息经历；不要求证明疾病或训练来源。",
+      "rationale": [
+        "僵硬、腿沉、出汗、酸胀、手指发木、疲累、生病",
+        "体力精力、午睡、防伤和膝盖保护"
+      ],
+      "boundaries": [
+        "泛称状态或好很多且无身体对象不够",
+        "主观疾病比喻不升级为确诊，情绪词也不自动等于健康"
+      ],
+      "status": "candidate",
+      "frequency": 18,
+      "share_of_development": 0.1125,
+      "example_ids": [
+        "D011",
+        "D019",
+        "D055",
+        "D068",
+        "D075",
+        "D104",
+        "D153"
+      ],
+      "nearest_confusion": [
+        "exercise：反应不可倒推训练",
+        "family：子女健康可与照料共现"
+      ]
+    },
+    {
+      "code": "life",
+      "label": "人生观、处世与自我调适",
+      "definition": "对人生、幸福、目标、成长、善恶或应对处境提出可复述命题，或展开有实质内容的生活反思。",
+      "rationale": [
+        "幸福、适度、知足、顺其自然、自我价值",
+        "成长与快乐变化、目标奋斗、坚持与视角的普遍反思"
+      ],
+      "boundaries": [
+        "早安、晚安、加油、努力、高兴等泛用表达本身不足",
+        "提生活二字不自动编码；仅体育内坚持动员可只属运动"
+      ],
+      "status": "candidate",
+      "frequency": 24,
+      "share_of_development": 0.15,
+      "example_ids": [
+        "D004",
+        "D009",
+        "D029",
+        "D052",
+        "D061",
+        "D091",
+        "D150"
+      ],
+      "nearest_confusion": [
+        "domain_unspecified：口号缺实质命题",
+        "social：关系回忆可与人生反思共现"
+      ]
+    },
+    {
+      "code": "social",
+      "label": "人际关系与陪伴",
+      "definition": "非仅礼貌表达的人际陪伴、结交、关系回忆、同伴相遇或入群关系诉求。",
+      "rationale": [
+        "陪伴、交友邀请、共同时间回忆、同伴相遇",
+        "明确请求加入同伴群体"
+      ],
+      "boundaries": [
+        "问候、泛称称赞、祝福、感谢本身属于表达方式",
+        "不擅自指定恋爱、朋友或家庭身份"
+      ],
+      "status": "candidate",
+      "frequency": 5,
+      "share_of_development": 0.0312,
+      "example_ids": [
+        "D038",
+        "D061",
+        "D067",
+        "D071",
+        "D124"
+      ],
+      "nearest_confusion": [
+        "family：明确家庭照料另列",
+        "platform：入群关系诉求可与工具问题共现"
+      ]
+    },
+    {
+      "code": "family",
+      "label": "家庭与子女照料",
+      "definition": "明确亲属、子女的生活活动、陪伴、看护、健康或育儿日程。",
+      "rationale": [
+        "母亲学舞、陪娃上课、孩子重复活动、宝宝生病",
+        "没有孩子打扰时的休息经历"
+      ],
+      "boundaries": [
+        "宝宝若是对读者昵称不算亲属",
+        "未指身份的陪伴不推为家属"
+      ],
+      "status": "candidate",
+      "frequency": 5,
+      "share_of_development": 0.0312,
+      "example_ids": [
+        "D043",
+        "D070",
+        "D074",
+        "D075",
+        "D072"
+      ],
+      "nearest_confusion": [
+        "social：一般陪伴缺亲属身份",
+        "body：子女健康可以共现"
+      ]
+    },
+    {
+      "code": "work_study",
+      "label": "工作、学习与职业",
+      "definition": "明确职业事务、班次和年限、教学沟通、学习实验或职业理想。",
+      "rationale": [
+        "学情沟通、夜班、工作年限、生理实验与医生理想"
+      ],
+      "boundaries": [
+        "孤立上工收工可为活动开始结束，缺工作线索不归入",
+        "陪娃上课未知内容时不自动为作者学习职业"
+      ],
+      "status": "candidate",
+      "frequency": 4,
+      "share_of_development": 0.025,
+      "example_ids": [
+        "D025",
+        "D124",
+        "D143",
+        "D151"
+      ],
+      "nearest_confusion": [
+        "culture：知识消费不自动是职业学习",
+        "family：陪子女主要是照料"
+      ]
+    },
+    {
+      "code": "culture",
+      "label": "阅读、知识、艺术与媒体",
+      "definition": "围绕书籍阅读、知识付费、绘画、评书或影视观看的文化知识活动与体验。",
+      "rationale": [
+        "书的作用、阅读数量、知识付费、画画、听评书、节目评价"
+      ],
+      "boundaries": [
+        "舞蹈在语料以身体训练展开时归运动，不以艺术名义拆运动域",
+        "场景中歌曲和引用未独立讨论时不机械增标签"
+      ],
+      "status": "candidate",
+      "frequency": 6,
+      "share_of_development": 0.0375,
+      "example_ids": [
+        "D003",
+        "D078",
+        "D098",
+        "D108",
+        "D112",
+        "D156"
+      ],
+      "nearest_confusion": [
+        "work_study：非正式文化消费与职业学习不同",
+        "exercise：绘画需体力不证明训练"
+      ]
+    },
+    {
+      "code": "weather",
+      "label": "天气、季节与自然环境",
+      "definition": "天气、温度、季节、天空的明确描述、体验或对活动的成段影响。",
+      "rationale": [
+        "立冬与气温反差、蓝天、寒风、冬季、寒冷影响设备",
+        "四季天气对运动计划的实质描述"
+      ],
+      "boundaries": [
+        "太阳云符号单独出现可能仅装饰",
+        "人生隐喻的阴影阳光不是天气",
+        "运动结束一笔带过的雨仅标时点时不独立增域"
+      ],
+      "status": "candidate",
+      "frequency": 8,
+      "share_of_development": 0.05,
+      "example_ids": [
+        "D017",
+        "D022",
+        "D024",
+        "D065",
+        "D102",
+        "D116",
+        "D119"
+      ],
+      "nearest_confusion": [
+        "life：阳光可为隐喻",
+        "appearance：衣裤热不等于外部炎热"
+      ]
+    },
+    {
+      "code": "outing",
+      "label": "出行、地方与游览",
+      "definition": "明确旅行出差日程、在外地活动条件、返程路况、目的地计划和游览。",
+      "rationale": [
+        "旅行第二日安排、外省出差单车、在郑州骑行条件",
+        "去南京计划、返程路况、动物园游览"
+      ],
+      "boundaries": [
+        "只心念某地方或未解释地名不能确定出行",
+        "骑行不自动是旅行；周边场所不必是出游"
+      ],
+      "status": "candidate",
+      "frequency": 6,
+      "share_of_development": 0.0375,
+      "example_ids": [
+        "D020",
+        "D027",
+        "D030",
+        "D050",
+        "D088",
+        "D139"
+      ],
+      "nearest_confusion": [
+        "exercise：活动可与出行重叠，交通方式未明不猜运动",
+        "domain_unspecified：地方向往不是行程证据"
+      ]
+    },
+    {
+      "code": "appearance",
+      "label": "个人装饰与穿着",
+      "definition": "身体装饰及衣裤手套的实际穿着、需求或运动适用性。",
+      "rationale": [
+        "纹身、跑步裤装不适、手套需求、抓绒裤太热"
+      ],
+      "boundaries": [
+        "肌肉和胖瘦本身归身体形态",
+        "衣物只为长段背景举例时不必独立增域"
+      ],
+      "status": "candidate",
+      "frequency": 4,
+      "share_of_development": 0.025,
+      "example_ids": [
+        "D037",
+        "D076",
+        "D104",
+        "D145"
+      ],
+      "nearest_confusion": [
+        "weight：身体形态与衣着不同",
+        "weather：衣物舒适性不证明外部温度"
+      ]
+    },
+    {
+      "code": "platform",
+      "label": "课程工具、记录与奖励机制",
+      "definition": "应用或服务的投屏、课程记录、等级与奖励等具体机制成为主题；不要求点明提供者。",
+      "rationale": [
+        "等级解锁实物、投屏无法记录卡路里"
+      ],
+      "boundaries": [
+        "仅品牌、打卡、次数、坚持不证明机制",
+        "个人训练计划以应用为渠道时可只属运动"
+      ],
+      "status": "candidate",
+      "frequency": 2,
+      "share_of_development": 0.0125,
+      "example_ids": [
+        "D046",
+        "D071"
+      ],
+      "nearest_confusion": [
+        "exercise：机制不证明项目",
+        "social：群加入关系诉求可以共现"
+      ]
+    },
+    {
+      "code": "festival",
+      "label": "节日与新年度祝愿",
+      "definition": "明确节日期待或新年度祝愿成为话题对象。",
+      "rationale": [
+        "期待圣诞、新年度对特定群体祝福"
+      ],
+      "boundaries": [
+        "泛用周末愉快、早安、年份数字不自动归入"
+      ],
+      "status": "provisional_sparse",
+      "frequency": 2,
+      "share_of_development": 0.0125,
+      "example_ids": [
+        "D106",
+        "D160"
+      ],
+      "nearest_confusion": [
+        "domain_unspecified：一般问候缺节日对象",
+        "weather：节日与季候不是同一主题"
+      ]
+    },
+    {
+      "code": "religion",
+      "label": "宗教场所与宗教活动",
+      "definition": "正文明确进入宗教场所或进行仪式，实际叙述活动或受阻经历。",
+      "rationale": [
+        "去寺庙、无法拜佛"
+      ],
+      "boundaries": [
+        "泛道德善恶福祸不足以推断信仰",
+        "不推定宗派、虔诚程度或宗教身份"
+      ],
+      "status": "provisional_singleton",
+      "frequency": 1,
+      "share_of_development": 0.0063,
+      "example_ids": [
+        "D133"
+      ],
+      "nearest_confusion": [
+        "life：道德格言与实践不同",
+        "body：身体状态可使仪式受阻"
+      ]
+    }
+  ],
+  "category_rationale": [
+    "15候选领域来自本轮正文开放归纳，不是预设数量或互斥簇；单例和稀疏领域暂存，待独立审核。",
+    "所有运动项目统一exercise上位域，项目仅作后续子类。",
+    "运动、体重身形、饮食和身体状态可真实交叉，采用多标签；不能凭汗、累、品牌、打卡倒推运动。",
+    "情绪、祝愿、求助、感谢、鼓励属表达功能，应另轴编码；需有内容对象方成立主题。",
+    "人生反思需可复述命题；不用日常兜底，泛生活、问候、开心、加油均不足以自动归life。",
+    "多标签要求各域有实质主述；人、食物、地点、歌曲只作背景或类比时不机械按名词增域。",
+    "本轮为独立上下文AI初筛，不是人工金标准，也不代表医学、历史或引文事实核验。"
+  ],
+  "boundary_review": [
+    {
+      "issue": "碎片、歧义短语、符号不足以还原领域；不借未见图像补足。",
+      "disposition": "insufficient"
+    },
+    {
+      "issue": "问候与祝愿缺话题对象。",
+      "disposition": "domain_unspecified"
+    },
+    {
+      "issue": "上工收工可指工作或泛用活动起止。",
+      "disposition": "domain_unspecified"
+    },
+    {
+      "issue": "单字练不必为身体训练，脱离平台可指其他练习。",
+      "disposition": "D008未指明；D108保留文化；D131保留身体状态。"
+    },
+    {
+      "issue": "称谓赞誉缺对象事件，不据外部人物知识建公共政治主题。",
+      "disposition": "domain_unspecified"
+    },
+    {
+      "issue": "品牌和坚持不证明运动或应用机制。",
+      "disposition": "domain_unspecified"
+    },
+    {
+      "issue": "疑似胸部训练错字简称，词形有歧义。",
+      "disposition": "暂定exercise，需独立复核。"
+    },
+    {
+      "issue": "里程被吞疑为记录问题，但未给工具。",
+      "disposition": "只标身体活动，不推断平台故障。"
+    },
+    {
+      "issue": "节日与宗教活动证据真实但稀少，不能证明类别稳定。",
+      "disposition": "保留稀疏候选，待后续证据。"
+    }
+  ],
+  "validation": {
+    "all_expected_ids_present": true,
+    "no_duplicate_ids": true,
+    "all_evidence_verified_original_substring": true,
+    "manual_semantic_assignment_not_keyword_program": true,
+    "contains_original_body_or_author": false
+  },
+  "limitations": [
+    "独立上下文AI初筛不是人工金标准，未有双人编码与一致性统计。",
+    "稀疏候选领域稳定性未知，仅限开发集，未读后续包。",
+    "领域为主题，表达情绪、求助、感谢、祝愿等应另轴处理。",
+    "只据正文，不推断照片、图示、原始标签或作者活动。"
+  ],
+  "publication_note": "公开聚合保留计数与盲化例证出处，删除sample_ids逐帖编码成员表；完整编码本地私有保存。"
+}

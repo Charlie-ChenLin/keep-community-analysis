@@ -1,0 +1,1253 @@
+{
+  "version": "1.0_frozen_after_development_and_calibration",
+  "status": "开发与校准完成、留出检验前冻结；尚未经独立人工验证。",
+  "unit": "单条可观察清理正文；不使用原始tag、图像想象、作者身份、点赞或旧模型权重补语义。",
+  "axes": {
+    "domains": "讨论什么内容；多标签；父类是研究任务展示聚合，不是唯一自然分区。",
+    "functions": "做出什么可观察表达行为；多标签；不推测真实心理、意图实现或互动效果。"
+  },
+  "domains": [
+    {
+      "code": "d_exercise",
+      "label": "运动与身体活动",
+      "definition": "正文明确讨论身体活动、具体运动、训练、运动方法或体育活动；不要求活动主体就是作者。",
+      "include": [
+        "跑步、骑行、步行、力量、拉伸等项目作为子类",
+        "明确的一般运动或身体活动讨论"
+      ],
+      "exclude": [
+        "孤立的打卡、练、汗或品牌名",
+        "不能推断活动真实完成或作者自律人格"
+      ],
+      "merge_reason": "项目属于同一讨论对象，保留项目差异为子类；不与上位运动类平级作互斥归类。",
+      "development_posts": 61,
+      "development_authors": 30,
+      "development_example_ids": [
+        "D002",
+        "D006",
+        "D010",
+        "D012",
+        "D014",
+        "D017",
+        "D018",
+        "D020"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 16,
+      "calibration_example_ids": [
+        "C003",
+        "C011",
+        "C026",
+        "C033",
+        "C036",
+        "C041"
+      ]
+    },
+    {
+      "code": "d_body",
+      "label": "身体状态、体重与外形",
+      "definition": "正文明确讨论身体感觉、症状、休息、体力或体重与身体形态的状态、改变或管理。",
+      "include": [
+        "身体感受/健康休息与体重/减脂是两个保留的细分",
+        "可以同运动或饮食共现"
+      ],
+      "exclude": [
+        "只有情绪词而无身体对象",
+        "只提训练部位且未谈身体状态或外形"
+      ],
+      "merge_reason": "按身体这一讨论对象作展示层归并；健康疲累与体重管理不被当作同一构念，叶类分别保留。",
+      "development_posts": 32,
+      "development_authors": 20,
+      "development_example_ids": [
+        "D010",
+        "D011",
+        "D012",
+        "D015",
+        "D019",
+        "D028",
+        "D032",
+        "D041"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 11,
+      "calibration_example_ids": [
+        "C013",
+        "C027",
+        "C028",
+        "C030",
+        "C034",
+        "C037"
+      ]
+    },
+    {
+      "code": "d_food",
+      "label": "饮食、食物与营养",
+      "definition": "正文以食物、用餐、食材、膳食安排、营养或饮食欲望为有实质指涉的讨论对象。",
+      "include": [
+        "餐食、食谱、买菜、食物评价及饮食计划"
+      ],
+      "exclude": [
+        "不能因食物出现在Keep就认定减脂目的或健康质量",
+        "背景类比中的食物不自动计入"
+      ],
+      "merge_reason": "语料中独立出现且不必依附训练或减脂，作为独立内容对象保留。",
+      "development_posts": 11,
+      "development_authors": 9,
+      "development_example_ids": [
+        "D007",
+        "D031",
+        "D036",
+        "D044",
+        "D066",
+        "D086",
+        "D088",
+        "D090"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 19,
+      "calibration_example_ids": [
+        "C002",
+        "C005",
+        "C009",
+        "C013",
+        "C017",
+        "C018"
+      ]
+    },
+    {
+      "code": "d_life",
+      "label": "生活、关系与社会文化话题",
+      "definition": "正文对人生处世提出实质命题，或明确讨论家庭关系、工作学习、阅读艺术媒体、天气、出行、衣着装饰、节庆或宗教活动。校准新增消费、交易、商业处境和居住装修细分；仍需具体对象证据，不把无法归类的表达当生活。",
+      "include": [
+        "保留11个开发细分，可与运动共现",
+        "人生感悟需能复述其命题，具体生活场景需有直接文本证据",
+        "17个内容叶中社会文化、生活及新增消费/居住对象为展示聚合；并非运动的互斥补集。"
+      ],
+      "exclude": [
+        "不能作为没有命中运动词的剩余兜底类",
+        "早安、开心、加油、生活二字本身不足以判定内容域",
+        "不推断作者身份、信仰或关系性质"
+      ],
+      "merge_reason": "为研究任务作广义展示归并，不声称内部同质或与运动互斥；所有细分频数和边界保留，避免丢弃低频真实主题。",
+      "development_posts": 63,
+      "development_authors": 34,
+      "development_example_ids": [
+        "D003",
+        "D004",
+        "D009",
+        "D017",
+        "D020",
+        "D022",
+        "D024",
+        "D025"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 37,
+      "calibration_example_ids": [
+        "C001",
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C010"
+      ]
+    },
+    {
+      "code": "d_tools",
+      "label": "工具、服务与记录奖励机制",
+      "definition": "正文明确讨论应用/工具功能、投屏、记录、等级或奖励等具体机制，不擅自补出提供者。",
+      "include": [
+        "功能问题或机制、等级奖励本身成为主题"
+      ],
+      "exclude": [
+        "仅出现品牌名、课程分享标记、数字或打卡",
+        "不凭机制推断实际运动"
+      ],
+      "merge_reason": "开发中虽少但与其他讨论对象不同，作为稀疏候选保留，不因频数少强并或据此回归。",
+      "development_posts": 2,
+      "development_authors": 2,
+      "development_example_ids": [
+        "D046",
+        "D071"
+      ],
+      "status": "sparse_candidate",
+      "calibration_posts": 2,
+      "calibration_example_ids": [
+        "C036",
+        "C054"
+      ]
+    },
+    {
+      "code": "d_other",
+      "label": "其他明确内容",
+      "definition": "正文有可复述的具体内容，但上述开发内容域不能覆盖；必须在note写出具体遗漏对象。",
+      "include": [
+        "留出和后续编码中出现的新内容对象"
+      ],
+      "exclude": [
+        "空正文、符号或不能判断领域",
+        "不得通过其他类掩盖边界不清"
+      ],
+      "merge_reason": "开放残余编码槽，而非开发阶段已经验证的新增类别；单独检查其占比和实例。",
+      "development_posts": 0,
+      "development_authors": 0,
+      "development_example_ids": [],
+      "status": "sparse_candidate",
+      "calibration_posts": 0,
+      "calibration_example_ids": []
+    }
+  ],
+  "functions": [
+    {
+      "code": "f_activity_update",
+      "label": "行动、进度与日常事件呈报",
+      "definition": "呈报本帖涉及的具体行动、阶段、进度、自报指标或日常发生的情境；允许简短活动简表，完成状态只按正文所言。",
+      "include": "行动和日常遭遇；打卡序次和数值；开工、出发、收工等阶段标记；明确当下活动内容。",
+      "exclude": "纯未来安排；只有身体感受；无事件框架的一般知识；不从记录认定自律或完成质量。",
+      "example_ids": [
+        "D017",
+        "D031",
+        "D070",
+        "D134",
+        "D146",
+        "D151"
+      ],
+      "nearest_confusion": "future_intention只表示后续计划；experience_report是感受而非事件；caption无足够的个人行动或事件框架。",
+      "source_open_code": "activity_update",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "wang2015_support: 区分呈报/自述、征询与支持提供，仅借鉴区分原则",
+      "development_posts": 67,
+      "development_authors": 34,
+      "development_example_ids": [
+        "D002",
+        "D005",
+        "D007",
+        "D010",
+        "D013",
+        "D015",
+        "D017",
+        "D020"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 42,
+      "calibration_example_ids": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C006"
+      ]
+    },
+    {
+      "code": "f_experience_report",
+      "label": "身体感受与主观体验自述",
+      "definition": "正文直接表达自身的身体感觉、心理念头、情感反应或状态体验；编码表达而不认定潜在心理或医学事实。",
+      "include": "疲劳、酸胀、僵硬、舒适等感觉；直接说出的开心、紧张、念头、精神状态；明确的夸张反应。",
+      "exclude": "不从事件或表情推测感受；不从困难推断求助；外部对象的好坏评价归appraisal；未来期望归future_intention。",
+      "example_ids": [
+        "D011",
+        "D016",
+        "D064",
+        "D083",
+        "D104",
+        "D153"
+      ],
+      "nearest_confusion": "appraisal评价对象或选择的好坏；本类必须有身体、心理或体验反应的直接表达。",
+      "source_open_code": "experience_report",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "wang2015_support: 区分呈报/自述、征询与支持提供，仅借鉴区分原则",
+      "development_posts": 35,
+      "development_authors": 23,
+      "development_example_ids": [
+        "D002",
+        "D008",
+        "D011",
+        "D016",
+        "D019",
+        "D023",
+        "D025",
+        "D026"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 15,
+      "calibration_example_ids": [
+        "C001",
+        "C002",
+        "C003",
+        "C005",
+        "C013",
+        "C029"
+      ]
+    },
+    {
+      "code": "f_future_intention",
+      "label": "计划、目标与期待",
+      "definition": "明确表达尚未发生的安排、想要达到的结果、愿望或未来期待。",
+      "include": "后续行动安排；具体目标与奖励方向；希望、愿望和期待。",
+      "exclude": "不把已完成记录、一般奋斗口号、目的性修辞或笼统前路感言自动解释为承诺。",
+      "example_ids": [
+        "D025",
+        "D046",
+        "D083",
+        "D088",
+        "D105",
+        "D124"
+      ],
+      "nearest_confusion": "activity_update报告行动或阶段，不能替未来愿望补出执行；exhortation只动员而不一定给出将来安排。",
+      "source_open_code": "future_intention",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "开发语料中的重复表达行为；不冒充既有验证量表",
+      "development_posts": 14,
+      "development_authors": 13,
+      "development_example_ids": [
+        "D018",
+        "D025",
+        "D031",
+        "D046",
+        "D068",
+        "D071",
+        "D083",
+        "D088"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 7,
+      "calibration_example_ids": [
+        "C003",
+        "C009",
+        "C027",
+        "C032",
+        "C048",
+        "C049"
+      ]
+    },
+    {
+      "code": "f_explanation",
+      "label": "可泛化信息与机制解释",
+      "definition": "以说明、列举、因果或效用断言向读者呈现可跨个人事件使用的信息或关系主张。此编码不验证知识是否正确。",
+      "include": "作用和原因解释；一般机制、事实比较；障碍和效用的说明。",
+      "exclude": "仅呈报个人过程；格言式价值论断；只有具体指令没有解释；不把表达的机制当成已证实因果。",
+      "example_ids": [
+        "D006",
+        "D058",
+        "D066",
+        "D086",
+        "D094",
+        "D135"
+      ],
+      "nearest_confusion": "practical_guidance告诉如何做；reflection表达生活/行为的价值和意义。说明与建议可以在同帖并列。",
+      "source_open_code": "explanation",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "开发语料中的重复表达行为；不冒充既有验证量表",
+      "development_posts": 12,
+      "development_authors": 4,
+      "development_example_ids": [
+        "D006",
+        "D014",
+        "D042",
+        "D058",
+        "D066",
+        "D079",
+        "D086",
+        "D093"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 4,
+      "calibration_example_ids": [
+        "C027",
+        "C041",
+        "C066",
+        "C074"
+      ]
+    },
+    {
+      "code": "f_practical_guidance",
+      "label": "方法与可执行建议",
+      "definition": "明确给读者一个可按之行动的办法、方案、顺序、分配、条件性操作或注意事项，细节超过一般鼓劲。",
+      "include": "训练步骤、次数、组合和次序；饮食分配；具体情境下的明确行动建议。",
+      "exclude": "个人训练日志若未邀请仿用；纯动作名；一般多练、奋斗或好好生活等动员。",
+      "example_ids": [
+        "D014",
+        "D033",
+        "D058",
+        "D079",
+        "D098",
+        "D107"
+      ],
+      "nearest_confusion": "exhortation只有启动和坚持的动员；activity_update即使含组数也可能只是自己的完成简表。",
+      "source_open_code": "practical_guidance",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "开发语料中的重复表达行为；不冒充既有验证量表",
+      "development_posts": 12,
+      "development_authors": 4,
+      "development_example_ids": [
+        "D006",
+        "D014",
+        "D033",
+        "D042",
+        "D058",
+        "D066",
+        "D079",
+        "D091"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 1,
+      "calibration_example_ids": [
+        "C041"
+      ]
+    },
+    {
+      "code": "f_reflection",
+      "label": "概括性议论、格言与价值主张",
+      "definition": "表达关于人生、处世、幸福、行为意义或健身价值的一般观点、格言和评价性思考；包括转引内容。",
+      "include": "概括性价值判断、处世规范、人生感言、文学格言及展开的价值论证。",
+      "exclude": "不据主张认定真实人格；情境对象的即时褒贬归appraisal；具体知识说明及操作方法另列。",
+      "example_ids": [
+        "D004",
+        "D039",
+        "D052",
+        "D091",
+        "D130",
+        "D156"
+      ],
+      "nearest_confusion": "exhortation是短促行动号召；只有当帖子另有明显动员话语才同时编码。",
+      "source_open_code": "reflection",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "开发语料中的重复表达行为；不冒充既有验证量表",
+      "development_posts": 31,
+      "development_authors": 17,
+      "development_example_ids": [
+        "D004",
+        "D009",
+        "D012",
+        "D029",
+        "D035",
+        "D039",
+        "D040",
+        "D045"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 14,
+      "calibration_example_ids": [
+        "C008",
+        "C010",
+        "C014",
+        "C015",
+        "C019",
+        "C021"
+      ]
+    },
+    {
+      "code": "f_exhortation",
+      "label": "行动号召与自我提醒",
+      "definition": "通过简短号召、督促、鼓劲或自我提醒推动开始、继续、努力或行动，受众可以未明。",
+      "include": "简短开始/继续动员；泛化加油；明确自我提醒；明确向群体鼓劲。",
+      "exclude": "不默认未明受众是他人；不认定完成或自律人格；具体方法归practical_guidance；纯表情不编码。",
+      "example_ids": [
+        "D010",
+        "D044",
+        "D059",
+        "D067",
+        "D127",
+        "D129"
+      ],
+      "nearest_confusion": "relational_bid要求明确接触或共同参与邀请；greeting_wish是礼貌问候或祝愿。",
+      "source_open_code": "exhortation",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "开发语料中的重复表达行为；不冒充既有验证量表",
+      "development_posts": 20,
+      "development_authors": 17,
+      "development_example_ids": [
+        "D010",
+        "D012",
+        "D021",
+        "D044",
+        "D046",
+        "D047",
+        "D059",
+        "D063"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 5,
+      "calibration_example_ids": [
+        "C003",
+        "C028",
+        "C038",
+        "C048",
+        "C052"
+      ]
+    },
+    {
+      "code": "f_greeting_wish",
+      "label": "寒暄与祝愿",
+      "definition": "通过常规问候、道安或祝愿建立轻度社交接触或表达良好期望。",
+      "include": "早晚问候；周末祝愿；明确面向群体的节日或新年祝福。",
+      "exclude": "不据此推断关系深度、实际对话或支持效果；个人对自己未来的期望归future_intention。",
+      "example_ids": [
+        "D005",
+        "D054",
+        "D069",
+        "D144",
+        "D160"
+      ],
+      "nearest_confusion": "relational_bid有进一步联络或共同参与请求；本类只需问候或祝愿。",
+      "source_open_code": "greeting_wish",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "开发语料中的重复表达行为；不冒充既有验证量表",
+      "development_posts": 13,
+      "development_authors": 11,
+      "development_example_ids": [
+        "D005",
+        "D024",
+        "D040",
+        "D054",
+        "D057",
+        "D069",
+        "D081",
+        "D115"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 6,
+      "calibration_example_ids": [
+        "C016",
+        "C050",
+        "C055",
+        "C068",
+        "C075",
+        "C077"
+      ]
+    },
+    {
+      "code": "f_relational_bid",
+      "label": "明确联络或共同参与邀请",
+      "definition": "正文明确提出与他人建立联系、交友或一起参加某活动的邀请。",
+      "include": "交朋友的直接提出；明确共同参与的邀请。",
+      "exclude": "单独@标签；未明确受众的第二人称或泛加油；致敬赞美但无接触邀请。",
+      "example_ids": [
+        "D067",
+        "D093"
+      ],
+      "nearest_confusion": "reader_response_request索取回答；本类索取的是接触或共同参与，不能把一般号召自动当作社交邀请。",
+      "source_open_code": "relational_bid",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "开发语料中的重复表达行为；不冒充既有验证量表",
+      "development_posts": 2,
+      "development_authors": 2,
+      "development_example_ids": [
+        "D067",
+        "D093"
+      ],
+      "status": "sparse_candidate",
+      "calibration_posts": 0,
+      "calibration_example_ids": []
+    },
+    {
+      "code": "f_reader_response_request",
+      "label": "明确面向他人的回应征询",
+      "definition": "有可观察的外向指向，要求或询问读者/被点名者给出答案或回应；包括互动式活动询问，不限于求助。",
+      "include": "对被点名者提出的具体问题；直接请读者回答其自身情况。",
+      "exclude": "设题后自行作答；自问、感叹、调侃、转述他人问句；仅有问号或表示想要某物。",
+      "example_ids": [
+        "D071",
+        "D079"
+      ],
+      "nearest_confusion": "知识文章常以设问开头但下文自己提供答案；自述困难并不自动要求读者帮助。",
+      "source_open_code": "reader_response_request",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "wang2015_support: 区分呈报/自述、征询与支持提供，仅借鉴区分原则",
+      "development_posts": 2,
+      "development_authors": 2,
+      "development_example_ids": [
+        "D071",
+        "D079"
+      ],
+      "status": "sparse_candidate",
+      "calibration_posts": 1,
+      "calibration_example_ids": [
+        "C036"
+      ]
+    },
+    {
+      "code": "f_appraisal",
+      "label": "明确对象评价、褒贬与致敬",
+      "definition": "直接表达对对象、情境、选择、引文或自身某表现的喜欢、好坏、高低、赞许、否定或致敬。",
+      "include": "餐食或景物的明确评价；对自我选择的评价；对引文的喜欢；明确褒扬与致敬。",
+      "exclude": "不从笑、表情、叙事结果推断评价；不据褒贬认定被评者身份、人格或客观品质；一般价值主张归reflection。",
+      "example_ids": [
+        "D007",
+        "D027",
+        "D034",
+        "D045",
+        "D103",
+        "D148"
+      ],
+      "nearest_confusion": "experience_report写自身感觉和反应；reflection将价值判断上升为一般性主张。",
+      "source_open_code": "appraisal",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "开发语料中的重复表达行为；不冒充既有验证量表",
+      "development_posts": 17,
+      "development_authors": 12,
+      "development_example_ids": [
+        "D003",
+        "D007",
+        "D020",
+        "D027",
+        "D034",
+        "D036",
+        "D041",
+        "D045"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 16,
+      "calibration_example_ids": [
+        "C007",
+        "C009",
+        "C012",
+        "C013",
+        "C020",
+        "C037"
+      ]
+    },
+    {
+      "code": "f_caption",
+      "label": "指称式题注与景象描写",
+      "definition": "用主题短语、图序指称或景象描写指出本帖呈现什么，而不必断言个人已经完成某行动。",
+      "include": "地点/主题式短语；明确图序说明；简短动作名；诗性季节景象。",
+      "exclude": "孤立品牌词、不可释义片段或纯符号不硬归本类；具体事件或自身活动更新优先用activity_update。",
+      "example_ids": [
+        "D022",
+        "D038",
+        "D092",
+        "D111",
+        "D116",
+        "D125"
+      ],
+      "nearest_confusion": "activity_update需要行动/事件或进度框架；信息不足不能用题注作为兜底。",
+      "source_open_code": "caption",
+      "basis": "开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。",
+      "literature_connection": "开发语料中的重复表达行为；不冒充既有验证量表",
+      "development_posts": 10,
+      "development_authors": 8,
+      "development_example_ids": [
+        "D022",
+        "D038",
+        "D062",
+        "D092",
+        "D111",
+        "D115",
+        "D116",
+        "D124"
+      ],
+      "status": "development_supported_candidate",
+      "calibration_posts": 9,
+      "calibration_example_ids": [
+        "C012",
+        "C017",
+        "C026",
+        "C027",
+        "C034",
+        "C040"
+      ]
+    },
+    {
+      "code": "f_gratitude",
+      "label": "明确感谢表达",
+      "definition": "正文对对象执行感谢或感恩表达，观察该话语形式，不推断真诚、实际获助或心理感激。",
+      "include": [
+        "明确感谢/感恩且有对象",
+        "幽默表达仍可含感谢话语，但须备注语境"
+      ],
+      "exclude": [
+        "只有赞美、喜欢、致敬或问候",
+        "感谢不能证明已收到社会支持"
+      ],
+      "example_ids": [
+        "C037",
+        "C075"
+      ],
+      "nearest_confusion": "appraisal是褒贬；greeting_wish是祝愿；本类需要感谢表达。",
+      "development_posts": 0,
+      "development_authors": 0,
+      "status": "sparse_candidate_added_from_calibration",
+      "basis": "校准中的真实遗漏行为；回查160条开发正文仍无明确阳性，不为训练凑样本。",
+      "calibration_posts": 2,
+      "calibration_example_ids": [
+        "C037",
+        "C075"
+      ]
+    },
+    {
+      "code": "f_sale_offer",
+      "label": "商品服务供给与交易告知",
+      "definition": "明确给出商品/服务供给、售卖、价格或交易条款。",
+      "include": [
+        "商品报价、退换条款等交易内容"
+      ],
+      "exclude": [
+        "只推荐既有课程或食品用途",
+        "不由产品名推收费广告、作者职业或成交"
+      ],
+      "example_ids": [
+        "C007"
+      ],
+      "nearest_confusion": "explanation是可泛化说明；practical_guidance是如何操作；本类是具体供给/条款。",
+      "development_posts": 0,
+      "development_authors": 0,
+      "status": "sparse_candidate_added_from_calibration",
+      "basis": "校准中的真实遗漏行为；回查160条开发正文仍无明确阳性，不为训练凑样本。",
+      "calibration_posts": 1,
+      "calibration_example_ids": [
+        "C007"
+      ]
+    },
+    {
+      "code": "f_other_expression",
+      "label": "其他可辨识表达行为",
+      "definition": "存在当前既有功能不能表达的具体话语行为，如明确的谐音段子、幻想叙事；必须在note描述缺口。可与另有证据的功能并列。",
+      "include": [
+        "校准出现的想象段子/反转叙事/谐音双关"
+      ],
+      "exclude": [
+        "不可解释片段、空正文和纯符号",
+        "不能因所有文本都有修辞就普遍加其他",
+        "已有格言/体验/记录足够覆盖时不重复归入"
+      ],
+      "example_ids": [
+        "C006",
+        "C030",
+        "C044",
+        "C080"
+      ],
+      "nearest_confusion": "activity_update只指被呈报为已发生/当下的事件框架，不把假设情景当实际经历。",
+      "development_posts": 0,
+      "development_authors": 0,
+      "status": "sparse_candidate_added_from_calibration",
+      "basis": "校准中的真实遗漏行为；回查160条开发正文仍无明确阳性，不为训练凑样本。",
+      "calibration_posts": 4,
+      "calibration_example_ids": [
+        "C006",
+        "C030",
+        "C044",
+        "C080"
+      ]
+    }
+  ],
+  "content_subdomains": [
+    {
+      "code": "exercise",
+      "label": "运动与身体活动",
+      "definition": "以具体身体活动、运动、训练方案、赛事、体适能目标或运动经验为可辨话题；作者和被描述者均可为活动主体。",
+      "include": [
+        "跑步、骑行、步行、力量、划船、舞蹈、拉伸、靠墙练习、马拉松等统一上位域",
+        "项目仅可作后续子类，不为互斥平级领域",
+        "一般行走也属于身体活动，不强求训练动机"
+      ],
+      "exclude": [
+        "汗、疲累、场所、打卡或品牌不单独证明运动",
+        "单字练未给身体动作或项目时保留未指明"
+      ],
+      "example_ids": [
+        "D006",
+        "D033",
+        "D073",
+        "D083",
+        "D116",
+        "D139"
+      ],
+      "nearest_confusion": [
+        "body：感觉本身不能倒推运动",
+        "weight：减脂可未给运动行为",
+        "platform：等级奖励未必运动"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "weight",
+      "label": "体重、减脂与身体形态管理",
+      "definition": "体重数值、胖瘦、脂肪或肌肉形态，以及改变或评价身形的明确目标、经历或建议。",
+      "include": [
+        "减脂、减肥、体重升降、围度、紧致、塑身、胸肌外观",
+        "允许与运动、饮食共同出现"
+      ],
+      "exclude": [
+        "训练某部位本身未表达形态目标时只标运动",
+        "营养词或食材不能单独证明减重目标"
+      ],
+      "example_ids": [
+        "D012",
+        "D015",
+        "D041",
+        "D042",
+        "D107",
+        "D115"
+      ],
+      "nearest_confusion": [
+        "exercise：运动方法与身体变化目标不同",
+        "food：膳食与体重管理可以独立"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "food",
+      "label": "饮食、食物与营养",
+      "definition": "围绕食物、用餐、食材采购、饮食欲望、膳食安排或营养摄取的实际主题。",
+      "include": [
+        "菜品、早餐、外卖计划、买菜、想吃好吃的",
+        "碳水、蛋白质、餐次、饮食控制"
+      ],
+      "exclude": [
+        "背景食物或类比不机械增加标签",
+        "食材不能证明是减脂餐或实际热量"
+      ],
+      "example_ids": [
+        "D007",
+        "D036",
+        "D066",
+        "D088",
+        "D120",
+        "D128"
+      ],
+      "nearest_confusion": [
+        "weight：饮食不必服务减脂",
+        "body：进食后的症状可主要是健康主题"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "body",
+      "label": "身体感受、健康与休息",
+      "definition": "明确身体感觉、症状、健康保护、体力精力、疲累或休息经历；不要求证明疾病或训练来源。",
+      "include": [
+        "僵硬、腿沉、出汗、酸胀、手指发木、疲累、生病",
+        "体力精力、午睡、防伤和膝盖保护"
+      ],
+      "exclude": [
+        "泛称状态或好很多且无身体对象不够",
+        "主观疾病比喻不升级为确诊，情绪词也不自动等于健康"
+      ],
+      "example_ids": [
+        "D011",
+        "D019",
+        "D055",
+        "D068",
+        "D075",
+        "D104",
+        "D153"
+      ],
+      "nearest_confusion": [
+        "exercise：反应不可倒推训练",
+        "family：子女健康可与照料共现"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "life",
+      "label": "人生观、处世与自我调适",
+      "definition": "对人生、幸福、目标、成长、善恶或应对处境提出可复述命题，或展开有实质内容的生活反思。",
+      "include": [
+        "幸福、适度、知足、顺其自然、自我价值",
+        "成长与快乐变化、目标奋斗、坚持与视角的普遍反思"
+      ],
+      "exclude": [
+        "早安、晚安、加油、努力、高兴等泛用表达本身不足",
+        "提生活二字不自动编码；仅体育内坚持动员可只属运动"
+      ],
+      "example_ids": [
+        "D004",
+        "D009",
+        "D029",
+        "D052",
+        "D061",
+        "D091",
+        "D150"
+      ],
+      "nearest_confusion": [
+        "domain_unspecified：口号缺实质命题",
+        "social：关系回忆可与人生反思共现"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "social",
+      "label": "人际关系与陪伴",
+      "definition": "非仅礼貌表达的人际陪伴、结交、关系回忆、同伴相遇或入群关系诉求。",
+      "include": [
+        "陪伴、交友邀请、共同时间回忆、同伴相遇",
+        "明确请求加入同伴群体"
+      ],
+      "exclude": [
+        "问候、泛称称赞、祝福、感谢本身属于表达方式",
+        "不擅自指定恋爱、朋友或家庭身份"
+      ],
+      "example_ids": [
+        "D038",
+        "D061",
+        "D067",
+        "D071",
+        "D124"
+      ],
+      "nearest_confusion": [
+        "family：明确家庭照料另列",
+        "platform：入群关系诉求可与工具问题共现"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "family",
+      "label": "家庭与子女照料",
+      "definition": "明确亲属、子女的生活活动、陪伴、看护、健康或育儿日程。",
+      "include": [
+        "母亲学舞、陪娃上课、孩子重复活动、宝宝生病",
+        "没有孩子打扰时的休息经历"
+      ],
+      "exclude": [
+        "宝宝若是对读者昵称不算亲属",
+        "未指身份的陪伴不推为家属"
+      ],
+      "example_ids": [
+        "D043",
+        "D070",
+        "D074",
+        "D075",
+        "D072"
+      ],
+      "nearest_confusion": [
+        "social：一般陪伴缺亲属身份",
+        "body：子女健康可以共现"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "work_study",
+      "label": "工作、学习与职业",
+      "definition": "明确职业事务、班次和年限、教学沟通、学习实验或职业理想。",
+      "include": [
+        "学情沟通、夜班、工作年限、生理实验与医生理想"
+      ],
+      "exclude": [
+        "孤立上工收工可为活动开始结束，缺工作线索不归入",
+        "陪娃上课未知内容时不自动为作者学习职业"
+      ],
+      "example_ids": [
+        "D025",
+        "D124",
+        "D143",
+        "D151"
+      ],
+      "nearest_confusion": [
+        "culture：知识消费不自动是职业学习",
+        "family：陪子女主要是照料"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "culture",
+      "label": "阅读、知识、艺术与媒体",
+      "definition": "围绕书籍阅读、知识付费、绘画、评书或影视观看的文化知识活动与体验。",
+      "include": [
+        "书的作用、阅读数量、知识付费、画画、听评书、节目评价"
+      ],
+      "exclude": [
+        "舞蹈在语料以身体训练展开时归运动，不以艺术名义拆运动域",
+        "场景中歌曲和引用未独立讨论时不机械增标签"
+      ],
+      "example_ids": [
+        "D003",
+        "D078",
+        "D098",
+        "D108",
+        "D112",
+        "D156"
+      ],
+      "nearest_confusion": [
+        "work_study：非正式文化消费与职业学习不同",
+        "exercise：绘画需体力不证明训练"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "weather",
+      "label": "天气、季节与自然环境",
+      "definition": "天气、温度、季节、天空的明确描述、体验或对活动的成段影响。",
+      "include": [
+        "立冬与气温反差、蓝天、寒风、冬季、寒冷影响设备",
+        "四季天气对运动计划的实质描述"
+      ],
+      "exclude": [
+        "太阳云符号单独出现可能仅装饰",
+        "人生隐喻的阴影阳光不是天气",
+        "运动结束一笔带过的雨仅标时点时不独立增域"
+      ],
+      "example_ids": [
+        "D017",
+        "D022",
+        "D024",
+        "D065",
+        "D102",
+        "D116",
+        "D119"
+      ],
+      "nearest_confusion": [
+        "life：阳光可为隐喻",
+        "appearance：衣裤热不等于外部炎热"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "outing",
+      "label": "出行、地方与游览",
+      "definition": "明确旅行出差日程、在外地活动条件、返程路况、目的地计划和游览。",
+      "include": [
+        "旅行第二日安排、外省出差单车、在郑州骑行条件",
+        "去南京计划、返程路况、动物园游览"
+      ],
+      "exclude": [
+        "只心念某地方或未解释地名不能确定出行",
+        "骑行不自动是旅行；周边场所不必是出游"
+      ],
+      "example_ids": [
+        "D020",
+        "D027",
+        "D030",
+        "D050",
+        "D088",
+        "D139"
+      ],
+      "nearest_confusion": [
+        "exercise：活动可与出行重叠，交通方式未明不猜运动",
+        "domain_unspecified：地方向往不是行程证据"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "appearance",
+      "label": "个人装饰与穿着",
+      "definition": "身体装饰及衣裤手套的实际穿着、需求或运动适用性。",
+      "include": [
+        "纹身、跑步裤装不适、手套需求、抓绒裤太热"
+      ],
+      "exclude": [
+        "肌肉和胖瘦本身归身体形态",
+        "衣物只为长段背景举例时不必独立增域"
+      ],
+      "example_ids": [
+        "D037",
+        "D076",
+        "D104",
+        "D145"
+      ],
+      "nearest_confusion": [
+        "weight：身体形态与衣着不同",
+        "weather：衣物舒适性不证明外部温度"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "platform",
+      "label": "课程工具、记录与奖励机制",
+      "definition": "应用或服务的投屏、课程记录、等级与奖励等具体机制成为主题；不要求点明提供者。",
+      "include": [
+        "等级解锁实物、投屏无法记录卡路里"
+      ],
+      "exclude": [
+        "仅品牌、打卡、次数、坚持不证明机制",
+        "个人训练计划以应用为渠道时可只属运动"
+      ],
+      "example_ids": [
+        "D046",
+        "D071"
+      ],
+      "nearest_confusion": [
+        "exercise：机制不证明项目",
+        "social：群加入关系诉求可以共现"
+      ],
+      "status": "candidate"
+    },
+    {
+      "code": "festival",
+      "label": "节日与新年度祝愿",
+      "definition": "明确节日期待或新年度祝愿成为话题对象。",
+      "include": [
+        "期待圣诞、新年度对特定群体祝福"
+      ],
+      "exclude": [
+        "泛用周末愉快、早安、年份数字不自动归入"
+      ],
+      "example_ids": [
+        "D106",
+        "D160"
+      ],
+      "nearest_confusion": [
+        "domain_unspecified：一般问候缺节日对象",
+        "weather：节日与季候不是同一主题"
+      ],
+      "status": "provisional_sparse"
+    },
+    {
+      "code": "religion",
+      "label": "宗教场所与宗教活动",
+      "definition": "正文明确进入宗教场所或进行仪式，实际叙述活动或受阻经历。",
+      "include": [
+        "去寺庙、无法拜佛"
+      ],
+      "exclude": [
+        "泛道德善恶福祸不足以推断信仰",
+        "不推定宗派、虔诚程度或宗教身份"
+      ],
+      "example_ids": [
+        "D133"
+      ],
+      "nearest_confusion": [
+        "life：道德格言与实践不同",
+        "body：身体状态可使仪式受阻"
+      ],
+      "status": "provisional_singleton"
+    },
+    {
+      "code": "commerce",
+      "label": "消费、交易与商业处境",
+      "definition": "有明确文字指涉的选购、购买、付费、售卖、价格条款、红包金钱利益获取或商家处境。",
+      "include": [
+        "食品实际采购可与饮食共标",
+        "商家反应可作为商业处境，不补出具体事件或原因"
+      ],
+      "exclude": [
+        "商品或品牌名本身",
+        "购买力比喻、价钱背景例举不机械增标签"
+      ],
+      "example_ids": [
+        "D003",
+        "D128",
+        "C001",
+        "C006",
+        "C007",
+        "C071"
+      ],
+      "status": "added_from_calibration_then_development_rechecked"
+    },
+    {
+      "code": "home_housing",
+      "label": "居家环境与装修",
+      "definition": "居住环境、住房或装修本身成为具体讨论内容。",
+      "include": [
+        "装修安排和住宅环境问题"
+      ],
+      "exclude": [
+        "居家训练的场所词、地板动作条件、不明场景不机械增标签"
+      ],
+      "example_ids": [
+        "C078"
+      ],
+      "status": "sparse_candidate_added_from_calibration"
+    }
+  ],
+  "subdomain_to_parent": {
+    "exercise": "d_exercise",
+    "body": "d_body",
+    "weight": "d_body",
+    "food": "d_food",
+    "life": "d_life",
+    "weather": "d_life",
+    "culture": "d_life",
+    "outing": "d_life",
+    "social": "d_life",
+    "family": "d_life",
+    "work_study": "d_life",
+    "appearance": "d_life",
+    "festival": "d_life",
+    "religion": "d_life",
+    "platform": "d_tools",
+    "commerce": "d_life",
+    "home_housing": "d_life"
+  },
+  "parent_aggregation_note": "开发15叶，校准补2叶，共17个可追溯内容细分，按研究任务展示为5个观察父组并保留其他槽；父组不是唯一自然分区或同质构念。计数取帖子并集。",
+  "states": {
+    "observation_state": [
+      "readable",
+      "insufficient",
+      "empty"
+    ],
+    "domain_state": [
+      "specified",
+      "unspecified",
+      "uncertain",
+      "unavailable"
+    ],
+    "domain_unspecified": "正文可表达感受/寒暄/动员，但没有足够内容对象；不等于五/六域已知均不存在。",
+    "insufficient": "符号、数字、片段等不足以解释；不能强行归入题注/其他。"
+  },
+  "coding_rules": [
+    "仅编码正文可直接指出的语义；所有阳性标签必须带原文证据片段。",
+    "同帖可多域、多功能；一个轴可判断不表示另一个轴也可判断。",
+    "未知、缺失与未检出不是一回事。",
+    "转引、格言或解释可按其表达内容编码，但不认定作者信念、人格或知识真实。",
+    "稀疏候选可保留在人审codebook中，不保证可以自动识别或用于回归。",
+    "不新增test中观察到的标签后再回头重算同一留出测试。",
+    "内容主题可依据假想、梦境、否定或转引中明确对象编码，但这不证明真实经历、婚姻、体重或运动发生。",
+    "f_activity_update仅编码被当作已发生/当下事件呈报的文本框架；梦中/假设片段不转为实际身体体验或未来承诺。",
+    "f_practical_guidance须给出具体对象下可执行办法，超过一般努力口号；f_explanation不因具体商品价格而自动增加。",
+    "f_relational_bid须有面向他人的联系或共同参与邀请；单独@、一起的叙事或商业保证不够。",
+    "本版不编码真实心理情绪的正负程度；体验、评价、动员与感谢分开，均不冒充积极人格或社会支持效果。"
+  ],
+  "limitations": [
+    "开发阶段每轴由一个AI任务编码，不是人工双人编码；后续同模型不同上下文AI盲测仍不能替代人工效度。",
+    "父类聚合用于呈现与筛查，不假设其成员对点赞作用相同。"
+  ],
+  "evidence_sources": {
+    "content_open_sha256": "651d32455c9871da5c5eb91df5fc6b4db405e06a6d58ffb22739a0518d0f1b7d",
+    "function_open_sha256": "6959eb76c8ed589db5cbab531aedb6f943c18b0e17be6a828aeac54f744d0538",
+    "literature": "code/classification_rebuild_literature.json",
+    "calibration_content_sha256": "26f72081535034e989991e9e6381e44d707003c51f06dd35d3fc99b4f6bdb3e1",
+    "calibration_functions_sha256": "88e7685b598906d0440186d274c58cdbf128bdcbb4b45b57c86c5b5cb8a669f8",
+    "function_change_review_sha256": "ec3797a58c88840c69394b12ce2aa5d4cefa454c50d408ecf2b455a70c41d725"
+  },
+  "calibration_changes": [
+    {
+      "issue": "开发内容遗漏消费交易和装修",
+      "evidence_ids": [
+        "D003",
+        "D128",
+        "C001",
+        "C006",
+        "C007",
+        "C071",
+        "C078"
+      ],
+      "decision": "增加commerce/home_housing叶并明确归d_life的展示聚合；原开发与严格draft校准不覆盖，另保存v1编码。"
+    },
+    {
+      "issue": "感谢、供给交易和虚构段子不被12功能覆盖",
+      "evidence_ids": [
+        "C007",
+        "C037",
+        "C075",
+        "C006",
+        "C030",
+        "C044",
+        "C080"
+      ],
+      "decision": "新增3个明确行为/开放残余；开发回查阳性仍0，标低支持、不承诺可自动识别。"
+    },
+    {
+      "issue": "谐音愿望和梦中体验易误推实际状态",
+      "evidence_ids": [
+        "C006",
+        "C030",
+        "C044",
+        "C080"
+      ],
+      "decision": "撤C006未来意愿、C030身体体验；添加具体其他行为并清理已解决的不确定项。"
+    },
+    {
+      "issue": "领域/行为与真实事实必须分开",
+      "evidence_ids": [
+        "C030",
+        "C044",
+        "C048",
+        "C078",
+        "C080"
+      ],
+      "decision": "内容对象允许虚构/否定；不据此推断实际行动、疾病、人格、关系或支持。"
+    }
+  ]
+}

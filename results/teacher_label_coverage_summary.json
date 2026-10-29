@@ -1,0 +1,70 @@
+{
+  "seed": 20261029,
+  "posts": 9532,
+  "raw_body_available": 5548,
+  "nonempty_clean_body": 5414,
+  "clean_empty": 4118,
+  "dictionary_any_hit": 1523,
+  "dictionary_no_hit_nonempty": 3891,
+  "dictionary_no_hit_all": 8009,
+  "nmf_assigned": 2470,
+  "nmf_unassigned_nonempty": 2944,
+  "nmf_assigned_share_all": 0.2591271506504406,
+  "nmf_assigned_share_nonempty": 0.45622460288141853,
+  "sample_by_stratum": {
+    "topic_0": 12,
+    "topic_1": 12,
+    "topic_2": 12,
+    "topic_3": 12,
+    "topic_4": 12,
+    "unassigned_nonempty": 20
+  },
+  "sample_note": "12 posts per dominant topic plus 20 nonempty unassigned posts, selected without likes. Equal topic allocations are not a simple random sample. Semantic screening is AI-assisted, single-pass, not independent human validation.",
+  "input_sha256": {
+    "2026Data/Keep Data/sample_post_2022.csv": "74f2ed2878852f00618db3ae0b9f8c468a4f760e603dcb98c8a286a47919582c",
+    "results/post_features.csv": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+    "results/extension_post_topics.csv": "b4162fabd04eec0191fd431322246d26263a35bcfdd91fcb6e77b40f2be003f5"
+  },
+  "single_ai_review": {
+    "by_original_dominant_topic": {
+      "0": {
+        "supports": 8,
+        "partial": 2,
+        "outside": 2,
+        "insufficient": 0
+      },
+      "1": {
+        "supports": 10,
+        "partial": 1,
+        "outside": 0,
+        "insufficient": 1
+      },
+      "2": {
+        "supports": 7,
+        "partial": 1,
+        "outside": 4,
+        "insufficient": 0
+      },
+      "3": {
+        "supports": 7,
+        "partial": 0,
+        "outside": 4,
+        "insufficient": 1
+      },
+      "4": {
+        "supports": 8,
+        "partial": 2,
+        "outside": 2,
+        "insufficient": 0
+      }
+    },
+    "total": {
+      "supports": 40,
+      "partial": 6,
+      "outside": 12,
+      "insufficient": 2
+    },
+    "caution": "这里的outside指不支持分配到的具体名称，不表示一定不属于其余四类。对生活类名称过窄的判断需人工讨论。仅据60条分层样本不能估计全样本错误率，也不能宣称已证实多数帖子都在五类之外。",
+    "reviewer_type": "single AI-assisted semantic screening by the primary coding agent; not independent human validation"
+  }
+}

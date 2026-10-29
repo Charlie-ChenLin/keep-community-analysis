@@ -1,0 +1,1215 @@
+{
+  "schema_version": "1.0",
+  "version": "classification_recognizer_v1",
+  "status": "not-ready-human",
+  "interpretation": "仅正文的AI开发初筛识别器，状态not-ready-human；分数不是语义正确概率。类别由独立语料归纳与codebook定义，训练及阈值仅决定检测规则。AI-only预验证不能替代人工效度验证，不可用于正式主题回归。NA表示未支持、正文不可处理或领域未通过适用性门控；0只表示未检出信号，不证明语义不存在。",
+  "training_source": "AI-only development and calibration annotations",
+  "semantic_class_definition": "codebook only; classifier fit/calibration does not choose semantic classes",
+  "features": {
+    "source": "正文 only",
+    "forbidden_features": [
+      "likes",
+      "comments",
+      "author",
+      "interaction_counts",
+      "legacy_labels"
+    ],
+    "vectorizer": "TfidfVectorizer",
+    "analyzer": "char",
+    "ngram_range": [
+      2,
+      4
+    ],
+    "min_df": 2,
+    "max_features": 16000,
+    "sublinear_tf": true
+  },
+  "estimator": {
+    "name": "LogisticRegression",
+    "C": 1.0,
+    "class_weight": "balanced",
+    "solver": "liblinear",
+    "random_state": 20261029,
+    "max_iter": 1000
+  },
+  "threshold_selection": {
+    "candidates": [
+      0.35,
+      0.5,
+      0.65,
+      0.8
+    ],
+    "objective": "calibration F1",
+    "tie_break": "higher_threshold",
+    "minimum_calibration_positive": 3,
+    "minimum_calibration_negative": 3,
+    "fallback": 0.5
+  },
+  "training_minimum": {
+    "positive": 5,
+    "negative": 5
+  },
+  "eligibility": {
+    "domains": "readable text; domain_state=specified; label not uncertain",
+    "functions": "readable text; label not uncertain",
+    "domain_specificity": "readable text; specified positive versus unspecified negative; uncertain/unavailable excluded"
+  },
+  "codebook_path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/code/classification_codebook_v1.json",
+  "codebook_sha256": "a5792bc359f918f405d9c5b45051b1746f7123e1855e068d136d807fd36fdeb4",
+  "model_path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/classifier_v1.joblib",
+  "model_sha256": "d0d5351dd82c617483027103cbfd33d3cafc0a9fb07fe73ae7a1af4431d57e04",
+  "implementation_sha256": "d8d83c8ed6f9d2ee2d1f45c7d0594565c1596ceaa409b5a3c815e3ab10e28242",
+  "input_sha256": {
+    "development_input": "6d7835ccbde21cf90a5133e10e04c6f96ebe4e393b03961ffc7b243e1d0f9648",
+    "development_coding": "e17a6ac39dbbb3deb1db6f5304ede86e000c3c99089d44e0128ce0d2484548b6",
+    "calibration_input": "f2c10ca5b5f3460e8a96cf44378b482ca4b69ec289fde419e1bdb9711b1eddb2",
+    "calibration_coding": "89db0d6c9206e88b04ab44131d7f3e503c2027c7d4c85b27e749f2b3b81ed51d"
+  },
+  "sample_counts": {
+    "development": 160,
+    "calibration": 80,
+    "vocabulary_development_readable": 155
+  },
+  "vocabulary": {
+    "status": "fitted_development_only",
+    "size": 1210,
+    "sha256": "853009d7aa8115bd130c0c6a988560ac22fd52d32ccdb431ab670b6dbcdef156",
+    "private_location": "classifier_v1.joblib: vectorizer.vocabulary_",
+    "fit_scope": "development only"
+  },
+  "software": {
+    "scikit_learn": "1.5.1",
+    "joblib": "1.4.2"
+  },
+  "labels": [
+    {
+      "code": "domain_specificity",
+      "label": "领域适用性门控",
+      "axis": "gate",
+      "development": {
+        "eligible": 152,
+        "positive": 124,
+        "negative": 28,
+        "excluded": 8,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "domain_unavailable": 5,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 72,
+        "positive": 62,
+        "negative": 10,
+        "excluded": 8,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1,
+          "domain_unavailable": 1,
+          "domain_uncertain": 4
+        }
+      },
+      "supported": true,
+      "threshold": 0.35,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 62,
+          "FP": 9,
+          "FN": 0,
+          "F1": 0.9323308270676691
+        },
+        {
+          "threshold": 0.5,
+          "TP": 58,
+          "FP": 9,
+          "FN": 4,
+          "F1": 0.8992248062015504
+        },
+        {
+          "threshold": 0.65,
+          "TP": 9,
+          "FP": 0,
+          "FN": 53,
+          "F1": 0.2535211267605634
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 62,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "d_exercise",
+      "label": "运动与身体活动",
+      "axis": "domains",
+      "development": {
+        "eligible": 124,
+        "positive": 61,
+        "negative": 63,
+        "excluded": 36,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "domain_unavailable": 5,
+          "domain_unspecified": 29,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 62,
+        "positive": 16,
+        "negative": 46,
+        "excluded": 18,
+        "exclusion_reasons": {
+          "domain_unspecified": 10,
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1,
+          "domain_unavailable": 1,
+          "domain_uncertain": 4,
+          "label_uncertain": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.5,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 16,
+          "FP": 45,
+          "FN": 0,
+          "F1": 0.4155844155844156
+        },
+        {
+          "threshold": 0.5,
+          "TP": 8,
+          "FP": 12,
+          "FN": 8,
+          "F1": 0.4444444444444444
+        },
+        {
+          "threshold": 0.65,
+          "TP": 1,
+          "FP": 1,
+          "FN": 15,
+          "F1": 0.1111111111111111
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 16,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "d_body",
+      "label": "身体状态、体重与外形",
+      "axis": "domains",
+      "development": {
+        "eligible": 124,
+        "positive": 32,
+        "negative": 92,
+        "excluded": 36,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "domain_unavailable": 5,
+          "domain_unspecified": 29,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 62,
+        "positive": 11,
+        "negative": 51,
+        "excluded": 18,
+        "exclusion_reasons": {
+          "domain_unspecified": 10,
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1,
+          "domain_unavailable": 1,
+          "domain_uncertain": 4,
+          "label_uncertain": 2
+        }
+      },
+      "supported": true,
+      "threshold": 0.5,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 11,
+          "FP": 50,
+          "FN": 0,
+          "F1": 0.3055555555555556
+        },
+        {
+          "threshold": 0.5,
+          "TP": 3,
+          "FP": 2,
+          "FN": 8,
+          "F1": 0.375
+        },
+        {
+          "threshold": 0.65,
+          "TP": 0,
+          "FP": 0,
+          "FN": 11,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 11,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "d_food",
+      "label": "饮食、食物与营养",
+      "axis": "domains",
+      "development": {
+        "eligible": 124,
+        "positive": 11,
+        "negative": 113,
+        "excluded": 36,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "domain_unavailable": 5,
+          "domain_unspecified": 29,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 62,
+        "positive": 19,
+        "negative": 43,
+        "excluded": 18,
+        "exclusion_reasons": {
+          "domain_unspecified": 10,
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1,
+          "domain_unavailable": 1,
+          "domain_uncertain": 4
+        }
+      },
+      "supported": true,
+      "threshold": 0.35,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 13,
+          "FP": 11,
+          "FN": 6,
+          "F1": 0.6046511627906976
+        },
+        {
+          "threshold": 0.5,
+          "TP": 0,
+          "FP": 1,
+          "FN": 19,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.65,
+          "TP": 0,
+          "FP": 0,
+          "FN": 19,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 19,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "d_life",
+      "label": "生活、关系与社会文化话题",
+      "axis": "domains",
+      "development": {
+        "eligible": 124,
+        "positive": 63,
+        "negative": 61,
+        "excluded": 36,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "domain_unavailable": 5,
+          "domain_unspecified": 29,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 62,
+        "positive": 37,
+        "negative": 25,
+        "excluded": 18,
+        "exclusion_reasons": {
+          "domain_unspecified": 10,
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1,
+          "domain_unavailable": 1,
+          "domain_uncertain": 4,
+          "label_uncertain": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.5,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 37,
+          "FP": 23,
+          "FN": 0,
+          "F1": 0.7628865979381443
+        },
+        {
+          "threshold": 0.5,
+          "TP": 30,
+          "FP": 11,
+          "FN": 7,
+          "F1": 0.7692307692307693
+        },
+        {
+          "threshold": 0.65,
+          "TP": 0,
+          "FP": 0,
+          "FN": 37,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 37,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "d_tools",
+      "label": "工具、服务与记录奖励机制",
+      "axis": "domains",
+      "development": {
+        "eligible": 124,
+        "positive": 2,
+        "negative": 122,
+        "excluded": 36,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "domain_unavailable": 5,
+          "domain_unspecified": 29,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 62,
+        "positive": 2,
+        "negative": 60,
+        "excluded": 18,
+        "exclusion_reasons": {
+          "domain_unspecified": 10,
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1,
+          "domain_unavailable": 1,
+          "domain_uncertain": 4
+        }
+      },
+      "supported": false,
+      "threshold": null,
+      "calibration_status": "not_supported",
+      "threshold_trials": [],
+      "keep_manual_candidate": true,
+      "unsupported_reason": "development_requires_at_least_5_positive_and_5_negative"
+    },
+    {
+      "code": "d_other",
+      "label": "其他明确内容",
+      "axis": "domains",
+      "development": {
+        "eligible": 124,
+        "positive": 0,
+        "negative": 124,
+        "excluded": 36,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "domain_unavailable": 5,
+          "domain_unspecified": 29,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 62,
+        "positive": 0,
+        "negative": 62,
+        "excluded": 18,
+        "exclusion_reasons": {
+          "domain_unspecified": 10,
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1,
+          "domain_unavailable": 1,
+          "label_uncertain": 1,
+          "domain_uncertain": 4
+        }
+      },
+      "supported": false,
+      "threshold": null,
+      "calibration_status": "not_supported",
+      "threshold_trials": [],
+      "keep_manual_candidate": true,
+      "unsupported_reason": "development_requires_at_least_5_positive_and_5_negative"
+    },
+    {
+      "code": "f_activity_update",
+      "label": "行动、进度与日常事件呈报",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 67,
+        "negative": 87,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 42,
+        "negative": 34,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.35,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 41,
+          "FP": 33,
+          "FN": 1,
+          "F1": 0.7068965517241379
+        },
+        {
+          "threshold": 0.5,
+          "TP": 23,
+          "FP": 11,
+          "FN": 19,
+          "F1": 0.6052631578947368
+        },
+        {
+          "threshold": 0.65,
+          "TP": 1,
+          "FP": 0,
+          "FN": 41,
+          "F1": 0.046511627906976744
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 42,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_experience_report",
+      "label": "身体感受与主观体验自述",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 35,
+        "negative": 119,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 15,
+        "negative": 61,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.35,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 15,
+          "FP": 58,
+          "FN": 0,
+          "F1": 0.3409090909090909
+        },
+        {
+          "threshold": 0.5,
+          "TP": 3,
+          "FP": 5,
+          "FN": 12,
+          "F1": 0.2608695652173913
+        },
+        {
+          "threshold": 0.65,
+          "TP": 0,
+          "FP": 0,
+          "FN": 15,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 15,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_future_intention",
+      "label": "计划、目标与期待",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 14,
+        "negative": 140,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 7,
+        "negative": 69,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.35,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 5,
+          "FP": 21,
+          "FN": 2,
+          "F1": 0.30303030303030304
+        },
+        {
+          "threshold": 0.5,
+          "TP": 1,
+          "FP": 1,
+          "FN": 6,
+          "F1": 0.2222222222222222
+        },
+        {
+          "threshold": 0.65,
+          "TP": 0,
+          "FP": 0,
+          "FN": 7,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 7,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_explanation",
+      "label": "可泛化信息与机制解释",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 12,
+        "negative": 142,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 4,
+        "negative": 72,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.65,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 2,
+          "FP": 5,
+          "FN": 2,
+          "F1": 0.36363636363636365
+        },
+        {
+          "threshold": 0.5,
+          "TP": 2,
+          "FP": 1,
+          "FN": 2,
+          "F1": 0.5714285714285714
+        },
+        {
+          "threshold": 0.65,
+          "TP": 2,
+          "FP": 0,
+          "FN": 2,
+          "F1": 0.6666666666666666
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 4,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_practical_guidance",
+      "label": "方法与可执行建议",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 12,
+        "negative": 142,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 75,
+        "positive": 1,
+        "negative": 74,
+        "excluded": 5,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "label_uncertain": 1,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.5,
+      "calibration_status": "uncalibrated_insufficient_support",
+      "threshold_trials": [],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_reflection",
+      "label": "概括性议论、格言与价值主张",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 31,
+        "negative": 123,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 14,
+        "negative": 62,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.5,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 14,
+          "FP": 54,
+          "FN": 0,
+          "F1": 0.34146341463414637
+        },
+        {
+          "threshold": 0.5,
+          "TP": 6,
+          "FP": 8,
+          "FN": 8,
+          "F1": 0.42857142857142855
+        },
+        {
+          "threshold": 0.65,
+          "TP": 0,
+          "FP": 0,
+          "FN": 14,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 14,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_exhortation",
+      "label": "行动号召与自我提醒",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 20,
+        "negative": 134,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 74,
+        "positive": 5,
+        "negative": 69,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "label_uncertain": 2,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.5,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 5,
+          "FP": 49,
+          "FN": 0,
+          "F1": 0.1694915254237288
+        },
+        {
+          "threshold": 0.5,
+          "TP": 2,
+          "FP": 5,
+          "FN": 3,
+          "F1": 0.3333333333333333
+        },
+        {
+          "threshold": 0.65,
+          "TP": 0,
+          "FP": 0,
+          "FN": 5,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 5,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_greeting_wish",
+      "label": "寒暄与祝愿",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 13,
+        "negative": 141,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 75,
+        "positive": 6,
+        "negative": 69,
+        "excluded": 5,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1,
+          "label_uncertain": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.65,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 1,
+          "FP": 0,
+          "FN": 5,
+          "F1": 0.2857142857142857
+        },
+        {
+          "threshold": 0.5,
+          "TP": 1,
+          "FP": 0,
+          "FN": 5,
+          "F1": 0.2857142857142857
+        },
+        {
+          "threshold": 0.65,
+          "TP": 1,
+          "FP": 0,
+          "FN": 5,
+          "F1": 0.2857142857142857
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 6,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_relational_bid",
+      "label": "明确联络或共同参与邀请",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 2,
+        "negative": 152,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 74,
+        "positive": 0,
+        "negative": 74,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "label_uncertain": 2,
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": false,
+      "threshold": null,
+      "calibration_status": "not_supported",
+      "threshold_trials": [],
+      "keep_manual_candidate": true,
+      "unsupported_reason": "development_requires_at_least_5_positive_and_5_negative"
+    },
+    {
+      "code": "f_reader_response_request",
+      "label": "明确面向他人的回应征询",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 2,
+        "negative": 152,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 1,
+        "negative": 75,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": false,
+      "threshold": null,
+      "calibration_status": "not_supported",
+      "threshold_trials": [],
+      "keep_manual_candidate": true,
+      "unsupported_reason": "development_requires_at_least_5_positive_and_5_negative"
+    },
+    {
+      "code": "f_appraisal",
+      "label": "明确对象评价、褒贬与致敬",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 17,
+        "negative": 137,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 16,
+        "negative": 60,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.35,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 14,
+          "FP": 53,
+          "FN": 2,
+          "F1": 0.3373493975903614
+        },
+        {
+          "threshold": 0.5,
+          "TP": 2,
+          "FP": 4,
+          "FN": 14,
+          "F1": 0.18181818181818182
+        },
+        {
+          "threshold": 0.65,
+          "TP": 0,
+          "FP": 0,
+          "FN": 16,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 16,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_caption",
+      "label": "指称式题注与景象描写",
+      "axis": "functions",
+      "development": {
+        "eligible": 154,
+        "positive": 10,
+        "negative": 144,
+        "excluded": 6,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2,
+          "label_uncertain": 1
+        }
+      },
+      "calibration": {
+        "eligible": 75,
+        "positive": 9,
+        "negative": 66,
+        "excluded": 5,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1,
+          "label_uncertain": 1
+        }
+      },
+      "supported": true,
+      "threshold": 0.35,
+      "calibration_status": "calibrated_AI_only",
+      "threshold_trials": [
+        {
+          "threshold": 0.35,
+          "TP": 1,
+          "FP": 3,
+          "FN": 8,
+          "F1": 0.15384615384615385
+        },
+        {
+          "threshold": 0.5,
+          "TP": 0,
+          "FP": 1,
+          "FN": 9,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.65,
+          "TP": 0,
+          "FP": 0,
+          "FN": 9,
+          "F1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "TP": 0,
+          "FP": 0,
+          "FN": 9,
+          "F1": 0.0
+        }
+      ],
+      "keep_manual_candidate": false
+    },
+    {
+      "code": "f_gratitude",
+      "label": "明确感谢表达",
+      "axis": "functions",
+      "development": {
+        "eligible": 155,
+        "positive": 0,
+        "negative": 155,
+        "excluded": 5,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 2,
+        "negative": 74,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": false,
+      "threshold": null,
+      "calibration_status": "not_supported",
+      "threshold_trials": [],
+      "keep_manual_candidate": true,
+      "unsupported_reason": "development_requires_at_least_5_positive_and_5_negative"
+    },
+    {
+      "code": "f_sale_offer",
+      "label": "商品服务供给与交易告知",
+      "axis": "functions",
+      "development": {
+        "eligible": 155,
+        "positive": 0,
+        "negative": 155,
+        "excluded": 5,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 1,
+        "negative": 75,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": false,
+      "threshold": null,
+      "calibration_status": "not_supported",
+      "threshold_trials": [],
+      "keep_manual_candidate": true,
+      "unsupported_reason": "development_requires_at_least_5_positive_and_5_negative"
+    },
+    {
+      "code": "f_other_expression",
+      "label": "其他可辨识表达行为",
+      "axis": "functions",
+      "development": {
+        "eligible": 155,
+        "positive": 0,
+        "negative": 155,
+        "excluded": 5,
+        "exclusion_reasons": {
+          "observation_insufficient": 3,
+          "body_symbols_or_digits_only": 2
+        }
+      },
+      "calibration": {
+        "eligible": 76,
+        "positive": 4,
+        "negative": 72,
+        "excluded": 4,
+        "exclusion_reasons": {
+          "body_symbols_or_digits_only": 3,
+          "observation_insufficient": 1
+        }
+      },
+      "supported": false,
+      "threshold": null,
+      "calibration_status": "not_supported",
+      "threshold_trials": [],
+      "keep_manual_candidate": true,
+      "unsupported_reason": "development_requires_at_least_5_positive_and_5_negative"
+    }
+  ],
+  "holdout_accessed": false,
+  "required_freeze": "freeze this config, codebook and model artifact before holdout prediction"
+}

@@ -1,0 +1,18 @@
+{
+  "count_method": "stdlib CSV iteration and boolean tuples, independently of the analysis vectorization",
+  "count_checks_passed": 63,
+  "manual_model_method": "Patsy documented design, scipy QR coefficients, manually aggregated cluster scores and sandwich covariance with G/(G-1)*(N-1)/(N-K) correction; t/F df=G-1",
+  "manual_main_threshold": 0.2,
+  "manual_model_n": 2470,
+  "manual_model_clusters": 86,
+  "manual_model_parameters": 171,
+  "max_absolute_difference": {
+    "coef": 1.8041124150158794e-15,
+    "se_cluster": 1.7486012637846216e-15,
+    "p": 1.6653345369377348e-14,
+    "ci_low": 2.192690473634684e-15,
+    "ci_high": 4.579669976578771e-15,
+    "joint_p": 0.0
+  },
+  "all_checks_passed": true
+}

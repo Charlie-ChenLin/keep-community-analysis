@@ -1,0 +1,175 @@
+{
+  "models": [
+    {
+      "model": "original_all_posts",
+      "n": 9532,
+      "authors": 100,
+      "joint_five_p": 0.12979354832338244,
+      "r_squared": 0.6879788358743069,
+      "terms": [
+        {
+          "term": "log_length",
+          "coef": 0.02797816484904915,
+          "se_cluster": 0.018325765205962918,
+          "p": 0.13002127494181073,
+          "q_bh": 0.2926331218519108,
+          "ci_low": -0.008384129121990477,
+          "ci_high": 0.06434045882008878
+        },
+        {
+          "term": "self_discipline",
+          "coef": -0.11922494082182922,
+          "se_cluster": 0.08739181062019705,
+          "p": 0.17557987311114648,
+          "q_bh": 0.2926331218519108,
+          "ci_low": -0.2926292528774607,
+          "ci_high": 0.05417937123380229
+        },
+        {
+          "term": "social_address",
+          "coef": -0.004338472406973881,
+          "se_cluster": 0.06366233126453064,
+          "p": 0.9458051227127672,
+          "q_bh": 0.9458051227127672,
+          "ci_low": -0.13065834927461675,
+          "ci_high": 0.12198140446066899
+        },
+        {
+          "term": "positive_expression",
+          "coef": -0.08551585485492838,
+          "se_cluster": 0.034841313303375886,
+          "p": 0.01585600952421527,
+          "q_bh": 0.07928004762107634,
+          "ci_low": -0.1546485793243118,
+          "ci_high": -0.016383130385544967
+        },
+        {
+          "term": "question",
+          "coef": 0.10777260702889485,
+          "se_cluster": 0.10488197203173115,
+          "p": 0.3066605424967028,
+          "q_bh": 0.38332567812087853,
+          "ci_low": -0.10033597978412565,
+          "ci_high": 0.3158811938419154
+        }
+      ]
+    },
+    {
+      "model": "raw_body_available",
+      "n": 5548,
+      "authors": 95,
+      "joint_five_p": 0.06704487579530498,
+      "r_squared": 0.5183278564381318,
+      "terms": [
+        {
+          "term": "log_length",
+          "coef": 0.036954101858884536,
+          "se_cluster": 0.01797471116096265,
+          "p": 0.04256544729907434,
+          "q_bh": 0.10641361824768585,
+          "ci_low": 0.0012648914880119128,
+          "ci_high": 0.07264331222975716
+        },
+        {
+          "term": "self_discipline",
+          "coef": -0.1349572274354307,
+          "se_cluster": 0.07201243671681293,
+          "p": 0.06402505206879995,
+          "q_bh": 0.1067084201146666,
+          "ci_low": -0.27793960864259815,
+          "ci_high": 0.00802515377173671
+        },
+        {
+          "term": "social_address",
+          "coef": 0.03557366381650326,
+          "se_cluster": 0.0663842095068537,
+          "p": 0.593310425137051,
+          "q_bh": 0.593310425137051,
+          "ci_low": -0.09623374032913862,
+          "ci_high": 0.16738106796214514
+        },
+        {
+          "term": "positive_expression",
+          "coef": -0.08968960103843596,
+          "se_cluster": 0.03741672275014753,
+          "p": 0.018505793920571334,
+          "q_bh": 0.09252896960285667,
+          "ci_low": -0.16398138117667732,
+          "ci_high": -0.015397820900194578
+        },
+        {
+          "term": "question",
+          "coef": 0.0969280595993658,
+          "se_cluster": 0.099350476544755,
+          "p": 0.331758142750721,
+          "q_bh": 0.4146976784384013,
+          "ci_low": -0.10033464054086345,
+          "ci_high": 0.2941907597395951
+        }
+      ]
+    },
+    {
+      "model": "nonempty_clean_body_only",
+      "n": 5414,
+      "authors": 95,
+      "joint_five_p": 0.03986798769915557,
+      "r_squared": 0.5204912126881107,
+      "terms": [
+        {
+          "term": "log_length",
+          "coef": 0.046307274914719615,
+          "se_cluster": 0.01754704504872532,
+          "p": 0.00973283315326407,
+          "q_bh": 0.04820109089276046,
+          "ci_low": 0.011467205634986169,
+          "ci_high": 0.08114734419445306
+        },
+        {
+          "term": "self_discipline",
+          "coef": -0.1373197135568752,
+          "se_cluster": 0.07221785388325375,
+          "p": 0.06030390090897768,
+          "q_bh": 0.1005065015149628,
+          "ci_low": -0.2807099553633726,
+          "ci_high": 0.006070528249622259
+        },
+        {
+          "term": "social_address",
+          "coef": 0.028444031941484604,
+          "se_cluster": 0.06428766873328814,
+          "p": 0.6591805326655635,
+          "q_bh": 0.6591805326655635,
+          "ci_low": -0.09920064135141372,
+          "ci_high": 0.15608870523438292
+        },
+        {
+          "term": "positive_expression",
+          "coef": -0.08878968729674709,
+          "se_cluster": 0.03729030816426185,
+          "p": 0.019280436357104185,
+          "q_bh": 0.04820109089276046,
+          "ci_low": -0.1628304683113186,
+          "ci_high": -0.01474890628217558
+        },
+        {
+          "term": "question",
+          "coef": 0.09557081771900813,
+          "se_cluster": 0.09914698785079361,
+          "p": 0.3375539827638857,
+          "q_bh": 0.4219424784548571,
+          "ci_low": -0.10128785084920594,
+          "ci_high": 0.2924294862872222
+        }
+      ]
+    }
+  ],
+  "definition_note": "has_text marks raw visible body; length>0 marks nonempty cleaned body. Neither filtering nor a missingness indicator recovers unrecorded text. These fits compare different observed populations and do not establish causality.",
+  "multiple_testing_note": "BH applied to five focal coefficients separately within each specification; no correction over all exploratory specifications. Do not select a model by significance.",
+  "source_sha256": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+  "independent_verification": {
+    "method": "independent numpy least squares and manually aggregated author sandwich, t/F df=G-1",
+    "max_focal_coefficient_error": 1.582067810090848e-15,
+    "max_focal_se_error": 1.5959455978986625e-15,
+    "joint_p_error": 1.8457457784393227e-15
+  }
+}

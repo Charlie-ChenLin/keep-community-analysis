@@ -1,0 +1,129 @@
+{
+  "purpose": "老师反馈：主题含义可并存，明确连续权重、主导分类与探索性多标签的区别。",
+  "as_of": "2026-10-29",
+  "documents": 2470,
+  "authors": 86,
+  "all_posts": 9532,
+  "excluded_from_frozen_assigned_topics": 7062,
+  "fitted_documents_original": 2478,
+  "near_zero_contribution_excluded_original": 8,
+  "fractional_weight_documents": 2188,
+  "fractional_weight_entries": 7450,
+  "original_dominant_counts": [
+    85,
+    85,
+    1302,
+    113,
+    885
+  ],
+  "labels": {
+    "0": "靠墙静蹲记录",
+    "1": "骑行里程记录",
+    "2": "运动与训练交流",
+    "3": "跑步与训练打卡",
+    "4": "生活感悟与问候"
+  },
+  "primary_threshold": 0.2,
+  "thresholds": [
+    0.15,
+    0.2,
+    0.25
+  ],
+  "threshold_definition": "topic_present_k = 1 if the frozen normalized NMF weight w_k >= threshold; else 0",
+  "threshold_selection": "Exploratory, outcome-independent convenience thresholds; 0.20=1/5. Chosen after the original analysis; not preregistered or semantically validated.",
+  "original_continuous_model": {
+    "reference_topic": 2,
+    "reference_label": "运动与训练交流",
+    "joint_topic_p": 0.16567261471073869,
+    "coefficient_interpretation": "A 0.10 rise of w_k replacing 0.10 of reference-topic weight with all other weights and covariates fixed; 100*(exp(0.10*theta_k)-1) is the conditional geometric-mean change in likes+1.",
+    "why_omit_one_weight": "Five normalized weights sum to one, so five weights plus intercept are exactly collinear. This compositional constraint does not imply mutually exclusive semantics."
+  },
+  "multilabel_model": {
+    "formula": "log_likes ~ log_length + self_discipline + social_address + positive_expression + question + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date) + topic_present_0 + topic_present_1 + topic_present_2 + topic_present_3 + topic_present_4",
+    "no_reference_topic": "All five binary indicators enter together; their row sums vary. Full-rank checks, rather than k-1 dummy coding, determine estimability.",
+    "coefficient_interpretation": "Conditional 0-to-1 indicator contrast with other four indicators and covariates held fixed; not a contrast to a single reference topic and not a causal effect.",
+    "uncertainty": "Author-clustered t inference, finite-sample correction, 95% individual intervals; BH correction across five topic coefficients at each threshold. Uncertainty from NMF estimation and threshold choice is not included.",
+    "multiple_thresholds": "Threshold results are sensitivity diagnostics. No significance search or selection among thresholds; five-term BH is per specification, not across the full family of sensitivity models.",
+    "no_all_zero_group": "At thresholds 0.15, 0.20, 0.25, every assigned post has at least one label; coefficients are conditional contrasts, not comparisons to an observed no-topic group."
+  },
+  "threshold_results": [
+    {
+      "threshold": 0.15,
+      "documents": 2470,
+      "authors": 86,
+      "joint_topic_p": 0.28863809207254076,
+      "r_squared": 0.6121162592590671,
+      "design_rank": 171,
+      "parameters": 171,
+      "intercept_plus_five_indicators_rank": 6,
+      "min_conditional_vif": 1.0208183292588382,
+      "max_conditional_vif": 1.1535050983965243,
+      "min_bh_q": 0.2046093768558245,
+      "multi_topic_documents": 1331,
+      "multi_topic_share": 0.5388663967611336,
+      "sum_prevalence": 1.6,
+      "no_label_documents": 0
+    },
+    {
+      "threshold": 0.2,
+      "documents": 2470,
+      "authors": 86,
+      "joint_topic_p": 0.28559169550059027,
+      "r_squared": 0.6118247851245411,
+      "design_rank": 171,
+      "parameters": 171,
+      "intercept_plus_five_indicators_rank": 6,
+      "min_conditional_vif": 1.0300342282601505,
+      "max_conditional_vif": 1.1574116564084205,
+      "min_bh_q": 0.296427878106935,
+      "multi_topic_documents": 1088,
+      "multi_topic_share": 0.4404858299595142,
+      "sum_prevalence": 1.4591093117408906,
+      "no_label_documents": 0
+    },
+    {
+      "threshold": 0.25,
+      "documents": 2470,
+      "authors": 86,
+      "joint_topic_p": 0.5169845520982217,
+      "r_squared": 0.6114716670732235,
+      "design_rank": 171,
+      "parameters": 171,
+      "intercept_plus_five_indicators_rank": 6,
+      "min_conditional_vif": 1.0415063332692704,
+      "max_conditional_vif": 1.211500016041922,
+      "min_bh_q": 0.4794761878403955,
+      "multi_topic_documents": 835,
+      "multi_topic_share": 0.33805668016194335,
+      "sum_prevalence": 1.3429149797570852,
+      "no_label_documents": 0
+    }
+  ],
+  "scope": "All proportions use the 2,470 assigned-text posts, not all 9,532 posts. The original eight near-zero-contribution documents and all other ineligible posts remain unassigned, rather than being coded as five observed zeros.",
+  "checks": {
+    "frozen_post_ids_unique": true,
+    "one_to_one_join_preserves_all_topic_rows": true,
+    "original_and_anonymous_authors_map_one_to_one": true,
+    "weights_finite_and_in_unit_interval": true,
+    "weights_sum_to_one_max_error": 4.440892098500626e-16,
+    "continuous_coefficient_max_error": 6.300515664747763e-15,
+    "continuous_joint_p_error": 1.4488410471358293e-14,
+    "continuous_design_rank": 170,
+    "continuous_parameters": 170,
+    "all_multilabel_designs_full_rank": true,
+    "all_five_indicator_plus_intercept_ranks_equal_six": true
+  },
+  "input_sha256": {
+    "posts": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+    "frozen_weights": "b4162fabd04eec0191fd431322246d26263a35bcfdd91fcb6e77b40f2be003f5",
+    "original_topic_coefficients": "1d0136921668194b0e3243a538e12bc50e63114e049d42c2f8a1a2c87559a7a2",
+    "original_topic_summary": "7ea63fa83d130ab3acfc6f1b6e3b1a5d73cddf9b1b477f3e5ca8bcf1140a9a11",
+    "labels": "890f4cb33845a556a5c961b697998b614dd81dfe501eec15102f7d89bac93b40"
+  },
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scipy": "1.13.1",
+    "statsmodels": "0.14.2"
+  }
+}

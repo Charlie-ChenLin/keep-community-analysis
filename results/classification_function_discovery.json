@@ -1,0 +1,281 @@
+{
+  "schema_version": "open_function_discovery_aggregate_v1",
+  "method": "单AI完整逐条阅读正文后的开放语义开发编码；并非独立人工验证；不以正则、旧词典或固定维数自动编码。",
+  "sources": [
+    "development_blind.jsonl",
+    "observation_controls_blind.jsonl"
+  ],
+  "development_n": 160,
+  "empty_observation_controls_n": 12,
+  "proposed_function_n": 12,
+  "state_counts": {
+    "insufficient": 6,
+    "interpretable": 154,
+    "empty": 12
+  },
+  "development_state_counts": {
+    "insufficient": 6,
+    "interpretable": 154
+  },
+  "function_assignment_n": 235,
+  "multifunction_development_n": 57,
+  "functions": [
+    {
+      "code": "activity_update",
+      "label": "行动、进度与日常事件呈报",
+      "definition": "呈报本帖涉及的具体行动、阶段、进度、自报指标或日常发生的情境；允许简短活动简表，完成状态只按正文所言。",
+      "include": "行动和日常遭遇；打卡序次和数值；开工、出发、收工等阶段标记；明确当下活动内容。",
+      "exclude": "纯未来安排；只有身体感受；无事件框架的一般知识；不从记录认定自律或完成质量。",
+      "example_ids": [
+        "D017",
+        "D031",
+        "D070",
+        "D134",
+        "D146",
+        "D151"
+      ],
+      "nearest_confusion": "future_intention只表示后续计划；experience_report是感受而非事件；caption无足够的个人行动或事件框架。",
+      "count": 67,
+      "share_of_160_development": 0.41875
+    },
+    {
+      "code": "experience_report",
+      "label": "身体感受与主观体验自述",
+      "definition": "正文直接表达自身的身体感觉、心理念头、情感反应或状态体验；编码表达而不认定潜在心理或医学事实。",
+      "include": "疲劳、酸胀、僵硬、舒适等感觉；直接说出的开心、紧张、念头、精神状态；明确的夸张反应。",
+      "exclude": "不从事件或表情推测感受；不从困难推断求助；外部对象的好坏评价归appraisal；未来期望归future_intention。",
+      "example_ids": [
+        "D011",
+        "D016",
+        "D064",
+        "D083",
+        "D104",
+        "D153"
+      ],
+      "nearest_confusion": "appraisal评价对象或选择的好坏；本类必须有身体、心理或体验反应的直接表达。",
+      "count": 35,
+      "share_of_160_development": 0.21875
+    },
+    {
+      "code": "future_intention",
+      "label": "计划、目标与期待",
+      "definition": "明确表达尚未发生的安排、想要达到的结果、愿望或未来期待。",
+      "include": "后续行动安排；具体目标与奖励方向；希望、愿望和期待。",
+      "exclude": "不把已完成记录、一般奋斗口号、目的性修辞或笼统前路感言自动解释为承诺。",
+      "example_ids": [
+        "D025",
+        "D046",
+        "D083",
+        "D088",
+        "D105",
+        "D124"
+      ],
+      "nearest_confusion": "activity_update报告行动或阶段，不能替未来愿望补出执行；exhortation只动员而不一定给出将来安排。",
+      "count": 14,
+      "share_of_160_development": 0.0875
+    },
+    {
+      "code": "explanation",
+      "label": "可泛化信息与机制解释",
+      "definition": "以说明、列举、因果或效用断言向读者呈现可跨个人事件使用的信息或关系主张。此编码不验证知识是否正确。",
+      "include": "作用和原因解释；一般机制、事实比较；障碍和效用的说明。",
+      "exclude": "仅呈报个人过程；格言式价值论断；只有具体指令没有解释；不把表达的机制当成已证实因果。",
+      "example_ids": [
+        "D006",
+        "D058",
+        "D066",
+        "D086",
+        "D094",
+        "D135"
+      ],
+      "nearest_confusion": "practical_guidance告诉如何做；reflection表达生活/行为的价值和意义。说明与建议可以在同帖并列。",
+      "count": 12,
+      "share_of_160_development": 0.075
+    },
+    {
+      "code": "practical_guidance",
+      "label": "方法与可执行建议",
+      "definition": "明确给读者一个可按之行动的办法、方案、顺序、分配、条件性操作或注意事项，细节超过一般鼓劲。",
+      "include": "训练步骤、次数、组合和次序；饮食分配；具体情境下的明确行动建议。",
+      "exclude": "个人训练日志若未邀请仿用；纯动作名；一般多练、奋斗或好好生活等动员。",
+      "example_ids": [
+        "D014",
+        "D033",
+        "D058",
+        "D079",
+        "D098",
+        "D107"
+      ],
+      "nearest_confusion": "exhortation只有启动和坚持的动员；activity_update即使含组数也可能只是自己的完成简表。",
+      "count": 12,
+      "share_of_160_development": 0.075
+    },
+    {
+      "code": "reflection",
+      "label": "概括性议论、格言与价值主张",
+      "definition": "表达关于人生、处世、幸福、行为意义或健身价值的一般观点、格言和评价性思考；包括转引内容。",
+      "include": "概括性价值判断、处世规范、人生感言、文学格言及展开的价值论证。",
+      "exclude": "不据主张认定真实人格；情境对象的即时褒贬归appraisal；具体知识说明及操作方法另列。",
+      "example_ids": [
+        "D004",
+        "D039",
+        "D052",
+        "D091",
+        "D130",
+        "D156"
+      ],
+      "nearest_confusion": "exhortation是短促行动号召；只有当帖子另有明显动员话语才同时编码。",
+      "count": 31,
+      "share_of_160_development": 0.19375
+    },
+    {
+      "code": "exhortation",
+      "label": "行动号召与自我提醒",
+      "definition": "通过简短号召、督促、鼓劲或自我提醒推动开始、继续、努力或行动，受众可以未明。",
+      "include": "简短开始/继续动员；泛化加油；明确自我提醒；明确向群体鼓劲。",
+      "exclude": "不默认未明受众是他人；不认定完成或自律人格；具体方法归practical_guidance；纯表情不编码。",
+      "example_ids": [
+        "D010",
+        "D044",
+        "D059",
+        "D067",
+        "D127",
+        "D129"
+      ],
+      "nearest_confusion": "relational_bid要求明确接触或共同参与邀请；greeting_wish是礼貌问候或祝愿。",
+      "count": 20,
+      "share_of_160_development": 0.125
+    },
+    {
+      "code": "greeting_wish",
+      "label": "寒暄与祝愿",
+      "definition": "通过常规问候、道安或祝愿建立轻度社交接触或表达良好期望。",
+      "include": "早晚问候；周末祝愿；明确面向群体的节日或新年祝福。",
+      "exclude": "不据此推断关系深度、实际对话或支持效果；个人对自己未来的期望归future_intention。",
+      "example_ids": [
+        "D005",
+        "D054",
+        "D069",
+        "D144",
+        "D160"
+      ],
+      "nearest_confusion": "relational_bid有进一步联络或共同参与请求；本类只需问候或祝愿。",
+      "count": 13,
+      "share_of_160_development": 0.08125
+    },
+    {
+      "code": "relational_bid",
+      "label": "明确联络或共同参与邀请",
+      "definition": "正文明确提出与他人建立联系、交友或一起参加某活动的邀请。",
+      "include": "交朋友的直接提出；明确共同参与的邀请。",
+      "exclude": "单独@标签；未明确受众的第二人称或泛加油；致敬赞美但无接触邀请。",
+      "example_ids": [
+        "D067",
+        "D093"
+      ],
+      "nearest_confusion": "reader_response_request索取回答；本类索取的是接触或共同参与，不能把一般号召自动当作社交邀请。",
+      "count": 2,
+      "share_of_160_development": 0.0125
+    },
+    {
+      "code": "reader_response_request",
+      "label": "明确面向他人的回应征询",
+      "definition": "有可观察的外向指向，要求或询问读者/被点名者给出答案或回应；包括互动式活动询问，不限于求助。",
+      "include": "对被点名者提出的具体问题；直接请读者回答其自身情况。",
+      "exclude": "设题后自行作答；自问、感叹、调侃、转述他人问句；仅有问号或表示想要某物。",
+      "example_ids": [
+        "D071",
+        "D079"
+      ],
+      "nearest_confusion": "知识文章常以设问开头但下文自己提供答案；自述困难并不自动要求读者帮助。",
+      "count": 2,
+      "share_of_160_development": 0.0125
+    },
+    {
+      "code": "appraisal",
+      "label": "明确对象评价、褒贬与致敬",
+      "definition": "直接表达对对象、情境、选择、引文或自身某表现的喜欢、好坏、高低、赞许、否定或致敬。",
+      "include": "餐食或景物的明确评价；对自我选择的评价；对引文的喜欢；明确褒扬与致敬。",
+      "exclude": "不从笑、表情、叙事结果推断评价；不据褒贬认定被评者身份、人格或客观品质；一般价值主张归reflection。",
+      "example_ids": [
+        "D007",
+        "D027",
+        "D034",
+        "D045",
+        "D103",
+        "D148"
+      ],
+      "nearest_confusion": "experience_report写自身感觉和反应；reflection将价值判断上升为一般性主张。",
+      "count": 17,
+      "share_of_160_development": 0.10625
+    },
+    {
+      "code": "caption",
+      "label": "指称式题注与景象描写",
+      "definition": "用主题短语、图序指称或景象描写指出本帖呈现什么，而不必断言个人已经完成某行动。",
+      "include": "地点/主题式短语；明确图序说明；简短动作名；诗性季节景象。",
+      "exclude": "孤立品牌词、不可释义片段或纯符号不硬归本类；具体事件或自身活动更新优先用activity_update。",
+      "example_ids": [
+        "D022",
+        "D038",
+        "D092",
+        "D111",
+        "D116",
+        "D125"
+      ],
+      "nearest_confusion": "activity_update需要行动/事件或进度框架；信息不足不能用题注作为兜底。",
+      "count": 10,
+      "share_of_160_development": 0.0625
+    }
+  ],
+  "insufficient_sample_ids": [
+    "D001",
+    "D084",
+    "D113",
+    "D132",
+    "D154",
+    "D159"
+  ],
+  "symbol_only_insufficient_ids": [
+    "D084",
+    "D154"
+  ],
+  "empty_control_ids": [
+    "O001",
+    "O002",
+    "O003",
+    "O004",
+    "O005",
+    "O006",
+    "O007",
+    "O008",
+    "O009",
+    "O010",
+    "O011",
+    "O012"
+  ],
+  "merge_notes": [
+    "单AI在开发样本上的开放语义编码，不是独立人工验证、双人一致性或外部效度证明。人工式逐条阅读与语义判断不代表由人类编码。",
+    "仅完整读取development_blind的160条正文及12条空正文观察对照；未读取旧词典、既有分类、点赞、tag、NMF、calibration或holdout。",
+    "所有标签来自逐条阅读后的手写判断表；Python仅序列化、计数及核验证据子串和ID覆盖，没有正则或词典自动贴标签。",
+    "12个暂定功能由本开发语料的可观察表达产生，数量可在后续独立材料中修订；它们不是原维度重命名，也不对应内容领域。",
+    "将进度/事件、直接体验与将来愿望分开，避免由打卡推断自律人格，由疲劳或困难推断求助。",
+    "知识说明与实际建议分开：文章可两者并存；自己训练简表不是默认提供教程，健康效用断言也不代表已经验证。",
+    "概括性价值主张、即时对象评价与行动动员分开；格言中的常规规范性劝告不机械重复编码为动员。",
+    "问候祝愿、联络/一起参与邀请、明确求回应分开；单独@、第二人称、问号均不充分。两条外向征询中一条是互动提问，不等同于寻求帮助。",
+    "对设问、自问、调侃与转述问句使用保守边界；D006/D014/D093/D107是自行回答的设题，D053/D098/D104/D123/D133无明确向外索答，D151是转述。",
+    "动员对象不明时不增加社会支持推断；D067受众明确，D127等未明。致敬并不保证真实互动。",
+    "题注保留为小型功能，因正文中确有图序、地点主题和景象标记；它不是无法判断短语的兜底。D001/D113/D132/D159仍无标签。",
+    "D084/D154虽符号可联想到结束、睡眠或力量，但仅保留为符号导致的insufficient；12条空正文保留empty，二者不可等同功能缺失的可解释文本。",
+    "未给多功能正文强选主类。不同标签必须能给出各自可观察证据；聚合频数为出现该功能的帖子数，合计可以超过160。",
+    "D055为对后续酸胀的享受式表达，D056仅说超过某额度，D109明确褒义但对象未明，D122仅标记活动内容；均未补出客观完成、受众或医学事实。"
+  ],
+  "verification": {
+    "unique_ids": 172,
+    "development_ids": 160,
+    "empty_control_ids": 12,
+    "evidence_exact_substrings": true,
+    "unpermitted_source_reads": false
+  },
+  "publication_note": "公开聚合保留计数与盲化例证出处，删除sample_ids逐帖编码成员表；完整编码本地私有保存。"
+}

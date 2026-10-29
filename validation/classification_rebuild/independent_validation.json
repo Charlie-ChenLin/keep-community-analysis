@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "released_packet_n": 160,
+  "frozen_definition_config_and_8_artifacts_unchanged": true,
+  "blind_packet_contains_only_id_and_text": true,
+  "AI_label_tables_checked_against_sklearn": 21,
+  "model_vs_AI_tables_checked_against_sklearn": 42,
+  "unknown_domain_assignment_recount": {
+    "both_unspecified": 24,
+    "assigned": 18
+  },
+  "human_validation_pending_not_synthesized": true,
+  "delivery": {
+    "分类测量重建_实证依据与验证报告": {
+      "pages": 6,
+      "tables_editable_docx": 10,
+      "no_text_outside_page_margins": true,
+      "key_claims_present": true
+    },
+    "分类编码手册_v1": {
+      "pages": 18,
+      "tables_editable_docx": 10,
+      "no_text_outside_page_margins": true,
+      "key_claims_present": true
+    }
+  },
+  "interpretation": "此核查验证文件、计算和导出，不验证语义正确性或人工效度。"
+}

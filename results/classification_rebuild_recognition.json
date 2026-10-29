@@ -1,0 +1,557 @@
+{
+  "schema_version": "1.0",
+  "status": "not-ready-human",
+  "interpretation": "仅正文的AI开发初筛识别器，状态not-ready-human；分数不是语义正确概率。类别由独立语料归纳与codebook定义，训练及阈值仅决定检测规则。AI-only预验证不能替代人工效度验证，不可用于正式主题回归。NA表示未支持、正文不可处理或领域未通过适用性门控；0只表示未检出信号，不证明语义不存在。",
+  "freeze": {
+    "record_path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/freeze_record.json",
+    "record_sha256": "66dfb29209a2a513435559ed4cba054c22a72c170ea0053bdb8d94351fe889df",
+    "verified": true,
+    "files": [
+      {
+        "kind": "codebook",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/code/classification_codebook_v1.json",
+        "sha256": "a5792bc359f918f405d9c5b45051b1746f7123e1855e068d136d807fd36fdeb4"
+      },
+      {
+        "kind": "recognizer",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/code/classification_recognizer_v1.json",
+        "sha256": "dce1f55fd06365b4f9213e6c0fd58eef48fd0451ce2771d91b1602f158257539"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/code/classify_rebuilt_posts.py",
+        "sha256": "d8d83c8ed6f9d2ee2d1f45c7d0594565c1596ceaa409b5a3c815e3ab10e28242"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/classifier_v1.joblib",
+        "sha256": "d0d5351dd82c617483027103cbfd33d3cafc0a9fb07fe73ae7a1af4431d57e04"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/development_blind.jsonl",
+        "sha256": "6d7835ccbde21cf90a5133e10e04c6f96ebe4e393b03961ffc7b243e1d0f9648"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/development_coding.json",
+        "sha256": "e17a6ac39dbbb3deb1db6f5304ede86e000c3c99089d44e0128ce0d2484548b6"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/calibration_blind.jsonl",
+        "sha256": "f2c10ca5b5f3460e8a96cf44378b482ca4b69ec289fde419e1bdb9711b1eddb2"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/calibration_coding.json",
+        "sha256": "89db0d6c9206e88b04ab44131d7f3e503c2027c7d4c85b27e749f2b3b81ed51d"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/selected_holdout.csv",
+        "sha256": "e74e202f89755cc3132bc3c35ced3d9a51e37309fd54c9718c460c195904b27b"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/body_population.csv",
+        "sha256": "105e6f871bb70809f002559db5e71f504dffb41163831c9ff72d7ad416f4fd96"
+      }
+    ],
+    "extra_artifact_count": 8,
+    "model_artifact_note": "仅能保证freeze_record实际列出的文件；额外训练模型也必须列入artifacts/files。"
+  },
+  "model_sha256_verified": "d0d5351dd82c617483027103cbfd33d3cafc0a9fb07fe73ae7a1af4431d57e04",
+  "input_sha256": {
+    "holdout_sha256": "37c360454d8ce133fffc283af63abea7808012f608eca9b282038bb0306b6ff2",
+    "population_sha256": "105e6f871bb70809f002559db5e71f504dffb41163831c9ff72d7ad416f4fd96"
+  },
+  "holdout": {
+    "scope": "model_detection_only",
+    "n_rows": 160,
+    "body_states": {
+      "text_present": 160
+    },
+    "domain_scope_states": {
+      "gate_passed": 157,
+      "gate_not_passed": 3
+    },
+    "labels": {
+      "d_exercise": {
+        "axis": "domains",
+        "label": "运动与身体活动",
+        "states": {
+          "signal_not_detected": 121,
+          "signal_detected": 36,
+          "outside_domain_scope": 3
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "d_body": {
+        "axis": "domains",
+        "label": "身体状态、体重与外形",
+        "states": {
+          "signal_not_detected": 144,
+          "outside_domain_scope": 3,
+          "signal_detected": 13
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "d_food": {
+        "axis": "domains",
+        "label": "饮食、食物与营养",
+        "states": {
+          "signal_not_detected": 124,
+          "signal_detected": 33,
+          "outside_domain_scope": 3
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "d_life": {
+        "axis": "domains",
+        "label": "生活、关系与社会文化话题",
+        "states": {
+          "signal_not_detected": 46,
+          "signal_detected": 111,
+          "outside_domain_scope": 3
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "d_tools": {
+        "axis": "domains",
+        "label": "工具、服务与记录奖励机制",
+        "states": {
+          "unsupported_development": 160
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "d_other": {
+        "axis": "domains",
+        "label": "其他明确内容",
+        "states": {
+          "unsupported_development": 160
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_activity_update": {
+        "axis": "functions",
+        "label": "行动、进度与日常事件呈报",
+        "states": {
+          "signal_detected": 159,
+          "signal_not_detected": 1
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_experience_report": {
+        "axis": "functions",
+        "label": "身体感受与主观体验自述",
+        "states": {
+          "signal_detected": 150,
+          "signal_not_detected": 10
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_future_intention": {
+        "axis": "functions",
+        "label": "计划、目标与期待",
+        "states": {
+          "signal_detected": 58,
+          "signal_not_detected": 102
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_explanation": {
+        "axis": "functions",
+        "label": "可泛化信息与机制解释",
+        "states": {
+          "signal_not_detected": 160
+        },
+        "supported": true,
+        "threshold": 0.65
+      },
+      "f_practical_guidance": {
+        "axis": "functions",
+        "label": "方法与可执行建议",
+        "states": {
+          "signal_not_detected": 160
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "f_reflection": {
+        "axis": "functions",
+        "label": "概括性议论、格言与价值主张",
+        "states": {
+          "signal_not_detected": 144,
+          "signal_detected": 16
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "f_exhortation": {
+        "axis": "functions",
+        "label": "行动号召与自我提醒",
+        "states": {
+          "signal_not_detected": 147,
+          "signal_detected": 13
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "f_greeting_wish": {
+        "axis": "functions",
+        "label": "寒暄与祝愿",
+        "states": {
+          "signal_not_detected": 154,
+          "signal_detected": 6
+        },
+        "supported": true,
+        "threshold": 0.65
+      },
+      "f_relational_bid": {
+        "axis": "functions",
+        "label": "明确联络或共同参与邀请",
+        "states": {
+          "unsupported_development": 160
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_reader_response_request": {
+        "axis": "functions",
+        "label": "明确面向他人的回应征询",
+        "states": {
+          "unsupported_development": 160
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_appraisal": {
+        "axis": "functions",
+        "label": "明确对象评价、褒贬与致敬",
+        "states": {
+          "signal_detected": 132,
+          "signal_not_detected": 28
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_caption": {
+        "axis": "functions",
+        "label": "指称式题注与景象描写",
+        "states": {
+          "signal_not_detected": 149,
+          "signal_detected": 11
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_gratitude": {
+        "axis": "functions",
+        "label": "明确感谢表达",
+        "states": {
+          "unsupported_development": 160
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_sale_offer": {
+        "axis": "functions",
+        "label": "商品服务供给与交易告知",
+        "states": {
+          "unsupported_development": 160
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_other_expression": {
+        "axis": "functions",
+        "label": "其他可辨识表达行为",
+        "states": {
+          "unsupported_development": 160
+        },
+        "supported": false,
+        "threshold": null
+      }
+    }
+  },
+  "body_population": {
+    "scope": "model_detection_only",
+    "n_rows": 9532,
+    "body_states": {
+      "empty": 4118,
+      "text_present": 5270,
+      "symbols_or_digits_only": 144
+    },
+    "domain_scope_states": {
+      "body_empty": 4118,
+      "gate_passed": 4985,
+      "gate_not_passed": 285,
+      "body_symbols_or_digits_only": 144
+    },
+    "labels": {
+      "d_exercise": {
+        "axis": "domains",
+        "label": "运动与身体活动",
+        "states": {
+          "body_empty": 4118,
+          "signal_not_detected": 3436,
+          "signal_detected": 1549,
+          "outside_domain_scope": 285,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "d_body": {
+        "axis": "domains",
+        "label": "身体状态、体重与外形",
+        "states": {
+          "body_empty": 4118,
+          "signal_not_detected": 4424,
+          "signal_detected": 561,
+          "outside_domain_scope": 285,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "d_food": {
+        "axis": "domains",
+        "label": "饮食、食物与营养",
+        "states": {
+          "body_empty": 4118,
+          "signal_not_detected": 4269,
+          "signal_detected": 716,
+          "outside_domain_scope": 285,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "d_life": {
+        "axis": "domains",
+        "label": "生活、关系与社会文化话题",
+        "states": {
+          "body_empty": 4118,
+          "signal_detected": 3536,
+          "signal_not_detected": 1449,
+          "outside_domain_scope": 285,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "d_tools": {
+        "axis": "domains",
+        "label": "工具、服务与记录奖励机制",
+        "states": {
+          "body_empty": 4118,
+          "unsupported_development": 5270,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "d_other": {
+        "axis": "domains",
+        "label": "其他明确内容",
+        "states": {
+          "body_empty": 4118,
+          "unsupported_development": 5270,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_activity_update": {
+        "axis": "functions",
+        "label": "行动、进度与日常事件呈报",
+        "states": {
+          "body_empty": 4118,
+          "signal_detected": 5050,
+          "signal_not_detected": 220,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_experience_report": {
+        "axis": "functions",
+        "label": "身体感受与主观体验自述",
+        "states": {
+          "body_empty": 4118,
+          "signal_detected": 4427,
+          "signal_not_detected": 843,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_future_intention": {
+        "axis": "functions",
+        "label": "计划、目标与期待",
+        "states": {
+          "body_empty": 4118,
+          "signal_detected": 1276,
+          "signal_not_detected": 3994,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_explanation": {
+        "axis": "functions",
+        "label": "可泛化信息与机制解释",
+        "states": {
+          "body_empty": 4118,
+          "signal_not_detected": 5155,
+          "signal_detected": 115,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.65
+      },
+      "f_practical_guidance": {
+        "axis": "functions",
+        "label": "方法与可执行建议",
+        "states": {
+          "body_empty": 4118,
+          "signal_not_detected": 5162,
+          "signal_detected": 108,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "f_reflection": {
+        "axis": "functions",
+        "label": "概括性议论、格言与价值主张",
+        "states": {
+          "body_empty": 4118,
+          "signal_not_detected": 4636,
+          "signal_detected": 634,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "f_exhortation": {
+        "axis": "functions",
+        "label": "行动号召与自我提醒",
+        "states": {
+          "body_empty": 4118,
+          "signal_not_detected": 4821,
+          "signal_detected": 449,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.5
+      },
+      "f_greeting_wish": {
+        "axis": "functions",
+        "label": "寒暄与祝愿",
+        "states": {
+          "body_empty": 4118,
+          "signal_not_detected": 4920,
+          "signal_detected": 350,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.65
+      },
+      "f_relational_bid": {
+        "axis": "functions",
+        "label": "明确联络或共同参与邀请",
+        "states": {
+          "body_empty": 4118,
+          "unsupported_development": 5270,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_reader_response_request": {
+        "axis": "functions",
+        "label": "明确面向他人的回应征询",
+        "states": {
+          "body_empty": 4118,
+          "unsupported_development": 5270,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_appraisal": {
+        "axis": "functions",
+        "label": "明确对象评价、褒贬与致敬",
+        "states": {
+          "body_empty": 4118,
+          "signal_detected": 3724,
+          "signal_not_detected": 1546,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_caption": {
+        "axis": "functions",
+        "label": "指称式题注与景象描写",
+        "states": {
+          "body_empty": 4118,
+          "signal_not_detected": 4673,
+          "signal_detected": 597,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": true,
+        "threshold": 0.35
+      },
+      "f_gratitude": {
+        "axis": "functions",
+        "label": "明确感谢表达",
+        "states": {
+          "body_empty": 4118,
+          "unsupported_development": 5270,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_sale_offer": {
+        "axis": "functions",
+        "label": "商品服务供给与交易告知",
+        "states": {
+          "body_empty": 4118,
+          "unsupported_development": 5270,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": false,
+        "threshold": null
+      },
+      "f_other_expression": {
+        "axis": "functions",
+        "label": "其他可辨识表达行为",
+        "states": {
+          "body_empty": 4118,
+          "unsupported_development": 5270,
+          "body_symbols_or_digits_only": 144
+        },
+        "supported": false,
+        "threshold": null
+      }
+    }
+  },
+  "scope_warning": "分母为本轮文本处理与模型适用状态；检测计数不是全样本真实主题分布。",
+  "raw_domain_predictions": "raw_pred_<domain> ignores specificity gate and is diagnostic only; gated predictions may be NA.",
+  "holdout_annotations_accessed": false,
+  "formal_topic_regression_ready": false
+}

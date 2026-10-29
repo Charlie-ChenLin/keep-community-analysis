@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "check": "new Python scripts parse",
+      "passed": true
+    },
+    {
+      "check": "unchanged input results/post_features.csv",
+      "passed": true
+    },
+    {
+      "check": "unchanged input code/text_dictionary.json",
+      "passed": true
+    },
+    {
+      "check": "unchanged input 2026Data/Keep Data/sample_post_2022.csv",
+      "passed": true
+    },
+    {
+      "check": "unchanged input code/analyze.py",
+      "passed": true
+    },
+    {
+      "check": "unchanged input results/model_fit.csv",
+      "passed": true
+    },
+    {
+      "check": "unchanged author/tag source 2026Data/Keep Data/sample_post_2022.csv",
+      "passed": true
+    },
+    {
+      "check": "unchanged author/tag source results/post_features.csv",
+      "passed": true
+    },
+    {
+      "check": "unchanged author/tag source code/text_dictionary.json",
+      "passed": true
+    },
+    {
+      "check": "unchanged author/tag source code/analyze.py",
+      "passed": true
+    },
+    {
+      "check": "unchanged author/tag source results/regression_coefficients.csv",
+      "passed": true
+    },
+    {
+      "check": "old presentation pptx unchanged",
+      "passed": true
+    },
+    {
+      "check": "old presentation pdf unchanged",
+      "passed": true
+    },
+    {
+      "check": "coverage partitions reconcile",
+      "passed": true
+    },
+    {
+      "check": "review sample reconciles",
+      "passed": true
+    },
+    {
+      "check": "dictionary independent checks passed",
+      "passed": true
+    },
+    {
+      "check": "topic independent checks passed",
+      "passed": true
+    },
+    {
+      "check": "author/tag checks passed",
+      "passed": true
+    },
+    {
+      "check": "raw CSV body coverage independent count",
+      "passed": true
+    },
+    {
+      "check": "raw CSV tag coverage independent count",
+      "passed": true
+    },
+    {
+      "check": "raw CSV author count independent count",
+      "passed": true
+    },
+    {
+      "check": "raw CSV singleton count independent count",
+      "passed": true
+    },
+    {
+      "check": "complete body matrix and manual sandwich reproduced",
+      "passed": true
+    },
+    {
+      "check": "all three missingness populations exposed",
+      "passed": true
+    },
+    {
+      "check": "NMF original weights independently reproduced",
+      "passed": true
+    },
+    {
+      "check": "candidate codebook is explicitly unvalidated",
+      "passed": true
+    },
+    {
+      "check": "topic authors recomputed within topic sample",
+      "passed": true
+    },
+    {
+      "check": "topic author threshold designs are full rank",
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

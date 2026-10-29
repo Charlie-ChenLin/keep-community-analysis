@@ -1,0 +1,28 @@
+{
+  "codebook_sha256": "a5792bc359f918f405d9c5b45051b1746f7123e1855e068d136d807fd36fdeb4",
+  "recognizer_sha256": "dce1f55fd06365b4f9213e6c0fd58eef48fd0451ce2771d91b1602f158257539",
+  "holdout_packet_released": true,
+  "interpretation": "Frozen before this newly selected packet was opened for coding; retrospective exploratory work, not a preregistered confirmatory study.",
+  "artifacts": {
+    "code/classify_rebuilt_posts.py": "d8d83c8ed6f9d2ee2d1f45c7d0594565c1596ceaa409b5a3c815e3ab10e28242",
+    "validation/classification_rebuild/private/classifier_v1.joblib": "d0d5351dd82c617483027103cbfd33d3cafc0a9fb07fe73ae7a1af4431d57e04",
+    "validation/classification_rebuild/private/development_blind.jsonl": "6d7835ccbde21cf90a5133e10e04c6f96ebe4e393b03961ffc7b243e1d0f9648",
+    "validation/classification_rebuild/private/development_coding.json": "e17a6ac39dbbb3deb1db6f5304ede86e000c3c99089d44e0128ce0d2484548b6",
+    "validation/classification_rebuild/private/calibration_blind.jsonl": "f2c10ca5b5f3460e8a96cf44378b482ca4b69ec289fde419e1bdb9711b1eddb2",
+    "validation/classification_rebuild/private/calibration_coding.json": "89db0d6c9206e88b04ab44131d7f3e503c2027c7d4c85b27e749f2b3b81ed51d",
+    "validation/classification_rebuild/private/selected_holdout.csv": "e74e202f89755cc3132bc3c35ced3d9a51e37309fd54c9718c460c195904b27b",
+    "validation/classification_rebuild/private/body_population.csv": "105e6f871bb70809f002559db5e71f504dffb41163831c9ff72d7ad416f4fd96"
+  },
+  "frozen_at_utc": "2026-10-29T13:54:26.595421+00:00",
+  "holdout": {
+    "n": 160,
+    "authors": 19,
+    "packet_sha256": "37c360454d8ce133fffc283af63abea7808012f608eca9b282038bb0306b6ff2",
+    "body_length_quantiles": {
+      "0.25": 6.0,
+      "0.5": 13.0,
+      "0.75": 21.0,
+      "0.95": 116.04999999999998
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "development_nonempty_posts": 160,
+  "development_authors": 55,
+  "empty_controls": 12,
+  "observed_content_leaves": 15,
+  "observed_parent_domains": 5,
+  "open_residual_slots": 1,
+  "observed_functions": 12,
+  "parent_counts": {
+    "d_exercise": 61,
+    "d_life": 62,
+    "d_food": 11,
+    "d_body": 32,
+    "d_tools": 2
+  },
+  "function_counts": {
+    "f_activity_update": 67,
+    "f_experience_report": 35,
+    "f_appraisal": 17,
+    "f_reflection": 31,
+    "f_greeting_wish": 13,
+    "f_explanation": 12,
+    "f_practical_guidance": 12,
+    "f_exhortation": 20,
+    "f_future_intention": 14,
+    "f_caption": 10,
+    "f_relational_bid": 2,
+    "f_reader_response_request": 2
+  },
+  "codebook_status": "draft; not independently human validated",
+  "raw_annotation_paths_are_private": true,
+  "aggregation_decisions": [
+    {
+      "code": "d_exercise",
+      "label": "运动与身体活动",
+      "merge_reason": "项目属于同一讨论对象，保留项目差异为子类；不与上位运动类平级作互斥归类。",
+      "development_posts": 61,
+      "development_authors": 30,
+      "status": "development_supported_candidate"
+    },
+    {
+      "code": "d_body",
+      "label": "身体状态、体重与外形",
+      "merge_reason": "按身体这一讨论对象作展示层归并；健康疲累与体重管理不被当作同一构念，叶类分别保留。",
+      "development_posts": 32,
+      "development_authors": 20,
+      "status": "development_supported_candidate"
+    },
+    {
+      "code": "d_food",
+      "label": "饮食、食物与营养",
+      "merge_reason": "语料中独立出现且不必依附训练或减脂，作为独立内容对象保留。",
+      "development_posts": 11,
+      "development_authors": 9,
+      "status": "development_supported_candidate"
+    },
+    {
+      "code": "d_life",
+      "label": "生活、关系与社会文化话题",
+      "merge_reason": "为研究任务作广义展示归并，不声称内部同质或与运动互斥；所有细分频数和边界保留，避免丢弃低频真实主题。",
+      "development_posts": 62,
+      "development_authors": 34,
+      "status": "development_supported_candidate"
+    },
+    {
+      "code": "d_tools",
+      "label": "工具、服务与记录奖励机制",
+      "merge_reason": "开发中虽少但与其他讨论对象不同，作为稀疏候选保留，不因频数少强并或据此回归。",
+      "development_posts": 2,
+      "development_authors": 2,
+      "status": "sparse_candidate"
+    },
+    {
+      "code": "d_other",
+      "label": "其他明确内容",
+      "merge_reason": "开放残余编码槽，而非开发阶段已经验证的新增类别；单独检查其占比和实例。",
+      "development_posts": 0,
+      "development_authors": 0,
+      "status": "sparse_candidate"
+    }
+  ],
+  "source_sha256": {
+    "content_open": "651d32455c9871da5c5eb91df5fc6b4db405e06a6d58ffb22739a0518d0f1b7d",
+    "function_open": "6959eb76c8ed589db5cbab531aedb6f943c18b0e17be6a828aeac54f744d0538"
+  }
+}

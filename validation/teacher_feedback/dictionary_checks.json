@@ -1,0 +1,70 @@
+[
+  {
+    "check": "冻结逐帖特征主键唯一且四变量为0/1",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "原始帖子与冻结特征主键完全一致",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "从原始正文独立逐词匹配复核四变量",
+    "passed": true,
+    "detail": {
+      "self_discipline": 0,
+      "social_address": 0,
+      "positive_expression": 0,
+      "question": 0
+    }
+  },
+  {
+    "check": "完整主模型设计矩阵与冻结模型行数、列数、秩一致",
+    "passed": true,
+    "detail": {
+      "rows": 9532,
+      "columns": 182,
+      "rank": 182
+    }
+  },
+  {
+    "check": "四项完整VIF由独立辅助回归复核",
+    "passed": true,
+    "detail": {
+      "max_abs_error": 1.2434497875801753e-14
+    }
+  },
+  {
+    "check": "四项控制后VIF由残差辅助回归复核",
+    "passed": true,
+    "detail": {
+      "max_abs_error": 2.220446049250313e-16
+    }
+  },
+  {
+    "check": "控制后残差与控制设计矩阵正交",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "作者内相关与既有结果核对",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "六组共现四格表逐一还原全样本",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "六组φ相关由四格表独立核对",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "check": "多重命中分布还原样本总数与四变量总命中数",
+    "passed": true,
+    "detail": null
+  }
+]

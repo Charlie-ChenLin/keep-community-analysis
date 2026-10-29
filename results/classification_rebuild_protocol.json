@@ -1,0 +1,87 @@
+{
+  "stage": "development packets prepared; holdout sealed",
+  "seed": 2026102901,
+  "population_posts": 9532,
+  "nonempty_body_posts": 5414,
+  "split_unit": "author; 60 development / 20 calibration / 20 holdout, assigned without any engagement outcome",
+  "split_counts": [
+    {
+      "role": "calibration",
+      "posts": 1591,
+      "authors": 20,
+      "nonempty": 1006
+    },
+    {
+      "role": "development",
+      "posts": 6446,
+      "authors": 60,
+      "nonempty": 3353
+    },
+    {
+      "role": "holdout",
+      "posts": 1495,
+      "authors": 20,
+      "nonempty": 1055
+    }
+  ],
+  "packets": {
+    "development": {
+      "n": 160,
+      "authors": 55,
+      "packet_sha256": "6d7835ccbde21cf90a5133e10e04c6f96ebe4e393b03961ffc7b243e1d0f9648",
+      "body_length_quantiles": {
+        "0.25": 8.0,
+        "0.5": 15.5,
+        "0.75": 36.25,
+        "0.95": 240.2999999999999
+      }
+    },
+    "calibration": {
+      "n": 80,
+      "authors": 14,
+      "packet_sha256": "f2c10ca5b5f3460e8a96cf44378b482ca4b69ec289fde419e1bdb9711b1eddb2",
+      "body_length_quantiles": {
+        "0.25": 9.0,
+        "0.5": 18.5,
+        "0.75": 46.5,
+        "0.95": 115.94999999999995
+      }
+    },
+    "observation_controls": {
+      "n": 12,
+      "authors": 10,
+      "packet_sha256": "2911cd950df4b2d39d883eba9c7b1c780534a83a6551ee18a53cbaf50e4657d4",
+      "body_length_quantiles": {
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.95": 0.0
+      }
+    }
+  },
+  "holdout_selected_n": 160,
+  "holdout_eligible_unique_n": 881,
+  "outcome_fields_excluded": [
+    "likes",
+    "log_likes",
+    "views",
+    "comments",
+    "old_dictionary_predictions",
+    "old_NMF_weights",
+    "raw_hashTags"
+  ],
+  "annotation_unit": "Full cleaned body only; category absence is not inferred from missing or insufficient body. Multi-label content domains and communication functions are developed separately.",
+  "sampling_scope": "Discovery deliberately diversifies authors and text length; evaluation samples are random from held-out authors with exact templates unseen in earlier roles or historical inspected excerpts. Evaluation is not a representative sample of all posts.",
+  "validation_design": "Independent-context AI annotation is a provisional screening exercise using the same base model; not independent human validation and not a human gold standard. Human blind packets and a validator will be provided.",
+  "analysis_commitment": "No likes or regression significance will choose category count, names, terms, thresholds or rules. Record discoveries, freeze definitions/recognizer, then open the held-out packet once. No final real-topic effect claims from AI-only validation.",
+  "source_sha256": {
+    "2026Data/Keep Data/sample_post_2022.csv": "74f2ed2878852f00618db3ae0b9f8c468a4f760e603dcb98c8a286a47919582c",
+    "results/post_features.csv": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2"
+  },
+  "checks": {
+    "author_roles_disjoint": true,
+    "development_calibration_templates_disjoint": true,
+    "all_three_packet_templates_disjoint": true,
+    "historical_excerpts_excluded_from_evaluation": true
+  }
+}

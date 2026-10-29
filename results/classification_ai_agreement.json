@@ -1,0 +1,2004 @@
+{
+  "scope": "ai",
+  "status": "completed",
+  "n_samples": 160,
+  "interpretation": "两代理使用同一模型、上下文分离；此处仅为AI编码预验证。一致性不等于人类验证、构念效度或准确率；A/B均为各自参照，不能合成gold。",
+  "method": {
+    "pair_eligibility": "Both observations readable; domains additionally require both domain_state=specified; label U/uncertain excluded per label.",
+    "unspecified_domains": "Excluded from domain binary comparisons; function comparisons remain eligible.",
+    "positive_agreement": "2*n11/(2*n11+n10+n01)",
+    "kappa_policy": "Cohen kappa=(Po-Pe)/(1-Pe); null/NaN only if no evaluable pairs or abs(1-Pe)<=1e-12. A single constant rater does not make kappa undefined.",
+    "support_flags": "one_rater_constant flags exactly one constant coder; low_positive_support flags fewer than 5 positives for either coder. These flags do not change kappa.",
+    "agreement_caveat": "High overall agreement may be driven by shared negatives; it does not establish positive-label reliability, accuracy, or validity. Inspect positive agreement, marginal counts, and support flags.",
+    "missing_statistics": "JSON null, CSV NaN; never silently replaced with zero.",
+    "reason_counts": "Reasons can overlap, so their sum can exceed excluded_pairs.",
+    "no_gold": true,
+    "accuracy_reported": false
+  },
+  "coverage": {
+    "a": {
+      "n": 160,
+      "observation_states": {
+        "readable": 153,
+        "insufficient": 7
+      },
+      "domain_states": {
+        "specified": 122,
+        "unavailable": 7,
+        "unspecified": 24,
+        "uncertain": 7
+      },
+      "axis_evaluable_before_label_uncertainty": {
+        "domains": 122,
+        "functions": 153
+      }
+    },
+    "b": {
+      "n": 160,
+      "observation_states": {
+        "readable": 153,
+        "insufficient": 7
+      },
+      "domain_states": {
+        "specified": 122,
+        "unavailable": 5,
+        "uncertain": 8,
+        "unspecified": 25
+      },
+      "axis_evaluable_before_label_uncertainty": {
+        "domains": 122,
+        "functions": 153
+      }
+    },
+    "paired": {
+      "domains": {
+        "total_pairs": 160,
+        "evaluable_before_label_uncertainty": 121,
+        "excluded_pairs": 39,
+        "exclusion_reasons": {
+          "b_observation_insufficient": 7,
+          "a_observation_insufficient": 7,
+          "b_domain_unavailable": 5,
+          "a_domain_unavailable": 7,
+          "b_domain_uncertain": 8,
+          "b_domain_unspecified": 25,
+          "a_domain_unspecified": 24,
+          "a_domain_uncertain": 7
+        }
+      },
+      "functions": {
+        "total_pairs": 160,
+        "evaluable_before_label_uncertainty": 152,
+        "excluded_pairs": 8,
+        "exclusion_reasons": {
+          "b_observation_insufficient": 7,
+          "a_observation_insufficient": 7
+        }
+      }
+    }
+  },
+  "labels": [
+    {
+      "code": "d_exercise",
+      "label": "运动与身体活动",
+      "axis": "domains",
+      "total_pairs": 160,
+      "a_positive_all": 42,
+      "b_positive_all": 42,
+      "excluded_pairs": 39,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "b_domain_unavailable": 5,
+        "a_domain_unavailable": 7,
+        "b_domain_uncertain": 8,
+        "b_label_uncertain": 6,
+        "b_domain_unspecified": 25,
+        "a_domain_unspecified": 24,
+        "a_domain_uncertain": 7,
+        "a_label_uncertain": 5
+      },
+      "n": 121,
+      "n11": 42,
+      "n10": 0,
+      "n01": 0,
+      "n00": 79,
+      "a_positive": 42,
+      "b_positive": 42,
+      "agreement": 1.0,
+      "positive_agreement": 1.0,
+      "expected_agreement": 0.5467522710197391,
+      "kappa": 1.0,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "d_body",
+      "label": "身体状态、体重与外形",
+      "axis": "domains",
+      "total_pairs": 160,
+      "a_positive_all": 35,
+      "b_positive_all": 37,
+      "excluded_pairs": 39,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "b_domain_unavailable": 5,
+        "a_domain_unavailable": 7,
+        "b_domain_uncertain": 8,
+        "b_domain_unspecified": 25,
+        "a_domain_unspecified": 24,
+        "a_domain_uncertain": 7,
+        "b_label_uncertain": 1,
+        "a_label_uncertain": 1
+      },
+      "n": 121,
+      "n11": 34,
+      "n10": 1,
+      "n01": 3,
+      "n00": 83,
+      "a_positive": 35,
+      "b_positive": 37,
+      "agreement": 0.9669421487603306,
+      "positive_agreement": 0.9444444444444444,
+      "expected_agreement": 0.5818591626255037,
+      "kappa": 0.9209408689970597,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "d_food",
+      "label": "饮食、食物与营养",
+      "axis": "domains",
+      "total_pairs": 160,
+      "a_positive_all": 31,
+      "b_positive_all": 31,
+      "excluded_pairs": 39,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "b_domain_unavailable": 5,
+        "a_domain_unavailable": 7,
+        "b_domain_uncertain": 8,
+        "b_domain_unspecified": 25,
+        "a_domain_unspecified": 24,
+        "a_domain_uncertain": 7,
+        "b_label_uncertain": 1,
+        "a_label_uncertain": 1
+      },
+      "n": 121,
+      "n11": 31,
+      "n10": 0,
+      "n01": 0,
+      "n00": 90,
+      "a_positive": 31,
+      "b_positive": 31,
+      "agreement": 1.0,
+      "positive_agreement": 1.0,
+      "expected_agreement": 0.6188784919062905,
+      "kappa": 1.0,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "d_life",
+      "label": "生活、关系与社会文化话题",
+      "axis": "domains",
+      "total_pairs": 160,
+      "a_positive_all": 64,
+      "b_positive_all": 64,
+      "excluded_pairs": 39,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "b_domain_unavailable": 5,
+        "a_domain_unavailable": 7,
+        "b_domain_uncertain": 8,
+        "b_domain_unspecified": 25,
+        "a_domain_unspecified": 24,
+        "a_domain_uncertain": 7,
+        "b_label_uncertain": 4,
+        "a_label_uncertain": 2
+      },
+      "n": 121,
+      "n11": 62,
+      "n10": 1,
+      "n01": 2,
+      "n00": 56,
+      "a_positive": 63,
+      "b_positive": 64,
+      "agreement": 0.9752066115702479,
+      "positive_agreement": 0.9763779527559056,
+      "expected_agreement": 0.5011952735468889,
+      "kappa": 0.9502943995618238,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "d_tools",
+      "label": "工具、服务与记录奖励机制",
+      "axis": "domains",
+      "total_pairs": 160,
+      "a_positive_all": 5,
+      "b_positive_all": 6,
+      "excluded_pairs": 39,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "b_domain_unavailable": 5,
+        "a_domain_unavailable": 7,
+        "b_domain_uncertain": 8,
+        "b_domain_unspecified": 25,
+        "a_domain_unspecified": 24,
+        "a_domain_uncertain": 7,
+        "a_label_uncertain": 1
+      },
+      "n": 121,
+      "n11": 5,
+      "n10": 0,
+      "n01": 0,
+      "n00": 116,
+      "a_positive": 5,
+      "b_positive": 5,
+      "agreement": 1.0,
+      "positive_agreement": 1.0,
+      "expected_agreement": 0.9207704391776518,
+      "kappa": 1.0,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "d_other",
+      "label": "其他明确内容",
+      "axis": "domains",
+      "total_pairs": 160,
+      "a_positive_all": 4,
+      "b_positive_all": 4,
+      "excluded_pairs": 39,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "b_domain_unavailable": 5,
+        "a_domain_unavailable": 7,
+        "b_domain_uncertain": 8,
+        "b_domain_unspecified": 25,
+        "a_domain_unspecified": 24,
+        "a_domain_uncertain": 7
+      },
+      "n": 121,
+      "n11": 4,
+      "n10": 0,
+      "n01": 0,
+      "n00": 117,
+      "a_positive": 4,
+      "b_positive": 4,
+      "agreement": 1.0,
+      "positive_agreement": 1.0,
+      "expected_agreement": 0.9360699405778293,
+      "kappa": 1.0,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": true,
+      "interpretation_flags": [
+        "low_positive_support"
+      ]
+    },
+    {
+      "code": "f_activity_update",
+      "label": "行动、进度与日常事件呈报",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 63,
+      "b_positive_all": 73,
+      "excluded_pairs": 10,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "a_label_uncertain": 2
+      },
+      "n": 150,
+      "n11": 60,
+      "n10": 3,
+      "n01": 11,
+      "n00": 76,
+      "a_positive": 63,
+      "b_positive": 71,
+      "agreement": 0.9066666666666666,
+      "positive_agreement": 0.8955223880597015,
+      "expected_agreement": 0.5042666666666666,
+      "kappa": 0.8117267348036578,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "f_experience_report",
+      "label": "身体感受与主观体验自述",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 41,
+      "b_positive_all": 37,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 37,
+      "n10": 4,
+      "n01": 0,
+      "n00": 111,
+      "a_positive": 41,
+      "b_positive": 37,
+      "agreement": 0.9736842105263158,
+      "positive_agreement": 0.9487179487179487,
+      "expected_agreement": 0.6181613573407202,
+      "kappa": 0.9310813874404897,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "f_future_intention",
+      "label": "计划、目标与期待",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 18,
+      "b_positive_all": 16,
+      "excluded_pairs": 11,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "b_label_uncertain": 2,
+        "a_label_uncertain": 1
+      },
+      "n": 149,
+      "n11": 16,
+      "n10": 2,
+      "n01": 0,
+      "n00": 131,
+      "a_positive": 18,
+      "b_positive": 16,
+      "agreement": 0.9865771812080537,
+      "positive_agreement": 0.9411764705882353,
+      "expected_agreement": 0.7977568577991982,
+      "kappa": 0.9336302895322941,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "f_explanation",
+      "label": "可泛化信息与机制解释",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 4,
+      "b_positive_all": 4,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 4,
+      "n10": 0,
+      "n01": 0,
+      "n00": 148,
+      "a_positive": 4,
+      "b_positive": 4,
+      "agreement": 1.0,
+      "positive_agreement": 1.0,
+      "expected_agreement": 0.9487534626038782,
+      "kappa": 1.0,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": true,
+      "interpretation_flags": [
+        "low_positive_support"
+      ]
+    },
+    {
+      "code": "f_practical_guidance",
+      "label": "方法与可执行建议",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 1,
+      "b_positive_all": 1,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 1,
+      "n10": 0,
+      "n01": 0,
+      "n00": 151,
+      "a_positive": 1,
+      "b_positive": 1,
+      "agreement": 1.0,
+      "positive_agreement": 1.0,
+      "expected_agreement": 0.9869286703601108,
+      "kappa": 1.0,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": true,
+      "interpretation_flags": [
+        "low_positive_support"
+      ]
+    },
+    {
+      "code": "f_reflection",
+      "label": "概括性议论、格言与价值主张",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 26,
+      "b_positive_all": 26,
+      "excluded_pairs": 9,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "a_label_uncertain": 1
+      },
+      "n": 151,
+      "n11": 26,
+      "n10": 0,
+      "n01": 0,
+      "n00": 125,
+      "a_positive": 26,
+      "b_positive": 26,
+      "agreement": 1.0,
+      "positive_agreement": 1.0,
+      "expected_agreement": 0.7149247840007017,
+      "kappa": 1.0,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "f_exhortation",
+      "label": "行动号召与自我提醒",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 20,
+      "b_positive_all": 22,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 18,
+      "n10": 2,
+      "n01": 4,
+      "n00": 128,
+      "a_positive": 20,
+      "b_positive": 22,
+      "agreement": 0.9605263157894737,
+      "positive_agreement": 0.8571428571428571,
+      "expected_agreement": 0.7617728531855956,
+      "kappa": 0.8343023255813953,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "f_greeting_wish",
+      "label": "寒暄与祝愿",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 17,
+      "b_positive_all": 18,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 17,
+      "n10": 0,
+      "n01": 1,
+      "n00": 134,
+      "a_positive": 17,
+      "b_positive": 18,
+      "agreement": 0.993421052631579,
+      "positive_agreement": 0.9714285714285714,
+      "expected_agreement": 0.7962257617728532,
+      "kappa": 0.9677145284621922,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "f_relational_bid",
+      "label": "明确联络或共同参与邀请",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 1,
+      "b_positive_all": 0,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 0,
+      "n10": 1,
+      "n01": 0,
+      "n00": 151,
+      "a_positive": 1,
+      "b_positive": 0,
+      "agreement": 0.993421052631579,
+      "positive_agreement": 0.0,
+      "expected_agreement": 0.993421052631579,
+      "kappa": 0.0,
+      "kappa_status": "computed",
+      "one_rater_constant": true,
+      "both_raters_constant": false,
+      "low_positive_support": true,
+      "interpretation_flags": [
+        "one_rater_constant",
+        "low_positive_support"
+      ]
+    },
+    {
+      "code": "f_reader_response_request",
+      "label": "明确面向他人的回应征询",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 0,
+      "b_positive_all": 0,
+      "excluded_pairs": 9,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "b_label_uncertain": 1,
+        "a_label_uncertain": 1
+      },
+      "n": 151,
+      "n11": 0,
+      "n10": 0,
+      "n01": 0,
+      "n00": 151,
+      "a_positive": 0,
+      "b_positive": 0,
+      "agreement": 1.0,
+      "positive_agreement": null,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "kappa_status": "undefined_expected_agreement_one",
+      "one_rater_constant": false,
+      "both_raters_constant": true,
+      "low_positive_support": true,
+      "interpretation_flags": [
+        "both_raters_constant",
+        "low_positive_support"
+      ]
+    },
+    {
+      "code": "f_appraisal",
+      "label": "明确对象评价、褒贬与致敬",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 36,
+      "b_positive_all": 37,
+      "excluded_pairs": 9,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7,
+        "a_label_uncertain": 1
+      },
+      "n": 151,
+      "n11": 35,
+      "n10": 1,
+      "n01": 2,
+      "n00": 113,
+      "a_positive": 36,
+      "b_positive": 37,
+      "agreement": 0.9801324503311258,
+      "positive_agreement": 0.958904109589041,
+      "expected_agreement": 0.6333932722249024,
+      "kappa": 0.9458069147027157,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "f_caption",
+      "label": "指称式题注与景象描写",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 28,
+      "b_positive_all": 18,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 17,
+      "n10": 11,
+      "n01": 1,
+      "n00": 123,
+      "a_positive": 28,
+      "b_positive": 18,
+      "agreement": 0.9210526315789473,
+      "positive_agreement": 0.7391304347826086,
+      "expected_agreement": 0.7409972299168975,
+      "kappa": 0.695187165775401,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": false,
+      "interpretation_flags": []
+    },
+    {
+      "code": "f_gratitude",
+      "label": "明确感谢表达",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 1,
+      "b_positive_all": 2,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 1,
+      "n10": 0,
+      "n01": 1,
+      "n00": 150,
+      "a_positive": 1,
+      "b_positive": 2,
+      "agreement": 0.993421052631579,
+      "positive_agreement": 0.6666666666666666,
+      "expected_agreement": 0.9804362880886427,
+      "kappa": 0.6637168141592933,
+      "kappa_status": "computed",
+      "one_rater_constant": false,
+      "both_raters_constant": false,
+      "low_positive_support": true,
+      "interpretation_flags": [
+        "low_positive_support"
+      ]
+    },
+    {
+      "code": "f_sale_offer",
+      "label": "商品服务供给与交易告知",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 0,
+      "b_positive_all": 0,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 0,
+      "n10": 0,
+      "n01": 0,
+      "n00": 152,
+      "a_positive": 0,
+      "b_positive": 0,
+      "agreement": 1.0,
+      "positive_agreement": null,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "kappa_status": "undefined_expected_agreement_one",
+      "one_rater_constant": false,
+      "both_raters_constant": true,
+      "low_positive_support": true,
+      "interpretation_flags": [
+        "both_raters_constant",
+        "low_positive_support"
+      ]
+    },
+    {
+      "code": "f_other_expression",
+      "label": "其他可辨识表达行为",
+      "axis": "functions",
+      "total_pairs": 160,
+      "a_positive_all": 0,
+      "b_positive_all": 1,
+      "excluded_pairs": 8,
+      "exclusion_reasons": {
+        "b_observation_insufficient": 7,
+        "a_observation_insufficient": 7
+      },
+      "n": 152,
+      "n11": 0,
+      "n10": 0,
+      "n01": 1,
+      "n00": 151,
+      "a_positive": 0,
+      "b_positive": 1,
+      "agreement": 0.993421052631579,
+      "positive_agreement": 0.0,
+      "expected_agreement": 0.993421052631579,
+      "kappa": 0.0,
+      "kappa_status": "computed",
+      "one_rater_constant": true,
+      "both_raters_constant": false,
+      "low_positive_support": true,
+      "interpretation_flags": [
+        "one_rater_constant",
+        "low_positive_support"
+      ]
+    }
+  ],
+  "freeze": {
+    "record_path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/freeze_record.json",
+    "record_sha256": "66dfb29209a2a513435559ed4cba054c22a72c170ea0053bdb8d94351fe889df",
+    "verified": true,
+    "files": [
+      {
+        "kind": "codebook",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/code/classification_codebook_v1.json",
+        "sha256": "a5792bc359f918f405d9c5b45051b1746f7123e1855e068d136d807fd36fdeb4"
+      },
+      {
+        "kind": "recognizer",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/code/classification_recognizer_v1.json",
+        "sha256": "dce1f55fd06365b4f9213e6c0fd58eef48fd0451ce2771d91b1602f158257539"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/code/classify_rebuilt_posts.py",
+        "sha256": "d8d83c8ed6f9d2ee2d1f45c7d0594565c1596ceaa409b5a3c815e3ab10e28242"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/classifier_v1.joblib",
+        "sha256": "d0d5351dd82c617483027103cbfd33d3cafc0a9fb07fe73ae7a1af4431d57e04"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/development_blind.jsonl",
+        "sha256": "6d7835ccbde21cf90a5133e10e04c6f96ebe4e393b03961ffc7b243e1d0f9648"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/development_coding.json",
+        "sha256": "e17a6ac39dbbb3deb1db6f5304ede86e000c3c99089d44e0128ce0d2484548b6"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/calibration_blind.jsonl",
+        "sha256": "f2c10ca5b5f3460e8a96cf44378b482ca4b69ec289fde419e1bdb9711b1eddb2"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/calibration_coding.json",
+        "sha256": "89db0d6c9206e88b04ab44131d7f3e503c2027c7d4c85b27e749f2b3b81ed51d"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/selected_holdout.csv",
+        "sha256": "e74e202f89755cc3132bc3c35ced3d9a51e37309fd54c9718c460c195904b27b"
+      },
+      {
+        "kind": "artifact",
+        "path": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/validation/classification_rebuild/private/body_population.csv",
+        "sha256": "105e6f871bb70809f002559db5e71f504dffb41163831c9ff72d7ad416f4fd96"
+      }
+    ],
+    "extra_artifact_count": 8,
+    "model_artifact_note": "仅能保证freeze_record实际列出的文件；额外训练模型也必须列入artifacts/files。"
+  },
+  "input_hashes": {
+    "blind_input_sha256": "37c360454d8ce133fffc283af63abea7808012f608eca9b282038bb0306b6ff2",
+    "coder_a_sha256": "c20cdeae6f9b916b34e9a2b7def3e25de0123e52b59eecb5ecb81dd069831507",
+    "coder_b_sha256": "099f578c5e672e48ad741a994aa95cba338d3fd64389b6742061072d842e36d5"
+  },
+  "validation": {
+    "complete_ids": true,
+    "legal_codes": true,
+    "all_positive_evidence_exact_substrings": true
+  },
+  "rule_comparisons": {
+    "interpretation": "相对A/B各自编码且预测非NA项的条件指标；不是准确率或gold性能。",
+    "labels": [
+      {
+        "code": "d_exercise",
+        "label": "运动与身体活动",
+        "axis": "domains",
+        "reference": "AI_A",
+        "n": 121,
+        "excluded_samples": 39,
+        "exclusion_reasons": {
+          "prediction_unavailable": 3,
+          "observation_insufficient": 7,
+          "domain_unavailable": 7,
+          "domain_unspecified": 24,
+          "domain_uncertain": 7,
+          "label_uncertain": 5
+        },
+        "TP": 22,
+        "FP": 7,
+        "FN": 20,
+        "TN": 72,
+        "precision": 0.7586206896551724,
+        "recall": 0.5238095238095238,
+        "F1": 0.6197183098591549,
+        "precision_wilson95": [
+          0.5789239838218867,
+          0.8778157755747991
+        ],
+        "recall_wilson95": [
+          0.3772246413134498,
+          0.6664039876929454
+        ]
+      },
+      {
+        "code": "d_body",
+        "label": "身体状态、体重与外形",
+        "axis": "domains",
+        "reference": "AI_A",
+        "n": 121,
+        "excluded_samples": 39,
+        "exclusion_reasons": {
+          "prediction_unavailable": 3,
+          "observation_insufficient": 7,
+          "domain_unavailable": 7,
+          "domain_unspecified": 24,
+          "label_uncertain": 1,
+          "domain_uncertain": 7
+        },
+        "TP": 5,
+        "FP": 6,
+        "FN": 29,
+        "TN": 81,
+        "precision": 0.45454545454545453,
+        "recall": 0.14705882352941177,
+        "F1": 0.2222222222222222,
+        "precision_wilson95": [
+          0.21271271622459764,
+          0.719908462590678
+        ],
+        "recall_wilson95": [
+          0.06449441444782457,
+          0.3012805649545216
+        ]
+      },
+      {
+        "code": "d_food",
+        "label": "饮食、食物与营养",
+        "axis": "domains",
+        "reference": "AI_A",
+        "n": 121,
+        "excluded_samples": 39,
+        "exclusion_reasons": {
+          "prediction_unavailable": 3,
+          "observation_insufficient": 7,
+          "domain_unavailable": 7,
+          "domain_unspecified": 24,
+          "label_uncertain": 1,
+          "domain_uncertain": 7
+        },
+        "TP": 10,
+        "FP": 19,
+        "FN": 21,
+        "TN": 71,
+        "precision": 0.3448275862068966,
+        "recall": 0.3225806451612903,
+        "F1": 0.3333333333333333,
+        "precision_wilson95": [
+          0.19940718526674994,
+          0.5265489590952386
+        ],
+        "recall_wilson95": [
+          0.18569426566359176,
+          0.49858990691914357
+        ]
+      },
+      {
+        "code": "d_life",
+        "label": "生活、关系与社会文化话题",
+        "axis": "domains",
+        "reference": "AI_A",
+        "n": 121,
+        "excluded_samples": 39,
+        "exclusion_reasons": {
+          "prediction_unavailable": 3,
+          "observation_insufficient": 7,
+          "domain_unavailable": 7,
+          "domain_unspecified": 24,
+          "domain_uncertain": 7,
+          "label_uncertain": 2
+        },
+        "TP": 54,
+        "FP": 31,
+        "FN": 10,
+        "TN": 26,
+        "precision": 0.6352941176470588,
+        "recall": 0.84375,
+        "F1": 0.7248322147651006,
+        "precision_wilson95": [
+          0.5291813302163223,
+          0.7297068094575224
+        ],
+        "recall_wilson95": [
+          0.7357193822745122,
+          0.912851576617934
+        ]
+      },
+      {
+        "code": "d_tools",
+        "label": "工具、服务与记录奖励机制",
+        "axis": "domains",
+        "reference": "AI_A",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7,
+          "domain_unavailable": 7,
+          "domain_unspecified": 24,
+          "domain_uncertain": 7,
+          "label_uncertain": 1
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "d_other",
+        "label": "其他明确内容",
+        "axis": "domains",
+        "reference": "AI_A",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7,
+          "domain_unavailable": 7,
+          "domain_unspecified": 24,
+          "domain_uncertain": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_activity_update",
+        "label": "行动、进度与日常事件呈报",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 151,
+        "excluded_samples": 9,
+        "exclusion_reasons": {
+          "observation_insufficient": 7,
+          "label_uncertain": 2
+        },
+        "TP": 63,
+        "FP": 87,
+        "FN": 0,
+        "TN": 1,
+        "precision": 0.42,
+        "recall": 1.0,
+        "F1": 0.5915492957746479,
+        "precision_wilson95": [
+          0.3439800445299174,
+          0.5000151945689748
+        ],
+        "recall_wilson95": [
+          0.9425288004111484,
+          1.0
+        ]
+      },
+      {
+        "code": "f_experience_report",
+        "label": "身体感受与主观体验自述",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 41,
+        "FP": 102,
+        "FN": 0,
+        "TN": 10,
+        "precision": 0.2867132867132867,
+        "recall": 1.0,
+        "F1": 0.44565217391304346,
+        "precision_wilson95": [
+          0.21893630983911783,
+          0.36564967500535195
+        ],
+        "recall_wilson95": [
+          0.9143324298155681,
+          0.9999999999999999
+        ]
+      },
+      {
+        "code": "f_future_intention",
+        "label": "计划、目标与期待",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 152,
+        "excluded_samples": 8,
+        "exclusion_reasons": {
+          "observation_insufficient": 7,
+          "label_uncertain": 1
+        },
+        "TP": 7,
+        "FP": 48,
+        "FN": 11,
+        "TN": 86,
+        "precision": 0.12727272727272726,
+        "recall": 0.3888888888888889,
+        "F1": 0.1917808219178082,
+        "precision_wilson95": [
+          0.06304210427364634,
+          0.24017027655909076
+        ],
+        "recall_wilson95": [
+          0.2030524657216362,
+          0.613809583977621
+        ]
+      },
+      {
+        "code": "f_explanation",
+        "label": "可泛化信息与机制解释",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 4,
+        "TN": 149,
+        "precision": null,
+        "recall": 0.0,
+        "F1": 0.0,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          0.0,
+          0.4898908364545973
+        ]
+      },
+      {
+        "code": "f_practical_guidance",
+        "label": "方法与可执行建议",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 1,
+        "TN": 152,
+        "precision": null,
+        "recall": 0.0,
+        "F1": 0.0,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          0.0,
+          0.7934506856227626
+        ]
+      },
+      {
+        "code": "f_reflection",
+        "label": "概括性议论、格言与价值主张",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 152,
+        "excluded_samples": 8,
+        "exclusion_reasons": {
+          "observation_insufficient": 7,
+          "label_uncertain": 1
+        },
+        "TP": 10,
+        "FP": 6,
+        "FN": 16,
+        "TN": 120,
+        "precision": 0.625,
+        "recall": 0.38461538461538464,
+        "F1": 0.47619047619047616,
+        "precision_wilson95": [
+          0.38641040545502714,
+          0.8151876744113636
+        ],
+        "recall_wilson95": [
+          0.22428594435712798,
+          0.5746514991488447
+        ]
+      },
+      {
+        "code": "f_exhortation",
+        "label": "行动号召与自我提醒",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 7,
+        "FP": 6,
+        "FN": 13,
+        "TN": 127,
+        "precision": 0.5384615384615384,
+        "recall": 0.35,
+        "F1": 0.42424242424242425,
+        "precision_wilson95": [
+          0.29143795714506004,
+          0.7679393219046169
+        ],
+        "recall_wilson95": [
+          0.18119182410108206,
+          0.5671457233147638
+        ]
+      },
+      {
+        "code": "f_greeting_wish",
+        "label": "寒暄与祝愿",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 6,
+        "FP": 0,
+        "FN": 11,
+        "TN": 136,
+        "precision": 1.0,
+        "recall": 0.35294117647058826,
+        "F1": 0.5217391304347826,
+        "precision_wilson95": [
+          0.6096657120978346,
+          1.0
+        ],
+        "recall_wilson95": [
+          0.17309720397243744,
+          0.5869963651478132
+        ]
+      },
+      {
+        "code": "f_relational_bid",
+        "label": "明确联络或共同参与邀请",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_reader_response_request",
+        "label": "明确面向他人的回应征询",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7,
+          "label_uncertain": 1
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_appraisal",
+        "label": "明确对象评价、褒贬与致敬",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 152,
+        "excluded_samples": 8,
+        "exclusion_reasons": {
+          "observation_insufficient": 7,
+          "label_uncertain": 1
+        },
+        "TP": 33,
+        "FP": 91,
+        "FN": 3,
+        "TN": 25,
+        "precision": 0.2661290322580645,
+        "recall": 0.9166666666666666,
+        "F1": 0.4125,
+        "precision_wilson95": [
+          0.19622791708095935,
+          0.3500851449332286
+        ],
+        "recall_wilson95": [
+          0.7817330875072737,
+          0.9712513886640066
+        ]
+      },
+      {
+        "code": "f_caption",
+        "label": "指称式题注与景象描写",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 2,
+        "FP": 8,
+        "FN": 26,
+        "TN": 117,
+        "precision": 0.2,
+        "recall": 0.07142857142857142,
+        "F1": 0.10526315789473684,
+        "precision_wilson95": [
+          0.05668215145437519,
+          0.5098375284633583
+        ],
+        "recall_wilson95": [
+          0.019812064115305755,
+          0.22645362568399052
+        ]
+      },
+      {
+        "code": "f_gratitude",
+        "label": "明确感谢表达",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_sale_offer",
+        "label": "商品服务供给与交易告知",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_other_expression",
+        "label": "其他可辨识表达行为",
+        "axis": "functions",
+        "reference": "AI_A",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "d_exercise",
+        "label": "运动与身体活动",
+        "axis": "domains",
+        "reference": "AI_B",
+        "n": 121,
+        "excluded_samples": 39,
+        "exclusion_reasons": {
+          "prediction_unavailable": 3,
+          "observation_insufficient": 7,
+          "domain_unavailable": 5,
+          "label_uncertain": 6,
+          "domain_uncertain": 8,
+          "domain_unspecified": 25
+        },
+        "TP": 22,
+        "FP": 7,
+        "FN": 20,
+        "TN": 72,
+        "precision": 0.7586206896551724,
+        "recall": 0.5238095238095238,
+        "F1": 0.6197183098591549,
+        "precision_wilson95": [
+          0.5789239838218867,
+          0.8778157755747991
+        ],
+        "recall_wilson95": [
+          0.3772246413134498,
+          0.6664039876929454
+        ]
+      },
+      {
+        "code": "d_body",
+        "label": "身体状态、体重与外形",
+        "axis": "domains",
+        "reference": "AI_B",
+        "n": 121,
+        "excluded_samples": 39,
+        "exclusion_reasons": {
+          "prediction_unavailable": 3,
+          "observation_insufficient": 7,
+          "domain_unavailable": 5,
+          "domain_uncertain": 8,
+          "domain_unspecified": 25,
+          "label_uncertain": 1
+        },
+        "TP": 6,
+        "FP": 5,
+        "FN": 30,
+        "TN": 80,
+        "precision": 0.5454545454545454,
+        "recall": 0.16666666666666666,
+        "F1": 0.2553191489361702,
+        "precision_wilson95": [
+          0.280091537409322,
+          0.7872872837754024
+        ],
+        "recall_wilson95": [
+          0.07870447595018114,
+          0.31890794311279463
+        ]
+      },
+      {
+        "code": "d_food",
+        "label": "饮食、食物与营养",
+        "axis": "domains",
+        "reference": "AI_B",
+        "n": 121,
+        "excluded_samples": 39,
+        "exclusion_reasons": {
+          "prediction_unavailable": 3,
+          "observation_insufficient": 7,
+          "domain_unavailable": 5,
+          "domain_uncertain": 8,
+          "domain_unspecified": 25,
+          "label_uncertain": 1
+        },
+        "TP": 10,
+        "FP": 19,
+        "FN": 21,
+        "TN": 71,
+        "precision": 0.3448275862068966,
+        "recall": 0.3225806451612903,
+        "F1": 0.3333333333333333,
+        "precision_wilson95": [
+          0.19940718526674994,
+          0.5265489590952386
+        ],
+        "recall_wilson95": [
+          0.18569426566359176,
+          0.49858990691914357
+        ]
+      },
+      {
+        "code": "d_life",
+        "label": "生活、关系与社会文化话题",
+        "axis": "domains",
+        "reference": "AI_B",
+        "n": 121,
+        "excluded_samples": 39,
+        "exclusion_reasons": {
+          "prediction_unavailable": 3,
+          "observation_insufficient": 7,
+          "domain_unavailable": 5,
+          "domain_uncertain": 8,
+          "domain_unspecified": 25,
+          "label_uncertain": 4
+        },
+        "TP": 54,
+        "FP": 31,
+        "FN": 10,
+        "TN": 26,
+        "precision": 0.6352941176470588,
+        "recall": 0.84375,
+        "F1": 0.7248322147651006,
+        "precision_wilson95": [
+          0.5291813302163223,
+          0.7297068094575224
+        ],
+        "recall_wilson95": [
+          0.7357193822745122,
+          0.912851576617934
+        ]
+      },
+      {
+        "code": "d_tools",
+        "label": "工具、服务与记录奖励机制",
+        "axis": "domains",
+        "reference": "AI_B",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7,
+          "domain_unavailable": 5,
+          "domain_uncertain": 8,
+          "domain_unspecified": 25
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "d_other",
+        "label": "其他明确内容",
+        "axis": "domains",
+        "reference": "AI_B",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7,
+          "domain_unavailable": 5,
+          "domain_uncertain": 8,
+          "domain_unspecified": 25
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_activity_update",
+        "label": "行动、进度与日常事件呈报",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 72,
+        "FP": 80,
+        "FN": 1,
+        "TN": 0,
+        "precision": 0.47368421052631576,
+        "recall": 0.9863013698630136,
+        "F1": 0.64,
+        "precision_wilson95": [
+          0.3959377545194448,
+          0.552728023762286
+        ],
+        "recall_wilson95": [
+          0.9264026272903616,
+          0.997577748533516
+        ]
+      },
+      {
+        "code": "f_experience_report",
+        "label": "身体感受与主观体验自述",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 37,
+        "FP": 106,
+        "FN": 0,
+        "TN": 10,
+        "precision": 0.25874125874125875,
+        "recall": 1.0,
+        "F1": 0.4111111111111111,
+        "precision_wilson95": [
+          0.19393814475156687,
+          0.3361673135151284
+        ],
+        "recall_wilson95": [
+          0.9059421741627975,
+          1.0
+        ]
+      },
+      {
+        "code": "f_future_intention",
+        "label": "计划、目标与期待",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 151,
+        "excluded_samples": 9,
+        "exclusion_reasons": {
+          "observation_insufficient": 7,
+          "label_uncertain": 2
+        },
+        "TP": 6,
+        "FP": 50,
+        "FN": 10,
+        "TN": 85,
+        "precision": 0.10714285714285714,
+        "recall": 0.375,
+        "F1": 0.16666666666666666,
+        "precision_wilson95": [
+          0.05003935571117074,
+          0.21468445171071482
+        ],
+        "recall_wilson95": [
+          0.18481232558863633,
+          0.6135895945449727
+        ]
+      },
+      {
+        "code": "f_explanation",
+        "label": "可泛化信息与机制解释",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 4,
+        "TN": 149,
+        "precision": null,
+        "recall": 0.0,
+        "F1": 0.0,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          0.0,
+          0.4898908364545973
+        ]
+      },
+      {
+        "code": "f_practical_guidance",
+        "label": "方法与可执行建议",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 1,
+        "TN": 152,
+        "precision": null,
+        "recall": 0.0,
+        "F1": 0.0,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          0.0,
+          0.7934506856227626
+        ]
+      },
+      {
+        "code": "f_reflection",
+        "label": "概括性议论、格言与价值主张",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 10,
+        "FP": 6,
+        "FN": 16,
+        "TN": 121,
+        "precision": 0.625,
+        "recall": 0.38461538461538464,
+        "F1": 0.47619047619047616,
+        "precision_wilson95": [
+          0.38641040545502714,
+          0.8151876744113636
+        ],
+        "recall_wilson95": [
+          0.22428594435712798,
+          0.5746514991488447
+        ]
+      },
+      {
+        "code": "f_exhortation",
+        "label": "行动号召与自我提醒",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 8,
+        "FP": 5,
+        "FN": 14,
+        "TN": 126,
+        "precision": 0.6153846153846154,
+        "recall": 0.36363636363636365,
+        "F1": 0.45714285714285713,
+        "precision_wilson95": [
+          0.355228915126657,
+          0.8229029220223743
+        ],
+        "recall_wilson95": [
+          0.19733204670366125,
+          0.5704829190986899
+        ]
+      },
+      {
+        "code": "f_greeting_wish",
+        "label": "寒暄与祝愿",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 6,
+        "FP": 0,
+        "FN": 12,
+        "TN": 135,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "F1": 0.5,
+        "precision_wilson95": [
+          0.6096657120978346,
+          1.0
+        ],
+        "recall_wilson95": [
+          0.1627877475083369,
+          0.5625053270405489
+        ]
+      },
+      {
+        "code": "f_relational_bid",
+        "label": "明确联络或共同参与邀请",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_reader_response_request",
+        "label": "明确面向他人的回应征询",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7,
+          "label_uncertain": 1
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_appraisal",
+        "label": "明确对象评价、褒贬与致敬",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 34,
+        "FP": 92,
+        "FN": 3,
+        "TN": 24,
+        "precision": 0.2698412698412698,
+        "recall": 0.918918918918919,
+        "F1": 0.4171779141104294,
+        "precision_wilson95": [
+          0.1999984809546489,
+          0.3533029026958868
+        ],
+        "recall_wilson95": [
+          0.7869932065071162,
+          0.9720394258995521
+        ]
+      },
+      {
+        "code": "f_caption",
+        "label": "指称式题注与景象描写",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 153,
+        "excluded_samples": 7,
+        "exclusion_reasons": {
+          "observation_insufficient": 7
+        },
+        "TP": 1,
+        "FP": 9,
+        "FN": 17,
+        "TN": 126,
+        "precision": 0.1,
+        "recall": 0.05555555555555555,
+        "F1": 0.07142857142857142,
+        "precision_wilson95": [
+          0.017876213095072896,
+          0.4041500267952385
+        ],
+        "recall_wilson95": [
+          0.009875190978303097,
+          0.25757300781872594
+        ]
+      },
+      {
+        "code": "f_gratitude",
+        "label": "明确感谢表达",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_sale_offer",
+        "label": "商品服务供给与交易告知",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      },
+      {
+        "code": "f_other_expression",
+        "label": "其他可辨识表达行为",
+        "axis": "functions",
+        "reference": "AI_B",
+        "n": 0,
+        "excluded_samples": 160,
+        "exclusion_reasons": {
+          "prediction_unavailable": 160,
+          "observation_insufficient": 7
+        },
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 0,
+        "precision": null,
+        "recall": null,
+        "F1": null,
+        "precision_wilson95": [
+          null,
+          null
+        ],
+        "recall_wilson95": [
+          null,
+          null
+        ]
+      }
+    ],
+    "prediction_sha256": "1fdee9140e10a0eb93b2dfd3e74b09a034048bd9ec01b27039570521eaffca44"
+  }
+}

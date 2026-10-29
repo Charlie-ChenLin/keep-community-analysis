@@ -1,0 +1,467 @@
+{
+  "scope": "AI-only post-freeze diagnostics; no semantic ground truth or new tuning",
+  "codebook_sha256": "a5792bc359f918f405d9c5b45051b1746f7123e1855e068d136d807fd36fdeb4",
+  "frozen_files_verified": true,
+  "n": 160,
+  "actual_packet_authors": {
+    "development": 55,
+    "calibration": 14,
+    "holdout": 19
+  },
+  "checks": {
+    "author_packets_disjoint": true,
+    "released_packet_hash_matches": true,
+    "exact_templates_disjoint": true,
+    "no_duplicate_templates_within_packets": true,
+    "all_positive_evidence_literal": true,
+    "empty_controls_stayed_empty": true
+  },
+  "empty_observation_controls_n": 12,
+  "frozen_codebook_metadata_errata": [
+    {
+      "field": "d_life.include: 保留11个开发细分",
+      "correction": "显式映射为10个开发叶及2个校准新增叶。冻结定义未改变，仅纠正计数措辞。"
+    }
+  ],
+  "state_cross_tab": {
+    "specified / specified": 121,
+    "unavailable / unavailable": 5,
+    "unavailable / uncertain": 1,
+    "unspecified / unspecified": 24,
+    "unavailable / unspecified": 1,
+    "uncertain / uncertain": 6,
+    "specified / uncertain": 1,
+    "uncertain / specified": 1
+  },
+  "exact_label_set_agreement_all_160": {
+    "domains": 151,
+    "functions": 129
+  },
+  "different_record_n": 42,
+  "multi_label_counts": {
+    "AI_A": {
+      "domains": 39,
+      "functions": 71
+    },
+    "AI_B": {
+      "domains": 40,
+      "functions": 73
+    }
+  },
+  "domain_scope_diagnostics": {
+    "AI_A": [
+      {
+        "domain_state": "specified",
+        "n": 122,
+        "gate_passed": 121,
+        "at_least_one_domain_assigned": 108
+      },
+      {
+        "domain_state": "unspecified",
+        "n": 24,
+        "gate_passed": 22,
+        "at_least_one_domain_assigned": 18
+      },
+      {
+        "domain_state": "uncertain",
+        "n": 7,
+        "gate_passed": 7,
+        "at_least_one_domain_assigned": 7
+      },
+      {
+        "domain_state": "unavailable",
+        "n": 7,
+        "gate_passed": 7,
+        "at_least_one_domain_assigned": 7
+      }
+    ],
+    "AI_B": [
+      {
+        "domain_state": "specified",
+        "n": 122,
+        "gate_passed": 121,
+        "at_least_one_domain_assigned": 108
+      },
+      {
+        "domain_state": "unspecified",
+        "n": 25,
+        "gate_passed": 23,
+        "at_least_one_domain_assigned": 19
+      },
+      {
+        "domain_state": "uncertain",
+        "n": 8,
+        "gate_passed": 8,
+        "at_least_one_domain_assigned": 8
+      },
+      {
+        "domain_state": "unavailable",
+        "n": 5,
+        "gate_passed": 5,
+        "at_least_one_domain_assigned": 5
+      }
+    ],
+    "both_unspecified": {
+      "n": 24,
+      "gate_passed": 22,
+      "at_least_one_domain_assigned": 18
+    }
+  },
+  "positive_output_coverage_including_abstentions": [
+    {
+      "reference": "AI_A",
+      "code": "d_exercise",
+      "reference_positive": 42,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 22,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.5238095238095238
+    },
+    {
+      "reference": "AI_A",
+      "code": "d_body",
+      "reference_positive": 35,
+      "positive_with_unavailable_prediction": 1,
+      "positive_detected": 5,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.14285714285714285
+    },
+    {
+      "reference": "AI_A",
+      "code": "d_food",
+      "reference_positive": 31,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 10,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.3225806451612903
+    },
+    {
+      "reference": "AI_A",
+      "code": "d_life",
+      "reference_positive": 64,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 54,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.84375
+    },
+    {
+      "reference": "AI_A",
+      "code": "d_tools",
+      "reference_positive": 5,
+      "positive_with_unavailable_prediction": 5,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_A",
+      "code": "d_other",
+      "reference_positive": 4,
+      "positive_with_unavailable_prediction": 4,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_activity_update",
+      "reference_positive": 63,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 63,
+      "positive_detection_with_abstentions_counted_as_not_detected": 1.0
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_experience_report",
+      "reference_positive": 41,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 41,
+      "positive_detection_with_abstentions_counted_as_not_detected": 1.0
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_future_intention",
+      "reference_positive": 18,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 7,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.3888888888888889
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_explanation",
+      "reference_positive": 4,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_practical_guidance",
+      "reference_positive": 1,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_reflection",
+      "reference_positive": 26,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 10,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.38461538461538464
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_exhortation",
+      "reference_positive": 20,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 7,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.35
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_greeting_wish",
+      "reference_positive": 17,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 6,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.35294117647058826
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_relational_bid",
+      "reference_positive": 1,
+      "positive_with_unavailable_prediction": 1,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_reader_response_request",
+      "reference_positive": 0,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": null
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_appraisal",
+      "reference_positive": 36,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 33,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.9166666666666666
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_caption",
+      "reference_positive": 28,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 2,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.07142857142857142
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_gratitude",
+      "reference_positive": 1,
+      "positive_with_unavailable_prediction": 1,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_sale_offer",
+      "reference_positive": 0,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": null
+    },
+    {
+      "reference": "AI_A",
+      "code": "f_other_expression",
+      "reference_positive": 0,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": null
+    },
+    {
+      "reference": "AI_B",
+      "code": "d_exercise",
+      "reference_positive": 42,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 22,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.5238095238095238
+    },
+    {
+      "reference": "AI_B",
+      "code": "d_body",
+      "reference_positive": 37,
+      "positive_with_unavailable_prediction": 1,
+      "positive_detected": 6,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.16216216216216217
+    },
+    {
+      "reference": "AI_B",
+      "code": "d_food",
+      "reference_positive": 31,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 10,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.3225806451612903
+    },
+    {
+      "reference": "AI_B",
+      "code": "d_life",
+      "reference_positive": 64,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 54,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.84375
+    },
+    {
+      "reference": "AI_B",
+      "code": "d_tools",
+      "reference_positive": 6,
+      "positive_with_unavailable_prediction": 6,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_B",
+      "code": "d_other",
+      "reference_positive": 4,
+      "positive_with_unavailable_prediction": 4,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_activity_update",
+      "reference_positive": 73,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 72,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.9863013698630136
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_experience_report",
+      "reference_positive": 37,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 37,
+      "positive_detection_with_abstentions_counted_as_not_detected": 1.0
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_future_intention",
+      "reference_positive": 16,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 6,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.375
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_explanation",
+      "reference_positive": 4,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_practical_guidance",
+      "reference_positive": 1,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_reflection",
+      "reference_positive": 26,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 10,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.38461538461538464
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_exhortation",
+      "reference_positive": 22,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 8,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.36363636363636365
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_greeting_wish",
+      "reference_positive": 18,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 6,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.3333333333333333
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_relational_bid",
+      "reference_positive": 0,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": null
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_reader_response_request",
+      "reference_positive": 0,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": null
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_appraisal",
+      "reference_positive": 37,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 34,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.918918918918919
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_caption",
+      "reference_positive": 18,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 1,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.05555555555555555
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_gratitude",
+      "reference_positive": 2,
+      "positive_with_unavailable_prediction": 2,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_sale_offer",
+      "reference_positive": 0,
+      "positive_with_unavailable_prediction": 0,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": null
+    },
+    {
+      "reference": "AI_B",
+      "code": "f_other_expression",
+      "reference_positive": 1,
+      "positive_with_unavailable_prediction": 1,
+      "positive_detected": 0,
+      "positive_detection_with_abstentions_counted_as_not_detected": 0.0
+    }
+  ],
+  "zero_development_vocabulary_overlap": {
+    "n": 28,
+    "at_least_one_domain_assigned": 28,
+    "note": "零字符ngram重合时输出来自模型截距/阈值，不能视为原文语义理解。"
+  },
+  "unsupported_codes": [
+    "d_tools",
+    "d_other",
+    "f_relational_bid",
+    "f_reader_response_request",
+    "f_gratitude",
+    "f_sale_offer",
+    "f_other_expression"
+  ],
+  "uncalibrated_supported_codes": [
+    "f_practical_guidance"
+  ],
+  "unresolved_disagreements_private_file": "validation/classification_rebuild/private/holdout_disagreements_for_later_human_review.json",
+  "interpretation": "模型在领域未指明正文上的赋类单独报告，不以排除这些正文后的条件precision掩盖覆盖问题。AI间及模型相对AI分歧都不是人工错误率。17内容叶未逐叶留出验证；未修改冻结规则。"
+}

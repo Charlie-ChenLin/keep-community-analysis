@@ -1,0 +1,18 @@
+{
+  "分类测量重建_实证依据与验证报告": {
+    "page_count": 6,
+    "all_pages_nonempty": true,
+    "text_characters": 8373,
+    "no_replacement_character": true,
+    "md_sha256": "7807195d2b729618ed5f1828853388161c241bf3c3fd0a5f94a19d4d2f36d1e2",
+    "pdf_sha256": "c89c500a779e015437c2ddcc33977c2bfb56cbab9df2f265dd07045cb974812e"
+  },
+  "分类编码手册_v1": {
+    "page_count": 18,
+    "all_pages_nonempty": true,
+    "text_characters": 23641,
+    "no_replacement_character": true,
+    "md_sha256": "55e58af5f2227e1cd5993b19bec9abd12542d808713a8f0514cf1d097b79d6d8",
+    "pdf_sha256": "6d166182b2a70991a3f3a32e70496d90c516787f977d59b351fb3714c7e8b2a4"
+  }
+}

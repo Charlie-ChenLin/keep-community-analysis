@@ -1,0 +1,6 @@
+﻿model,n,authors,parameters,rank,cluster_inference_df,r_squared,joint_five_p,joint_five_F,note
+baseline_body,9532,100,182,182,99,0.6879788358743069,0.12979354832336687,1.7522020673724938,"Original body-only model, already controls has_tag"
+authors_ge5,9524,95,177,177,94,0.6878240076379121,0.13135376627490247,1.747643640461363,Exclude authors with fewer than 5 posts
+authors_ge10,9462,87,169,169,86,0.6865895759395979,0.1298820496930385,1.7591758119628,Exclude authors with fewer than 10 posts
+body_tag_identity_controls,9532,100,191,191,99,0.6899708714614045,0.10215366923677971,1.8938397529825817,Original body coding plus outcome-free frequent hashtag identity indicators
+body_plus_tags_recoded,9532,100,182,182,99,0.6873402471693748,0.17255577545682882,1.5804930287147803,"Redefine text as body plus tags; new measurement scope, supplementary only"

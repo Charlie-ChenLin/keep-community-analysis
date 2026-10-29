@@ -1,0 +1,92 @@
+{
+  "scope": "Actual revised artifact text extraction and evidence anchors; flags require contextual interpretation, not proof of an error. Visual rendering is outside this script.",
+  "files": [
+    {
+      "file": "Keep社区内容表达与互动反馈_老师意见修订版.pptx",
+      "sha256": "cf7819f7e1238251aff0b7d39fa3ce40cc9cb485897160029c8109aea1bf4d72",
+      "length": 17944,
+      "anchors": {
+        "body_subset_size": true,
+        "body_joint_p": true,
+        "body_q": true,
+        "vif_max": true,
+        "raw_tags": true,
+        "tag_recoding": true,
+        "multilabel_size": true,
+        "semantic_screening": true,
+        "provisional_codebook": true
+      },
+      "risk_phrase_hits": [],
+      "placeholder_hits": [],
+      "slides": 30,
+      "visible_only_anchors": {
+        "body_subset_size": true,
+        "body_joint_p": true,
+        "body_q": true,
+        "vif_max": true,
+        "raw_tags": true,
+        "tag_recoding": true,
+        "multilabel_size": true,
+        "semantic_screening": true,
+        "provisional_codebook": true
+      },
+      "all_xml_well_formed": true,
+      "native_chart_parts": 15
+    },
+    {
+      "file": "分析报告_老师意见修订版.docx",
+      "sha256": "28cfec732b164b92eff938d355efd7737fb1d94f9f8c41319d842d70b88cb08c",
+      "length": 22904,
+      "anchors": {
+        "body_subset_size": true,
+        "body_joint_p": true,
+        "body_q": true,
+        "vif_max": true,
+        "raw_tags": true,
+        "tag_recoding": true,
+        "multilabel_size": true,
+        "semantic_screening": true,
+        "provisional_codebook": true
+      },
+      "risk_phrase_hits": [],
+      "placeholder_hits": []
+    },
+    {
+      "file": "分析报告_老师意见修订版.md",
+      "sha256": "fed1d7c970b0899be2ec557a7f3513f4489841adad98578846ca7addf22e6e79",
+      "length": 24745,
+      "anchors": {
+        "body_subset_size": true,
+        "body_joint_p": true,
+        "body_q": true,
+        "vif_max": true,
+        "raw_tags": true,
+        "tag_recoding": true,
+        "multilabel_size": true,
+        "semantic_screening": true,
+        "provisional_codebook": true
+      },
+      "risk_phrase_hits": [],
+      "placeholder_hits": []
+    },
+    {
+      "file": "分析报告_老师意见修订版.pdf",
+      "sha256": "d13dee8c68579a1dd7761d922db3d89afbd0bba96a897eb4f4e1800baa85bcab",
+      "pages": 25,
+      "length": 22385,
+      "anchors": {
+        "body_subset_size": true,
+        "body_joint_p": true,
+        "body_q": true,
+        "vif_max": true,
+        "raw_tags": true,
+        "tag_recoding": true,
+        "multilabel_size": true,
+        "semantic_screening": true,
+        "provisional_codebook": true
+      },
+      "risk_phrase_hits": [],
+      "placeholder_hits": []
+    }
+  ]
+}

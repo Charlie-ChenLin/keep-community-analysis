@@ -1,9 +1,12 @@
 PYTHON ?= python
 .DEFAULT_GOAL := help
 .NOTPARALLEL:
-.PHONY: help install check-data analyze validate experiments comments comment-notebook extension-notebook supplemental supplemental-notebook notebook report report-phase2 report-v2 slides slides-pdf reproduce submission
+.PHONY: help install check-data analyze validate experiments comments comment-notebook extension-notebook supplemental supplemental-notebook notebook report report-phase2 report-v2 slides slides-pdf reproduce submission teacher-feedback teacher-feedback-report teacher-revision classification-evaluate classification-report
 
 help:
+	@printf '%s\n' 'make classification-evaluate  复算冻结分类的AI预检验与覆盖审计（需本地私有编码和模型）' 'make classification-report  用已有聚合证据导出分类重建报告与编码手册'
+	@printf '%s\n' 'make teacher-revision  用已有复核证据生成修订报告、PPT、讲稿和改动说明（不覆盖旧版）'
+	@printf '%s\n' 'make teacher-feedback  复现老师意见与方法复核（保留旧模型）' 'make teacher-feedback-report  用已有复核结果导出Markdown、HTML和PDF'
 	@printf '%s\n' 'make report-v2  仅将业务重写版Markdown导出为_v2文件'
 	@printf '%s\n' 'make supplemental  主题作者权重、评论直接回应及独立核查' 'make supplemental-notebook  执行补充分析Notebook并导出HTML'
 	@printf '%s\n' 'make report-phase2  只导出独立中文新版，不重算、不覆盖旧版'
@@ -11,6 +14,38 @@ help:
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
+
+classification-evaluate:
+	$(PYTHON) code/evaluate_rebuilt_classification.py
+	$(PYTHON) code/audit_classification_rebuild.py
+	$(PYTHON) code/prepare_human_classification_review.py --evaluate-human
+
+classification-report:
+	$(PYTHON) code/build_classification_codebook_manual.py
+	$(PYTHON) code/build_classification_rebuild_report.py
+	$(PYTHON) code/validate_classification_rebuild.py
+
+teacher-feedback: check-data
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 $(PYTHON) code/analyze_dictionary_diagnostics.py
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 $(PYTHON) code/analyze_author_tags_feedback.py
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 $(PYTHON) code/analyze_topic_overlap.py
+	$(PYTHON) code/audit_label_coverage.py > /dev/null
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 $(PYTHON) code/audit_topic_structure.py
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 $(PYTHON) code/analyze_complete_body.py
+	OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 $(PYTHON) code/analyze_topic_author_support.py
+	$(PYTHON) code/validate_teacher_feedback.py
+	$(PYTHON) code/build_teacher_feedback_report.py
+
+teacher-feedback-report:
+	$(PYTHON) code/build_teacher_feedback_report.py
+
+teacher-revision:
+	$(PYTHON) code/validate_teacher_feedback.py
+	$(PYTHON) code/build_revised_analysis_report.py
+	$(PYTHON) code/build_teacher_feedback_presentation.py
+	$(PYTHON) code/build_revision_summary.py
+	$(PYTHON) validation/revision_delivery/check_outputs.py
+	$(PYTHON) validation/revision_delivery/check_slide_layout.py
 
 check-data:
 	$(PYTHON) code/check_inputs.py --verify-hashes

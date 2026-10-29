@@ -1,0 +1,1237 @@
+{
+  "status": "final actual-artifact evidence review complete within scoped numeric, semantic and geometric checks; Office rendering unverified",
+  "sources": {
+    "teacher_feedback_dictionary.json": "4926f667d702b809731e7cb5a8f883039aba4b216794ff7666586729ec475588",
+    "teacher_label_coverage_summary.json": "fa8212bb03e3c6eed6df7772e89c33095dce74c4d0c223e28afc9830f0cf395a",
+    "teacher_topic_summary.json": "7e7884083ace9bbc7d8334d434d6ea5eead816f28e5f596e15a775ace8a9fdb6",
+    "teacher_author_tags_summary.json": "c58e5aea5b1ca602cc105a53bff749f17291267b02969499bb509543525a0418",
+    "teacher_complete_body_model.json": "c7177a1cde9ff706f4038e97a606f3b07e6ff6369e40c7d025aec1bc2ab4acf0",
+    "teacher_topic_author_support.json": "de2e3b90e3ccde30e68d983001a3ec3d78d6b5e868896a7e57189d81dc8942a7",
+    "teacher_topic_structure_summary.json": "2f1466cb8c7a45cb45e66f012b56eb47ad578dce7948eb4ce1bd436f0ea14262"
+  },
+  "body_models": {
+    "models": [
+      {
+        "model": "original_all_posts",
+        "n": 9532,
+        "authors": 100,
+        "joint_five_p": 0.12979354832338244,
+        "r_squared": 0.6879788358743069,
+        "terms": [
+          {
+            "term": "log_length",
+            "coef": 0.02797816484904915,
+            "se_cluster": 0.018325765205962918,
+            "p": 0.13002127494181073,
+            "q_bh": 0.2926331218519108,
+            "ci_low": -0.008384129121990477,
+            "ci_high": 0.06434045882008878
+          },
+          {
+            "term": "self_discipline",
+            "coef": -0.11922494082182922,
+            "se_cluster": 0.08739181062019705,
+            "p": 0.17557987311114648,
+            "q_bh": 0.2926331218519108,
+            "ci_low": -0.2926292528774607,
+            "ci_high": 0.05417937123380229
+          },
+          {
+            "term": "social_address",
+            "coef": -0.004338472406973881,
+            "se_cluster": 0.06366233126453064,
+            "p": 0.9458051227127672,
+            "q_bh": 0.9458051227127672,
+            "ci_low": -0.13065834927461675,
+            "ci_high": 0.12198140446066899
+          },
+          {
+            "term": "positive_expression",
+            "coef": -0.08551585485492838,
+            "se_cluster": 0.034841313303375886,
+            "p": 0.01585600952421527,
+            "q_bh": 0.07928004762107634,
+            "ci_low": -0.1546485793243118,
+            "ci_high": -0.016383130385544967
+          },
+          {
+            "term": "question",
+            "coef": 0.10777260702889485,
+            "se_cluster": 0.10488197203173115,
+            "p": 0.3066605424967028,
+            "q_bh": 0.38332567812087853,
+            "ci_low": -0.10033597978412565,
+            "ci_high": 0.3158811938419154
+          }
+        ]
+      },
+      {
+        "model": "raw_body_available",
+        "n": 5548,
+        "authors": 95,
+        "joint_five_p": 0.06704487579530498,
+        "r_squared": 0.5183278564381318,
+        "terms": [
+          {
+            "term": "log_length",
+            "coef": 0.036954101858884536,
+            "se_cluster": 0.01797471116096265,
+            "p": 0.04256544729907434,
+            "q_bh": 0.10641361824768585,
+            "ci_low": 0.0012648914880119128,
+            "ci_high": 0.07264331222975716
+          },
+          {
+            "term": "self_discipline",
+            "coef": -0.1349572274354307,
+            "se_cluster": 0.07201243671681293,
+            "p": 0.06402505206879995,
+            "q_bh": 0.1067084201146666,
+            "ci_low": -0.27793960864259815,
+            "ci_high": 0.00802515377173671
+          },
+          {
+            "term": "social_address",
+            "coef": 0.03557366381650326,
+            "se_cluster": 0.0663842095068537,
+            "p": 0.593310425137051,
+            "q_bh": 0.593310425137051,
+            "ci_low": -0.09623374032913862,
+            "ci_high": 0.16738106796214514
+          },
+          {
+            "term": "positive_expression",
+            "coef": -0.08968960103843596,
+            "se_cluster": 0.03741672275014753,
+            "p": 0.018505793920571334,
+            "q_bh": 0.09252896960285667,
+            "ci_low": -0.16398138117667732,
+            "ci_high": -0.015397820900194578
+          },
+          {
+            "term": "question",
+            "coef": 0.0969280595993658,
+            "se_cluster": 0.099350476544755,
+            "p": 0.331758142750721,
+            "q_bh": 0.4146976784384013,
+            "ci_low": -0.10033464054086345,
+            "ci_high": 0.2941907597395951
+          }
+        ]
+      },
+      {
+        "model": "nonempty_clean_body_only",
+        "n": 5414,
+        "authors": 95,
+        "joint_five_p": 0.03986798769915557,
+        "r_squared": 0.5204912126881107,
+        "terms": [
+          {
+            "term": "log_length",
+            "coef": 0.046307274914719615,
+            "se_cluster": 0.01754704504872532,
+            "p": 0.00973283315326407,
+            "q_bh": 0.04820109089276046,
+            "ci_low": 0.011467205634986169,
+            "ci_high": 0.08114734419445306
+          },
+          {
+            "term": "self_discipline",
+            "coef": -0.1373197135568752,
+            "se_cluster": 0.07221785388325375,
+            "p": 0.06030390090897768,
+            "q_bh": 0.1005065015149628,
+            "ci_low": -0.2807099553633726,
+            "ci_high": 0.006070528249622259
+          },
+          {
+            "term": "social_address",
+            "coef": 0.028444031941484604,
+            "se_cluster": 0.06428766873328814,
+            "p": 0.6591805326655635,
+            "q_bh": 0.6591805326655635,
+            "ci_low": -0.09920064135141372,
+            "ci_high": 0.15608870523438292
+          },
+          {
+            "term": "positive_expression",
+            "coef": -0.08878968729674709,
+            "se_cluster": 0.03729030816426185,
+            "p": 0.019280436357104185,
+            "q_bh": 0.04820109089276046,
+            "ci_low": -0.1628304683113186,
+            "ci_high": -0.01474890628217558
+          },
+          {
+            "term": "question",
+            "coef": 0.09557081771900813,
+            "se_cluster": 0.09914698785079361,
+            "p": 0.3375539827638857,
+            "q_bh": 0.4219424784548571,
+            "ci_low": -0.10128785084920594,
+            "ci_high": 0.2924294862872222
+          }
+        ]
+      }
+    ],
+    "definition_note": "has_text marks raw visible body; length>0 marks nonempty cleaned body. Neither filtering nor a missingness indicator recovers unrecorded text. These fits compare different observed populations and do not establish causality.",
+    "multiple_testing_note": "BH applied to five focal coefficients separately within each specification; no correction over all exploratory specifications. Do not select a model by significance.",
+    "source_sha256": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+    "independent_verification": {
+      "method": "independent numpy least squares and manually aggregated author sandwich, t/F df=G-1",
+      "max_focal_coefficient_error": 1.582067810090848e-15,
+      "max_focal_se_error": 1.5959455978986625e-15,
+      "joint_p_error": 1.8457457784393227e-15
+    }
+  },
+  "dictionary": {
+    "definitions": [
+      {
+        "feature": "self_discipline",
+        "label": "自律／目标词命中",
+        "n_hit": 877,
+        "vif_full_main_model": 1.7497384511652678,
+        "authors_with_within_variation": 76,
+        "classification_axis": "目标与行动表述",
+        "semantic_limit": "加油也可能用于鼓励他人；命中不等于作者具有自律人格或真实完成训练。"
+      },
+      {
+        "feature": "social_address",
+        "label": "社交称呼／互助词命中",
+        "n_hit": 159,
+        "vif_full_main_model": 1.148969825577665,
+        "authors_with_within_variation": 42,
+        "classification_axis": "面向他人的称呼与互动邀请",
+        "semantic_limit": "感谢可能同时带有积极含义；命中不等于已发生互助，也不代表关系强度。"
+      },
+      {
+        "feature": "positive_expression",
+        "label": "积极表达词命中",
+        "n_hit": 574,
+        "vif_full_main_model": 1.1862936299891753,
+        "authors_with_within_variation": 64,
+        "classification_axis": "积极感受与赞许的表面用词",
+        "semantic_limit": "未处理否定、反讽和子串歧义；命中不是经过验证的情绪或情感判断。"
+      },
+      {
+        "feature": "question",
+        "label": "问号出现",
+        "n_hit": 125,
+        "vif_full_main_model": 1.111520309064274,
+        "authors_with_within_variation": 32,
+        "classification_axis": "句式标点线索",
+        "semantic_limit": "反问、修辞问句也会命中，未使用问号的提问会漏判；不等于求助意图。"
+      }
+    ],
+    "summary": {
+      "max_abs_phi_all": 0.11853933180440299,
+      "max_abs_correlation_within_author": 0.08465560807808246,
+      "max_abs_correlation_residual_controls": 0.04917528492204958,
+      "min_vif_full_main_model": 1.111520309064274,
+      "max_vif_full_main_model": 1.7497384511652678,
+      "max_vif_four_after_controls": 1.0033220168381796,
+      "exact_shared_term_count_all_pairs": 0,
+      "n_posts_multiple_indicators": 182,
+      "share_posts_multiple_indicators": 0.019093579521611413,
+      "n_posts_any_indicator": 1523,
+      "hit_count_histogram": {
+        "0": 8009,
+        "1": 1341,
+        "2": 154,
+        "3": 26,
+        "4": 2
+      }
+    },
+    "design_rank": 182,
+    "design_columns": 182
+  },
+  "coverage": {
+    "seed": 20261029,
+    "posts": 9532,
+    "raw_body_available": 5548,
+    "nonempty_clean_body": 5414,
+    "clean_empty": 4118,
+    "dictionary_any_hit": 1523,
+    "dictionary_no_hit_nonempty": 3891,
+    "dictionary_no_hit_all": 8009,
+    "nmf_assigned": 2470,
+    "nmf_unassigned_nonempty": 2944,
+    "nmf_assigned_share_all": 0.2591271506504406,
+    "nmf_assigned_share_nonempty": 0.45622460288141853,
+    "sample_by_stratum": {
+      "topic_0": 12,
+      "topic_1": 12,
+      "topic_2": 12,
+      "topic_3": 12,
+      "topic_4": 12,
+      "unassigned_nonempty": 20
+    },
+    "sample_note": "12 posts per dominant topic plus 20 nonempty unassigned posts, selected without likes. Equal topic allocations are not a simple random sample. Semantic screening is AI-assisted, single-pass, not independent human validation.",
+    "input_sha256": {
+      "2026Data/Keep Data/sample_post_2022.csv": "74f2ed2878852f00618db3ae0b9f8c468a4f760e603dcb98c8a286a47919582c",
+      "results/post_features.csv": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+      "results/extension_post_topics.csv": "b4162fabd04eec0191fd431322246d26263a35bcfdd91fcb6e77b40f2be003f5"
+    },
+    "single_ai_review": {
+      "by_original_dominant_topic": {
+        "0": {
+          "supports": 8,
+          "partial": 2,
+          "outside": 2,
+          "insufficient": 0
+        },
+        "1": {
+          "supports": 10,
+          "partial": 1,
+          "outside": 0,
+          "insufficient": 1
+        },
+        "2": {
+          "supports": 7,
+          "partial": 1,
+          "outside": 4,
+          "insufficient": 0
+        },
+        "3": {
+          "supports": 7,
+          "partial": 0,
+          "outside": 4,
+          "insufficient": 1
+        },
+        "4": {
+          "supports": 8,
+          "partial": 2,
+          "outside": 2,
+          "insufficient": 0
+        }
+      },
+      "total": {
+        "supports": 40,
+        "partial": 6,
+        "outside": 12,
+        "insufficient": 2
+      },
+      "caution": "这里的outside指不支持分配到的具体名称，不表示一定不属于其余四类。对生活类名称过窄的判断需人工讨论。仅据60条分层样本不能估计全样本错误率，也不能宣称已证实多数帖子都在五类之外。",
+      "reviewer_type": "single AI-assisted semantic screening by the primary coding agent; not independent human validation"
+    }
+  },
+  "author_main": {
+    "author_distribution": {
+      "count": 100.0,
+      "mean": 95.32,
+      "std": 107.82907162202913,
+      "min": 1.0,
+      "5%": 4.8500000000000005,
+      "10%": 8.9,
+      "25%": 26.75,
+      "50%": 66.0,
+      "75%": 126.0,
+      "90%": 235.1000000000002,
+      "95%": 276.0,
+      "max": 783.0
+    },
+    "small_author_counts": [
+      {
+        "at_most_posts": 1,
+        "authors": 2,
+        "posts": 2,
+        "share_posts": 0.000209819555182543
+      },
+      {
+        "at_most_posts": 2,
+        "authors": 5,
+        "posts": 8,
+        "share_posts": 0.000839278220730172
+      },
+      {
+        "at_most_posts": 5,
+        "authors": 6,
+        "posts": 13,
+        "share_posts": 0.0013638271086865296
+      },
+      {
+        "at_most_posts": 10,
+        "authors": 14,
+        "posts": 80,
+        "share_posts": 0.00839278220730172
+      },
+      {
+        "at_most_posts": 20,
+        "authors": 22,
+        "posts": 204,
+        "share_posts": 0.02140159462861939
+      }
+    ],
+    "within_variation": [
+      {
+        "term": "log_length",
+        "authors_within_variation": 93,
+        "posts_in_varying_authors": 9270,
+        "total_authors": 100,
+        "note": "Unadjusted author-within variation; other controls can further affect usable variation."
+      },
+      {
+        "term": "self_discipline",
+        "authors_within_variation": 76,
+        "posts_in_varying_authors": 8147,
+        "total_authors": 100,
+        "note": "Unadjusted author-within variation; other controls can further affect usable variation."
+      },
+      {
+        "term": "social_address",
+        "authors_within_variation": 42,
+        "posts_in_varying_authors": 5093,
+        "total_authors": 100,
+        "note": "Unadjusted author-within variation; other controls can further affect usable variation."
+      },
+      {
+        "term": "positive_expression",
+        "authors_within_variation": 64,
+        "posts_in_varying_authors": 7297,
+        "total_authors": 100,
+        "note": "Unadjusted author-within variation; other controls can further affect usable variation."
+      },
+      {
+        "term": "question",
+        "authors_within_variation": 32,
+        "posts_in_varying_authors": 3589,
+        "total_authors": 100,
+        "note": "Unadjusted author-within variation; other controls can further affect usable variation."
+      }
+    ],
+    "model_fit": [
+      {
+        "model": "baseline_body",
+        "n": 9532,
+        "authors": 100,
+        "parameters": 182,
+        "rank": 182,
+        "cluster_inference_df": 99,
+        "r_squared": 0.6879788358743069,
+        "joint_five_p": 0.12979354832336687,
+        "joint_five_F": 1.7522020673724938,
+        "note": "Original body-only model, already controls has_tag"
+      },
+      {
+        "model": "authors_ge5",
+        "n": 9524,
+        "authors": 95,
+        "parameters": 177,
+        "rank": 177,
+        "cluster_inference_df": 94,
+        "r_squared": 0.6878240076379121,
+        "joint_five_p": 0.13135376627490247,
+        "joint_five_F": 1.747643640461363,
+        "note": "Exclude authors with fewer than 5 posts"
+      },
+      {
+        "model": "authors_ge10",
+        "n": 9462,
+        "authors": 87,
+        "parameters": 169,
+        "rank": 169,
+        "cluster_inference_df": 86,
+        "r_squared": 0.6865895759395979,
+        "joint_five_p": 0.1298820496930385,
+        "joint_five_F": 1.7591758119628,
+        "note": "Exclude authors with fewer than 10 posts"
+      },
+      {
+        "model": "body_tag_identity_controls",
+        "n": 9532,
+        "authors": 100,
+        "parameters": 191,
+        "rank": 191,
+        "cluster_inference_df": 99,
+        "r_squared": 0.6899708714614045,
+        "joint_five_p": 0.10215366923677971,
+        "joint_five_F": 1.8938397529825817,
+        "note": "Original body coding plus outcome-free frequent hashtag identity indicators"
+      },
+      {
+        "model": "body_plus_tags_recoded",
+        "n": 9532,
+        "authors": 100,
+        "parameters": 182,
+        "rank": 182,
+        "cluster_inference_df": 99,
+        "r_squared": 0.6873402471693748,
+        "joint_five_p": 0.17255577545682882,
+        "joint_five_F": 1.5804930287147803,
+        "note": "Redefine text as body plus tags; new measurement scope, supplementary only"
+      }
+    ]
+  },
+  "author_topic": {
+    "topic_documents": 2470,
+    "topic_authors": 86,
+    "author_count_min": 1,
+    "author_count_median": 14.0,
+    "author_count_max": 253,
+    "small_author_counts": [
+      {
+        "at_most_topic_posts": 1,
+        "authors": 10,
+        "posts": 10
+      },
+      {
+        "at_most_topic_posts": 2,
+        "authors": 14,
+        "posts": 18
+      },
+      {
+        "at_most_topic_posts": 5,
+        "authors": 23,
+        "posts": 52
+      },
+      {
+        "at_most_topic_posts": 10,
+        "authors": 40,
+        "posts": 181
+      }
+    ],
+    "models": [
+      {
+        "minimum_topic_posts_per_author": 1,
+        "n": 2470,
+        "authors": 86,
+        "rank": 170,
+        "parameters": 170,
+        "joint_topic_p": 0.16567261471073869,
+        "coefficients": [
+          {
+            "term": "topic_0",
+            "coef": -0.3154110149486876,
+            "p": 0.0536024412814824,
+            "q_bh": 0.1072048825629648,
+            "ci_low": -0.6358240697702795,
+            "ci_high": 0.005002039872904318
+          },
+          {
+            "term": "topic_1",
+            "coef": 0.017753996485595665,
+            "p": 0.9480720381450484,
+            "q_bh": 0.9480720381450484,
+            "ci_low": -0.5226519629072962,
+            "ci_high": 0.5581599558784874
+          },
+          {
+            "term": "topic_3",
+            "coef": -0.471399020916284,
+            "p": 0.10792529905937227,
+            "q_bh": 0.1439003987458297,
+            "ci_low": -1.0482792467393551,
+            "ci_high": 0.1054812049067872
+          },
+          {
+            "term": "topic_4",
+            "coef": -0.14415160243400485,
+            "p": 0.03519719316885859,
+            "q_bh": 0.1072048825629648,
+            "ci_low": -0.27806480194455696,
+            "ci_high": -0.010238402923452739
+          }
+        ]
+      },
+      {
+        "minimum_topic_posts_per_author": 2,
+        "n": 2460,
+        "authors": 76,
+        "rank": 160,
+        "parameters": 160,
+        "joint_topic_p": 0.1660710380975632,
+        "coefficients": [
+          {
+            "term": "topic_0",
+            "coef": -0.3154110149486853,
+            "p": 0.05374836666320957,
+            "q_bh": 0.10749673332641914,
+            "ci_low": -0.6360394431740555,
+            "ci_high": 0.005217413276684901
+          },
+          {
+            "term": "topic_1",
+            "coef": 0.017753996485602497,
+            "p": 0.9480273826478673,
+            "q_bh": 0.9480273826478673,
+            "ci_low": -0.5230152098759911,
+            "ci_high": 0.5585232028471961
+          },
+          {
+            "term": "topic_3",
+            "coef": -0.4713990209162823,
+            "p": 0.10798317389583616,
+            "q_bh": 0.1439775651944482,
+            "ci_low": -1.048667010770627,
+            "ci_high": 0.10586896893806252
+          },
+          {
+            "term": "topic_4",
+            "coef": -0.14415160243400274,
+            "p": 0.035359297778503454,
+            "q_bh": 0.10749673332641914,
+            "ci_low": -0.27815481494856764,
+            "ci_high": -0.010148389919437839
+          }
+        ]
+      },
+      {
+        "minimum_topic_posts_per_author": 5,
+        "n": 2423,
+        "authors": 64,
+        "rank": 148,
+        "parameters": 148,
+        "joint_topic_p": 0.1793280650849776,
+        "coefficients": [
+          {
+            "term": "topic_0",
+            "coef": -0.3195368023300647,
+            "p": 0.052441052300724066,
+            "q_bh": 0.10488210460144813,
+            "ci_low": -0.6425498739213649,
+            "ci_high": 0.0034762692612353985
+          },
+          {
+            "term": "topic_1",
+            "coef": 0.04431433011625199,
+            "p": 0.8760603922213148,
+            "q_bh": 0.8760603922213148,
+            "ci_low": -0.5211695791207382,
+            "ci_high": 0.6097982393532422
+          },
+          {
+            "term": "topic_3",
+            "coef": -0.4849893394507782,
+            "p": 0.09932045218283585,
+            "q_bh": 0.13242726957711445,
+            "ci_low": -1.0643518210969614,
+            "ci_high": 0.09437314219540488
+          },
+          {
+            "term": "topic_4",
+            "coef": -0.1367712099329979,
+            "p": 0.04718398145631566,
+            "q_bh": 0.10488210460144813,
+            "ci_low": -0.2717884757183917,
+            "ci_high": -0.0017539441476040751
+          }
+        ]
+      },
+      {
+        "minimum_topic_posts_per_author": 10,
+        "n": 2309,
+        "authors": 48,
+        "rank": 132,
+        "parameters": 132,
+        "joint_topic_p": 0.2660085575702255,
+        "coefficients": [
+          {
+            "term": "topic_0",
+            "coef": -0.3148817046890387,
+            "p": 0.06455348271281176,
+            "q_bh": 0.14390001601883595,
+            "ci_low": -0.649552394835478,
+            "ci_high": 0.019788985457400654
+          },
+          {
+            "term": "topic_1",
+            "coef": -0.03645913591725992,
+            "p": 0.8929420497313769,
+            "q_bh": 0.8929420497313769,
+            "ci_low": -0.5785073467059464,
+            "ci_high": 0.5055890748714266
+          },
+          {
+            "term": "topic_3",
+            "coef": -0.45629315677802756,
+            "p": 0.1365317796520604,
+            "q_bh": 0.18204237286941385,
+            "ci_low": -1.0622952438245787,
+            "ci_high": 0.14970893026852355
+          },
+          {
+            "term": "topic_4",
+            "coef": -0.12222115539140481,
+            "p": 0.07195000800941798,
+            "q_bh": 0.14390001601883595,
+            "ci_low": -0.2557830790697955,
+            "ci_high": 0.011340768286985894
+          }
+        ]
+      }
+    ],
+    "note": "Author counts are recomputed inside the 2470-post topic subset, not carried over from all 9532 posts. Frozen topics and reference topic 2 retained. These are estimator diagnostics; low semantic validity of the original component names is not repaired by author exclusions."
+  },
+  "tags": {
+    "tag_summary": {
+      "tagged_posts": 5209,
+      "tagged_share": 0.5464750314729333,
+      "unique_tags": 269,
+      "selected_tag_identity_controls": 9,
+      "tag_count_distribution": {
+        "0": 4323,
+        "1": 5207,
+        "2": 2
+      },
+      "missing_body_with_tags": 1517,
+      "combined_text_available": 7065,
+      "literal_hash_in_body_posts": 3
+    },
+    "selection_rules": {
+      "small_author_robustness": "Retain authors with >=5 or >=10 observed posts; thresholds not selected by inference.",
+      "hashtag_identity_controls": "Tags in >=30 posts and >=5 authors, selected solely from exposure frequency; 9 indicators plus original has_tag.",
+      "tag_count_control": "Not used: 5207 posts have one tag, two have two tags; a count control beyond has_tag is identified by only 2 posts."
+    },
+    "selected_tags": [
+      {
+        "tag": "坚持 Keep 的那些天",
+        "term": "tag_identity_00",
+        "posts": 1957,
+        "authors": 41,
+        "within_varying_authors": 38
+      },
+      {
+        "tag": "我的健身日常",
+        "term": "tag_identity_01",
+        "posts": 814,
+        "authors": 14,
+        "within_varying_authors": 14
+      },
+      {
+        "tag": "立旗 100 天",
+        "term": "tag_identity_02",
+        "posts": 500,
+        "authors": 9,
+        "within_varying_authors": 9
+      },
+      {
+        "tag": "我的体态修炼日记",
+        "term": "tag_identity_03",
+        "posts": 186,
+        "authors": 16,
+        "within_varying_authors": 16
+      },
+      {
+        "tag": "2020 年的目标你完成了多少",
+        "term": "tag_identity_04",
+        "posts": 116,
+        "authors": 8,
+        "within_varying_authors": 8
+      },
+      {
+        "tag": "当我一个人跑步时在想什么？",
+        "term": "tag_identity_05",
+        "posts": 76,
+        "authors": 7,
+        "within_varying_authors": 7
+      },
+      {
+        "tag": "跑步打卡",
+        "term": "tag_identity_06",
+        "posts": 71,
+        "authors": 5,
+        "within_varying_authors": 4
+      },
+      {
+        "tag": "今天也是帕梅拉女孩",
+        "term": "tag_identity_07",
+        "posts": 47,
+        "authors": 7,
+        "within_varying_authors": 7
+      },
+      {
+        "tag": "坚持健身的动力",
+        "term": "tag_identity_08",
+        "posts": 30,
+        "authors": 7,
+        "within_varying_authors": 7
+      }
+    ],
+    "tag_recoding_changes": [
+      {
+        "term": "self_discipline",
+        "body_hits": 877,
+        "body_plus_tag_hits": 3342,
+        "new_tag_only_hits": 2465,
+        "new_hits_with_missing_body": 866,
+        "lost_hits": 0
+      },
+      {
+        "term": "social_address",
+        "body_hits": 159,
+        "body_plus_tag_hits": 170,
+        "new_tag_only_hits": 11,
+        "new_hits_with_missing_body": 1,
+        "lost_hits": 0
+      },
+      {
+        "term": "positive_expression",
+        "body_hits": 574,
+        "body_plus_tag_hits": 584,
+        "new_tag_only_hits": 10,
+        "new_hits_with_missing_body": 3,
+        "lost_hits": 0
+      },
+      {
+        "term": "question",
+        "body_hits": 125,
+        "body_plus_tag_hits": 354,
+        "new_tag_only_hits": 229,
+        "new_hits_with_missing_body": 7,
+        "lost_hits": 0
+      }
+    ],
+    "coefficients": [
+      {
+        "model": "baseline_body",
+        "term": "log_length",
+        "coef": 0.0279781648490492,
+        "se_cluster": 0.018325765205962918,
+        "p": 0.13002127494181,
+        "q_bh_five": 0.2926331218519302,
+        "ci_low": -0.008384129121990429,
+        "ci_high": 0.06434045882008882,
+        "delta_from_baseline_body": 1.97758476261356e-16
+      },
+      {
+        "model": "baseline_body",
+        "term": "self_discipline",
+        "coef": -0.11922494082182626,
+        "se_cluster": 0.08739181062019728,
+        "p": 0.1755798731111581,
+        "q_bh_five": 0.2926331218519302,
+        "ci_low": -0.2926292528774582,
+        "ci_high": 0.054179371233805715,
+        "delta_from_baseline_body": 8.326672684688674e-16
+      },
+      {
+        "model": "baseline_body",
+        "term": "social_address",
+        "coef": -0.004338472406972715,
+        "se_cluster": 0.06366233126453058,
+        "p": 0.9458051227127817,
+        "q_bh_five": 0.9458051227127817,
+        "ci_low": -0.13065834927461548,
+        "ci_high": 0.12198140446067005,
+        "delta_from_baseline_body": 8.847089727481716e-16
+      },
+      {
+        "model": "baseline_body",
+        "term": "positive_expression",
+        "coef": -0.08551585485493185,
+        "se_cluster": 0.03484131330337617,
+        "p": 0.015856009524211977,
+        "q_bh_five": 0.07928004762105988,
+        "ci_low": -0.15464857932431583,
+        "ci_high": -0.016383130385547867,
+        "delta_from_baseline_body": -5.551115123125783e-17
+      },
+      {
+        "model": "baseline_body",
+        "term": "question",
+        "coef": 0.1077726070288941,
+        "se_cluster": 0.10488197203173132,
+        "p": 0.30666054249670693,
+        "q_bh_five": 0.38332567812088364,
+        "ci_low": -0.10033597978412673,
+        "ci_high": 0.31588119384191493,
+        "delta_from_baseline_body": -3.094746681142624e-15
+      },
+      {
+        "model": "authors_ge5",
+        "term": "log_length",
+        "coef": 0.027914732475104263,
+        "se_cluster": 0.018346641514147707,
+        "p": 0.1314869944443604,
+        "q_bh_five": 0.2930333335694325,
+        "ci_low": -0.008512954330759017,
+        "ci_high": 0.06434241928096754,
+        "delta_from_baseline_body": -6.343237394473844e-05
+      },
+      {
+        "model": "authors_ge5",
+        "term": "self_discipline",
+        "coef": -0.11921194203534458,
+        "se_cluster": 0.08739781312660184,
+        "p": 0.1758200001416595,
+        "q_bh_five": 0.2930333335694325,
+        "ci_low": -0.2927423487660893,
+        "ci_high": 0.054318464695400165,
+        "delta_from_baseline_body": 1.2998786482518176e-05
+      },
+      {
+        "model": "authors_ge5",
+        "term": "social_address",
+        "coef": -0.004585286011128675,
+        "se_cluster": 0.06390570034146349,
+        "p": 0.9429526583705052,
+        "q_bh_five": 0.9429526583705052,
+        "ci_low": -0.13147155210800707,
+        "ci_high": 0.12230098008574972,
+        "delta_from_baseline_body": -0.00024681360415507517
+      },
+      {
+        "model": "authors_ge5",
+        "term": "positive_expression",
+        "coef": -0.08554866343637252,
+        "se_cluster": 0.034889432682660926,
+        "p": 0.016052929431141193,
+        "q_bh_five": 0.08026464715570596,
+        "ci_low": -0.15482244990122263,
+        "ci_high": -0.016274876971522412,
+        "delta_from_baseline_body": -3.280858144072418e-05
+      },
+      {
+        "model": "authors_ge5",
+        "term": "question",
+        "coef": 0.107828881430482,
+        "se_cluster": 0.10487386368000637,
+        "p": 0.3065050888079664,
+        "q_bh_five": 0.383131361009958,
+        "ci_low": -0.10040063334529326,
+        "ci_high": 0.31605839620625725,
+        "delta_from_baseline_body": 5.6274401584802125e-05
+      },
+      {
+        "model": "authors_ge10",
+        "term": "log_length",
+        "coef": 0.029553165046856723,
+        "se_cluster": 0.018459924171041826,
+        "p": 0.11305822387040947,
+        "q_bh_five": 0.28264555967602367,
+        "ci_low": -0.007143949657335811,
+        "ci_high": 0.06625027975104926,
+        "delta_from_baseline_body": 0.0015750001978077216
+      },
+      {
+        "model": "authors_ge10",
+        "term": "self_discipline",
+        "coef": -0.12135058549823698,
+        "se_cluster": 0.08847657827656022,
+        "p": 0.17376957043934219,
+        "q_bh_five": 0.289615950732237,
+        "ci_low": -0.29723620190519523,
+        "ci_high": 0.05453503090872129,
+        "delta_from_baseline_body": -0.0021256446764098824
+      },
+      {
+        "model": "authors_ge10",
+        "term": "social_address",
+        "coef": -0.0032534901240537204,
+        "se_cluster": 0.06486570710236257,
+        "p": 0.9601133317567292,
+        "q_bh_five": 0.9601133317567292,
+        "ci_low": -0.1322022480847216,
+        "ci_high": 0.1256952678366142,
+        "delta_from_baseline_body": 0.0010849822829198798
+      },
+      {
+        "model": "authors_ge10",
+        "term": "positive_expression",
+        "coef": -0.08487986678076591,
+        "se_cluster": 0.03548084721300084,
+        "p": 0.018922643716222685,
+        "q_bh_five": 0.09461321858111342,
+        "ci_low": -0.1554134566218307,
+        "ci_high": -0.014346276939701127,
+        "delta_from_baseline_body": 0.0006359880741658858
+      },
+      {
+        "model": "authors_ge10",
+        "term": "question",
+        "coef": 0.11715876310954147,
+        "se_cluster": 0.10670529292159132,
+        "p": 0.2752840061786505,
+        "q_bh_five": 0.3441050077233131,
+        "ci_low": -0.09496433867604433,
+        "ci_high": 0.3292818648951273,
+        "delta_from_baseline_body": 0.009386156080644276
+      },
+      {
+        "model": "body_tag_identity_controls",
+        "term": "log_length",
+        "coef": 0.03368787957756388,
+        "se_cluster": 0.020649524759122673,
+        "p": 0.10598066033726868,
+        "q_bh_five": 0.22724642791639993,
+        "ci_low": -0.007285257490085573,
+        "ci_high": 0.07466101664521334,
+        "delta_from_baseline_body": 0.0057097147285148815
+      },
+      {
+        "model": "body_tag_identity_controls",
+        "term": "self_discipline",
+        "coef": -0.08180864172727861,
+        "se_cluster": 0.05447599439074223,
+        "p": 0.13634785674983996,
+        "q_bh_five": 0.22724642791639993,
+        "ci_low": -0.18990083324768126,
+        "ci_high": 0.026283549793124028,
+        "delta_from_baseline_body": 0.03741629909454848
+      },
+      {
+        "model": "body_tag_identity_controls",
+        "term": "social_address",
+        "coef": -0.0038162380447148148,
+        "se_cluster": 0.0638270274144223,
+        "p": 0.9524431688711104,
+        "q_bh_five": 0.9524431688711104,
+        "ci_low": -0.13046290780482095,
+        "ci_high": 0.12283043171539132,
+        "delta_from_baseline_body": 0.0005222343622587854
+      },
+      {
+        "model": "body_tag_identity_controls",
+        "term": "positive_expression",
+        "coef": -0.08295473701480732,
+        "se_cluster": 0.03437912055027635,
+        "p": 0.017664342196828577,
+        "q_bh_five": 0.08832171098414288,
+        "ci_low": -0.15117037078862616,
+        "ci_high": -0.014739103240988469,
+        "delta_from_baseline_body": 0.0025611178401244716
+      },
+      {
+        "model": "body_tag_identity_controls",
+        "term": "question",
+        "coef": 0.10185482685010153,
+        "se_cluster": 0.10722961740048466,
+        "p": 0.34448844089790853,
+        "q_bh_five": 0.43061055112238567,
+        "ci_low": -0.11091199769973054,
+        "ci_high": 0.3146216513999336,
+        "delta_from_baseline_body": -0.00591778017879567
+      },
+      {
+        "model": "body_plus_tags_recoded",
+        "term": "log_length",
+        "coef": 0.03357960266135006,
+        "se_cluster": 0.022331504063299354,
+        "p": 0.13584535365069864,
+        "q_bh_five": 0.3396133841267466,
+        "ci_low": -0.010730946253733546,
+        "ci_high": 0.07789015157643367,
+        "delta_from_baseline_body": 0.005601437812301057
+      },
+      {
+        "model": "body_plus_tags_recoded",
+        "term": "self_discipline",
+        "coef": 0.022261530412569702,
+        "se_cluster": 0.05825682917882233,
+        "p": 0.7031859285733191,
+        "q_bh_five": 0.9004754411897455,
+        "ci_low": -0.09333265758519521,
+        "ci_high": 0.13785571841033462,
+        "delta_from_baseline_body": 0.14148647123439678
+      },
+      {
+        "model": "body_plus_tags_recoded",
+        "term": "social_address",
+        "coef": 0.007601678633633646,
+        "se_cluster": 0.06062817575633352,
+        "p": 0.9004754411897455,
+        "q_bh_five": 0.9004754411897455,
+        "ci_low": -0.11269777544113108,
+        "ci_high": 0.12790113270839837,
+        "delta_from_baseline_body": 0.011940151040607246
+      },
+      {
+        "model": "body_plus_tags_recoded",
+        "term": "positive_expression",
+        "coef": -0.07002700053576232,
+        "se_cluster": 0.03245932412326818,
+        "p": 0.03339608224844691,
+        "q_bh_five": 0.16698041124223453,
+        "ci_low": -0.13443334169566573,
+        "ci_high": -0.005620659375858886,
+        "delta_from_baseline_body": 0.015488854319169479
+      },
+      {
+        "model": "body_plus_tags_recoded",
+        "term": "question",
+        "coef": -0.036382987287199256,
+        "se_cluster": 0.17479346661182119,
+        "p": 0.8355406852549088,
+        "q_bh_five": 0.9004754411897455,
+        "ci_low": -0.38321114675134177,
+        "ci_high": 0.3104451721769433,
+        "delta_from_baseline_body": -0.14415559431609645
+      }
+    ]
+  },
+  "topic": {
+    "documents": 2470,
+    "authors": 86,
+    "original_continuous_model": {
+      "reference_topic": 2,
+      "reference_label": "运动与训练交流",
+      "joint_topic_p": 0.16567261471073869,
+      "coefficient_interpretation": "A 0.10 rise of w_k replacing 0.10 of reference-topic weight with all other weights and covariates fixed; 100*(exp(0.10*theta_k)-1) is the conditional geometric-mean change in likes+1.",
+      "why_omit_one_weight": "Five normalized weights sum to one, so five weights plus intercept are exactly collinear. This compositional constraint does not imply mutually exclusive semantics."
+    },
+    "multilabel_model": {
+      "formula": "log_likes ~ log_length + self_discipline + social_address + positive_expression + question + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date) + topic_present_0 + topic_present_1 + topic_present_2 + topic_present_3 + topic_present_4",
+      "no_reference_topic": "All five binary indicators enter together; their row sums vary. Full-rank checks, rather than k-1 dummy coding, determine estimability.",
+      "coefficient_interpretation": "Conditional 0-to-1 indicator contrast with other four indicators and covariates held fixed; not a contrast to a single reference topic and not a causal effect.",
+      "uncertainty": "Author-clustered t inference, finite-sample correction, 95% individual intervals; BH correction across five topic coefficients at each threshold. Uncertainty from NMF estimation and threshold choice is not included.",
+      "multiple_thresholds": "Threshold results are sensitivity diagnostics. No significance search or selection among thresholds; five-term BH is per specification, not across the full family of sensitivity models.",
+      "no_all_zero_group": "At thresholds 0.15, 0.20, 0.25, every assigned post has at least one label; coefficients are conditional contrasts, not comparisons to an observed no-topic group."
+    },
+    "threshold_results": [
+      {
+        "threshold": 0.15,
+        "documents": 2470,
+        "authors": 86,
+        "joint_topic_p": 0.28863809207254076,
+        "r_squared": 0.6121162592590671,
+        "design_rank": 171,
+        "parameters": 171,
+        "intercept_plus_five_indicators_rank": 6,
+        "min_conditional_vif": 1.0208183292588382,
+        "max_conditional_vif": 1.1535050983965243,
+        "min_bh_q": 0.2046093768558245,
+        "multi_topic_documents": 1331,
+        "multi_topic_share": 0.5388663967611336,
+        "sum_prevalence": 1.6,
+        "no_label_documents": 0
+      },
+      {
+        "threshold": 0.2,
+        "documents": 2470,
+        "authors": 86,
+        "joint_topic_p": 0.28559169550059027,
+        "r_squared": 0.6118247851245411,
+        "design_rank": 171,
+        "parameters": 171,
+        "intercept_plus_five_indicators_rank": 6,
+        "min_conditional_vif": 1.0300342282601505,
+        "max_conditional_vif": 1.1574116564084205,
+        "min_bh_q": 0.296427878106935,
+        "multi_topic_documents": 1088,
+        "multi_topic_share": 0.4404858299595142,
+        "sum_prevalence": 1.4591093117408906,
+        "no_label_documents": 0
+      },
+      {
+        "threshold": 0.25,
+        "documents": 2470,
+        "authors": 86,
+        "joint_topic_p": 0.5169845520982217,
+        "r_squared": 0.6114716670732235,
+        "design_rank": 171,
+        "parameters": 171,
+        "intercept_plus_five_indicators_rank": 6,
+        "min_conditional_vif": 1.0415063332692704,
+        "max_conditional_vif": 1.211500016041922,
+        "min_bh_q": 0.4794761878403955,
+        "multi_topic_documents": 835,
+        "multi_topic_share": 0.33805668016194335,
+        "sum_prevalence": 1.3429149797570852,
+        "no_label_documents": 0
+      }
+    ],
+    "scope": "All proportions use the 2,470 assigned-text posts, not all 9,532 posts. The original eight near-zero-contribution documents and all other ineligible posts remain unassigned, rather than being coded as five observed zeros."
+  },
+  "topic_structure": {
+    "fitted_documents": 2478,
+    "assigned": 2470,
+    "unique_clean_texts_fitted": 2374,
+    "duplicate_text_rows_beyond_first": 104,
+    "k_values_checked": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "selection_note": "K was fixed at 5 in the old configuration. These alternative fits diagnose dependence on K/weighting; no K is selected by likes, fit error alone, or significance. No replacement taxonomy is declared validated.",
+    "dedup_note": "Exact cleaned-text deduplication only; near-duplicate templates remain. Same vocabulary/IDF used across alternatives.",
+    "author_weight_note": "Frobenius NMF trained on X_i/sqrt(n_author), so author objective weights sum equally. IDF is still from original rows; this is a scoped diagnostic, not a fully author-balanced text pipeline."
+  },
+  "required_revisions": [
+    {
+      "location": "旧报告摘要、§4.2、§8—9；旧PPT 11—14页",
+      "issue": "原M3的p=.130与q=.079本身可复现，但不能从它们概括为所有可观察正文口径均不显著。",
+      "replacement": "并列9532/5548/5414口径；清理后非空正文联合p=.040、长度与积极表达模型内q=.048。正文关联对可观察范围敏感，不能按显著性挑选模型。"
+    },
+    {
+      "location": "旧报告§5.1—5.3、§8.1、§9；旧PPT 5—7和13—14页",
+      "issue": "52.7%和35.8%被解释成真实内容语义份额，作者等权后两条主线稳定被解释成分类有效。",
+      "replacement": "保留为冻结NMF主导成分的数值份额；名称未经验证，不能当完整真实内容分类。先拟合再作者等权描述没有纠正拟合阶段作者/模板权重。"
+    },
+    {
+      "location": "旧报告§8.3（原文约351行）",
+      "issue": "由生活成分负系数/35.8%份额推断积极表达反转集中在日常问候。未有主题×词汇交互或分层分析支持。",
+      "replacement": "删去作为发现的推断；如保留研究动机，明确尚待检验的假设。"
+    },
+    {
+      "location": "旧报告§9.1（约361行）",
+      "issue": "凭R²或文本增量R²推断谁发/媒体比措辞更决定点赞。",
+      "replacement": "描述不同设定的拟合与观察关联，不作贡献归因或因果排序；明确未观测曝光/作者时变因素。"
+    },
+    {
+      "location": "作者固定效应新增页和方法",
+      "issue": "只用全样本作者100人的发帖数替主题子样本86人做保证。",
+      "replacement": "分别报告全样本单帖作者2人与主题子样本单帖作者10人；主题阈值≥10后48人/2309帖，仍须明确支持范围。"
+    },
+    {
+      "location": "tag新增分析",
+      "issue": "说原分析没有考虑tag；或把拼接后自律命中增加当效度改善。",
+      "replacement": "原M3已经has_tag；9个tag身份控制和正文+tag重新编码是不同敏感性问题。拼接改变测量范围，不是自动补正文。"
+    },
+    {
+      "location": "多标签说明",
+      "issue": "把原NMF的0–1连续比例当作二元dummy、把argmax描述互斥当作原回归错误。",
+      "replacement": "原连续五权重和为1，省一项避截距共线；探索性阈值二元五项可同时入模、满秩，但不修复原名称的语义效度。"
+    },
+    {
+      "location": "语义抽查及新codebook",
+      "issue": "把12/60不支持指定名称说成20%全样本误分、或说多数帖都在五类外；将候选新类视为验证完毕。",
+      "replacement": "60条等额分层的单轮AI辅助筛查，另20条未入模帖；发现反例而不估总体错误率。候选内容域、表达功能与未知状态明确未验证。"
+    }
+  ],
+  "preserve_correct_limits": [
+    "词典为字面线索，不等于自律人格、情绪量表或真实社会支持；一帖各线索可同时为1。",
+    "主题命名不使用点赞；归一化NMF权重与argmax主导分类用途不同。",
+    "旧主题子样本2470帖/86作者、原始拟合2478帖，8条近零贡献排除。",
+    "95%区间与p为原始单项推断，BH q有明确检验家族；本轮每模型内BH不是跨所有探索模型统一调整。",
+    "作者/日期固定效应、聚类标准误不构成因果识别；未知曝光与观察窗仍未解决。",
+    "评论网络本轮未全面重新审核；其样本/时间窗、建边口径与未知覆盖限制继续保留。"
+  ],
+  "output_cross_check": {
+    "status": "passed_with_native_rendering_caveat",
+    "artifacts": [
+      {
+        "file": "Keep社区内容表达与互动反馈_老师意见修订版.pptx",
+        "sha256": "cf7819f7e1238251aff0b7d39fa3ce40cc9cb485897160029c8109aea1bf4d72",
+        "slides": 30,
+        "all_xml_well_formed": true,
+        "native_chart_parts": 15
+      },
+      {
+        "file": "分析报告_老师意见修订版.docx",
+        "sha256": "28cfec732b164b92eff938d355efd7737fb1d94f9f8c41319d842d70b88cb08c"
+      },
+      {
+        "file": "分析报告_老师意见修订版.md",
+        "sha256": "fed1d7c970b0899be2ec557a7f3513f4489841adad98578846ca7addf22e6e79"
+      },
+      {
+        "file": "分析报告_老师意见修订版.pdf",
+        "sha256": "d13dee8c68579a1dd7761d922db3d89afbd0bba96a897eb4f4e1800baa85bcab",
+        "pages": 25
+      }
+    ],
+    "report_all_21_tables_match_md_docx_pdf": true,
+    "all_required_evidence_anchors_present": true,
+    "old_overclaims_and_placeholders_absent": true,
+    "retained_chart_xml": 13,
+    "new_native_charts": 2,
+    "shape_text_cell_boundary_or_fit_defects_observed": 0,
+    "semantic_notes": "No unsupported lifestyle-topic attribution of positive-word reversal; p and q distinguished; raw means explicitly historical full-sample arithmetic comparisons, not comparable to conditional log estimates; candidate labels remain unvalidated; comments/network not newly re-audited.",
+    "native_office_render_verified": false,
+    "render_limit": "PPT native rendering unavailable; actual PPTX geometry, font-width estimates, XML and accepted unchanged source chart renders checked instead. Private previews are not formal PDF exports."
+  },
+  "boundary": "No new model fit, no claim of independently validated semantic truth; review uses frozen verified result files."
+}

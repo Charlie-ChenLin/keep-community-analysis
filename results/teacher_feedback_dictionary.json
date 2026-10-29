@@ -1,0 +1,202 @@
+{
+  "purpose": "回应老师关于四个词典变量的分类理由及共线性疑问；基于冻结M3设计，不改动原始编码与模型。",
+  "model": "M3_作者与日期固定效应",
+  "n_posts": 9532,
+  "n_authors": 100,
+  "design_columns": 182,
+  "design_rank": 182,
+  "definitions": [
+    {
+      "feature": "self_discipline",
+      "label": "自律／目标词命中",
+      "vif_full_main_model": 1.7497384511652678,
+      "vif_four_unadjusted": 1.010796008900043,
+      "vif_four_after_controls": 1.000949540443865,
+      "n_hit": 877,
+      "share_all": 0.09200587494754511,
+      "share_visible": 0.15807498197548667,
+      "authors_with_within_variation": 76,
+      "classification_axis": "目标与行动表述",
+      "rationale": "以坚持、目标、计划、完成等词识别运动记录中的目标追求和行动进度，与RQ2关注的内容表达相对应。",
+      "examples": [
+        "坚持",
+        "目标",
+        "打卡",
+        "完成"
+      ],
+      "semantic_limit": "加油也可能用于鼓励他人；命中不等于作者具有自律人格或真实完成训练。",
+      "terms": [
+        "坚持",
+        "自律",
+        "打卡",
+        "目标",
+        "计划",
+        "努力",
+        "加油",
+        "挑战",
+        "突破",
+        "完成",
+        "进步",
+        "不放弃",
+        "全勤",
+        "第[0-9一二三四五六七八九十百千]+天"
+      ]
+    },
+    {
+      "feature": "social_address",
+      "label": "社交称呼／互助词命中",
+      "vif_full_main_model": 1.148969825577665,
+      "vif_four_unadjusted": 1.0254743336073837,
+      "vif_four_after_controls": 1.002838834947237,
+      "n_hit": 159,
+      "share_all": 0.01668065463701217,
+      "share_visible": 0.028658976207642392,
+      "authors_with_within_variation": 42,
+      "classification_axis": "面向他人的称呼与互动邀请",
+      "rationale": "以大家、一起、谢谢、请教等词识别对读者的称呼、感谢、互助和邀请交流的字面线索。",
+      "examples": [
+        "大家",
+        "一起",
+        "谢谢",
+        "请教"
+      ],
+      "semantic_limit": "感谢可能同时带有积极含义；命中不等于已发生互助，也不代表关系强度。",
+      "terms": [
+        "大家",
+        "朋友们",
+        "小伙伴",
+        "你们",
+        "一起",
+        "互相",
+        "互勉",
+        "共勉",
+        "陪伴",
+        "谢谢",
+        "感谢",
+        "请教",
+        "求助",
+        "求推荐"
+      ]
+    },
+    {
+      "feature": "positive_expression",
+      "label": "积极表达词命中",
+      "vif_full_main_model": 1.1862936299891753,
+      "vif_four_unadjusted": 1.0198545236596388,
+      "vif_four_after_controls": 1.0033220168381796,
+      "n_hit": 574,
+      "share_all": 0.060218212337389845,
+      "share_visible": 0.10346070656092285,
+      "authors_with_within_variation": 64,
+      "classification_axis": "积极感受与赞许的表面用词",
+      "rationale": "以开心、快乐、喜欢、棒等词识别积极感受和赞许，区别于说什么目标、对谁说及是否使用问号。",
+      "examples": [
+        "开心",
+        "快乐",
+        "喜欢",
+        "棒"
+      ],
+      "semantic_limit": "未处理否定、反讽和子串歧义；命中不是经过验证的情绪或情感判断。",
+      "terms": [
+        "开心",
+        "快乐",
+        "高兴",
+        "幸福",
+        "喜欢",
+        "美好",
+        "满足",
+        "舒服",
+        "棒",
+        "赞",
+        "愉快",
+        "美滋滋",
+        "哈哈",
+        "嘻嘻",
+        "嘿嘿"
+      ]
+    },
+    {
+      "feature": "question",
+      "label": "问号出现",
+      "vif_full_main_model": 1.111520309064274,
+      "vif_four_unadjusted": 1.017088109235342,
+      "vif_four_after_controls": 1.000486987477277,
+      "n_hit": 125,
+      "share_all": 0.013113722198908937,
+      "share_visible": 0.022530641672674837,
+      "authors_with_within_variation": 32,
+      "classification_axis": "句式标点线索",
+      "rationale": "正文含中文或英文问号即记1，用作疑问句式的可观察标记；它是标点规则，与前三类词汇规则性质不同。",
+      "examples": [
+        "?",
+        "？"
+      ],
+      "semantic_limit": "反问、修辞问句也会命中，未使用问号的提问会漏判；不等于求助意图。",
+      "terms": [
+        "?",
+        "？"
+      ]
+    }
+  ],
+  "classification_note": "三类词汇规则加一类问号标点规则，分别描述目标行动、面向他人、积极表述和疑问标点；为研究者制定的操作性编码，未经过独立语义效度验证，不构成四个独立心理因子。",
+  "overlap_note": "四个变量允许同帖同时为1，无需互斥或加总为1；无完全相同词项不代表语义互斥。加油、谢谢等仍有跨维度解释空间。",
+  "summary": {
+    "max_abs_phi_all": 0.11853933180440299,
+    "max_abs_correlation_within_author": 0.08465560807808246,
+    "max_abs_correlation_residual_controls": 0.04917528492204958,
+    "min_vif_full_main_model": 1.111520309064274,
+    "max_vif_full_main_model": 1.7497384511652678,
+    "max_vif_four_after_controls": 1.0033220168381796,
+    "exact_shared_term_count_all_pairs": 0,
+    "n_posts_multiple_indicators": 182,
+    "share_posts_multiple_indicators": 0.019093579521611413,
+    "n_posts_any_indicator": 1523,
+    "hit_count_histogram": {
+      "0": 8009,
+      "1": 1341,
+      "2": 154,
+      "3": 26,
+      "4": 2
+    }
+  },
+  "conclusion": "四个现有规则在本样本及完整M3设计中未呈现明显数值共线性，不支持仅因担心重复而合并。该结果不证明语义独立，也不能排除漏判、误判或共同未测因素。",
+  "methods": {
+    "phi_all": "在9,532条帖子中计算二元变量Pearson相关，即φ系数；作者内相关先按作者去均值。",
+    "vif_full_main_model": "VIF_j=1/(1-R_j²)，R_j²来自该词典变量对完整M3中全部其余设计列（含截距）的辅助回归；由(X'X)^(-1)对角元乘以该变量中心化平方和计算，另以最小二乘辅助回归独立复核。",
+    "vif_four_after_controls": "先将四变量分别投影剔除长度、正文可见性、话题标签、表情、课程标记、媒体、帖子类型、时段、作者和日期固定效应，再用四残差的相关矩阵逆矩阵对角元计算；仅描述控制后四变量彼此的冗余，不能替代完整M3 VIF。",
+    "interpretation": "完整M3 VIF用于判断与所有已纳入解释变量的线性重复，语义分类是否合理仍需人工标注验证。VIF属于设计矩阵诊断，不是聚类稳健标准误的修正系数。",
+    "reference": "https://www.statsmodels.org/v0.14.6/generated/statsmodels.stats.outliers_influence.variance_inflation_factor.html"
+  },
+  "reproduce": "python code/analyze_dictionary_diagnostics.py",
+  "software": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3"
+  },
+  "inputs": [
+    {
+      "path": "results/post_features.csv",
+      "sha256": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2"
+    },
+    {
+      "path": "code/text_dictionary.json",
+      "sha256": "286863310b58f95b49fe39d6bb6492816ed6a7df5b83c8f460a9c96cb5e0912b"
+    },
+    {
+      "path": "2026Data/Keep Data/sample_post_2022.csv",
+      "sha256": "74f2ed2878852f00618db3ae0b9f8c468a4f760e603dcb98c8a286a47919582c"
+    },
+    {
+      "path": "code/analyze.py",
+      "sha256": "0c32b948ac6e2734edfa00353ba8155a5b7791df496e034e1abbb5e6eb329742"
+    },
+    {
+      "path": "results/model_fit.csv",
+      "sha256": "e59da47459ed1776cddec378abbbb54d7ead5482d881fa3e14ee3346d558c7f0"
+    }
+  ],
+  "validation": {
+    "path": "validation/teacher_feedback/dictionary_checks.json",
+    "checks_passed": 11
+  }
+}

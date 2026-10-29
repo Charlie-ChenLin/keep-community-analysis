@@ -1,0 +1,13 @@
+{
+  "markdown_tables": 21,
+  "docx_tables": 21,
+  "markdown_docx_table_mismatches": [],
+  "pdf_pages": 25,
+  "table_cells_missing_from_pdf_text": [],
+  "scope": "All actual report table cells checked between Markdown/DOCX/PDF; not a substitute for visual rendering review.",
+  "file_sha256": {
+    "md": "fed1d7c970b0899be2ec557a7f3513f4489841adad98578846ca7addf22e6e79",
+    "docx": "28cfec732b164b92eff938d355efd7737fb1d94f9f8c41319d842d70b88cb08c",
+    "pdf": "d13dee8c68579a1dd7761d922db3d89afbd0bba96a897eb4f4e1800baa85bcab"
+  }
+}

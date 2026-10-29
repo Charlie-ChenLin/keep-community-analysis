@@ -1,0 +1,21 @@
+{
+  "integrated_build_exit_code": 0,
+  "rebuilt_preview_images_unchanged": 55,
+  "report_pages": 25,
+  "report_figures": 14,
+  "ppt_slides": 30,
+  "new_slides": 7,
+  "native_chart_parts": 15,
+  "ppt_native_preview_verified": false,
+  "candidate_taxonomy_validated": false,
+  "files": {
+    "分析报告_老师意见修订版.md": "fed1d7c970b0899be2ec557a7f3513f4489841adad98578846ca7addf22e6e79",
+    "分析报告_老师意见修订版.html": "ae8d86014583223e69b0abd423924e5c819ad7eb289c7ae430586fadc21e41f8",
+    "分析报告_老师意见修订版.docx": "28cfec732b164b92eff938d355efd7737fb1d94f9f8c41319d842d70b88cb08c",
+    "分析报告_老师意见修订版.pdf": "d13dee8c68579a1dd7761d922db3d89afbd0bba96a897eb4f4e1800baa85bcab",
+    "Keep社区内容表达与互动反馈_老师意见修订版.pptx": "cf7819f7e1238251aff0b7d39fa3ce40cc9cb485897160029c8109aea1bf4d72",
+    "Keep社区内容表达与互动反馈_老师意见修订版_逐页讲稿.txt": "aa3d48119825622daf66af2dd98c6058e67729bfcde6c1347d19653f1c9b437a",
+    "修订说明_新增分析与结论变化.md": "72f19d78d78db6eb9e3888188855ef407a919f6d3f276aa56b7b7ed7674c087f",
+    "修订说明_新增分析与结论变化.pdf": "9385465461e336e006c28a234f376d82f23c8047dfef6a4243f2020cb7bb83c5"
+  }
+}

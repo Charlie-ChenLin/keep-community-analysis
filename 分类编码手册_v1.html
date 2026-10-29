@@ -1,0 +1,903 @@
+<html><head><meta charset="utf-8"><style>body{font-family:sans-serif;font-size:10pt;line-height:1.5;color:#203028;}h1,h2,h3{page-break-after:avoid;}h1{font-size:23pt;color:#234d43;}h2{font-size:15pt;color:#234d43;margin-top:17pt;}h3{font-size:11.5pt;color:#304f46;margin-top:13pt;}p{margin:7pt 0;}table{width:100%;border-collapse:collapse;font-size:8.3pt;margin:8pt 0;}th,td{padding:4pt;text-align:left;vertical-align:top;}th{font-weight:bold;}a{color:#24604f;}code{font-size:8pt;}img{max-width:100%;}</style></head><body><h1>Keep主帖分类编码手册 v1</h1>
+<p>内容对象 × 可观察表达行为；课堂研究与人工复核用。</p>
+<p><strong>冻结版本：</strong> <code>1.0_frozen_after_development_and_calibration</code>。</p>
+<p><strong>编制口径：</strong> 手册按冻结时定义编制；AI检验当前结果见《分类测量重建_实证依据与验证报告》，人审尚未完成，不能写成人工验证通过。</p>
+<p><strong>冻结快照中的状态文字：</strong> 开发与校准完成、留出检验前冻结；尚未经独立人工验证。 这句话说明码本冻结时所处阶段，不代表当前执行进度；四份生成来源均为冻结快照。</p>
+<h2>1. 这份手册测量什么</h2>
+<p>本手册帮助编码者回答两个问题：正文在谈什么内容？正文做出了什么可观察的表达行为？它不测量作者真实人格、真实心理情绪的正负程度、身体或医学事实、行动完成质量，也不据主帖推定实际支持交换或互动效果。</p>
+<p>旧四词典的词命中、词频比例，以及旧NMF主题权重，不能直接当作人格、动机、披露、社会支持或情绪构念。看见我不等于自我披露，看见加油不等于向别人提供支持，看见谢谢不等于已经获助，出现情绪词也不能直接升级为心理状态测量。新类别须由本帖可观察语义和逐字证据支持。</p>
+<p>两个轴分别判断、均可多标签，也可交叉共现。一帖谈运动和饮食，可以有两个内容叶；同帖呈报行动、表达酸痛并说明明日安排，可以有三类表达行为。没有证据的类不因邻类成立而自动成立。</p>
+<h2>2. 编码单位、可用信息与禁止补充的信息</h2>
+<p><strong>编码单位是单条完整的清理后正文。</strong> 先通读全文，再选标签；不可只依据触发词，也不可把一句话从上下文中截出后单独判断。</p>
+<p>只使用研究方交付的清理正文。不得用原始标签、图片想象、用户名或作者身份、其他帖子、点赞/浏览/评论数、旧词典预测、旧NMF权重来补语义。正文出现可识别的点名或关系称谓时，可用其文本语义，但不能另外查询身份。</p>
+<p>正文中的数字、项目、时间和主体都只按其所言处理。例如写跑了五公里可编码为运动与行动呈报，不能验证其是否真实完成；写很难过可记录体验表达，不能诊断心理问题；描述别人的运动也可属于运动内容。</p>
+<h2>3. 结构速查：17个内容叶、5个展示父组与其他槽</h2>
+<p>内容叶保留具体对象，父组服务于本研究的汇总展示。可先用叶定义帮助理解对象，再按映射取父组并集；同一父组有多个叶，只给该帖的父组记一次。父组频数不是叶频数相加。</p>
+<p><strong>现有人审CSV只填写6个内容父组槽与15个表达行为槽，没有content_leaves列。</strong> 17叶是理解边界和父组映射的辅助，不要求填写者在现有表中另找逐叶字段；如研究者另建逐叶扩展表，应标明其为扩展记录，不能冒充本轮已验证项目。</p>
+<p>5个观察父组是人为设定的研究任务展示聚合，并非唯一自然分类，也不声称内部同质。<code>d_other</code>是另外保留的开放槽，不是第六个已经发现的同质构念。<code>d_life</code>要求实质内容对象，不能充当非运动残余；运动与其中的家庭、出行或天气等可同时出现。</p>
+<table>
+<thead>
+<tr>
+<th>展示父组或开放槽</th>
+<th>17个内容叶的固定映射</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d_exercise</code> 运动与身体活动</td>
+<td><code>exercise</code> 运动与身体活动</td>
+</tr>
+<tr>
+<td><code>d_body</code> 身体状态、体重与外形</td>
+<td><code>weight</code> 体重、减脂与身体形态管理；<code>body</code> 身体感受、健康与休息</td>
+</tr>
+<tr>
+<td><code>d_food</code> 饮食、食物与营养</td>
+<td><code>food</code> 饮食、食物与营养</td>
+</tr>
+<tr>
+<td><code>d_life</code> 生活、关系与社会文化话题</td>
+<td><code>life</code> 人生观、处世与自我调适；<code>social</code> 人际关系与陪伴；<code>family</code> 家庭与子女照料；<code>work_study</code> 工作、学习与职业；<code>culture</code> 阅读、知识、艺术与媒体；<code>weather</code> 天气、季节与自然环境；<code>outing</code> 出行、地方与游览；<code>appearance</code> 个人装饰与穿着；<code>festival</code> 节日与新年度祝愿；<code>religion</code> 宗教场所与宗教活动；<code>commerce</code> 消费、交易与商业处境；<code>home_housing</code> 居家环境与装修</td>
+</tr>
+<tr>
+<td><code>d_tools</code> 工具、服务与记录奖励机制</td>
+<td><code>platform</code> 课程工具、记录与奖励机制</td>
+</tr>
+<tr>
+<td><code>d_other</code> 其他明确内容</td>
+<td>无预设内容叶；须在note写明具体遗漏对象</td>
+</tr>
+</tbody>
+</table>
+<p><strong>检验范围要分层书写。</strong> 本轮留出编码对照只评估6个内容父组槽与15个表达行为槽，不逐一验证17个内容叶。17叶是可追溯的发现记录；它们的边界、父组内部同质性以及这一分组方式，均不能宣称已经获得实证效度验证。</p>
+<h2>4. 先区分观察状态，再区分内容领域状态</h2>
+<p>无正文、信息不足、领域未指明、不确定和其他明确内容不是同一种情况。一个轴可判断，不代表另一个轴也可判断。</p>
+<table>
+<thead>
+<tr>
+<th>层次与状态</th>
+<th>如何判定</th>
+<th>如何记录</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>观察：<code>empty</code> 无正文</td>
+<td>清理正文为空或仅空白</td>
+<td>无可观察文字；内容领域记unavailable；标签缺失不能记为实质阴性</td>
+</tr>
+<tr>
+<td>观察：<code>insufficient</code> 信息不足</td>
+<td>有符号、数字或不可释义片段，但不足以解释语义</td>
+<td>例如单独的省略号或缺上下文数字；内容领域记unavailable，不硬塞题注或其他</td>
+</tr>
+<tr>
+<td>观察：<code>readable</code> 可读</td>
+<td>能解释至少一项表达或内容</td>
+<td>继续分轴；例如早安可读但未必有内容领域</td>
+</tr>
+<tr>
+<td>内容：<code>specified</code> 已指明</td>
+<td>有可复述且能指出证据的对象</td>
+<td>现有CSV记录全部有证据的父组；内容叶帮助匹配；明确未覆盖对象可用d_other并写note</td>
+</tr>
+<tr>
+<td>内容：<code>unspecified</code> 领域未指明</td>
+<td>正文可表达体验、寒暄或动员，但不足以识别内容对象</td>
+<td>例如只有加油；可有行为标签，不能归d_life，也不能把五父组记为已知都不存在</td>
+</tr>
+<tr>
+<td>内容：<code>uncertain</code> 不确定</td>
+<td>文本存在可疑对象，但指代、词义或边界无法确定</td>
+<td>记下待选类别、歧义片段及不能裁定的原因；不得用其他掩盖犹豫</td>
+</tr>
+<tr>
+<td>内容：<code>unavailable</code> 无可用判断</td>
+<td>观察状态为空或不足，无法进入领域判断</td>
+<td>与可读但未指明分开；也与已指明后某标签未检出分开</td>
+</tr>
+<tr>
+<td>内容：<code>d_other</code> 其他明确内容</td>
+<td>存在可清楚复述的具体对象，现有叶和父组不能覆盖</td>
+<td>仍为specified；note必须写具体对象和现有分类不适用之处</td>
+</tr>
+</tbody>
+</table>
+<p><strong>未检出、未知和缺失分开。</strong> 在足够可读且已完成判断的范围里，某类未检出才可按编码任务要求记录为0；空白、信息不足、未指明或尚未解决的判断不得批量填成0。若表格只能接受0/1，须另保留状态与缺失标记，交由研究者确定分析分母，编码者不能自行把未知替换为0。</p>
+<p>当前冻结码本正式列出了观察状态和内容领域状态，没有新增一套行为状态值。行为轴遇到缺失、信息不足或歧义时，应在对应判断和note中保留，不为了填满表格而强加行为，也不另造正式标签。</p>
+<h2>5. 内容父组边界与样本支持</h2>
+<p>下列开发计数的分母是160条开发帖，校准计数的分母是80条校准帖。它们是发现与修订阶段的样本支持，不是全体9532帖、全部可读正文或Keep平台的比例。每帖可多标签，列间总和允许超过样本数；不同父组也可重叠。作者数仅为开发样本内出现该父组的作者数。</p>
+<table>
+<thead>
+<tr>
+<th>父组/槽</th>
+<th>开发帖数</th>
+<th>开发作者数</th>
+<th>校准帖数</th>
+<th>支持状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d_exercise</code> 运动与身体活动</td>
+<td>61</td>
+<td>30</td>
+<td>16</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>d_body</code> 身体状态、体重与外形</td>
+<td>32</td>
+<td>20</td>
+<td>11</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>d_food</code> 饮食、食物与营养</td>
+<td>11</td>
+<td>9</td>
+<td>19</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>d_life</code> 生活、关系与社会文化话题</td>
+<td>63</td>
+<td>34</td>
+<td>37</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>d_tools</code> 工具、服务与记录奖励机制</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>稀疏候选</td>
+</tr>
+<tr>
+<td><code>d_other</code> 其他明确内容</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>稀疏候选</td>
+</tr>
+</tbody>
+</table>
+<h3>d_exercise｜运动与身体活动</h3>
+<p><strong>定义：</strong> 正文明确讨论身体活动、具体运动、训练、运动方法或体育活动；不要求活动主体就是作者。</p>
+<p><strong>纳入：</strong> 跑步、骑行、步行、力量、拉伸等项目作为子类；明确的一般运动或身体活动讨论。</p>
+<p><strong>排除：</strong> 孤立的打卡、练、汗或品牌名；不能推断活动真实完成或作者自律人格。</p>
+<p><strong>归并理由：</strong> 项目属于同一讨论对象，保留项目差异为子类；不与上位运动类平级作互斥归类。</p>
+<h3>d_body｜身体状态、体重与外形</h3>
+<p><strong>定义：</strong> 正文明确讨论身体感觉、症状、休息、体力或体重与身体形态的状态、改变或管理。</p>
+<p><strong>纳入：</strong> 身体感受/健康休息与体重/减脂是两个保留的细分；可以同运动或饮食共现。</p>
+<p><strong>排除：</strong> 只有情绪词而无身体对象；只提训练部位且未谈身体状态或外形。</p>
+<p><strong>归并理由：</strong> 按身体这一讨论对象作展示层归并；健康疲累与体重管理不被当作同一构念，叶类分别保留。</p>
+<h3>d_food｜饮食、食物与营养</h3>
+<p><strong>定义：</strong> 正文以食物、用餐、食材、膳食安排、营养或饮食欲望为有实质指涉的讨论对象。</p>
+<p><strong>纳入：</strong> 餐食、食谱、买菜、食物评价及饮食计划。</p>
+<p><strong>排除：</strong> 不能因食物出现在Keep就认定减脂目的或健康质量；背景类比中的食物不自动计入。</p>
+<p><strong>归并理由：</strong> 语料中独立出现且不必依附训练或减脂，作为独立内容对象保留。</p>
+<h3>d_life｜生活、关系与社会文化话题</h3>
+<p><strong>定义：</strong> 正文对人生处世提出实质命题，或明确讨论家庭关系、工作学习、阅读艺术媒体、天气、出行、衣着装饰、节庆或宗教活动。校准新增消费、交易、商业处境和居住装修细分；仍需具体对象证据，不把无法归类的表达当生活。</p>
+<p><strong>纳入：</strong> 按固定映射保留10个开发叶与2个校准新增叶，可与运动共现；人生感悟需能复述其命题，具体生活场景需有直接文本证据；17个内容叶中社会文化、生活及新增消费/居住对象为展示聚合；并非运动的互斥补集。</p>
+<p><strong>排除：</strong> 不能作为没有命中运动词的剩余兜底类；早安、开心、加油、生活二字本身不足以判定内容域；不推断作者身份、信仰或关系性质。</p>
+<p><strong>归并理由：</strong> 为研究任务作广义展示归并，不声称内部同质或与运动互斥；所有细分频数和边界保留，避免丢弃低频真实主题。</p>
+<p><strong>计数措辞说明：</strong> 冻结JSON的纳入字段原写11个开发细分，与其显式叶列表和映射不一致。本手册依17叶列表及固定映射展示：d_life下共12叶，其中10叶来自开发，commerce和home_housing两叶由校准新增；冻结JSON保持原样。本说明仅澄清条目数，不更改分类定义。</p>
+<h3>d_tools｜工具、服务与记录奖励机制</h3>
+<p><strong>定义：</strong> 正文明确讨论应用/工具功能、投屏、记录、等级或奖励等具体机制，不擅自补出提供者。</p>
+<p><strong>纳入：</strong> 功能问题或机制、等级奖励本身成为主题。</p>
+<p><strong>排除：</strong> 仅出现品牌名、课程分享标记、数字或打卡；不凭机制推断实际运动。</p>
+<p><strong>归并理由：</strong> 开发中虽少但与其他讨论对象不同，作为稀疏候选保留，不因频数少强并或据此回归。</p>
+<h3>d_other｜其他明确内容</h3>
+<p><strong>定义：</strong> 正文有可复述的具体内容，但上述开发内容域不能覆盖；必须在note写出具体遗漏对象。</p>
+<p><strong>纳入：</strong> 留出和后续编码中出现的新内容对象。</p>
+<p><strong>排除：</strong> 空正文、符号或不能判断领域；不得通过其他类掩盖边界不清。</p>
+<p><strong>归并理由：</strong> 开放残余编码槽，而非开发阶段已经验证的新增类别；单独检查其占比和实例。</p>
+<h2>6. 17个内容叶：逐类操作说明</h2>
+<p>本节按冻结码本逐类列定义、纳入、排除与近邻。例句全部是为教学自行编造的短句，<strong>不是原帖、不是开发或校准证据</strong>，也不改变样本计数。所给四份来源没有逐叶的帖子与作者计数，本手册不推算或虚造叶级频数。以下合成例只展示局部判定，实际编码仍须通读全文并检索其他可并列标签。</p>
+<h3>6.1 <code>exercise</code>｜运动与身体活动</h3>
+<p><strong>展示父组：</strong> <code>d_exercise</code> 运动与身体活动。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 以具体身体活动、运动、训练方案、赛事、体适能目标或运动经验为可辨话题；作者和被描述者均可为活动主体。</p>
+<p><strong>纳入：</strong> 跑步、骑行、步行、力量、划船、舞蹈、拉伸、靠墙练习、马拉松等统一上位域；项目仅可作后续子类，不为互斥平级领域；一般行走也属于身体活动，不强求训练动机。</p>
+<p><strong>排除：</strong> 汗、疲累、场所、打卡或品牌不单独证明运动；单字练未给身体动作或项目时保留未指明。</p>
+<p><strong>近邻辨别：</strong> body：感觉本身不能倒推运动；weight：减脂可未给运动行为；platform：等级奖励未必运动。</p>
+<p><strong>合成教学例（非原帖）：</strong> “今天慢跑了两公里。” 运动项目和动作明确；不据此判断完成质量或长期习惯。</p>
+<h3>6.2 <code>weight</code>｜体重、减脂与身体形态管理</h3>
+<p><strong>展示父组：</strong> <code>d_body</code> 身体状态、体重与外形。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 体重数值、胖瘦、脂肪或肌肉形态，以及改变或评价身形的明确目标、经历或建议。</p>
+<p><strong>纳入：</strong> 减脂、减肥、体重升降、围度、紧致、塑身、胸肌外观；允许与运动、饮食共同出现。</p>
+<p><strong>排除：</strong> 训练某部位本身未表达形态目标时只标运动；营养词或食材不能单独证明减重目标。</p>
+<p><strong>近邻辨别：</strong> exercise：运动方法与身体变化目标不同；food：膳食与体重管理可以独立。</p>
+<p><strong>合成教学例（非原帖）：</strong> “我想把腰围减少两厘米。” 身体形态目标明确；没有运动或饮食证据时不追加相应叶。</p>
+<h3>6.3 <code>food</code>｜饮食、食物与营养</h3>
+<p><strong>展示父组：</strong> <code>d_food</code> 饮食、食物与营养。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 围绕食物、用餐、食材采购、饮食欲望、膳食安排或营养摄取的实际主题。</p>
+<p><strong>纳入：</strong> 菜品、早餐、外卖计划、买菜、想吃好吃的；碳水、蛋白质、餐次、饮食控制。</p>
+<p><strong>排除：</strong> 背景食物或类比不机械增加标签；食材不能证明是减脂餐或实际热量。</p>
+<p><strong>近邻辨别：</strong> weight：饮食不必服务减脂；body：进食后的症状可主要是健康主题。</p>
+<p><strong>合成教学例（非原帖）：</strong> “午餐准备了豆腐和青菜。” 餐食是实质对象；不能补称减脂餐。</p>
+<h3>6.4 <code>body</code>｜身体感受、健康与休息</h3>
+<p><strong>展示父组：</strong> <code>d_body</code> 身体状态、体重与外形。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 明确身体感觉、症状、健康保护、体力精力、疲累或休息经历；不要求证明疾病或训练来源。</p>
+<p><strong>纳入：</strong> 僵硬、腿沉、出汗、酸胀、手指发木、疲累、生病；体力精力、午睡、防伤和膝盖保护。</p>
+<p><strong>排除：</strong> 泛称状态或好很多且无身体对象不够；主观疾病比喻不升级为确诊，情绪词也不自动等于健康。</p>
+<p><strong>近邻辨别：</strong> exercise：反应不可倒推训练；family：子女健康可与照料共现。</p>
+<p><strong>合成教学例（非原帖）：</strong> “今天脖子很僵，准备早点休息。” 身体感觉与休息明确；不推断病因或确诊。</p>
+<h3>6.5 <code>life</code>｜人生观、处世与自我调适</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 对人生、幸福、目标、成长、善恶或应对处境提出可复述命题，或展开有实质内容的生活反思。</p>
+<p><strong>纳入：</strong> 幸福、适度、知足、顺其自然、自我价值；成长与快乐变化、目标奋斗、坚持与视角的普遍反思。</p>
+<p><strong>排除：</strong> 早安、晚安、加油、努力、高兴等泛用表达本身不足；提生活二字不自动编码；仅体育内坚持动员可只属运动。</p>
+<p><strong>近邻辨别：</strong> domain_unspecified：口号缺实质命题；social：关系回忆可与人生反思共现。</p>
+<p><strong>合成教学例（非原帖）：</strong> “一次失败不能决定一个人的价值。” 可复述的一般处世命题；无需推断作者的人格。</p>
+<h3>6.6 <code>social</code>｜人际关系与陪伴</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 非仅礼貌表达的人际陪伴、结交、关系回忆、同伴相遇或入群关系诉求。</p>
+<p><strong>纳入：</strong> 陪伴、交友邀请、共同时间回忆、同伴相遇；明确请求加入同伴群体。</p>
+<p><strong>排除：</strong> 问候、泛称称赞、祝福、感谢本身属于表达方式；不擅自指定恋爱、朋友或家庭身份。</p>
+<p><strong>近邻辨别：</strong> family：明确家庭照料另列；platform：入群关系诉求可与工具问题共现。</p>
+<p><strong>合成教学例（非原帖）：</strong> “想找一位周末一起散步的伙伴。” 明确结伴诉求；也可标运动，与家庭身份无关。</p>
+<h3>6.7 <code>family</code>｜家庭与子女照料</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 明确亲属、子女的生活活动、陪伴、看护、健康或育儿日程。</p>
+<p><strong>纳入：</strong> 母亲学舞、陪娃上课、孩子重复活动、宝宝生病；没有孩子打扰时的休息经历。</p>
+<p><strong>排除：</strong> 宝宝若是对读者昵称不算亲属；未指身份的陪伴不推为家属。</p>
+<p><strong>近邻辨别：</strong> social：一般陪伴缺亲属身份；body：子女健康可以共现。</p>
+<p><strong>合成教学例（非原帖）：</strong> “下午陪女儿去上兴趣课。” 亲属和照料日程明确；不补出课程内容或作者职业。</p>
+<h3>6.8 <code>work_study</code>｜工作、学习与职业</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 明确职业事务、班次和年限、教学沟通、学习实验或职业理想。</p>
+<p><strong>纳入：</strong> 学情沟通、夜班、工作年限、生理实验与医生理想。</p>
+<p><strong>排除：</strong> 孤立上工收工可为活动开始结束，缺工作线索不归入；陪娃上课未知内容时不自动为作者学习职业。</p>
+<p><strong>近邻辨别：</strong> culture：知识消费不自动是职业学习；family：陪子女主要是照料。</p>
+<p><strong>合成教学例（非原帖）：</strong> “今晚轮到我值夜班。” 工作班次明确；不由单独收工二字推职业。</p>
+<h3>6.9 <code>culture</code>｜阅读、知识、艺术与媒体</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 围绕书籍阅读、知识付费、绘画、评书或影视观看的文化知识活动与体验。</p>
+<p><strong>纳入：</strong> 书的作用、阅读数量、知识付费、画画、听评书、节目评价。</p>
+<p><strong>排除：</strong> 舞蹈在语料以身体训练展开时归运动，不以艺术名义拆运动域；场景中歌曲和引用未独立讨论时不机械增标签。</p>
+<p><strong>近邻辨别：</strong> work_study：非正式文化消费与职业学习不同；exercise：绘画需体力不证明训练。</p>
+<p><strong>合成教学例（非原帖）：</strong> “这周读完了一本小说。” 阅读成为主题；引语中的书名提及不一概增加本叶。</p>
+<h3>6.10 <code>weather</code>｜天气、季节与自然环境</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 天气、温度、季节、天空的明确描述、体验或对活动的成段影响。</p>
+<p><strong>纳入：</strong> 立冬与气温反差、蓝天、寒风、冬季、寒冷影响设备；四季天气对运动计划的实质描述。</p>
+<p><strong>排除：</strong> 太阳云符号单独出现可能仅装饰；人生隐喻的阴影阳光不是天气；运动结束一笔带过的雨仅标时点时不独立增域。</p>
+<p><strong>近邻辨别：</strong> life：阳光可为隐喻；appearance：衣裤热不等于外部炎热。</p>
+<p><strong>合成教学例（非原帖）：</strong> “今天降温八度，风也很大。” 天气描述明确；阳光作为人生隐喻不算天气。</p>
+<h3>6.11 <code>outing</code>｜出行、地方与游览</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 明确旅行出差日程、在外地活动条件、返程路况、目的地计划和游览。</p>
+<p><strong>纳入：</strong> 旅行第二日安排、外省出差单车、在郑州骑行条件；去南京计划、返程路况、动物园游览。</p>
+<p><strong>排除：</strong> 只心念某地方或未解释地名不能确定出行；骑行不自动是旅行；周边场所不必是出游。</p>
+<p><strong>近邻辨别：</strong> exercise：活动可与出行重叠，交通方式未明不猜运动；domain_unspecified：地方向往不是行程证据。</p>
+<p><strong>合成教学例（非原帖）：</strong> “下周去苏州游园，车票已经订好。” 目的地与出行安排明确；地名单独出现不够。</p>
+<h3>6.12 <code>appearance</code>｜个人装饰与穿着</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 身体装饰及衣裤手套的实际穿着、需求或运动适用性。</p>
+<p><strong>纳入：</strong> 纹身、跑步裤装不适、手套需求、抓绒裤太热。</p>
+<p><strong>排除：</strong> 肌肉和胖瘦本身归身体形态；衣物只为长段背景举例时不必独立增域。</p>
+<p><strong>近邻辨别：</strong> weight：身体形态与衣着不同；weather：衣物舒适性不证明外部温度。</p>
+<p><strong>合成教学例（非原帖）：</strong> “新买的手套跑步时总往下滑。” 穿着适用性明确；身体外形另属weight。</p>
+<h3>6.13 <code>platform</code>｜课程工具、记录与奖励机制</h3>
+<p><strong>展示父组：</strong> <code>d_tools</code> 工具、服务与记录奖励机制。<strong>发现状态：</strong> 开发发现候选。</p>
+<p><strong>定义：</strong> 应用或服务的投屏、课程记录、等级与奖励等具体机制成为主题；不要求点明提供者。</p>
+<p><strong>纳入：</strong> 等级解锁实物、投屏无法记录卡路里。</p>
+<p><strong>排除：</strong> 仅品牌、打卡、次数、坚持不证明机制；个人训练计划以应用为渠道时可只属运动。</p>
+<p><strong>近邻辨别：</strong> exercise：机制不证明项目；social：群加入关系诉求可以共现。</p>
+<p><strong>合成教学例（非原帖）：</strong> “投屏以后，应用没有保存这次记录。” 工具记录机制明确；不能补出具体运动项目。</p>
+<h3>6.14 <code>festival</code>｜节日与新年度祝愿</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 暂定稀疏候选。</p>
+<p><strong>定义：</strong> 明确节日期待或新年度祝愿成为话题对象。</p>
+<p><strong>纳入：</strong> 期待圣诞、新年度对特定群体祝福。</p>
+<p><strong>排除：</strong> 泛用周末愉快、早安、年份数字不自动归入。</p>
+<p><strong>近邻辨别：</strong> domain_unspecified：一般问候缺节日对象；weather：节日与季候不是同一主题。</p>
+<p><strong>合成教学例（非原帖）：</strong> “祝大家端午安康。” 明确节日对象；周末愉快不足以判为节日。</p>
+<h3>6.15 <code>religion</code>｜宗教场所与宗教活动</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 暂定单例候选。</p>
+<p><strong>定义：</strong> 正文明确进入宗教场所或进行仪式，实际叙述活动或受阻经历。</p>
+<p><strong>纳入：</strong> 去寺庙、无法拜佛。</p>
+<p><strong>排除：</strong> 泛道德善恶福祸不足以推断信仰；不推定宗派、虔诚程度或宗教身份。</p>
+<p><strong>近邻辨别：</strong> life：道德格言与实践不同；body：身体状态可使仪式受阻。</p>
+<p><strong>合成教学例（非原帖）：</strong> “今天去寺里参加了祈福仪式。” 宗教场所与活动明确；不推断宗派、信仰或虔诚程度。</p>
+<h3>6.16 <code>commerce</code>｜消费、交易与商业处境</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 校准新增并回查开发。</p>
+<p><strong>定义：</strong> 有明确文字指涉的选购、购买、付费、售卖、价格条款、红包金钱利益获取或商家处境。</p>
+<p><strong>纳入：</strong> 食品实际采购可与饮食共标；商家反应可作为商业处境，不补出具体事件或原因。</p>
+<p><strong>排除：</strong> 商品或品牌名本身；购买力比喻、价钱背景例举不机械增标签。</p>
+<p><strong>近邻辨别：</strong> food：买菜可同时涉及采购与食物；单有菜名不等于交易；platform：应用机制不自动等于商业供给；f_sale_offer：内容轴的消费交易可只是自述购买，行为轴的交易告知须有供给或条款。</p>
+<p><strong>合成教学例（非原帖）：</strong> “这套杯子售价四十元，可办理退换。” 商品交易条款明确；不推断已成交或作者职业。</p>
+<h3>6.17 <code>home_housing</code>｜居家环境与装修</h3>
+<p><strong>展示父组：</strong> <code>d_life</code> 生活、关系与社会文化话题。<strong>发现状态：</strong> 校准新增、支持稀疏。</p>
+<p><strong>定义：</strong> 居住环境、住房或装修本身成为具体讨论内容。</p>
+<p><strong>纳入：</strong> 装修安排和住宅环境问题。</p>
+<p><strong>排除：</strong> 居家训练的场所词、地板动作条件、不明场景不机械增标签。</p>
+<p><strong>近邻辨别：</strong> exercise：在家训练的在家只是场所，不等于讨论住房；life：本叶指具体居住环境，life叶指可复述的人生处世命题。</p>
+<p><strong>合成教学例（非原帖）：</strong> “周末安排师傅来修补客厅墙面。” 居住装修成为讨论对象；居家训练中的场所词不自动算。</p>
+<h2>7. 15类表达行为：逐类操作说明</h2>
+<p>表达行为回答这段文字在做什么，不能由内容域直接推定。行为共现须分别有证据；同一片段只有确实兼具两种行为时才能同时支持两类。开发0不代表该行为在总体中不存在；校准新增的稀有行为继续保留人工候选，不保证能自动识别或用于回归。</p>
+<table>
+<thead>
+<tr>
+<th>行为</th>
+<th>开发帖数/160</th>
+<th>开发作者数</th>
+<th>校准帖数/80</th>
+<th>支持状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f_activity_update</code> 行动、进度与日常事件呈报</td>
+<td>67</td>
+<td>34</td>
+<td>42</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_experience_report</code> 身体感受与主观体验自述</td>
+<td>35</td>
+<td>23</td>
+<td>15</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_future_intention</code> 计划、目标与期待</td>
+<td>14</td>
+<td>13</td>
+<td>7</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_explanation</code> 可泛化信息与机制解释</td>
+<td>12</td>
+<td>4</td>
+<td>4</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_practical_guidance</code> 方法与可执行建议</td>
+<td>12</td>
+<td>4</td>
+<td>1</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_reflection</code> 概括性议论、格言与价值主张</td>
+<td>31</td>
+<td>17</td>
+<td>14</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_exhortation</code> 行动号召与自我提醒</td>
+<td>20</td>
+<td>17</td>
+<td>5</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_greeting_wish</code> 寒暄与祝愿</td>
+<td>13</td>
+<td>11</td>
+<td>6</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_relational_bid</code> 明确联络或共同参与邀请</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>稀疏候选</td>
+</tr>
+<tr>
+<td><code>f_reader_response_request</code> 明确面向他人的回应征询</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>稀疏候选</td>
+</tr>
+<tr>
+<td><code>f_appraisal</code> 明确对象评价、褒贬与致敬</td>
+<td>17</td>
+<td>12</td>
+<td>16</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_caption</code> 指称式题注与景象描写</td>
+<td>10</td>
+<td>8</td>
+<td>9</td>
+<td>开发样本中有重复支持的候选类</td>
+</tr>
+<tr>
+<td><code>f_gratitude</code> 明确感谢表达</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>校准新增、支持稀疏</td>
+</tr>
+<tr>
+<td><code>f_sale_offer</code> 商品服务供给与交易告知</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>校准新增、支持稀疏</td>
+</tr>
+<tr>
+<td><code>f_other_expression</code> 其他可辨识表达行为</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>校准新增、支持稀疏</td>
+</tr>
+</tbody>
+</table>
+<h3>7.1 <code>f_activity_update</code>｜行动、进度与日常事件呈报</h3>
+<p><strong>定义：</strong> 呈报本帖涉及的具体行动、阶段、进度、自报指标或日常发生的情境；允许简短活动简表，完成状态只按正文所言。</p>
+<p><strong>纳入：</strong> 行动和日常遭遇；打卡序次和数值；开工、出发、收工等阶段标记；明确当下活动内容。</p>
+<p><strong>排除：</strong> 纯未来安排；只有身体感受；无事件框架的一般知识；不从记录认定自律或完成质量。</p>
+<p><strong>近邻辨别：</strong> future_intention只表示后续计划；experience_report是感受而非事件；caption无足够的个人行动或事件框架。</p>
+<p><strong>样本支持：</strong> 开发67帖、34作者；校准42帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “第三次练习结束，今天做了两组。” 只呈报次数与阶段，不自动标方法建议，也不把完成当自律。</p>
+<h3>7.2 <code>f_experience_report</code>｜身体感受与主观体验自述</h3>
+<p><strong>定义：</strong> 正文直接表达自身的身体感觉、心理念头、情感反应或状态体验；编码表达而不认定潜在心理或医学事实。</p>
+<p><strong>纳入：</strong> 疲劳、酸胀、僵硬、舒适等感觉；直接说出的开心、紧张、念头、精神状态；明确的夸张反应。</p>
+<p><strong>排除：</strong> 不从事件或表情推测感受；不从困难推断求助；外部对象的好坏评价归appraisal；未来期望归future_intention。</p>
+<p><strong>近邻辨别：</strong> appraisal评价对象或选择的好坏；本类必须有身体、心理或体验反应的直接表达。</p>
+<p><strong>样本支持：</strong> 开发35帖、23作者；校准15帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “现在小腿发酸，我有点紧张。” 逐字记录感觉和情感表达，不作医学或心理诊断。</p>
+<h3>7.3 <code>f_future_intention</code>｜计划、目标与期待</h3>
+<p><strong>定义：</strong> 明确表达尚未发生的安排、想要达到的结果、愿望或未来期待。</p>
+<p><strong>纳入：</strong> 后续行动安排；具体目标与奖励方向；希望、愿望和期待。</p>
+<p><strong>排除：</strong> 不把已完成记录、一般奋斗口号、目的性修辞或笼统前路感言自动解释为承诺。</p>
+<p><strong>近邻辨别：</strong> activity_update报告行动或阶段，不能替未来愿望补出执行；exhortation只动员而不一定给出将来安排。</p>
+<p><strong>样本支持：</strong> 开发14帖、13作者；校准7帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “明晚准备去游泳半小时。” 明确后续安排；尚未发生，不标为已完成。</p>
+<h3>7.4 <code>f_explanation</code>｜可泛化信息与机制解释</h3>
+<p><strong>定义：</strong> 以说明、列举、因果或效用断言向读者呈现可跨个人事件使用的信息或关系主张。此编码不验证知识是否正确。</p>
+<p><strong>纳入：</strong> 作用和原因解释；一般机制、事实比较；障碍和效用的说明。</p>
+<p><strong>排除：</strong> 仅呈报个人过程；格言式价值论断；只有具体指令没有解释；不把表达的机制当成已证实因果。</p>
+<p><strong>近邻辨别：</strong> practical_guidance告诉如何做；reflection表达生活/行为的价值和意义。说明与建议可以在同帖并列。</p>
+<p><strong>样本支持：</strong> 开发12帖、4作者；校准4帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “持续受力会使弹簧发生形变。” 给出可跨事件使用的关系主张；本编码不验证科学正确性。</p>
+<h3>7.5 <code>f_practical_guidance</code>｜方法与可执行建议</h3>
+<p><strong>定义：</strong> 明确给读者一个可按之行动的办法、方案、顺序、分配、条件性操作或注意事项，细节超过一般鼓劲。</p>
+<p><strong>纳入：</strong> 训练步骤、次数、组合和次序；饮食分配；具体情境下的明确行动建议。</p>
+<p><strong>排除：</strong> 个人训练日志若未邀请仿用；纯动作名；一般多练、奋斗或好好生活等动员。</p>
+<p><strong>近邻辨别：</strong> exhortation只有启动和坚持的动员；activity_update即使含组数也可能只是自己的完成简表。</p>
+<p><strong>样本支持：</strong> 开发12帖、4作者；校准1帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “做这个动作时先扶稳椅背，再缓慢抬腿。” 明确对象、步骤和可执行办法；若另有机制解释可并标。</p>
+<h3>7.6 <code>f_reflection</code>｜概括性议论、格言与价值主张</h3>
+<p><strong>定义：</strong> 表达关于人生、处世、幸福、行为意义或健身价值的一般观点、格言和评价性思考；包括转引内容。</p>
+<p><strong>纳入：</strong> 概括性价值判断、处世规范、人生感言、文学格言及展开的价值论证。</p>
+<p><strong>排除：</strong> 不据主张认定真实人格；情境对象的即时褒贬归appraisal；具体知识说明及操作方法另列。</p>
+<p><strong>近邻辨别：</strong> exhortation是短促行动号召；只有当帖子另有明显动员话语才同时编码。</p>
+<p><strong>样本支持：</strong> 开发31帖、17作者；校准14帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “成长有时意味着接受自己的局限。” 一般价值主张；不推断作者已经接受自己或具有积极人格。</p>
+<h3>7.7 <code>f_exhortation</code>｜行动号召与自我提醒</h3>
+<p><strong>定义：</strong> 通过简短号召、督促、鼓劲或自我提醒推动开始、继续、努力或行动，受众可以未明。</p>
+<p><strong>纳入：</strong> 简短开始/继续动员；泛化加油；明确自我提醒；明确向群体鼓劲。</p>
+<p><strong>排除：</strong> 不默认未明受众是他人；不认定完成或自律人格；具体方法归practical_guidance；纯表情不编码。</p>
+<p><strong>近邻辨别：</strong> relational_bid要求明确接触或共同参与邀请；greeting_wish是礼貌问候或祝愿。</p>
+<p><strong>样本支持：</strong> 开发20帖、17作者；校准5帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “给自己提个醒：继续坚持！” 明确动员；无内容对象时允许领域未指明。</p>
+<h3>7.8 <code>f_greeting_wish</code>｜寒暄与祝愿</h3>
+<p><strong>定义：</strong> 通过常规问候、道安或祝愿建立轻度社交接触或表达良好期望。</p>
+<p><strong>纳入：</strong> 早晚问候；周末祝愿；明确面向群体的节日或新年祝福。</p>
+<p><strong>排除：</strong> 不据此推断关系深度、实际对话或支持效果；个人对自己未来的期望归future_intention。</p>
+<p><strong>近邻辨别：</strong> relational_bid有进一步联络或共同参与请求；本类只需问候或祝愿。</p>
+<p><strong>样本支持：</strong> 开发13帖、11作者；校准6帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “早上好，祝大家周末愉快。” 问候与祝愿明确；不证明互动已发生或支持有效。</p>
+<h3>7.9 <code>f_relational_bid</code>｜明确联络或共同参与邀请</h3>
+<p><strong>定义：</strong> 正文明确提出与他人建立联系、交友或一起参加某活动的邀请。</p>
+<p><strong>纳入：</strong> 交朋友的直接提出；明确共同参与的邀请。</p>
+<p><strong>排除：</strong> 单独@标签；未明确受众的第二人称或泛加油；致敬赞美但无接触邀请。</p>
+<p><strong>近邻辨别：</strong> reader_response_request索取回答；本类索取的是接触或共同参与，不能把一般号召自动当作社交邀请。</p>
+<p><strong>样本支持：</strong> 开发2帖、2作者；校准0帖。稀疏候选。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “有没有人愿意周六一起去公园散步？” 索取共同参与，标本类；若另外索取一个可独立回答的问题，再考虑回应征询。</p>
+<h3>7.10 <code>f_reader_response_request</code>｜明确面向他人的回应征询</h3>
+<p><strong>定义：</strong> 有可观察的外向指向，要求或询问读者/被点名者给出答案或回应；包括互动式活动询问，不限于求助。</p>
+<p><strong>纳入：</strong> 对被点名者提出的具体问题；直接请读者回答其自身情况。</p>
+<p><strong>排除：</strong> 设题后自行作答；自问、感叹、调侃、转述他人问句；仅有问号或表示想要某物。</p>
+<p><strong>近邻辨别：</strong> 知识文章常以设问开头但下文自己提供答案；自述困难并不自动要求读者帮助。</p>
+<p><strong>样本支持：</strong> 开发2帖、2作者；校准1帖。稀疏候选。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “请大家告诉我，这个按钮该怎么设置？” 明确面向读者索取答案；不是仅凭问号判定。</p>
+<h3>7.11 <code>f_appraisal</code>｜明确对象评价、褒贬与致敬</h3>
+<p><strong>定义：</strong> 直接表达对对象、情境、选择、引文或自身某表现的喜欢、好坏、高低、赞许、否定或致敬。</p>
+<p><strong>纳入：</strong> 餐食或景物的明确评价；对自我选择的评价；对引文的喜欢；明确褒扬与致敬。</p>
+<p><strong>排除：</strong> 不从笑、表情、叙事结果推断评价；不据褒贬认定被评者身份、人格或客观品质；一般价值主张归reflection。</p>
+<p><strong>近邻辨别：</strong> experience_report写自身感觉和反应；reflection将价值判断上升为一般性主张。</p>
+<p><strong>样本支持：</strong> 开发17帖、12作者；校准16帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “这份汤的味道很好。” 对明确对象作评价；不能自动追加自身开心或实际健康获益。</p>
+<h3>7.12 <code>f_caption</code>｜指称式题注与景象描写</h3>
+<p><strong>定义：</strong> 用主题短语、图序指称或景象描写指出本帖呈现什么，而不必断言个人已经完成某行动。</p>
+<p><strong>纳入：</strong> 地点/主题式短语；明确图序说明；简短动作名；诗性季节景象。</p>
+<p><strong>排除：</strong> 孤立品牌词、不可释义片段或纯符号不硬归本类；具体事件或自身活动更新优先用activity_update。</p>
+<p><strong>近邻辨别：</strong> activity_update需要行动/事件或进度框架；信息不足不能用题注作为兜底。</p>
+<p><strong>样本支持：</strong> 开发10帖、8作者；校准9帖。开发样本中有重复支持的候选类。</p>
+<p><strong>类别依据：</strong> 开发语料开放归纳；仅编码可观察表达行为，不测潜在人格、真实心理状态或支持效果。</p>
+<p><strong>合成教学例（非原帖）：</strong> “雨后湖面。” 可理解的景象题注；不推断作者去过、拍摄过或完成运动。</p>
+<h3>7.13 <code>f_gratitude</code>｜明确感谢表达</h3>
+<p><strong>定义：</strong> 正文对对象执行感谢或感恩表达，观察该话语形式，不推断真诚、实际获助或心理感激。</p>
+<p><strong>纳入：</strong> 明确感谢/感恩且有对象；幽默表达仍可含感谢话语，但须备注语境。</p>
+<p><strong>排除：</strong> 只有赞美、喜欢、致敬或问候；感谢不能证明已收到社会支持。</p>
+<p><strong>近邻辨别：</strong> appraisal是褒贬；greeting_wish是祝愿；本类需要感谢表达。</p>
+<p><strong>样本支持：</strong> 开发0帖、0作者；校准2帖。校准新增、支持稀疏。</p>
+<p><strong>类别依据：</strong> 校准中的真实遗漏行为；回查160条开发正文仍无明确阳性，不为训练凑样本。</p>
+<p><strong>合成教学例（非原帖）：</strong> “谢谢小林帮我找回钥匙。” 明确对象与感谢话语；不据此声称已经测得社会支持或真诚感激。</p>
+<h3>7.14 <code>f_sale_offer</code>｜商品服务供给与交易告知</h3>
+<p><strong>定义：</strong> 明确给出商品/服务供给、售卖、价格或交易条款。</p>
+<p><strong>纳入：</strong> 商品报价、退换条款等交易内容。</p>
+<p><strong>排除：</strong> 只推荐既有课程或食品用途；不由产品名推收费广告、作者职业或成交。</p>
+<p><strong>近邻辨别：</strong> explanation是可泛化说明；practical_guidance是如何操作；本类是具体供给/条款。</p>
+<p><strong>样本支持：</strong> 开发0帖、0作者；校准1帖。校准新增、支持稀疏。</p>
+<p><strong>类别依据：</strong> 校准中的真实遗漏行为；回查160条开发正文仍无明确阳性，不为训练凑样本。</p>
+<p><strong>合成教学例（非原帖）：</strong> “手工围巾一条六十元，支持七天退换。” 具体供给、报价和交易条款；不是机制解释。</p>
+<h3>7.15 <code>f_other_expression</code>｜其他可辨识表达行为</h3>
+<p><strong>定义：</strong> 存在当前既有功能不能表达的具体话语行为，如明确的谐音段子、幻想叙事；必须在note描述缺口。可与另有证据的功能并列。</p>
+<p><strong>纳入：</strong> 校准出现的想象段子/反转叙事/谐音双关。</p>
+<p><strong>排除：</strong> 不可解释片段、空正文和纯符号；不能因所有文本都有修辞就普遍加其他；已有格言/体验/记录足够覆盖时不重复归入。</p>
+<p><strong>近邻辨别：</strong> activity_update只指被呈报为已发生/当下的事件框架，不把假设情景当实际经历。</p>
+<p><strong>样本支持：</strong> 开发0帖、0作者；校准4帖。校准新增、支持稀疏。</p>
+<p><strong>类别依据：</strong> 校准中的真实遗漏行为；回查160条开发正文仍无明确阳性，不为训练凑样本。</p>
+<p><strong>合成教学例（非原帖）：</strong> “梦里我成了会说话的云，正和月亮下棋。” 明确幻想叙事；须在note描述，不能把其他当无把握的兜底。</p>
+<h3>7.16 常见行为边界的快速比较</h3>
+<table>
+<thead>
+<tr>
+<th>容易混淆的类</th>
+<th>实际判据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>行动呈报／未来安排</td>
+<td>现在或已发生的行动框架 vs 尚未发生的计划、目标、愿望；不替计划补出执行</td>
+</tr>
+<tr>
+<td>行动呈报／方法建议</td>
+<td>给自己的过程简表 vs 提供可供读者执行的办法；组数、次数本身不决定类别</td>
+</tr>
+<tr>
+<td>体验自述／对象评价</td>
+<td>我很舒服是自身体验；这双鞋很舒服是对象评价；两者明说可并存</td>
+</tr>
+<tr>
+<td>一般解释／方法建议／交易告知</td>
+<td>说明跨事件关系 vs 告诉读者如何做 vs 具体供给和交易条款；具体价格不自动成为解释</td>
+</tr>
+<tr>
+<td>概括议论／行动号召</td>
+<td>一般价值与意义命题 vs 启动或坚持的动员；格言不自动再标号召</td>
+</tr>
+<tr>
+<td>联络邀请／回应征询</td>
+<td>索取联系或共同参与 vs 索取答案或回应；一个邀请句有问号也不自动双标</td>
+</tr>
+<tr>
+<td>题注／行动呈报／信息不足</td>
+<td>能解释为主题、指称或景象 vs 具有个人行动、事件或进度框架 vs 根本无法解释</td>
+</tr>
+<tr>
+<td>感谢／评价／社会支持</td>
+<td>感谢话语、褒贬评价分开编码；两者都不能直接证明已发生支持交换</td>
+</tr>
+<tr>
+<td>其他行为／不确定</td>
+<td>能清楚说出未覆盖的具体话语行为才用其他；只是拿不准已有类则保留歧义</td>
+</tr>
+</tbody>
+</table>
+<h2>8. 逐字证据与特殊语境</h2>
+<p>每个阳性父组和行为判断都要有可逐字定位的正文证据；若另建逐叶扩展记录，叶标签也须保存证据。选择足以支持判断的最短连续片段，保留否定、主体、时间和语气条件；过短的触发词或省去否定的引文不能作证。多个分散片段可分别保存，不拼成原文中不存在的句子。父组可使用其下叶的对象证据；多个标签共享片段时，要能分别解释各自满足的条件。</p>
+<p><strong>不得把证据意译为原文。</strong> 证据栏逐字保存，解释另写note。正文若写没有去跑步，证据必须包含没有；可据明确运动对象标运动内容，却不能记录实际去跑步。记录很难过，只能支持难过这一表达，不证明临床状态或长期特征。</p>
+<p><strong>否定、梦境、假设和引用中的明确对象仍可属于内容轴。</strong> 但内容出现不等于事实发生。梦里腿酸不能当实际身体体验；假设发生的运动不能当已完成行动；幻想或谐音愿望不能自动当未来承诺。先确定话语框架，再判断行为。若假设用于给读者具体办法，可标方法建议；若只是明确幻想叙事，可在现有类不能覆盖时标其他行为并说明。</p>
+<p><strong>引用与格言可按其表达内容编码。</strong> 保留引用来源或话语归属提示，不认定作者赞同、相信或实践引文，也不据此推断作者人格。引用的书籍或歌曲只作来源时，不机械增加文化内容叶；只有其本身被实质讨论时再标。</p>
+<p><strong>主体与受众不能自行补全。</strong> 句中别人发生的运动仍是运动话题；宝宝可能是亲属，也可能是昵称。单独@、大家、你、一起、支持等词，不足以证明共同参与邀请、求助或实际支持。反问、设问、自问和转述问句也不能凭问号记作回应征询。</p>
+<p><strong>准确性与真实性另属任务。</strong> 机制解释标签说明文本提出了关系主张，不等于知识已经证实；商品条款不证明交易成交；感谢不证明真实获助；体重描述不证明测量准确。</p>
+<h2>9. 实际编码流程</h2>
+<ol>
+<li>打开单条清理正文，确认编号；不查看互动结果、旧预测或额外身份信息。</li>
+<li>通读全文，判观察状态：空白为empty，不可解释片段为insufficient，有可解释语义为readable。</li>
+<li>先辨话语框架：当下或已发生、未来、否定、假设、梦境、引用、设问或外向征询；确认文本说的主体和对象。</li>
+<li>在内容轴识别可复述的实质对象，可用17叶定义帮助匹配。只有遗漏对象明确时用d_other并写note；没有足够对象为unspecified，存在无法裁定的歧义为uncertain。</li>
+<li>按固定映射取父组并集，填入现有CSV的6个内容槽；不要求另填不存在的逐叶列。检查d_life是否有具体对象证据，避免将所有非运动文本装入其中。</li>
+<li>单独判断并填写15类表达行为。不要从运动推行动完成、从难处推求助、从问号推征询、从鼓励词推社会支持。</li>
+<li>为每个阳性标签抄录逐字证据，保留否定、时间、假设与引用框架；在note解释稀有类、其他槽和歧义。</li>
+<li>核查多标签：每类是否有独立语义理由？是否漏掉可并列内容或行为？是否把一个轴的可判定性误带到另一个轴？</li>
+<li>保存初始判断后再复核。存在分歧时先保留双方原判及证据，再依据冻结规则讨论；裁决记录不得抹掉原始分歧。</li>
+<li>留出检验开始后不静默改类名、规则、阈值或训练方式。新问题记入下一版本候选，不用同一留出样本一边改规则一边报告最终表现。</li>
+</ol>
+<p>课堂练习可先用本手册合成例理解边界，再由教师另行准备不参与当前冻结检验的练习材料。若正式开展人工验证，应由至少两名未参与该批发现的编码者独立盲标，保留证据与分歧，再安排裁决；这是一项后续建议，并非已完成的工作。</p>
+<h2>10. 合成边界练习：全部非原帖</h2>
+<p>以下短句均由手册作者为教学编造，不对应任何开发、校准或留出编号。表中是为突出边界的局部示范，不替代全文判断，也不加入样本支持计数。</p>
+<table>
+<thead>
+<tr>
+<th>合成句</th>
+<th>建议判断</th>
+<th>关键边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>早安！</td>
+<td>readable；domain_state=unspecified；f_greeting_wish</td>
+<td>问候可判，内容对象未指明；不归d_life</td>
+</tr>
+<tr>
+<td>……</td>
+<td>insufficient；domain_state=unavailable</td>
+<td>不能硬归题注或其他；不是所有类的实质阴性</td>
+</tr>
+<tr>
+<td>加油，坚持住！</td>
+<td>readable；内容未指明；f_exhortation</td>
+<td>无法仅凭动员补出运动、他人受众或支持效果</td>
+</tr>
+<tr>
+<td>今天没去跑步。</td>
+<td>exercise→d_exercise；f_activity_update；证据保留没</td>
+<td>是关于未行动的日常情况呈报，不是跑步已经发生</td>
+</tr>
+<tr>
+<td>如果膝盖痛，先暂停跑步。</td>
+<td>body+exercise→d_body+d_exercise；f_practical_guidance</td>
+<td>假设对象明确，可编码内容；不认定作者膝痛或实际跑步</td>
+</tr>
+<tr>
+<td>梦里我的腿酸得抬不起来。</td>
+<td>body→d_body；f_other_expression，note写梦境叙事</td>
+<td>不以梦中反应标实际体验或行动；保留梦里证据</td>
+</tr>
+<tr>
+<td>书中格言说：人的价值不由一时输赢决定。</td>
+<td>life→d_life；f_reflection；note写引用</td>
+<td>不认定作者人格或信念；书作为出处不足以自动标culture</td>
+</tr>
+<tr>
+<td>我完成了三组深蹲。</td>
+<td>exercise→d_exercise；f_activity_update</td>
+<td>个人简表没有邀请仿用，不自动标方法建议</td>
+</tr>
+<tr>
+<td>深蹲时先收紧腹部，再缓慢下蹲。</td>
+<td>exercise→d_exercise；f_practical_guidance</td>
+<td>步骤可供读者执行，不是个人完成日志</td>
+</tr>
+<tr>
+<td>你们通常怎么设置提醒？请留言告诉我。</td>
+<td>platform→d_tools；f_reader_response_request</td>
+<td>明确索取回应；不等于已获帮助</td>
+</tr>
+<tr>
+<td>为什么要休息？因为恢复也需要时间。</td>
+<td>body→d_body；f_explanation</td>
+<td>设问并自行回答，不自动标回应征询；知识正确性另审</td>
+</tr>
+<tr>
+<td>谢谢阿宁提醒我带水。</td>
+<td>f_gratitude；内容对象不足时可保留未指明</td>
+<td>感谢本身不是关系内容叶，也不证明测得支持效果</td>
+</tr>
+<tr>
+<td>明天和我一起去慢跑吧。</td>
+<td>exercise+social→d_exercise+d_life；f_relational_bid</td>
+<td>明确共同参与；不凭邀请句自动增加已完成行动或回应征询</td>
+</tr>
+<tr>
+<td>这款台灯八十元，七日内可退。</td>
+<td>commerce→d_life；f_sale_offer</td>
+<td>具体报价不是一般机制解释；不推断作者身份或成交</td>
+</tr>
+</tbody>
+</table>
+<h2>11. 校准发现与冻结变更</h2>
+<p>下表仅列问题、决定和追溯编号，不展示任何原帖。D/C编号是来源记录中的开发/校准索引，不是本手册合成例。校准后产生的v1不能被描述成未经修订的最初草案；新增类的支持须按回查后的实际计数报告。</p>
+<table>
+<thead>
+<tr>
+<th>校准问题</th>
+<th>冻结决定</th>
+<th>追溯索引（不含正文）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发内容遗漏消费交易和装修</td>
+<td>增加commerce/home_housing叶并明确归d_life的展示聚合；原开发与严格draft校准不覆盖，另保存v1编码。</td>
+<td>D003、D128、C001、C006、C007、C071、C078</td>
+</tr>
+<tr>
+<td>感谢、供给交易和虚构段子不被12功能覆盖</td>
+<td>新增3个明确行为/开放残余；开发回查阳性仍0，标低支持、不承诺可自动识别。</td>
+<td>C007、C037、C075、C006、C030、C044、C080</td>
+</tr>
+<tr>
+<td>谐音愿望和梦中体验易误推实际状态</td>
+<td>撤C006未来意愿、C030身体体验；添加具体其他行为并清理已解决的不确定项。</td>
+<td>C006、C030、C044、C080</td>
+</tr>
+<tr>
+<td>领域/行为与真实事实必须分开</td>
+<td>内容对象允许虚构/否定；不据此推断实际行动、疾病、人格、关系或支持。</td>
+<td>C030、C044、C048、C078、C080</td>
+</tr>
+</tbody>
+</table>
+<p>开发最初保留15个内容叶，校准补入消费交易与居住装修两叶，合计17叶；表达行为从12类补至15类，新增感谢、商品服务供给与交易告知、其他可辨识表达行为。新增三行为在160条开发正文回查中仍为0，校准分别为2、1、4帖；不得把合成例、校准例或后续样本混写成开发阳性。</p>
+<p>这些变更说明草案曾有遗漏，修订记录使其可追溯；它们不证明遗漏已经穷尽，也不证明稀有类别适合自动化或回归。</p>
+<h2>12. 样本、留出检验和结论边界</h2>
+<p>按作者分开开发、校准和留出，种子为<code>2026102901</code>，角色分配不使用互动结果。来源总计9532帖，其中清理正文非空5414帖；非空也不自动等于语义足够。</p>
+<table>
+<thead>
+<tr>
+<th>角色池</th>
+<th>作者数</th>
+<th>帖数</th>
+<th>非空正文帖数</th>
+<th>本轮实际材料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>calibration</td>
+<td>20</td>
+<td>1591</td>
+<td>1006</td>
+<td>校准包80帖／14作者</td>
+</tr>
+<tr>
+<td>development</td>
+<td>60</td>
+<td>6446</td>
+<td>3353</td>
+<td>开发包160帖／55作者</td>
+</tr>
+<tr>
+<td>holdout</td>
+<td>20</td>
+<td>1495</td>
+<td>1055</td>
+<td>冻结快照记计划160帖、当时未释放；当前状态见验证报告</td>
+</tr>
+</tbody>
+</table>
+<p>另有12条观察状态控制材料、涉及10名作者，用于检查无可读正文等处理；它们不能混作开发或校准类别阳性。开发发现有意增加作者与文本长度的多样性，校准和留出也有作者及模板隔离条件，因此这些包不代表全体帖子分布。不能将开发61/160之类数字解释成总体运动帖占比。</p>
+<p><strong>原型范围。</strong> 本轮原型只使用160条开发与80条校准材料，6个内容父组槽加15个行为槽合计21槽，其中14槽进入模型支持范围，7槽因阳性不足保留为人工候选。原型训练支持、人工候选保留与效度验证是三件不同的事；不能把存在标签等同于已训练成功，也不能把训练完成等同于留出有效。此原型范围来自项目交付说明，不用于修改四份冻结来源。</p>
+<p><strong>验证状态与进度口径。</strong> 开发阶段每轴由一个AI任务编码，不是人工双人编码。本手册按开发和校准后的冻结定义编制，未使用留出正文、留出标注或预测生成手册；四源中未释放的表述只指冻结时快照。同基座AI、不同上下文盲标属于暂时筛查，AI检验当前结果见《分类测量重建_实证依据与验证报告》，人审尚未完成。一致率、κ或F1只说明给定样本、规则和模型条件下的一致性或可重复性，不能替代独立人工效标。共享模型可能共同误判。</p>
+<p><strong>后续应报告什么。</strong> 保留规则版本与输入哈希，报告各标签支持数、每类混淆和分歧、缺失及不确定的处理；稀疏类单独说明。另行完成独立人工盲标、裁决与外部效度工作后，才据实际证据讨论人类可解释性与构念效度。在此之前，不宣称当前分类已经证明真实心理、人格或社会支持，也不提出AI验证过的真实主题互动效果结论。</p>
+<p>点赞或回归显著性不能用于反选类别数、名称、词项、阈值或规则；父组用于展示与筛查，不预设组内叶对点赞的关系相同。</p>
+<h2>13. 文献方法依据与不可迁移内容</h2>
+<p>本节依据项目指定文献记录整理。双轴是本项目为区分内容与行为所作的工作设计，不声称是任何一篇论文中已经验证的标准分类。下面五项原研究或方法原文提供的是方法与概念边界，不共同构成当前Keep标签的外部验证。</p>
+<h3>13.1 kalinowski2023_bgr</h3>
+<p>2023，Jolaade Kalinowski、Christie Idiong、Loneke Blackman-Carr等。<a href="https://formative.jmir.org/2023/1/e43825">Leveraging the Black Girls Run Web-Based Community as a Supportive Community for Physical Activity Engagement: Mixed Methods Study</a>。JMIR Formative Research，7:e43825。DOI：<code>10.2196/43825</code>。</p>
+<p><strong>原情境与单位：</strong> 面向美国黑人女性的Black Girls Run全国公共Facebook页面。 397条页面主帖及其互动计数；采集窗口为2021-06-01至2021-12-31。</p>
+<p><strong>记录核对的方法：</strong> 先由研究者阅读形成10主题，前50帖两人独立编码并修订，余347帖双人编码；结果为8类。</p>
+<p><strong>本研究可借鉴：</strong> 归纳编码流程与修订记录。</p>
+<p><strong>不可直接迁移：</strong> 八类名称、比例、互动效果及其文化解释。</p>
+<p><strong>定位与版本：</strong> Methods—Data Analysis；Results 项目记录已核对原文。</p>
+<h3>13.2 wang2015_support</h3>
+<p>2015，Yi-Chia Wang、Robert E Kraut、John M Levine。<a href="https://www.jmir.org/2015/4/e99/">Eliciting and Receiving Online Support: Using Computer-Aided Content Analysis to Examine the Dynamics of Online Social Support</a>。Journal of Medical Internet Research，17(4):e99。DOI：<code>10.2196/jmir.3558</code>。</p>
+<p><strong>原情境与单位：</strong> Breastcancer.org在线乳腺癌支持社区；约9万注册用户。 1562459条消息、68158个讨论串；人工判断样本为1000条开帖及对应首条回复。</p>
+<p><strong>记录核对的方法：</strong> 披露、提问、寻求支持及回复提供支持分别设任务；要求标出语义证据；以专家评分另作比较。</p>
+<p><strong>本研究可借鉴：</strong> 按表达行为分别定义、允许并存，并保留证据片段。</p>
+<p><strong>不可直接迁移：</strong> 支持需求、支持提供、实际获助不能合并；原回归关系不适用于Keep。</p>
+<p><strong>定位与版本：</strong> Methods—Measuring Elicitation Strategies, Perceived Support Needs, and Support Provision；Table 1 项目记录已核对原文。</p>
+<h3>13.3 stragier2018_fitness_support</h3>
+<p>2018，Jeroen Stragier、Peter Mechant、Lieven De Marez等。<a href="https://journals.sagepub.com/doi/10.1177/1090198117703055">Computer-Mediated Social Support for Physical Activity: A Content Analysis</a>。Health Education &amp; Behavior，45(1):124–131。DOI：<code>10.1177/1090198117703055</code>。</p>
+<p><strong>原情境与单位：</strong> Strava活动分享及RunKeeper活动分享到Twitter后的互动。 支持类型在2533条Twitter @回复和783条Strava评论中编码，可多标签；活动及其反馈另有统计。</p>
+<p><strong>记录核对的方法：</strong> 演绎支持编码；两人独立编码有重叠样本，按类计算κ，不一致由未参与编码者裁决。</p>
+<p><strong>本研究可借鉴：</strong> 支持行为应核对发送者、接收者、内容与回复语境。</p>
+<p><strong>不可直接迁移：</strong> 平台间支持率及其分布不能移植；主帖称呼或感谢不能代替支持交换测量。</p>
+<p><strong>定位与版本：</strong> 博士论文印刷页85–98，特别是88页研究目标、91–93页编码方法。 2017年作者机构博士论文第5章Study I同名研究；期刊正文受限。</p>
+<h3>13.4 ying2022_validation</h3>
+<p>2022，Luwei Ying、Jacob M. Montgomery、Brandon M. Stewart。<a href="https://www.cambridge.org/core/journals/political-analysis/article/topics-concepts-and-measurement-a-crowdsourced-procedure-for-validating-topics-as-measures/F28DC93AFD4C8DE63CC235BC6D684257">Topics, Concepts, and Measurement: A Crowdsourced Procedure for Validating Topics as Measures</a>。Political Analysis，30(4):570–589。DOI：<code>10.1017/pan.2021.33</code>。</p>
+<p><strong>原情境与单位：</strong> 第115届美国参议员Facebook页面。 163642篇文档上的结构主题模型及人类词组/标签判断任务。</p>
+<p><strong>记录核对的方法：</strong> 将主题连贯性与概念标签适配分别验证；人工对原文作标签侵入及最佳标签判断。</p>
+<p><strong>本研究可借鉴：</strong> 区分类别发现、命名和测量验证；用近邻类别与原文检验边界。</p>
+<p><strong>不可直接迁移：</strong> 主题模型任务设计不是所有内容分类的强制模板，连贯度或拟合指标不能充当效度。</p>
+<p><strong>定位与版本：</strong> 作者稿§2.1、§3.3、§4、§5；补充材料SI4。 作者主页2021-06-02稿，含补充材料；出版年份按2022卷期。</p>
+<h3>13.5 tausczik2010_liwc</h3>
+<p>2010，Yla R. Tausczik、James W. Pennebaker。<a href="https://journals.sagepub.com/doi/10.1177/0261927X09351676">The Psychological Meaning of Words: LIWC and Computerized Text Analysis Methods</a>。Journal of Language and Social Psychology，29(1):24–54。DOI：<code>10.1177/0261927X09351676</code>。</p>
+<p><strong>原情境与单位：</strong> 方法综述，涵盖多种文本与研究情境；没有单一健身社区样本。 词在文本中匹配类别后的比例；词可属于多个类别。</p>
+<p><strong>记录核对的方法：</strong> 描述词表的独立人类评审和外部验证；说明词计数忽略语境、反讽等局限。</p>
+<p><strong>本研究可借鉴：</strong> 公开词项与规则、独立评审、外部语义验证。</p>
+<p><strong>不可直接迁移：</strong> 英文LIWC类别及其心理关联不能为中文Keep自编词表或主帖功能背书。</p>
+<p><strong>定位与版本：</strong> 印刷页27–30：The Logic and Development of LIWC、The Psychometrics of Word Usage、Caveats concerning computer text analysis。 James W. Pennebaker于2016-04-25上传的原文。</p>
+<h3>13.6 这些依据在本手册中的具体用途</h3>
+<p>归纳阅读、试编码、修订和双人验证的流程借鉴Kalinowski等；把自述、征询、支持提供分开并保存语义证据借鉴Wang等；Stragier等提醒，支持行为应结合发送者、接收者与回复语境，单条主帖的称呼、感谢或高互动量不能证明互助；Ying等区分主题连贯性、概念标签适配与测量验证；Tausczik与Pennebaker说明词表需要独立评审和外部验证，词计数存在语境局限。</p>
+<p>这些研究的类别名称、比例、平台分布、心理关联和回归效果都不迁移为本项目结论。原研究也没有直接评估本轮AI多任务编码；对同基座AI局限的判断是结合测量原则作出的项目推论。</p>
+<h2>附录A. 人工编码表填写提示与可选扩展</h2>
+<p>现有人审CSV的标签部分只有6个内容父组槽和15个表达行为槽，没有逐叶列。下表用概念性字段名说明填写要求；实际按交付CSV的现有列名填写，不要求填写者另造字段。保留证据时需遵守数据管理要求；公开报告可只用合成示例和汇总统计。</p>
+<table>
+<thead>
+<tr>
+<th>建议字段</th>
+<th>填写要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>post_id</td>
+<td>沿用盲包编号；不补查身份</td>
+</tr>
+<tr>
+<td>observation_state</td>
+<td>readable／insufficient／empty三选一</td>
+</tr>
+<tr>
+<td>domain_state</td>
+<td>specified／unspecified／uncertain／unavailable；按本手册区分</td>
+</tr>
+<tr>
+<td>domain_parents</td>
+<td>按固定映射取并集；遗漏对象明确时可加d_other</td>
+</tr>
+<tr>
+<td>functions</td>
+<td>从15行为选择有证据的全部行为；不由内容轴代填</td>
+</tr>
+<tr>
+<td>evidence</td>
+<td>逐标签保存逐字片段；注明父组或行为代码</td>
+</tr>
+<tr>
+<td>note</td>
+<td>歧义、话语归属、梦境/假设/否定、其他的具体缺口、未决理由</td>
+</tr>
+<tr>
+<td>coder / round / codebook_version</td>
+<td>匿名编码者、轮次、冻结版本；独立初判与复核裁决分开保留</td>
+</tr>
+</tbody>
+</table>
+<p><strong>可选逐叶扩展表：</strong> 只有研究者另行建立并明确说明扩展目的时，才增设content_leaves列并记录17叶及逐叶证据。扩展表不属于现有人审CSV，不扩大本轮留出验证范围。</p>
+<p><strong>保存前自查：</strong> 我能为每个阳性标签指出逐字证据吗？我是否保留了否定、假设、梦境与引用框架？我是否从品牌、数字、打卡、加油、问号或称呼补出了原文没有的意义？我是否把无正文或不确定填成了0？d_life、题注和其他是否被当成了剩余槽？我是否把表达误写成了真实身体、心理、人格或支持事实？</p>
+<h2>附录B. 冻结来源与可重复生成</h2>
+<p>生成器仅读取以下四个项目文件，不读帖子正文包、标注或预测。源文件SHA-256用于确认手册对应的输入版本；生成器会先核对码本与校准记录的哈希及计数一致性。</p>
+<table>
+<thead>
+<tr>
+<th>来源文件</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>code/classification_codebook_v1.json</code></td>
+<td><code>a5792bc359f918f405d9c5b45051b1746f7123e1855e068d136d807fd36fdeb4</code></td>
+</tr>
+<tr>
+<td><code>results/classification_rebuild_protocol.json</code></td>
+<td><code>d10356fd2a6a9bdb69b6f14c1d32cbcc4781011d70c2053dd5a8ec3c435a696a</code></td>
+</tr>
+<tr>
+<td><code>results/classification_codebook_calibration.json</code></td>
+<td><code>ba7679da4a5355eccee286f580194c667ec5c640c40ca20d26c59b39fb55128b</code></td>
+</tr>
+<tr>
+<td><code>code/classification_rebuild_literature.json</code></td>
+<td><code>fac5fd9034211e5160bfd5189c5af35203abdc9a92abebaa5b241fd2b03ffc90</code></td>
+</tr>
+</tbody>
+</table>
+<p>生成命令（从<code>projects/group</code>目录运行）：</p>
+<pre><code class="language-bash">python3 code/build_classification_codebook_manual.py
+python3 code/build_classification_codebook_manual.py --check
+python3 code/build_classification_codebook_manual.py --html-output /tmp/classification_codebook_v1.html
+</code></pre>
+<p>默认输出为<code>分类编码手册_v1.md</code>。可选HTML为自包含中文打印版，含A4打印样式，可用浏览器打印为PDF；PDF导出应检查分页、表格、中文字体和长代码，不改变任何分类规则。合成教学例固定保存在生成器中，不会从任何帖子自动抽例。</p></body></html>
