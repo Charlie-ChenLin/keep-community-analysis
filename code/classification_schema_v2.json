@@ -1,0 +1,60 @@
+{
+  "schema_version": "v2.0_candidate",
+  "source": "帖子内容与表达_双轴分类手册_v2.md",
+  "sample_id": "Blind unique id; no author or original id",
+  "observation_state": [
+    "readable",
+    "insufficient"
+  ],
+  "domain_state": [
+    "specified",
+    "unspecified",
+    "uncertain",
+    "unavailable"
+  ],
+  "content_labels": {
+    "C_EXERCISE": "运动与身体活动",
+    "C_BODY": "身体状态、体重与外形",
+    "C_FOOD": "饮食、食物与营养",
+    "C_LIFE": "具体生活、关系与社会文化话题",
+    "C_TOOLS": "工具、服务与记录奖励机制",
+    "C_OTHER": "其他明确内容"
+  },
+  "expression_labels": {
+    "F_UPDATE": "行动、进度或事件记录",
+    "F_EXPERIENCE_EVALUATION": "体验或对象评价",
+    "F_FUTURE": "计划、目标或期待",
+    "F_EXHORT": "动员或自我提醒",
+    "F_GUIDANCE": "信息解释或可执行建议",
+    "F_REFLECTION": "议论、格言或价值主张",
+    "F_GREETING_GRATITUDE": "问候、祝愿或感谢",
+    "F_INVITE_ASK": "联络邀请或向他人征询",
+    "F_CAPTION": "题注或景象描写",
+    "F_SALE": "商品或服务供给告知",
+    "F_OTHER": "其他明确表达"
+  },
+  "record_fields": {
+    "sample_id": "string",
+    "observation_state": "readable|insufficient; absent input handled separately",
+    "domain_state": "specified|unspecified|uncertain|unavailable",
+    "content_labels": "array of content label codes",
+    "expression_labels": "array of expression label codes",
+    "uncertain_content": "array of content codes whose evidence is inconclusive",
+    "uncertain_expression": "array of expression codes whose evidence is inconclusive",
+    "evidence": "object mapping each positive code to one exact substring of text",
+    "other_note": "string describing C_OTHER or F_OTHER; empty otherwise",
+    "note": "string describing uncertainties/context when needed"
+  },
+  "validation_rules": [
+    "positive and uncertain codes disjoint per axis",
+    "readable required for any positive label",
+    "domain_state specified requires >=1 content label",
+    "domain_state unspecified requires no content labels and no domain uncertainties",
+    "domain_state uncertain requires >=1 uncertain_content; other labels may be positive",
+    "domain_state unavailable requires insufficient observation, no content labels",
+    "evidence required for every positive label and must be exact non-empty substring of original text",
+    "C_OTHER or F_OTHER requires nonempty other_note",
+    "raw empty and cleaned empty are separate exclusion statuses outside this JSONL",
+    "blank negative is not unknown; absence can be considered zero only after complete readable examination of label in applicable domain"
+  ]
+}

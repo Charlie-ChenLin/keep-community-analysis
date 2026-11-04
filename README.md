@@ -6,6 +6,8 @@
 
 ## 报告与主要发现
 
+- **正文双轴分类探索版**：[可编辑Word](分析报告_正文双轴分类版_可编辑.docx)、[Markdown](分析报告_正文双轴分类版_可编辑.md)、[分类手册](帖子内容与表达_双轴分类手册_v2.md)。大模型按冻结手册分批阅读4,156条去重正文，回填至5,414条非空正文；内容对象与表达行为允许重叠，原始正文缺失、清理后为空和信息不足分别保留。90条去重正文的第二次盲编码比较及逐类结果见`results/v2_fresh_blind_agreement.json`；同基座AI一致性不是人工验证或准确率。新增逐标签独立回归为探索性关联，原字面、主题和评论结果保留。私有逐帖正文、编码、证据和映射均在被忽略的`validation/classification_rebuild/private/`，不进入公开仓库；汇总及可审计脚本见`results/v2_direct_classification_summary.json`、`code/local_ai_batch_pipeline.py`和`code/analyze_v2_direct.py`。Word中的手工修改不会自动同步回Markdown。
+
 - **当前正式PDF报告（不依赖人工语义分类）**：[完整报告PDF](分析报告_字面特征与互动结构版.pdf)、[Markdown](分析报告_字面特征与互动结构版.md)、[本轮改动清单](本轮修订说明_研究范围与结论边界.md)。主研究聚焦正文长度、固定词项命中、问号、tag与媒体形式及其点赞条件关联，以及评论字面线索、直接回复和用户连接。四条规则改用中性名称“坚持等词项（A）／大家等词项（B）／开心等词项（C）／问号（D）”，词项、程序与既有估计不变。NMF、旧成分回归及新候选分类统一移为探索性附录，不报告真实主题占比或已验证的类别效应。本轮人工语义复核为“未开展”，交付不要求填写A／B表，也不把AI一致性称为人工信度。研究范围见`code/observable_feature_scope.json`与`results/current_study_scope.json`；构建：`make observable-revision PYTHON=/path/to/python`。
 
 - **后续可选的人审资源（当前交付不要求填写）**：[从这里开始](人工编码开始这里.md)、[字段与21个代码速查](docs/human-review/字段与代码速查.md)。两名编码者各自完成同一批160条，使用独立A／B包；包含正文的表格与证据备注模板只私下领取，不上传公开仓库。本地负责人运行`python code/package_human_review.py`生成两份交接ZIP，脚本不会将已填写表重新打包为空表。本轮未开展人工语义复核；这些工具保留给以后选择开展的独立验证，当前无需领取或填写。

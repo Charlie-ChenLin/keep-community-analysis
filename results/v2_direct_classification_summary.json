@@ -1,0 +1,522 @@
+{
+  "status": "exploratory_AI_annotations_not_human_validated",
+  "n_total": 9532,
+  "n_nonempty": 5414,
+  "input_status": {
+    "needs_model": 5414,
+    "raw_body_unavailable": 3984,
+    "cleaned_empty": 134
+  },
+  "observation_state_nonempty": {
+    "readable": 5228,
+    "insufficient": 186
+  },
+  "domain_state_nonempty": {
+    "specified": 3353,
+    "unspecified": 1645,
+    "uncertain": 230,
+    "unavailable": 186
+  },
+  "coverage_comparison": {
+    "population": "cleaned nonempty posts",
+    "old_no_literal_match": 3891,
+    "old_at_least_one_literal_match": 1523,
+    "ai_at_least_one_content": 3371,
+    "ai_at_least_one_expression": 5226,
+    "ai_multiple_content": 878,
+    "ai_multiple_expression": 1304,
+    "ai_any_content_or_expression": 5226,
+    "ai_no_positive_content_or_expression": 188,
+    "old_missed_with_ai_any": 3709,
+    "old_missed_with_ai_content": 2450,
+    "old_missed_with_ai_expression": 3709,
+    "old_missed_without_ai_any": 182,
+    "note": "AI-positive includes either axis; its coverage is not semantic accuracy or gold validation."
+  },
+  "ai_codebook_sha256": "63afaa23ac0d08ee28fe20ed28e8b29d88552b5775d2a441a3ff11c2904dd260",
+  "descriptive": {
+    "content": [
+      {
+        "code": "C_EXERCISE",
+        "label": "运动与身体活动",
+        "post_count": 1280,
+        "uncertain_count": 225
+      },
+      {
+        "code": "C_BODY",
+        "label": "身体状态、体重与外形",
+        "post_count": 885,
+        "uncertain_count": 27
+      },
+      {
+        "code": "C_FOOD",
+        "label": "饮食、食物与营养",
+        "post_count": 599,
+        "uncertain_count": 15
+      },
+      {
+        "code": "C_LIFE",
+        "label": "具体生活、关系与社会文化话题",
+        "post_count": 1568,
+        "uncertain_count": 16
+      },
+      {
+        "code": "C_TOOLS",
+        "label": "工具、服务与记录奖励机制",
+        "post_count": 93,
+        "uncertain_count": 11
+      },
+      {
+        "code": "C_OTHER",
+        "label": "其他明确内容",
+        "post_count": 31,
+        "uncertain_count": 2
+      }
+    ],
+    "expression": [
+      {
+        "code": "F_UPDATE",
+        "label": "行动、进度或事件记录",
+        "post_count": 1675,
+        "uncertain_count": 5
+      },
+      {
+        "code": "F_EXPERIENCE_EVALUATION",
+        "label": "体验或对象评价",
+        "post_count": 1323,
+        "uncertain_count": 0
+      },
+      {
+        "code": "F_FUTURE",
+        "label": "计划、目标或期待",
+        "post_count": 409,
+        "uncertain_count": 14
+      },
+      {
+        "code": "F_EXHORT",
+        "label": "动员或自我提醒",
+        "post_count": 823,
+        "uncertain_count": 0
+      },
+      {
+        "code": "F_GUIDANCE",
+        "label": "信息解释或可执行建议",
+        "post_count": 149,
+        "uncertain_count": 1
+      },
+      {
+        "code": "F_REFLECTION",
+        "label": "议论、格言或价值主张",
+        "post_count": 814,
+        "uncertain_count": 0
+      },
+      {
+        "code": "F_GREETING_GRATITUDE",
+        "label": "问候、祝愿或感谢",
+        "post_count": 676,
+        "uncertain_count": 1
+      },
+      {
+        "code": "F_INVITE_ASK",
+        "label": "联络邀请或向他人征询",
+        "post_count": 60,
+        "uncertain_count": 30
+      },
+      {
+        "code": "F_CAPTION",
+        "label": "题注或景象描写",
+        "post_count": 826,
+        "uncertain_count": 0
+      },
+      {
+        "code": "F_SALE",
+        "label": "商品或服务供给告知",
+        "post_count": 2,
+        "uncertain_count": 0
+      },
+      {
+        "code": "F_OTHER",
+        "label": "其他明确表达",
+        "post_count": 24,
+        "uncertain_count": 0
+      }
+    ]
+  },
+  "regression": {
+    "content": {
+      "population": "readable and domain explicitly specified",
+      "complete_case_n": 3302,
+      "n_authors": 90,
+      "support_thresholds": {
+        "positive_and_negative": 40,
+        "authors_within_variation": 10
+      },
+      "support": [
+        {
+          "code": "C_EXERCISE",
+          "label": "运动与身体活动",
+          "positive_posts": 1275,
+          "negative_posts": 2027,
+          "authors_within_variation": 73,
+          "included": true
+        },
+        {
+          "code": "C_BODY",
+          "label": "身体状态、体重与外形",
+          "positive_posts": 844,
+          "negative_posts": 2458,
+          "authors_within_variation": 70,
+          "included": true
+        },
+        {
+          "code": "C_FOOD",
+          "label": "饮食、食物与营养",
+          "positive_posts": 591,
+          "negative_posts": 2711,
+          "authors_within_variation": 53,
+          "included": true
+        },
+        {
+          "code": "C_LIFE",
+          "label": "具体生活、关系与社会文化话题",
+          "positive_posts": 1546,
+          "negative_posts": 1756,
+          "authors_within_variation": 72,
+          "included": true
+        },
+        {
+          "code": "C_TOOLS",
+          "label": "工具、服务与记录奖励机制",
+          "positive_posts": 90,
+          "negative_posts": 3212,
+          "authors_within_variation": 36,
+          "included": true
+        },
+        {
+          "code": "C_OTHER",
+          "label": "其他明确内容",
+          "positive_posts": 29,
+          "negative_posts": 3273,
+          "authors_within_variation": 15,
+          "included": false
+        }
+      ],
+      "coefficients": [
+        {
+          "code": "C_EXERCISE",
+          "label": "运动与身体活动",
+          "beta": 0.009296988664860388,
+          "se_cluster": 0.04517252690682336,
+          "ci_low": -0.08045986010187198,
+          "ci_high": 0.09905383743159274,
+          "p": 0.8374088400709885,
+          "n_positive": 1275,
+          "n_without_label": 2027,
+          "design_rank": 171,
+          "design_columns": 171,
+          "q_bh_within_family": 0.8374088400709885
+        },
+        {
+          "code": "C_BODY",
+          "label": "身体状态、体重与外形",
+          "beta": 0.057881907708842266,
+          "se_cluster": 0.03600702795938274,
+          "ci_low": -0.013663289878978337,
+          "ci_high": 0.12942710529666288,
+          "p": 0.11148308908765543,
+          "n_positive": 844,
+          "n_without_label": 2458,
+          "design_rank": 171,
+          "design_columns": 171,
+          "q_bh_within_family": 0.5118128505961188
+        },
+        {
+          "code": "C_FOOD",
+          "label": "饮食、食物与营养",
+          "beta": 0.008349424972508046,
+          "se_cluster": 0.037957361786432026,
+          "ci_low": -0.06707104438658607,
+          "ci_high": 0.08376989433160215,
+          "p": 0.826399426836263,
+          "n_positive": 591,
+          "n_without_label": 2711,
+          "design_rank": 171,
+          "design_columns": 171,
+          "q_bh_within_family": 0.8374088400709885
+        },
+        {
+          "code": "C_LIFE",
+          "label": "具体生活、关系与社会文化话题",
+          "beta": 0.016948587102309638,
+          "se_cluster": 0.03574757854258078,
+          "ci_low": -0.054081090020726155,
+          "ci_high": 0.08797826422534542,
+          "p": 0.6365765600097366,
+          "n_positive": 1546,
+          "n_without_label": 1756,
+          "design_rank": 171,
+          "design_columns": 171,
+          "q_bh_within_family": 0.8374088400709885
+        },
+        {
+          "code": "C_TOOLS",
+          "label": "工具、服务与记录奖励机制",
+          "beta": -0.15692646874204383,
+          "se_cluster": 0.12283241280535834,
+          "ci_low": -0.4009918565952534,
+          "ci_high": 0.08713891911116572,
+          "p": 0.20472514023844754,
+          "n_positive": 90,
+          "n_without_label": 3212,
+          "design_rank": 171,
+          "design_columns": 171,
+          "q_bh_within_family": 0.5118128505961188
+        }
+      ],
+      "status": "estimated_exploratory",
+      "n": 3302,
+      "skipped": [],
+      "model_structure": "one separate model per label; other eligible labels may overlap",
+      "qualification": "Author-clustered SE; q correction only within this family; not causal or human validated"
+    },
+    "expression": {
+      "population": "readable text",
+      "complete_case_n": 5178,
+      "n_authors": 95,
+      "support_thresholds": {
+        "positive_and_negative": 40,
+        "authors_within_variation": 10
+      },
+      "support": [
+        {
+          "code": "F_UPDATE",
+          "label": "行动、进度或事件记录",
+          "positive_posts": 1665,
+          "negative_posts": 3513,
+          "authors_within_variation": 84,
+          "included": true
+        },
+        {
+          "code": "F_EXPERIENCE_EVALUATION",
+          "label": "体验或对象评价",
+          "positive_posts": 1303,
+          "negative_posts": 3875,
+          "authors_within_variation": 82,
+          "included": true
+        },
+        {
+          "code": "F_FUTURE",
+          "label": "计划、目标或期待",
+          "positive_posts": 401,
+          "negative_posts": 4777,
+          "authors_within_variation": 60,
+          "included": true
+        },
+        {
+          "code": "F_EXHORT",
+          "label": "动员或自我提醒",
+          "positive_posts": 819,
+          "negative_posts": 4359,
+          "authors_within_variation": 79,
+          "included": true
+        },
+        {
+          "code": "F_GUIDANCE",
+          "label": "信息解释或可执行建议",
+          "positive_posts": 147,
+          "negative_posts": 5031,
+          "authors_within_variation": 31,
+          "included": true
+        },
+        {
+          "code": "F_REFLECTION",
+          "label": "议论、格言或价值主张",
+          "positive_posts": 814,
+          "negative_posts": 4364,
+          "authors_within_variation": 61,
+          "included": true
+        },
+        {
+          "code": "F_GREETING_GRATITUDE",
+          "label": "问候、祝愿或感谢",
+          "positive_posts": 675,
+          "negative_posts": 4503,
+          "authors_within_variation": 58,
+          "included": true
+        },
+        {
+          "code": "F_INVITE_ASK",
+          "label": "联络邀请或向他人征询",
+          "positive_posts": 59,
+          "negative_posts": 5119,
+          "authors_within_variation": 22,
+          "included": true
+        },
+        {
+          "code": "F_CAPTION",
+          "label": "题注或景象描写",
+          "positive_posts": 818,
+          "negative_posts": 4360,
+          "authors_within_variation": 59,
+          "included": true
+        },
+        {
+          "code": "F_SALE",
+          "label": "商品或服务供给告知",
+          "positive_posts": 2,
+          "negative_posts": 5176,
+          "authors_within_variation": 1,
+          "included": false
+        },
+        {
+          "code": "F_OTHER",
+          "label": "其他明确表达",
+          "positive_posts": 15,
+          "negative_posts": 5163,
+          "authors_within_variation": 10,
+          "included": false
+        }
+      ],
+      "coefficients": [
+        {
+          "code": "F_UPDATE",
+          "label": "行动、进度或事件记录",
+          "beta": 0.0285418163561103,
+          "se_cluster": 0.03734337410799896,
+          "ci_low": -0.04560432833371602,
+          "ci_high": 0.10268796104593661,
+          "p": 0.44659847139721565,
+          "n_positive": 1665,
+          "n_without_label": 3513,
+          "design_rank": 177,
+          "design_columns": 177,
+          "q_bh_within_family": 0.6698977070958235
+        },
+        {
+          "code": "F_EXPERIENCE_EVALUATION",
+          "label": "体验或对象评价",
+          "beta": -0.022118358071342777,
+          "se_cluster": 0.025180352855387216,
+          "ci_low": -0.07211453894018677,
+          "ci_high": 0.027877822797501214,
+          "p": 0.3819678382947713,
+          "n_positive": 1303,
+          "n_without_label": 3875,
+          "design_rank": 177,
+          "design_columns": 177,
+          "q_bh_within_family": 0.6698977070958235
+        },
+        {
+          "code": "F_FUTURE",
+          "label": "计划、目标或期待",
+          "beta": 0.049013022958313134,
+          "se_cluster": 0.05117582919780491,
+          "ci_low": -0.05259778557088992,
+          "ci_high": 0.15062383148751618,
+          "p": 0.3406518503028988,
+          "n_positive": 401,
+          "n_without_label": 4777,
+          "design_rank": 177,
+          "design_columns": 177,
+          "q_bh_within_family": 0.6698977070958235
+        },
+        {
+          "code": "F_EXHORT",
+          "label": "动员或自我提醒",
+          "beta": 0.11688507987403643,
+          "se_cluster": 0.05415145080791219,
+          "ci_low": 0.009366104883840529,
+          "ci_high": 0.22440405486423232,
+          "p": 0.033437296703599885,
+          "n_positive": 819,
+          "n_without_label": 4359,
+          "design_rank": 177,
+          "design_columns": 177,
+          "q_bh_within_family": 0.300935670332399
+        },
+        {
+          "code": "F_GUIDANCE",
+          "label": "信息解释或可执行建议",
+          "beta": -0.1265280357688579,
+          "se_cluster": 0.11605516251736167,
+          "ci_low": -0.35695828149671793,
+          "ci_high": 0.10390220995900212,
+          "p": 0.27839413600875257,
+          "n_positive": 147,
+          "n_without_label": 5031,
+          "design_rank": 177,
+          "design_columns": 177,
+          "q_bh_within_family": 0.6698977070958235
+        },
+        {
+          "code": "F_REFLECTION",
+          "label": "议论、格言或价值主张",
+          "beta": -0.012896657612031962,
+          "se_cluster": 0.04280049206795333,
+          "ci_low": -0.09787803793637893,
+          "ci_high": 0.07208472271231502,
+          "p": 0.7638358038426626,
+          "n_positive": 814,
+          "n_without_label": 4364,
+          "design_rank": 177,
+          "design_columns": 177,
+          "q_bh_within_family": 0.8593152793229955
+        },
+        {
+          "code": "F_GREETING_GRATITUDE",
+          "label": "问候、祝愿或感谢",
+          "beta": -0.04773610736105,
+          "se_cluster": 0.04570101102597973,
+          "ci_low": -0.1384765360701369,
+          "ci_high": 0.043004321348036896,
+          "p": 0.2989186717941034,
+          "n_positive": 675,
+          "n_without_label": 4503,
+          "design_rank": 177,
+          "design_columns": 177,
+          "q_bh_within_family": 0.6698977070958235
+        },
+        {
+          "code": "F_INVITE_ASK",
+          "label": "联络邀请或向他人征询",
+          "beta": -0.052996176479300015,
+          "se_cluster": 0.12245703598449548,
+          "ci_low": -0.29613749204801804,
+          "ci_high": 0.190145139089418,
+          "p": 0.6661705608435415,
+          "n_positive": 59,
+          "n_without_label": 5119,
+          "design_rank": 177,
+          "design_columns": 177,
+          "q_bh_within_family": 0.8565050067988391
+        },
+        {
+          "code": "F_CAPTION",
+          "label": "题注或景象描写",
+          "beta": 0.010265374844226993,
+          "se_cluster": 0.0601406847040304,
+          "ci_low": -0.10914536444553367,
+          "ci_high": 0.12967611413398766,
+          "p": 0.8648348969379458,
+          "n_positive": 818,
+          "n_without_label": 4360,
+          "design_rank": 177,
+          "design_columns": 177,
+          "q_bh_within_family": 0.8648348969379458
+        }
+      ],
+      "status": "estimated_exploratory",
+      "n": 5178,
+      "skipped": [],
+      "model_structure": "one separate model per label; other eligible labels may overlap",
+      "qualification": "Author-clustered SE; q correction only within this family; not causal or human validated"
+    }
+  },
+  "limitations": [
+    "Single-pass AI-assisted annotations; not human-verified true labels.",
+    "No claim that assigned or unassigned labels are error-free.",
+    "Only cleaned text is classified; content in images and video is unobserved.",
+    "Multi-label counts can overlap and do not add to the sample size.",
+    "Regression associations are observational and sensitive to the selected observable population."
+  ]
+}

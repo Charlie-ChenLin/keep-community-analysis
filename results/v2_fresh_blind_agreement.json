@@ -1,0 +1,223 @@
+{
+  "n": 90,
+  "basis": "90 unique cleaned texts; uniformly sampled after excluding previous 400 and earlier rule-review records",
+  "caveat": "Same-base AI contexts; not independent human review, correctness, accuracy, or a post-weighted population estimate. For per-label comparisons, unspecified means no explicit label, not that a semantic topic is truly absent; explicitly uncertain and nonreadable cases are excluded.",
+  "state_agreement": {
+    "observation_state": 90,
+    "domain_state": 72
+  },
+  "positive_label_set_agreement": {
+    "content": 68,
+    "expression": 63
+  },
+  "strict_agreement": {
+    "content": 62,
+    "expression": 61
+  },
+  "per_label": [
+    {
+      "axis": "content",
+      "code": "C_EXERCISE",
+      "label": "运动与身体活动",
+      "both_positive": 23,
+      "first_only": 1,
+      "second_only": 0,
+      "both_negative": 56,
+      "excluded": 10,
+      "positive_agreement": 0.9787234042553191,
+      "low_support": false
+    },
+    {
+      "axis": "content",
+      "code": "C_BODY",
+      "label": "身体状态、体重与外形",
+      "both_positive": 17,
+      "first_only": 3,
+      "second_only": 1,
+      "both_negative": 66,
+      "excluded": 3,
+      "positive_agreement": 0.8947368421052632,
+      "low_support": false
+    },
+    {
+      "axis": "content",
+      "code": "C_FOOD",
+      "label": "饮食、食物与营养",
+      "both_positive": 12,
+      "first_only": 0,
+      "second_only": 2,
+      "both_negative": 75,
+      "excluded": 1,
+      "positive_agreement": 0.9230769230769231,
+      "low_support": false
+    },
+    {
+      "axis": "content",
+      "code": "C_LIFE",
+      "label": "具体生活、关系与社会文化话题",
+      "both_positive": 33,
+      "first_only": 2,
+      "second_only": 8,
+      "both_negative": 43,
+      "excluded": 4,
+      "positive_agreement": 0.868421052631579,
+      "low_support": false
+    },
+    {
+      "axis": "content",
+      "code": "C_TOOLS",
+      "label": "工具、服务与记录奖励机制",
+      "both_positive": 1,
+      "first_only": 2,
+      "second_only": 0,
+      "both_negative": 86,
+      "excluded": 1,
+      "positive_agreement": 0.5,
+      "low_support": true
+    },
+    {
+      "axis": "content",
+      "code": "C_OTHER",
+      "label": "其他明确内容",
+      "both_positive": 0,
+      "first_only": 0,
+      "second_only": 0,
+      "both_negative": 89,
+      "excluded": 1,
+      "positive_agreement": null,
+      "low_support": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_UPDATE",
+      "label": "行动、进度或事件记录",
+      "both_positive": 28,
+      "first_only": 6,
+      "second_only": 6,
+      "both_negative": 47,
+      "excluded": 3,
+      "positive_agreement": 0.8235294117647058,
+      "low_support": false
+    },
+    {
+      "axis": "expression",
+      "code": "F_EXPERIENCE_EVALUATION",
+      "label": "体验或对象评价",
+      "both_positive": 37,
+      "first_only": 1,
+      "second_only": 4,
+      "both_negative": 47,
+      "excluded": 1,
+      "positive_agreement": 0.9367088607594937,
+      "low_support": false
+    },
+    {
+      "axis": "expression",
+      "code": "F_FUTURE",
+      "label": "计划、目标或期待",
+      "both_positive": 4,
+      "first_only": 0,
+      "second_only": 4,
+      "both_negative": 79,
+      "excluded": 3,
+      "positive_agreement": 0.6666666666666666,
+      "low_support": false
+    },
+    {
+      "axis": "expression",
+      "code": "F_EXHORT",
+      "label": "动员或自我提醒",
+      "both_positive": 11,
+      "first_only": 4,
+      "second_only": 1,
+      "both_negative": 71,
+      "excluded": 3,
+      "positive_agreement": 0.8148148148148148,
+      "low_support": false
+    },
+    {
+      "axis": "expression",
+      "code": "F_GUIDANCE",
+      "label": "信息解释或可执行建议",
+      "both_positive": 1,
+      "first_only": 0,
+      "second_only": 3,
+      "both_negative": 84,
+      "excluded": 2,
+      "positive_agreement": 0.4,
+      "low_support": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_REFLECTION",
+      "label": "议论、格言或价值主张",
+      "both_positive": 16,
+      "first_only": 2,
+      "second_only": 0,
+      "both_negative": 70,
+      "excluded": 2,
+      "positive_agreement": 0.9411764705882353,
+      "low_support": false
+    },
+    {
+      "axis": "expression",
+      "code": "F_GREETING_GRATITUDE",
+      "label": "问候、祝愿或感谢",
+      "both_positive": 8,
+      "first_only": 0,
+      "second_only": 0,
+      "both_negative": 81,
+      "excluded": 1,
+      "positive_agreement": 1.0,
+      "low_support": false
+    },
+    {
+      "axis": "expression",
+      "code": "F_INVITE_ASK",
+      "label": "联络邀请或向他人征询",
+      "both_positive": 0,
+      "first_only": 0,
+      "second_only": 0,
+      "both_negative": 89,
+      "excluded": 1,
+      "positive_agreement": null,
+      "low_support": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_CAPTION",
+      "label": "题注或景象描写",
+      "both_positive": 8,
+      "first_only": 3,
+      "second_only": 5,
+      "both_negative": 73,
+      "excluded": 1,
+      "positive_agreement": 0.6666666666666666,
+      "low_support": false
+    },
+    {
+      "axis": "expression",
+      "code": "F_SALE",
+      "label": "商品或服务供给告知",
+      "both_positive": 0,
+      "first_only": 0,
+      "second_only": 0,
+      "both_negative": 89,
+      "excluded": 1,
+      "positive_agreement": null,
+      "low_support": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_OTHER",
+      "label": "其他明确表达",
+      "both_positive": 0,
+      "first_only": 0,
+      "second_only": 0,
+      "both_negative": 89,
+      "excluded": 1,
+      "positive_agreement": null,
+      "low_support": true
+    }
+  ]
+}
