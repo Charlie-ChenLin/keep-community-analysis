@@ -1,0 +1,819 @@
+{
+  "status": "exploratory_unsupervised_not_human_validated",
+  "seed": 20261104,
+  "n_nonempty_posts": 5414,
+  "n_unique_texts": 4156,
+  "fit_unit": "Exact unique cleaned text; fitted without likes, author labels or historical semantic labels.",
+  "vectorization": {
+    "analyzer": "character",
+    "ngram_range": [
+      1,
+      3
+    ],
+    "min_df": 2,
+    "max_df": 0.98,
+    "max_features": 20000,
+    "vocabulary_size": 20000,
+    "lexical_preprocessing": "Keep Chinese characters, ASCII letters and digits; create within-span 1-3 character ngrams, no whitespace or cross-span tokens.",
+    "nonzero_unique": 4099,
+    "nonzero_posts": 5273,
+    "nonzero_post_fraction": 0.9739564093091984,
+    "raw_character_vector_nonzero_posts": 5411,
+    "raw_character_note": "Raw characters include punctuation and symbols; representation coverage is not semantic interpretability.",
+    "zero_lexical_character_posts": 141,
+    "positive_lexical_chars_but_zero_vector_posts": 0,
+    "length_strata": {
+      "zero_lexical_chars": {
+        "posts": 141,
+        "with_nonzero_lexical_vector": 0
+      },
+      "one_to_four_chars": {
+        "posts": 1536,
+        "with_nonzero_lexical_vector": 1536
+      },
+      "five_to_nineteen_chars": {
+        "posts": 2278,
+        "with_nonzero_lexical_vector": 2278
+      },
+      "twenty_plus_chars": {
+        "posts": 1459,
+        "with_nonzero_lexical_vector": 1459
+      }
+    }
+  },
+  "nmf": {
+    "5": {
+      "components": 5,
+      "iterations": 18,
+      "convergence_warning": false,
+      "relative_frobenius_reconstruction_error": 0.975374880175529,
+      "nonzero_weight_posts": 5273,
+      "median_max_normalized_weight_posts": 0.9438740675442654,
+      "post_fraction_max_weight_below_0_5": 0.018205954864403566,
+      "max_component_cosine_similarity": 0.0875976637986037,
+      "median_component_cosine_similarity": 0.04939433193261335,
+      "dominant_component_diagnostics": [
+        {
+          "component": 0,
+          "dominant_posts": 3931,
+          "authors": 93,
+          "largest_author_share": 0.10379038412617654
+        },
+        {
+          "component": 1,
+          "dominant_posts": 551,
+          "authors": 46,
+          "largest_author_share": 0.3448275862068966
+        },
+        {
+          "component": 2,
+          "dominant_posts": 361,
+          "authors": 39,
+          "largest_author_share": 0.33518005540166207
+        },
+        {
+          "component": 3,
+          "dominant_posts": 47,
+          "authors": 11,
+          "largest_author_share": 0.425531914893617
+        },
+        {
+          "component": 4,
+          "dominant_posts": 383,
+          "authors": 44,
+          "largest_author_share": 0.1618798955613577
+        }
+      ],
+      "reference_component_for_vif": 0,
+      "feature_only_vif_drop_reference": {
+        "status": "computed",
+        "min": 1.0069901481947328,
+        "max": 1.0425013635064815
+      },
+      "composition_note": "Nonzero component contributions normalized to sum one; intercept plus all components is rank deficient.",
+      "interpretation": "Relative numerical character-component contributions, not calibrated semantic membership probabilities."
+    },
+    "8": {
+      "components": 8,
+      "iterations": 25,
+      "convergence_warning": false,
+      "relative_frobenius_reconstruction_error": 0.966871254685724,
+      "nonzero_weight_posts": 5273,
+      "median_max_normalized_weight_posts": 0.9132664575000755,
+      "post_fraction_max_weight_below_0_5": 0.0648587142044377,
+      "max_component_cosine_similarity": 0.278857047570174,
+      "median_component_cosine_similarity": 0.02806699783006647,
+      "dominant_component_diagnostics": [
+        {
+          "component": 0,
+          "dominant_posts": 3557,
+          "authors": 92,
+          "largest_author_share": 0.07281416924374473
+        },
+        {
+          "component": 1,
+          "dominant_posts": 135,
+          "authors": 40,
+          "largest_author_share": 0.2740740740740741
+        },
+        {
+          "component": 2,
+          "dominant_posts": 195,
+          "authors": 32,
+          "largest_author_share": 0.46153846153846156
+        },
+        {
+          "component": 3,
+          "dominant_posts": 48,
+          "authors": 12,
+          "largest_author_share": 0.4166666666666667
+        },
+        {
+          "component": 4,
+          "dominant_posts": 407,
+          "authors": 44,
+          "largest_author_share": 0.15233415233415235
+        },
+        {
+          "component": 5,
+          "dominant_posts": 627,
+          "authors": 35,
+          "largest_author_share": 0.543859649122807
+        },
+        {
+          "component": 6,
+          "dominant_posts": 138,
+          "authors": 20,
+          "largest_author_share": 0.42028985507246375
+        },
+        {
+          "component": 7,
+          "dominant_posts": 166,
+          "authors": 21,
+          "largest_author_share": 0.7349397590361446
+        }
+      ],
+      "reference_component_for_vif": 0,
+      "feature_only_vif_drop_reference": {
+        "status": "computed",
+        "min": 1.0101247604778167,
+        "max": 1.0593824929032527
+      },
+      "composition_note": "Nonzero component contributions normalized to sum one; intercept plus all components is rank deficient.",
+      "interpretation": "Relative numerical character-component contributions, not calibrated semantic membership probabilities."
+    },
+    "12": {
+      "components": 12,
+      "iterations": 55,
+      "convergence_warning": false,
+      "relative_frobenius_reconstruction_error": 0.9577452317628327,
+      "nonzero_weight_posts": 5273,
+      "median_max_normalized_weight_posts": 0.7936997678655258,
+      "post_fraction_max_weight_below_0_5": 0.14147544092546938,
+      "max_component_cosine_similarity": 0.28093736220466076,
+      "median_component_cosine_similarity": 0.022108484504748834,
+      "dominant_component_diagnostics": [
+        {
+          "component": 0,
+          "dominant_posts": 2462,
+          "authors": 89,
+          "largest_author_share": 0.10357432981316003
+        },
+        {
+          "component": 1,
+          "dominant_posts": 130,
+          "authors": 42,
+          "largest_author_share": 0.2846153846153846
+        },
+        {
+          "component": 2,
+          "dominant_posts": 199,
+          "authors": 33,
+          "largest_author_share": 0.45226130653266333
+        },
+        {
+          "component": 3,
+          "dominant_posts": 44,
+          "authors": 11,
+          "largest_author_share": 0.38636363636363635
+        },
+        {
+          "component": 4,
+          "dominant_posts": 139,
+          "authors": 25,
+          "largest_author_share": 0.20863309352517986
+        },
+        {
+          "component": 5,
+          "dominant_posts": 496,
+          "authors": 32,
+          "largest_author_share": 0.4939516129032258
+        },
+        {
+          "component": 6,
+          "dominant_posts": 114,
+          "authors": 20,
+          "largest_author_share": 0.49122807017543857
+        },
+        {
+          "component": 7,
+          "dominant_posts": 168,
+          "authors": 20,
+          "largest_author_share": 0.7261904761904762
+        },
+        {
+          "component": 8,
+          "dominant_posts": 72,
+          "authors": 12,
+          "largest_author_share": 0.7083333333333334
+        },
+        {
+          "component": 9,
+          "dominant_posts": 1105,
+          "authors": 81,
+          "largest_author_share": 0.13122171945701358
+        },
+        {
+          "component": 10,
+          "dominant_posts": 138,
+          "authors": 28,
+          "largest_author_share": 0.45652173913043476
+        },
+        {
+          "component": 11,
+          "dominant_posts": 206,
+          "authors": 33,
+          "largest_author_share": 0.1941747572815534
+        }
+      ],
+      "reference_component_for_vif": 0,
+      "feature_only_vif_drop_reference": {
+        "status": "computed",
+        "min": 1.0161084881255944,
+        "max": 1.2506069924530059
+      },
+      "composition_note": "Nonzero component contributions normalized to sum one; intercept plus all components is rank deficient.",
+      "interpretation": "Relative numerical character-component contributions, not calibrated semantic membership probabilities."
+    }
+  },
+  "svd": {
+    "5": {
+      "components": 5,
+      "explained_variance_fraction": 0.03712921122574628,
+      "median_retained_squared_row_norm_unique": 0.015257288504992039,
+      "nonzero_projected_posts": 5273,
+      "feature_only_vif": {
+        "status": "computed",
+        "min": 1.0260180435813817,
+        "max": 1.2660030454095481
+      },
+      "interpretation": "Signed latent coordinates; algebraic compression, not probabilities or validated expression categories."
+    },
+    "8": {
+      "components": 8,
+      "explained_variance_fraction": 0.05392035047729842,
+      "median_retained_squared_row_norm_unique": 0.020593911848241764,
+      "nonzero_projected_posts": 5273,
+      "feature_only_vif": {
+        "status": "computed",
+        "min": 1.0786823716586995,
+        "max": 1.610231623412658
+      },
+      "interpretation": "Signed latent coordinates; algebraic compression, not probabilities or validated expression categories."
+    },
+    "12": {
+      "components": 12,
+      "explained_variance_fraction": 0.07230879461482395,
+      "median_retained_squared_row_norm_unique": 0.027290725613582364,
+      "nonzero_projected_posts": 5273,
+      "feature_only_vif": {
+        "status": "computed",
+        "min": 1.0862393386177993,
+        "max": 1.775451794706624
+      },
+      "interpretation": "Signed latent coordinates; algebraic compression, not probabilities or validated expression categories."
+    }
+  },
+  "kmeans": {
+    "5": {
+      "clusters": 5,
+      "representation": "L2-normalized 12-dimensional SVD of lexical character TF-IDF",
+      "assigned_posts": 5273,
+      "silhouette_cosine_sample_1500": 0.42643294404324,
+      "adjusted_rand_index_between_seeds_unique": 0.9537589466570208,
+      "cluster_diagnostics": [
+        {
+          "cluster": 0,
+          "posts": 1116,
+          "unique_texts": 1011,
+          "authors": 81,
+          "largest_author_share": 0.11738351254480286,
+          "median_lexical_length": 9.0
+        },
+        {
+          "cluster": 1,
+          "posts": 1625,
+          "unique_texts": 1565,
+          "authors": 84,
+          "largest_author_share": 0.15384615384615385,
+          "median_lexical_length": 18.0
+        },
+        {
+          "cluster": 2,
+          "posts": 509,
+          "unique_texts": 372,
+          "authors": 68,
+          "largest_author_share": 0.1100196463654224,
+          "median_lexical_length": 6.0
+        },
+        {
+          "cluster": 3,
+          "posts": 849,
+          "unique_texts": 382,
+          "authors": 59,
+          "largest_author_share": 0.4723203769140165,
+          "median_lexical_length": 4.0
+        },
+        {
+          "cluster": 4,
+          "posts": 1174,
+          "unique_texts": 769,
+          "authors": 81,
+          "largest_author_share": 0.14565587734241908,
+          "median_lexical_length": 11.0
+        }
+      ],
+      "interpretation": "Forced exclusive clusters on nonzero features; assignment coverage does not validate class meaning or exclusivity."
+    },
+    "8": {
+      "clusters": 8,
+      "representation": "L2-normalized 12-dimensional SVD of lexical character TF-IDF",
+      "assigned_posts": 5273,
+      "silhouette_cosine_sample_1500": 0.3936016672670912,
+      "adjusted_rand_index_between_seeds_unique": 0.9450314613995509,
+      "cluster_diagnostics": [
+        {
+          "cluster": 0,
+          "posts": 880,
+          "unique_texts": 867,
+          "authors": 82,
+          "largest_author_share": 0.056818181818181816,
+          "median_lexical_length": 14.0
+        },
+        {
+          "cluster": 1,
+          "posts": 692,
+          "unique_texts": 594,
+          "authors": 70,
+          "largest_author_share": 0.15173410404624277,
+          "median_lexical_length": 7.0
+        },
+        {
+          "cluster": 2,
+          "posts": 346,
+          "unique_texts": 310,
+          "authors": 60,
+          "largest_author_share": 0.1791907514450867,
+          "median_lexical_length": 19.0
+        },
+        {
+          "cluster": 3,
+          "posts": 1209,
+          "unique_texts": 1151,
+          "authors": 75,
+          "largest_author_share": 0.1968569065343259,
+          "median_lexical_length": 18.0
+        },
+        {
+          "cluster": 4,
+          "posts": 449,
+          "unique_texts": 264,
+          "authors": 58,
+          "largest_author_share": 0.16258351893095768,
+          "median_lexical_length": 4.0
+        },
+        {
+          "cluster": 5,
+          "posts": 433,
+          "unique_texts": 308,
+          "authors": 60,
+          "largest_author_share": 0.09930715935334873,
+          "median_lexical_length": 5.0
+        },
+        {
+          "cluster": 6,
+          "posts": 432,
+          "unique_texts": 240,
+          "authors": 44,
+          "largest_author_share": 0.2824074074074074,
+          "median_lexical_length": 11.0
+        },
+        {
+          "cluster": 7,
+          "posts": 832,
+          "unique_texts": 365,
+          "authors": 57,
+          "largest_author_share": 0.4807692307692308,
+          "median_lexical_length": 4.0
+        }
+      ],
+      "interpretation": "Forced exclusive clusters on nonzero features; assignment coverage does not validate class meaning or exclusivity."
+    },
+    "12": {
+      "clusters": 12,
+      "representation": "L2-normalized 12-dimensional SVD of lexical character TF-IDF",
+      "assigned_posts": 5273,
+      "silhouette_cosine_sample_1500": 0.48099109216925484,
+      "adjusted_rand_index_between_seeds_unique": 0.9443501954951893,
+      "cluster_diagnostics": [
+        {
+          "cluster": 0,
+          "posts": 812,
+          "unique_texts": 803,
+          "authors": 79,
+          "largest_author_share": 0.05788177339901478,
+          "median_lexical_length": 15.0
+        },
+        {
+          "cluster": 1,
+          "posts": 257,
+          "unique_texts": 162,
+          "authors": 36,
+          "largest_author_share": 0.35019455252918286,
+          "median_lexical_length": 11.0
+        },
+        {
+          "cluster": 2,
+          "posts": 1179,
+          "unique_texts": 1128,
+          "authors": 75,
+          "largest_author_share": 0.2018659881255301,
+          "median_lexical_length": 19.0
+        },
+        {
+          "cluster": 3,
+          "posts": 329,
+          "unique_texts": 280,
+          "authors": 59,
+          "largest_author_share": 0.0851063829787234,
+          "median_lexical_length": 7.0
+        },
+        {
+          "cluster": 4,
+          "posts": 233,
+          "unique_texts": 197,
+          "authors": 57,
+          "largest_author_share": 0.26609442060085836,
+          "median_lexical_length": 19.0
+        },
+        {
+          "cluster": 5,
+          "posts": 788,
+          "unique_texts": 353,
+          "authors": 57,
+          "largest_author_share": 0.5063451776649747,
+          "median_lexical_length": 4.0
+        },
+        {
+          "cluster": 6,
+          "posts": 213,
+          "unique_texts": 108,
+          "authors": 29,
+          "largest_author_share": 0.5727699530516432,
+          "median_lexical_length": 11.0
+        },
+        {
+          "cluster": 7,
+          "posts": 643,
+          "unique_texts": 558,
+          "authors": 67,
+          "largest_author_share": 0.15863141524105753,
+          "median_lexical_length": 7.0
+        },
+        {
+          "cluster": 8,
+          "posts": 262,
+          "unique_texts": 138,
+          "authors": 38,
+          "largest_author_share": 0.14885496183206107,
+          "median_lexical_length": 2.0
+        },
+        {
+          "cluster": 9,
+          "posts": 79,
+          "unique_texts": 78,
+          "authors": 19,
+          "largest_author_share": 0.2911392405063291,
+          "median_lexical_length": 14.0
+        },
+        {
+          "cluster": 10,
+          "posts": 280,
+          "unique_texts": 131,
+          "authors": 55,
+          "largest_author_share": 0.26071428571428573,
+          "median_lexical_length": 4.0
+        },
+        {
+          "cluster": 11,
+          "posts": 198,
+          "unique_texts": 163,
+          "authors": 39,
+          "largest_author_share": 0.29292929292929293,
+          "median_lexical_length": 7.0
+        }
+      ],
+      "interpretation": "Forced exclusive clusters on nonzero features; assignment coverage does not validate class meaning or exclusivity."
+    }
+  },
+  "input_sha256": {
+    "post_features": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+    "id_map": "14d9c0eff3ebe0fb7695162d5ea31357514f981ba85846d4c71a7a49a9d1812e",
+    "frozen_manifest": "5fef2b3a1cbe5f7e5428440e27cb8db98ea3764f8cea2f1e0ba65f2b32de2a31",
+    "input_batches": {
+      "batch_0001.jsonl": "73c98ce2903c9a40b7f01960951c22bcc6c568a2e3dc2750357e5544f10b57ce",
+      "batch_0002.jsonl": "10dff1cc8e604af7796a788cc3c60e10d560a8b26b49b361b93cf04fe48bfaf7",
+      "batch_0003.jsonl": "cd197f788b8da6af1d7e40fb97cf9686a11a60150f91bb111ad6503350512f33",
+      "batch_0004.jsonl": "8625114d6b5fec1132126348a5dbf64c9dbfca4b3cb64993f2236590f6375258",
+      "batch_0005.jsonl": "f4a1dee2135b422bffd7d3894fe74be53af151dd48b3a9d7650221900aa75c6a",
+      "batch_0006.jsonl": "4b2f3e4124dd05a413571c4d2f0bcdc8c84af509d58e925ff5333554f6d451af",
+      "batch_0007.jsonl": "8628fd72b0e16cd550dacbca018396f39ba6ed6b649e820be2ebb179fe4cd85a",
+      "batch_0008.jsonl": "7b6c79b4f020147de6474b445fdcc18ada1e938bf89c94ad43cc0f253556350c",
+      "batch_0009.jsonl": "dac7cb44e06574e2bcd65ca89b6b045dd541fb9dbee1c539131b39288bd0725b",
+      "batch_0010.jsonl": "03bca0712deb5b290be693e3929a47f2fea49b58bc5148b6ec69aa588f8bc21e",
+      "batch_0011.jsonl": "2e17d3239de83ff4a75b2f6807c1fa390bc8ced416041272fa6ed264c7d6a294",
+      "batch_0012.jsonl": "49fc238e1f193a8d62e8ee2e29a27b8c55afc288ffc35337c055ec4ad7f50279",
+      "batch_0013.jsonl": "50c1f24a7b9a1e3263087e955afd0f57f80386ee5698c89ab2680517631ec9e2",
+      "batch_0014.jsonl": "f0da8c8538607ffee50cad648878c020aad83f218a366ab16fa564cb44a690db",
+      "batch_0015.jsonl": "2c1edb85f60cd23fb08eb8d68bfbcca1313eecece9416bf6a330d3ca5ee93183",
+      "batch_0016.jsonl": "24dcad7efeca69abeaedbe26658298fa266cf912b64951c0a035b8eebde7e21e",
+      "batch_0017.jsonl": "337f678f1fcf9f3f169901c3e8b2ac620e8f0fe9f34349857600a5aa08c29744",
+      "batch_0018.jsonl": "1d8d967d79fadafde04795b1a984b11944134339ca720389e19b0254a913810e",
+      "batch_0019.jsonl": "d611f14c44557cf6e4d161f5ada9e6fea61ada3675bf4d51908dc98810ad0fcb",
+      "batch_0020.jsonl": "44e924ef2eec88bbbacd2ad631b3bb3551a84663002195446df96b840f9851d8",
+      "batch_0021.jsonl": "8aebc04c692925119d5970fe12f49fb605bb69662e46710e0c3cefb3f0373684",
+      "batch_0022.jsonl": "7b8ab046691a690269970b9bae0c75dede47d3505903473d3c5a912fefd851fa",
+      "batch_0023.jsonl": "506c283e76de9102e0a5d404263bd94b863270cc2f200cc35e3bfd27d997eedc",
+      "batch_0024.jsonl": "8fa535296f1054a26d41aabc1696c7c466393bac71a0c02fb4a894def386532d",
+      "batch_0025.jsonl": "d4e22886e957cfd523935a4a4da27dd77cab31c3e45568d08573a4409b618771",
+      "batch_0026.jsonl": "a12c8bde1a32e737060b2b1e5c4aa8059d87d795388ce89bf5b66e529be17c86",
+      "batch_0027.jsonl": "a86dab4834db05e1ba001fc367d18fd60b2b5c9267cb9c9d6c9693de7b6525be",
+      "batch_0028.jsonl": "43455cb37055430a092d9fcdaf5a1f95e76ddd67ff95fac1af552716ed2cc075",
+      "batch_0029.jsonl": "2c61ed0475021c29629f061418e1a936574a3e5a819b5970ab174624a32a90f9",
+      "batch_0030.jsonl": "0b5bc1db1319fbdc7f35abb043501f4ef8851d06d896eaaae995a0d4e4044f3c",
+      "batch_0031.jsonl": "8f484848b98fef4f31a94a00167e056069b7af3e63f4f82d2f79102681c902f5",
+      "batch_0032.jsonl": "54709bab97ccca82416bb1777dab7d9ffd282b098146f0698db6cbf82b21a2e6",
+      "batch_0033.jsonl": "1e7c2437c45556d8e8e8398f63b66479b4565f7eb573a0d19d95ed2a60d0dc17",
+      "batch_0034.jsonl": "cddce328c3ff28d0733687882450370121101b35f673a7cdcc461cf6c137dd7f",
+      "batch_0035.jsonl": "c1d3e3c8bae475cbaff96fb70c2212280b040e8cabccc149bc5f3b673e3eb4e1",
+      "batch_0036.jsonl": "4496a1c66844991fdc10bedb0ee9ddbfc5b044bfef901ce3fe9b37997a29f997",
+      "batch_0037.jsonl": "ff2bb23add54fa95cf8486eeb5adc11ddce441e4ff7717fe6179303a66fa3be6",
+      "batch_0038.jsonl": "a9e5d02fe7b10440a515a0178ba8389d869313b7688b98ed268eb68bc910cf03",
+      "batch_0039.jsonl": "244108f9d84e98f8c3b29cbc9269c3895bbb2561f3062a5524b01e80608cba11",
+      "batch_0040.jsonl": "77c8b271cc5eb70b6b32f6da12770e83739f2df700a5543c7b677d2ac6d8992e",
+      "batch_0041.jsonl": "5ef696489bb9d40d1287f662e5f2b2b9cab62ccebaae75cd15fdbadff5464e3a",
+      "batch_0042.jsonl": "8339ef1eec9a6a93ed19c088aa4e5fa502a6a3fdd5547cf3785686c47380a993",
+      "batch_0043.jsonl": "a67142b9f7296f12876f838739d395940c13dc6888733f73495b002fc2afed67",
+      "batch_0044.jsonl": "d82e479b87ed5e5ff3eb6d86049cf0d737c98090834dbfe3e1c5cd5adcc5441a",
+      "batch_0045.jsonl": "02674f9e6119dd5389511cef5a1766d2b8364620debe31a9b2955dfde45f9efe",
+      "batch_0046.jsonl": "54c8a541efb5e7dd50f3aad8c30e54a9e43c843d931e16701ff4b30b5bf61465",
+      "batch_0047.jsonl": "f3edbb10d708ddca1e18239634c826e10ae96605e143d91e415ee0dbaf7bb8b0",
+      "batch_0048.jsonl": "c6f76e81c150e022f9ed13924f82d14a1340ac6c6bcc7426c36d1b498eb85a79",
+      "batch_0049.jsonl": "54598b7ed8d16507d91f88bed718030ccd1fd181779c5bdb1cda3af42f73164b",
+      "batch_0050.jsonl": "3f55c4628fa02ae15baf77d32cdd42146836606b0d7d7d66c5688970d242ac5c",
+      "batch_0051.jsonl": "70fa9ee7558511ce7a6458757a4d2e31110dde2bf71e52ee692e6e74f7f05fd1",
+      "batch_0052.jsonl": "efbb678a1be4ea15fade5df23735af970ec5f4c183e289f2dee026d47bdb3159",
+      "batch_0053.jsonl": "c4de9c727a8721d6f13f12ad16927b66f34ac326754fb023db8d7168dc84e1ca",
+      "batch_0054.jsonl": "f392e751a7f8c27d75bee8a48e62c720390dd6ac78edd0deb1a3ad37d2a2d47c",
+      "batch_0055.jsonl": "3e43cf419440f858d99db119f9490d66596f9e0612c283a4f03f3c8c73afc7a9",
+      "batch_0056.jsonl": "3034119db9a501a0963c3c166f70f5b807279765a9391cedc0fd0ea2b868d2e9",
+      "batch_0057.jsonl": "9143a618cda74d9a8da261d8db31f3663b8c0d8c36dba3f5e3e17b00c042c8de",
+      "batch_0058.jsonl": "f8189fdc1f82c5ccdb23aa90361b85f339c7b8566143a8ecafb1e662c356bd15",
+      "batch_0059.jsonl": "212c04a7e8ff536fd15dfb8239883989c972de5278f1042c12dfbc83aec37e39",
+      "batch_0060.jsonl": "ca0e0a084eb4f68815b616f31933be564b75faa3c4f0a6613e96c9e179fab905",
+      "batch_0061.jsonl": "141e073dc8d17c1d9c8b81a1a7d745a755c579aef7cd1ae64ed06a5ba64a866d",
+      "batch_0062.jsonl": "a58f063c566cea6f33446d240bf484711666a97485de55b8311019351146bcf6",
+      "batch_0063.jsonl": "87d5dcd4442d8da156f6d1e10c6f8733ce4bd7b453d7c06b4cf4e1d3d530154e",
+      "batch_0064.jsonl": "b888cda291c6a4f0ff19c8d6dea59068ecd5dec962917aecdc83e03b2851878e",
+      "batch_0065.jsonl": "9e2310e4bf4926f3ea428cc9069e88b56ef577a2fece00d2e02dbe3fd1486295",
+      "batch_0066.jsonl": "933e6954e647482c078218a85361339ba5b16d1a2bdb865687cf6fac9b0e0c88",
+      "batch_0067.jsonl": "313f04540631471bef0d4c39827422f030afd683eed968844919f666bf1046d4",
+      "batch_0068.jsonl": "515e9fe9dac2895fc9b81fb9fe0b4b55d46fb140ecac17a77855728a594552c8",
+      "batch_0069.jsonl": "bbc37a1945fc72af5473f5356a97585dc3798af20e2707e99dd164b67c2fc6dd",
+      "batch_0070.jsonl": "c922fb4bc936024eaaf49d853acb31d9db2e66ce1b1fe33debfd9b8f640b5bfb",
+      "batch_0071.jsonl": "7a8edf047fcc92ab76c5bfd90009542358b0652b518fad8c360bcb2d4f976952",
+      "batch_0072.jsonl": "d739a339da5ee8b5cc19bf7d83237b9e98409332c9008bc7e827d39bd3f568df",
+      "batch_0073.jsonl": "b5fecc681a31dd3e73047fc740c23f71e1749446af834d7fdac04fa0828cf5af",
+      "batch_0074.jsonl": "8392c965534fe1dcd403981233822c3c2f43db4c013d0cc8bae3777ce1b693b8",
+      "batch_0075.jsonl": "b635cf6d81f4c10e9e0cf7f8fe238895409bbd152cc086b2f1430f1fb1433c51",
+      "batch_0076.jsonl": "b5fbc6ed3bd4c5d8d0e2be282d7d0be8a445d438cc625bd93f899564c1800163",
+      "batch_0077.jsonl": "f6227638bf2078b30f48c5a2fbe8d16079d846741221cf2007dfe4a0f51814a0",
+      "batch_0078.jsonl": "4fe2caff83ba642ce077190e8a7a5fe09d808d57a288bab582f32f83b800178e",
+      "batch_0079.jsonl": "64c4f9653b11e1c22fa264f7e88db9c240015a7948a267bd669366b87a8abf73",
+      "batch_0080.jsonl": "dcce05d39495c31b6706746f34c78242c903caa30be2d3c58168c9521965841f",
+      "batch_0081.jsonl": "878a26f1231c47e1ffa95d4e63fc4611af42a3b3a9abfa2e3be6f5510d29f1ea",
+      "batch_0082.jsonl": "90a13b68469742912eb1a7bb6524dbd212efb061669bc4ccbf132f912c675de1",
+      "batch_0083.jsonl": "7042e5205960baf86e07eaeb635e82433bdee14eb152a9490836193166a139d1",
+      "batch_0084.jsonl": "6c4bcc5c26302bc134e7f9d6ef93110660cc9c9397638fb46c448c21ca609aee"
+    }
+  },
+  "limits": [
+    "Nonzero vector coverage is neither category accuracy nor semantic validation.",
+    "Character components mix content, wording, templates and style; no human semantic class names are assigned.",
+    "Exact deduplication does not remove near templates or fully balance authors.",
+    "No likes models or p-value-based dimension selection are performed.",
+    "Seed stability is an algorithm diagnostic and does not establish semantic reliability.",
+    "Feature-only VIF does not replace a regression design audit with metadata and author/date effects.",
+    "KMeans seed stability and silhouette are conditional on one fixed normalized 12-dimensional SVD space, not stability to SVD seeds, sampling, or the original character space. L2 normalization can amplify weak text projections."
+  ],
+  "v2_binary_pca": {
+    "source": "v2 ten non-other expression indicators",
+    "label_codes": [
+      "F_UPDATE",
+      "F_EXPERIENCE_EVALUATION",
+      "F_FUTURE",
+      "F_EXHORT",
+      "F_GUIDANCE",
+      "F_REFLECTION",
+      "F_GREETING_GRATITUDE",
+      "F_INVITE_ASK",
+      "F_CAPTION",
+      "F_SALE"
+    ],
+    "n_nonempty_posts": 5414,
+    "n_complete_posts": 5178,
+    "n_complete_unique_texts": 4012,
+    "sample_retention_fraction": 0.9564093091983746,
+    "n_excluded_posts_any_unknown_or_insufficient": 236,
+    "fit_unit": "Exact unique readable texts for which all ten non-other labels are known.",
+    "scaling": "Center and divide each binary variable by its standard deviation on fit unique texts.",
+    "input_sha256": "4460fbaae9a8c08a1b8c29f1abd1d6dc5885e21e1b093d1fe30de60c47701f86",
+    "dimensions": {
+      "3": {
+        "components": 3,
+        "explained_variance_fraction": 0.39233495548661984,
+        "per_component_explained_variance_fraction": [
+          0.15597332786643936,
+          0.12223569879276318,
+          0.1141259288274173
+        ],
+        "coefficient_matrix_codes_in_declared_order": [
+          [
+            0.5459489702955846,
+            0.5428357272150768,
+            0.18825667726276513,
+            -0.2555739588338565,
+            -0.06352018701722754,
+            -0.4658392234596217,
+            -0.14762748268522777,
+            -0.018593980227375476,
+            -0.25016442475036327,
+            -0.027342726574376926
+          ],
+          [
+            -0.17636048696987588,
+            0.04496688825667082,
+            -0.10477871699365934,
+            -0.43338629771764847,
+            -0.06351680120194901,
+            -0.3322175478330575,
+            -0.1382305290631381,
+            0.01266551908310924,
+            0.795750926749518,
+            -0.034382843504242054
+          ],
+          [
+            -0.10609902930231857,
+            -0.007915640158698127,
+            0.007954490641430965,
+            0.009518315308193942,
+            0.7035391502074408,
+            -0.21501348081784766,
+            -0.025326501232037103,
+            0.665140414750722,
+            -0.0653680226789117,
+            0.0014670303088815098
+          ]
+        ],
+        "variance_retained_by_original_label_unique": {
+          "F_UPDATE": 0.5157606908096781,
+          "F_EXPERIENCE_EVALUATION": 0.46215072261346357,
+          "F_FUTURE": 0.0687698019975248,
+          "F_EXHORT": 0.3315697214950891,
+          "F_GUIDANCE": 0.5761107608928996,
+          "F_REFLECTION": 0.5261427964304797,
+          "F_GREETING_GRATITUDE": 0.0580810749891052,
+          "F_INVITE_ASK": 0.5056418842325048,
+          "F_CAPTION": 0.8765085041980405,
+          "F_SALE": 0.0026135972076235525
+        },
+        "max_abs_offdiagonal_correlation_fit_unique": 1.9008737968568383e-15,
+        "max_abs_offdiagonal_correlation_mapped_posts": 0.10915060792525672,
+        "feature_only_vif_mapped_posts": {
+          "status": "computed",
+          "min": 1.0008050216675708,
+          "max": 1.0128178636457486
+        }
+      },
+      "5": {
+        "components": 5,
+        "explained_variance_fraction": 0.6008128291853334,
+        "per_component_explained_variance_fraction": [
+          0.15597332786643936,
+          0.12223569879276318,
+          0.1141259288274173,
+          0.10523601383601872,
+          0.10324185986269481
+        ],
+        "coefficient_matrix_codes_in_declared_order": [
+          [
+            0.5459489702955846,
+            0.5428357272150768,
+            0.18825667726276513,
+            -0.2555739588338565,
+            -0.06352018701722754,
+            -0.4658392234596217,
+            -0.14762748268522777,
+            -0.018593980227375476,
+            -0.25016442475036327,
+            -0.027342726574376926
+          ],
+          [
+            -0.17636048696987588,
+            0.04496688825667082,
+            -0.10477871699365934,
+            -0.43338629771764847,
+            -0.06351680120194901,
+            -0.3322175478330575,
+            -0.1382305290631381,
+            0.01266551908310924,
+            0.795750926749518,
+            -0.034382843504242054
+          ],
+          [
+            -0.10609902930231857,
+            -0.007915640158698127,
+            0.007954490641430965,
+            0.009518315308193942,
+            0.7035391502074408,
+            -0.21501348081784766,
+            -0.025326501232037103,
+            0.665140414750722,
+            -0.0653680226789117,
+            0.0014670303088815098
+          ],
+          [
+            0.030128243377802462,
+            -0.23509975737673772,
+            0.32613732017371083,
+            -0.3109811800348192,
+            -0.09757597133118746,
+            -0.15006755471911778,
+            0.8157679978771588,
+            0.0843502251516654,
+            -0.04451978002498501,
+            -0.18474254590838637
+          ],
+          [
+            -0.05931026377987127,
+            -0.26480831249785636,
+            0.676832354072024,
+            0.37296919244344373,
+            0.008729258808837428,
+            -0.3511329498807478,
+            -0.1587559559977581,
+            -0.14198915174610846,
+            0.1390817163066373,
+            0.3755957283720886
+          ]
+        ],
+        "variance_retained_by_original_label_unique": {
+          "F_UPDATE": 0.5203476762684027,
+          "F_EXPERIENCE_EVALUATION": 0.5927134087502053,
+          "F_FUTURE": 0.6536577301450102,
+          "F_EXHORT": 0.5769583685557154,
+          "F_GUIDANCE": 0.5862090258814165,
+          "F_REFLECTION": 0.677133610402915,
+          "F_GREETING_GRATITUDE": 0.7844235056792597,
+          "F_INVITE_ASK": 0.5339438929924767,
+          "F_CAPTION": 0.8985651136009054,
+          "F_SALE": 0.1841759595771224
+        },
+        "max_abs_offdiagonal_correlation_fit_unique": 3.8348707757177e-15,
+        "max_abs_offdiagonal_correlation_mapped_posts": 0.10915060792525672,
+        "feature_only_vif_mapped_posts": {
+          "status": "computed",
+          "min": 1.0008651300695122,
+          "max": 1.0170795054140007
+        }
+      }
+    },
+    "limits": [
+      "PCA composites do not improve unknown-label coverage or validate the source AI classifications.",
+      "Standardization gives rare binary labels equal total variance and may magnify thinly supported labels.",
+      "PCA components are algebraically orthogonal on fit unique texts; mapped posts and regression controls can alter correlations.",
+      "PCA is not multiple correspondence analysis. No MCA has been computed."
+    ]
+  },
+  "elapsed_seconds": 1.0226027499884367
+}

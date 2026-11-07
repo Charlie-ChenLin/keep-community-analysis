@@ -1,0 +1,445 @@
+{
+  "status": "all_unique_texts_reread_and_structurally_validated_not_human_accuracy",
+  "validated_batches": 84,
+  "required_batches": 84,
+  "validated_unique_texts": 4156,
+  "required_unique_texts": 4156,
+  "complete": true,
+  "n_total_posts": 9532,
+  "n_nonempty_posts": 5414,
+  "n_unique_texts": 4156,
+  "source_states": {
+    "raw_body_unavailable": 3984,
+    "needs_model": 5414,
+    "cleaned_empty": 134
+  },
+  "unique_text_coverage": {
+    "n": 4156,
+    "axes": {
+      "expression": {
+        "any_positive": 3995,
+        "two_or_more_positive": 1573,
+        "all_known": 4043,
+        "all_negative": 55,
+        "no_positive_some_unknown": 106
+      },
+      "topic": {
+        "any_positive": 2922,
+        "two_or_more_positive": 1214,
+        "all_known": 3892,
+        "all_negative": 990,
+        "no_positive_some_unknown": 244
+      },
+      "either": {
+        "any_positive": 4015,
+        "two_or_more_positive": 3095,
+        "all_known": 3878,
+        "all_negative": 37,
+        "no_positive_some_unknown": 104
+      }
+    },
+    "variables": {
+      "T_ACTIVITY": {
+        "negative": 2651,
+        "positive": 1280,
+        "unknown": 225
+      },
+      "T_BODY": {
+        "negative": 2930,
+        "positive": 1004,
+        "unknown": 222
+      },
+      "T_FOOD": {
+        "negative": 3298,
+        "unknown": 218,
+        "positive": 640
+      },
+      "T_LIFE": {
+        "positive": 1314,
+        "negative": 2629,
+        "unknown": 213
+      },
+      "T_TOOLS": {
+        "negative": 3505,
+        "unknown": 221,
+        "positive": 430
+      },
+      "T_OTHER": {
+        "negative": 3931,
+        "unknown": 207,
+        "positive": 18
+      },
+      "S_PRESENT": {
+        "positive": 2226,
+        "negative": 1835,
+        "unknown": 95
+      },
+      "S_EXPERIENCE": {
+        "negative": 3323,
+        "positive": 738,
+        "unknown": 95
+      },
+      "S_APPRAISAL": {
+        "negative": 3255,
+        "unknown": 93,
+        "positive": 808
+      },
+      "S_FUTURE": {
+        "negative": 3604,
+        "positive": 459,
+        "unknown": 93
+      },
+      "S_EXHORT": {
+        "negative": 3524,
+        "positive": 545,
+        "unknown": 87
+      },
+      "S_REFLECTION": {
+        "negative": 3350,
+        "positive": 719,
+        "unknown": 87
+      },
+      "S_GUIDANCE": {
+        "negative": 3796,
+        "unknown": 86,
+        "positive": 274
+      },
+      "S_SOCIAL": {
+        "negative": 3683,
+        "positive": 387,
+        "unknown": 86
+      },
+      "S_REQUEST": {
+        "negative": 4001,
+        "positive": 67,
+        "unknown": 88
+      },
+      "S_OFFER": {
+        "negative": 4067,
+        "unknown": 86,
+        "positive": 3
+      },
+      "S_OTHER": {
+        "negative": 4003,
+        "unknown": 87,
+        "positive": 66
+      }
+    },
+    "attributes_given_parent_positive": {
+      "event_assertion": {
+        "asserted": 1744,
+        "not_asserted": 464,
+        "uncertain": 18
+      },
+      "plan": {
+        "yes": 320,
+        "no": 137,
+        "uncertain": 2
+      },
+      "goal": {
+        "no": 290,
+        "yes": 168,
+        "uncertain": 1
+      },
+      "greeting": {
+        "yes": 364,
+        "no": 23
+      },
+      "thanks": {
+        "no": 361,
+        "yes": 26
+      },
+      "positive_tone": {
+        "no": 554,
+        "yes": 797,
+        "uncertain": 17
+      },
+      "negative_tone": {
+        "yes": 613,
+        "no": 740,
+        "uncertain": 15
+      }
+    },
+    "polarity": {
+      "parent_positive": 1368,
+      "both_attributes_known": 1349,
+      "combination_counts": {
+        "no_positive_negative": 483,
+        "positive_no_negative": 670,
+        "positive_negative": 127,
+        "no_positive_no_negative": 69
+      },
+      "parent_not_applicable": 2691,
+      "parent_unknown": 97
+    },
+    "all_dimensions_and_attributes_complete": 3845
+  },
+  "post_coverage": {
+    "n": 5414,
+    "axes": {
+      "expression": {
+        "any_positive": 5166,
+        "two_or_more_positive": 1650,
+        "all_known": 5216,
+        "all_negative": 57,
+        "no_positive_some_unknown": 191
+      },
+      "topic": {
+        "any_positive": 3685,
+        "two_or_more_positive": 1377,
+        "all_known": 5043,
+        "all_negative": 1391,
+        "no_positive_some_unknown": 338
+      },
+      "either": {
+        "any_positive": 5186,
+        "two_or_more_positive": 3864,
+        "all_known": 5029,
+        "all_negative": 39,
+        "no_positive_some_unknown": 189
+      }
+    },
+    "variables": {
+      "T_ACTIVITY": {
+        "negative": 3527,
+        "unknown": 318,
+        "positive": 1569
+      },
+      "T_BODY": {
+        "negative": 3805,
+        "unknown": 314,
+        "positive": 1295
+      },
+      "T_FOOD": {
+        "negative": 4459,
+        "positive": 645,
+        "unknown": 310
+      },
+      "T_LIFE": {
+        "negative": 3708,
+        "positive": 1401,
+        "unknown": 305
+      },
+      "T_TOOLS": {
+        "negative": 4401,
+        "unknown": 327,
+        "positive": 686
+      },
+      "T_OTHER": {
+        "negative": 5097,
+        "unknown": 299,
+        "positive": 18
+      },
+      "S_PRESENT": {
+        "negative": 2321,
+        "positive": 2914,
+        "unknown": 179
+      },
+      "S_EXPERIENCE": {
+        "negative": 4474,
+        "unknown": 179,
+        "positive": 761
+      },
+      "S_APPRAISAL": {
+        "negative": 4424,
+        "positive": 813,
+        "unknown": 177
+      },
+      "S_FUTURE": {
+        "negative": 4767,
+        "positive": 469,
+        "unknown": 178
+      },
+      "S_EXHORT": {
+        "negative": 4543,
+        "positive": 700,
+        "unknown": 171
+      },
+      "S_REFLECTION": {
+        "negative": 4501,
+        "positive": 742,
+        "unknown": 171
+      },
+      "S_GUIDANCE": {
+        "negative": 4911,
+        "unknown": 170,
+        "positive": 333
+      },
+      "S_SOCIAL": {
+        "positive": 673,
+        "negative": 4571,
+        "unknown": 170
+      },
+      "S_REQUEST": {
+        "negative": 5175,
+        "positive": 67,
+        "unknown": 172
+      },
+      "S_OFFER": {
+        "negative": 5240,
+        "unknown": 170,
+        "positive": 4
+      },
+      "S_OTHER": {
+        "negative": 5175,
+        "unknown": 171,
+        "positive": 68
+      }
+    },
+    "attributes_given_parent_positive": {
+      "event_assertion": {
+        "not_asserted": 941,
+        "asserted": 1955,
+        "uncertain": 18
+      },
+      "plan": {
+        "yes": 330,
+        "no": 137,
+        "uncertain": 2
+      },
+      "goal": {
+        "no": 300,
+        "yes": 168,
+        "uncertain": 1
+      },
+      "greeting": {
+        "yes": 650,
+        "no": 23
+      },
+      "thanks": {
+        "no": 647,
+        "yes": 26
+      },
+      "positive_tone": {
+        "yes": 813,
+        "no": 566,
+        "uncertain": 17
+      },
+      "negative_tone": {
+        "no": 761,
+        "yes": 620,
+        "uncertain": 15
+      }
+    },
+    "polarity": {
+      "parent_positive": 1396,
+      "both_attributes_known": 1377,
+      "combination_counts": {
+        "positive_no_negative": 686,
+        "no_positive_no_negative": 74,
+        "no_positive_negative": 490,
+        "positive_negative": 127
+      },
+      "parent_not_applicable": 3837,
+      "parent_unknown": 181
+    },
+    "all_dimensions_and_attributes_complete": 4996
+  },
+  "all_positive_evidence_exact_substrings_checked": true,
+  "all_attribute_parent_constraints_checked": true,
+  "old_or_trial_labels_used_as_production_answers": false,
+  "n_independent_human_reviews": 0,
+  "codebook_sha256": "ddb5b988797d6447c3dc33487425c98d2a6fb37f34140d3ff8db9dbc4fd6eacf",
+  "analysis_protocol_sha256": "b919ca01cb73e81addc4dda76e4acb979fb5fb98c26af45e0d4f2b5b76b07dd9",
+  "input_manifest_sha256": "6f62f98a315d49bedbdef3a36b875fa4271fea3f262a33db586e5f60c97d7fd6",
+  "assignment_sha256": "ba6d6a23948d79e848b2552c8b828f67b63813d1f0d3d4f593fbdfc21f7ae53d",
+  "output_batch_sha256": {
+    "batch_0001.jsonl": "a459143b89375bf97877d31dcf8d73cd84e947a9415bcb829a70bf552d0d9215",
+    "batch_0002.jsonl": "be4cd190c812447679feee882f846effd4897a8a8e5e5ffe40dcec266c08eb67",
+    "batch_0003.jsonl": "c0f4e2f35d11764bc8e383e293a78061b692ab05d846f14441ea7eb4aad6d15f",
+    "batch_0004.jsonl": "841f3b7ffe6177af247746f6d7a476a9264e53846b44b977005d90babfe7f258",
+    "batch_0005.jsonl": "cf4be6119a987058edabdd9c11c71c7f05b3f3a2be2f86f21dffcce1eaa78f35",
+    "batch_0006.jsonl": "3c76f77403dd2e3892cf4bd9c4454e200fdc5a3cddceea46a85250d298da12a3",
+    "batch_0007.jsonl": "31b3cc5140156d47d3ff8e9b07d5aaf05db2242fc466203e5739bdedac82042c",
+    "batch_0008.jsonl": "400562284f71cd8341a37b0dd4dc276e623fc911e5c7a9710c36eacf450210cc",
+    "batch_0009.jsonl": "9fa721088b4c20764d7c49a5cc96c8520f08ebe89f3513b2d8e635870dd16db2",
+    "batch_0010.jsonl": "86f2a2b4b6e245465715c05dae73e64b07733603896d1bee1a21e55ac524567b",
+    "batch_0011.jsonl": "7f8edeb2dc7b7da48738a51154af4912b47fbf6f7feec139931f55ecf3056f22",
+    "batch_0012.jsonl": "7b51f4f76021bae08380ac37941c29ba47f67c3dfff2784a0e82337e466e0db4",
+    "batch_0013.jsonl": "848e2d459e1780f553cb55fc3513d39628ffd1fe1a590c85e43a8735af5b78bf",
+    "batch_0014.jsonl": "340bb3a564fd414aafdbabd182ba7ef5577bf14dc628e8a7a396e4950269edd7",
+    "batch_0015.jsonl": "a875b7644e0f64799bfe09cee3ea928dfa4b66bbd7c4f7d7c694b7f4ac3f2a09",
+    "batch_0016.jsonl": "bff73cf1c33b57e909fec92153c687aa84fc5763d88164666f863f979630bd0c",
+    "batch_0017.jsonl": "9cd1817f839b2a10f58e835097b8ab339be8c6ba5a24198de93cd59248638bc3",
+    "batch_0018.jsonl": "ead0eacd4f0b3c8b041bf90746ec38a22b8865243d4c54a7c4b562adf33c539d",
+    "batch_0019.jsonl": "4399e0dc8c6de9371cb541fb81f4ad827e755e9e890397e547bbe51865db3ff3",
+    "batch_0020.jsonl": "8a8454c8aa0a02fb47137061f15db3afef318c37472f951132490ac62e27b721",
+    "batch_0021.jsonl": "e1e5ff267fbcf7cf8dda5bcfdaf507abd1f1e9f6c78897763e186763a853dc5f",
+    "batch_0022.jsonl": "149a9a46c7da35eccd633e2399bce6d3233fa270157ba9a5ac8dc39b6d0da188",
+    "batch_0023.jsonl": "1d87c428707d26a99933eaf178bbe5b88c744987b2e136a6da588527b75da079",
+    "batch_0024.jsonl": "134e99af2c823f237ffad72d47729911c603e87f008e88c3f3e699ac2260c913",
+    "batch_0025.jsonl": "fe86d0201ba5153e9040c36fba41a11ae56aa44c13a56af975ea467e9bee25fb",
+    "batch_0026.jsonl": "e6e64344cbffd4e813f6deb0cbfb810b0738ae3e613dc856167fed546311028e",
+    "batch_0027.jsonl": "dcbe5a603e0ae1089b6f56f52c4efc64b7617f0684f7a321a76c5f037a13a417",
+    "batch_0028.jsonl": "76fb006ba14f778945d4a813da4afb16ad9b02e0cd7bda97d3f93cc7c4d85f51",
+    "batch_0029.jsonl": "c1fe8ffc635940a39a7f21854d4c795333ada7d3fad69321d7adcba57d0a1ad8",
+    "batch_0030.jsonl": "17f3311a9ad6be16c40754f7615ef6633c2b505daec770a59fc7eec6b0f753bc",
+    "batch_0031.jsonl": "c0bfdae74620d8fc5b7a44f078182a93ef210aeb7f48ab39024c5253c2f8c112",
+    "batch_0032.jsonl": "b09f2df1818d8e9af0ee58b9b86b8df452e94dc938abcc4d476b09516f73a5c9",
+    "batch_0033.jsonl": "13c5ac8a6b1499fcd3a4e775fdbfeca0dc2444888d1d850a8ab76a8907e4bb61",
+    "batch_0034.jsonl": "00eadd673d048126438f664eeb53584ceb687d5c0a6d61c70ff885cf28461740",
+    "batch_0035.jsonl": "359a6c9b3b13c326c5713d666bebc03a613b99a1011ba44204a881fbd1958810",
+    "batch_0036.jsonl": "db5cf4d3004cdb55b8384bae846997325e34b62807b7e343743b2854be60c448",
+    "batch_0037.jsonl": "275247ab6e233c92d93718d4ab3bc534262580a6057dd7318e3e083947f2c935",
+    "batch_0038.jsonl": "1368d9629fff3a7fee5fc78fa310ea6ca1165394987f7abfca727424a24e16e7",
+    "batch_0039.jsonl": "d866003acc4e912a65e2581afc44f8dc659bd83f122690b56f2fbc87e66e348a",
+    "batch_0040.jsonl": "9b8413c48abcd31c9cb83fb11032573111d6d8d8934b4ec8f741542a5ded3d3e",
+    "batch_0041.jsonl": "51535618f48f14c3f76540a666f9b371fe0e8170aeccf2a68890d6b131285352",
+    "batch_0042.jsonl": "0ab3cfecbba20590fad7c22c068e870620485014fd9f45c3a489e653b8242123",
+    "batch_0043.jsonl": "01c6583e714a78c955248e0140d9c9779e80257315a97ee8d77da3b2bc8787fa",
+    "batch_0044.jsonl": "660de6660a5beceb8720c97220eeb4488ba2c2f01e0270e54c0f16f0bcc7ed1c",
+    "batch_0045.jsonl": "1622a511084d549b37cc70d6af7f91d381985fd55892f4face3c08e48dc793d5",
+    "batch_0046.jsonl": "7b0989d5e35fbbd8b013eb3b9271b26467b336ddfc58f974f5b1670fab5e02ec",
+    "batch_0047.jsonl": "c75947384f61884c896a89b4857fdcd6f352820c44dcdb28587880259f84b40e",
+    "batch_0048.jsonl": "0697ef4cc6b610004ddcd5407fff89204d0309c23f4569c041ed937ad07b7c8a",
+    "batch_0049.jsonl": "f758a2e361b0e7e7a562bd19f7541403d3c9f98ca17d740b6121b5cc49b2d800",
+    "batch_0050.jsonl": "1f31c3b2ba91f8951b92a8a8058f67f52c6a369946ba8ee4b558a845163b90b5",
+    "batch_0051.jsonl": "cdf9a95257fcdb7f2e509793daa57a26fb3a477ef0f599bd376ba87238e8e406",
+    "batch_0052.jsonl": "9b73a8e2fab5a378eedc76e820f09d3a557740b21f39cf021dbbf7e91f585769",
+    "batch_0053.jsonl": "6498bac7d11571124fb67d58837077175442c1b5503a2c75038e3742bc4bf777",
+    "batch_0054.jsonl": "fa24d73e164aed0b126ebd5793374283289906b164a72a20b80e64b63ec2c591",
+    "batch_0055.jsonl": "4c0b14708433cdda757125fb036a57c079b97acbad58aa98d79dbe3b625b6698",
+    "batch_0056.jsonl": "d88fa226ed76e507147c950891a0546c0180cc038baf1e07c656a11e51d6e073",
+    "batch_0057.jsonl": "8b8de9471683b9a29bd5eb9bc4e8f955bb985bf1dccbb36a6d72b2b24d69c022",
+    "batch_0058.jsonl": "dba243d0958a1ba9d4e74921a2c9692359c4cff1bdbdfa41373222c612dbcfcd",
+    "batch_0059.jsonl": "d4a3ae003fce7aa9f6919e8e9eb8d80b591a69f084659057f1b9068949526206",
+    "batch_0060.jsonl": "fd6bdc94126b3049e1becfdd0979b5746906a4d1f3f47a09077979e2d522e32a",
+    "batch_0061.jsonl": "794789fbad19a4866064b401725327c4f5486bfa4075e73401cff70e302e7f9d",
+    "batch_0062.jsonl": "b79749e436fdf029d341e9cc654c5f4722f4c9ef7d45567bc354906c6201c1d5",
+    "batch_0063.jsonl": "3694b3ebed26ec60c7db1a68fe4efdf191de389f82d20dd8acf05459cf058202",
+    "batch_0064.jsonl": "1acbb763a643b05c892296a8645251b803d944b79b74aaad3c350dafe79c9217",
+    "batch_0065.jsonl": "4044d62180640d28ca53686cccb201172a15424b3db39250243c1c85b7170516",
+    "batch_0066.jsonl": "92b75121eb3acfe300fb9557492f8c4c49fcec8970ac4ca7453751f46af4d196",
+    "batch_0067.jsonl": "c40d1f47998615bcc7c4e38d4cf94184d7e57785a032fde9340816871a12086a",
+    "batch_0068.jsonl": "2de3f32dad0ca7dfb01d3e62826f3e6e96d53eccb445d10cdadf7d2bc907d2a0",
+    "batch_0069.jsonl": "3ffa6de79945b756b7904c55812d0881fc7633b0347f8ff25eb515f5cbdf7ec1",
+    "batch_0070.jsonl": "6825a6075e67ed285db781dba88948ab292580be5e5284acd27ae76e6dd7d69e",
+    "batch_0071.jsonl": "ef5ca15dff72cb244bde2dc72b130e29ff8d2faa58cca4b76ec2bd6998d8d58b",
+    "batch_0072.jsonl": "c479dfae756685abdfc4dfe83760f311bedc3d9b1f98f4514c6f386965cf08a0",
+    "batch_0073.jsonl": "5b6ca0b859f4de00aab1b36c7fe122df09d0d1a3d2f62b353515fc465723e295",
+    "batch_0074.jsonl": "6594afbbb5da640c33c29524d5f344cbeb83b3f798ed884271d8d658e3cf1b0e",
+    "batch_0075.jsonl": "097b50e53c09ae17ba5a63a7fe46bfdccf77565061756987913f09ab3528f9f6",
+    "batch_0076.jsonl": "725069befc19c1671fe137214391ecac3ea345790e2e7e5f933ccf039f7e549b",
+    "batch_0077.jsonl": "b7bf79f8f578d0fd016fcd43eb127de89020fdfe8137ce5337561de64f7c4f9b",
+    "batch_0078.jsonl": "db523820b66f0da50a0fbe5e5ee330814efbc5f3ff39bcee10b86eb65c015d22",
+    "batch_0079.jsonl": "acfb5711c4754ca179c80f6747cd75f55c91b78f558b30af96c71ab8b034cd95",
+    "batch_0080.jsonl": "19cf9f44c18de003e1ffceeda7d56ca7245a42f1a3a70402fd294f955f56c4dd",
+    "batch_0081.jsonl": "bba44573ea8248d41734e72c52111d06f1cf68b03d718573b1a76a32ab025c36",
+    "batch_0082.jsonl": "bceb43b8bde18016a8acdae79b74bcec3cdaecdff59a15680cf99bbde2c5c1af",
+    "batch_0083.jsonl": "4b69964441777f8601afdab4231d08cfedd22ac3bf66debd0469ec4d5313a114",
+    "batch_0084.jsonl": "12cfe8f68cd968a5c5f507fc9eea36008917fa82be90118b3c2165f7cc7a8827"
+  },
+  "merged_unique_sha256": "a7ce73d60824e8e13cafaa98ac2a0804296b0477c38f546ca6d5bf70822d9985",
+  "post_labels_sha256": "8bc4b8d95e3b552f20042a849321fa67c9aeaff04dda6ca6e5ced4ad2d57dcf9",
+  "resumption_manifest_sha256": "f4d82f48821d3a76a51ce68069ab74d3ba2275a2ac68eed538621856d9d81122",
+  "transcription_corrections_sha256": "ea8ba58dd1f26263f2aa4137e75f33876add9680ade168f97b96ea6f5f37e7a0",
+  "n_coder_reported_recording_corrections": 7,
+  "semantic_boundary_flags_sha256": "4881b4e6fff22102780f2640a540ab811b21dfb89fdf5446ea97733cb77cffe9",
+  "n_coder_reported_boundary_flags": 2,
+  "n_coder_reported_unresolved_boundary_flags": 0,
+  "limits": [
+    "One new production coding per distinct text across separate reading contexts, with fresh contexts for unfinished batches after interruption; this is not full-corpus dual coding.",
+    "Same-base AI semantic predictions lack independent human gold validation.",
+    "Positive coverage is tagging breadth, not accuracy or total regression utilization."
+  ]
+}

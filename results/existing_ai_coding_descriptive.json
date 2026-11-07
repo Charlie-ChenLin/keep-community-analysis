@@ -1,0 +1,835 @@
+{
+  "status": "exploratory_previous_ai_codings_only_no_new_labels",
+  "stage_protocol": "Discovery deliberately diversifies authors and text length; evaluation samples are random from held-out authors with exact templates unseen in earlier roles or historical inspected excerpts. Evaluation is not a representative sample of all posts.",
+  "interpretation": "同基座AI编码，非人工或真值；多标签可共现；开发/校准有设计性偏差；留出仅为其作者与去模板抽样框，不能推断全部帖子。",
+  "stages": {
+    "development": {
+      "n": 160,
+      "categories": [
+        {
+          "axis": "domains",
+          "code": "d_exercise",
+          "label": "运动与身体活动",
+          "positive": 61,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_body",
+          "label": "身体状态、体重与外形",
+          "positive": 32,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_food",
+          "label": "饮食、食物与营养",
+          "positive": 11,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_life",
+          "label": "生活、关系与社会文化话题",
+          "positive": 63,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_tools",
+          "label": "工具、服务与记录奖励机制",
+          "positive": 2,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_other",
+          "label": "其他明确内容",
+          "positive": 0,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_activity_update",
+          "label": "行动、进度与日常事件呈报",
+          "positive": 67,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_experience_report",
+          "label": "身体感受与主观体验自述",
+          "positive": 35,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_future_intention",
+          "label": "计划、目标与期待",
+          "positive": 14,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_explanation",
+          "label": "可泛化信息与机制解释",
+          "positive": 12,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_practical_guidance",
+          "label": "方法与可执行建议",
+          "positive": 12,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_reflection",
+          "label": "概括性议论、格言与价值主张",
+          "positive": 31,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_exhortation",
+          "label": "行动号召与自我提醒",
+          "positive": 20,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_greeting_wish",
+          "label": "寒暄与祝愿",
+          "positive": 13,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_relational_bid",
+          "label": "明确联络或共同参与邀请",
+          "positive": 2,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_reader_response_request",
+          "label": "明确面向他人的回应征询",
+          "positive": 2,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_appraisal",
+          "label": "明确对象评价、褒贬与致敬",
+          "positive": 17,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_caption",
+          "label": "指称式题注与景象描写",
+          "positive": 10,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_gratitude",
+          "label": "明确感谢表达",
+          "positive": 0,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_sale_offer",
+          "label": "商品服务供给与交易告知",
+          "positive": 0,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_other_expression",
+          "label": "其他可辨识表达行为",
+          "positive": 0,
+          "uncertain": 0,
+          "all_sample_n": 160
+        }
+      ],
+      "sample_states": {
+        "n": 160,
+        "readable": 155,
+        "content_specified": 124,
+        "content_unspecified": 29,
+        "content_uncertain": 0,
+        "content_unavailable": 7,
+        "any_domain": 124,
+        "any_function": 154,
+        "any_domain_or_function": 155,
+        "two_or_more_domains": 40,
+        "two_or_more_functions": 57
+      },
+      "old_no_hit_subset": {
+        "n": 109,
+        "readable": 104,
+        "content_specified": 79,
+        "content_unspecified": 23,
+        "content_uncertain": 0,
+        "content_unavailable": 7,
+        "any_domain": 79,
+        "any_function": 103,
+        "any_domain_or_function": 104,
+        "two_or_more_domains": 21,
+        "two_or_more_functions": 31
+      },
+      "sample_authors": 55,
+      "median_length": 15.5,
+      "role_population_nonempty": 3353
+    },
+    "calibration": {
+      "n": 80,
+      "categories": [
+        {
+          "axis": "domains",
+          "code": "d_exercise",
+          "label": "运动与身体活动",
+          "positive": 16,
+          "uncertain": 1,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "domains",
+          "code": "d_body",
+          "label": "身体状态、体重与外形",
+          "positive": 11,
+          "uncertain": 2,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "domains",
+          "code": "d_food",
+          "label": "饮食、食物与营养",
+          "positive": 19,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "domains",
+          "code": "d_life",
+          "label": "生活、关系与社会文化话题",
+          "positive": 37,
+          "uncertain": 1,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "domains",
+          "code": "d_tools",
+          "label": "工具、服务与记录奖励机制",
+          "positive": 2,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "domains",
+          "code": "d_other",
+          "label": "其他明确内容",
+          "positive": 0,
+          "uncertain": 1,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_activity_update",
+          "label": "行动、进度与日常事件呈报",
+          "positive": 42,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_experience_report",
+          "label": "身体感受与主观体验自述",
+          "positive": 15,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_future_intention",
+          "label": "计划、目标与期待",
+          "positive": 7,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_explanation",
+          "label": "可泛化信息与机制解释",
+          "positive": 4,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_practical_guidance",
+          "label": "方法与可执行建议",
+          "positive": 1,
+          "uncertain": 1,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_reflection",
+          "label": "概括性议论、格言与价值主张",
+          "positive": 14,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_exhortation",
+          "label": "行动号召与自我提醒",
+          "positive": 5,
+          "uncertain": 2,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_greeting_wish",
+          "label": "寒暄与祝愿",
+          "positive": 6,
+          "uncertain": 1,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_relational_bid",
+          "label": "明确联络或共同参与邀请",
+          "positive": 0,
+          "uncertain": 2,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_reader_response_request",
+          "label": "明确面向他人的回应征询",
+          "positive": 1,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_appraisal",
+          "label": "明确对象评价、褒贬与致敬",
+          "positive": 16,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_caption",
+          "label": "指称式题注与景象描写",
+          "positive": 9,
+          "uncertain": 1,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_gratitude",
+          "label": "明确感谢表达",
+          "positive": 2,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_sale_offer",
+          "label": "商品服务供给与交易告知",
+          "positive": 1,
+          "uncertain": 0,
+          "all_sample_n": 80
+        },
+        {
+          "axis": "functions",
+          "code": "f_other_expression",
+          "label": "其他可辨识表达行为",
+          "positive": 4,
+          "uncertain": 0,
+          "all_sample_n": 80
+        }
+      ],
+      "sample_states": {
+        "n": 80,
+        "readable": 76,
+        "content_specified": 62,
+        "content_unspecified": 10,
+        "content_uncertain": 4,
+        "content_unavailable": 4,
+        "any_domain": 62,
+        "any_function": 76,
+        "any_domain_or_function": 76,
+        "two_or_more_domains": 20,
+        "two_or_more_functions": 32
+      },
+      "old_no_hit_subset": {
+        "n": 57,
+        "readable": 53,
+        "content_specified": 43,
+        "content_unspecified": 6,
+        "content_uncertain": 4,
+        "content_unavailable": 4,
+        "any_domain": 43,
+        "any_function": 53,
+        "any_domain_or_function": 53,
+        "two_or_more_domains": 13,
+        "two_or_more_functions": 22
+      },
+      "sample_authors": 14,
+      "median_length": 21.0,
+      "role_population_nonempty": 1006
+    },
+    "holdout_A": {
+      "n": 160,
+      "categories": [
+        {
+          "axis": "domains",
+          "code": "d_exercise",
+          "label": "运动与身体活动",
+          "positive": 42,
+          "uncertain": 5,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_body",
+          "label": "身体状态、体重与外形",
+          "positive": 35,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_food",
+          "label": "饮食、食物与营养",
+          "positive": 31,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_life",
+          "label": "生活、关系与社会文化话题",
+          "positive": 64,
+          "uncertain": 2,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_tools",
+          "label": "工具、服务与记录奖励机制",
+          "positive": 5,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_other",
+          "label": "其他明确内容",
+          "positive": 4,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_activity_update",
+          "label": "行动、进度与日常事件呈报",
+          "positive": 63,
+          "uncertain": 2,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_experience_report",
+          "label": "身体感受与主观体验自述",
+          "positive": 41,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_future_intention",
+          "label": "计划、目标与期待",
+          "positive": 18,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_explanation",
+          "label": "可泛化信息与机制解释",
+          "positive": 4,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_practical_guidance",
+          "label": "方法与可执行建议",
+          "positive": 1,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_reflection",
+          "label": "概括性议论、格言与价值主张",
+          "positive": 26,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_exhortation",
+          "label": "行动号召与自我提醒",
+          "positive": 20,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_greeting_wish",
+          "label": "寒暄与祝愿",
+          "positive": 17,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_relational_bid",
+          "label": "明确联络或共同参与邀请",
+          "positive": 1,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_reader_response_request",
+          "label": "明确面向他人的回应征询",
+          "positive": 0,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_appraisal",
+          "label": "明确对象评价、褒贬与致敬",
+          "positive": 36,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_caption",
+          "label": "指称式题注与景象描写",
+          "positive": 28,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_gratitude",
+          "label": "明确感谢表达",
+          "positive": 1,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_sale_offer",
+          "label": "商品服务供给与交易告知",
+          "positive": 0,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_other_expression",
+          "label": "其他可辨识表达行为",
+          "positive": 0,
+          "uncertain": 0,
+          "all_sample_n": 160
+        }
+      ],
+      "sample_states": {
+        "n": 160,
+        "readable": 153,
+        "content_specified": 122,
+        "content_unspecified": 24,
+        "content_uncertain": 7,
+        "content_unavailable": 7,
+        "any_domain": 122,
+        "any_function": 148,
+        "any_domain_or_function": 148,
+        "two_or_more_domains": 39,
+        "two_or_more_functions": 71
+      },
+      "old_no_hit_subset": {
+        "n": 118,
+        "readable": 111,
+        "content_specified": 91,
+        "content_unspecified": 14,
+        "content_uncertain": 6,
+        "content_unavailable": 7,
+        "any_domain": 91,
+        "any_function": 107,
+        "any_domain_or_function": 107,
+        "two_or_more_domains": 24,
+        "two_or_more_functions": 43
+      },
+      "sample_authors": 19,
+      "median_length": 13.0,
+      "role_population_nonempty": 1055
+    },
+    "holdout_B": {
+      "n": 160,
+      "categories": [
+        {
+          "axis": "domains",
+          "code": "d_exercise",
+          "label": "运动与身体活动",
+          "positive": 42,
+          "uncertain": 6,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_body",
+          "label": "身体状态、体重与外形",
+          "positive": 37,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_food",
+          "label": "饮食、食物与营养",
+          "positive": 31,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_life",
+          "label": "生活、关系与社会文化话题",
+          "positive": 64,
+          "uncertain": 4,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_tools",
+          "label": "工具、服务与记录奖励机制",
+          "positive": 6,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "domains",
+          "code": "d_other",
+          "label": "其他明确内容",
+          "positive": 4,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_activity_update",
+          "label": "行动、进度与日常事件呈报",
+          "positive": 73,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_experience_report",
+          "label": "身体感受与主观体验自述",
+          "positive": 37,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_future_intention",
+          "label": "计划、目标与期待",
+          "positive": 16,
+          "uncertain": 2,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_explanation",
+          "label": "可泛化信息与机制解释",
+          "positive": 4,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_practical_guidance",
+          "label": "方法与可执行建议",
+          "positive": 1,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_reflection",
+          "label": "概括性议论、格言与价值主张",
+          "positive": 26,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_exhortation",
+          "label": "行动号召与自我提醒",
+          "positive": 22,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_greeting_wish",
+          "label": "寒暄与祝愿",
+          "positive": 18,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_relational_bid",
+          "label": "明确联络或共同参与邀请",
+          "positive": 0,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_reader_response_request",
+          "label": "明确面向他人的回应征询",
+          "positive": 0,
+          "uncertain": 1,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_appraisal",
+          "label": "明确对象评价、褒贬与致敬",
+          "positive": 37,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_caption",
+          "label": "指称式题注与景象描写",
+          "positive": 18,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_gratitude",
+          "label": "明确感谢表达",
+          "positive": 2,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_sale_offer",
+          "label": "商品服务供给与交易告知",
+          "positive": 0,
+          "uncertain": 0,
+          "all_sample_n": 160
+        },
+        {
+          "axis": "functions",
+          "code": "f_other_expression",
+          "label": "其他可辨识表达行为",
+          "positive": 1,
+          "uncertain": 0,
+          "all_sample_n": 160
+        }
+      ],
+      "sample_states": {
+        "n": 160,
+        "readable": 153,
+        "content_specified": 122,
+        "content_unspecified": 25,
+        "content_uncertain": 8,
+        "content_unavailable": 5,
+        "any_domain": 122,
+        "any_function": 149,
+        "any_domain_or_function": 149,
+        "two_or_more_domains": 40,
+        "two_or_more_functions": 73
+      },
+      "old_no_hit_subset": {
+        "n": 118,
+        "readable": 111,
+        "content_specified": 91,
+        "content_unspecified": 15,
+        "content_uncertain": 7,
+        "content_unavailable": 5,
+        "any_domain": 91,
+        "any_function": 108,
+        "any_domain_or_function": 108,
+        "two_or_more_domains": 25,
+        "two_or_more_functions": 44
+      },
+      "sample_authors": 19,
+      "median_length": 13.0,
+      "role_population_nonempty": 1055
+    }
+  },
+  "holdout_A_B_comparison": {
+    "n": 160,
+    "both_any_domain": 121,
+    "both_any_function": 147,
+    "both_any_domain_or_function": 147,
+    "old_no_hit_n": 118,
+    "old_no_hit_both_any_domain_or_function": 106
+  },
+  "source_sha256": {
+    "results/post_features.csv": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+    "code/classification_codebook_v1.json": "a5792bc359f918f405d9c5b45051b1746f7123e1855e068d136d807fd36fdeb4",
+    "results/classification_rebuild_protocol.json": "d10356fd2a6a9bdb69b6f14c1d32cbcc4781011d70c2053dd5a8ec3c435a696a",
+    "validation/classification_rebuild/private/development_keys.csv": "cdef63909e261bea195779bdf619e67cd6dd49e66593f9361bfe573cfe699f53",
+    "validation/classification_rebuild/private/calibration_keys.csv": "460562fc9233b33b1fe95d7757cf2c58aabea77f018f8880ffa19576041b62ee",
+    "validation/classification_rebuild/private/holdout_keys.csv": "12aaaea0e1cf30b1e95186db8aee7db4b9ce20fccdbba7993903109a7a822a3d",
+    "validation/classification_rebuild/private/development_coding.json": "e17a6ac39dbbb3deb1db6f5304ede86e000c3c99089d44e0128ce0d2484548b6",
+    "validation/classification_rebuild/private/calibration_coding.json": "89db0d6c9206e88b04ab44131d7f3e503c2027c7d4c85b27e749f2b3b81ed51d",
+    "validation/classification_rebuild/private/holdout_coder_a.json": "c20cdeae6f9b916b34e9a2b7def3e25de0123e52b59eecb5ecb81dd069831507",
+    "validation/classification_rebuild/private/holdout_coder_b.json": "099f578c5e672e48ad741a994aa95cba338d3fd64389b6742061072d842e36d5"
+  }
+}

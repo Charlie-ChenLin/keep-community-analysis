@@ -1,0 +1,39 @@
+{
+  "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/Keep社区内容表达与互动反馈_RQ分题讲述版_逐页讲稿与结构说明.docx",
+  "manifest_sha256": "a8e1a4583216e225d6892a04bd24a79ee37a0fdc885efae5a779888586383b05",
+  "docx_sha256": "0a348f11c87be61a2eb80a2614d7f684ec8619d2a1d67d6abe4999a4a7a01aed",
+  "slides": 24,
+  "all_speeches_match_manifest": true,
+  "all_titles_match_manifest": true,
+  "all_focuses_match_manifest": true,
+  "question_blocks": {
+    "RQ1": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "RQ2": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "RQ3": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  "target_seconds": 790,
+  "short_seconds": 620
+}

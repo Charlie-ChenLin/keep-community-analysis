@@ -1,0 +1,18 @@
+{
+  "status": "content_and_structure_passed",
+  "chapters": 8,
+  "editable_word_tables": 9,
+  "word_figures": 2,
+  "relative_links_checked": 8,
+  "coverage_table_independent_values_match": true,
+  "chart_pngs_visually_inspected": true,
+  "whole_original_texts_at_least_12_characters_in_report": 0,
+  "privacy_limit": "Only exact whole-source strings >=12 characters scanned, not exhaustive short excerpts/images/identifiers.",
+  "native_word_pagination_rendered": false,
+  "html_browser_rendering": "unavailable: Chrome headless launch exited SIGABRT with EPERM in the current sandbox; no retry or bypass attempted",
+  "sha256": {
+    ".md": "bcea25deef0a74c407d4e58d9d99eba91dd30ec1e08a78318babfda8b80f1607",
+    ".html": "47fed3d9ea88edb0aa0865c6ad9139d2c66ac764d8d8abbc7d77b2ad48690bbb",
+    ".docx": "b1e525fd2a26c667640fd4383a8af7a70247271ae2b66f946faf8584509300f9"
+  }
+}

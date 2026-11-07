@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "purpose": "Independent matrix-interface regression implementation matches established formula-interface historical model on the same real known-label population",
+  "coefficient_se_p_ci_replicated": true,
+  "n": 4564,
+  "new_rank": 171,
+  "old_rank": 171,
+  "new_control_omissions": [],
+  "no_new_v5_outcomes_examined": true
+}

@@ -1,0 +1,9 @@
+{
+  "validator": "/Users/lchen/.agents/skills/pptx/scripts/office/validate.py",
+  "baseline": "Keep社区内容表达与互动反馈_12分钟合并版.pptx",
+  "result": "All validations PASSED!",
+  "exit_code": 0,
+  "pptx_sha256": "c8085b05de7536c2a62e96f37ddccd38516ec25a1f3fb7fb275b4336d65af79d",
+  "scope": "OOXML package/schema/relationships/charts; not a native Office render",
+  "unicode_subscript_k_removed": true
+}

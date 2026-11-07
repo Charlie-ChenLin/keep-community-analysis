@@ -1,0 +1,369 @@
+{
+  "status": "passed_independent_aggregate_recalculation",
+  "scope": "Independent standalone calculations from private coder outputs and keys; no evaluator functions called and no raw post text or IDs copied into this audit.",
+  "partitions": {
+    "random": {
+      "n": 200,
+      "coder_coverage": {
+        "a": {
+          "expression": {
+            "any_positive": 195,
+            "two_or_more_positive": 83,
+            "all_known": 195,
+            "all_negative": 0,
+            "no_positive_some_unknown": 5
+          },
+          "topic": {
+            "any_positive": 153,
+            "two_or_more_positive": 82,
+            "all_known": 189,
+            "all_negative": 37,
+            "no_positive_some_unknown": 10
+          },
+          "either": {
+            "any_positive": 195,
+            "two_or_more_positive": 160,
+            "all_known": 189,
+            "all_negative": 0,
+            "no_positive_some_unknown": 5
+          }
+        },
+        "b": {
+          "expression": {
+            "any_positive": 192,
+            "two_or_more_positive": 83,
+            "all_known": 188,
+            "all_negative": 0,
+            "no_positive_some_unknown": 8
+          },
+          "topic": {
+            "any_positive": 150,
+            "two_or_more_positive": 81,
+            "all_known": 189,
+            "all_negative": 39,
+            "no_positive_some_unknown": 11
+          },
+          "either": {
+            "any_positive": 192,
+            "two_or_more_positive": 162,
+            "all_known": 184,
+            "all_negative": 0,
+            "no_positive_some_unknown": 8
+          }
+        }
+      },
+      "same_named_expression": 190,
+      "expression_positive_set_exact": 163,
+      "expression_strict_set_exact": 163,
+      "expression_label_checks": {
+        "S_PRESENT": {
+          "both_positive": 108,
+          "comparable_positive_union": 113,
+          "positive_agreement": 0.9773755656108597,
+          "either_unknown": 6
+        },
+        "S_EXPERIENCE": {
+          "both_positive": 40,
+          "comparable_positive_union": 44,
+          "positive_agreement": 0.9523809523809523,
+          "either_unknown": 6
+        },
+        "S_APPRAISAL": {
+          "both_positive": 42,
+          "comparable_positive_union": 54,
+          "positive_agreement": 0.875,
+          "either_unknown": 8
+        },
+        "S_FUTURE": {
+          "both_positive": 21,
+          "comparable_positive_union": 28,
+          "positive_agreement": 0.8571428571428571,
+          "either_unknown": 7
+        },
+        "S_EXHORT": {
+          "both_positive": 27,
+          "comparable_positive_union": 34,
+          "positive_agreement": 0.8852459016393442,
+          "either_unknown": 5
+        },
+        "S_REFLECTION": {
+          "both_positive": 33,
+          "comparable_positive_union": 36,
+          "positive_agreement": 0.9565217391304348,
+          "either_unknown": 6
+        },
+        "S_GUIDANCE": {
+          "both_positive": 10,
+          "comparable_positive_union": 12,
+          "positive_agreement": 0.9090909090909091,
+          "either_unknown": 5
+        },
+        "S_SOCIAL": {
+          "both_positive": 19,
+          "comparable_positive_union": 20,
+          "positive_agreement": 0.9743589743589743,
+          "either_unknown": 5
+        },
+        "S_REQUEST": {
+          "both_positive": 3,
+          "comparable_positive_union": 3,
+          "positive_agreement": 1.0,
+          "either_unknown": 6
+        },
+        "S_OFFER": {
+          "both_positive": 0,
+          "comparable_positive_union": 0,
+          "positive_agreement": null,
+          "either_unknown": 5
+        }
+      },
+      "passed_expression_consistency_screen": [
+        "S_PRESENT",
+        "S_EXPERIENCE",
+        "S_APPRAISAL",
+        "S_FUTURE",
+        "S_EXHORT",
+        "S_REFLECTION",
+        "S_SOCIAL"
+      ],
+      "joint_polarity": {
+        "both_parent_positive": 72,
+        "both_coders_both_attributes_known": 71,
+        "exact_combination_on_known": 70,
+        "parent_set_disagreement": 11
+      },
+      "independent_VIF_residual_recalculation": {
+        "a": {
+          "n_common": 195,
+          "n_variables": 8,
+          "vif_min": 1.061082421727752,
+          "vif_max": 1.2346995458182881,
+          "vif_all": {
+            "S_PRESENT": 1.2303803759207472,
+            "S_EXPERIENCE": 1.061082421727752,
+            "S_APPRAISAL": 1.1158729174634987,
+            "S_FUTURE": 1.068545652163828,
+            "S_EXHORT": 1.1608051643674953,
+            "S_REFLECTION": 1.2346995458182881,
+            "S_GUIDANCE": 1.2072166890806835,
+            "S_SOCIAL": 1.1004441517907608
+          }
+        },
+        "b": {
+          "n_common": 189,
+          "n_variables": 8,
+          "vif_min": 1.0535510809631574,
+          "vif_max": 1.3027819634352462,
+          "vif_all": {
+            "S_PRESENT": 1.2662546282949851,
+            "S_EXPERIENCE": 1.0535510809631574,
+            "S_APPRAISAL": 1.1628645594716556,
+            "S_FUTURE": 1.1084707946586059,
+            "S_EXHORT": 1.211163726277072,
+            "S_REFLECTION": 1.3027819634352462,
+            "S_GUIDANCE": 1.218818259916475,
+            "S_SOCIAL": 1.0959949295135318
+          }
+        }
+      }
+    },
+    "targeted_no_v3_positive": {
+      "n": 60,
+      "coder_coverage": {
+        "a": {
+          "expression": {
+            "any_positive": 55,
+            "two_or_more_positive": 6,
+            "all_known": 55,
+            "all_negative": 1,
+            "no_positive_some_unknown": 4
+          },
+          "topic": {
+            "any_positive": 27,
+            "two_or_more_positive": 5,
+            "all_known": 49,
+            "all_negative": 24,
+            "no_positive_some_unknown": 9
+          },
+          "either": {
+            "any_positive": 55,
+            "two_or_more_positive": 28,
+            "all_known": 48,
+            "all_negative": 1,
+            "no_positive_some_unknown": 4
+          }
+        },
+        "b": {
+          "expression": {
+            "any_positive": 52,
+            "two_or_more_positive": 7,
+            "all_known": 52,
+            "all_negative": 0,
+            "no_positive_some_unknown": 8
+          },
+          "topic": {
+            "any_positive": 27,
+            "two_or_more_positive": 6,
+            "all_known": 48,
+            "all_negative": 22,
+            "no_positive_some_unknown": 11
+          },
+          "either": {
+            "any_positive": 52,
+            "two_or_more_positive": 29,
+            "all_known": 48,
+            "all_negative": 0,
+            "no_positive_some_unknown": 8
+          }
+        }
+      },
+      "same_named_expression": 50,
+      "expression_positive_set_exact": 49,
+      "expression_strict_set_exact": 48,
+      "expression_label_checks": {
+        "S_PRESENT": {
+          "both_positive": 16,
+          "comparable_positive_union": 20,
+          "positive_agreement": 0.8888888888888888,
+          "either_unknown": 6
+        },
+        "S_EXPERIENCE": {
+          "both_positive": 3,
+          "comparable_positive_union": 3,
+          "positive_agreement": 1.0,
+          "either_unknown": 7
+        },
+        "S_APPRAISAL": {
+          "both_positive": 3,
+          "comparable_positive_union": 4,
+          "positive_agreement": 0.8571428571428571,
+          "either_unknown": 8
+        },
+        "S_FUTURE": {
+          "both_positive": 5,
+          "comparable_positive_union": 5,
+          "positive_agreement": 1.0,
+          "either_unknown": 6
+        },
+        "S_EXHORT": {
+          "both_positive": 0,
+          "comparable_positive_union": 2,
+          "positive_agreement": 0.0,
+          "either_unknown": 5
+        },
+        "S_REFLECTION": {
+          "both_positive": 25,
+          "comparable_positive_union": 25,
+          "positive_agreement": 1.0,
+          "either_unknown": 6
+        },
+        "S_GUIDANCE": {
+          "both_positive": 2,
+          "comparable_positive_union": 3,
+          "positive_agreement": 0.8,
+          "either_unknown": 5
+        },
+        "S_SOCIAL": {
+          "both_positive": 0,
+          "comparable_positive_union": 0,
+          "positive_agreement": null,
+          "either_unknown": 5
+        },
+        "S_REQUEST": {
+          "both_positive": 0,
+          "comparable_positive_union": 0,
+          "positive_agreement": null,
+          "either_unknown": 5
+        },
+        "S_OFFER": {
+          "both_positive": 0,
+          "comparable_positive_union": 0,
+          "positive_agreement": null,
+          "either_unknown": 5
+        }
+      },
+      "joint_polarity": {
+        "both_parent_positive": 6,
+        "both_coders_both_attributes_known": 6,
+        "exact_combination_on_known": 6,
+        "parent_set_disagreement": 5
+      }
+    }
+  },
+  "source_and_sampling_checks": {
+    "codebook_and_protocol_match_trial_freeze": true,
+    "n_trial_frozen_source_hashes_verified": 90,
+    "n_original_source_batches": 84,
+    "n_unique_source_texts": 4156,
+    "n_original_posts": 9532,
+    "n_nonempty_post_mappings": 5414,
+    "n_exclusions_independently_rebuilt": 1063,
+    "n_v4_pilot_texts_excluded": 160,
+    "n_v5_development_texts_from_v4_excluded": 18,
+    "n_new_random_texts": 200,
+    "n_separate_targeted_texts": 60,
+    "n_random_eligible": 3093,
+    "random_and_targeted_draw_reproduced": true,
+    "sample_exclusion_overlap": 0,
+    "coder_output_hashes_match_evaluation": true
+  },
+  "public_output_review": {
+    "files_checked": [
+      "variable_scheme_v5_evaluation.json",
+      "v5_production_preparation.json",
+      "正文变量新方案_v5_可编辑.md",
+      "正文变量新方案_v5_可编辑.html",
+      "正文变量新方案_v5_可编辑.docx"
+    ],
+    "no_original_post_or_source_ID_matches": true,
+    "no_complete_original_text_at_least_12_characters": true,
+    "no_top_level_row_fields": true,
+    "limitation": "Whole-text string matching does not exhaustively audit short phrases, partial excerpts, images or all report formats."
+  },
+  "qualifications": [
+    "Agreement is same-base AI operational consistency, not human accuracy.",
+    "Random unique-text and targeted strata remain separate; this audit makes no full-corpus v5 semantic coverage estimate.",
+    "Pilot VIF uses expression-only within-coder common samples without population controls or author/date effects.",
+    "No frozen codebook, protocol, coder outputs or source data were modified."
+  ],
+  "input_hashes": {
+    "evaluation_sha256": "32d47ac339f5c5aab57f410538117a71e5526f3e8371f4cff4cd479438ee91a8",
+    "coder_a_sha256": "0d4cd764618d7437d416bd73c10e319aa1acc96bc502bddc711250e939a3995f",
+    "coder_b_sha256": "5b5cb6d11971b9603f350ba80d138db8662c6b921e946accffa3a0e84fdd5960",
+    "freeze_sha256": "98aa0f920143ae41dd4a78a47db5d4d865d35ce2ffa1c4a0fc9f200021ecdca4",
+    "evaluator_sha256": "d2946be8f132c8dfe7f5fe15dece001dcc04377a7f77144285a66370ec4568d8",
+    "report_builder_sha256": "4a9beb30e18ea6588118ab1873f3582ca90991f3eead00d595248f93a21fb455",
+    "report_markdown_sha256": "bcea25deef0a74c407d4e58d9d99eba91dd30ec1e08a78318babfda8b80f1607",
+    "report_docx_sha256": "b1e525fd2a26c667640fd4383a8af7a70247271ae2b66f946faf8584509300f9"
+  },
+  "main_candidate_availability_independently_checked": {
+    "random": {
+      "a": {
+        "n_all_candidate_parents_known": 195,
+        "n_any_candidate_positive": 195
+      },
+      "b": {
+        "n_all_candidate_parents_known": 189,
+        "n_any_candidate_positive": 191
+      }
+    },
+    "targeted_no_v3_positive": {
+      "a": {
+        "n_all_candidate_parents_known": 55,
+        "n_any_candidate_positive": 55
+      },
+      "b": {
+        "n_all_candidate_parents_known": 52,
+        "n_any_candidate_positive": 51
+      }
+    }
+  },
+  "measurement_decision_matches_frozen_screen": true,
+  "targeted_exhort_limit_verified": {
+    "both_positive": 0,
+    "a_only_known_positive": 1,
+    "b_only_known_positive": 1,
+    "known_positive_union": 2,
+    "either_unknown": 5
+  }
+}

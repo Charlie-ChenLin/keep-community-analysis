@@ -1,0 +1,231 @@
+{
+  "status": "retrospective_exploratory",
+  "n_topics": 5,
+  "reference_topic": 2,
+  "n_posts": 2470,
+  "n_authors": 86,
+  "author_pseudonym_mapping_bijective": true,
+  "max_normalized_weight_sum_error": 4.440892098500626e-16,
+  "formula": "log_likes ~ log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date) + topic_0 + topic_1 + topic_3 + topic_4",
+  "old_four_lexical_indicators_in_model": false,
+  "covariance": "author-clustered finite-sample correction, t/F inference",
+  "coefficient_interpretation": "Shift weight from topic 2 to topic k holding the other weights and covariates fixed; 0.1 units is 10 percentage points.",
+  "models": [
+    {
+      "minimum_topic_posts_per_author": 1,
+      "n": 2470,
+      "authors": 86,
+      "rank": 166,
+      "parameters": 166,
+      "joint_topic_p": 0.16482215975503062,
+      "r_squared": 0.6117193895348334,
+      "coefficients": [
+        {
+          "term": "topic_0",
+          "coef": -0.3100599827842573,
+          "se_cluster": 0.15945379374739305,
+          "p": 0.0551406751327577,
+          "q_bh": 0.1102813502655154,
+          "ci_low": -0.6270968436176909,
+          "ci_high": 0.006976878049176349
+        },
+        {
+          "term": "topic_1",
+          "coef": -0.002738233995827997,
+          "se_cluster": 0.27843650298442774,
+          "p": 0.9921765185176785,
+          "q_bh": 0.9921765185176785,
+          "ci_low": -0.5563445971499512,
+          "ci_high": 0.5508681291582953
+        },
+        {
+          "term": "topic_3",
+          "coef": -0.5202576486222283,
+          "se_cluster": 0.3229632403141915,
+          "p": 0.11091158440451297,
+          "q_bh": 0.14788211253935063,
+          "ci_low": -1.1623950946337889,
+          "ci_high": 0.12187979738933219
+        },
+        {
+          "term": "topic_4",
+          "coef": -0.16443238868576554,
+          "se_cluster": 0.07553902027880496,
+          "p": 0.03226951706115313,
+          "q_bh": 0.1102813502655154,
+          "ci_low": -0.31462419846838446,
+          "ci_high": -0.014240578903146617
+        }
+      ]
+    },
+    {
+      "minimum_topic_posts_per_author": 2,
+      "n": 2460,
+      "authors": 76,
+      "rank": 156,
+      "parameters": 156,
+      "joint_topic_p": 0.1652236975465933,
+      "r_squared": 0.6105420603783029,
+      "coefficients": [
+        {
+          "term": "topic_0",
+          "coef": -0.3100599827842553,
+          "se_cluster": 0.1592538636681817,
+          "p": 0.05528466384554315,
+          "q_bh": 0.1105693276910863,
+          "ci_low": -0.6273099476308194,
+          "ci_high": 0.007189982062308808
+        },
+        {
+          "term": "topic_1",
+          "coef": -0.002738233995824735,
+          "se_cluster": 0.278087387226255,
+          "p": 0.9921697683411737,
+          "q_bh": 0.9921697683411737,
+          "ci_low": -0.5567167170901027,
+          "ci_high": 0.5512402490984533
+        },
+        {
+          "term": "topic_3",
+          "coef": -0.520257648622226,
+          "se_cluster": 0.32255829500244654,
+          "p": 0.11096417453369291,
+          "q_bh": 0.14795223271159055,
+          "ci_low": -1.1628267228878904,
+          "ci_high": 0.12231142564343822
+        },
+        {
+          "term": "topic_4",
+          "coef": -0.1644323886857605,
+          "se_cluster": 0.07544430618042514,
+          "p": 0.03243245172937394,
+          "q_bh": 0.1105693276910863,
+          "ci_low": -0.31472515353499003,
+          "ci_high": -0.014139623836530946
+        }
+      ]
+    },
+    {
+      "minimum_topic_posts_per_author": 5,
+      "n": 2423,
+      "authors": 64,
+      "rank": 144,
+      "parameters": 144,
+      "joint_topic_p": 0.18177791697165796,
+      "r_squared": 0.6070148911479707,
+      "coefficients": [
+        {
+          "term": "topic_0",
+          "coef": -0.3136083084972953,
+          "se_cluster": 0.1601413264052697,
+          "p": 0.05462329873365577,
+          "q_bh": 0.10924659746731154,
+          "ci_low": -0.633625213585993,
+          "ci_high": 0.00640859659140236
+        },
+        {
+          "term": "topic_1",
+          "coef": 0.021151134281305023,
+          "se_cluster": 0.290027050592034,
+          "p": 0.9420943457808102,
+          "q_bh": 0.9420943457808102,
+          "ci_low": -0.5584216793444705,
+          "ci_high": 0.6007239479070805
+        },
+        {
+          "term": "topic_3",
+          "coef": -0.5362391225120727,
+          "se_cluster": 0.32361196642306084,
+          "p": 0.10248301600895128,
+          "q_bh": 0.13664402134526837,
+          "ci_low": -1.1829260350601358,
+          "ci_high": 0.11044779003599037
+        },
+        {
+          "term": "topic_4",
+          "coef": -0.15804499086314372,
+          "se_cluster": 0.0757490162911211,
+          "p": 0.040993357271438324,
+          "q_bh": 0.10924659746731154,
+          "ci_low": -0.3094173211737551,
+          "ci_high": -0.00667266055253235
+        }
+      ]
+    },
+    {
+      "minimum_topic_posts_per_author": 10,
+      "n": 2309,
+      "authors": 48,
+      "rank": 128,
+      "parameters": 128,
+      "joint_topic_p": 0.2657799574766906,
+      "r_squared": 0.6074800393114507,
+      "coefficients": [
+        {
+          "term": "topic_0",
+          "coef": -0.3089900159284067,
+          "se_cluster": 0.16556677183229793,
+          "p": 0.06825207982487803,
+          "q_bh": 0.13650415964975607,
+          "ci_low": -0.6420673985508926,
+          "ci_high": 0.024087366694079182
+        },
+        {
+          "term": "topic_1",
+          "coef": -0.06244785247740166,
+          "se_cluster": 0.2771942917689608,
+          "p": 0.8227338949313754,
+          "q_bh": 0.8227338949313754,
+          "ci_low": -0.6200908394036494,
+          "ci_high": 0.49519513444884605
+        },
+        {
+          "term": "topic_3",
+          "coef": -0.5169361822555565,
+          "se_cluster": 0.3374147634133381,
+          "p": 0.13221421968042738,
+          "q_bh": 0.17628562624056984,
+          "ci_low": -1.1957271317447127,
+          "ci_high": 0.1618547672335996
+        },
+        {
+          "term": "topic_4",
+          "coef": -0.1450722775962089,
+          "se_cluster": 0.0751866460651674,
+          "p": 0.05971853809194483,
+          "q_bh": 0.13650415964975607,
+          "ci_low": -0.2963282995769668,
+          "ci_high": 0.0061837443845490225
+        }
+      ]
+    }
+  ],
+  "prior_with_legacy_controls": {
+    "1": {
+      "n": 2470,
+      "authors": 86,
+      "joint_topic_p": 0.16567261471073869
+    },
+    "2": {
+      "n": 2460,
+      "authors": 76,
+      "joint_topic_p": 0.1660710380975632
+    },
+    "5": {
+      "n": 2423,
+      "authors": 64,
+      "joint_topic_p": 0.1793280650849776
+    },
+    "10": {
+      "n": 2309,
+      "authors": 48,
+      "joint_topic_p": 0.2660085575702255
+    }
+  },
+  "limitations": [
+    "Observed nonempty text sample; missing exposure and observation window.",
+    "NMF components are not verified semantic categories.",
+    "Confidence intervals condition on fitted weights and exclude topic-model estimation uncertainty.",
+    "BH is applied to four terms within each model, not across all explored models."
+  ]
+}

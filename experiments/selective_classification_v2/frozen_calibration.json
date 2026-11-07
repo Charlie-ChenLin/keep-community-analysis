@@ -1,0 +1,855 @@
+{
+  "method": "char TF-IDF on dev, unweighted logistic regression; per-code threshold chosen on calibration only; positive similarity guard",
+  "seed": 20261029,
+  "min_positive_cosine_similarity": 0.2,
+  "candidate_thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "min_cal_positive": 3,
+  "min_cal_predicted_positive": 3,
+  "calibration_precision_requirement": 0.8,
+  "interpretation": "Predicted positives are candidates only; no prediction is semantic zero. No human ground truth. Historical holdout already inspected in prior research, so this is not a fresh external test.",
+  "decisions": [
+    {
+      "axis": "domains",
+      "code": "d_exercise",
+      "label": "运动与身体活动",
+      "development_positive": 61,
+      "development_negative": 91,
+      "calibration_positive": 16,
+      "calibration_negative": 56,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 2,
+          "TP": 1,
+          "precision": 0.5,
+          "positive_recall": 0.0625
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "domains",
+      "code": "d_body",
+      "label": "身体状态、体重与外形",
+      "development_positive": 32,
+      "development_negative": 120,
+      "calibration_positive": 11,
+      "calibration_negative": 61,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "domains",
+      "code": "d_food",
+      "label": "饮食、食物与营养",
+      "development_positive": 11,
+      "development_negative": 141,
+      "calibration_positive": 19,
+      "calibration_negative": 53,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "domains",
+      "code": "d_life",
+      "label": "生活、关系与社会文化话题",
+      "development_positive": 63,
+      "development_negative": 89,
+      "calibration_positive": 37,
+      "calibration_negative": 35,
+      "status": "supported_for_pilot",
+      "threshold": 0.5,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 5,
+          "TP": 4,
+          "precision": 0.8,
+          "positive_recall": 0.10810810810810811
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "calibration_result": {
+        "threshold": 0.5,
+        "n_pred": 5,
+        "TP": 4,
+        "precision": 0.8,
+        "positive_recall": 0.10810810810810811
+      }
+    },
+    {
+      "axis": "domains",
+      "code": "d_tools",
+      "label": "工具、服务与记录奖励机制",
+      "development_positive": 2,
+      "development_negative": 150,
+      "calibration_positive": 2,
+      "calibration_negative": 70,
+      "status": "unsupported",
+      "threshold": null,
+      "reason": "insufficient_dev_or_calibration_support"
+    },
+    {
+      "axis": "domains",
+      "code": "d_other",
+      "label": "其他明确内容",
+      "development_positive": 0,
+      "development_negative": 152,
+      "calibration_positive": 0,
+      "calibration_negative": 72,
+      "status": "unsupported",
+      "threshold": null,
+      "reason": "insufficient_dev_or_calibration_support"
+    },
+    {
+      "axis": "functions",
+      "code": "f_activity_update",
+      "label": "行动、进度与日常事件呈报",
+      "development_positive": 67,
+      "development_negative": 87,
+      "calibration_positive": 42,
+      "calibration_negative": 34,
+      "status": "supported_for_pilot",
+      "threshold": 0.5,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 7,
+          "TP": 6,
+          "precision": 0.8571428571428571,
+          "positive_recall": 0.14285714285714285
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 1,
+          "TP": 1,
+          "precision": 1.0,
+          "positive_recall": 0.023809523809523808
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "calibration_result": {
+        "threshold": 0.5,
+        "n_pred": 7,
+        "TP": 6,
+        "precision": 0.8571428571428571,
+        "positive_recall": 0.14285714285714285
+      }
+    },
+    {
+      "axis": "functions",
+      "code": "f_experience_report",
+      "label": "身体感受与主观体验自述",
+      "development_positive": 35,
+      "development_negative": 119,
+      "calibration_positive": 15,
+      "calibration_negative": 61,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "functions",
+      "code": "f_future_intention",
+      "label": "计划、目标与期待",
+      "development_positive": 14,
+      "development_negative": 140,
+      "calibration_positive": 7,
+      "calibration_negative": 69,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "functions",
+      "code": "f_explanation",
+      "label": "可泛化信息与机制解释",
+      "development_positive": 12,
+      "development_negative": 142,
+      "calibration_positive": 4,
+      "calibration_negative": 72,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "functions",
+      "code": "f_practical_guidance",
+      "label": "方法与可执行建议",
+      "development_positive": 12,
+      "development_negative": 142,
+      "calibration_positive": 1,
+      "calibration_negative": 74,
+      "status": "unsupported",
+      "threshold": null,
+      "reason": "insufficient_dev_or_calibration_support"
+    },
+    {
+      "axis": "functions",
+      "code": "f_reflection",
+      "label": "概括性议论、格言与价值主张",
+      "development_positive": 31,
+      "development_negative": 123,
+      "calibration_positive": 14,
+      "calibration_negative": 62,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "functions",
+      "code": "f_exhortation",
+      "label": "行动号召与自我提醒",
+      "development_positive": 20,
+      "development_negative": 134,
+      "calibration_positive": 5,
+      "calibration_negative": 69,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "functions",
+      "code": "f_greeting_wish",
+      "label": "寒暄与祝愿",
+      "development_positive": 13,
+      "development_negative": 141,
+      "calibration_positive": 6,
+      "calibration_negative": 69,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "functions",
+      "code": "f_relational_bid",
+      "label": "明确联络或共同参与邀请",
+      "development_positive": 2,
+      "development_negative": 152,
+      "calibration_positive": 0,
+      "calibration_negative": 74,
+      "status": "unsupported",
+      "threshold": null,
+      "reason": "insufficient_dev_or_calibration_support"
+    },
+    {
+      "axis": "functions",
+      "code": "f_reader_response_request",
+      "label": "明确面向他人的回应征询",
+      "development_positive": 2,
+      "development_negative": 152,
+      "calibration_positive": 1,
+      "calibration_negative": 75,
+      "status": "unsupported",
+      "threshold": null,
+      "reason": "insufficient_dev_or_calibration_support"
+    },
+    {
+      "axis": "functions",
+      "code": "f_appraisal",
+      "label": "明确对象评价、褒贬与致敬",
+      "development_positive": 17,
+      "development_negative": 137,
+      "calibration_positive": 16,
+      "calibration_negative": 60,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "functions",
+      "code": "f_caption",
+      "label": "指称式题注与景象描写",
+      "development_positive": 10,
+      "development_negative": 144,
+      "calibration_positive": 9,
+      "calibration_negative": 66,
+      "status": "unsupported",
+      "threshold": null,
+      "calibration_trials": [
+        {
+          "threshold": 0.5,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "n_pred": 0,
+          "TP": 0,
+          "precision": null,
+          "positive_recall": 0.0
+        }
+      ],
+      "reason": "no_threshold_reaches_calibration_criteria"
+    },
+    {
+      "axis": "functions",
+      "code": "f_gratitude",
+      "label": "明确感谢表达",
+      "development_positive": 0,
+      "development_negative": 155,
+      "calibration_positive": 2,
+      "calibration_negative": 74,
+      "status": "unsupported",
+      "threshold": null,
+      "reason": "insufficient_dev_or_calibration_support"
+    },
+    {
+      "axis": "functions",
+      "code": "f_sale_offer",
+      "label": "商品服务供给与交易告知",
+      "development_positive": 0,
+      "development_negative": 155,
+      "calibration_positive": 1,
+      "calibration_negative": 75,
+      "status": "unsupported",
+      "threshold": null,
+      "reason": "insufficient_dev_or_calibration_support"
+    },
+    {
+      "axis": "functions",
+      "code": "f_other_expression",
+      "label": "其他可辨识表达行为",
+      "development_positive": 0,
+      "development_negative": 155,
+      "calibration_positive": 4,
+      "calibration_negative": 72,
+      "status": "unsupported",
+      "threshold": null,
+      "reason": "insufficient_dev_or_calibration_support"
+    }
+  ]
+}

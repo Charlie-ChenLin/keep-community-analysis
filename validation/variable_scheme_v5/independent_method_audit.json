@@ -1,0 +1,34 @@
+{
+  "scope": "Read-only evaluator/report methodology review and synthetic-function checks; no coder or row-level trial output read.",
+  "evaluator_sha256_reviewed": "04268de4a01c04ff59a0772e57be101ee511d514b6cef9a3c3ed1a8732a5ec7c",
+  "checks": {
+    "polarity_parent_all_nine_three_state_OR_cases": true,
+    "positive_agreement_excludes_any_unknown_and_uses_Dice_formula": true,
+    "frozen_screen_inclusive_eighty_and_ninety_percent_boundaries": true,
+    "nineteen_positive_support_cannot_pass_despite_perfect_agreement": true,
+    "conditional_agreement_uses_shared_positive_parents_and_reports_parent_disagreement": true,
+    "own_parent_positive_counts_can_differ_from_common_comparison_counts": true,
+    "attribute_validation_distinguishes_structural_NA_and_positive_parent": true,
+    "VIF_on_own_common_sample_orthogonal_one_and_exact_collinearity_refused": true,
+    "no_common_sample_cannot_produce_VIF": true
+  },
+  "findings": [
+    {
+      "severity": "report_denominator_mismatch",
+      "location": "build_variable_scheme_v5_report.py polarity_rows",
+      "detail": "Own-parent A/B positive counts differ in population from shared-parent known-only agreement counts. Sent to parent for repair.",
+      "status": "resolved_after_read_only_source_verification",
+      "resolution": "A/B tone-positive columns now use both_yes+a_only_yes or both_yes+b_only_yes on the shared-parent, known-only attribute comparison subset; both_known and scope footnote are shown. Unknowns remain separate on shared positive parents."
+    },
+    {
+      "severity": "clarity",
+      "detail": "Use explicit within-coder common-sample VIF heading and applicable-attribute completeness wording.",
+      "status": "resolved_after_read_only_source_verification",
+      "resolution": "Table headings explicitly identify within-coder common samples and completeness of applicable attributes."
+    }
+  ],
+  "no_frozen_rules_modified": true,
+  "report_sha256_after_verified_repairs": "dd636cfabc6364502bfb0b0f6282170a60f3856c10b2bf4982244e721c6fea88",
+  "unresolved_method_findings": [],
+  "repair_verification_read_row_level_coder_results": false
+}

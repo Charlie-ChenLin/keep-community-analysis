@@ -1,0 +1,20 @@
+{
+  "docx_tables": 7,
+  "docx_images": 2,
+  "html_tables": 7,
+  "md_links_valid": true,
+  "same_body_numeric_checks": {
+    "5,202": true,
+    "96.1%": true,
+    "3,791": true,
+    "70.0%": true,
+    "117": true,
+    "114": true,
+    "94/120": true,
+    "91/120": true,
+    "1.17—2.69": true,
+    "未全量重编": true
+  },
+  "whole_original_texts_12plus_found": 0,
+  "visual_check": "Both exported PNG figures inspected; Word XML structure and content checked. Native Word pagination not rendered."
+}

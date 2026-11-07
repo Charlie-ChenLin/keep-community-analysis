@@ -1,0 +1,13 @@
+{
+  "status": "retrospective_exploratory_not_preregistered",
+  "design_note": "Nine definitions were frozen before v3 full-corpus coding. Earlier exploratory analyses and the same-base 120-text blind review have already been seen; neither categories nor specifications are selected by p-values.",
+  "population": "All 9,532 posts remain in source data; semantic models use posts with a readable cleaned body and a known value for the individual v3 label.",
+  "focal_variables": ["V3_ACTION", "V3_PLAN", "V3_GOAL", "V3_EXHORT", "V3_EXPERIENCE", "V3_APPRAISAL", "V3_GREETING", "V3_THANKS", "V3_REQUEST"],
+  "model": "One separate OLS model per eligible label, outcome ln(1+likes), text length and recorded metadata controls, author/date fixed effects, author-clustered SE with finite-sample correction.",
+  "eligibility": "At least 40 positive and 40 negative posts and at least 10 authors with within-author variation. Rare labels are described even if not estimable. Label eligibility is not based on outcomes or p-values.",
+  "multiple_testing": "BH correction across all eligible v3 labels separately for each model specification. This does not control for previous classification variants or the overall research search.",
+  "robustness": ["remove top 1% likes within the label-specific eligible sample", "retain authors with at least 10 eligible posts", "author-equal weighted regression"],
+  "collinearity": "On posts complete for all nine labels, include all supported v3 labels jointly with author/date fixed effects and prior controls. Report rank, pairwise phi, cooccurrence and VIF. This diagnostic is not the separately fitted main models.",
+  "validation": "The same-base AI double coding of 120 distinct texts is an exploratory agreement check, not human accuracy; low-support labels and excluded unknowns are disclosed. The coding manual and schema were frozen before sampling the review set.",
+  "limits": "Original bodies, annotations and mappings remain private. Neither AI-derived category labels nor observational relationships establish true psychological states or causal effects."
+}

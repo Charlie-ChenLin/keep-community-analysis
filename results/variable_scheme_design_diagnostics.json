@@ -1,0 +1,67 @@
+{
+  "purpose": "Exploratory design diagnosis after viewing earlier labels; not held-out validation, human review, accuracy estimation, or population proportions",
+  "n_unique_texts": 131,
+  "n_without_v3_positive": 120,
+  "seed": 20261104,
+  "sampling": "20 randomly selected unique texts per each of 6 v3-no-positive strata; 10 positive controls; all 1 readable-positive-v3/insufficient-v2 conflict",
+  "counts_by_diagnosis": {
+    "omitted_family": 44,
+    "limited_fragment": 6,
+    "narrow_boundary": 31,
+    "possible_coding_issue": 5,
+    "semantic_insufficiency": 27,
+    "axis_recoverable_fragment": 10,
+    "positive_control_consistent": 8
+  },
+  "counts_by_stratum": {
+    "all_no_v3_aux": {
+      "omitted_family": 19,
+      "limited_fragment": 1
+    },
+    "all_no_v3_noaux": {
+      "narrow_boundary": 10,
+      "omitted_family": 7,
+      "possible_coding_issue": 2,
+      "semantic_insufficiency": 1
+    },
+    "insufficient_v3_aux": {
+      "axis_recoverable_fragment": 9,
+      "semantic_insufficiency": 9,
+      "limited_fragment": 2
+    },
+    "insufficient_v3_noaux": {
+      "semantic_insufficiency": 17,
+      "axis_recoverable_fragment": 1,
+      "limited_fragment": 2
+    },
+    "positive_control": {
+      "positive_control_consistent": 8,
+      "possible_coding_issue": 2
+    },
+    "positive_v3_v2_insufficient": {
+      "possible_coding_issue": 1
+    },
+    "uncertain_v3_aux": {
+      "omitted_family": 17,
+      "narrow_boundary": 2,
+      "limited_fragment": 1
+    },
+    "uncertain_v3_noaux": {
+      "narrow_boundary": 19,
+      "omitted_family": 1
+    }
+  },
+  "population_weights_applied": false,
+  "positive_outcomes_hidden": true,
+  "raw_authors_hidden": true,
+  "earlier_labels_visible": true,
+  "independent_validation_exclude": "All 131 unique texts and exact duplicates must be excluded from new design-independent checks",
+  "private_design_sample_sha256": "99c00950482bc2bbec44355870730853454f62f5ac360db816e7c41eecee999b",
+  "important_interpretation": [
+    "omitted_family counts are identifiable expression families omitted by v3, not false-negative accuracy",
+    "narrow_boundary means a broader parent or other axis has a visible cue but the existing finer v3 child need not be positive",
+    "axis_recoverable_fragment means useful content/form can be known while event/meaning remains unknown",
+    "possible_coding_issue means a candidate error requiring independent adjudication, not validated error",
+    "semantic_insufficiency cannot be solved by labeling all records other"
+  ]
+}

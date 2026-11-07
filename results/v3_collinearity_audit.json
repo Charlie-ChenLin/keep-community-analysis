@@ -1,0 +1,393 @@
+{
+  "scope": "Nine v3 AI-assisted expression variables: post-level, complete across all nine; not human-validated",
+  "n_total": 9532,
+  "n_nonempty_body": 5414,
+  "n_complete_all_nine": 4316,
+  "n_excluded_any_unknown": 5216,
+  "n_authors": 94,
+  "diagnostic_thresholds": {
+    "positive_and_negative": 1,
+    "authors_within_variation": 1
+  },
+  "regression_support_flag_thresholds": {
+    "positive_and_negative": 40,
+    "authors_within_variation": 10
+  },
+  "coexistence_distribution": {
+    "0": 705,
+    "1": 2692,
+    "2": 698,
+    "3": 176,
+    "4": 37,
+    "5": 5,
+    "6": 3
+  },
+  "at_least_two_positive": 919,
+  "variables": [
+    {
+      "code": "V3_ACTION",
+      "label": "行动或进度记录",
+      "positive_posts": 1889,
+      "negative_posts": 2427,
+      "authors_with_within_variation": 76,
+      "included": true,
+      "low_support_for_regression": false,
+      "vif_full_design": 1.934123921429738
+    },
+    {
+      "code": "V3_PLAN",
+      "label": "未来行动安排",
+      "positive_posts": 172,
+      "negative_posts": 4144,
+      "authors_with_within_variation": 41,
+      "included": true,
+      "low_support_for_regression": false,
+      "vif_full_design": 1.152135272081766
+    },
+    {
+      "code": "V3_GOAL",
+      "label": "目标或个人期待",
+      "positive_posts": 95,
+      "negative_posts": 4221,
+      "authors_with_within_variation": 33,
+      "included": true,
+      "low_support_for_regression": false,
+      "vif_full_design": 1.1469497225611733
+    },
+    {
+      "code": "V3_EXHORT",
+      "label": "鼓励或行动提醒",
+      "positive_posts": 800,
+      "negative_posts": 3516,
+      "authors_with_within_variation": 73,
+      "included": true,
+      "low_support_for_regression": false,
+      "vif_full_design": 1.4825236559049269
+    },
+    {
+      "code": "V3_EXPERIENCE",
+      "label": "自身感受或体验",
+      "positive_posts": 624,
+      "negative_posts": 3692,
+      "authors_with_within_variation": 66,
+      "included": true,
+      "low_support_for_regression": false,
+      "vif_full_design": 1.3013034442973448
+    },
+    {
+      "code": "V3_APPRAISAL",
+      "label": "对象或情境评价",
+      "positive_posts": 544,
+      "negative_posts": 3772,
+      "authors_with_within_variation": 69,
+      "included": true,
+      "low_support_for_regression": false,
+      "vif_full_design": 1.2842143761835336
+    },
+    {
+      "code": "V3_GREETING",
+      "label": "问候或祝愿",
+      "positive_posts": 605,
+      "negative_posts": 3711,
+      "authors_with_within_variation": 53,
+      "included": true,
+      "low_support_for_regression": false,
+      "vif_full_design": 1.7564579660360167
+    },
+    {
+      "code": "V3_THANKS",
+      "label": "感谢或致谢",
+      "positive_posts": 26,
+      "negative_posts": 4290,
+      "authors_with_within_variation": 17,
+      "included": true,
+      "low_support_for_regression": true,
+      "vif_full_design": 1.1071712937886133
+    },
+    {
+      "code": "V3_REQUEST",
+      "label": "向他人征询或邀请",
+      "positive_posts": 52,
+      "negative_posts": 4264,
+      "authors_with_within_variation": 22,
+      "included": true,
+      "low_support_for_regression": false,
+      "vif_full_design": 1.1446886533243508
+    }
+  ],
+  "pairs": [
+    {
+      "first": "V3_ACTION",
+      "second": "V3_PLAN",
+      "joint_positive_posts": 89,
+      "phi": 0.03275775299111405,
+      "correlation_after_controls": -0.03285986668702864
+    },
+    {
+      "first": "V3_ACTION",
+      "second": "V3_GOAL",
+      "joint_positive_posts": 42,
+      "phi": 0.0013400918978182872,
+      "correlation_after_controls": -0.026477852660029853
+    },
+    {
+      "first": "V3_ACTION",
+      "second": "V3_EXHORT",
+      "joint_positive_posts": 140,
+      "phi": -0.25256190218132263,
+      "correlation_after_controls": -0.19076994424185686
+    },
+    {
+      "first": "V3_ACTION",
+      "second": "V3_EXPERIENCE",
+      "joint_positive_posts": 384,
+      "phi": 0.14726717146685261,
+      "correlation_after_controls": 0.08610101187304929
+    },
+    {
+      "first": "V3_ACTION",
+      "second": "V3_APPRAISAL",
+      "joint_positive_posts": 265,
+      "phi": 0.03786045492664571,
+      "correlation_after_controls": -0.03364920449526012
+    },
+    {
+      "first": "V3_ACTION",
+      "second": "V3_GREETING",
+      "joint_positive_posts": 70,
+      "phi": -0.2620474453863864,
+      "correlation_after_controls": -0.3248746938371015
+    },
+    {
+      "first": "V3_ACTION",
+      "second": "V3_THANKS",
+      "joint_positive_posts": 10,
+      "phi": -0.008326119563877394,
+      "correlation_after_controls": -0.02442315529999039
+    },
+    {
+      "first": "V3_ACTION",
+      "second": "V3_REQUEST",
+      "joint_positive_posts": 12,
+      "phi": -0.04605678997029174,
+      "correlation_after_controls": -0.03643150875567971
+    },
+    {
+      "first": "V3_PLAN",
+      "second": "V3_GOAL",
+      "joint_positive_posts": 14,
+      "phi": 0.08245887743405339,
+      "correlation_after_controls": 0.058780418613898364
+    },
+    {
+      "first": "V3_PLAN",
+      "second": "V3_EXHORT",
+      "joint_positive_posts": 15,
+      "phi": -0.05145713988524941,
+      "correlation_after_controls": -0.05343903177484783
+    },
+    {
+      "first": "V3_PLAN",
+      "second": "V3_EXPERIENCE",
+      "joint_positive_posts": 47,
+      "phi": 0.0745444409537963,
+      "correlation_after_controls": -0.008385564990973818
+    },
+    {
+      "first": "V3_PLAN",
+      "second": "V3_APPRAISAL",
+      "joint_positive_posts": 25,
+      "phi": 0.011850792959145802,
+      "correlation_after_controls": -0.054195489536104986
+    },
+    {
+      "first": "V3_PLAN",
+      "second": "V3_GREETING",
+      "joint_positive_posts": 9,
+      "phi": -0.051553350610386676,
+      "correlation_after_controls": -0.0355101682975692
+    },
+    {
+      "first": "V3_PLAN",
+      "second": "V3_THANKS",
+      "joint_positive_posts": 2,
+      "phi": 0.014753800740124057,
+      "correlation_after_controls": -0.00034012675628406353
+    },
+    {
+      "first": "V3_PLAN",
+      "second": "V3_REQUEST",
+      "joint_positive_posts": 1,
+      "phi": -0.011641501102748105,
+      "correlation_after_controls": -0.009359459407585462
+    },
+    {
+      "first": "V3_GOAL",
+      "second": "V3_EXHORT",
+      "joint_positive_posts": 25,
+      "phi": 0.030036669617716026,
+      "correlation_after_controls": -0.01811156449166596
+    },
+    {
+      "first": "V3_GOAL",
+      "second": "V3_EXPERIENCE",
+      "joint_positive_posts": 28,
+      "phi": 0.06405638507697724,
+      "correlation_after_controls": 0.02281415713152765
+    },
+    {
+      "first": "V3_GOAL",
+      "second": "V3_APPRAISAL",
+      "joint_positive_posts": 19,
+      "phi": 0.03342964135586299,
+      "correlation_after_controls": -0.027125277899222734
+    },
+    {
+      "first": "V3_GOAL",
+      "second": "V3_GREETING",
+      "joint_positive_posts": 7,
+      "phi": -0.02873300181855017,
+      "correlation_after_controls": -0.0018235280661127895
+    },
+    {
+      "first": "V3_GOAL",
+      "second": "V3_THANKS",
+      "joint_positive_posts": 0,
+      "phi": -0.01167917469163589,
+      "correlation_after_controls": -0.02238626896706017
+    },
+    {
+      "first": "V3_GOAL",
+      "second": "V3_REQUEST",
+      "joint_positive_posts": 3,
+      "phi": 0.026856184753651122,
+      "correlation_after_controls": 0.01801694328136386
+    },
+    {
+      "first": "V3_EXHORT",
+      "second": "V3_EXPERIENCE",
+      "joint_positive_posts": 52,
+      "phi": -0.10793780568658906,
+      "correlation_after_controls": -0.1201336240416272
+    },
+    {
+      "first": "V3_EXHORT",
+      "second": "V3_APPRAISAL",
+      "joint_positive_posts": 48,
+      "phi": -0.0949163606318431,
+      "correlation_after_controls": -0.1219435387784736
+    },
+    {
+      "first": "V3_EXHORT",
+      "second": "V3_GREETING",
+      "joint_positive_posts": 39,
+      "phi": -0.12561716093096173,
+      "correlation_after_controls": -0.08788166445288828
+    },
+    {
+      "first": "V3_EXHORT",
+      "second": "V3_THANKS",
+      "joint_positive_posts": 3,
+      "phi": -0.014018306269900551,
+      "correlation_after_controls": -0.01620100142154125
+    },
+    {
+      "first": "V3_EXHORT",
+      "second": "V3_REQUEST",
+      "joint_positive_posts": 18,
+      "phi": 0.045696518922299006,
+      "correlation_after_controls": 0.0009044458815515259
+    },
+    {
+      "first": "V3_EXPERIENCE",
+      "second": "V3_APPRAISAL",
+      "joint_positive_posts": 103,
+      "phi": 0.04833494449936256,
+      "correlation_after_controls": -0.09094991353960047
+    },
+    {
+      "first": "V3_EXPERIENCE",
+      "second": "V3_GREETING",
+      "joint_positive_posts": 24,
+      "phi": -0.12044889063941554,
+      "correlation_after_controls": -0.05669864318116052
+    },
+    {
+      "first": "V3_EXPERIENCE",
+      "second": "V3_THANKS",
+      "joint_positive_posts": 6,
+      "phi": 0.019079976117364592,
+      "correlation_after_controls": -0.016007475548227085
+    },
+    {
+      "first": "V3_EXPERIENCE",
+      "second": "V3_REQUEST",
+      "joint_positive_posts": 7,
+      "phi": -0.0031285160573527888,
+      "correlation_after_controls": -0.014893070734484896
+    },
+    {
+      "first": "V3_APPRAISAL",
+      "second": "V3_GREETING",
+      "joint_positive_posts": 13,
+      "phi": -0.12719594905878792,
+      "correlation_after_controls": -0.055989211818524245
+    },
+    {
+      "first": "V3_APPRAISAL",
+      "second": "V3_THANKS",
+      "joint_positive_posts": 6,
+      "phi": 0.024564683382252612,
+      "correlation_after_controls": -0.012936845473292213
+    },
+    {
+      "first": "V3_APPRAISAL",
+      "second": "V3_REQUEST",
+      "joint_positive_posts": 9,
+      "phi": 0.015649620837973673,
+      "correlation_after_controls": -0.026144610360715213
+    },
+    {
+      "first": "V3_GREETING",
+      "second": "V3_THANKS",
+      "joint_positive_posts": 3,
+      "phi": -0.005559281186760791,
+      "correlation_after_controls": -0.0007704407913492556
+    },
+    {
+      "first": "V3_GREETING",
+      "second": "V3_REQUEST",
+      "joint_positive_posts": 5,
+      "phi": -0.014003078075220339,
+      "correlation_after_controls": -0.0050322169389932
+    },
+    {
+      "first": "V3_THANKS",
+      "second": "V3_REQUEST",
+      "joint_positive_posts": 0,
+      "phi": -0.008597082645141384,
+      "correlation_after_controls": -0.017038163178894023
+    }
+  ],
+  "max_absolute_phi": 0.2620474453863864,
+  "max_absolute_residual_correlation": 0.3248746938371015,
+  "design_matrix": {
+    "rows": 4316,
+    "columns": 179,
+    "rank": 179,
+    "full_rank": true,
+    "condition_number_standardized": 21.373840336990423
+  },
+  "controls": "log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date)",
+  "outcome_used": false,
+  "limitations": [
+    "Simultaneous model is a diagnostic, not the separately fitted regressions.",
+    "Low VIF does not validate semantics or remove unmeasured confounding.",
+    "AI annotations are not human gold labels.",
+    "Complete-case sample and rare-label thresholds limit scope."
+  ],
+  "source_hashes": {
+    "post_features.csv": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+    "post_labels.csv": "ad5c2194542ddf971de7ad728b549d7c8a35927c310ca6915834aba95eedc595"
+  }
+}

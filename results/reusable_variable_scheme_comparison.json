@@ -1,0 +1,1883 @@
+{
+  "status": "historical_candidate_diagnostics_not_new_semantic_classification",
+  "n_nonempty": 5414,
+  "n_unique_texts": 4156,
+  "outcome_used": false,
+  "support_thresholds": {
+    "positive": 40,
+    "negative": 40,
+    "authors_within_variation": 10
+  },
+  "candidates": {
+    "v2_ten_non_other": {
+      "n_nonempty": 5414,
+      "n_variables": 10,
+      "n_any_positive": 5202,
+      "any_positive_rate": 0.9608422608053195,
+      "n_at_least_two_positive": 1304,
+      "overlap_rate_all_nonempty": 0.24085703731067604,
+      "overlap_rate_among_positive": 0.2506728181468666,
+      "n_complete_all_variables": 5178,
+      "complete_rate": 0.9564093091983746,
+      "n_any_known_variable": 5228,
+      "n_no_positive_all_known": 17,
+      "n_no_positive_some_unknown": 195,
+      "n_all_variables_unknown": 186,
+      "positive_count_distribution": {
+        "0": 212,
+        "1": 3898,
+        "2": 1092,
+        "3": 178,
+        "4": 29,
+        "5": 5
+      },
+      "variables": {
+        "F_UPDATE": {
+          "label": "行动、进度或事件记录",
+          "n_known": 5223,
+          "known_rate": 0.9647210934613963,
+          "n_positive": 1675,
+          "n_negative": 3548,
+          "n_unknown": 191,
+          "positive_rate_known": 0.32069691748037527,
+          "positive_rate_all_nonempty": 0.30938308090136685,
+          "authors_known": 95,
+          "authors_positive": 88,
+          "authors_within_variation": 84,
+          "largest_author_share_of_positives": 0.11283582089552238,
+          "author_equal_mean_positive_known": 0.37315944961238195,
+          "passes_previous_support_thresholds": true
+        },
+        "F_EXPERIENCE_EVALUATION": {
+          "label": "体验或对象评价",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 1323,
+          "n_negative": 3905,
+          "n_unknown": 186,
+          "positive_rate_known": 0.25306044376434583,
+          "positive_rate_all_nonempty": 0.2443664573328408,
+          "authors_known": 95,
+          "authors_positive": 83,
+          "authors_within_variation": 82,
+          "largest_author_share_of_positives": 0.08692365835222977,
+          "author_equal_mean_positive_known": 0.3058363658520981,
+          "passes_previous_support_thresholds": true
+        },
+        "F_FUTURE": {
+          "label": "计划、目标或期待",
+          "n_known": 5214,
+          "known_rate": 0.963058736608792,
+          "n_positive": 409,
+          "n_negative": 4805,
+          "n_unknown": 200,
+          "positive_rate_known": 0.07844265439202149,
+          "positive_rate_all_nonempty": 0.07554488363502032,
+          "authors_known": 95,
+          "authors_positive": 63,
+          "authors_within_variation": 61,
+          "largest_author_share_of_positives": 0.09535452322738386,
+          "author_equal_mean_positive_known": 0.1019901091389651,
+          "passes_previous_support_thresholds": true
+        },
+        "F_EXHORT": {
+          "label": "动员或自我提醒",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 823,
+          "n_negative": 4405,
+          "n_unknown": 186,
+          "positive_rate_known": 0.15742157612853863,
+          "positive_rate_all_nonempty": 0.15201329885482084,
+          "authors_known": 95,
+          "authors_positive": 81,
+          "authors_within_variation": 79,
+          "largest_author_share_of_positives": 0.15674362089914945,
+          "author_equal_mean_positive_known": 0.18643396490242511,
+          "passes_previous_support_thresholds": true
+        },
+        "F_GUIDANCE": {
+          "label": "信息解释或可执行建议",
+          "n_known": 5227,
+          "known_rate": 0.9654599187292205,
+          "n_positive": 149,
+          "n_negative": 5078,
+          "n_unknown": 187,
+          "positive_rate_known": 0.02850583508704802,
+          "positive_rate_all_nonempty": 0.027521241226449944,
+          "authors_known": 95,
+          "authors_positive": 31,
+          "authors_within_variation": 31,
+          "largest_author_share_of_positives": 0.2550335570469799,
+          "author_equal_mean_positive_known": 0.03818803403073516,
+          "passes_previous_support_thresholds": true
+        },
+        "F_REFLECTION": {
+          "label": "议论、格言或价值主张",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 814,
+          "n_negative": 4414,
+          "n_unknown": 186,
+          "positive_rate_known": 0.1557000765110941,
+          "positive_rate_all_nonempty": 0.15035094200221646,
+          "authors_known": 95,
+          "authors_positive": 62,
+          "authors_within_variation": 61,
+          "largest_author_share_of_positives": 0.29115479115479115,
+          "author_equal_mean_positive_known": 0.12503236180446262,
+          "passes_previous_support_thresholds": true
+        },
+        "F_GREETING_GRATITUDE": {
+          "label": "问候、祝愿或感谢",
+          "n_known": 5227,
+          "known_rate": 0.9654599187292205,
+          "n_positive": 676,
+          "n_negative": 4551,
+          "n_unknown": 187,
+          "positive_rate_known": 0.1293284867036541,
+          "positive_rate_all_nonempty": 0.12486147026228298,
+          "authors_known": 95,
+          "authors_positive": 58,
+          "authors_within_variation": 58,
+          "largest_author_share_of_positives": 0.22781065088757396,
+          "author_equal_mean_positive_known": 0.11055378618973617,
+          "passes_previous_support_thresholds": true
+        },
+        "F_INVITE_ASK": {
+          "label": "联络邀请或向他人征询",
+          "n_known": 5198,
+          "known_rate": 0.9601034355374953,
+          "n_positive": 60,
+          "n_negative": 5138,
+          "n_unknown": 216,
+          "positive_rate_known": 0.011542901115813775,
+          "positive_rate_all_nonempty": 0.011082379017362394,
+          "authors_known": 95,
+          "authors_positive": 23,
+          "authors_within_variation": 23,
+          "largest_author_share_of_positives": 0.16666666666666666,
+          "author_equal_mean_positive_known": 0.016007284483658565,
+          "passes_previous_support_thresholds": true
+        },
+        "F_CAPTION": {
+          "label": "题注或景象描写",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 826,
+          "n_negative": 4402,
+          "n_unknown": 186,
+          "positive_rate_known": 0.1579954093343535,
+          "positive_rate_all_nonempty": 0.15256741780568894,
+          "authors_known": 95,
+          "authors_positive": 60,
+          "authors_within_variation": 60,
+          "largest_author_share_of_positives": 0.34019370460048426,
+          "author_equal_mean_positive_known": 0.11625277701210744,
+          "passes_previous_support_thresholds": true
+        },
+        "F_SALE": {
+          "label": "商品或服务供给告知",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 2,
+          "n_negative": 5226,
+          "n_unknown": 186,
+          "positive_rate_known": 0.00038255547054322876,
+          "positive_rate_all_nonempty": 0.0003694126339120798,
+          "authors_known": 95,
+          "authors_positive": 1,
+          "authors_within_variation": 1,
+          "largest_author_share_of_positives": 1.0,
+          "author_equal_mean_positive_known": 0.00014321518080916577,
+          "passes_previous_support_thresholds": false
+        }
+      },
+      "unique_text_weighting": {
+        "n": 4156,
+        "n_any_positive": 4035,
+        "any_positive_rate": 0.9708854667949952,
+        "n_at_least_two_positive": 1271,
+        "n_complete": 4012
+      },
+      "description": "v2十个有名表达类型，F_SALE保留描述但样本稀少；是历史重用，尚未新增人工验证。",
+      "collinearity": {
+        "outcome_used": false,
+        "controls": "log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date)",
+        "selection": "Only previous fixed thresholds: >=40 positives, >=40 negatives, >=10 authors with within-author variation on label-specific known rows. No outcome or p-value used.",
+        "all_label_specific_support": {
+          "F_UPDATE": {
+            "n_known": 5223,
+            "n_positive": 1675,
+            "n_negative": 3548,
+            "authors_within_variation": 84,
+            "passes_support_threshold": true
+          },
+          "F_EXPERIENCE_EVALUATION": {
+            "n_known": 5228,
+            "n_positive": 1323,
+            "n_negative": 3905,
+            "authors_within_variation": 82,
+            "passes_support_threshold": true
+          },
+          "F_FUTURE": {
+            "n_known": 5214,
+            "n_positive": 409,
+            "n_negative": 4805,
+            "authors_within_variation": 61,
+            "passes_support_threshold": true
+          },
+          "F_EXHORT": {
+            "n_known": 5228,
+            "n_positive": 823,
+            "n_negative": 4405,
+            "authors_within_variation": 79,
+            "passes_support_threshold": true
+          },
+          "F_GUIDANCE": {
+            "n_known": 5227,
+            "n_positive": 149,
+            "n_negative": 5078,
+            "authors_within_variation": 31,
+            "passes_support_threshold": true
+          },
+          "F_REFLECTION": {
+            "n_known": 5228,
+            "n_positive": 814,
+            "n_negative": 4414,
+            "authors_within_variation": 61,
+            "passes_support_threshold": true
+          },
+          "F_GREETING_GRATITUDE": {
+            "n_known": 5227,
+            "n_positive": 676,
+            "n_negative": 4551,
+            "authors_within_variation": 58,
+            "passes_support_threshold": true
+          },
+          "F_INVITE_ASK": {
+            "n_known": 5198,
+            "n_positive": 60,
+            "n_negative": 5138,
+            "authors_within_variation": 23,
+            "passes_support_threshold": true
+          },
+          "F_CAPTION": {
+            "n_known": 5228,
+            "n_positive": 826,
+            "n_negative": 4402,
+            "authors_within_variation": 60,
+            "passes_support_threshold": true
+          },
+          "F_SALE": {
+            "n_known": 5228,
+            "n_positive": 2,
+            "n_negative": 5226,
+            "authors_within_variation": 1,
+            "passes_support_threshold": false
+          }
+        },
+        "diagnostic_labels": [
+          "F_UPDATE",
+          "F_EXPERIENCE_EVALUATION",
+          "F_FUTURE",
+          "F_EXHORT",
+          "F_GUIDANCE",
+          "F_REFLECTION",
+          "F_GREETING_GRATITUDE",
+          "F_INVITE_ASK",
+          "F_CAPTION"
+        ],
+        "excluded_labels": [
+          "F_SALE"
+        ],
+        "n_complete_for_diagnostic_labels": 5178,
+        "complete_rate_all_nonempty": 0.9564093091983746,
+        "n_authors": 95,
+        "support_in_common_diagnostic_sample": {
+          "F_UPDATE": {
+            "n_known": 5178,
+            "n_positive": 1665,
+            "n_negative": 3513,
+            "authors_within_variation": 84,
+            "passes_support_threshold": true
+          },
+          "F_EXPERIENCE_EVALUATION": {
+            "n_known": 5178,
+            "n_positive": 1303,
+            "n_negative": 3875,
+            "authors_within_variation": 82,
+            "passes_support_threshold": true
+          },
+          "F_FUTURE": {
+            "n_known": 5178,
+            "n_positive": 401,
+            "n_negative": 4777,
+            "authors_within_variation": 60,
+            "passes_support_threshold": true
+          },
+          "F_EXHORT": {
+            "n_known": 5178,
+            "n_positive": 819,
+            "n_negative": 4359,
+            "authors_within_variation": 79,
+            "passes_support_threshold": true
+          },
+          "F_GUIDANCE": {
+            "n_known": 5178,
+            "n_positive": 147,
+            "n_negative": 5031,
+            "authors_within_variation": 31,
+            "passes_support_threshold": true
+          },
+          "F_REFLECTION": {
+            "n_known": 5178,
+            "n_positive": 814,
+            "n_negative": 4364,
+            "authors_within_variation": 61,
+            "passes_support_threshold": true
+          },
+          "F_GREETING_GRATITUDE": {
+            "n_known": 5178,
+            "n_positive": 675,
+            "n_negative": 4503,
+            "authors_within_variation": 58,
+            "passes_support_threshold": true
+          },
+          "F_INVITE_ASK": {
+            "n_known": 5178,
+            "n_positive": 59,
+            "n_negative": 5119,
+            "authors_within_variation": 22,
+            "passes_support_threshold": true
+          },
+          "F_CAPTION": {
+            "n_known": 5178,
+            "n_positive": 818,
+            "n_negative": 4360,
+            "authors_within_variation": 59,
+            "passes_support_threshold": true
+          }
+        },
+        "labels_failing_threshold_in_common_sample": [],
+        "design": {
+          "rows": 5178,
+          "columns_including_intercept": 181,
+          "rank": 181
+        },
+        "max_absolute_phi": 0.29479466839064844,
+        "top_phi_pairs": [
+          {
+            "first": "F_UPDATE",
+            "second": "F_CAPTION",
+            "phi": -0.29479466839064844,
+            "joint_positive": 3
+          },
+          {
+            "first": "F_EXPERIENCE_EVALUATION",
+            "second": "F_CAPTION",
+            "phi": -0.21822552168269224,
+            "joint_positive": 27
+          },
+          {
+            "first": "F_UPDATE",
+            "second": "F_REFLECTION",
+            "phi": -0.2075889381206449,
+            "joint_positive": 79
+          },
+          {
+            "first": "F_EXHORT",
+            "second": "F_CAPTION",
+            "phi": -0.18194632913775718,
+            "joint_positive": 4
+          },
+          {
+            "first": "F_EXPERIENCE_EVALUATION",
+            "second": "F_REFLECTION",
+            "phi": -0.17830554159373363,
+            "joint_positive": 59
+          },
+          {
+            "first": "F_REFLECTION",
+            "second": "F_CAPTION",
+            "phi": -0.1681578934612635,
+            "joint_positive": 13
+          },
+          {
+            "first": "F_EXPERIENCE_EVALUATION",
+            "second": "F_GREETING_GRATITUDE",
+            "phi": -0.16503181817267393,
+            "joint_positive": 45
+          },
+          {
+            "first": "F_UPDATE",
+            "second": "F_GREETING_GRATITUDE",
+            "phi": -0.16338855442879635,
+            "joint_positive": 84
+          },
+          {
+            "first": "F_EXPERIENCE_EVALUATION",
+            "second": "F_EXHORT",
+            "phi": -0.15622440240726904,
+            "joint_positive": 78
+          },
+          {
+            "first": "F_GREETING_GRATITUDE",
+            "second": "F_CAPTION",
+            "phi": -0.15354640059366428,
+            "joint_positive": 9
+          }
+        ],
+        "status": "diagnostic_complete_full_rank",
+        "vif_full_design": {
+          "F_UPDATE": 2.1818979205448374,
+          "F_EXPERIENCE_EVALUATION": 1.8708643863460188,
+          "F_FUTURE": 1.299856193298812,
+          "F_EXHORT": 1.531374899202652,
+          "F_GUIDANCE": 2.058068439404746,
+          "F_REFLECTION": 2.6865351336197563,
+          "F_GREETING_GRATITUDE": 1.8362789464333311,
+          "F_INVITE_ASK": 1.1679902664014434,
+          "F_CAPTION": 2.208554285384903
+        },
+        "vif_direct_check": {
+          "F_UPDATE": 2.18189792054477,
+          "F_EXPERIENCE_EVALUATION": 1.870864386346116,
+          "F_FUTURE": 1.2998561932988983,
+          "F_EXHORT": 1.5313748992025218,
+          "F_GUIDANCE": 2.0580684394047193,
+          "F_REFLECTION": 2.686535133619897,
+          "F_GREETING_GRATITUDE": 1.8362789464334341,
+          "F_INVITE_ASK": 1.1679902664015391,
+          "F_CAPTION": 2.208554285384934
+        },
+        "max_vif": 2.6865351336197563,
+        "min_vif": 1.1679902664014434
+      }
+    },
+    "v2_content6_expression10_parallel": {
+      "n_nonempty": 5414,
+      "n_variables": 16,
+      "n_any_positive": 5217,
+      "any_positive_rate": 0.9636128555596601,
+      "n_at_least_two_positive": 3516,
+      "overlap_rate_all_nonempty": 0.6494274104174362,
+      "overlap_rate_among_positive": 0.6739505462909718,
+      "n_complete_all_variables": 4898,
+      "complete_rate": 0.9046915404506835,
+      "n_any_known_variable": 5228,
+      "n_no_positive_all_known": 5,
+      "n_no_positive_some_unknown": 192,
+      "n_all_variables_unknown": 186,
+      "positive_count_distribution": {
+        "0": 197,
+        "1": 1701,
+        "2": 2010,
+        "3": 873,
+        "4": 411,
+        "5": 140,
+        "6": 59,
+        "7": 13,
+        "8": 6,
+        "9": 4
+      },
+      "variables": {
+        "C_EXERCISE": {
+          "label": "运动与身体活动",
+          "n_known": 5003,
+          "known_rate": 0.9240857037310676,
+          "n_positive": 1280,
+          "n_negative": 3723,
+          "n_unknown": 411,
+          "positive_rate_known": 0.25584649210473714,
+          "positive_rate_all_nonempty": 0.23642408570373108,
+          "authors_known": 95,
+          "authors_positive": 81,
+          "authors_within_variation": 78,
+          "largest_author_share_of_positives": 0.228125,
+          "author_equal_mean_positive_known": 0.302116830511005,
+          "passes_previous_support_thresholds": true
+        },
+        "C_BODY": {
+          "label": "身体状态、体重与外形",
+          "n_known": 5201,
+          "known_rate": 0.9606575544883635,
+          "n_positive": 885,
+          "n_negative": 4316,
+          "n_unknown": 213,
+          "positive_rate_known": 0.17015958469525092,
+          "positive_rate_all_nonempty": 0.1634650905060953,
+          "authors_known": 95,
+          "authors_positive": 73,
+          "authors_within_variation": 72,
+          "largest_author_share_of_positives": 0.20677966101694914,
+          "author_equal_mean_positive_known": 0.18062625711204547,
+          "passes_previous_support_thresholds": true
+        },
+        "C_FOOD": {
+          "label": "饮食、食物与营养",
+          "n_known": 5213,
+          "known_rate": 0.9628740302918359,
+          "n_positive": 599,
+          "n_negative": 4614,
+          "n_unknown": 201,
+          "positive_rate_known": 0.11490504507960866,
+          "positive_rate_all_nonempty": 0.1106390838566679,
+          "authors_known": 95,
+          "authors_positive": 55,
+          "authors_within_variation": 55,
+          "largest_author_share_of_positives": 0.2287145242070117,
+          "author_equal_mean_positive_known": 0.09641306627592142,
+          "passes_previous_support_thresholds": true
+        },
+        "C_LIFE": {
+          "label": "具体生活、关系与社会文化话题",
+          "n_known": 5212,
+          "known_rate": 0.9626893239748799,
+          "n_positive": 1568,
+          "n_negative": 3644,
+          "n_unknown": 202,
+          "positive_rate_known": 0.30084420567920184,
+          "positive_rate_all_nonempty": 0.28961950498707056,
+          "authors_known": 95,
+          "authors_positive": 78,
+          "authors_within_variation": 76,
+          "largest_author_share_of_positives": 0.14094387755102042,
+          "author_equal_mean_positive_known": 0.29767109805498543,
+          "passes_previous_support_thresholds": true
+        },
+        "C_TOOLS": {
+          "label": "工具、服务与记录奖励机制",
+          "n_known": 5217,
+          "known_rate": 0.9636128555596601,
+          "n_positive": 93,
+          "n_negative": 5124,
+          "n_unknown": 197,
+          "positive_rate_known": 0.017826336975273145,
+          "positive_rate_all_nonempty": 0.017177687476911712,
+          "authors_known": 95,
+          "authors_positive": 36,
+          "authors_within_variation": 36,
+          "largest_author_share_of_positives": 0.08602150537634409,
+          "author_equal_mean_positive_known": 0.020148767880629383,
+          "passes_previous_support_thresholds": true
+        },
+        "C_OTHER": {
+          "label": "其他明确内容",
+          "n_known": 5226,
+          "known_rate": 0.9652752124122645,
+          "n_positive": 31,
+          "n_negative": 5195,
+          "n_unknown": 188,
+          "positive_rate_known": 0.005931879066207424,
+          "positive_rate_all_nonempty": 0.0057258958256372365,
+          "authors_known": 95,
+          "authors_positive": 16,
+          "authors_within_variation": 16,
+          "largest_author_share_of_positives": 0.16129032258064516,
+          "author_equal_mean_positive_known": 0.0051593552242052984,
+          "passes_previous_support_thresholds": false
+        },
+        "F_UPDATE": {
+          "label": "行动、进度或事件记录",
+          "n_known": 5223,
+          "known_rate": 0.9647210934613963,
+          "n_positive": 1675,
+          "n_negative": 3548,
+          "n_unknown": 191,
+          "positive_rate_known": 0.32069691748037527,
+          "positive_rate_all_nonempty": 0.30938308090136685,
+          "authors_known": 95,
+          "authors_positive": 88,
+          "authors_within_variation": 84,
+          "largest_author_share_of_positives": 0.11283582089552238,
+          "author_equal_mean_positive_known": 0.37315944961238195,
+          "passes_previous_support_thresholds": true
+        },
+        "F_EXPERIENCE_EVALUATION": {
+          "label": "体验或对象评价",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 1323,
+          "n_negative": 3905,
+          "n_unknown": 186,
+          "positive_rate_known": 0.25306044376434583,
+          "positive_rate_all_nonempty": 0.2443664573328408,
+          "authors_known": 95,
+          "authors_positive": 83,
+          "authors_within_variation": 82,
+          "largest_author_share_of_positives": 0.08692365835222977,
+          "author_equal_mean_positive_known": 0.3058363658520981,
+          "passes_previous_support_thresholds": true
+        },
+        "F_FUTURE": {
+          "label": "计划、目标或期待",
+          "n_known": 5214,
+          "known_rate": 0.963058736608792,
+          "n_positive": 409,
+          "n_negative": 4805,
+          "n_unknown": 200,
+          "positive_rate_known": 0.07844265439202149,
+          "positive_rate_all_nonempty": 0.07554488363502032,
+          "authors_known": 95,
+          "authors_positive": 63,
+          "authors_within_variation": 61,
+          "largest_author_share_of_positives": 0.09535452322738386,
+          "author_equal_mean_positive_known": 0.1019901091389651,
+          "passes_previous_support_thresholds": true
+        },
+        "F_EXHORT": {
+          "label": "动员或自我提醒",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 823,
+          "n_negative": 4405,
+          "n_unknown": 186,
+          "positive_rate_known": 0.15742157612853863,
+          "positive_rate_all_nonempty": 0.15201329885482084,
+          "authors_known": 95,
+          "authors_positive": 81,
+          "authors_within_variation": 79,
+          "largest_author_share_of_positives": 0.15674362089914945,
+          "author_equal_mean_positive_known": 0.18643396490242511,
+          "passes_previous_support_thresholds": true
+        },
+        "F_GUIDANCE": {
+          "label": "信息解释或可执行建议",
+          "n_known": 5227,
+          "known_rate": 0.9654599187292205,
+          "n_positive": 149,
+          "n_negative": 5078,
+          "n_unknown": 187,
+          "positive_rate_known": 0.02850583508704802,
+          "positive_rate_all_nonempty": 0.027521241226449944,
+          "authors_known": 95,
+          "authors_positive": 31,
+          "authors_within_variation": 31,
+          "largest_author_share_of_positives": 0.2550335570469799,
+          "author_equal_mean_positive_known": 0.03818803403073516,
+          "passes_previous_support_thresholds": true
+        },
+        "F_REFLECTION": {
+          "label": "议论、格言或价值主张",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 814,
+          "n_negative": 4414,
+          "n_unknown": 186,
+          "positive_rate_known": 0.1557000765110941,
+          "positive_rate_all_nonempty": 0.15035094200221646,
+          "authors_known": 95,
+          "authors_positive": 62,
+          "authors_within_variation": 61,
+          "largest_author_share_of_positives": 0.29115479115479115,
+          "author_equal_mean_positive_known": 0.12503236180446262,
+          "passes_previous_support_thresholds": true
+        },
+        "F_GREETING_GRATITUDE": {
+          "label": "问候、祝愿或感谢",
+          "n_known": 5227,
+          "known_rate": 0.9654599187292205,
+          "n_positive": 676,
+          "n_negative": 4551,
+          "n_unknown": 187,
+          "positive_rate_known": 0.1293284867036541,
+          "positive_rate_all_nonempty": 0.12486147026228298,
+          "authors_known": 95,
+          "authors_positive": 58,
+          "authors_within_variation": 58,
+          "largest_author_share_of_positives": 0.22781065088757396,
+          "author_equal_mean_positive_known": 0.11055378618973617,
+          "passes_previous_support_thresholds": true
+        },
+        "F_INVITE_ASK": {
+          "label": "联络邀请或向他人征询",
+          "n_known": 5198,
+          "known_rate": 0.9601034355374953,
+          "n_positive": 60,
+          "n_negative": 5138,
+          "n_unknown": 216,
+          "positive_rate_known": 0.011542901115813775,
+          "positive_rate_all_nonempty": 0.011082379017362394,
+          "authors_known": 95,
+          "authors_positive": 23,
+          "authors_within_variation": 23,
+          "largest_author_share_of_positives": 0.16666666666666666,
+          "author_equal_mean_positive_known": 0.016007284483658565,
+          "passes_previous_support_thresholds": true
+        },
+        "F_CAPTION": {
+          "label": "题注或景象描写",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 826,
+          "n_negative": 4402,
+          "n_unknown": 186,
+          "positive_rate_known": 0.1579954093343535,
+          "positive_rate_all_nonempty": 0.15256741780568894,
+          "authors_known": 95,
+          "authors_positive": 60,
+          "authors_within_variation": 60,
+          "largest_author_share_of_positives": 0.34019370460048426,
+          "author_equal_mean_positive_known": 0.11625277701210744,
+          "passes_previous_support_thresholds": true
+        },
+        "F_SALE": {
+          "label": "商品或服务供给告知",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 2,
+          "n_negative": 5226,
+          "n_unknown": 186,
+          "positive_rate_known": 0.00038255547054322876,
+          "positive_rate_all_nonempty": 0.0003694126339120798,
+          "authors_known": 95,
+          "authors_positive": 1,
+          "authors_within_variation": 1,
+          "largest_author_share_of_positives": 1.0,
+          "author_equal_mean_positive_known": 0.00014321518080916577,
+          "passes_previous_support_thresholds": false
+        }
+      },
+      "unique_text_weighting": {
+        "n": 4156,
+        "n_any_positive": 4050,
+        "any_positive_rate": 0.9744947064485082,
+        "n_at_least_two_positive": 3159,
+        "n_complete": 3828
+      },
+      "description": "同一轮v2的六内容轴与十表达轴并行；可分别缺失，不强制互斥或为每条提供具体内容。",
+      "collinearity": {
+        "outcome_used": false,
+        "controls": "log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date)",
+        "selection": "Only previous fixed thresholds: >=40 positives, >=40 negatives, >=10 authors with within-author variation on label-specific known rows. No outcome or p-value used.",
+        "all_label_specific_support": {
+          "C_EXERCISE": {
+            "n_known": 5003,
+            "n_positive": 1280,
+            "n_negative": 3723,
+            "authors_within_variation": 78,
+            "passes_support_threshold": true
+          },
+          "C_BODY": {
+            "n_known": 5201,
+            "n_positive": 885,
+            "n_negative": 4316,
+            "authors_within_variation": 72,
+            "passes_support_threshold": true
+          },
+          "C_FOOD": {
+            "n_known": 5213,
+            "n_positive": 599,
+            "n_negative": 4614,
+            "authors_within_variation": 55,
+            "passes_support_threshold": true
+          },
+          "C_LIFE": {
+            "n_known": 5212,
+            "n_positive": 1568,
+            "n_negative": 3644,
+            "authors_within_variation": 76,
+            "passes_support_threshold": true
+          },
+          "C_TOOLS": {
+            "n_known": 5217,
+            "n_positive": 93,
+            "n_negative": 5124,
+            "authors_within_variation": 36,
+            "passes_support_threshold": true
+          },
+          "C_OTHER": {
+            "n_known": 5226,
+            "n_positive": 31,
+            "n_negative": 5195,
+            "authors_within_variation": 16,
+            "passes_support_threshold": false
+          },
+          "F_UPDATE": {
+            "n_known": 5223,
+            "n_positive": 1675,
+            "n_negative": 3548,
+            "authors_within_variation": 84,
+            "passes_support_threshold": true
+          },
+          "F_EXPERIENCE_EVALUATION": {
+            "n_known": 5228,
+            "n_positive": 1323,
+            "n_negative": 3905,
+            "authors_within_variation": 82,
+            "passes_support_threshold": true
+          },
+          "F_FUTURE": {
+            "n_known": 5214,
+            "n_positive": 409,
+            "n_negative": 4805,
+            "authors_within_variation": 61,
+            "passes_support_threshold": true
+          },
+          "F_EXHORT": {
+            "n_known": 5228,
+            "n_positive": 823,
+            "n_negative": 4405,
+            "authors_within_variation": 79,
+            "passes_support_threshold": true
+          },
+          "F_GUIDANCE": {
+            "n_known": 5227,
+            "n_positive": 149,
+            "n_negative": 5078,
+            "authors_within_variation": 31,
+            "passes_support_threshold": true
+          },
+          "F_REFLECTION": {
+            "n_known": 5228,
+            "n_positive": 814,
+            "n_negative": 4414,
+            "authors_within_variation": 61,
+            "passes_support_threshold": true
+          },
+          "F_GREETING_GRATITUDE": {
+            "n_known": 5227,
+            "n_positive": 676,
+            "n_negative": 4551,
+            "authors_within_variation": 58,
+            "passes_support_threshold": true
+          },
+          "F_INVITE_ASK": {
+            "n_known": 5198,
+            "n_positive": 60,
+            "n_negative": 5138,
+            "authors_within_variation": 23,
+            "passes_support_threshold": true
+          },
+          "F_CAPTION": {
+            "n_known": 5228,
+            "n_positive": 826,
+            "n_negative": 4402,
+            "authors_within_variation": 60,
+            "passes_support_threshold": true
+          },
+          "F_SALE": {
+            "n_known": 5228,
+            "n_positive": 2,
+            "n_negative": 5226,
+            "authors_within_variation": 1,
+            "passes_support_threshold": false
+          }
+        },
+        "diagnostic_labels": [
+          "C_EXERCISE",
+          "C_BODY",
+          "C_FOOD",
+          "C_LIFE",
+          "C_TOOLS",
+          "F_UPDATE",
+          "F_EXPERIENCE_EVALUATION",
+          "F_FUTURE",
+          "F_EXHORT",
+          "F_GUIDANCE",
+          "F_REFLECTION",
+          "F_GREETING_GRATITUDE",
+          "F_INVITE_ASK",
+          "F_CAPTION"
+        ],
+        "excluded_labels": [
+          "C_OTHER",
+          "F_SALE"
+        ],
+        "n_complete_for_diagnostic_labels": 4898,
+        "complete_rate_all_nonempty": 0.9046915404506835,
+        "n_authors": 95,
+        "support_in_common_diagnostic_sample": {
+          "C_EXERCISE": {
+            "n_known": 4898,
+            "n_positive": 1256,
+            "n_negative": 3642,
+            "authors_within_variation": 77,
+            "passes_support_threshold": true
+          },
+          "C_BODY": {
+            "n_known": 4898,
+            "n_positive": 831,
+            "n_negative": 4067,
+            "authors_within_variation": 72,
+            "passes_support_threshold": true
+          },
+          "C_FOOD": {
+            "n_known": 4898,
+            "n_positive": 585,
+            "n_negative": 4313,
+            "authors_within_variation": 53,
+            "passes_support_threshold": true
+          },
+          "C_LIFE": {
+            "n_known": 4898,
+            "n_positive": 1534,
+            "n_negative": 3364,
+            "authors_within_variation": 76,
+            "passes_support_threshold": true
+          },
+          "C_TOOLS": {
+            "n_known": 4898,
+            "n_positive": 88,
+            "n_negative": 4810,
+            "authors_within_variation": 36,
+            "passes_support_threshold": true
+          },
+          "F_UPDATE": {
+            "n_known": 4898,
+            "n_positive": 1595,
+            "n_negative": 3303,
+            "authors_within_variation": 83,
+            "passes_support_threshold": true
+          },
+          "F_EXPERIENCE_EVALUATION": {
+            "n_known": 4898,
+            "n_positive": 1229,
+            "n_negative": 3669,
+            "authors_within_variation": 81,
+            "passes_support_threshold": true
+          },
+          "F_FUTURE": {
+            "n_known": 4898,
+            "n_positive": 382,
+            "n_negative": 4516,
+            "authors_within_variation": 59,
+            "passes_support_threshold": true
+          },
+          "F_EXHORT": {
+            "n_known": 4898,
+            "n_positive": 781,
+            "n_negative": 4117,
+            "authors_within_variation": 79,
+            "passes_support_threshold": true
+          },
+          "F_GUIDANCE": {
+            "n_known": 4898,
+            "n_positive": 144,
+            "n_negative": 4754,
+            "authors_within_variation": 30,
+            "passes_support_threshold": true
+          },
+          "F_REFLECTION": {
+            "n_known": 4898,
+            "n_positive": 811,
+            "n_negative": 4087,
+            "authors_within_variation": 60,
+            "passes_support_threshold": true
+          },
+          "F_GREETING_GRATITUDE": {
+            "n_known": 4898,
+            "n_positive": 667,
+            "n_negative": 4231,
+            "authors_within_variation": 58,
+            "passes_support_threshold": true
+          },
+          "F_INVITE_ASK": {
+            "n_known": 4898,
+            "n_positive": 54,
+            "n_negative": 4844,
+            "authors_within_variation": 21,
+            "passes_support_threshold": true
+          },
+          "F_CAPTION": {
+            "n_known": 4898,
+            "n_positive": 692,
+            "n_negative": 4206,
+            "authors_within_variation": 58,
+            "passes_support_threshold": true
+          }
+        },
+        "labels_failing_threshold_in_common_sample": [],
+        "design": {
+          "rows": 4898,
+          "columns_including_intercept": 186,
+          "rank": 186
+        },
+        "max_absolute_phi": 0.36950904260489315,
+        "top_phi_pairs": [
+          {
+            "first": "C_LIFE",
+            "second": "F_REFLECTION",
+            "phi": 0.36950904260489315,
+            "joint_positive": 566
+          },
+          {
+            "first": "C_EXERCISE",
+            "second": "F_UPDATE",
+            "phi": 0.30031336574350687,
+            "joint_positive": 710
+          },
+          {
+            "first": "F_UPDATE",
+            "second": "F_CAPTION",
+            "phi": -0.27811467936970863,
+            "joint_positive": 3
+          },
+          {
+            "first": "C_BODY",
+            "second": "F_GUIDANCE",
+            "phi": 0.2562200879632312,
+            "joint_positive": 104
+          },
+          {
+            "first": "C_BODY",
+            "second": "F_EXPERIENCE_EVALUATION",
+            "phi": 0.23147070594938188,
+            "joint_positive": 393
+          },
+          {
+            "first": "F_UPDATE",
+            "second": "F_REFLECTION",
+            "phi": -0.2169550558928032,
+            "joint_positive": 79
+          },
+          {
+            "first": "C_EXERCISE",
+            "second": "F_GUIDANCE",
+            "phi": 0.210561458903995,
+            "joint_positive": 113
+          },
+          {
+            "first": "F_EXPERIENCE_EVALUATION",
+            "second": "F_CAPTION",
+            "phi": -0.19825366528131436,
+            "joint_positive": 27
+          },
+          {
+            "first": "F_EXPERIENCE_EVALUATION",
+            "second": "F_REFLECTION",
+            "phi": -0.18306670194243724,
+            "joint_positive": 59
+          },
+          {
+            "first": "F_UPDATE",
+            "second": "F_GREETING_GRATITUDE",
+            "phi": -0.17555783253029406,
+            "joint_positive": 79
+          }
+        ],
+        "status": "diagnostic_complete_full_rank",
+        "vif_full_design": {
+          "C_EXERCISE": 1.9457671210743748,
+          "C_BODY": 1.4075047419720168,
+          "C_FOOD": 1.870718494108101,
+          "C_LIFE": 1.7262442959284325,
+          "C_TOOLS": 1.2243902660339339,
+          "F_UPDATE": 2.3260882120131363,
+          "F_EXPERIENCE_EVALUATION": 1.9462718613221515,
+          "F_FUTURE": 1.3284740062331972,
+          "F_EXHORT": 1.5298689451293095,
+          "F_GUIDANCE": 2.164252772093226,
+          "F_REFLECTION": 2.777530031901367,
+          "F_GREETING_GRATITUDE": 1.9220633400663218,
+          "F_INVITE_ASK": 1.148229737281773,
+          "F_CAPTION": 2.2123719977617173
+        },
+        "vif_direct_check": {
+          "C_EXERCISE": 1.9457671210742458,
+          "C_BODY": 1.40750474197195,
+          "C_FOOD": 1.8707184941083919,
+          "C_LIFE": 1.7262442959285142,
+          "C_TOOLS": 1.2243902660338455,
+          "F_UPDATE": 2.3260882120132953,
+          "F_EXPERIENCE_EVALUATION": 1.946271861322076,
+          "F_FUTURE": 1.3284740062330944,
+          "F_EXHORT": 1.529868945129278,
+          "F_GUIDANCE": 2.164252772093168,
+          "F_REFLECTION": 2.777530031901402,
+          "F_GREETING_GRATITUDE": 1.9220633400663079,
+          "F_INVITE_ASK": 1.1482297372817272,
+          "F_CAPTION": 2.21237199776181
+        },
+        "max_vif": 2.777530031901367,
+        "min_vif": 1.148229737281773
+      }
+    },
+    "mixed_v3_nine_v2_five_auxiliary": {
+      "n_nonempty": 5414,
+      "n_variables": 14,
+      "n_any_positive": 4809,
+      "any_positive_rate": 0.8882526782415958,
+      "n_at_least_two_positive": 1570,
+      "overlap_rate_all_nonempty": 0.2899889176209826,
+      "overlap_rate_among_positive": 0.32647119983364525,
+      "n_complete_all_variables": 4311,
+      "complete_rate": 0.796268932397488,
+      "n_any_known_variable": 5237,
+      "n_no_positive_all_known": 96,
+      "n_no_positive_some_unknown": 509,
+      "n_all_variables_unknown": 177,
+      "positive_count_distribution": {
+        "0": 605,
+        "1": 3239,
+        "2": 1218,
+        "3": 259,
+        "4": 66,
+        "5": 22,
+        "6": 1,
+        "7": 4
+      },
+      "variables": {
+        "V3_ACTION": {
+          "label": "行动或进度记录",
+          "n_known": 4564,
+          "known_rate": 0.842999630587366,
+          "n_positive": 1963,
+          "n_negative": 2601,
+          "n_unknown": 850,
+          "positive_rate_known": 0.43010517090271694,
+          "positive_rate_all_nonempty": 0.36257850018470633,
+          "authors_known": 94,
+          "authors_positive": 85,
+          "authors_within_variation": 77,
+          "largest_author_share_of_positives": 0.1762608252674478,
+          "author_equal_mean_positive_known": 0.4636535290302511,
+          "passes_previous_support_thresholds": true
+        },
+        "V3_PLAN": {
+          "label": "未来行动安排",
+          "n_known": 4816,
+          "known_rate": 0.8895456224602881,
+          "n_positive": 183,
+          "n_negative": 4633,
+          "n_unknown": 598,
+          "positive_rate_known": 0.03799833887043189,
+          "positive_rate_all_nonempty": 0.033801256002955304,
+          "authors_known": 95,
+          "authors_positive": 41,
+          "authors_within_variation": 41,
+          "largest_author_share_of_positives": 0.1366120218579235,
+          "author_equal_mean_positive_known": 0.03927786240860713,
+          "passes_previous_support_thresholds": true
+        },
+        "V3_GOAL": {
+          "label": "目标或个人期待",
+          "n_known": 5061,
+          "known_rate": 0.9347986701145179,
+          "n_positive": 101,
+          "n_negative": 4960,
+          "n_unknown": 353,
+          "positive_rate_known": 0.019956530329974312,
+          "positive_rate_all_nonempty": 0.01865533801256003,
+          "authors_known": 95,
+          "authors_positive": 34,
+          "authors_within_variation": 33,
+          "largest_author_share_of_positives": 0.15841584158415842,
+          "author_equal_mean_positive_known": 0.03241905561650586,
+          "passes_previous_support_thresholds": true
+        },
+        "V3_EXHORT": {
+          "label": "鼓励或行动提醒",
+          "n_known": 5001,
+          "known_rate": 0.9237162910971555,
+          "n_positive": 839,
+          "n_negative": 4162,
+          "n_unknown": 413,
+          "positive_rate_known": 0.16776644671065788,
+          "positive_rate_all_nonempty": 0.15496859992611747,
+          "authors_known": 95,
+          "authors_positive": 78,
+          "authors_within_variation": 76,
+          "largest_author_share_of_positives": 0.10965435041716329,
+          "author_equal_mean_positive_known": 0.19447455438042296,
+          "passes_previous_support_thresholds": true
+        },
+        "V3_EXPERIENCE": {
+          "label": "自身感受或体验",
+          "n_known": 5045,
+          "known_rate": 0.9318433690432213,
+          "n_positive": 674,
+          "n_negative": 4371,
+          "n_unknown": 369,
+          "positive_rate_known": 0.133597621407334,
+          "positive_rate_all_nonempty": 0.12449205762837089,
+          "authors_known": 95,
+          "authors_positive": 68,
+          "authors_within_variation": 66,
+          "largest_author_share_of_positives": 0.08011869436201781,
+          "author_equal_mean_positive_known": 0.16724359903333044,
+          "passes_previous_support_thresholds": true
+        },
+        "V3_APPRAISAL": {
+          "label": "对象或情境评价",
+          "n_known": 5036,
+          "known_rate": 0.9301810121906169,
+          "n_positive": 582,
+          "n_negative": 4454,
+          "n_unknown": 378,
+          "positive_rate_known": 0.11556791104050834,
+          "positive_rate_all_nonempty": 0.10749907646841522,
+          "authors_known": 95,
+          "authors_positive": 69,
+          "authors_within_variation": 69,
+          "largest_author_share_of_positives": 0.09621993127147767,
+          "author_equal_mean_positive_known": 0.12217743994126634,
+          "passes_previous_support_thresholds": true
+        },
+        "V3_GREETING": {
+          "label": "问候或祝愿",
+          "n_known": 5082,
+          "known_rate": 0.9386775027705948,
+          "n_positive": 622,
+          "n_negative": 4460,
+          "n_unknown": 332,
+          "positive_rate_known": 0.12239275875639512,
+          "positive_rate_all_nonempty": 0.11488732914665682,
+          "authors_known": 95,
+          "authors_positive": 53,
+          "authors_within_variation": 53,
+          "largest_author_share_of_positives": 0.24758842443729903,
+          "author_equal_mean_positive_known": 0.09721742605422948,
+          "passes_previous_support_thresholds": true
+        },
+        "V3_THANKS": {
+          "label": "感谢或致谢",
+          "n_known": 5080,
+          "known_rate": 0.9383080901366827,
+          "n_positive": 28,
+          "n_negative": 5052,
+          "n_unknown": 334,
+          "positive_rate_known": 0.005511811023622047,
+          "positive_rate_all_nonempty": 0.005171776874769117,
+          "authors_known": 95,
+          "authors_positive": 18,
+          "authors_within_variation": 18,
+          "largest_author_share_of_positives": 0.10714285714285714,
+          "author_equal_mean_positive_known": 0.00735076997366472,
+          "passes_previous_support_thresholds": false
+        },
+        "V3_REQUEST": {
+          "label": "向他人征询或邀请",
+          "n_known": 5025,
+          "known_rate": 0.9281492427041005,
+          "n_positive": 53,
+          "n_negative": 4972,
+          "n_unknown": 389,
+          "positive_rate_known": 0.01054726368159204,
+          "positive_rate_all_nonempty": 0.009789434798670114,
+          "authors_known": 95,
+          "authors_positive": 22,
+          "authors_within_variation": 22,
+          "largest_author_share_of_positives": 0.16981132075471697,
+          "author_equal_mean_positive_known": 0.015367129187525103,
+          "passes_previous_support_thresholds": true
+        },
+        "F_REFLECTION": {
+          "label": "议论、格言或价值主张",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 814,
+          "n_negative": 4414,
+          "n_unknown": 186,
+          "positive_rate_known": 0.1557000765110941,
+          "positive_rate_all_nonempty": 0.15035094200221646,
+          "authors_known": 95,
+          "authors_positive": 62,
+          "authors_within_variation": 61,
+          "largest_author_share_of_positives": 0.29115479115479115,
+          "author_equal_mean_positive_known": 0.12503236180446262,
+          "passes_previous_support_thresholds": true
+        },
+        "F_GUIDANCE": {
+          "label": "信息解释或可执行建议",
+          "n_known": 5227,
+          "known_rate": 0.9654599187292205,
+          "n_positive": 149,
+          "n_negative": 5078,
+          "n_unknown": 187,
+          "positive_rate_known": 0.02850583508704802,
+          "positive_rate_all_nonempty": 0.027521241226449944,
+          "authors_known": 95,
+          "authors_positive": 31,
+          "authors_within_variation": 31,
+          "largest_author_share_of_positives": 0.2550335570469799,
+          "author_equal_mean_positive_known": 0.03818803403073516,
+          "passes_previous_support_thresholds": true
+        },
+        "F_CAPTION": {
+          "label": "题注或景象描写",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 826,
+          "n_negative": 4402,
+          "n_unknown": 186,
+          "positive_rate_known": 0.1579954093343535,
+          "positive_rate_all_nonempty": 0.15256741780568894,
+          "authors_known": 95,
+          "authors_positive": 60,
+          "authors_within_variation": 60,
+          "largest_author_share_of_positives": 0.34019370460048426,
+          "author_equal_mean_positive_known": 0.11625277701210744,
+          "passes_previous_support_thresholds": true
+        },
+        "F_SALE": {
+          "label": "商品或服务供给告知",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 2,
+          "n_negative": 5226,
+          "n_unknown": 186,
+          "positive_rate_known": 0.00038255547054322876,
+          "positive_rate_all_nonempty": 0.0003694126339120798,
+          "authors_known": 95,
+          "authors_positive": 1,
+          "authors_within_variation": 1,
+          "largest_author_share_of_positives": 1.0,
+          "author_equal_mean_positive_known": 0.00014321518080916577,
+          "passes_previous_support_thresholds": false
+        },
+        "F_OTHER": {
+          "label": "其他明确表达",
+          "n_known": 5228,
+          "known_rate": 0.9656446250461765,
+          "n_positive": 24,
+          "n_negative": 5204,
+          "n_unknown": 186,
+          "positive_rate_known": 0.0045906656465187455,
+          "positive_rate_all_nonempty": 0.004432951606944958,
+          "authors_known": 95,
+          "authors_positive": 17,
+          "authors_within_variation": 17,
+          "largest_author_share_of_positives": 0.16666666666666666,
+          "author_equal_mean_positive_known": 0.0043251116848024036,
+          "passes_previous_support_thresholds": false
+        }
+      },
+      "unique_text_weighting": {
+        "n": 4156,
+        "n_any_positive": 3674,
+        "any_positive_rate": 0.8840230991337825,
+        "n_at_least_two_positive": 1430,
+        "n_complete": 3402
+      },
+      "description": "不可直接采用的跨轮拼接试验；含F_OTHER的14项，保留每轮逐项未知，不自动解决可读性或定义冲突。",
+      "collinearity": {
+        "outcome_used": false,
+        "controls": "log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date)",
+        "selection": "Only previous fixed thresholds: >=40 positives, >=40 negatives, >=10 authors with within-author variation on label-specific known rows. No outcome or p-value used.",
+        "all_label_specific_support": {
+          "V3_ACTION": {
+            "n_known": 4564,
+            "n_positive": 1963,
+            "n_negative": 2601,
+            "authors_within_variation": 77,
+            "passes_support_threshold": true
+          },
+          "V3_PLAN": {
+            "n_known": 4816,
+            "n_positive": 183,
+            "n_negative": 4633,
+            "authors_within_variation": 41,
+            "passes_support_threshold": true
+          },
+          "V3_GOAL": {
+            "n_known": 5061,
+            "n_positive": 101,
+            "n_negative": 4960,
+            "authors_within_variation": 33,
+            "passes_support_threshold": true
+          },
+          "V3_EXHORT": {
+            "n_known": 5001,
+            "n_positive": 839,
+            "n_negative": 4162,
+            "authors_within_variation": 76,
+            "passes_support_threshold": true
+          },
+          "V3_EXPERIENCE": {
+            "n_known": 5045,
+            "n_positive": 674,
+            "n_negative": 4371,
+            "authors_within_variation": 66,
+            "passes_support_threshold": true
+          },
+          "V3_APPRAISAL": {
+            "n_known": 5036,
+            "n_positive": 582,
+            "n_negative": 4454,
+            "authors_within_variation": 69,
+            "passes_support_threshold": true
+          },
+          "V3_GREETING": {
+            "n_known": 5082,
+            "n_positive": 622,
+            "n_negative": 4460,
+            "authors_within_variation": 53,
+            "passes_support_threshold": true
+          },
+          "V3_THANKS": {
+            "n_known": 5080,
+            "n_positive": 28,
+            "n_negative": 5052,
+            "authors_within_variation": 18,
+            "passes_support_threshold": false
+          },
+          "V3_REQUEST": {
+            "n_known": 5025,
+            "n_positive": 53,
+            "n_negative": 4972,
+            "authors_within_variation": 22,
+            "passes_support_threshold": true
+          },
+          "F_REFLECTION": {
+            "n_known": 5228,
+            "n_positive": 814,
+            "n_negative": 4414,
+            "authors_within_variation": 61,
+            "passes_support_threshold": true
+          },
+          "F_GUIDANCE": {
+            "n_known": 5227,
+            "n_positive": 149,
+            "n_negative": 5078,
+            "authors_within_variation": 31,
+            "passes_support_threshold": true
+          },
+          "F_CAPTION": {
+            "n_known": 5228,
+            "n_positive": 826,
+            "n_negative": 4402,
+            "authors_within_variation": 60,
+            "passes_support_threshold": true
+          },
+          "F_SALE": {
+            "n_known": 5228,
+            "n_positive": 2,
+            "n_negative": 5226,
+            "authors_within_variation": 1,
+            "passes_support_threshold": false
+          },
+          "F_OTHER": {
+            "n_known": 5228,
+            "n_positive": 24,
+            "n_negative": 5204,
+            "authors_within_variation": 17,
+            "passes_support_threshold": false
+          }
+        },
+        "diagnostic_labels": [
+          "V3_ACTION",
+          "V3_PLAN",
+          "V3_GOAL",
+          "V3_EXHORT",
+          "V3_EXPERIENCE",
+          "V3_APPRAISAL",
+          "V3_GREETING",
+          "V3_REQUEST",
+          "F_REFLECTION",
+          "F_GUIDANCE",
+          "F_CAPTION"
+        ],
+        "excluded_labels": [
+          "V3_THANKS",
+          "F_SALE",
+          "F_OTHER"
+        ],
+        "n_complete_for_diagnostic_labels": 4316,
+        "complete_rate_all_nonempty": 0.7971924639822682,
+        "n_authors": 94,
+        "support_in_common_diagnostic_sample": {
+          "V3_ACTION": {
+            "n_known": 4316,
+            "n_positive": 1890,
+            "n_negative": 2426,
+            "authors_within_variation": 77,
+            "passes_support_threshold": true
+          },
+          "V3_PLAN": {
+            "n_known": 4316,
+            "n_positive": 172,
+            "n_negative": 4144,
+            "authors_within_variation": 41,
+            "passes_support_threshold": true
+          },
+          "V3_GOAL": {
+            "n_known": 4316,
+            "n_positive": 95,
+            "n_negative": 4221,
+            "authors_within_variation": 33,
+            "passes_support_threshold": true
+          },
+          "V3_EXHORT": {
+            "n_known": 4316,
+            "n_positive": 801,
+            "n_negative": 3515,
+            "authors_within_variation": 73,
+            "passes_support_threshold": true
+          },
+          "V3_EXPERIENCE": {
+            "n_known": 4316,
+            "n_positive": 624,
+            "n_negative": 3692,
+            "authors_within_variation": 66,
+            "passes_support_threshold": true
+          },
+          "V3_APPRAISAL": {
+            "n_known": 4316,
+            "n_positive": 544,
+            "n_negative": 3772,
+            "authors_within_variation": 69,
+            "passes_support_threshold": true
+          },
+          "V3_GREETING": {
+            "n_known": 4316,
+            "n_positive": 605,
+            "n_negative": 3711,
+            "authors_within_variation": 53,
+            "passes_support_threshold": true
+          },
+          "V3_REQUEST": {
+            "n_known": 4316,
+            "n_positive": 51,
+            "n_negative": 4265,
+            "authors_within_variation": 22,
+            "passes_support_threshold": true
+          },
+          "F_REFLECTION": {
+            "n_known": 4316,
+            "n_positive": 774,
+            "n_negative": 3542,
+            "authors_within_variation": 58,
+            "passes_support_threshold": true
+          },
+          "F_GUIDANCE": {
+            "n_known": 4316,
+            "n_positive": 137,
+            "n_negative": 4179,
+            "authors_within_variation": 27,
+            "passes_support_threshold": true
+          },
+          "F_CAPTION": {
+            "n_known": 4316,
+            "n_positive": 440,
+            "n_negative": 3876,
+            "authors_within_variation": 50,
+            "passes_support_threshold": true
+          }
+        },
+        "labels_failing_threshold_in_common_sample": [],
+        "design": {
+          "rows": 4316,
+          "columns_including_intercept": 181,
+          "rank": 181
+        },
+        "max_absolute_phi": 0.2957381259596633,
+        "top_phi_pairs": [
+          {
+            "first": "V3_ACTION",
+            "second": "F_REFLECTION",
+            "phi": -0.2957381259596633,
+            "joint_positive": 96
+          },
+          {
+            "first": "V3_ACTION",
+            "second": "V3_GREETING",
+            "phi": -0.26222066252286463,
+            "joint_positive": 70
+          },
+          {
+            "first": "V3_ACTION",
+            "second": "V3_EXHORT",
+            "phi": -0.2519727684374305,
+            "joint_positive": 141
+          },
+          {
+            "first": "V3_EXHORT",
+            "second": "F_GUIDANCE",
+            "phi": 0.22291546555619687,
+            "joint_positive": 91
+          },
+          {
+            "first": "V3_EXHORT",
+            "second": "F_REFLECTION",
+            "phi": 0.1854157122410924,
+            "joint_positive": 263
+          },
+          {
+            "first": "V3_EXHORT",
+            "second": "F_CAPTION",
+            "phi": -0.15492888652121445,
+            "joint_positive": 3
+          },
+          {
+            "first": "V3_ACTION",
+            "second": "V3_EXPERIENCE",
+            "phi": 0.14706655454396333,
+            "joint_positive": 384
+          },
+          {
+            "first": "F_REFLECTION",
+            "second": "F_CAPTION",
+            "phi": -0.14552381714034546,
+            "joint_positive": 6
+          },
+          {
+            "first": "V3_APPRAISAL",
+            "second": "V3_GREETING",
+            "phi": -0.12719594905878778,
+            "joint_positive": 13
+          },
+          {
+            "first": "V3_EXHORT",
+            "second": "V3_GREETING",
+            "phi": -0.12579721198195218,
+            "joint_positive": 39
+          }
+        ],
+        "status": "diagnostic_complete_full_rank",
+        "vif_full_design": {
+          "V3_ACTION": 2.0401530648349975,
+          "V3_PLAN": 1.1624945664461368,
+          "V3_GOAL": 1.1584106134132615,
+          "V3_EXHORT": 1.5241266374371067,
+          "V3_EXPERIENCE": 1.350992687876043,
+          "V3_APPRAISAL": 1.3198816871015224,
+          "V3_GREETING": 1.922595683949387,
+          "V3_REQUEST": 1.1551276996358029,
+          "F_REFLECTION": 2.3347142228892848,
+          "F_GUIDANCE": 2.110038097882195,
+          "F_CAPTION": 1.4202571468900091
+        },
+        "vif_direct_check": {
+          "V3_ACTION": 2.0401530648349904,
+          "V3_PLAN": 1.1624945664460775,
+          "V3_GOAL": 1.1584106134133731,
+          "V3_EXHORT": 1.5241266374370581,
+          "V3_EXPERIENCE": 1.35099268787601,
+          "V3_APPRAISAL": 1.3198816871014438,
+          "V3_GREETING": 1.9225956839494565,
+          "V3_REQUEST": 1.1551276996359283,
+          "F_REFLECTION": 2.3347142228891054,
+          "F_GUIDANCE": 2.1100380978821938,
+          "F_CAPTION": 1.4202571468899758
+        },
+        "max_vif": 2.3347142228892848,
+        "min_vif": 1.1551276996358029
+      },
+      "substantive_positive_without_other": 4790,
+      "substantive_positive_without_other_rate": 0.8847432582194311,
+      "n_positive_on_state_conflict_rows": 136,
+      "n_positive_with_legacy_aux_but_v3_insufficient": 135
+    }
+  },
+  "parallel_axes": {
+    "expression_positive": 5202,
+    "content_positive": 3371,
+    "either_axis_positive": 5217,
+    "either_axis_positive_rate": 0.9636128555596601,
+    "both_axes_positive": 3356,
+    "expression_only_positive": 1846,
+    "content_only_positive": 15,
+    "neither_axis_positive": 197,
+    "content_axis_complete": 4947,
+    "expression_axis_complete": 5178,
+    "both_axes_complete": 4898
+  },
+  "cross_round_observation": {
+    "n_state_conflict": 161,
+    "v2_readable_v3_insufficient": 152,
+    "v2_insufficient_v3_readable": 9
+  },
+  "hierarchical_parent10_child_attributes": {
+    "description": "保留v2十父标签为总体描述；v3只作父阳性正文内的子属性。父不阳性时子属性不适用，不能把不适用填0。跨轮矛盾均显式保留，不能视为经验证的分类继承。",
+    "parent_positive_coverage": 5202,
+    "parent_coverage_rate": 0.9608422608053195,
+    "parents_collinearity": "Same parent-only design as v2_ten_non_other; do not include a parent and exhaustive child dummy set together.",
+    "families": [
+      {
+        "parent": "F_UPDATE",
+        "children": [
+          "V3_ACTION"
+        ],
+        "n_parent_positive": 1675,
+        "n_parent_negative_child_positive": 429,
+        "n_parent_unknown_child_positive": 1,
+        "n_parent_positive_children_all_zero": 42,
+        "n_parent_positive_children_all_unknown": 100,
+        "n_parent_positive_children_no_positive_some_unknown": 100,
+        "n_parent_positive_any_child_positive": 1533,
+        "n_parent_positive_all_children_known": 1575,
+        "n_parent_positive_state_conflict": 4,
+        "children_available_given_parent_positive": {
+          "V3_ACTION": {
+            "n_known": 1575,
+            "n_positive": 1533,
+            "n_negative": 42,
+            "authors_within_variation": 26,
+            "passes_support_threshold": true
+          }
+        }
+      },
+      {
+        "parent": "F_FUTURE",
+        "children": [
+          "V3_PLAN",
+          "V3_GOAL"
+        ],
+        "n_parent_positive": 409,
+        "n_parent_negative_child_positive": 47,
+        "n_parent_unknown_child_positive": 2,
+        "n_parent_positive_children_all_zero": 105,
+        "n_parent_positive_children_all_unknown": 2,
+        "n_parent_positive_children_no_positive_some_unknown": 83,
+        "n_parent_positive_any_child_positive": 221,
+        "n_parent_positive_all_children_known": 325,
+        "n_parent_positive_state_conflict": 1,
+        "children_available_given_parent_positive": {
+          "V3_PLAN": {
+            "n_known": 334,
+            "n_positive": 165,
+            "n_negative": 169,
+            "authors_within_variation": 27,
+            "passes_support_threshold": true
+          },
+          "V3_GOAL": {
+            "n_known": 398,
+            "n_positive": 70,
+            "n_negative": 328,
+            "authors_within_variation": 23,
+            "passes_support_threshold": true
+          }
+        }
+      },
+      {
+        "parent": "F_EXHORT",
+        "children": [
+          "V3_EXHORT"
+        ],
+        "n_parent_positive": 823,
+        "n_parent_negative_child_positive": 218,
+        "n_parent_unknown_child_positive": 0,
+        "n_parent_positive_children_all_zero": 141,
+        "n_parent_positive_children_all_unknown": 61,
+        "n_parent_positive_children_no_positive_some_unknown": 61,
+        "n_parent_positive_any_child_positive": 621,
+        "n_parent_positive_all_children_known": 762,
+        "n_parent_positive_state_conflict": 1,
+        "children_available_given_parent_positive": {
+          "V3_EXHORT": {
+            "n_known": 762,
+            "n_positive": 621,
+            "n_negative": 141,
+            "authors_within_variation": 34,
+            "passes_support_threshold": true
+          }
+        }
+      },
+      {
+        "parent": "F_EXPERIENCE_EVALUATION",
+        "children": [
+          "V3_EXPERIENCE",
+          "V3_APPRAISAL"
+        ],
+        "n_parent_positive": 1323,
+        "n_parent_negative_child_positive": 113,
+        "n_parent_unknown_child_positive": 0,
+        "n_parent_positive_children_all_zero": 222,
+        "n_parent_positive_children_all_unknown": 20,
+        "n_parent_positive_children_no_positive_some_unknown": 67,
+        "n_parent_positive_any_child_positive": 1034,
+        "n_parent_positive_all_children_known": 1249,
+        "n_parent_positive_state_conflict": 10,
+        "children_available_given_parent_positive": {
+          "V3_EXPERIENCE": {
+            "n_known": 1281,
+            "n_positive": 628,
+            "n_negative": 653,
+            "authors_within_variation": 63,
+            "passes_support_threshold": true
+          },
+          "V3_APPRAISAL": {
+            "n_known": 1271,
+            "n_positive": 515,
+            "n_negative": 756,
+            "authors_within_variation": 61,
+            "passes_support_threshold": true
+          }
+        }
+      },
+      {
+        "parent": "F_GREETING_GRATITUDE",
+        "children": [
+          "V3_GREETING",
+          "V3_THANKS"
+        ],
+        "n_parent_positive": 676,
+        "n_parent_negative_child_positive": 4,
+        "n_parent_unknown_child_positive": 0,
+        "n_parent_positive_children_all_zero": 29,
+        "n_parent_positive_children_all_unknown": 0,
+        "n_parent_positive_children_no_positive_some_unknown": 5,
+        "n_parent_positive_any_child_positive": 642,
+        "n_parent_positive_all_children_known": 671,
+        "n_parent_positive_state_conflict": 0,
+        "children_available_given_parent_positive": {
+          "V3_GREETING": {
+            "n_known": 673,
+            "n_positive": 619,
+            "n_negative": 54,
+            "authors_within_variation": 24,
+            "passes_support_threshold": true
+          },
+          "V3_THANKS": {
+            "n_known": 674,
+            "n_positive": 27,
+            "n_negative": 647,
+            "authors_within_variation": 15,
+            "passes_support_threshold": false
+          }
+        }
+      },
+      {
+        "parent": "F_INVITE_ASK",
+        "children": [
+          "V3_REQUEST"
+        ],
+        "n_parent_positive": 60,
+        "n_parent_negative_child_positive": 9,
+        "n_parent_unknown_child_positive": 2,
+        "n_parent_positive_children_all_zero": 3,
+        "n_parent_positive_children_all_unknown": 15,
+        "n_parent_positive_children_no_positive_some_unknown": 15,
+        "n_parent_positive_any_child_positive": 42,
+        "n_parent_positive_all_children_known": 45,
+        "n_parent_positive_state_conflict": 0,
+        "children_available_given_parent_positive": {
+          "V3_REQUEST": {
+            "n_known": 45,
+            "n_positive": 42,
+            "n_negative": 3,
+            "authors_within_variation": 1,
+            "passes_support_threshold": false
+          }
+        }
+      }
+    ],
+    "gated_subattribute_known_counts": {
+      "V3_ACTION": 1575,
+      "V3_PLAN": 334,
+      "V3_GOAL": 398,
+      "V3_EXHORT": 762,
+      "V3_EXPERIENCE": 1281,
+      "V3_APPRAISAL": 1271,
+      "V3_GREETING": 673,
+      "V3_THANKS": 674,
+      "V3_REQUEST": 45
+    },
+    "note": "Subattribute negative is interpretable only among parent-positive and child-known rows. A single pooled VIF across all conditional children is not meaningful because there are structural not-applicable states."
+  },
+  "limits": [
+    "All semantic labels are historical AI predictions; no candidate is human-validated.",
+    "Cross-round unions overstate resolved classification if observation or family conflicts are ignored.",
+    "Full-design VIF diagnoses numerical dependence in complete cases; it does not establish valid categories or independence of meanings.",
+    "Content and expression are parallel measurements with different scope; content-unspecified can be a valid semantic state.",
+    "Rare types remain in descriptive coverage but are excluded from simultaneous diagnostics by fixed support thresholds.",
+    "The design includes author/date fixed effects and observed text/media controls; no outcome data or associations were used."
+  ],
+  "input_sha256": {
+    "posts": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+    "v2": "4460fbaae9a8c08a1b8c29f1abd1d6dc5885e21e1b093d1fe30de60c47701f86",
+    "v3": "ad5c2194542ddf971de7ad728b549d7c8a35927c310ca6915834aba95eedc595"
+  }
+}

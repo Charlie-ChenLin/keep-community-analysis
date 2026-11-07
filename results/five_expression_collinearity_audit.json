@@ -1,0 +1,161 @@
+{
+  "scope": "Retrospective audit of old five grouped v2 expression variables; not the v3 nine-variable audit.",
+  "n_total": 9532,
+  "n_nonempty_body": 5414,
+  "n_complete_for_all_five": 5180,
+  "n_excluded_due_to_any_unknown_or_unavailable": 4352,
+  "n_authors": 95,
+  "outcome_used": false,
+  "coexistence": {
+    "no_positive": 86,
+    "one_positive": 3874,
+    "at_least_two_positive": 1220,
+    "distribution": {
+      "0": 86,
+      "1": 3874,
+      "2": 1043,
+      "3": 158,
+      "4": 19
+    }
+  },
+  "controls": "log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date)",
+  "variables": [
+    {
+      "code": "R_RECORD",
+      "label": "记录或呈现",
+      "positive_posts": 2480,
+      "negative_posts": 2700,
+      "authors_with_within_variation": 85,
+      "vif_full_design": 2.103077312851464,
+      "vif_direct_check": 2.103077312851522
+    },
+    {
+      "code": "R_EVALUATE",
+      "label": "体验或评价",
+      "positive_posts": 1304,
+      "negative_posts": 3876,
+      "authors_with_within_variation": 82,
+      "vif_full_design": 1.7405732912216652,
+      "vif_direct_check": 1.7405732912217113
+    },
+    {
+      "code": "R_PLAN_ENCOURAGE",
+      "label": "计划、期待或鼓励",
+      "positive_posts": 1182,
+      "negative_posts": 3998,
+      "authors_with_within_variation": 82,
+      "vif_full_design": 1.5802631850927553,
+      "vif_direct_check": 1.5802631850926618
+    },
+    {
+      "code": "R_SOCIAL",
+      "label": "问候、感谢或邀请交流",
+      "positive_posts": 730,
+      "negative_posts": 4450,
+      "authors_with_within_variation": 64,
+      "vif_full_design": 1.7496912805317673,
+      "vif_direct_check": 1.7496912805317495
+    },
+    {
+      "code": "R_REFLECT",
+      "label": "感悟或观点",
+      "positive_posts": 814,
+      "negative_posts": 4366,
+      "authors_with_within_variation": 61,
+      "vif_full_design": 2.484578625307965,
+      "vif_direct_check": 2.484578625307678
+    }
+  ],
+  "pairs": [
+    {
+      "first": "R_RECORD",
+      "second": "R_EVALUATE",
+      "joint_positive_posts": 573,
+      "phi": -0.045686079873342535,
+      "correlation_after_controls": -0.11577102146390814
+    },
+    {
+      "first": "R_RECORD",
+      "second": "R_PLAN_ENCOURAGE",
+      "joint_positive_posts": 284,
+      "phi": -0.25958905959620676,
+      "correlation_after_controls": -0.25753667722783985
+    },
+    {
+      "first": "R_RECORD",
+      "second": "R_SOCIAL",
+      "joint_positive_posts": 103,
+      "phi": -0.2737752120793393,
+      "correlation_after_controls": -0.2903952039820074
+    },
+    {
+      "first": "R_RECORD",
+      "second": "R_REFLECT",
+      "joint_positive_posts": 92,
+      "phi": -0.3161314066325282,
+      "correlation_after_controls": -0.1678707745571428
+    },
+    {
+      "first": "R_EVALUATE",
+      "second": "R_PLAN_ENCOURAGE",
+      "joint_positive_posts": 176,
+      "phi": -0.12883593546082178,
+      "correlation_after_controls": -0.21579855136564127
+    },
+    {
+      "first": "R_EVALUATE",
+      "second": "R_SOCIAL",
+      "joint_positive_posts": 57,
+      "phi": -0.16205724326289603,
+      "correlation_after_controls": -0.11616350812141103
+    },
+    {
+      "first": "R_EVALUATE",
+      "second": "R_REFLECT",
+      "joint_positive_posts": 59,
+      "phi": -0.1783375619987072,
+      "correlation_after_controls": -0.19863717810526332
+    },
+    {
+      "first": "R_PLAN_ENCOURAGE",
+      "second": "R_SOCIAL",
+      "joint_positive_posts": 71,
+      "phi": -0.12635831140418138,
+      "correlation_after_controls": -0.11898848326575764
+    },
+    {
+      "first": "R_PLAN_ENCOURAGE",
+      "second": "R_REFLECT",
+      "joint_positive_posts": 151,
+      "phi": -0.04391481818498107,
+      "correlation_after_controls": -0.09490836399099213
+    },
+    {
+      "first": "R_SOCIAL",
+      "second": "R_REFLECT",
+      "joint_positive_posts": 65,
+      "phi": -0.07579062003471443,
+      "correlation_after_controls": -0.08175311179986998
+    }
+  ],
+  "max_absolute_phi": 0.3161314066325282,
+  "max_absolute_correlation_after_controls": 0.2903952039820074,
+  "design_matrix": {
+    "rows": 5180,
+    "columns_including_intercept": 177,
+    "rank": 177,
+    "controls_only_columns": 172,
+    "condition_number_centered_standardized_predictors": 19.96279453164852
+  },
+  "method": "VIF_i = 1/(1 - R²) regressing predictor i on all other five-group predictors and all controls, including author/date fixed effects. Cross-checked with direct least-squares residualization. Pair phi is Pearson correlation of binary labels.",
+  "limitations": [
+    "Complete-case sample differs from each previously reported per-variable model.",
+    "AI labels are unvalidated semantic classifications. Low numerical collinearity does not establish semantic independence or measurement validity.",
+    "Full-design VIF may reflect correlation with any included control, not just the other four groups.",
+    "This assesses the previous five groups, not the new v3 nine categories."
+  ],
+  "input_sha256": {
+    "post_features.csv": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+    "post_labels.csv": "4460fbaae9a8c08a1b8c29f1abd1d6dc5885e21e1b093d1fe30de60c47701f86"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "version": "v5",
+  "purpose": "Freeze an interpretable multi-axis measurement and test operational consistency before full-corpus replacement.",
+  "outcome_used_for_design_or_gates": false,
+  "random_unique_texts": 200,
+  "targeted_no_v3_positive_unique_texts": 60,
+  "seed": 2026110507,
+  "exclude": "All documented exclusions used for v4 plus all 160 v4 pilot texts; earlier whole-corpus model exposure remains disclosed.",
+  "comparison": "Within the same new sample, compare historical v2 and v3 positive coverage; do not infer full-corpus v5 coverage or compare unmatched v4/v5 agreement as an improvement estimate.",
+  "consistency_screen": {
+    "scope": "Random partition only; a screening convention, not a validity certificate or accuracy estimate",
+    "min_comparable_positive_union": 20,
+    "min_positive_agreement_known_only": 0.8,
+    "min_known_fraction_each_coder": 0.9,
+    "min_three_state_exact_fraction": 0.85,
+    "insufficient_positive_support": "Keep as descriptive candidate; do not call failed or validated. Review targeted diagnostics separately."
+  },
+  "full_corpus_regression_support": {
+    "min_positive": 40,
+    "min_negative": 40,
+    "min_authors_within_author_variation": 10,
+    "recheck_on_actual_joint_sample": true,
+    "these_are_pragmatic_thresholds_not_statistical_power_proof": true
+  },
+  "regression_design": {
+    "primary": "Jointly enter supported expression parents only, with existing text/media controls and author/date fixed effects; omit conditional attributes.",
+    "topic_adjusted": "On its own common sample add supported topic indicators; compare primary expression design on exactly the same sample before interpreting coefficient changes.",
+    "polarity": "Within EXPERIENCE or APPRAISAL positive texts and both polarity attributes known, compare supported positive-only, negative-only, mixed and neither categories, omit one reference; report the conditional population and unknowns.",
+    "other_attributes": "Plan/goal and greeting/thanks are conditional descriptive or supported secondary comparisons, never a full set of parent plus exhaustive child dummies.",
+    "unknowns": "Remain missing per variable; structural not-applicable stays separate; no blanket zero-imputation.",
+    "inference": "log(1+likes), author-clustered uncertainty, BH within predeclared expression or conditional test family; all analyses remain retrospective exploratory, no causal interpretation.",
+    "topic_weights": "Preserve earlier NMF model as historical continuous-weight analysis: weights sum to one, omit one component with an intercept; do not replace with dominant-topic dummies.",
+    "collinearity": "Check rank and full-design VIF on each actual joint sample. VIF>=5 triggers diagnosis, not automatic deletion or merging of semantically different variables. Exclude constant or exactly redundant columns and disclose it."
+  },
+  "pilot_diagnostics": "Outcome-blind agreement, variable availability, common-sample attrition, multi-label overlap, and expression-only numerical design checks; pilot checks are not full-corpus fixed-effect VIF or likes regressions.",
+  "adoption": "Complete new pilot and provide executable full-corpus handoff; no claim that all 5414 posts have been relabeled. Production classification and independent human review remain explicit future work."
+}

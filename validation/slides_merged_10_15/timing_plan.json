@@ -1,0 +1,14 @@
+{
+  "main_slides": 13,
+  "appendix_slides": 2,
+  "total_slides": 15,
+  "speech_and_pointing_seconds": 720,
+  "transition_seconds": 30,
+  "target_seconds": 750,
+  "normal_mode": "13页全部讲，约12分30秒；逐页预算含读图和停顿，另留30秒转场。",
+  "short_mode": "约10分钟：第3页35秒，第4页45秒，第5页60秒，第6页45秒，第7页45秒，第8页35秒，第9页40秒，第11页55秒，第12页25秒，第13页55秒；其余按标准预算。",
+  "short_mode_seconds": 605,
+  "longer_mode": "接近15分钟：按标准版讲完，增加第5页模型解释、第8页分母对比和第11页账号案例；答疑页仍按提问使用。",
+  "note": "时间为排练预算，实际需按语速与现场指图校准。",
+  "narration_characters": 2332
+}

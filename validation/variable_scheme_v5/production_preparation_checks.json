@@ -1,0 +1,8 @@
+{
+  "existing_output_refused": true,
+  "existing_export_and_public_receipt_unchanged": true,
+  "outside_private_output_refused": true,
+  "changed_source_batch_refused": true,
+  "public_receipt_contains_no_row_fields": true,
+  "prepared_files": 90
+}

@@ -1,0 +1,98 @@
+{
+  "source": "results/post_features.csv",
+  "source_sha256": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+  "scope": "只从既有逐帖结果汇总分布与组别媒体构成，未拟合新模型。",
+  "like_histogram": {
+    "labels": [
+      "0",
+      "1–4",
+      "5–9",
+      "10–24",
+      "25–49",
+      "50–99",
+      "100–199",
+      "200–499",
+      "500+"
+    ],
+    "counts": [
+      361,
+      2298,
+      977,
+      1089,
+      2203,
+      2019,
+      438,
+      141,
+      6
+    ],
+    "total": 9532
+  },
+  "group_composition": [
+    {
+      "feature": "self_discipline",
+      "hit": 1,
+      "posts": 877,
+      "authors": 76,
+      "image_video_share": 0.9600912200684151,
+      "mean_likes": 63.672748004561
+    },
+    {
+      "feature": "self_discipline",
+      "hit": 0,
+      "posts": 8655,
+      "authors": 100,
+      "image_video_share": 0.6812247255921433,
+      "mean_likes": 34.35586366262276
+    },
+    {
+      "feature": "social_address",
+      "hit": 1,
+      "posts": 159,
+      "authors": 42,
+      "image_video_share": 0.9371069182389937,
+      "mean_likes": 89.95597484276729
+    },
+    {
+      "feature": "social_address",
+      "hit": 0,
+      "posts": 9373,
+      "authors": 100,
+      "image_video_share": 0.7029766350154699,
+      "mean_likes": 36.155766563533554
+    },
+    {
+      "feature": "positive_expression",
+      "hit": 1,
+      "posts": 574,
+      "authors": 64,
+      "image_video_share": 0.9494773519163763,
+      "mean_likes": 57.285714285714285
+    },
+    {
+      "feature": "positive_expression",
+      "hit": 0,
+      "posts": 8958,
+      "authors": 100,
+      "image_video_share": 0.6913373520875196,
+      "mean_likes": 35.75675373967403
+    },
+    {
+      "feature": "question",
+      "hit": 1,
+      "posts": 125,
+      "authors": 32,
+      "image_video_share": 0.976,
+      "mean_likes": 111.152
+    },
+    {
+      "feature": "question",
+      "hit": 0,
+      "posts": 9407,
+      "authors": 100,
+      "image_video_share": 0.7033060486871479,
+      "mean_likes": 36.06856596151802
+    }
+  ],
+  "percentile_95": 109.44999999999891,
+  "author_posts_median": 66.0
+}

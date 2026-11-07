@@ -1,0 +1,2712 @@
+{
+  "status": "full_v5_retrospective_exploratory_AI_measurement_not_human_validated",
+  "n_total": 9532,
+  "n_nonempty": 5414,
+  "n_unique_texts": 4156,
+  "variables": {
+    "S_PRESENT": {
+      "label": "记录与展示",
+      "n_known": 5235,
+      "n_positive": 2914,
+      "n_negative": 2321,
+      "n_authors": 95,
+      "authors_within_variation": 79,
+      "positive_authors": 90,
+      "largest_author_share_of_positives": 0.17982155113246398,
+      "passes_support": true,
+      "n_unknown_nonempty": 179
+    },
+    "S_EXPERIENCE": {
+      "label": "自身体验",
+      "n_known": 5235,
+      "n_positive": 761,
+      "n_negative": 4474,
+      "n_authors": 95,
+      "authors_within_variation": 70,
+      "positive_authors": 72,
+      "largest_author_share_of_positives": 0.08147174770039421,
+      "passes_support": true,
+      "n_unknown_nonempty": 179
+    },
+    "S_APPRAISAL": {
+      "label": "对象评价",
+      "n_known": 5237,
+      "n_positive": 813,
+      "n_negative": 4424,
+      "n_authors": 95,
+      "authors_within_variation": 77,
+      "positive_authors": 77,
+      "largest_author_share_of_positives": 0.08610086100861009,
+      "passes_support": true,
+      "n_unknown_nonempty": 177
+    },
+    "S_FUTURE": {
+      "label": "未来安排与目标",
+      "n_known": 5236,
+      "n_positive": 469,
+      "n_negative": 4767,
+      "n_authors": 95,
+      "authors_within_variation": 64,
+      "positive_authors": 65,
+      "largest_author_share_of_positives": 0.09594882729211088,
+      "passes_support": true,
+      "n_unknown_nonempty": 178
+    },
+    "S_EXHORT": {
+      "label": "鼓励与提醒",
+      "n_known": 5243,
+      "n_positive": 700,
+      "n_negative": 4543,
+      "n_authors": 95,
+      "authors_within_variation": 78,
+      "positive_authors": 79,
+      "largest_author_share_of_positives": 0.10571428571428572,
+      "passes_support": true,
+      "n_unknown_nonempty": 171
+    },
+    "S_REFLECTION": {
+      "label": "观点与感悟",
+      "n_known": 5243,
+      "n_positive": 742,
+      "n_negative": 4501,
+      "n_authors": 95,
+      "authors_within_variation": 54,
+      "positive_authors": 55,
+      "largest_author_share_of_positives": 0.3018867924528302,
+      "passes_support": true,
+      "n_unknown_nonempty": 171
+    },
+    "S_GUIDANCE": {
+      "label": "解释与方法建议",
+      "n_known": 5244,
+      "n_positive": 333,
+      "n_negative": 4911,
+      "n_authors": 95,
+      "authors_within_variation": 44,
+      "positive_authors": 44,
+      "largest_author_share_of_positives": 0.22522522522522523,
+      "passes_support": true,
+      "n_unknown_nonempty": 170
+    },
+    "S_SOCIAL": {
+      "label": "问候祝愿与致谢",
+      "n_known": 5244,
+      "n_positive": 673,
+      "n_negative": 4571,
+      "n_authors": 95,
+      "authors_within_variation": 57,
+      "positive_authors": 57,
+      "largest_author_share_of_positives": 0.2288261515601783,
+      "passes_support": true,
+      "n_unknown_nonempty": 170
+    },
+    "S_REQUEST": {
+      "label": "征询与邀请",
+      "n_known": 5242,
+      "n_positive": 67,
+      "n_negative": 5175,
+      "n_authors": 95,
+      "authors_within_variation": 27,
+      "positive_authors": 27,
+      "largest_author_share_of_positives": 0.14925373134328357,
+      "passes_support": true,
+      "n_unknown_nonempty": 172
+    },
+    "S_OFFER": {
+      "label": "供给告知",
+      "n_known": 5244,
+      "n_positive": 4,
+      "n_negative": 5240,
+      "n_authors": 95,
+      "authors_within_variation": 2,
+      "positive_authors": 2,
+      "largest_author_share_of_positives": 0.5,
+      "passes_support": false,
+      "n_unknown_nonempty": 170
+    },
+    "S_OTHER": {
+      "label": "其他明确表达",
+      "n_known": 5243,
+      "n_positive": 68,
+      "n_negative": 5175,
+      "n_authors": 95,
+      "authors_within_variation": 27,
+      "positive_authors": 27,
+      "largest_author_share_of_positives": 0.20588235294117646,
+      "passes_support": true,
+      "n_unknown_nonempty": 171
+    },
+    "T_ACTIVITY": {
+      "label": "运动训练",
+      "n_known": 5096,
+      "n_positive": 1569,
+      "n_negative": 3527,
+      "n_authors": 95,
+      "authors_within_variation": 80,
+      "positive_authors": 83,
+      "largest_author_share_of_positives": 0.2664117272147865,
+      "passes_support": true,
+      "n_unknown_nonempty": 318
+    },
+    "T_BODY": {
+      "label": "身体健康",
+      "n_known": 5100,
+      "n_positive": 1295,
+      "n_negative": 3805,
+      "n_authors": 95,
+      "authors_within_variation": 74,
+      "positive_authors": 77,
+      "largest_author_share_of_positives": 0.26563706563706563,
+      "passes_support": true,
+      "n_unknown_nonempty": 314
+    },
+    "T_FOOD": {
+      "label": "饮食营养",
+      "n_known": 5104,
+      "n_positive": 645,
+      "n_negative": 4459,
+      "n_authors": 95,
+      "authors_within_variation": 61,
+      "positive_authors": 61,
+      "largest_author_share_of_positives": 0.2186046511627907,
+      "passes_support": true,
+      "n_unknown_nonempty": 310
+    },
+    "T_LIFE": {
+      "label": "具体生活",
+      "n_known": 5109,
+      "n_positive": 1401,
+      "n_negative": 3708,
+      "n_authors": 95,
+      "authors_within_variation": 78,
+      "positive_authors": 79,
+      "largest_author_share_of_positives": 0.057815845824411134,
+      "passes_support": true,
+      "n_unknown_nonempty": 305
+    },
+    "T_TOOLS": {
+      "label": "工具服务",
+      "n_known": 5087,
+      "n_positive": 686,
+      "n_negative": 4401,
+      "n_authors": 95,
+      "authors_within_variation": 62,
+      "positive_authors": 64,
+      "largest_author_share_of_positives": 0.19387755102040816,
+      "passes_support": true,
+      "n_unknown_nonempty": 327
+    },
+    "T_OTHER": {
+      "label": "其他明确对象",
+      "n_known": 5115,
+      "n_positive": 18,
+      "n_negative": 5097,
+      "n_authors": 95,
+      "authors_within_variation": 13,
+      "positive_authors": 13,
+      "largest_author_share_of_positives": 0.16666666666666666,
+      "passes_support": false,
+      "n_unknown_nonempty": 299
+    }
+  },
+  "main_selection": {
+    "initial_support": {
+      "S_PRESENT": {
+        "n_known": 5235,
+        "n_positive": 2914,
+        "n_negative": 2321,
+        "n_authors": 95,
+        "authors_within_variation": 79,
+        "positive_authors": 90,
+        "largest_author_share_of_positives": 0.17982155113246398,
+        "passes_support": true
+      },
+      "S_EXPERIENCE": {
+        "n_known": 5235,
+        "n_positive": 761,
+        "n_negative": 4474,
+        "n_authors": 95,
+        "authors_within_variation": 70,
+        "positive_authors": 72,
+        "largest_author_share_of_positives": 0.08147174770039421,
+        "passes_support": true
+      },
+      "S_APPRAISAL": {
+        "n_known": 5237,
+        "n_positive": 813,
+        "n_negative": 4424,
+        "n_authors": 95,
+        "authors_within_variation": 77,
+        "positive_authors": 77,
+        "largest_author_share_of_positives": 0.08610086100861009,
+        "passes_support": true
+      },
+      "S_FUTURE": {
+        "n_known": 5236,
+        "n_positive": 469,
+        "n_negative": 4767,
+        "n_authors": 95,
+        "authors_within_variation": 64,
+        "positive_authors": 65,
+        "largest_author_share_of_positives": 0.09594882729211088,
+        "passes_support": true
+      },
+      "S_EXHORT": {
+        "n_known": 5243,
+        "n_positive": 700,
+        "n_negative": 4543,
+        "n_authors": 95,
+        "authors_within_variation": 78,
+        "positive_authors": 79,
+        "largest_author_share_of_positives": 0.10571428571428572,
+        "passes_support": true
+      },
+      "S_REFLECTION": {
+        "n_known": 5243,
+        "n_positive": 742,
+        "n_negative": 4501,
+        "n_authors": 95,
+        "authors_within_variation": 54,
+        "positive_authors": 55,
+        "largest_author_share_of_positives": 0.3018867924528302,
+        "passes_support": true
+      },
+      "S_SOCIAL": {
+        "n_known": 5244,
+        "n_positive": 673,
+        "n_negative": 4571,
+        "n_authors": 95,
+        "authors_within_variation": 57,
+        "positive_authors": 57,
+        "largest_author_share_of_positives": 0.2288261515601783,
+        "passes_support": true
+      }
+    },
+    "steps": [
+      {
+        "selected": [
+          "S_PRESENT",
+          "S_EXPERIENCE",
+          "S_APPRAISAL",
+          "S_FUTURE",
+          "S_EXHORT",
+          "S_REFLECTION",
+          "S_SOCIAL"
+        ],
+        "n_common": 5217,
+        "support": {
+          "S_PRESENT": {
+            "n_known": 5217,
+            "n_positive": 2910,
+            "n_negative": 2307,
+            "n_authors": 95,
+            "authors_within_variation": 79,
+            "positive_authors": 90,
+            "largest_author_share_of_positives": 0.18006872852233677,
+            "passes_support": true
+          },
+          "S_EXPERIENCE": {
+            "n_known": 5217,
+            "n_positive": 761,
+            "n_negative": 4456,
+            "n_authors": 95,
+            "authors_within_variation": 70,
+            "positive_authors": 72,
+            "largest_author_share_of_positives": 0.08147174770039421,
+            "passes_support": true
+          },
+          "S_APPRAISAL": {
+            "n_known": 5217,
+            "n_positive": 812,
+            "n_negative": 4405,
+            "n_authors": 95,
+            "authors_within_variation": 77,
+            "positive_authors": 77,
+            "largest_author_share_of_positives": 0.08620689655172414,
+            "passes_support": true
+          },
+          "S_FUTURE": {
+            "n_known": 5217,
+            "n_positive": 469,
+            "n_negative": 4748,
+            "n_authors": 95,
+            "authors_within_variation": 64,
+            "positive_authors": 65,
+            "largest_author_share_of_positives": 0.09594882729211088,
+            "passes_support": true
+          },
+          "S_EXHORT": {
+            "n_known": 5217,
+            "n_positive": 700,
+            "n_negative": 4517,
+            "n_authors": 95,
+            "authors_within_variation": 77,
+            "positive_authors": 79,
+            "largest_author_share_of_positives": 0.10571428571428572,
+            "passes_support": true
+          },
+          "S_REFLECTION": {
+            "n_known": 5217,
+            "n_positive": 741,
+            "n_negative": 4476,
+            "n_authors": 95,
+            "authors_within_variation": 54,
+            "positive_authors": 55,
+            "largest_author_share_of_positives": 0.30229419703103916,
+            "passes_support": true
+          },
+          "S_SOCIAL": {
+            "n_known": 5217,
+            "n_positive": 672,
+            "n_negative": 4545,
+            "n_authors": 95,
+            "authors_within_variation": 57,
+            "positive_authors": 57,
+            "largest_author_share_of_positives": 0.22916666666666666,
+            "passes_support": true
+          }
+        },
+        "removed_for_common_support": []
+      }
+    ],
+    "selected": [
+      "S_PRESENT",
+      "S_EXPERIENCE",
+      "S_APPRAISAL",
+      "S_FUTURE",
+      "S_EXHORT",
+      "S_REFLECTION",
+      "S_SOCIAL"
+    ],
+    "n_common": 5217,
+    "excluded_candidates": []
+  },
+  "main": {
+    "n": 5217,
+    "n_authors": 95,
+    "n_dates": 62,
+    "codes": [
+      "S_PRESENT",
+      "S_EXPERIENCE",
+      "S_APPRAISAL",
+      "S_FUTURE",
+      "S_EXHORT",
+      "S_REFLECTION",
+      "S_SOCIAL"
+    ],
+    "support": {
+      "S_PRESENT": {
+        "n_known": 5217,
+        "n_positive": 2910,
+        "n_negative": 2307,
+        "n_authors": 95,
+        "authors_within_variation": 79,
+        "positive_authors": 90,
+        "largest_author_share_of_positives": 0.18006872852233677,
+        "passes_support": true
+      },
+      "S_EXPERIENCE": {
+        "n_known": 5217,
+        "n_positive": 761,
+        "n_negative": 4456,
+        "n_authors": 95,
+        "authors_within_variation": 70,
+        "positive_authors": 72,
+        "largest_author_share_of_positives": 0.08147174770039421,
+        "passes_support": true
+      },
+      "S_APPRAISAL": {
+        "n_known": 5217,
+        "n_positive": 812,
+        "n_negative": 4405,
+        "n_authors": 95,
+        "authors_within_variation": 77,
+        "positive_authors": 77,
+        "largest_author_share_of_positives": 0.08620689655172414,
+        "passes_support": true
+      },
+      "S_FUTURE": {
+        "n_known": 5217,
+        "n_positive": 469,
+        "n_negative": 4748,
+        "n_authors": 95,
+        "authors_within_variation": 64,
+        "positive_authors": 65,
+        "largest_author_share_of_positives": 0.09594882729211088,
+        "passes_support": true
+      },
+      "S_EXHORT": {
+        "n_known": 5217,
+        "n_positive": 700,
+        "n_negative": 4517,
+        "n_authors": 95,
+        "authors_within_variation": 77,
+        "positive_authors": 79,
+        "largest_author_share_of_positives": 0.10571428571428572,
+        "passes_support": true
+      },
+      "S_REFLECTION": {
+        "n_known": 5217,
+        "n_positive": 741,
+        "n_negative": 4476,
+        "n_authors": 95,
+        "authors_within_variation": 54,
+        "positive_authors": 55,
+        "largest_author_share_of_positives": 0.30229419703103916,
+        "passes_support": true
+      },
+      "S_SOCIAL": {
+        "n_known": 5217,
+        "n_positive": 672,
+        "n_negative": 4545,
+        "n_authors": 95,
+        "authors_within_variation": 57,
+        "positive_authors": 57,
+        "largest_author_share_of_positives": 0.22916666666666666,
+        "passes_support": true
+      }
+    },
+    "design_columns": 179,
+    "rank": 179,
+    "dropped_redundant_control_columns": [],
+    "author_equal_weight": false,
+    "status": "estimated_retrospective_exploratory",
+    "coefficients": {
+      "S_PRESENT": {
+        "label": "记录与展示",
+        "beta": 0.06006899835743064,
+        "se_cluster": 0.045284906942007215,
+        "p": 0.18789831911859,
+        "ci_low": -0.029845245938672396,
+        "ci_high": 0.1499832426535337,
+        "q_bh_within_family": 0.6576441169150651
+      },
+      "S_EXPERIENCE": {
+        "label": "自身体验",
+        "beta": -0.00011187239510674481,
+        "se_cluster": 0.042387907756111884,
+        "p": 0.9978997766105833,
+        "ci_low": -0.08427405689654612,
+        "ci_high": 0.08405031210633264,
+        "q_bh_within_family": 0.9997566690496663
+      },
+      "S_APPRAISAL": {
+        "label": "对象评价",
+        "beta": 9.451050135458112e-06,
+        "se_cluster": 0.03090777575421749,
+        "p": 0.9997566690496663,
+        "ci_low": -0.061358662245819616,
+        "ci_high": 0.061377564346090534,
+        "q_bh_within_family": 0.9997566690496663
+      },
+      "S_FUTURE": {
+        "label": "未来安排与目标",
+        "beta": 0.09041956265784082,
+        "se_cluster": 0.056870421414467624,
+        "p": 0.11521009206611035,
+        "ci_low": -0.02249799220941716,
+        "ci_high": 0.2033371175250988,
+        "q_bh_within_family": 0.6576441169150651
+      },
+      "S_EXHORT": {
+        "label": "鼓励与提醒",
+        "beta": 0.05480261035410634,
+        "se_cluster": 0.0518130441179497,
+        "p": 0.2929032249633507,
+        "ci_low": -0.04807340333655134,
+        "ci_high": 0.15767862404476402,
+        "q_bh_within_family": 0.6834408582478183
+      },
+      "S_REFLECTION": {
+        "label": "观点与感悟",
+        "beta": 0.002735715014632912,
+        "se_cluster": 0.05801715029962712,
+        "p": 0.9624908796208156,
+        "ci_low": -0.1124586969355748,
+        "ci_high": 0.1179301269648406,
+        "q_bh_within_family": 0.9997566690496663
+      },
+      "S_SOCIAL": {
+        "label": "问候祝愿与致谢",
+        "beta": -0.007635483865559235,
+        "se_cluster": 0.05329319021829518,
+        "p": 0.8863811344504248,
+        "ci_low": -0.1134503623358403,
+        "ci_high": 0.09817939460472183,
+        "q_bh_within_family": 0.9997566690496663
+      }
+    },
+    "r_squared": 0.5227630700134894
+  },
+  "main_collinearity": {
+    "n": 5217,
+    "n_authors": 95,
+    "codes": [
+      "S_PRESENT",
+      "S_EXPERIENCE",
+      "S_APPRAISAL",
+      "S_FUTURE",
+      "S_EXHORT",
+      "S_REFLECTION",
+      "S_SOCIAL"
+    ],
+    "rank": 179,
+    "columns": 179,
+    "controls": "log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date)",
+    "dropped_redundant_control_columns": [],
+    "status": "full_rank_full_control_design",
+    "vif": {
+      "S_PRESENT": 1.9113439195348525,
+      "S_EXPERIENCE": 1.2805082186496026,
+      "S_APPRAISAL": 1.3867059581263708,
+      "S_FUTURE": 1.2087224004092343,
+      "S_EXHORT": 1.3485670766146913,
+      "S_REFLECTION": 2.1957490828619175,
+      "S_SOCIAL": 1.6619610784125975
+    },
+    "vif_independent_residual": {
+      "S_PRESENT": 1.9113439195348556,
+      "S_EXPERIENCE": 1.2805082186496,
+      "S_APPRAISAL": 1.3867059581263674,
+      "S_FUTURE": 1.208722400409234,
+      "S_EXHORT": 1.3485670766146904,
+      "S_REFLECTION": 2.195749082861912,
+      "S_SOCIAL": 1.6619610784126009
+    },
+    "min_vif": 1.2087224004092343,
+    "max_vif": 2.1957490828619175,
+    "vif_ge_5": [],
+    "top_absolute_phi_pairs": [
+      {
+        "first": "S_PRESENT",
+        "second": "S_REFLECTION",
+        "phi": -0.33314228839898363,
+        "both_positive": 112,
+        "correlation_after_controls": -0.17829711667134046
+      },
+      {
+        "first": "S_PRESENT",
+        "second": "S_SOCIAL",
+        "phi": -0.27977714674223103,
+        "both_positive": 132,
+        "correlation_after_controls": -0.3253973117451597
+      },
+      {
+        "first": "S_PRESENT",
+        "second": "S_EXHORT",
+        "phi": -0.24509963555450087,
+        "both_positive": 174,
+        "correlation_after_controls": -0.17977425963165056
+      },
+      {
+        "first": "S_EXPERIENCE",
+        "second": "S_SOCIAL",
+        "phi": -0.10540932513009267,
+        "both_positive": 33,
+        "correlation_after_controls": -0.06995932430102979
+      },
+      {
+        "first": "S_APPRAISAL",
+        "second": "S_REFLECTION",
+        "phi": -0.10198665899824988,
+        "both_positive": 48,
+        "correlation_after_controls": -0.15139714156901238
+      },
+      {
+        "first": "S_APPRAISAL",
+        "second": "S_SOCIAL",
+        "phi": -0.10037617320687985,
+        "both_positive": 41,
+        "correlation_after_controls": -0.04281990214064087
+      },
+      {
+        "first": "S_EXPERIENCE",
+        "second": "S_FUTURE",
+        "phi": 0.0960407920728952,
+        "both_positive": 119,
+        "correlation_after_controls": -0.004317307953951309
+      },
+      {
+        "first": "S_EXPERIENCE",
+        "second": "S_APPRAISAL",
+        "phi": 0.08921070592313153,
+        "both_positive": 178,
+        "correlation_after_controls": -0.06664237634011126
+      },
+      {
+        "first": "S_EXPERIENCE",
+        "second": "S_REFLECTION",
+        "phi": -0.08725302470251278,
+        "both_positive": 52,
+        "correlation_after_controls": -0.09503157280412182
+      },
+      {
+        "first": "S_EXHORT",
+        "second": "S_REFLECTION",
+        "phi": 0.08147584819007433,
+        "both_positive": 150,
+        "correlation_after_controls": -0.04543298652399406
+      },
+      {
+        "first": "S_FUTURE",
+        "second": "S_REFLECTION",
+        "phi": -0.07796656353939961,
+        "both_positive": 26,
+        "correlation_after_controls": -0.08981705818080243
+      },
+      {
+        "first": "S_EXHORT",
+        "second": "S_SOCIAL",
+        "phi": -0.07750408820600649,
+        "both_positive": 44,
+        "correlation_after_controls": -0.059230975212459167
+      }
+    ]
+  },
+  "separate_largest_samples": {
+    "S_PRESENT": {
+      "n": 5235,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_PRESENT"
+      ],
+      "support": {
+        "S_PRESENT": {
+          "n_known": 5235,
+          "n_positive": 2914,
+          "n_negative": 2321,
+          "n_authors": 95,
+          "authors_within_variation": 79,
+          "positive_authors": 90,
+          "largest_author_share_of_positives": 0.17982155113246398,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_PRESENT": {
+          "label": "记录与展示",
+          "beta": 0.04879506096225142,
+          "se_cluster": 0.046467396903179775,
+          "p": 0.29636787478269244,
+          "ci_low": -0.04346704487153166,
+          "ci_high": 0.1410571667960345,
+          "q_bh_within_family": 0.7926841310708215
+        }
+      },
+      "r_squared": 0.5224197605337446
+    },
+    "S_EXPERIENCE": {
+      "n": 5235,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_EXPERIENCE"
+      ],
+      "support": {
+        "S_EXPERIENCE": {
+          "n_known": 5235,
+          "n_positive": 761,
+          "n_negative": 4474,
+          "n_authors": 95,
+          "authors_within_variation": 70,
+          "positive_authors": 72,
+          "largest_author_share_of_positives": 0.08147174770039421,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_EXPERIENCE": {
+          "label": "自身体验",
+          "beta": -0.002893164979287712,
+          "se_cluster": 0.04278743912008129,
+          "p": 0.9462340159200207,
+          "ci_low": -0.08784862836964928,
+          "ci_high": 0.08206229841107386,
+          "q_bh_within_family": 0.9462340159200207
+        }
+      },
+      "r_squared": 0.5225226288958043
+    },
+    "S_APPRAISAL": {
+      "n": 5237,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_APPRAISAL"
+      ],
+      "support": {
+        "S_APPRAISAL": {
+          "n_known": 5237,
+          "n_positive": 813,
+          "n_negative": 4424,
+          "n_authors": 95,
+          "authors_within_variation": 77,
+          "positive_authors": 77,
+          "largest_author_share_of_positives": 0.08610086100861009,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_APPRAISAL": {
+          "label": "对象评价",
+          "beta": -0.011945835943837663,
+          "se_cluster": 0.02996538018964293,
+          "p": 0.691051868689208,
+          "ci_low": -0.07144280075481885,
+          "ci_high": 0.047551128867143515,
+          "q_bh_within_family": 0.8062271801374093
+        }
+      },
+      "r_squared": 0.5224510193051695
+    },
+    "S_FUTURE": {
+      "n": 5236,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_FUTURE"
+      ],
+      "support": {
+        "S_FUTURE": {
+          "n_known": 5236,
+          "n_positive": 469,
+          "n_negative": 4767,
+          "n_authors": 95,
+          "authors_within_variation": 64,
+          "positive_authors": 65,
+          "largest_author_share_of_positives": 0.09594882729211088,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_FUTURE": {
+          "label": "未来安排与目标",
+          "beta": 0.08213135795222258,
+          "se_cluster": 0.05757439161528973,
+          "p": 0.1570296016329105,
+          "ci_low": -0.03218394625114322,
+          "ci_high": 0.19644666215558837,
+          "q_bh_within_family": 0.7926841310708215
+        }
+      },
+      "r_squared": 0.5223459894498486
+    },
+    "S_EXHORT": {
+      "n": 5243,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_EXHORT"
+      ],
+      "support": {
+        "S_EXHORT": {
+          "n_known": 5243,
+          "n_positive": 700,
+          "n_negative": 4543,
+          "n_authors": 95,
+          "authors_within_variation": 78,
+          "positive_authors": 79,
+          "largest_author_share_of_positives": 0.10571428571428572,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_EXHORT": {
+          "label": "鼓励与提醒",
+          "beta": 0.039431804973300615,
+          "se_cluster": 0.0523233543147795,
+          "p": 0.452962360611898,
+          "ci_low": -0.0644574415757862,
+          "ci_high": 0.14332105152238742,
+          "q_bh_within_family": 0.7926841310708215
+        }
+      },
+      "r_squared": 0.5224904530801329
+    },
+    "S_REFLECTION": {
+      "n": 5243,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_REFLECTION"
+      ],
+      "support": {
+        "S_REFLECTION": {
+          "n_known": 5243,
+          "n_positive": 742,
+          "n_negative": 4501,
+          "n_authors": 95,
+          "authors_within_variation": 54,
+          "positive_authors": 55,
+          "largest_author_share_of_positives": 0.3018867924528302,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_REFLECTION": {
+          "label": "观点与感悟",
+          "beta": -0.026935388128750893,
+          "se_cluster": 0.05749440555426017,
+          "p": 0.6405208677219969,
+          "ci_low": -0.14109187813291993,
+          "ci_high": 0.08722110187541815,
+          "q_bh_within_family": 0.8062271801374093
+        }
+      },
+      "r_squared": 0.5223563471340407
+    },
+    "S_SOCIAL": {
+      "n": 5244,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_SOCIAL"
+      ],
+      "support": {
+        "S_SOCIAL": {
+          "n_known": 5244,
+          "n_positive": 673,
+          "n_negative": 4571,
+          "n_authors": 95,
+          "authors_within_variation": 57,
+          "positive_authors": 57,
+          "largest_author_share_of_positives": 0.2288261515601783,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_SOCIAL": {
+          "label": "问候祝愿与致谢",
+          "beta": -0.0381049074155684,
+          "se_cluster": 0.046054710572288375,
+          "p": 0.4101152517974994,
+          "ci_low": -0.12954761486522867,
+          "ci_high": 0.05333780003409188,
+          "q_bh_within_family": 0.7926841310708215
+        }
+      },
+      "r_squared": 0.5224306977203717
+    }
+  },
+  "separate_same_main_sample": {
+    "S_PRESENT": {
+      "n": 5217,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_PRESENT"
+      ],
+      "support": {
+        "S_PRESENT": {
+          "n_known": 5217,
+          "n_positive": 2910,
+          "n_negative": 2307,
+          "n_authors": 95,
+          "authors_within_variation": 79,
+          "positive_authors": 90,
+          "largest_author_share_of_positives": 0.18006872852233677,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_PRESENT": {
+          "label": "记录与展示",
+          "beta": 0.049881388041797065,
+          "se_cluster": 0.04697268302829125,
+          "p": 0.29099117618402864,
+          "ci_low": -0.04338397523824479,
+          "ci_high": 0.1431467513218389,
+          "q_bh_within_family": 0.7733769746936351
+        }
+      },
+      "r_squared": 0.5221745061690968
+    },
+    "S_EXPERIENCE": {
+      "n": 5217,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_EXPERIENCE"
+      ],
+      "support": {
+        "S_EXPERIENCE": {
+          "n_known": 5217,
+          "n_positive": 761,
+          "n_negative": 4456,
+          "n_authors": 95,
+          "authors_within_variation": 70,
+          "positive_authors": 72,
+          "largest_author_share_of_positives": 0.08147174770039421,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_EXPERIENCE": {
+          "label": "自身体验",
+          "beta": -0.0034483818577753745,
+          "se_cluster": 0.04269930618303566,
+          "p": 0.9358047804819378,
+          "ci_low": -0.08822885523563231,
+          "ci_high": 0.08133209152008156,
+          "q_bh_within_family": 0.9358047804819378
+        }
+      },
+      "r_squared": 0.5218857925073355
+    },
+    "S_APPRAISAL": {
+      "n": 5217,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_APPRAISAL"
+      ],
+      "support": {
+        "S_APPRAISAL": {
+          "n_known": 5217,
+          "n_positive": 812,
+          "n_negative": 4405,
+          "n_authors": 95,
+          "authors_within_variation": 77,
+          "positive_authors": 77,
+          "largest_author_share_of_positives": 0.08620689655172414,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_APPRAISAL": {
+          "label": "对象评价",
+          "beta": -0.013205461169638496,
+          "se_cluster": 0.030197497517559794,
+          "p": 0.6628945497374015,
+          "ci_low": -0.07316330037646204,
+          "ci_high": 0.04675237803718506,
+          "q_bh_within_family": 0.7733769746936351
+        }
+      },
+      "r_squared": 0.5218975537413183
+    },
+    "S_FUTURE": {
+      "n": 5217,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_FUTURE"
+      ],
+      "support": {
+        "S_FUTURE": {
+          "n_known": 5217,
+          "n_positive": 469,
+          "n_negative": 4748,
+          "n_authors": 95,
+          "authors_within_variation": 64,
+          "positive_authors": 65,
+          "largest_author_share_of_positives": 0.09594882729211088,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_FUTURE": {
+          "label": "未来安排与目标",
+          "beta": 0.082202159611772,
+          "se_cluster": 0.05775796242485363,
+          "p": 0.15798359829821262,
+          "ci_low": -0.032477628737225345,
+          "ci_high": 0.19688194796076935,
+          "q_bh_within_family": 0.7733769746936351
+        }
+      },
+      "r_squared": 0.522223550794328
+    },
+    "S_EXHORT": {
+      "n": 5217,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_EXHORT"
+      ],
+      "support": {
+        "S_EXHORT": {
+          "n_known": 5217,
+          "n_positive": 700,
+          "n_negative": 4517,
+          "n_authors": 95,
+          "authors_within_variation": 77,
+          "positive_authors": 79,
+          "largest_author_share_of_positives": 0.10571428571428572,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_EXHORT": {
+          "label": "鼓励与提醒",
+          "beta": 0.03856582216282234,
+          "se_cluster": 0.052590254760892324,
+          "p": 0.4651843353363112,
+          "ci_low": -0.06585336147866615,
+          "ci_high": 0.14298500580431084,
+          "q_bh_within_family": 0.7733769746936351
+        }
+      },
+      "r_squared": 0.5219846747540843
+    },
+    "S_REFLECTION": {
+      "n": 5217,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_REFLECTION"
+      ],
+      "support": {
+        "S_REFLECTION": {
+          "n_known": 5217,
+          "n_positive": 741,
+          "n_negative": 4476,
+          "n_authors": 95,
+          "authors_within_variation": 54,
+          "positive_authors": 55,
+          "largest_author_share_of_positives": 0.30229419703103916,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_REFLECTION": {
+          "label": "观点与感悟",
+          "beta": -0.025906501834645188,
+          "se_cluster": 0.0581226511445124,
+          "p": 0.6568235077062732,
+          "ci_low": -0.14131038818550937,
+          "ci_high": 0.08949738451621898,
+          "q_bh_within_family": 0.7733769746936351
+        }
+      },
+      "r_squared": 0.5219147976285834
+    },
+    "S_SOCIAL": {
+      "n": 5217,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_SOCIAL"
+      ],
+      "support": {
+        "S_SOCIAL": {
+          "n_known": 5217,
+          "n_positive": 672,
+          "n_negative": 4545,
+          "n_authors": 95,
+          "authors_within_variation": 57,
+          "positive_authors": 57,
+          "largest_author_share_of_positives": 0.22916666666666666,
+          "passes_support": true
+        }
+      },
+      "design_columns": 173,
+      "rank": 173,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_SOCIAL": {
+          "label": "问候祝愿与致谢",
+          "beta": -0.042339840827418755,
+          "se_cluster": 0.046395933936805335,
+          "p": 0.36379989374914334,
+          "ci_low": -0.13446005526624005,
+          "ci_high": 0.04978037361140255,
+          "q_bh_within_family": 0.7733769746936351
+        }
+      },
+      "r_squared": 0.5219868081519835
+    }
+  },
+  "topic_adjustment": {
+    "status": "evaluated",
+    "selection": {
+      "initial_support": {
+        "S_PRESENT": {
+          "n_known": 5235,
+          "n_positive": 2914,
+          "n_negative": 2321,
+          "n_authors": 95,
+          "authors_within_variation": 79,
+          "positive_authors": 90,
+          "largest_author_share_of_positives": 0.17982155113246398,
+          "passes_support": true
+        },
+        "S_EXPERIENCE": {
+          "n_known": 5235,
+          "n_positive": 761,
+          "n_negative": 4474,
+          "n_authors": 95,
+          "authors_within_variation": 70,
+          "positive_authors": 72,
+          "largest_author_share_of_positives": 0.08147174770039421,
+          "passes_support": true
+        },
+        "S_APPRAISAL": {
+          "n_known": 5237,
+          "n_positive": 813,
+          "n_negative": 4424,
+          "n_authors": 95,
+          "authors_within_variation": 77,
+          "positive_authors": 77,
+          "largest_author_share_of_positives": 0.08610086100861009,
+          "passes_support": true
+        },
+        "S_FUTURE": {
+          "n_known": 5236,
+          "n_positive": 469,
+          "n_negative": 4767,
+          "n_authors": 95,
+          "authors_within_variation": 64,
+          "positive_authors": 65,
+          "largest_author_share_of_positives": 0.09594882729211088,
+          "passes_support": true
+        },
+        "S_EXHORT": {
+          "n_known": 5243,
+          "n_positive": 700,
+          "n_negative": 4543,
+          "n_authors": 95,
+          "authors_within_variation": 78,
+          "positive_authors": 79,
+          "largest_author_share_of_positives": 0.10571428571428572,
+          "passes_support": true
+        },
+        "S_REFLECTION": {
+          "n_known": 5243,
+          "n_positive": 742,
+          "n_negative": 4501,
+          "n_authors": 95,
+          "authors_within_variation": 54,
+          "positive_authors": 55,
+          "largest_author_share_of_positives": 0.3018867924528302,
+          "passes_support": true
+        },
+        "S_SOCIAL": {
+          "n_known": 5244,
+          "n_positive": 673,
+          "n_negative": 4571,
+          "n_authors": 95,
+          "authors_within_variation": 57,
+          "positive_authors": 57,
+          "largest_author_share_of_positives": 0.2288261515601783,
+          "passes_support": true
+        },
+        "T_ACTIVITY": {
+          "n_known": 5096,
+          "n_positive": 1569,
+          "n_negative": 3527,
+          "n_authors": 95,
+          "authors_within_variation": 80,
+          "positive_authors": 83,
+          "largest_author_share_of_positives": 0.2664117272147865,
+          "passes_support": true
+        },
+        "T_BODY": {
+          "n_known": 5100,
+          "n_positive": 1295,
+          "n_negative": 3805,
+          "n_authors": 95,
+          "authors_within_variation": 74,
+          "positive_authors": 77,
+          "largest_author_share_of_positives": 0.26563706563706563,
+          "passes_support": true
+        },
+        "T_FOOD": {
+          "n_known": 5104,
+          "n_positive": 645,
+          "n_negative": 4459,
+          "n_authors": 95,
+          "authors_within_variation": 61,
+          "positive_authors": 61,
+          "largest_author_share_of_positives": 0.2186046511627907,
+          "passes_support": true
+        },
+        "T_LIFE": {
+          "n_known": 5109,
+          "n_positive": 1401,
+          "n_negative": 3708,
+          "n_authors": 95,
+          "authors_within_variation": 78,
+          "positive_authors": 79,
+          "largest_author_share_of_positives": 0.057815845824411134,
+          "passes_support": true
+        },
+        "T_TOOLS": {
+          "n_known": 5087,
+          "n_positive": 686,
+          "n_negative": 4401,
+          "n_authors": 95,
+          "authors_within_variation": 62,
+          "positive_authors": 64,
+          "largest_author_share_of_positives": 0.19387755102040816,
+          "passes_support": true
+        }
+      },
+      "steps": [
+        {
+          "selected": [
+            "S_PRESENT",
+            "S_EXPERIENCE",
+            "S_APPRAISAL",
+            "S_FUTURE",
+            "S_EXHORT",
+            "S_REFLECTION",
+            "S_SOCIAL",
+            "T_ACTIVITY",
+            "T_BODY",
+            "T_FOOD",
+            "T_LIFE",
+            "T_TOOLS"
+          ],
+          "n_common": 5030,
+          "support": {
+            "S_PRESENT": {
+              "n_known": 5030,
+              "n_positive": 2807,
+              "n_negative": 2223,
+              "n_authors": 95,
+              "authors_within_variation": 78,
+              "positive_authors": 90,
+              "largest_author_share_of_positives": 0.18489490559315996,
+              "passes_support": true
+            },
+            "S_EXPERIENCE": {
+              "n_known": 5030,
+              "n_positive": 743,
+              "n_negative": 4287,
+              "n_authors": 95,
+              "authors_within_variation": 70,
+              "positive_authors": 72,
+              "largest_author_share_of_positives": 0.08344549125168237,
+              "passes_support": true
+            },
+            "S_APPRAISAL": {
+              "n_known": 5030,
+              "n_positive": 748,
+              "n_negative": 4282,
+              "n_authors": 95,
+              "authors_within_variation": 75,
+              "positive_authors": 75,
+              "largest_author_share_of_positives": 0.09224598930481283,
+              "passes_support": true
+            },
+            "S_FUTURE": {
+              "n_known": 5030,
+              "n_positive": 455,
+              "n_negative": 4575,
+              "n_authors": 95,
+              "authors_within_variation": 63,
+              "positive_authors": 64,
+              "largest_author_share_of_positives": 0.0989010989010989,
+              "passes_support": true
+            },
+            "S_EXHORT": {
+              "n_known": 5030,
+              "n_positive": 694,
+              "n_negative": 4336,
+              "n_authors": 95,
+              "authors_within_variation": 75,
+              "positive_authors": 79,
+              "largest_author_share_of_positives": 0.10662824207492795,
+              "passes_support": true
+            },
+            "S_REFLECTION": {
+              "n_known": 5030,
+              "n_positive": 740,
+              "n_negative": 4290,
+              "n_authors": 95,
+              "authors_within_variation": 54,
+              "positive_authors": 55,
+              "largest_author_share_of_positives": 0.3027027027027027,
+              "passes_support": true
+            },
+            "S_SOCIAL": {
+              "n_known": 5030,
+              "n_positive": 672,
+              "n_negative": 4358,
+              "n_authors": 95,
+              "authors_within_variation": 57,
+              "positive_authors": 57,
+              "largest_author_share_of_positives": 0.22916666666666666,
+              "passes_support": true
+            },
+            "T_ACTIVITY": {
+              "n_known": 5030,
+              "n_positive": 1564,
+              "n_negative": 3466,
+              "n_authors": 95,
+              "authors_within_variation": 79,
+              "positive_authors": 83,
+              "largest_author_share_of_positives": 0.2672634271099744,
+              "passes_support": true
+            },
+            "T_BODY": {
+              "n_known": 5030,
+              "n_positive": 1286,
+              "n_negative": 3744,
+              "n_authors": 95,
+              "authors_within_variation": 73,
+              "positive_authors": 77,
+              "largest_author_share_of_positives": 0.26749611197511663,
+              "passes_support": true
+            },
+            "T_FOOD": {
+              "n_known": 5030,
+              "n_positive": 642,
+              "n_negative": 4388,
+              "n_authors": 95,
+              "authors_within_variation": 61,
+              "positive_authors": 61,
+              "largest_author_share_of_positives": 0.21962616822429906,
+              "passes_support": true
+            },
+            "T_LIFE": {
+              "n_known": 5030,
+              "n_positive": 1377,
+              "n_negative": 3653,
+              "n_authors": 95,
+              "authors_within_variation": 78,
+              "positive_authors": 79,
+              "largest_author_share_of_positives": 0.058823529411764705,
+              "passes_support": true
+            },
+            "T_TOOLS": {
+              "n_known": 5030,
+              "n_positive": 681,
+              "n_negative": 4349,
+              "n_authors": 95,
+              "authors_within_variation": 62,
+              "positive_authors": 64,
+              "largest_author_share_of_positives": 0.19530102790014683,
+              "passes_support": true
+            }
+          },
+          "removed_for_common_support": []
+        }
+      ],
+      "selected": [
+        "S_PRESENT",
+        "S_EXPERIENCE",
+        "S_APPRAISAL",
+        "S_FUTURE",
+        "S_EXHORT",
+        "S_REFLECTION",
+        "S_SOCIAL",
+        "T_ACTIVITY",
+        "T_BODY",
+        "T_FOOD",
+        "T_LIFE",
+        "T_TOOLS"
+      ],
+      "n_common": 5030,
+      "excluded_candidates": []
+    },
+    "n": 5030,
+    "n_excluded_from_main": 187,
+    "expression_only_same_sample": {
+      "n": 5030,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_PRESENT",
+        "S_EXPERIENCE",
+        "S_APPRAISAL",
+        "S_FUTURE",
+        "S_EXHORT",
+        "S_REFLECTION",
+        "S_SOCIAL"
+      ],
+      "support": {
+        "S_PRESENT": {
+          "n_known": 5030,
+          "n_positive": 2807,
+          "n_negative": 2223,
+          "n_authors": 95,
+          "authors_within_variation": 78,
+          "positive_authors": 90,
+          "largest_author_share_of_positives": 0.18489490559315996,
+          "passes_support": true
+        },
+        "S_EXPERIENCE": {
+          "n_known": 5030,
+          "n_positive": 743,
+          "n_negative": 4287,
+          "n_authors": 95,
+          "authors_within_variation": 70,
+          "positive_authors": 72,
+          "largest_author_share_of_positives": 0.08344549125168237,
+          "passes_support": true
+        },
+        "S_APPRAISAL": {
+          "n_known": 5030,
+          "n_positive": 748,
+          "n_negative": 4282,
+          "n_authors": 95,
+          "authors_within_variation": 75,
+          "positive_authors": 75,
+          "largest_author_share_of_positives": 0.09224598930481283,
+          "passes_support": true
+        },
+        "S_FUTURE": {
+          "n_known": 5030,
+          "n_positive": 455,
+          "n_negative": 4575,
+          "n_authors": 95,
+          "authors_within_variation": 63,
+          "positive_authors": 64,
+          "largest_author_share_of_positives": 0.0989010989010989,
+          "passes_support": true
+        },
+        "S_EXHORT": {
+          "n_known": 5030,
+          "n_positive": 694,
+          "n_negative": 4336,
+          "n_authors": 95,
+          "authors_within_variation": 75,
+          "positive_authors": 79,
+          "largest_author_share_of_positives": 0.10662824207492795,
+          "passes_support": true
+        },
+        "S_REFLECTION": {
+          "n_known": 5030,
+          "n_positive": 740,
+          "n_negative": 4290,
+          "n_authors": 95,
+          "authors_within_variation": 54,
+          "positive_authors": 55,
+          "largest_author_share_of_positives": 0.3027027027027027,
+          "passes_support": true
+        },
+        "S_SOCIAL": {
+          "n_known": 5030,
+          "n_positive": 672,
+          "n_negative": 4358,
+          "n_authors": 95,
+          "authors_within_variation": 57,
+          "positive_authors": 57,
+          "largest_author_share_of_positives": 0.22916666666666666,
+          "passes_support": true
+        }
+      },
+      "design_columns": 179,
+      "rank": 179,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_PRESENT": {
+          "label": "记录与展示",
+          "beta": 0.05849665194105345,
+          "se_cluster": 0.04616361829552137,
+          "p": 0.2082287912572589,
+          "ci_low": -0.03316229434608626,
+          "ci_high": 0.15015559822819316,
+          "q_bh_within_family": 0.660590413225576
+        },
+        "S_EXPERIENCE": {
+          "label": "自身体验",
+          "beta": 0.0056989320316439395,
+          "se_cluster": 0.04370280417142819,
+          "p": 0.896527063052261,
+          "ci_low": -0.08107401012603233,
+          "ci_high": 0.09247187418932021,
+          "q_bh_within_family": 0.9759899105938528
+        },
+        "S_APPRAISAL": {
+          "label": "对象评价",
+          "beta": -0.0010407578505398402,
+          "se_cluster": 0.034488503576272825,
+          "p": 0.9759899105938528,
+          "ci_low": -0.06951849017612974,
+          "ci_high": 0.06743697447505007,
+          "q_bh_within_family": 0.9759899105938528
+        },
+        "S_FUTURE": {
+          "label": "未来安排与目标",
+          "beta": 0.10734836974561396,
+          "se_cluster": 0.056731006081415916,
+          "p": 0.06153736873306247,
+          "ci_low": -0.005292372709714208,
+          "ci_high": 0.21998911220094214,
+          "q_bh_within_family": 0.4307615811314373
+        },
+        "S_EXHORT": {
+          "label": "鼓励与提醒",
+          "beta": 0.054702447658312364,
+          "se_cluster": 0.050672093182599964,
+          "p": 0.2831101770966754,
+          "ci_low": -0.0459081812041888,
+          "ci_high": 0.15531307652081353,
+          "q_bh_within_family": 0.660590413225576
+        },
+        "S_REFLECTION": {
+          "label": "观点与感悟",
+          "beta": 0.011748916848038828,
+          "se_cluster": 0.05878005500593633,
+          "p": 0.842006745166025,
+          "ci_low": -0.10496026028045617,
+          "ci_high": 0.12845809397653382,
+          "q_bh_within_family": 0.9759899105938528
+        },
+        "S_SOCIAL": {
+          "label": "问候祝愿与致谢",
+          "beta": -0.005002853663140635,
+          "se_cluster": 0.052269582471472696,
+          "p": 0.9239526464391581,
+          "ci_low": -0.10878533495682942,
+          "ci_high": 0.09877962763054814,
+          "q_bh_within_family": 0.9759899105938528
+        }
+      },
+      "r_squared": 0.5201762204732866
+    },
+    "with_topics": {
+      "n": 5030,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_PRESENT",
+        "S_EXPERIENCE",
+        "S_APPRAISAL",
+        "S_FUTURE",
+        "S_EXHORT",
+        "S_REFLECTION",
+        "S_SOCIAL",
+        "T_ACTIVITY",
+        "T_BODY",
+        "T_FOOD",
+        "T_LIFE",
+        "T_TOOLS"
+      ],
+      "support": {
+        "S_PRESENT": {
+          "n_known": 5030,
+          "n_positive": 2807,
+          "n_negative": 2223,
+          "n_authors": 95,
+          "authors_within_variation": 78,
+          "positive_authors": 90,
+          "largest_author_share_of_positives": 0.18489490559315996,
+          "passes_support": true
+        },
+        "S_EXPERIENCE": {
+          "n_known": 5030,
+          "n_positive": 743,
+          "n_negative": 4287,
+          "n_authors": 95,
+          "authors_within_variation": 70,
+          "positive_authors": 72,
+          "largest_author_share_of_positives": 0.08344549125168237,
+          "passes_support": true
+        },
+        "S_APPRAISAL": {
+          "n_known": 5030,
+          "n_positive": 748,
+          "n_negative": 4282,
+          "n_authors": 95,
+          "authors_within_variation": 75,
+          "positive_authors": 75,
+          "largest_author_share_of_positives": 0.09224598930481283,
+          "passes_support": true
+        },
+        "S_FUTURE": {
+          "n_known": 5030,
+          "n_positive": 455,
+          "n_negative": 4575,
+          "n_authors": 95,
+          "authors_within_variation": 63,
+          "positive_authors": 64,
+          "largest_author_share_of_positives": 0.0989010989010989,
+          "passes_support": true
+        },
+        "S_EXHORT": {
+          "n_known": 5030,
+          "n_positive": 694,
+          "n_negative": 4336,
+          "n_authors": 95,
+          "authors_within_variation": 75,
+          "positive_authors": 79,
+          "largest_author_share_of_positives": 0.10662824207492795,
+          "passes_support": true
+        },
+        "S_REFLECTION": {
+          "n_known": 5030,
+          "n_positive": 740,
+          "n_negative": 4290,
+          "n_authors": 95,
+          "authors_within_variation": 54,
+          "positive_authors": 55,
+          "largest_author_share_of_positives": 0.3027027027027027,
+          "passes_support": true
+        },
+        "S_SOCIAL": {
+          "n_known": 5030,
+          "n_positive": 672,
+          "n_negative": 4358,
+          "n_authors": 95,
+          "authors_within_variation": 57,
+          "positive_authors": 57,
+          "largest_author_share_of_positives": 0.22916666666666666,
+          "passes_support": true
+        },
+        "T_ACTIVITY": {
+          "n_known": 5030,
+          "n_positive": 1564,
+          "n_negative": 3466,
+          "n_authors": 95,
+          "authors_within_variation": 79,
+          "positive_authors": 83,
+          "largest_author_share_of_positives": 0.2672634271099744,
+          "passes_support": true
+        },
+        "T_BODY": {
+          "n_known": 5030,
+          "n_positive": 1286,
+          "n_negative": 3744,
+          "n_authors": 95,
+          "authors_within_variation": 73,
+          "positive_authors": 77,
+          "largest_author_share_of_positives": 0.26749611197511663,
+          "passes_support": true
+        },
+        "T_FOOD": {
+          "n_known": 5030,
+          "n_positive": 642,
+          "n_negative": 4388,
+          "n_authors": 95,
+          "authors_within_variation": 61,
+          "positive_authors": 61,
+          "largest_author_share_of_positives": 0.21962616822429906,
+          "passes_support": true
+        },
+        "T_LIFE": {
+          "n_known": 5030,
+          "n_positive": 1377,
+          "n_negative": 3653,
+          "n_authors": 95,
+          "authors_within_variation": 78,
+          "positive_authors": 79,
+          "largest_author_share_of_positives": 0.058823529411764705,
+          "passes_support": true
+        },
+        "T_TOOLS": {
+          "n_known": 5030,
+          "n_positive": 681,
+          "n_negative": 4349,
+          "n_authors": 95,
+          "authors_within_variation": 62,
+          "positive_authors": 64,
+          "largest_author_share_of_positives": 0.19530102790014683,
+          "passes_support": true
+        }
+      },
+      "design_columns": 184,
+      "rank": 184,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_PRESENT": {
+          "label": "记录与展示",
+          "beta": 0.0698742441706721,
+          "se_cluster": 0.04391666119391405,
+          "p": 0.11495265807862677,
+          "ci_low": -0.017323316118357635,
+          "ci_high": 0.15707180445970184,
+          "q_bh_within_family": 0.4023343032751937
+        },
+        "S_EXPERIENCE": {
+          "label": "自身体验",
+          "beta": -0.008547460563946634,
+          "se_cluster": 0.03976832077939641,
+          "p": 0.8302864259398897,
+          "ci_low": -0.08750839371510898,
+          "ci_high": 0.07041347258721571,
+          "q_bh_within_family": 0.9835596803970608
+        },
+        "S_APPRAISAL": {
+          "label": "对象评价",
+          "beta": 0.0007428785448457534,
+          "se_cluster": 0.035955172562927476,
+          "p": 0.9835596803970608,
+          "ci_low": -0.07064695943520569,
+          "ci_high": 0.0721327165248972,
+          "q_bh_within_family": 0.9835596803970608
+        },
+        "S_FUTURE": {
+          "label": "未来安排与目标",
+          "beta": 0.1122105857095655,
+          "se_cluster": 0.06049052373830181,
+          "p": 0.06672900496696195,
+          "ci_low": -0.007894767183621018,
+          "ci_high": 0.23231593860275201,
+          "q_bh_within_family": 0.4023343032751937
+        },
+        "S_EXHORT": {
+          "label": "鼓励与提醒",
+          "beta": 0.05180174368970006,
+          "se_cluster": 0.049669200705571036,
+          "p": 0.29965327317952967,
+          "ci_low": -0.0468176186499885,
+          "ci_high": 0.15042110602938863,
+          "q_bh_within_family": 0.6991909707522359
+        },
+        "S_REFLECTION": {
+          "label": "观点与感悟",
+          "beta": 0.008039996702486013,
+          "se_cluster": 0.06076541778613205,
+          "p": 0.8950202904989416,
+          "ci_low": -0.11261116476669705,
+          "ci_high": 0.12869115817166907,
+          "q_bh_within_family": 0.9835596803970608
+        },
+        "S_SOCIAL": {
+          "label": "问候祝愿与致谢",
+          "beta": -0.00893199389852758,
+          "se_cluster": 0.05308590144275081,
+          "p": 0.8667437891581303,
+          "ci_low": -0.11433529564572949,
+          "ci_high": 0.09647130784867432,
+          "q_bh_within_family": 0.9835596803970608
+        },
+        "T_ACTIVITY": {
+          "label": "运动训练",
+          "beta": -0.05621980152988732,
+          "se_cluster": 0.04616886155889507,
+          "p": 0.22638608690251782,
+          "ci_low": -0.1478891584393674,
+          "ci_high": 0.03544955537959275,
+          "q_bh_within_family": 0.7191260184791765
+        },
+        "T_BODY": {
+          "label": "身体健康",
+          "beta": 0.04045040619744376,
+          "se_cluster": 0.03782710580475608,
+          "p": 0.2876504073916706,
+          "ci_low": -0.034656199115867724,
+          "ci_high": 0.11555701151075523,
+          "q_bh_within_family": 0.7191260184791765
+        },
+        "T_FOOD": {
+          "label": "饮食营养",
+          "beta": 0.0044726695296811595,
+          "se_cluster": 0.0391032722580082,
+          "p": 0.9091797729255324,
+          "ci_low": -0.07316779419228617,
+          "ci_high": 0.08211313325164848,
+          "q_bh_within_family": 0.9672239141416366
+        },
+        "T_LIFE": {
+          "label": "具体生活",
+          "beta": 0.0011562058693758627,
+          "se_cluster": 0.02806331489338366,
+          "p": 0.9672239141416366,
+          "ci_low": -0.05456416370792159,
+          "ci_high": 0.056876575446673315,
+          "q_bh_within_family": 0.9672239141416366
+        },
+        "T_TOOLS": {
+          "label": "工具服务",
+          "beta": -0.027586528649961757,
+          "se_cluster": 0.044886647514562304,
+          "p": 0.5403155500793008,
+          "ci_low": -0.11671001951692855,
+          "ci_high": 0.06153696221700503,
+          "q_bh_within_family": 0.9005259167988346
+        }
+      },
+      "r_squared": 0.5206064257440106
+    },
+    "collinearity": {
+      "n": 5030,
+      "n_authors": 95,
+      "codes": [
+        "S_PRESENT",
+        "S_EXPERIENCE",
+        "S_APPRAISAL",
+        "S_FUTURE",
+        "S_EXHORT",
+        "S_REFLECTION",
+        "S_SOCIAL",
+        "T_ACTIVITY",
+        "T_BODY",
+        "T_FOOD",
+        "T_LIFE",
+        "T_TOOLS"
+      ],
+      "rank": 184,
+      "columns": 184,
+      "controls": "log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date)",
+      "dropped_redundant_control_columns": [],
+      "status": "full_rank_full_control_design",
+      "vif": {
+        "S_PRESENT": 2.181458962261357,
+        "S_EXPERIENCE": 1.4827661176405003,
+        "S_APPRAISAL": 1.4257719579686885,
+        "S_FUTURE": 1.2284534036054058,
+        "S_EXHORT": 1.3667116021400936,
+        "S_REFLECTION": 2.2358329837371116,
+        "S_SOCIAL": 1.7658780034218418,
+        "T_ACTIVITY": 1.939208743191019,
+        "T_BODY": 1.6623314552551953,
+        "T_FOOD": 1.8752729108384614,
+        "T_LIFE": 1.5082997183237994,
+        "T_TOOLS": 1.8785007357029928
+      },
+      "vif_independent_residual": {
+        "S_PRESENT": 2.1814589622613494,
+        "S_EXPERIENCE": 1.4827661176405016,
+        "S_APPRAISAL": 1.4257719579686858,
+        "S_FUTURE": 1.2284534036054084,
+        "S_EXHORT": 1.3667116021400938,
+        "S_REFLECTION": 2.2358329837371063,
+        "S_SOCIAL": 1.765878003421838,
+        "T_ACTIVITY": 1.9392087431910219,
+        "T_BODY": 1.662331455255194,
+        "T_FOOD": 1.8752729108384634,
+        "T_LIFE": 1.5082997183237938,
+        "T_TOOLS": 1.8785007357029897
+      },
+      "min_vif": 1.2284534036054058,
+      "max_vif": 2.2358329837371116,
+      "vif_ge_5": [],
+      "top_absolute_phi_pairs": [
+        {
+          "first": "S_EXPERIENCE",
+          "second": "T_BODY",
+          "phi": 0.4020763118961586,
+          "both_positive": 503,
+          "correlation_after_controls": 0.37488009219977386
+        },
+        {
+          "first": "S_PRESENT",
+          "second": "T_ACTIVITY",
+          "phi": 0.35477060390911525,
+          "both_positive": 1283,
+          "correlation_after_controls": 0.28313972601102566
+        },
+        {
+          "first": "S_PRESENT",
+          "second": "S_REFLECTION",
+          "phi": -0.34125532892809846,
+          "both_positive": 111,
+          "correlation_after_controls": -0.17763003931933535
+        },
+        {
+          "first": "S_PRESENT",
+          "second": "S_SOCIAL",
+          "phi": -0.2859395688116451,
+          "both_positive": 132,
+          "correlation_after_controls": -0.33010050223507953
+        },
+        {
+          "first": "T_ACTIVITY",
+          "second": "T_BODY",
+          "phi": 0.26400119446199977,
+          "both_positive": 668,
+          "correlation_after_controls": 0.1061142921403145
+        },
+        {
+          "first": "S_PRESENT",
+          "second": "S_EXHORT",
+          "phi": -0.25106423174073095,
+          "both_positive": 171,
+          "correlation_after_controls": -0.18394262924948196
+        },
+        {
+          "first": "S_PRESENT",
+          "second": "T_TOOLS",
+          "phi": 0.22929325884995827,
+          "both_positive": 576,
+          "correlation_after_controls": 0.11374836312583404
+        },
+        {
+          "first": "S_APPRAISAL",
+          "second": "T_LIFE",
+          "phi": 0.20830991754380782,
+          "both_positive": 371,
+          "correlation_after_controls": 0.07539933873899429
+        },
+        {
+          "first": "S_APPRAISAL",
+          "second": "T_FOOD",
+          "phi": 0.18843427116414754,
+          "both_positive": 208,
+          "correlation_after_controls": 0.016647336130014952
+        },
+        {
+          "first": "S_PRESENT",
+          "second": "T_LIFE",
+          "phi": 0.18186326434854858,
+          "both_positive": 971,
+          "correlation_after_controls": 0.21000516219453735
+        },
+        {
+          "first": "S_PRESENT",
+          "second": "T_FOOD",
+          "phi": 0.17123556452482255,
+          "both_positive": 501,
+          "correlation_after_controls": 0.08272713004885018
+        },
+        {
+          "first": "S_SOCIAL",
+          "second": "T_BODY",
+          "phi": -0.16986208830105326,
+          "both_positive": 45,
+          "correlation_after_controls": -0.1849944791744406
+        }
+      ]
+    }
+  },
+  "polarity": {
+    "parent_positive": 1396,
+    "n_known_both_polarity": 1377,
+    "counts": {
+      "positive_only": 686,
+      "negative_only": 490,
+      "mixed": 127,
+      "neither": 74
+    },
+    "support_initial": {
+      "mixed": {
+        "n_known": 1377,
+        "n_positive": 127,
+        "n_negative": 1250,
+        "n_authors": 81,
+        "authors_within_variation": 42,
+        "positive_authors": 42,
+        "largest_author_share_of_positives": 0.2047244094488189,
+        "passes_support": true
+      },
+      "negative_only": {
+        "n_known": 1377,
+        "n_positive": 490,
+        "n_negative": 887,
+        "n_authors": 81,
+        "authors_within_variation": 65,
+        "positive_authors": 69,
+        "largest_author_share_of_positives": 0.11020408163265306,
+        "passes_support": true
+      },
+      "neither": {
+        "n_known": 1377,
+        "n_positive": 74,
+        "n_negative": 1303,
+        "n_authors": 81,
+        "authors_within_variation": 34,
+        "positive_authors": 35,
+        "largest_author_share_of_positives": 0.13513513513513514,
+        "passes_support": true
+      },
+      "positive_only": {
+        "n_known": 1377,
+        "n_positive": 686,
+        "n_negative": 691,
+        "n_authors": 81,
+        "authors_within_variation": 66,
+        "positive_authors": 75,
+        "largest_author_share_of_positives": 0.0641399416909621,
+        "passes_support": true
+      }
+    },
+    "retained_levels": [
+      "mixed",
+      "negative_only",
+      "neither",
+      "positive_only"
+    ],
+    "excluded_levels": [],
+    "n_retained": 1377,
+    "population": "Only explicit experience/appraisal parents, both attributes known, retained supported polarity groups.",
+    "reference": "positive_only",
+    "model": {
+      "n": 1377,
+      "n_authors": 81,
+      "n_dates": 62,
+      "codes": [
+        "POL_mixed",
+        "POL_negative_only",
+        "POL_neither"
+      ],
+      "support": {
+        "POL_mixed": {
+          "n_known": 1377,
+          "n_positive": 127,
+          "n_negative": 1250,
+          "n_authors": 81,
+          "authors_within_variation": 42,
+          "positive_authors": 42,
+          "largest_author_share_of_positives": 0.2047244094488189,
+          "passes_support": true
+        },
+        "POL_negative_only": {
+          "n_known": 1377,
+          "n_positive": 490,
+          "n_negative": 887,
+          "n_authors": 81,
+          "authors_within_variation": 65,
+          "positive_authors": 69,
+          "largest_author_share_of_positives": 0.11020408163265306,
+          "passes_support": true
+        },
+        "POL_neither": {
+          "n_known": 1377,
+          "n_positive": 74,
+          "n_negative": 1303,
+          "n_authors": 81,
+          "authors_within_variation": 34,
+          "positive_authors": 35,
+          "largest_author_share_of_positives": 0.13513513513513514,
+          "passes_support": true
+        }
+      },
+      "design_columns": 160,
+      "rank": 160,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "POL_mixed": {
+          "label": "正负并存（参照：仅显性正向）",
+          "beta": -0.06904354403322382,
+          "se_cluster": 0.08640751700713234,
+          "p": 0.4266299628106681,
+          "ci_low": -0.2409999829505393,
+          "ci_high": 0.10291289488409164,
+          "q_bh_within_family": 0.6547654564244997
+        },
+        "POL_negative_only": {
+          "label": "仅显性负向（参照：仅显性正向）",
+          "beta": 0.0006612786059929003,
+          "se_cluster": 0.06523930458231808,
+          "p": 0.9919378560860017,
+          "ci_low": -0.12916907507135583,
+          "ci_high": 0.13049163228334165,
+          "q_bh_within_family": 0.9919378560860017
+        },
+        "POL_neither": {
+          "label": "均无显性方向（参照：仅显性正向）",
+          "beta": -0.1005907720881892,
+          "se_cluster": 0.12862912935022686,
+          "p": 0.43651030428299975,
+          "ci_low": -0.3565708973158823,
+          "ci_high": 0.1553893531395039,
+          "q_bh_within_family": 0.6547654564244997
+        }
+      },
+      "r_squared": 0.6271817363121903
+    },
+    "collinearity": {
+      "n": 1377,
+      "n_authors": 81,
+      "codes": [
+        "POL_mixed",
+        "POL_negative_only",
+        "POL_neither"
+      ],
+      "rank": 160,
+      "columns": 160,
+      "controls": "log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date)",
+      "dropped_redundant_control_columns": [],
+      "status": "full_rank_full_control_design",
+      "vif": {
+        "POL_mixed": 1.3517150985447988,
+        "POL_negative_only": 1.4297279866904218,
+        "POL_neither": 1.230839518568553
+      },
+      "vif_independent_residual": {
+        "POL_mixed": 1.351715098544799,
+        "POL_negative_only": 1.4297279866904213,
+        "POL_neither": 1.2308395185685514
+      },
+      "min_vif": 1.230839518568553,
+      "max_vif": 1.4297279866904218,
+      "vif_ge_5": [],
+      "top_absolute_phi_pairs": [
+        {
+          "first": "POL_mixed",
+          "second": "POL_negative_only",
+          "phi": -0.23690983162414408,
+          "both_positive": 0,
+          "correlation_after_controls": -0.2321743448617418
+        },
+        {
+          "first": "POL_negative_only",
+          "second": "POL_neither",
+          "phi": -0.17712500768873113,
+          "both_positive": 0,
+          "correlation_after_controls": -0.21050002526111447
+        },
+        {
+          "first": "POL_mixed",
+          "second": "POL_neither",
+          "phi": -0.07596097071110759,
+          "both_positive": 0,
+          "correlation_after_controls": -0.06982402026355662
+        }
+      ]
+    },
+    "status": "estimated_retrospective_exploratory"
+  },
+  "robustness": {
+    "drop_top_1_percent_likes": {
+      "n": 5164,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_PRESENT",
+        "S_EXPERIENCE",
+        "S_APPRAISAL",
+        "S_FUTURE",
+        "S_EXHORT",
+        "S_REFLECTION",
+        "S_SOCIAL"
+      ],
+      "support": {
+        "S_PRESENT": {
+          "n_known": 5164,
+          "n_positive": 2883,
+          "n_negative": 2281,
+          "n_authors": 95,
+          "authors_within_variation": 79,
+          "positive_authors": 90,
+          "largest_author_share_of_positives": 0.18140825528962887,
+          "passes_support": true
+        },
+        "S_EXPERIENCE": {
+          "n_known": 5164,
+          "n_positive": 747,
+          "n_negative": 4417,
+          "n_authors": 95,
+          "authors_within_variation": 70,
+          "positive_authors": 72,
+          "largest_author_share_of_positives": 0.08299866131191433,
+          "passes_support": true
+        },
+        "S_APPRAISAL": {
+          "n_known": 5164,
+          "n_positive": 796,
+          "n_negative": 4368,
+          "n_authors": 95,
+          "authors_within_variation": 77,
+          "positive_authors": 77,
+          "largest_author_share_of_positives": 0.08793969849246232,
+          "passes_support": true
+        },
+        "S_FUTURE": {
+          "n_known": 5164,
+          "n_positive": 461,
+          "n_negative": 4703,
+          "n_authors": 95,
+          "authors_within_variation": 64,
+          "positive_authors": 65,
+          "largest_author_share_of_positives": 0.09761388286334056,
+          "passes_support": true
+        },
+        "S_EXHORT": {
+          "n_known": 5164,
+          "n_positive": 683,
+          "n_negative": 4481,
+          "n_authors": 95,
+          "authors_within_variation": 77,
+          "positive_authors": 79,
+          "largest_author_share_of_positives": 0.10834553440702782,
+          "passes_support": true
+        },
+        "S_REFLECTION": {
+          "n_known": 5164,
+          "n_positive": 732,
+          "n_negative": 4432,
+          "n_authors": 95,
+          "authors_within_variation": 54,
+          "positive_authors": 55,
+          "largest_author_share_of_positives": 0.30601092896174864,
+          "passes_support": true
+        },
+        "S_SOCIAL": {
+          "n_known": 5164,
+          "n_positive": 658,
+          "n_negative": 4506,
+          "n_authors": 95,
+          "authors_within_variation": 57,
+          "positive_authors": 57,
+          "largest_author_share_of_positives": 0.23404255319148937,
+          "passes_support": true
+        }
+      },
+      "design_columns": 179,
+      "rank": 179,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_PRESENT": {
+          "label": "记录与展示",
+          "beta": 0.05959718624332844,
+          "se_cluster": 0.04541523726151158,
+          "p": 0.19262345350581048,
+          "ci_low": -0.030575831957336472,
+          "ci_high": 0.14977020444399336,
+          "q_bh_within_family": 0.6741820872703367
+        },
+        "S_EXPERIENCE": {
+          "label": "自身体验",
+          "beta": -0.0035042518483633517,
+          "se_cluster": 0.04276132925852981,
+          "p": 0.9348614442464116,
+          "ci_low": -0.08840787349655058,
+          "ci_high": 0.08139936979982387,
+          "q_bh_within_family": 0.9348614442464116
+        },
+        "S_APPRAISAL": {
+          "label": "对象评价",
+          "beta": 0.005999389281449816,
+          "se_cluster": 0.030560380121557547,
+          "p": 0.8447892511578129,
+          "ci_low": -0.05467896184225687,
+          "ci_high": 0.0666777404051565,
+          "q_bh_within_family": 0.9348614442464116
+        },
+        "S_FUTURE": {
+          "label": "未来安排与目标",
+          "beta": 0.0872966943672977,
+          "se_cluster": 0.0563365806998649,
+          "p": 0.12460847280442901,
+          "ci_low": -0.02456090724689375,
+          "ci_high": 0.19915429598148915,
+          "q_bh_within_family": 0.6741820872703367
+        },
+        "S_EXHORT": {
+          "label": "鼓励与提醒",
+          "beta": 0.04823135826857683,
+          "se_cluster": 0.05127098569519393,
+          "p": 0.349262413261355,
+          "ci_low": -0.05356838571683803,
+          "ci_high": 0.1500311022539917,
+          "q_bh_within_family": 0.8149456309431616
+        },
+        "S_REFLECTION": {
+          "label": "观点与感悟",
+          "beta": 0.00757165191907533,
+          "se_cluster": 0.05878754005419076,
+          "p": 0.8977935466935146,
+          "ci_low": -0.10915238694819235,
+          "ci_high": 0.124295690786343,
+          "q_bh_within_family": 0.9348614442464116
+        },
+        "S_SOCIAL": {
+          "label": "问候祝愿与致谢",
+          "beta": -0.017653257471877654,
+          "se_cluster": 0.05158637869472234,
+          "p": 0.7329585216604084,
+          "ci_low": -0.1200792216512568,
+          "ci_high": 0.08477270670750149,
+          "q_bh_within_family": 0.9348614442464116
+        }
+      },
+      "r_squared": 0.5168126606521799,
+      "likes_cutoff": 262.2000000000007,
+      "excluded_posts": 53
+    },
+    "authors_min_10": {
+      "n": 5112,
+      "n_authors": 73,
+      "n_dates": 62,
+      "codes": [
+        "S_PRESENT",
+        "S_EXPERIENCE",
+        "S_APPRAISAL",
+        "S_FUTURE",
+        "S_EXHORT",
+        "S_REFLECTION",
+        "S_SOCIAL"
+      ],
+      "support": {
+        "S_PRESENT": {
+          "n_known": 5112,
+          "n_positive": 2852,
+          "n_negative": 2260,
+          "n_authors": 73,
+          "authors_within_variation": 67,
+          "positive_authors": 72,
+          "largest_author_share_of_positives": 0.18373071528751753,
+          "passes_support": true
+        },
+        "S_EXPERIENCE": {
+          "n_known": 5112,
+          "n_positive": 740,
+          "n_negative": 4372,
+          "n_authors": 73,
+          "authors_within_variation": 62,
+          "positive_authors": 62,
+          "largest_author_share_of_positives": 0.08378378378378379,
+          "passes_support": true
+        },
+        "S_APPRAISAL": {
+          "n_known": 5112,
+          "n_positive": 793,
+          "n_negative": 4319,
+          "n_authors": 73,
+          "authors_within_variation": 67,
+          "positive_authors": 67,
+          "largest_author_share_of_positives": 0.08827238335435057,
+          "passes_support": true
+        },
+        "S_FUTURE": {
+          "n_known": 5112,
+          "n_positive": 459,
+          "n_negative": 4653,
+          "n_authors": 73,
+          "authors_within_variation": 58,
+          "positive_authors": 58,
+          "largest_author_share_of_positives": 0.09803921568627451,
+          "passes_support": true
+        },
+        "S_EXHORT": {
+          "n_known": 5112,
+          "n_positive": 676,
+          "n_negative": 4436,
+          "n_authors": 73,
+          "authors_within_variation": 65,
+          "positive_authors": 65,
+          "largest_author_share_of_positives": 0.10946745562130178,
+          "passes_support": true
+        },
+        "S_REFLECTION": {
+          "n_known": 5112,
+          "n_positive": 728,
+          "n_negative": 4384,
+          "n_authors": 73,
+          "authors_within_variation": 48,
+          "positive_authors": 48,
+          "largest_author_share_of_positives": 0.3076923076923077,
+          "passes_support": true
+        },
+        "S_SOCIAL": {
+          "n_known": 5112,
+          "n_positive": 663,
+          "n_negative": 4449,
+          "n_authors": 73,
+          "authors_within_variation": 52,
+          "positive_authors": 52,
+          "largest_author_share_of_positives": 0.23227752639517346,
+          "passes_support": true
+        }
+      },
+      "design_columns": 157,
+      "rank": 157,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": false,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_PRESENT": {
+          "label": "记录与展示",
+          "beta": 0.0614257585054554,
+          "se_cluster": 0.046006909083248455,
+          "p": 0.186035978087494,
+          "ci_low": -0.030287338566725525,
+          "ci_high": 0.15313885557763632,
+          "q_bh_within_family": 0.6511259233062291
+        },
+        "S_EXPERIENCE": {
+          "label": "自身体验",
+          "beta": -0.0008343560729662455,
+          "se_cluster": 0.04277966079370268,
+          "p": 0.9844933379312315,
+          "ci_low": -0.08611405125936583,
+          "ci_high": 0.08444533911343333,
+          "q_bh_within_family": 0.9844933379312315
+        },
+        "S_APPRAISAL": {
+          "label": "对象评价",
+          "beta": 0.0015330983812562905,
+          "se_cluster": 0.031199493123316012,
+          "p": 0.960944926587875,
+          "ci_low": -0.06066195445839179,
+          "ci_high": 0.06372815122090436,
+          "q_bh_within_family": 0.9844933379312315
+        },
+        "S_FUTURE": {
+          "label": "未来安排与目标",
+          "beta": 0.0924914002412879,
+          "se_cluster": 0.0573088645402499,
+          "p": 0.11092127952758497,
+          "ci_low": -0.021751733266460738,
+          "ci_high": 0.20673453374903653,
+          "q_bh_within_family": 0.6511259233062291
+        },
+        "S_EXHORT": {
+          "label": "鼓励与提醒",
+          "beta": 0.056312055898148056,
+          "se_cluster": 0.052776843960669964,
+          "p": 0.28954367098397893,
+          "ci_low": -0.048896659700846154,
+          "ci_high": 0.16152077149714228,
+          "q_bh_within_family": 0.6756018989626176
+        },
+        "S_REFLECTION": {
+          "label": "观点与感悟",
+          "beta": 0.002087501258578525,
+          "se_cluster": 0.058848561021091456,
+          "p": 0.9718011948752798,
+          "ci_low": -0.11522496108744525,
+          "ci_high": 0.1193999636046023,
+          "q_bh_within_family": 0.9844933379312315
+        },
+        "S_SOCIAL": {
+          "label": "问候祝愿与致谢",
+          "beta": -0.011547950269560674,
+          "se_cluster": 0.05413331355138598,
+          "p": 0.8316769282367749,
+          "ci_low": -0.11946073857693201,
+          "ci_high": 0.09636483803781065,
+          "q_bh_within_family": 0.9844933379312315
+        }
+      },
+      "r_squared": 0.5168407053920391,
+      "excluded_posts": 105
+    },
+    "author_equal_weight": {
+      "n": 5217,
+      "n_authors": 95,
+      "n_dates": 62,
+      "codes": [
+        "S_PRESENT",
+        "S_EXPERIENCE",
+        "S_APPRAISAL",
+        "S_FUTURE",
+        "S_EXHORT",
+        "S_REFLECTION",
+        "S_SOCIAL"
+      ],
+      "support": {
+        "S_PRESENT": {
+          "n_known": 5217,
+          "n_positive": 2910,
+          "n_negative": 2307,
+          "n_authors": 95,
+          "authors_within_variation": 79,
+          "positive_authors": 90,
+          "largest_author_share_of_positives": 0.18006872852233677,
+          "passes_support": true
+        },
+        "S_EXPERIENCE": {
+          "n_known": 5217,
+          "n_positive": 761,
+          "n_negative": 4456,
+          "n_authors": 95,
+          "authors_within_variation": 70,
+          "positive_authors": 72,
+          "largest_author_share_of_positives": 0.08147174770039421,
+          "passes_support": true
+        },
+        "S_APPRAISAL": {
+          "n_known": 5217,
+          "n_positive": 812,
+          "n_negative": 4405,
+          "n_authors": 95,
+          "authors_within_variation": 77,
+          "positive_authors": 77,
+          "largest_author_share_of_positives": 0.08620689655172414,
+          "passes_support": true
+        },
+        "S_FUTURE": {
+          "n_known": 5217,
+          "n_positive": 469,
+          "n_negative": 4748,
+          "n_authors": 95,
+          "authors_within_variation": 64,
+          "positive_authors": 65,
+          "largest_author_share_of_positives": 0.09594882729211088,
+          "passes_support": true
+        },
+        "S_EXHORT": {
+          "n_known": 5217,
+          "n_positive": 700,
+          "n_negative": 4517,
+          "n_authors": 95,
+          "authors_within_variation": 77,
+          "positive_authors": 79,
+          "largest_author_share_of_positives": 0.10571428571428572,
+          "passes_support": true
+        },
+        "S_REFLECTION": {
+          "n_known": 5217,
+          "n_positive": 741,
+          "n_negative": 4476,
+          "n_authors": 95,
+          "authors_within_variation": 54,
+          "positive_authors": 55,
+          "largest_author_share_of_positives": 0.30229419703103916,
+          "passes_support": true
+        },
+        "S_SOCIAL": {
+          "n_known": 5217,
+          "n_positive": 672,
+          "n_negative": 4545,
+          "n_authors": 95,
+          "authors_within_variation": 57,
+          "positive_authors": 57,
+          "largest_author_share_of_positives": 0.22916666666666666,
+          "passes_support": true
+        }
+      },
+      "design_columns": 179,
+      "rank": 179,
+      "dropped_redundant_control_columns": [],
+      "author_equal_weight": true,
+      "status": "estimated_retrospective_exploratory",
+      "coefficients": {
+        "S_PRESENT": {
+          "label": "记录与展示",
+          "beta": 0.09200862397199085,
+          "se_cluster": 0.05516005734919115,
+          "p": 0.09863783345865675,
+          "ci_low": -0.017512962949534416,
+          "ci_high": 0.2015302108935161,
+          "q_bh_within_family": 0.46420527789667704
+        },
+        "S_EXPERIENCE": {
+          "label": "自身体验",
+          "beta": 0.07967415043089347,
+          "se_cluster": 0.052521884517662855,
+          "p": 0.13263007939905058,
+          "ci_low": -0.024609282489936768,
+          "ci_high": 0.1839575833517237,
+          "q_bh_within_family": 0.46420527789667704
+        },
+        "S_APPRAISAL": {
+          "label": "对象评价",
+          "beta": 0.0015863580511166519,
+          "se_cluster": 0.0591235412645691,
+          "p": 0.9786512150633098,
+          "ci_low": -0.11580481909585277,
+          "ci_high": 0.11897753519808607,
+          "q_bh_within_family": 0.9786512150633098
+        },
+        "S_FUTURE": {
+          "label": "未来安排与目标",
+          "beta": 0.052335467713797136,
+          "se_cluster": 0.06432135064564651,
+          "p": 0.41789820345245277,
+          "ci_low": -0.07537608180565564,
+          "ci_high": 0.1800470172332499,
+          "q_bh_within_family": 0.7616938227471459
+        },
+        "S_EXHORT": {
+          "label": "鼓励与提醒",
+          "beta": 0.006584790654603019,
+          "se_cluster": 0.07437138269251134,
+          "p": 0.9296364048569843,
+          "ci_low": -0.14108133308541046,
+          "ci_high": 0.1542509143946165,
+          "q_bh_within_family": 0.9786512150633098
+        },
+        "S_REFLECTION": {
+          "label": "观点与感悟",
+          "beta": 0.05966763474514162,
+          "se_cluster": 0.07614698671790544,
+          "p": 0.43525361299836907,
+          "ci_low": -0.09152399241076459,
+          "ci_high": 0.2108592619010478,
+          "q_bh_within_family": 0.7616938227471459
+        },
+        "S_SOCIAL": {
+          "label": "问候祝愿与致谢",
+          "beta": 0.009442627935334891,
+          "se_cluster": 0.07117059099450858,
+          "p": 0.8947332408627588,
+          "ci_low": -0.1318682488557621,
+          "ci_high": 0.1507535047264319,
+          "q_bh_within_family": 0.9786512150633098
+        }
+      },
+      "r_squared": 0.6046605070919187
+    }
+  },
+  "controls": "log_length + has_tag + emoji_count + course_ref + C(contentTypeStr) + C(type) + C(time_bin) + C(author) + C(date)",
+  "legacy_four_used_as_controls": false,
+  "outcome": "log(1+likes)",
+  "clustering": "author",
+  "n_independent_human_reviews": 0,
+  "input_sha256": {
+    "post_features": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2",
+    "post_labels": "8bc4b8d95e3b552f20042a849321fa67c9aeaff04dda6ca6e5ced4ad2d57dcf9",
+    "analysis_protocol": "b919ca01cb73e81addc4dda76e4acb979fb5fb98c26af45e0d4f2b5b76b07dd9",
+    "coding_summary": "e2ecec765264471c6362f381886a667ed7710b1fa26022ae1034b9426b8bafc1"
+  },
+  "limits": [
+    "No independent human gold standard",
+    "No standardized exposure or observation window; likes are counts, not a like rate",
+    "Multiple retrospective explorations remain outside within-family BH",
+    "Observational conditional associations do not establish causal effects"
+  ]
+}

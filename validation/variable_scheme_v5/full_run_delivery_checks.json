@@ -1,0 +1,20 @@
+{
+  "status": "passed_content_structure_links_and_bounded_privacy_checks",
+  "n_chapters": 7,
+  "n_editable_word_tables": 13,
+  "n_editable_table_rows": 93,
+  "n_figures": 3,
+  "n_word_embedded_figures": 3,
+  "headline_counts_match_aggregates": true,
+  "relative_report_targets_exist": true,
+  "private_annotation_ids_found": false,
+  "full_source_texts_at_least_12_characters_found": false,
+  "privacy_scope": "New report MD/HTML/extracted DOCX paragraphs+tables and five full-v5 public result JSONs. Exact full-text matches >=12 characters and annotation-ID pattern only; not a general privacy certification.",
+  "native_word_pagination_rendered": false,
+  "visual_validation": "PNG figures inspected separately. Native Word pagination not rendered in this environment.",
+  "artifact_sha256": {
+    "分析报告_正文多维测量全量版_v5_可编辑.md": "6b633925c10fa1ff34020da4dc70cf7a4b317aa9c2f315531b9130ef556fe4b5",
+    "分析报告_正文多维测量全量版_v5_可编辑.html": "5d0a73a10fbfd134c46a42920bdf4bbf36ac71881129463b2ab2421023d04602",
+    "分析报告_正文多维测量全量版_v5_可编辑.docx": "f86f7a582838cd099851badf7b8193c6c481fbfbf178ffc689c612695293af87"
+  }
+}

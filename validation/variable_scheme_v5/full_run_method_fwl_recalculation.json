@@ -1,0 +1,182 @@
+{
+  "algorithm": "Frisch-Waugh-Lovell QR residualization, focal cluster scores, CR1 and t(G-1); no production analysis/audit helpers imported",
+  "checks": {
+    "main_fwl": {
+      "n": 5217,
+      "n_authors": 95,
+      "full_columns": 179,
+      "t_df": 94,
+      "max_absolute_inference_difference": 5.473399511402022e-14
+    },
+    "separate_largest_samples": {
+      "S_PRESENT": {
+        "n": 5235,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 1.2323475573339238e-14
+      },
+      "S_EXPERIENCE": {
+        "n": 5235,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 1.7763568394002505e-14
+      },
+      "S_APPRAISAL": {
+        "n": 5237,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 1.9095836023552692e-14
+      },
+      "S_FUTURE": {
+        "n": 5236,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 2.067790383364354e-14
+      },
+      "S_EXHORT": {
+        "n": 5243,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 2.3314683517128287e-14
+      },
+      "S_REFLECTION": {
+        "n": 5243,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 5.728750807065808e-14
+      },
+      "S_SOCIAL": {
+        "n": 5244,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 5.773159728050814e-14
+      }
+    },
+    "separate_same_main_sample": {
+      "S_PRESENT": {
+        "n": 5217,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 1.6486811915683575e-14
+      },
+      "S_EXPERIENCE": {
+        "n": 5217,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 3.452793606584237e-14
+      },
+      "S_APPRAISAL": {
+        "n": 5217,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 6.505906924303417e-14
+      },
+      "S_FUTURE": {
+        "n": 5217,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 1.9623191960249642e-14
+      },
+      "S_EXHORT": {
+        "n": 5217,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 2.9976021664879227e-14
+      },
+      "S_REFLECTION": {
+        "n": 5217,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 8.149037000748649e-14
+      },
+      "S_SOCIAL": {
+        "n": 5217,
+        "n_authors": 95,
+        "full_columns": 173,
+        "t_df": 94,
+        "max_absolute_inference_difference": 1.2212453270876722e-15
+      }
+    },
+    "topic_expression_only": {
+      "n": 5030,
+      "n_authors": 95,
+      "full_columns": 179,
+      "t_df": 94,
+      "max_absolute_inference_difference": 5.46229728115577e-14
+    },
+    "topic_with_contents": {
+      "n": 5030,
+      "n_authors": 95,
+      "full_columns": 184,
+      "t_df": 94,
+      "max_absolute_inference_difference": 1.1834977442504169e-13
+    },
+    "drop_top_1_percent_likes": {
+      "n": 5164,
+      "n_authors": 95,
+      "full_columns": 179,
+      "t_df": 94,
+      "max_absolute_inference_difference": 9.492406860545088e-14
+    },
+    "authors_min_10": {
+      "n": 5112,
+      "n_authors": 73,
+      "full_columns": 157,
+      "t_df": 72,
+      "max_absolute_inference_difference": 2.5701663020072374e-13
+    },
+    "author_equal_weight": {
+      "n": 5217,
+      "n_authors": 95,
+      "full_columns": 179,
+      "t_df": 94,
+      "max_absolute_inference_difference": 4.3876013933186186e-13
+    },
+    "conditional_polarity": {
+      "n": 1377,
+      "n_authors": 81,
+      "full_columns": 160,
+      "t_df": 80,
+      "max_absolute_inference_difference": 4.418687638008123e-14
+    }
+  },
+  "main_full_design_vif": {
+    "S_PRESENT": 1.9113439195348556,
+    "S_EXPERIENCE": 1.2805082186496004,
+    "S_APPRAISAL": 1.3867059581263674,
+    "S_FUTURE": 1.208722400409234,
+    "S_EXHORT": 1.3485670766146904,
+    "S_REFLECTION": 2.1957490828619126,
+    "S_SOCIAL": 1.661961078412601
+  },
+  "coverage": {
+    "expression": {
+      "any_positive": 5166,
+      "all_known": 5216,
+      "all_negative": 57,
+      "no_positive_some_unknown": 191
+    },
+    "topic": {
+      "any_positive": 3685,
+      "all_known": 5043,
+      "all_negative": 1391,
+      "no_positive_some_unknown": 338
+    }
+  },
+  "parent_positive": 1396,
+  "both_polarity_known": 1377,
+  "no_raw_text_ids_or_authors_exported": true
+}

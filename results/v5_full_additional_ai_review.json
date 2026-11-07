@@ -1,0 +1,619 @@
+{
+  "status": "supplemental_blind_same_base_AI_consistency_not_accuracy",
+  "sampling_metadata": {
+    "status": "additional_AI_review_sample_frozen_during_partial_production_before_outcome_analysis",
+    "seed": 2026110523,
+    "n_unique": 80,
+    "n_eligible_unique": 2833,
+    "n_documented_prior_dev_and_review_excluded": 1323,
+    "production_batches_present_at_freeze": 15,
+    "codebook_sha256": "ddb5b988797d6447c3dc33487425c98d2a6fb37f34140d3ff8db9dbc4fd6eacf",
+    "blind_sha256": "1db721229a630f3f046fd9da832b6e8340bc59389bd8433a614dbcca4e3040f0",
+    "private_key_sha256": "b160ceffd32617dd344d0adef87ab55b37c2e7539a479097c3be6eb17f1ecf46",
+    "production_manifest_sha256": "6f62f98a315d49bedbdef3a36b875fa4271fea3f262a33db586e5f60c97d7fd6",
+    "purpose": "A fresh independent context reads 80 random unique texts outside documented earlier development and review packets. Coder sees only anonymous text and manual.",
+    "limits": "Supplemental same-base AI operational consistency, not human accuracy or never-seen-corpus validation. Sampling was frozen after partial production had begun; no annotation distribution or likes used."
+  },
+  "n": 80,
+  "production": {
+    "n": 80,
+    "axes": {
+      "expression": {
+        "any_positive": 80,
+        "two_or_more_positive": 33,
+        "all_known": 80,
+        "all_negative": 0,
+        "no_positive_some_unknown": 0
+      },
+      "topic": {
+        "any_positive": 54,
+        "two_or_more_positive": 17,
+        "all_known": 77,
+        "all_negative": 23,
+        "no_positive_some_unknown": 3
+      },
+      "either": {
+        "any_positive": 80,
+        "two_or_more_positive": 63,
+        "all_known": 77,
+        "all_negative": 0,
+        "no_positive_some_unknown": 0
+      }
+    },
+    "variables": {
+      "T_ACTIVITY": {
+        "negative": 57,
+        "positive": 20,
+        "unknown": 3
+      },
+      "T_BODY": {
+        "negative": 59,
+        "positive": 18,
+        "unknown": 3
+      },
+      "T_FOOD": {
+        "positive": 16,
+        "negative": 61,
+        "unknown": 3
+      },
+      "T_LIFE": {
+        "negative": 57,
+        "positive": 20,
+        "unknown": 3
+      },
+      "T_TOOLS": {
+        "negative": 72,
+        "unknown": 3,
+        "positive": 5
+      },
+      "T_OTHER": {
+        "negative": 77,
+        "unknown": 3
+      },
+      "S_PRESENT": {
+        "positive": 45,
+        "negative": 35
+      },
+      "S_EXPERIENCE": {
+        "negative": 70,
+        "positive": 10
+      },
+      "S_APPRAISAL": {
+        "positive": 16,
+        "negative": 64
+      },
+      "S_FUTURE": {
+        "negative": 73,
+        "positive": 7
+      },
+      "S_EXHORT": {
+        "negative": 70,
+        "positive": 10
+      },
+      "S_REFLECTION": {
+        "negative": 64,
+        "positive": 16
+      },
+      "S_GUIDANCE": {
+        "negative": 78,
+        "positive": 2
+      },
+      "S_SOCIAL": {
+        "negative": 70,
+        "positive": 10
+      },
+      "S_REQUEST": {
+        "negative": 79,
+        "positive": 1
+      },
+      "S_OFFER": {
+        "negative": 80
+      },
+      "S_OTHER": {
+        "negative": 80
+      }
+    },
+    "attributes_given_parent_positive": {
+      "event_assertion": {
+        "asserted": 33,
+        "not_asserted": 11,
+        "uncertain": 1
+      },
+      "plan": {
+        "yes": 5,
+        "no": 2
+      },
+      "goal": {
+        "no": 5,
+        "yes": 2
+      },
+      "greeting": {
+        "yes": 9,
+        "no": 1
+      },
+      "thanks": {
+        "no": 9,
+        "yes": 1
+      },
+      "positive_tone": {
+        "yes": 14,
+        "no": 10,
+        "uncertain": 1
+      },
+      "negative_tone": {
+        "no": 12,
+        "yes": 12,
+        "uncertain": 1
+      }
+    },
+    "polarity": {
+      "parent_positive": 25,
+      "both_attributes_known": 24,
+      "combination_counts": {
+        "positive_no_negative": 12,
+        "positive_negative": 2,
+        "no_positive_negative": 10
+      },
+      "parent_not_applicable": 55,
+      "parent_unknown": 0
+    },
+    "all_dimensions_and_attributes_complete": 75
+  },
+  "review": {
+    "n": 80,
+    "axes": {
+      "expression": {
+        "any_positive": 79,
+        "two_or_more_positive": 32,
+        "all_known": 80,
+        "all_negative": 1,
+        "no_positive_some_unknown": 0
+      },
+      "topic": {
+        "any_positive": 52,
+        "two_or_more_positive": 16,
+        "all_known": 73,
+        "all_negative": 21,
+        "no_positive_some_unknown": 7
+      },
+      "either": {
+        "any_positive": 79,
+        "two_or_more_positive": 60,
+        "all_known": 73,
+        "all_negative": 0,
+        "no_positive_some_unknown": 1
+      }
+    },
+    "variables": {
+      "T_ACTIVITY": {
+        "negative": 54,
+        "positive": 20,
+        "unknown": 6
+      },
+      "T_BODY": {
+        "negative": 59,
+        "positive": 15,
+        "unknown": 6
+      },
+      "T_FOOD": {
+        "positive": 15,
+        "negative": 58,
+        "unknown": 7
+      },
+      "T_LIFE": {
+        "negative": 54,
+        "positive": 20,
+        "unknown": 6
+      },
+      "T_TOOLS": {
+        "negative": 68,
+        "unknown": 6,
+        "positive": 6
+      },
+      "T_OTHER": {
+        "negative": 74,
+        "unknown": 6
+      },
+      "S_PRESENT": {
+        "positive": 42,
+        "negative": 38
+      },
+      "S_EXPERIENCE": {
+        "positive": 15,
+        "negative": 65
+      },
+      "S_APPRAISAL": {
+        "positive": 21,
+        "negative": 59
+      },
+      "S_FUTURE": {
+        "negative": 73,
+        "positive": 7
+      },
+      "S_EXHORT": {
+        "negative": 74,
+        "positive": 6
+      },
+      "S_REFLECTION": {
+        "negative": 64,
+        "positive": 16
+      },
+      "S_GUIDANCE": {
+        "negative": 77,
+        "positive": 3
+      },
+      "S_SOCIAL": {
+        "negative": 70,
+        "positive": 10
+      },
+      "S_REQUEST": {
+        "negative": 79,
+        "positive": 1
+      },
+      "S_OFFER": {
+        "negative": 80
+      },
+      "S_OTHER": {
+        "negative": 79,
+        "positive": 1
+      }
+    },
+    "attributes_given_parent_positive": {
+      "event_assertion": {
+        "asserted": 33,
+        "not_asserted": 9
+      },
+      "plan": {
+        "yes": 6,
+        "no": 1
+      },
+      "goal": {
+        "no": 5,
+        "yes": 2
+      },
+      "greeting": {
+        "yes": 9,
+        "no": 1
+      },
+      "thanks": {
+        "no": 9,
+        "yes": 1
+      },
+      "positive_tone": {
+        "yes": 18,
+        "no": 13
+      },
+      "negative_tone": {
+        "no": 15,
+        "yes": 16
+      }
+    },
+    "polarity": {
+      "parent_positive": 31,
+      "both_attributes_known": 31,
+      "combination_counts": {
+        "positive_no_negative": 15,
+        "positive_negative": 3,
+        "no_positive_negative": 13
+      },
+      "parent_not_applicable": 49,
+      "parent_unknown": 0
+    },
+    "all_dimensions_and_attributes_complete": 73
+  },
+  "agreement": {
+    "n": 80,
+    "per_label": {
+      "T_ACTIVITY": {
+        "both_positive": 19,
+        "a_only_positive_known": 0,
+        "b_only_positive_known": 1,
+        "both_negative": 54,
+        "either_unknown": 6,
+        "comparable_positive_union": 20,
+        "positive_agreement_known_only": 0.9743589743589743,
+        "three_state_exact": 76,
+        "a_known": 77,
+        "b_known": 74
+      },
+      "T_BODY": {
+        "both_positive": 15,
+        "a_only_positive_known": 3,
+        "b_only_positive_known": 0,
+        "both_negative": 56,
+        "either_unknown": 6,
+        "comparable_positive_union": 18,
+        "positive_agreement_known_only": 0.9090909090909091,
+        "three_state_exact": 74,
+        "a_known": 77,
+        "b_known": 74
+      },
+      "T_FOOD": {
+        "both_positive": 15,
+        "a_only_positive_known": 0,
+        "b_only_positive_known": 0,
+        "both_negative": 58,
+        "either_unknown": 7,
+        "comparable_positive_union": 15,
+        "positive_agreement_known_only": 1.0,
+        "three_state_exact": 76,
+        "a_known": 77,
+        "b_known": 73
+      },
+      "T_LIFE": {
+        "both_positive": 19,
+        "a_only_positive_known": 1,
+        "b_only_positive_known": 1,
+        "both_negative": 53,
+        "either_unknown": 6,
+        "comparable_positive_union": 21,
+        "positive_agreement_known_only": 0.95,
+        "three_state_exact": 75,
+        "a_known": 77,
+        "b_known": 74
+      },
+      "T_TOOLS": {
+        "both_positive": 5,
+        "a_only_positive_known": 0,
+        "b_only_positive_known": 1,
+        "both_negative": 68,
+        "either_unknown": 6,
+        "comparable_positive_union": 6,
+        "positive_agreement_known_only": 0.9090909090909091,
+        "three_state_exact": 76,
+        "a_known": 77,
+        "b_known": 74
+      },
+      "T_OTHER": {
+        "both_positive": 0,
+        "a_only_positive_known": 0,
+        "b_only_positive_known": 0,
+        "both_negative": 74,
+        "either_unknown": 6,
+        "comparable_positive_union": 0,
+        "positive_agreement_known_only": null,
+        "three_state_exact": 77,
+        "a_known": 77,
+        "b_known": 74
+      },
+      "S_PRESENT": {
+        "both_positive": 41,
+        "a_only_positive_known": 4,
+        "b_only_positive_known": 1,
+        "both_negative": 34,
+        "either_unknown": 0,
+        "comparable_positive_union": 46,
+        "positive_agreement_known_only": 0.9425287356321839,
+        "three_state_exact": 75,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_EXPERIENCE": {
+        "both_positive": 10,
+        "a_only_positive_known": 0,
+        "b_only_positive_known": 5,
+        "both_negative": 65,
+        "either_unknown": 0,
+        "comparable_positive_union": 15,
+        "positive_agreement_known_only": 0.8,
+        "three_state_exact": 75,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_APPRAISAL": {
+        "both_positive": 15,
+        "a_only_positive_known": 1,
+        "b_only_positive_known": 6,
+        "both_negative": 58,
+        "either_unknown": 0,
+        "comparable_positive_union": 22,
+        "positive_agreement_known_only": 0.8108108108108109,
+        "three_state_exact": 73,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_FUTURE": {
+        "both_positive": 6,
+        "a_only_positive_known": 1,
+        "b_only_positive_known": 1,
+        "both_negative": 72,
+        "either_unknown": 0,
+        "comparable_positive_union": 8,
+        "positive_agreement_known_only": 0.8571428571428571,
+        "three_state_exact": 78,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_EXHORT": {
+        "both_positive": 6,
+        "a_only_positive_known": 4,
+        "b_only_positive_known": 0,
+        "both_negative": 70,
+        "either_unknown": 0,
+        "comparable_positive_union": 10,
+        "positive_agreement_known_only": 0.75,
+        "three_state_exact": 76,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_REFLECTION": {
+        "both_positive": 15,
+        "a_only_positive_known": 1,
+        "b_only_positive_known": 1,
+        "both_negative": 63,
+        "either_unknown": 0,
+        "comparable_positive_union": 17,
+        "positive_agreement_known_only": 0.9375,
+        "three_state_exact": 78,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_GUIDANCE": {
+        "both_positive": 1,
+        "a_only_positive_known": 1,
+        "b_only_positive_known": 2,
+        "both_negative": 76,
+        "either_unknown": 0,
+        "comparable_positive_union": 4,
+        "positive_agreement_known_only": 0.4,
+        "three_state_exact": 77,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_SOCIAL": {
+        "both_positive": 10,
+        "a_only_positive_known": 0,
+        "b_only_positive_known": 0,
+        "both_negative": 70,
+        "either_unknown": 0,
+        "comparable_positive_union": 10,
+        "positive_agreement_known_only": 1.0,
+        "three_state_exact": 80,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_REQUEST": {
+        "both_positive": 1,
+        "a_only_positive_known": 0,
+        "b_only_positive_known": 0,
+        "both_negative": 79,
+        "either_unknown": 0,
+        "comparable_positive_union": 1,
+        "positive_agreement_known_only": 1.0,
+        "three_state_exact": 80,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_OFFER": {
+        "both_positive": 0,
+        "a_only_positive_known": 0,
+        "b_only_positive_known": 0,
+        "both_negative": 80,
+        "either_unknown": 0,
+        "comparable_positive_union": 0,
+        "positive_agreement_known_only": null,
+        "three_state_exact": 80,
+        "a_known": 80,
+        "b_known": 80
+      },
+      "S_OTHER": {
+        "both_positive": 0,
+        "a_only_positive_known": 0,
+        "b_only_positive_known": 1,
+        "both_negative": 79,
+        "either_unknown": 0,
+        "comparable_positive_union": 1,
+        "positive_agreement_known_only": 0.0,
+        "three_state_exact": 79,
+        "a_known": 80,
+        "b_known": 80
+      }
+    },
+    "attributes": {
+      "event_assertion": {
+        "both_parent_positive": 41,
+        "either_uncertain": 1,
+        "exact_including_unknown": 36,
+        "both_known": 40,
+        "exact_known": 36
+      },
+      "plan": {
+        "both_parent_positive": 6,
+        "either_uncertain": 0,
+        "exact_including_unknown": 6,
+        "both_known": 6,
+        "exact_known": 6,
+        "both_yes": 5,
+        "a_only_yes": 0,
+        "b_only_yes": 0,
+        "comparable_positive_union": 5,
+        "positive_agreement_known_only": 1.0
+      },
+      "goal": {
+        "both_parent_positive": 6,
+        "either_uncertain": 0,
+        "exact_including_unknown": 5,
+        "both_known": 6,
+        "exact_known": 5,
+        "both_yes": 1,
+        "a_only_yes": 0,
+        "b_only_yes": 1,
+        "comparable_positive_union": 2,
+        "positive_agreement_known_only": 0.6666666666666666
+      },
+      "greeting": {
+        "both_parent_positive": 10,
+        "either_uncertain": 0,
+        "exact_including_unknown": 10,
+        "both_known": 10,
+        "exact_known": 10,
+        "both_yes": 9,
+        "a_only_yes": 0,
+        "b_only_yes": 0,
+        "comparable_positive_union": 9,
+        "positive_agreement_known_only": 1.0
+      },
+      "thanks": {
+        "both_parent_positive": 10,
+        "either_uncertain": 0,
+        "exact_including_unknown": 10,
+        "both_known": 10,
+        "exact_known": 10,
+        "both_yes": 1,
+        "a_only_yes": 0,
+        "b_only_yes": 0,
+        "comparable_positive_union": 1,
+        "positive_agreement_known_only": 1.0
+      },
+      "positive_tone": {
+        "both_parent_positive": 25,
+        "either_uncertain": 1,
+        "exact_including_unknown": 24,
+        "both_known": 24,
+        "exact_known": 24,
+        "both_yes": 14,
+        "a_only_yes": 0,
+        "b_only_yes": 0,
+        "comparable_positive_union": 14,
+        "positive_agreement_known_only": 1.0
+      },
+      "negative_tone": {
+        "both_parent_positive": 25,
+        "either_uncertain": 1,
+        "exact_including_unknown": 24,
+        "both_known": 24,
+        "exact_known": 24,
+        "both_yes": 12,
+        "a_only_yes": 0,
+        "b_only_yes": 0,
+        "comparable_positive_union": 12,
+        "positive_agreement_known_only": 1.0
+      }
+    },
+    "topic_positive_set_exact": 72,
+    "topic_positive_and_unknown_set_exact": 70,
+    "expression_positive_set_exact": 59,
+    "expression_positive_and_unknown_set_exact": 59,
+    "at_least_one_same_named_expression": 76,
+    "at_least_one_same_named_either": 78,
+    "joint_polarity": {
+      "both_parent_positive": 25,
+      "both_coders_both_attributes_known": 24,
+      "exact_combination_on_known": 24,
+      "parent_set_disagreement": 6
+    }
+  },
+  "n_independent_human_reviews": 0,
+  "production_labels_changed": false,
+  "input_sha256": {
+    "review_coding": "1542d9e4ca27febdae6e3958f461097d6c3cbb9910b55328cc8b8aa95f21b099",
+    "review_metadata": "7c753ce0551273611ed6d0ae6f6b306e2ea9d72fecec4a8ab03fe9130b13d0b6",
+    "production_merged": "a7ce73d60824e8e13cafaa98ac2a0804296b0477c38f546ca6d5bf70822d9985"
+  },
+  "limits": [
+    "Sample frozen during partial production, before annotation distribution and outcome analysis; not part of the original v5 pilot.",
+    "Excludes documented previous development and review texts; prior whole-corpus coding means it is not a never-seen corpus.",
+    "Fresh contexts with the same model base can share errors. Do not interpret agreement as accuracy.",
+    "Do not pool this 80-text review with the original 200 random or 60 targeted diagnostics to estimate full-corpus coverage."
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "status": "passed_with_measurement_and_observational_caveats",
+  "readiness": "Share with caveats",
+  "review_kind": "independent_context_AI_method_review_not_human_semantic_validity",
+  "reviewed_at_utc": "2026-11-04T17:53:29.613987+00:00",
+  "summary_zh": "独立上下文AI方法审阅及数值复算未发现影响本轮估计或主要结论的剩余方法错误。覆盖、模型纳入、未知与不适用、条件分母、作者聚类推断、BH检验组、完整设计VIF和历史对照口径一致；结论仍限于未经独立人工语义效度验证的探索性条件关联。",
+  "scope": {
+    "reviewed": "冻结全量协议、分析/聚合/审计/报告代码、最终Markdown七节的主要方法与论断、指定全量结果、必要的私有标签和特征。",
+    "complete_within_named_method_scope": true,
+    "semantic_truth_or_human_accuracy_assessed": false,
+    "n_independent_human_reviews": 0,
+    "production_labels_or_frozen_files_modified_by_reviewer": false,
+    "raw_text_post_ids_author_ids_exported": false,
+    "rendered_Word_HTML": "未由本方法审阅重复视觉验收；核对最终Markdown与图表数值绑定，渲染交付核查另有记录。"
+  },
+  "checks": {
+    "unknown_NA_and_population": {
+      "status": "verified",
+      "n_total": 9532,
+      "n_nonempty": 5414,
+      "n_unique_texts": 4156,
+      "named_expression_positive": 5166,
+      "all_ten_expression_known": 5216,
+      "all_ten_expression_negative": 57,
+      "no_named_positive_some_unknown": 191,
+      "finding": "阳性覆盖与回归利用率分开；未知保持缺失，不适用用于条件属性。模型只按本模型所需标签及控制项筛选，不要求全部条件属性齐全。"
+    },
+    "joint_single_and_content_same_sample": {
+      "status": "independently_recalculated",
+      "main_n": 5217,
+      "main_authors": 95,
+      "main_expression_count": 7,
+      "single_largest_n_range": [
+        5235,
+        5244
+      ],
+      "single_same_main_n": 5217,
+      "content_adjustment_n": 5030,
+      "content_excluded_from_main": 187,
+      "finding": "逐项、共同样本支持检查与冻结规则一致；七项联合、两类各七项逐项及同样本内容调整均实际估计。内容调整前后均用5030帖，内容是重叠0/1指标，没有按点赞显著性替换变量。"
+    },
+    "cluster_inference_and_BH": {
+      "status": "independently_recalculated",
+      "n_models_verified": 21,
+      "main_design_rank_and_columns": [
+        179,
+        179
+      ],
+      "main_author_cluster_t_df": 94,
+      "algorithm": "QR残差化的Frisch-Waugh-Lovell估计；焦点变量簇score构造sandwich；不导入生产分析或audit函数。",
+      "finite_sample_factor": "G/(G-1) * (n-1)/(n-k)",
+      "max_absolute_difference_beta_SE_p_or_CI": 4.3876013933186186e-13,
+      "BH_families": "主联合7表达；两类逐项分别各7表达；内容补充表达7项与内容5项分组；每个稳健模型各7表达；极性3个相对参照对比。",
+      "finding": "21模型系数、作者聚类SE、t概率及95%区间吻合。所述BH检验组独立重算一致；报告区间为逐项而非同时区间，组内BH不覆盖历史多轮探索。"
+    },
+    "complete_design_VIF": {
+      "status": "independently_recalculated",
+      "main_n": 5217,
+      "rank": 179,
+      "columns": 179,
+      "minimum": 1.208722400409234,
+      "maximum": 2.1957490828619126,
+      "finding": "逐项残差法使用表达、全部实际控制及作者日期固定效应，与相关矩阵逆吻合。未用仅表达相关代替完整设计；低VIF不被解释为语义效度。"
+    },
+    "robustness": {
+      "status": "independently_recalculated",
+      "trim_n": 5164,
+      "trim_excluded": 53,
+      "likes_99pct_cutoff": 262.2000000000007,
+      "authors_min_10_n": 5112,
+      "authors_min_10_authors": 73,
+      "author_equal_n": 5217,
+      "finding": "三方案按主样本定义执行，作者等权使用主样本作者帖数倒数，各自表达组均无q<0.05。报告仍指出体验、鼓励等点估计随权重变化，不把未达阈值写成系数完全稳定。"
+    },
+    "conditional_polarity": {
+      "status": "independently_recalculated",
+      "parent_experience_or_appraisal_positive": 1396,
+      "both_attributes_known": 1377,
+      "excluded_attribute_unknown": 19,
+      "group_counts": {
+        "positive_only": 686,
+        "negative_only": 490,
+        "mixed": 127,
+        "neither": 74
+      },
+      "authors_within_variation": {
+        "positive_only": 66,
+        "negative_only": 65,
+        "mixed": 42,
+        "neither": 34
+      },
+      "support_rule": "各组相对其他已知组：阳性>=40、阴性>=40、作者内变化>=10。",
+      "excluded_for_sparse_groups": 0,
+      "reference": "positive_only",
+      "author_clusters": 81,
+      "t_df": 80,
+      "finding": "四组均支持。最终稿明确19帖属性未知排除与0帖因组稀少排除。未适用不作no；未额外控制七项父表达，报告不把它解释为纯心理情绪效应。"
+    },
+    "AI_consistency_not_accuracy": {
+      "status": "independently_recalculated",
+      "seeded_sample_order_reconstructed": true,
+      "eligible_unique_pool": 2833,
+      "review_n": 80,
+      "strict_expression_set_agreement": 59,
+      "at_least_one_same_named_expression": 76,
+      "joint_polarity": {
+        "both_parent_positive": 25,
+        "both_attributes_known": 24,
+        "combination_exact_known": 24,
+        "parent_state_disagreement": 6
+      },
+      "positive_agreement_formula": "2*both_positive/(2*both_positive+a_only_positive_known+b_only_positive_known)",
+      "notable_boundaries": {
+        "S_EXHORT": {
+          "positive_agreement": 0.75,
+          "positive_union": 10
+        },
+        "S_GUIDANCE": {
+          "positive_agreement": 0.4,
+          "positive_union": 4
+        },
+        "S_REQUEST": {
+          "positive_agreement": 1.0,
+          "positive_union": 1
+        }
+      },
+      "finding": "从私有键和输出独立核对抽样、每标签三状态及阳性一致计数。原200随机/60困难与新80补充均分开，不合并筛查或外推覆盖；不称准确率、未见语料、人类真值或人工效度。"
+    },
+    "historical_coverage_and_NMF": {
+      "status": "independently_recalculated_and_source_checked",
+      "same_post_denominator": 5414,
+      "old_positive_counts": {
+        "legacy_four_lexical": 1523,
+        "v2_named_expression": 5202,
+        "v3_nine_expression": 3791
+      },
+      "v5_positive": 5166,
+      "v5_net_change": {
+        "legacy_four_lexical": 3643,
+        "v2_named_expression": -36,
+        "v3_nine_expression": 1375
+      },
+      "historical_NMF_posts": 2470,
+      "historical_NMF_authors": 86,
+      "character_experiment_posts": 5273,
+      "finding": "历史三组标签转移均用同5414帖独立复算；覆盖不作准确率或纠错证据，明确v5较v2略低。旧NMF实际使用归一化连续权重并省参照，非最大权重主类；最终稿明确权重从参照移向所述成分，其他非参照权重固定。"
+    },
+    "conclusions": {
+      "status": "verified_with_caveats",
+      "main_min_q": 0.6576441169150651,
+      "main_all_individual_CI_include_zero": true,
+      "finding": "未发现明确点赞差异证据与实际模型一致；没有把不显著写成零关系、点赞率或因果效果。最终稿明确区间以AI标签为给定输入，未传播语义误判。"
+    }
+  },
+  "clarifications_resolved_and_verified_in_final_markdown": [
+    {
+      "location": "第5节",
+      "finding": "原“未纳入条件回归的0帖”容易混淆分母，已改为1396父阳性中19方向未知、1377四组均支持，无因组合稀少另行排除。"
+    },
+    {
+      "location": "第4节",
+      "finding": "补充给定AI标签的聚类区间不含语义编码误差或标签不确定性。"
+    },
+    {
+      "location": "第7节",
+      "finding": "明确NMF系数对应参照与所述成分之间转移，其他非参照权重保持不变。"
+    }
+  ],
+  "remaining_material_method_errors_observed": [],
+  "future_reuse_note": "非阻断留痕建议：polarity_model可单独存档删除后所有保留组（含参照）的最终支持。当前四组全保留且均支持，不影响本轮，不要求改冻结协议或重选变量。",
+  "limitations": [
+    "这是独立上下文AI方法审阅和数值复算，不是独立人工语义效度、准确率评估或全量双编码。",
+    "同基座AI可能共享错误；80条一致性不能估计真实准确率，聚类推断未传播语义测量误差。",
+    "多轮回顾性搜索不由各模型内部BH覆盖，冻结于全量结果前不等于最初事前注册。",
+    "没有统一曝光或观察窗口；作者效应和聚类不能排除曝光、粉丝变化或图片视频内容差异。",
+    "本轮全部实际控制设计均满秩且没有删控制列，不据此宣称未触发的秩修复分支对任意未来数据都验证通过。"
+  ],
+  "reference_checks": [
+    {
+      "title": "Grimmer and Stewart (2013), Text as Data",
+      "url": "https://www.cambridge.org/core/journals/political-analysis/article/text-as-data-the-promise-and-pitfalls-of-automatic-content-analysis-methods-for-political-texts/F7AAC8B2909441603FEB25C156448F20",
+      "verified_support": "官方摘要支持具体研究问题下的验证和细读要求。"
+    },
+    {
+      "title": "Egami et al. (2022), How to make causal inferences using texts",
+      "url": "https://naokiegami.com/paper/CausalText.pdf",
+      "verified_support": "原文说明使用同一文档发现测量并估计因果关系的识别和过拟合风险；报告未称完成其分样本因果流程。"
+    }
+  ],
+  "artifacts_sha256": {
+    "code/v5_full_analysis_protocol.json": "b919ca01cb73e81addc4dda76e4acb979fb5fb98c26af45e0d4f2b5b76b07dd9",
+    "code/analyze_v5_full.py": "53fef919eb912f8fc1922df3346a7f487010d590ff45c25b6e0d9805b0415b08",
+    "code/audit_v5_full.py": "7e911b6611e2e6df798abfc92f4c31b778e22675f427a23fc88019922d565b40",
+    "code/build_v5_full_report.py": "6efda25ddeed515860aefa36d269584032addd92fffc480f12787cb3917564e6",
+    "code/evaluate_v5_full_reading.py": "f7990fc7ca2b2e97ea8cc6fb2ec6c7562770b847c56d87976606965489b631af",
+    "code/evaluate_v5_full_additional_review.py": "203dd470c8271a11fa127d0cc7a9e8f91c746f41eaff8899b8c71c0f94c20665",
+    "results/v5_full_analysis.json": "752d7b463b1623d466f73f690406e95a35e345b220138ca291d4487db2933cb0",
+    "results/v5_full_coding_summary.json": "e2ecec765264471c6362f381886a667ed7710b1fa26022ae1034b9426b8bafc1",
+    "results/v5_full_measurement_comparison.json": "d4982b245a0a3942b45431b94eebe42331c6d26c951c7d480a4078c35fa3f7ba",
+    "results/v5_full_additional_ai_review.json": "31ec668d9159249328a6dfbbbf2b934f1c35f9f275abc5f809c06c62e82b1753",
+    "results/v5_full_independent_audit.json": "49710ec2afc52d9d61c628bb9619de976352bdc54ce404fe37e003b093203c9b",
+    "validation/variable_scheme_v5/audit_v5_full_fwl.py": "74d25b6eaba892e1abbff0470db67ffef103e9902450dc2feeb0d1213c69efcc",
+    "validation/variable_scheme_v5/full_run_method_fwl_recalculation.json": "fc0f25e5e321f446683caabc4346ceac7dc174325ee29cf0a3c53ec3221bccc4",
+    "分析报告_正文多维测量全量版_v5_可编辑.md": "6b633925c10fa1ff34020da4dc70cf7a4b317aa9c2f315531b9130ef556fe4b5"
+  },
+  "frozen_analysis_protocol_outcome_source_and_codebook_unchanged": true,
+  "final_markdown_structure": {
+    "sections": 7,
+    "tables": 13,
+    "figure_references": 3
+  }
+}

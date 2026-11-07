@@ -1,0 +1,614 @@
+{
+  "sources": [
+    "validation/slides_merged_10_15/peer_text.txt",
+    "validation/slides_integrated_10_15/slides_manifest.json",
+    "results/model_fit.csv",
+    "results/text_features_summary.csv",
+    "分析报告_Phase2_中文新版_insight_v2_修改版_排版优化.md"
+  ],
+  "chapter_names_preserved": [
+    "研究背景、意义与研究问题",
+    "数据来源、清洗与分析方法",
+    "数据覆盖与描述统计",
+    "文字表达与点赞的关联",
+    "帖子主题与点赞的关联",
+    "评论的主要内容",
+    "评论区的网络结构",
+    "研究结论与局限"
+  ],
+  "slide_count": 22,
+  "appendix_slides": 0,
+  "hidden_slides": 0,
+  "speaking_seconds": 825,
+  "transition_buffer_seconds": 30,
+  "total_seconds": 855,
+  "delivery_guidance": "约14分15秒预算，不逐行念统计表；主回归和主题回归各讲重点行、整组检验和解释。完整数字留在正文可供核对。10分钟压缩时缩口播，不删除用户明确要求的证据页。",
+  "rq_presentation_rule": "正文页眉用“章号 同伴原章名 · RQ编号/分析任务”；第1章问题表显式写RQ1/2/3；第8章按同样编号作答。主题构成页属于RQ1，主题回归页属于RQ2，避免整章一刀切。",
+  "slides": [
+    {
+      "page": 1,
+      "chapter_number": 0,
+      "chapter": "封面",
+      "title": "Keep社区内容表达与互动反馈分析",
+      "rq_label": "总问题",
+      "seconds": 15,
+      "evidence_and_analysis": "保留陈霖、董依心署名；开场说清内容反馈与人际交流两条线。",
+      "conclusion": "先看内容怎样获得反馈，再看评论怎样被回应。",
+      "transition": "进入一个总问题和三个可检验方面。"
+    },
+    {
+      "page": 2,
+      "chapter_number": 1,
+      "chapter": "研究背景、意义与研究问题",
+      "title": "研究背景、问题与预期",
+      "rq_label": "RQ1–RQ3：研究设计",
+      "seconds": 40,
+      "evidence_and_analysis": "总问题＋Keep背景在上方；下方三行明确写RQ1、RQ2、RQ3，各有具体问题和待检验的可能解释。",
+      "conclusion": "三个问题分别是分布、关联、互动，不把可能解释写成已验证结论。",
+      "transition": "先交代数据如何得到、变量怎样定义。"
+    },
+    {
+      "page": 3,
+      "chapter_number": 2,
+      "chapter": "数据来源、清洗与分析方法",
+      "title": "数据来源与清洗",
+      "rq_label": "RQ1–RQ3：共同分析范围",
+      "seconds": 30,
+      "evidence_and_analysis": "样本9,532帖/100作者；评论13,511→11,595，去重1,916行；正文缺失与评论覆盖处理各自说明。",
+      "conclusion": "评论未采到不等于零评论；点赞与浏览口径不一致，不算点赞率。",
+      "transition": "定义后文反复出现的文字变量。"
+    },
+    {
+      "page": 4,
+      "chapter_number": 2,
+      "chapter": "数据来源、清洗与分析方法",
+      "title": "文本变量与分析方法",
+      "rq_label": "为RQ2定义变量；交代RQ3方法",
+      "seconds": 45,
+      "evidence_and_analysis": "五项核心文字线索及真实词表示例；明确长度的ln形式、其余命中记1、维度可重叠；简述回归/主题/回复网络三种方法。",
+      "conclusion": "这是字面用词编码，不是心理或情绪量表。",
+      "transition": "在这些定义下，先看样本实际覆盖和原始分布。"
+    },
+    {
+      "page": 5,
+      "chapter_number": 3,
+      "chapter": "数据覆盖与描述统计",
+      "title": "正文覆盖随内容形式变化，评论集中在部分帖子",
+      "rq_label": "RQ1：覆盖与可解释范围",
+      "seconds": 30,
+      "evidence_and_analysis": "恢复媒体正文覆盖图：76.0/89.1/100.0/0.1%；5,548可见正文、5,414清理后非空；评论仅覆盖1,323帖。",
+      "conclusion": "有效正文分析更代表有文字记录的媒体与作者；覆盖缺口决定后续分母。",
+      "transition": "比较点赞时，同时看分布中间、尾部和媒体差异。"
+    },
+    {
+      "page": 6,
+      "chapter_number": 3,
+      "chapter": "数据覆盖与描述统计",
+      "title": "图片和视频帖原始点赞更高，点赞分布也有长尾",
+      "rq_label": "RQ1：媒体差异与点赞分布",
+      "seconds": 50,
+      "evidence_and_analysis": "一页放缩小的媒体均值图与点赞直方图/对数分箱图；并列37.05均值、25中位数、5,126最大值及零点赞3.8%。补作者66帖中位/783最大。",
+      "conclusion": "普通帖更接近中位数；少量高赞拉高均值。媒体和高产作者构成会影响原始组间比较。",
+      "transition": "下一章使用前面定义的文字线索，检查原始表达差异。"
+    },
+    {
+      "page": 7,
+      "chapter_number": 4,
+      "chapter": "文字表达与点赞的关联",
+      "title": "描述性统计中，四类表达都对应更高点赞",
+      "rq_label": "RQ2：原始组间关联",
+      "seconds": 40,
+      "evidence_and_analysis": "恢复命中/未命中四组均值图及命中样本量877/159/574/125；给出涉及作者76/42/64/32作为组成背景。至少点出积极表达57.29 vs35.76。",
+      "conclusion": "命中组涉及的作者与媒体/日期构成并非随机匹配；原始均值不能解释成措辞贡献。不要仅凭样本量断言混淆已被证明。",
+      "transition": "用已有媒体和作者不均衡证据提出下一页控制：在统一方程中逐步扣除作者、日期和记录情境差异。"
+    },
+    {
+      "page": 8,
+      "chapter_number": 4,
+      "chapter": "文字表达与点赞的关联",
+      "title": "同一回归框架里，逐步扣除作者与发布情境差异",
+      "rq_label": "RQ2：模型与检验对象",
+      "seconds": 40,
+      "evidence_and_analysis": "写出M3的ln(1+likes)=β文本＋γ控制＋作者FE＋日期FE＋误差；解释β、作者/日期效应、控制项；用M1→M2→M3小对照说明变化。",
+      "conclusion": "同一作者内变化改善可比性，仍不能消除曝光等未观测差异；后页系数/CI/p/q均指明模型。",
+      "transition": "用主模型M3检验原始优势是否保留。"
+    },
+    {
+      "page": 9,
+      "chapter_number": 4,
+      "chapter": "文字表达与点赞的关联",
+      "title": "原始积极表达优势没有保留到M3比较中",
+      "rq_label": "RQ2：主回归结果",
+      "seconds": 65,
+      "evidence_and_analysis": "五项系数＋原始95%CI＋原始p＋BH q表；重点β=-0.086、p=.016、q=.079；M3 R²=.688，文本ΔR²=.065个百分点、联合p=.130。",
+      "conclusion": "系数转负表明比较对象改变；BH后不足以认定稳定负向关联，也不支持少用积极词。整组新增解释很少。",
+      "transition": "先检查结果是否由缺失正文、极端值、作者权重或单一作者驱动。"
+    },
+    {
+      "page": 10,
+      "chapter_number": 4,
+      "chapter": "文字表达与点赞的关联",
+      "title": "积极表达的负向方向在多种敏感性分析中保留",
+      "rq_label": "RQ2：结果稳健程度",
+      "seconds": 40,
+      "evidence_and_analysis": "恢复同伴敏感性图/精简表：可见正文、剔除最高1%、作者等权、PPML、逐作者剔除；保留模型尺度、区间和样本量。",
+      "conclusion": "稳健的是方向；PPML区间跨0等证据限制需保留，不能把方向一致升级为因果或稳定显著。",
+      "transition": "固定词表可能漏掉整篇内容，下一章改看正文主题。"
+    },
+    {
+      "page": 11,
+      "chapter_number": 5,
+      "chapter": "帖子主题与点赞的关联",
+      "title": "帖子正文主题主要包括运动和生活",
+      "rq_label": "RQ1：正文内容构成；为RQ2主题比较铺垫",
+      "seconds": 35,
+      "evidence_and_analysis": "恢复五主题占比52.7/35.8/4.6/3.4/3.4及关键词；标2,470帖、86作者，NMF五主题预先固定、每帖用最大权重描述构成。",
+      "conclusion": "生活感悟与问候占有效正文约三分之一；健身社区的记录也包含日常生活。",
+      "transition": "常见内容究竟由很多人写，还是少数人写得多？"
+    },
+    {
+      "page": 12,
+      "chapter_number": 5,
+      "chapter": "帖子主题与点赞的关联",
+      "title": "常见内容与少数人的高频记录",
+      "rq_label": "RQ1：作者权重检验",
+      "seconds": 30,
+      "evidence_and_analysis": "恢复按帖和作者等权对照；静蹲3.4→0.6，85帖中78帖来自一人；训练52.7→52.6、生活35.8→38.2。",
+      "conclusion": "少数高产作者能放大小主题份额；训练与生活并存的主要格局保留。",
+      "transition": "分清主题构成后，再问主题与点赞的调整后关联。"
+    },
+    {
+      "page": 13,
+      "chapter_number": 5,
+      "chapter": "帖子主题与点赞的关联",
+      "title": "主题呈现内容构成，也提供反馈差异的线索",
+      "rq_label": "RQ2：主题回归",
+      "seconds": 50,
+      "evidence_and_analysis": "恢复五主题主导帖数/占比及连续权重回归系数、CI、原始p、BH q；相对训练主题；联合p=.166，各单项q>.05。",
+      "conclusion": "主题描述有清楚内容意义，新增点赞关联证据却有限；生活主题原始CI不跨0也不能忽略整组和多重校正。",
+      "transition": "点赞未必能解释交流内容，下一章直接观察留言与回应。"
+    },
+    {
+      "page": 14,
+      "chapter_number": 6,
+      "chapter": "评论的主要内容",
+      "title": "评论长度、词频与发言者角色",
+      "rq_label": "RQ3：谁在说什么",
+      "seconds": 30,
+      "evidence_and_analysis": "角色词类命中图；6字符中位；加油612条/431人，谢谢359条/53人；人数与次数并列。",
+      "conclusion": "读者更常鼓励、帖主更常感谢；高频词既可能面广，也可能来自重复使用。",
+      "transition": "总体分布不能证明某条鼓励被感谢，需进入直接回复配对。"
+    },
+    {
+      "page": 15,
+      "chapter_number": 6,
+      "chapter": "评论的主要内容",
+      "title": "直接回复和留言串参与，采用不同统计规则",
+      "rq_label": "RQ3：回复对象与时间窗",
+      "seconds": 30,
+      "evidence_and_analysis": "保留关系示意：54%=3568/6609，明确回复根评论、7天内；57%=3770/6609，帖主在整串回话、不限7天。",
+      "conclusion": "两个比例的时间范围不同，不能把3个百分点解释成回复别人的份额；下一页沿用54%的直接回复规则。",
+      "transition": "比较鼓励留言得到多少直接回复，以及已回复时怎样说。"
+    },
+    {
+      "page": 16,
+      "chapter_number": 6,
+      "chapter": "评论的主要内容",
+      "title": "鼓励留言的回应更常感谢，观测直接回复覆盖却更低",
+      "rq_label": "RQ3：留言内容与后续回应",
+      "seconds": 45,
+      "evidence_and_analysis": "两图/表直接列43.5 vs56.3与26.7 vs6.4；对应分母各组全部根评论/各组已回复记录，给出计数。",
+      "conclusion": "被回复时的表达方式与整组回复覆盖是两件事；鼓励更常对应致谢，但不等于更容易得到回复。只能描述观察关联。",
+      "transition": "回复并非孤立的文本，把发言连回账号看关系如何组织。"
+    },
+    {
+      "page": 17,
+      "chapter_number": 7,
+      "chapter": "评论区的网络结构",
+      "title": "评论关系网络与连通结构",
+      "rq_label": "RQ3：互动怎样组织",
+      "seconds": 40,
+      "evidence_and_analysis": "保留全网图与节点/边/方向/权重定义；2932账号、4069边、94.4%最大弱连通、密度.0473%；84自我事件剔除。",
+      "conclusion": "忽略方向时大多数账号间接连在一起，但直接关系稀疏；共同评论对象即可把人串起来，连通不等于彼此讨论。",
+      "transition": "需要拆回复方向，看谁实际承担回话。"
+    },
+    {
+      "page": 18,
+      "chapter_number": 7,
+      "chapter": "评论区的网络结构",
+      "title": "大多数账号相连，明确回话主要由帖主发出",
+      "rq_label": "RQ3：回复角色分工",
+      "seconds": 30,
+      "evidence_and_analysis": "4,902次非自我明确回复中：4361/444/97，89.0/9.1/2.0%；显式排除根评论。",
+      "conclusion": "主要往来是面向帖主留言后由帖主回复，横向接话很少；不把此比例当所有评论的回复率。",
+      "transition": "再把收到的事件次数拆成不同发送者人数，判断活跃究竟来自多少人。"
+    },
+    {
+      "page": 19,
+      "chapter_number": 7,
+      "chapter": "评论区的网络结构",
+      "title": "高互动量可能来自接触面广，或少数人反复往来",
+      "rq_label": "RQ3：次数与参与广度",
+      "seconds": 40,
+      "evidence_and_analysis": "恢复同伴三账号表：U1528 1378次/53人；U0948 1275次/1091人；U0112 180次/4人；标前二为样本帖作者、第三不是。",
+      "conclusion": "相近次数对应不同覆盖面；次数衡量声量，人数衡量接收关系范围。不能按总量给账号贴影响力或人格标签。",
+      "transition": "这些往来在什么时候发生，观察回复支持应优先覆盖哪个时段？"
+    },
+    {
+      "page": 20,
+      "chapter_number": 7,
+      "chapter": "评论区的网络结构",
+      "title": "评论多集中在早期，双向关系包含留言与回话",
+      "rq_label": "RQ3：互动时序与双向关系",
+      "seconds": 20,
+      "evidence_and_analysis": "保留64.5%24h、82.2%7天（发帖起算）；必要时放49.6全量互惠、29.9仅明确回复作比较，定义边而非评论比例。",
+      "conclusion": "根评论加帖主回复可自然形成双向边；早期评论多只是观察起点，不证明及时回复促进后续互动。",
+      "transition": "回到三个RQ综合作答。"
+    },
+    {
+      "page": 21,
+      "chapter_number": 8,
+      "chapter": "研究结论与局限",
+      "title": "分别回答三个研究问题",
+      "rq_label": "RQ1–RQ3：综合结论",
+      "seconds": 45,
+      "evidence_and_analysis": "三行完整问答＋对应关键证据：RQ1媒体与长尾/运动生活；RQ2 M3与主题检验；RQ3角色与次数人数差别。",
+      "conclusion": "有观察事实、有统计证据边界、有改变判断的具体含义，不只把页标题再列三行。",
+      "transition": "说明哪些缺口会影响这些回答，下一步怎样补。"
+    },
+    {
+      "page": 22,
+      "chapter_number": 8,
+      "chapter": "研究结论与局限",
+      "title": "研究局限及下一步",
+      "rq_label": "RQ1–RQ3：适用范围与验证",
+      "seconds": 35,
+      "evidence_and_analysis": "样本抽样机制、正文/媒体内容缺口、曝光/统一时间缺失、评论覆盖不全分别对应可能影响；给出补记录/统一窗口/按作者验证的具体改进。",
+      "conclusion": "结果限于课程样本内的关联；未观察到不等于实际没有；不能推广平台或推断因果。",
+      "transition": "结束于有证据支持的认识，不再加Thanks或答疑页。"
+    }
+  ],
+  "requirements_coverage": {
+    "1": {
+      "requirements": "沿用同伴8章，显式对应RQ，所有数据有解释结论",
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "implementation": "每页页眉保留“章号＋同伴原章名”，旁边标RQ；数据旁用1–2句分析，页末用自然过渡。章节不加纯隔页。"
+    },
+    "2": {
+      "requirements": "媒体点赞与长尾统计放一页，缩图",
+      "pages": [
+        6
+      ],
+      "implementation": "媒体均值图＋点赞分布图并列，保留均值/中位数/最大值/零点赞；解释长尾和可比性。"
+    },
+    "3": {
+      "requirements": "变量定义前置；分组比较有进一步分析和控制动机",
+      "pages": [
+        4,
+        6,
+        7,
+        8
+      ],
+      "implementation": "第4页完成五变量定义；第6页作者/媒体背景；第7页均值、命中数与作者覆盖引出统一控制方程。"
+    },
+    "4": {
+      "requirements": "回归方程、显著性模型、p/q/系数转负解释及下步动机",
+      "pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "implementation": "M3方程→M3系数/CI/p/q→敏感性→词表之外的主题，区分原始p和BH q。"
+    },
+    "5": {
+      "requirements": "恢复敏感性分析并说明",
+      "pages": [
+        10
+      ],
+      "implementation": "逐项说明在检验什么偏差，区分方向一致与区间/显著性。"
+    },
+    "6": {
+      "requirements": "恢复运动与生活主题分布及进一步分析",
+      "pages": [
+        11,
+        12
+      ],
+      "implementation": "内容占比和关键词先说明主题意义，再用作者等权检查高产作者影响。"
+    },
+    "7": {
+      "requirements": "补齐回归系数、CI、BH q等证据",
+      "pages": [
+        9,
+        10,
+        13
+      ],
+      "implementation": "主回归和主题回归都有完整统计列；敏感性有模型尺度、区间与样本量，保留原始区间标识。"
+    },
+    "8": {
+      "requirements": "恢复主题回归并分析",
+      "pages": [
+        13
+      ],
+      "implementation": "标连续主题权重、基准主题、联合p、单项p/q，说明未达标准不等于主题无意义。"
+    },
+    "9": {
+      "requirements": "鼓励留言页不仅展示数据，要解释分析目的和结论",
+      "pages": [
+        14,
+        15,
+        16
+      ],
+      "implementation": "总体角色分布→为何配对→配对规则→回复覆盖与回复语言分开回答。"
+    },
+    "10": {
+      "requirements": "网络图有分析与结论",
+      "pages": [
+        17,
+        18
+      ],
+      "implementation": "定义节点边后，把94.4%弱连通和稀疏直接关系解释为间接串联；再用回复方向检验谁在回话。"
+    },
+    "11": {
+      "requirements": "匿名账号比较的目的说清楚",
+      "pages": [
+        19
+      ],
+      "implementation": "问题写在表上方：相近收到次数是否意味着同样多人参与；次数/人数先定义，再解释对活跃判断的影响。"
+    },
+    "12": {
+      "requirements": "恢复同伴三账号表",
+      "pages": [
+        19
+      ],
+      "implementation": "恢复U1528、U0948、U0112三行及样本作者身份；避免两卡只有数字的展示。"
+    },
+    "13": {
+      "requirements": "恢复完整研究结论与局限部分",
+      "pages": [
+        21,
+        22
+      ],
+      "implementation": "第8章两页：逐RQ综合作答；局限按缺口→影响→可做改进写清。"
+    }
+  },
+  "risks_to_avoid": [
+    "不要根据R²上升直接宣称作者造成点赞；模型复杂度不同，R²变化只作组成线索。",
+    "命中数/作者覆盖不一致不是混淆已经被证明；控制动机应结合媒体和作者异质性。",
+    "主题回归使用连续权重，不能把系数说成五类主导帖之间的简单均值差。",
+    "89%以明确回复为分母；54/57%是根评论为分母，7天起点与范围不同。",
+    "弱连通需写忽略方向，不能说账号间有向互达；高频接收不能写现实影响力。",
+    "不为满足“每数据有结论”硬给非显著结果编运营建议；数据质量页的结论是适用范围。"
+  ],
+  "final_coverage": {
+    "manifest": "validation/slides_rq_evidence/slides_manifest.json",
+    "manifest_sha256": "872806303b03061325cde65819676830e9d4a0e15660fc2b77454569bdf09c16",
+    "chapter_names_match_teammate": true,
+    "actual_chapters": [
+      {
+        "number": 1,
+        "title": "研究背景、意义与研究问题",
+        "pages": [
+          2
+        ]
+      },
+      {
+        "number": 2,
+        "title": "数据来源、清洗与分析方法",
+        "pages": [
+          3,
+          4
+        ]
+      },
+      {
+        "number": 3,
+        "title": "数据覆盖与描述统计",
+        "pages": [
+          5,
+          6
+        ]
+      },
+      {
+        "number": 4,
+        "title": "文字表达与点赞的关联",
+        "pages": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "number": 5,
+        "title": "帖子主题与点赞的关联",
+        "pages": [
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "number": 6,
+        "title": "评论的主要内容",
+        "pages": [
+          14,
+          15,
+          16
+        ]
+      },
+      {
+        "number": 7,
+        "title": "评论区的网络结构",
+        "pages": [
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "number": 8,
+        "title": "研究结论与局限",
+        "pages": [
+          21,
+          22
+        ]
+      }
+    ],
+    "main_slides": 22,
+    "appendix_slides": 0,
+    "hidden_slides": 0,
+    "speech_seconds": 735,
+    "transition_seconds": 30,
+    "target_seconds": 765,
+    "rq_mapping": {
+      "RQ1": [
+        5,
+        6,
+        11,
+        12
+      ],
+      "RQ2": [
+        7,
+        8,
+        9,
+        10,
+        13
+      ],
+      "RQ3": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "joint_framing_or_conclusions": [
+        2,
+        3,
+        4,
+        21,
+        22
+      ]
+    },
+    "checks": [
+      {
+        "requirement": 1,
+        "feedback": "八章结构、RQ对应及分析结论",
+        "actual_pages": "2—22",
+        "status": "covered",
+        "actual_implementation": "沿用同伴八章原名；数据分析页逐页标RQ，结论按同一编号作答。"
+      },
+      {
+        "requirement": 2,
+        "feedback": "媒体差异与点赞长尾",
+        "actual_pages": "6",
+        "status": "covered",
+        "actual_implementation": "媒体均值和点赞分布并列；解释均值、中位数、尾部及模型变换。"
+      },
+      {
+        "requirement": 3,
+        "feedback": "变量前置、控制变量的动机",
+        "actual_pages": "4、7—8",
+        "status": "covered",
+        "actual_implementation": "先定义五变量；再用积极表达组的媒体、作者构成差异引出控制。"
+      },
+      {
+        "requirement": 4,
+        "feedback": "方程、模型显著性及后续分析",
+        "actual_pages": "8—10",
+        "status": "covered",
+        "actual_implementation": "写出M3方程和M1—M3对照；解释系数、区间、原始p与BH q，再进入敏感性。"
+      },
+      {
+        "requirement": 5,
+        "feedback": "恢复敏感性分析",
+        "actual_pages": "10",
+        "status": "covered",
+        "actual_implementation": "列出样本处理、作者等权、PPML与逐作者剔除，区分方向和证据强度。"
+      },
+      {
+        "requirement": 6,
+        "feedback": "恢复运动与生活主题分布",
+        "actual_pages": "11—12",
+        "status": "covered",
+        "actual_implementation": "主题占比与关键词解释内容，再用作者等权检查高产作者影响。"
+      },
+      {
+        "requirement": 7,
+        "feedback": "补齐统计分析指标",
+        "actual_pages": "9—10、13",
+        "status": "covered",
+        "actual_implementation": "主回归和主题回归保留系数、原始95%区间、p及BH q；敏感性给出区间与p。"
+      },
+      {
+        "requirement": 8,
+        "feedback": "恢复主题回归",
+        "actual_pages": "13",
+        "status": "covered",
+        "actual_implementation": "连续主题权重、训练主题参照、样本范围、整组与单项检验均写明。"
+      },
+      {
+        "requirement": 9,
+        "feedback": "鼓励留言页的分析目的与结论",
+        "actual_pages": "14—16",
+        "status": "covered",
+        "actual_implementation": "语言角色引出配对；区分回复覆盖与已回复中的感谢表达，并解释两种方向。"
+      },
+      {
+        "requirement": 10,
+        "feedback": "网络图的分析与结论",
+        "actual_pages": "17—18",
+        "status": "covered",
+        "actual_implementation": "解释节点和边、弱连通与稀疏直接关系，再识别实际回复方向。"
+      },
+      {
+        "requirement": 11,
+        "feedback": "账号比较的用途",
+        "actual_pages": "18—19",
+        "status": "covered",
+        "actual_implementation": "先问高互动是否等于广泛参与，再将收到次数拆成独立发送者。"
+      },
+      {
+        "requirement": 12,
+        "feedback": "恢复同伴的三账号表",
+        "actual_pages": "19",
+        "status": "covered",
+        "actual_implementation": "恢复U1528、U0948、U0112的次数、人数和样本作者身份，并解释具体形态。"
+      },
+      {
+        "requirement": 13,
+        "feedback": "恢复研究结论与局限",
+        "actual_pages": "21—22",
+        "status": "covered",
+        "actual_implementation": "逐RQ作答；局限按记录缺口、结论影响、后续改进分列。"
+      }
+    ],
+    "observed_required_gaps": [],
+    "review_scope": "Read-only structure and visible-text audit; statistical values are separately reviewed by the model and comment auditors.",
+    "timing_note": "735 seconds is a rehearsal allocation. Keep tables visible for inspection, but speak to the focus and interpretation instead of reading every numeric cell."
+  }
+}

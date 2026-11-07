@@ -1,0 +1,50 @@
+[
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/Keep社区内容表达与互动反馈_最终汇报版.pptx",
+    "sha256": "6354f1e4b03a3c6ab164c60de85309bd1872f29b80b169eed5a3e9695814e02a"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/Keep社区内容表达与互动反馈_最终汇报版.pdf",
+    "sha256": "7aced5259b23376ed0a5af2846375fef4ab7d92057c6d5755a37a89244b32d7b"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/Keep社区内容表达与互动反馈_RQ分题讲述版.pptx",
+    "sha256": "c8697148dede9493acef0c8bae9f841766b1f6ded226329cd86824bfd54040dd"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/Keep社区内容表达与互动反馈_RQ分题讲述版.pdf",
+    "sha256": "82f43545f2ed81d2964cb4dcb054350182002653d985bf5c2a9458fbdb0860c0"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/Keep社区内容表达与互动反馈_RQ分析增强版.pptx",
+    "sha256": "d8ece6025285a443141a4a92af13dad9042676377797859988cdc29ce90acab3"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/Keep社区内容表达与互动反馈_RQ分析增强版.pdf",
+    "sha256": "2f0e7b3692b739737169371160881160bb1f60d68328375255821b680b475f9a"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/Keep社区内容表达与互动反馈_10-15分钟正文整合版.pptx",
+    "sha256": "d78a632321f552c163e0f1872ab0bdb76901ef1df421f23493bb8096c59cf899"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/Keep社区内容表达与互动反馈_10-15分钟正文整合版.pdf",
+    "sha256": "d3e4b27d8fd706d3a8066a9fe57fbb9a01f76cff0f16bbec8e543a8224b7a415"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/results/summary.json",
+    "sha256": "643880bd5cb0262f658588aabc7bdeb24ba08e45a1e02a87ca2ec22a493839e8"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/results/regression_coefficients.csv",
+    "sha256": "e5279c4a16acdfe8eda5ea27260abc1b79f426a543fff083d746b2a3e5d0d15a"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/results/extension_topic_regression.csv",
+    "sha256": "1d0136921668194b0e3243a538e12bc50e63114e049d42c2f8a1a2c87559a7a2"
+  },
+  {
+    "file": "/Users/lchen/Projects/FDU-Homeworks/social-media-net-analysis/projects/group/results/post_features.csv",
+    "sha256": "9b62f440730fd4e3aae5e21476a95f5f59b96e9515df8ab45b6ae08b683c1cb2"
+  }
+]

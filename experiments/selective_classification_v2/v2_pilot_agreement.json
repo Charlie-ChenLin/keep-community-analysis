@@ -1,0 +1,278 @@
+{
+  "summary": {
+    "n": 30,
+    "validation": "Both raters: schema, exact evidence substrings, complete and unique IDs valid",
+    "observation_exact": 29,
+    "domain_state_exact": 27,
+    "content_set_exact_all": 27,
+    "expression_set_exact_all": 16,
+    "both_readable": 28,
+    "statuses": {
+      "A": {
+        "observation_state": {
+          "readable": 29,
+          "insufficient": 1
+        },
+        "domain_state": {
+          "specified": 23,
+          "unavailable": 1,
+          "unspecified": 5,
+          "uncertain": 1
+        }
+      },
+      "B": {
+        "observation_state": {
+          "readable": 28,
+          "insufficient": 2
+        },
+        "domain_state": {
+          "specified": 23,
+          "unavailable": 2,
+          "unspecified": 4,
+          "uncertain": 1
+        }
+      }
+    },
+    "warning": "Same-base model blind-coder agreement on 30 historical holdout posts, not independent human review or accuracy; holdout already exposed; no population representativeness assumed."
+  },
+  "labels": [
+    {
+      "axis": "content",
+      "code": "C_EXERCISE",
+      "label": "运动与身体活动",
+      "eligible": 27,
+      "a_yes": 8,
+      "b_yes": 8,
+      "both_yes": 8,
+      "a_only": 0,
+      "b_only": 0,
+      "both_no": 19,
+      "positive_agreement": 1.0,
+      "flag_low_positive": false
+    },
+    {
+      "axis": "content",
+      "code": "C_BODY",
+      "label": "身体状态、体重与外形",
+      "eligible": 26,
+      "a_yes": 6,
+      "b_yes": 6,
+      "both_yes": 6,
+      "a_only": 0,
+      "b_only": 0,
+      "both_no": 20,
+      "positive_agreement": 1.0,
+      "flag_low_positive": false
+    },
+    {
+      "axis": "content",
+      "code": "C_FOOD",
+      "label": "饮食、食物与营养",
+      "eligible": 26,
+      "a_yes": 6,
+      "b_yes": 6,
+      "both_yes": 6,
+      "a_only": 0,
+      "b_only": 0,
+      "both_no": 20,
+      "positive_agreement": 1.0,
+      "flag_low_positive": false
+    },
+    {
+      "axis": "content",
+      "code": "C_LIFE",
+      "label": "具体生活、关系与社会文化话题",
+      "eligible": 27,
+      "a_yes": 10,
+      "b_yes": 12,
+      "both_yes": 10,
+      "a_only": 0,
+      "b_only": 2,
+      "both_no": 15,
+      "positive_agreement": 0.9090909090909091,
+      "flag_low_positive": false
+    },
+    {
+      "axis": "content",
+      "code": "C_TOOLS",
+      "label": "工具、服务与记录奖励机制",
+      "eligible": 27,
+      "a_yes": 0,
+      "b_yes": 0,
+      "both_yes": 0,
+      "a_only": 0,
+      "b_only": 0,
+      "both_no": 27,
+      "positive_agreement": null,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "content",
+      "code": "C_OTHER",
+      "label": "其他明确内容",
+      "eligible": 27,
+      "a_yes": 0,
+      "b_yes": 0,
+      "both_yes": 0,
+      "a_only": 0,
+      "b_only": 0,
+      "both_no": 27,
+      "positive_agreement": null,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_UPDATE",
+      "label": "行动、进度或事件记录",
+      "eligible": 25,
+      "a_yes": 15,
+      "b_yes": 13,
+      "both_yes": 12,
+      "a_only": 3,
+      "b_only": 1,
+      "both_no": 9,
+      "positive_agreement": 0.8571428571428571,
+      "flag_low_positive": false
+    },
+    {
+      "axis": "expression",
+      "code": "F_EXPERIENCE_EVALUATION",
+      "label": "体验或对象评价",
+      "eligible": 25,
+      "a_yes": 11,
+      "b_yes": 11,
+      "both_yes": 10,
+      "a_only": 1,
+      "b_only": 1,
+      "both_no": 13,
+      "positive_agreement": 0.9090909090909091,
+      "flag_low_positive": false
+    },
+    {
+      "axis": "expression",
+      "code": "F_FUTURE",
+      "label": "计划、目标或期待",
+      "eligible": 27,
+      "a_yes": 4,
+      "b_yes": 5,
+      "both_yes": 4,
+      "a_only": 0,
+      "b_only": 1,
+      "both_no": 22,
+      "positive_agreement": 0.8888888888888888,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_EXHORT",
+      "label": "动员或自我提醒",
+      "eligible": 28,
+      "a_yes": 2,
+      "b_yes": 3,
+      "both_yes": 2,
+      "a_only": 0,
+      "b_only": 1,
+      "both_no": 25,
+      "positive_agreement": 0.8,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_GUIDANCE",
+      "label": "信息解释或可执行建议",
+      "eligible": 28,
+      "a_yes": 1,
+      "b_yes": 0,
+      "both_yes": 0,
+      "a_only": 1,
+      "b_only": 0,
+      "both_no": 27,
+      "positive_agreement": 0.0,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_REFLECTION",
+      "label": "议论、格言或价值主张",
+      "eligible": 27,
+      "a_yes": 4,
+      "b_yes": 5,
+      "both_yes": 4,
+      "a_only": 0,
+      "b_only": 1,
+      "both_no": 22,
+      "positive_agreement": 0.8888888888888888,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_GREETING_GRATITUDE",
+      "label": "问候、祝愿或感谢",
+      "eligible": 28,
+      "a_yes": 2,
+      "b_yes": 2,
+      "both_yes": 2,
+      "a_only": 0,
+      "b_only": 0,
+      "both_no": 26,
+      "positive_agreement": 1.0,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_INVITE_ASK",
+      "label": "联络邀请或向他人征询",
+      "eligible": 28,
+      "a_yes": 0,
+      "b_yes": 0,
+      "both_yes": 0,
+      "a_only": 0,
+      "b_only": 0,
+      "both_no": 28,
+      "positive_agreement": null,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_CAPTION",
+      "label": "题注或景象描写",
+      "eligible": 28,
+      "a_yes": 4,
+      "b_yes": 6,
+      "both_yes": 2,
+      "a_only": 2,
+      "b_only": 4,
+      "both_no": 20,
+      "positive_agreement": 0.4,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_SALE",
+      "label": "商品或服务供给告知",
+      "eligible": 28,
+      "a_yes": 0,
+      "b_yes": 0,
+      "both_yes": 0,
+      "a_only": 0,
+      "b_only": 0,
+      "both_no": 28,
+      "positive_agreement": null,
+      "flag_low_positive": true
+    },
+    {
+      "axis": "expression",
+      "code": "F_OTHER",
+      "label": "其他明确表达",
+      "eligible": 28,
+      "a_yes": 0,
+      "b_yes": 1,
+      "both_yes": 0,
+      "a_only": 0,
+      "b_only": 1,
+      "both_no": 27,
+      "positive_agreement": 0.0,
+      "flag_low_positive": true
+    }
+  ]
+}

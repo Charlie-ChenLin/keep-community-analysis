@@ -1,0 +1,48 @@
+{
+  "schema_version": "v3.0_candidate_unvalidated",
+  "unit": "one complete cleaned body; multi-label, each label separately judged",
+  "source": "帖子表达变量_细分编码手册_v3.md",
+  "labels": {
+    "V3_ACTION": "行动或进度记录",
+    "V3_PLAN": "未来行动安排",
+    "V3_GOAL": "目标或个人期待",
+    "V3_EXHORT": "鼓励或行动提醒",
+    "V3_EXPERIENCE": "自身感受或体验",
+    "V3_APPRAISAL": "对象或情境评价",
+    "V3_GREETING": "问候或祝愿",
+    "V3_THANKS": "感谢或致谢",
+    "V3_REQUEST": "向他人征询或邀请"
+  },
+  "observation_states": [
+    "readable",
+    "insufficient"
+  ],
+  "exhortation_target_values": [
+    "self",
+    "others",
+    "both",
+    "unspecified",
+    "uncertain",
+    "not_applicable"
+  ],
+  "record_fields": {
+    "sample_id": "anonymous string",
+    "observation_state": "readable or insufficient",
+    "positive_labels": "array of codes with definite positive judgement",
+    "uncertain_labels": "array of codes with genuinely uncertain judgement",
+    "evidence": "object mapping every positive code to an exact nonempty substring of the body, and no other codes",
+    "note": "string with any necessary uncertainty or context",
+    "all_labels_reviewed": "boolean true after all nine labels were examined, not an accuracy claim",
+    "exhortation_target": "required enum; V3_EXHORT positive => self/others/both/unspecified/uncertain; V3_EXHORT uncertain => uncertain; V3_EXHORT negative => not_applicable; insufficient => uncertain"
+  },
+  "rules": [
+    "Do not expose raw text, author or outcome publicly.",
+    "positive_labels and uncertain_labels are disjoint subsets of the nine label codes.",
+    "For readable records all_labels_reviewed must be true; only then can absent codes be interpreted as explicit negative.",
+    "For insufficient records positive_labels and uncertain_labels are empty but every label is unavailable, never zero.",
+    "Every positive code needs exact nonempty original substring evidence, with enough context to support interpretation.",
+    "Unspecified or uncertain encouragement target is unknown for self/other variants, not two negatives.",
+    "Every label can coexist; categories are neither mutually exclusive nor complete.",
+    "V2 merged positives cannot automatically be split into v3 positives; old negatives are candidates, not truth."
+  ]
+}

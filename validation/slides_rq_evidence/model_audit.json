@@ -1,0 +1,645 @@
+{
+  "scope": "只读现有分析结果与生成代码；未重跑模型、未改数据或图表",
+  "sources": [
+    "分析报告_Phase2_中文新版_insight_v2_修改版_排版优化.md §2.3、§4.1—4.3、§5.1—5.3、A.1—A.3",
+    "results/regression_coefficients.csv",
+    "results/model_fit.csv",
+    "results/summary.json",
+    "results/extension_topic_regression.csv",
+    "results/extension_summary.json",
+    "results/extension_author_influence_summary.csv",
+    "results/extension_topics.csv",
+    "results/supplemental_topic_author_weighting.csv",
+    "code/analyze.py formula()/models()",
+    "code/extend_analysis.py topic_model()",
+    "同伴PPT/PDF第7、12—18页"
+  ],
+  "main_models": {
+    "outcome": "y_i = ln(1 + likes_i)",
+    "X": "五项核心文本变量：ln(1+清理后非空白字符数)、自律/目标词命中、社交称呼/互助词命中、积极表达词命中、问号。除长度外命中任一固定词表/模式记1，可重叠。",
+    "C": "正文可用状态 has_text、话题标记 has_tag、表情数 emoji_count、课程分享标记 course_ref、内容形式 C(contentTypeStr)、业务类型 C(type)、发帖时段 C(time_bin)。",
+    "A": "M1中的作者属性：C(gender)、keepValue、kgLevel、memberStatus。",
+    "M1": "ln(1+点赞_i) = β′X_i + γ′C_i + η′A_i + ε_i",
+    "M2": "ln(1+点赞_ia) = β′X_ia + γ′C_ia + α_a + ε_ia",
+    "M3": "ln(1+点赞_iad) = β′X_iad + γ′C_iad + α_a + δ_d + ε_iad",
+    "fixed_effect_meaning": "α_a扣除作者间不随帖子变化的差别；δ_d扣除北京时间发帖日期的共同差别。M2/M3不再另外放M1的作者属性，作者内不变属性由作者固定效应吸收。",
+    "inference": "N=9,532，100作者；按作者聚类的CR1小样本修正，t推断自由度99。M3五项核心系数作BH校正；表中95%区间是未经多重比较调整的原始区间。",
+    "fit": [
+      {
+        "model": "M1_基础关联",
+        "n": 9532.0,
+        "authors": 100.0,
+        "parameters": 26.0,
+        "rank": 26.0,
+        "r_squared": 0.5629028301903143,
+        "adj_r_squared": 0.5617533004990412,
+        "author_fe": "False",
+        "date_fe": "False",
+        "residual_df": 9506.0,
+        "cluster_inference_df": 99.0,
+        "converged": null
+      },
+      {
+        "model": "M2_作者固定效应",
+        "n": 9532.0,
+        "authors": 100.0,
+        "parameters": 121.0,
+        "rank": 121.0,
+        "r_squared": 0.6849222472884455,
+        "adj_r_squared": 0.6809046795139915,
+        "author_fe": "True",
+        "date_fe": "False",
+        "residual_df": 9411.0,
+        "cluster_inference_df": 99.0,
+        "converged": null
+      },
+      {
+        "model": "M3_作者与日期固定效应",
+        "n": 9532.0,
+        "authors": 100.0,
+        "parameters": 182.0,
+        "rank": 182.0,
+        "r_squared": 0.6879788358743067,
+        "adj_r_squared": 0.6819386400767933,
+        "author_fe": "True",
+        "date_fe": "True",
+        "residual_df": 9350.0,
+        "cluster_inference_df": 99.0,
+        "converged": null
+      }
+    ],
+    "focal_coefficients": [
+      {
+        "model": "M3_作者与日期固定效应",
+        "term": "log_length",
+        "label": "正文长度 ln(1+字数)",
+        "coef": 0.027978164849049025,
+        "se_cluster": 0.018325765205963098,
+        "t": 1.526711956341397,
+        "p": 0.13002127494181615,
+        "ci_low": -0.008384129121990963,
+        "ci_high": 0.06434045882008901,
+        "pct_on_likes_plus1": 2.8373229491572656,
+        "pct_ci_low": -0.8349080331018227,
+        "pct_ci_high": 6.6455421115268,
+        "q_bh_focal": 0.2926331218519208
+      },
+      {
+        "model": "M3_作者与日期固定效应",
+        "term": "self_discipline",
+        "label": "自律/目标词命中",
+        "coef": -0.11922494082182715,
+        "se_cluster": 0.08739181062019678,
+        "t": -1.3642575886197914,
+        "p": 0.17557987311115247,
+        "ci_low": -0.2926292528774581,
+        "ci_high": 0.05417937123380383,
+        "pct_on_likes_plus1": -11.239188099524663,
+        "pct_ci_low": -25.370122246277504,
+        "pct_ci_high": 5.567394271104646,
+        "q_bh_focal": 0.2926331218519208
+      },
+      {
+        "model": "M3_作者与日期固定效应",
+        "term": "social_address",
+        "label": "社交称呼/互助词命中",
+        "coef": -0.004338472406973604,
+        "se_cluster": 0.06366233126453061,
+        "t": -0.06814818623192297,
+        "p": 0.9458051227127706,
+        "ci_low": -0.13065834927461642,
+        "ci_high": 0.12198140446066921,
+        "pct_on_likes_plus1": -0.4329074830847507,
+        "pct_ci_low": -12.248247231746737,
+        "pct_ci_high": 12.973309358881485,
+        "q_bh_focal": 0.9458051227127706
+      },
+      {
+        "model": "M3_作者与日期固定效应",
+        "term": "positive_expression",
+        "label": "积极表达词命中",
+        "coef": -0.08551585485493182,
+        "se_cluster": 0.03484131330337602,
+        "t": -2.4544383304473656,
+        "p": 0.01585600952421155,
+        "ci_low": -0.1546485793243155,
+        "ci_high": -0.016383130385548145,
+        "pct_on_likes_plus1": -8.196141242985608,
+        "pct_ci_low": -14.328380762771879,
+        "pct_ci_high": -1.624965680402007,
+        "q_bh_focal": 0.07928004762105774
+      },
+      {
+        "model": "M3_作者与日期固定效应",
+        "term": "question",
+        "label": "问号出现",
+        "coef": 0.10777260702889721,
+        "se_cluster": 0.10488197203173125,
+        "t": 1.0275608375888605,
+        "p": 0.3066605424966928,
+        "ci_low": -0.10033597978412348,
+        "ci_high": 0.31588119384191793,
+        "pct_on_likes_plus1": 11.379444755985793,
+        "pct_ci_low": -9.54665379800214,
+        "pct_ci_high": 37.146730718489344,
+        "q_bh_focal": 0.38332567812086593
+      }
+    ],
+    "positive_across_models": [
+      {
+        "model": "M1_基础关联",
+        "term": "positive_expression",
+        "label": "积极表达词命中",
+        "coef": -0.04952100815402927,
+        "se_cluster": 0.046038497602039076,
+        "t": -1.0756434447990315,
+        "p": 0.2847011748134951,
+        "ci_low": -0.14087137551798704,
+        "ci_high": 0.0418293592099285,
+        "pct_on_likes_plus1": -4.831483522207788,
+        "pct_ci_low": -13.139897212991784,
+        "pct_ci_high": 4.2716533595730715,
+        "q_bh_focal": null
+      },
+      {
+        "model": "M2_作者固定效应",
+        "term": "positive_expression",
+        "label": "积极表达词命中",
+        "coef": -0.0866215521660885,
+        "se_cluster": 0.03543237432980597,
+        "t": -2.4447007519115593,
+        "p": 0.01626481449634433,
+        "ci_low": -0.1569270699434906,
+        "ci_high": -0.016316034388686382,
+        "pct_on_likes_plus1": -8.297592425281405,
+        "pct_ci_low": -14.52336052939542,
+        "pct_ci_high": -1.6183648879671255,
+        "q_bh_focal": null
+      },
+      {
+        "model": "M3_作者与日期固定效应",
+        "term": "positive_expression",
+        "label": "积极表达词命中",
+        "coef": -0.08551585485493182,
+        "se_cluster": 0.03484131330337602,
+        "t": -2.4544383304473656,
+        "p": 0.01585600952421155,
+        "ci_low": -0.1546485793243155,
+        "ci_high": -0.016383130385548145,
+        "pct_on_likes_plus1": -8.196141242985608,
+        "pct_ci_low": -14.328380762771879,
+        "pct_ci_high": -1.624965680402007,
+        "q_bh_focal": 0.07928004762105774
+      }
+    ],
+    "incremental_r2": 0.0006456958849436756,
+    "incremental_percentage_points": 0.06456958849436756,
+    "joint_focal_F": 1.7522020673724363,
+    "joint_focal_p": 0.12979354832337936,
+    "interpretation": [
+      "积极表达的M3系数−0.085516，对应调整后“1+点赞数”的条件几何均值约低8.2%，不是原始点赞算术均值下降8.2%。",
+      "原始单项p=.015856、95%区间[−.154649,−.016383]；对五项核心系数BH校正后q=.079280，未达到5%标准。这与原始95%区间不跨0不矛盾，两者对应不同判断范围。",
+      "五项文字线索只增加0.06457个百分点R²，整组联合p=.129794。结论是这五项字面线索新增解释有限；不能扩大成文字、内容或情绪普遍无效。",
+      "M1→M2的R²由.5629到.6849，说明作者固定效应有助于拟合；不是作者导致点赞差异的因果分解。",
+      "积极表达在M1中已为负，不能写加入作者固定效应才从正转负。准确对比是原始分组的算术均值优势与调整后对数模型的负向关联不同。"
+    ],
+    "next_motivation": "先核查负向方向是否依赖缺失正文、极端高赞或某位高产作者；再以正文主题补充词典只看指定字眼的不足。"
+  },
+  "sensitivity": {
+    "positive_expression": [
+      {
+        "model": "M3_作者与日期固定效应",
+        "term": "positive_expression",
+        "label": "积极表达词命中",
+        "coef": -0.08551585485493182,
+        "se_cluster": 0.03484131330337602,
+        "t": -2.4544383304473656,
+        "p": 0.01585600952421155,
+        "ci_low": -0.1546485793243155,
+        "ci_high": -0.016383130385548145,
+        "pct_on_likes_plus1": -8.196141242985608,
+        "pct_ci_low": -14.328380762771879,
+        "pct_ci_high": -1.624965680402007,
+        "q_bh_focal": 0.07928004762105774
+      },
+      {
+        "model": "R1_仅可见正文",
+        "term": "positive_expression",
+        "label": "积极表达词命中",
+        "coef": -0.08968960103843765,
+        "se_cluster": 0.037416722750147825,
+        "t": -2.3970458780515007,
+        "p": 0.018505793920570113,
+        "ci_low": -0.16398138117667962,
+        "ci_high": -0.015397820900195675,
+        "pct_on_likes_plus1": -8.578508740586901,
+        "pct_ci_low": -15.124217539492967,
+        "pct_ci_high": -1.5279880573248605,
+        "q_bh_focal": null
+      },
+      {
+        "model": "R2_去除最高1%点赞",
+        "term": "positive_expression",
+        "label": "积极表达词命中",
+        "coef": -0.08194154364821854,
+        "se_cluster": 0.035220954105781827,
+        "t": -2.326499827407206,
+        "p": 0.02203028011613992,
+        "ci_low": -0.15182755783322016,
+        "ci_high": -0.012055529463216905,
+        "pct_on_likes_plus1": -7.867418553185676,
+        "pct_ci_low": -14.086358068620589,
+        "pct_ci_high": -1.198315270656261,
+        "q_bh_focal": null
+      },
+      {
+        "model": "R3_作者等权",
+        "term": "positive_expression",
+        "label": "积极表达词命中",
+        "coef": -0.1278845337202884,
+        "se_cluster": 0.04613716453587235,
+        "t": -2.7718334017006234,
+        "p": 0.006659933666077227,
+        "ci_low": -0.21943067768691155,
+        "ci_high": -0.03633838975366527,
+        "pct_on_likes_plus1": -12.004502159344316,
+        "pct_ci_low": -19.70241800951183,
+        "pct_ci_high": -3.5686075685058793,
+        "q_bh_focal": null
+      },
+      {
+        "model": "R4_PPML计数模型",
+        "term": "positive_expression",
+        "label": "积极表达词命中",
+        "coef": -0.1353112808112246,
+        "se_cluster": 0.08229978262648809,
+        "t": -1.6441268311160135,
+        "p": 0.10332203100928,
+        "ci_low": -0.298611904604182,
+        "ci_high": 0.027989342981732834,
+        "pct_on_likes_plus1": -12.655601698445103,
+        "pct_ci_low": -25.815273891912604,
+        "pct_ci_high": 2.838472484822858,
+        "q_bh_focal": null
+      }
+    ],
+    "settings": [
+      {
+        "model": "R1_仅可见正文",
+        "n": 5548.0,
+        "authors": 95.0,
+        "parameters": 176.0,
+        "rank": 176.0,
+        "r_squared": 0.5183278564381324,
+        "adj_r_squared": 0.5026367497509905,
+        "author_fe": "True",
+        "date_fe": "True",
+        "residual_df": 5372.0,
+        "cluster_inference_df": 94.0,
+        "converged": null
+      },
+      {
+        "model": "R2_去除最高1%点赞",
+        "n": 9436.0,
+        "authors": 100.0,
+        "parameters": 182.0,
+        "rank": 182.0,
+        "r_squared": 0.6851846412158741,
+        "adj_r_squared": 0.6790271331177622,
+        "author_fe": "True",
+        "date_fe": "True",
+        "residual_df": 9254.0,
+        "cluster_inference_df": 99.0,
+        "converged": null
+      },
+      {
+        "model": "R3_作者等权",
+        "n": 9532.0,
+        "authors": 100.0,
+        "parameters": 182.0,
+        "rank": 182.0,
+        "r_squared": 0.6870380355662089,
+        "adj_r_squared": 0.6809796274846565,
+        "author_fe": "True",
+        "date_fe": "True",
+        "residual_df": 9350.0,
+        "cluster_inference_df": 99.0,
+        "converged": null
+      },
+      {
+        "model": "R4_PPML计数模型",
+        "n": 9532.0,
+        "authors": 100.0,
+        "parameters": 182.0,
+        "rank": 182.0,
+        "r_squared": null,
+        "adj_r_squared": null,
+        "author_fe": "True",
+        "date_fe": "True",
+        "residual_df": 9350.0,
+        "cluster_inference_df": 99.0,
+        "converged": "True"
+      }
+    ],
+    "leave_one_author_out": [
+      {
+        "term": "log_length",
+        "min_coefficient": 0.02142653428678371,
+        "max_coefficient": 0.03819102712205208,
+        "positive_runs": 100.0,
+        "negative_runs": 0.0,
+        "max_abs_change_in_se": 0.55729527025043
+      },
+      {
+        "term": "positive_expression",
+        "min_coefficient": -0.10031278414302591,
+        "max_coefficient": -0.07372978299774097,
+        "positive_runs": 0.0,
+        "negative_runs": 100.0,
+        "max_abs_change_in_se": 0.4246949349828426
+      },
+      {
+        "term": "question",
+        "min_coefficient": 0.06454368381681726,
+        "max_coefficient": 0.1474828911108469,
+        "positive_runs": 100.0,
+        "negative_runs": 0.0,
+        "max_abs_change_in_se": 0.41216733795777005
+      },
+      {
+        "term": "self_discipline",
+        "min_coefficient": -0.14027620253432252,
+        "max_coefficient": -0.023578653644358,
+        "positive_runs": 0.0,
+        "negative_runs": 100.0,
+        "max_abs_change_in_se": 1.0944536621760386
+      },
+      {
+        "term": "social_address",
+        "min_coefficient": -0.03165052614382838,
+        "max_coefficient": 0.03708331233658865,
+        "positive_runs": 11.0,
+        "negative_runs": 89.0,
+        "max_abs_change_in_se": 0.6506482549538736
+      }
+    ],
+    "tests_question": {
+      "R1": "去掉无可用正文帖，检查正文缺失处理是否左右方向。",
+      "R2": "去除点赞最高1%（阈值227.38，N9436），检查极端值是否左右方向。",
+      "R3": "每帖权重=1/该作者发帖数，使每位作者总权重相同，检查高产作者的权重。",
+      "R4": "PPML直接拟合点赞计数的条件期望，而非ln(1+点赞)的条件均值。",
+      "author_deletion": "逐次删去一位作者，100次积极表达系数均负，范围[−.100313,−.073730]，排查单一作者主导。"
+    },
+    "inference_note": "敏感性表的p值和95%区间为各设定原始值，不能借其显著性替代M3的BH主分析结果。",
+    "ppml_equation": "E[点赞_iad | X,C,α,δ] = exp(β′X_iad + γ′C_iad + α_a + δ_d)",
+    "interpretation": "积极表达方向跨多种样本处理保留；PPML区间[−.299,.028]跨0，说明计数尺度上估计不够精确。可说方向较一致，不能说已证明稳定负效应或积极用词会降低点赞。",
+    "pitfall": "regression_coefficients.csv对PPML沿用pct_on_likes_plus1字段名，但PPML模型实际因变量是原始点赞；其百分比应解释为点赞条件期望的变化。"
+  },
+  "topic_distribution": {
+    "sample": {
+      "documents": 2470,
+      "fitted_documents": 2478,
+      "near_zero_contribution_documents": 8,
+      "authors": 86,
+      "vocabulary": 1046,
+      "topics": 5,
+      "iterations": 37,
+      "converged": true,
+      "mean_top10_jaccard": 1.0,
+      "reference_topic": 2,
+      "joint_topic_p": 0.16567261471075317,
+      "regression_r2": 0.6122953430600628,
+      "regression_rank": 170,
+      "regression_parameters": 170,
+      "note": "主题回归和区间以本次拟合的主题特征为给定输入，未计入主题估计本身的不确定性。"
+    },
+    "topics": [
+      {
+        "topic": 0.0,
+        "label": "主题1",
+        "keywords": "靠墙、膝盖、保护、第二组、第一组、站立、今日、一组、一年、拉伸、日常、分钟",
+        "dominant_documents": 85.0,
+        "dominant_share": 0.03441295546558704,
+        "mean_weight": 0.0382623010486926,
+        "dominant_authors": 7.0,
+        "largest_author_share": 0.9176470588235294,
+        "resolved_label": "靠墙静蹲记录"
+      },
+      {
+        "topic": 1.0,
+        "label": "主题2",
+        "keywords": "公里、骑行、每日、日常、冷风、广州、哈哈哈、今早、学习、健身、几天、今日",
+        "dominant_documents": 85.0,
+        "dominant_share": 0.03441295546558704,
+        "mean_weight": 0.04310157220714496,
+        "dominant_authors": 18.0,
+        "largest_author_share": 0.6823529411764706,
+        "resolved_label": "骑行里程记录"
+      },
+      {
+        "topic": 2.0,
+        "label": "主题3",
+        "keywords": "运动、时间、简单、减脂、碎片、跑步、健身、训练、拉伸、身体、有氧、肌肉",
+        "dominant_documents": 1302.0,
+        "dominant_share": 0.5271255060728745,
+        "mean_weight": 0.4692740569712838,
+        "dominant_authors": 74.0,
+        "largest_author_share": 0.10906298003072197,
+        "resolved_label": "运动与训练交流"
+      },
+      {
+        "topic": 3.0,
+        "label": "主题4",
+        "keywords": "打卡、夜跑、站立、晨跑、靠墙、跑步、结束、舒舒服服、公里、不错、状态、心率",
+        "dominant_documents": 113.0,
+        "dominant_share": 0.045748987854251015,
+        "mean_weight": 0.08148785270056515,
+        "dominant_authors": 29.0,
+        "largest_author_share": 0.34513274336283184,
+        "resolved_label": "跑步与训练打卡"
+      },
+      {
+        "topic": 4.0,
+        "label": "主题5",
+        "keywords": "人生、生活、早安、努力、美好、一种、快乐、幸福、别人、喜欢、世界、加油",
+        "dominant_documents": 885.0,
+        "dominant_share": 0.3582995951417004,
+        "mean_weight": 0.3678742170723135,
+        "dominant_authors": 72.0,
+        "largest_author_share": 0.24858757062146894,
+        "resolved_label": "生活感悟与问候"
+      }
+    ],
+    "author_weights": [
+      {
+        "topic": 0.0,
+        "label": "靠墙静蹲记录",
+        "documents": 85.0,
+        "authors_with_dominant_topic": 7.0,
+        "post_equal_share": 0.03441295546558704,
+        "author_equal_share": 0.006178214221439396,
+        "difference_percentage_points": -2.8234741244147648
+      },
+      {
+        "topic": 1.0,
+        "label": "骑行里程记录",
+        "documents": 85.0,
+        "authors_with_dominant_topic": 18.0,
+        "post_equal_share": 0.03441295546558704,
+        "author_equal_share": 0.02911608286034348,
+        "difference_percentage_points": -0.5296872605243564
+      },
+      {
+        "topic": 2.0,
+        "label": "运动与训练交流",
+        "documents": 1302.0,
+        "authors_with_dominant_topic": 74.0,
+        "post_equal_share": 0.5271255060728745,
+        "author_equal_share": 0.5263472333887843,
+        "difference_percentage_points": -0.07782726840901422
+      },
+      {
+        "topic": 3.0,
+        "label": "跑步与训练打卡",
+        "documents": 113.0,
+        "authors_with_dominant_topic": 29.0,
+        "post_equal_share": 0.045748987854251015,
+        "author_equal_share": 0.056794154696874516,
+        "difference_percentage_points": 1.1045166842623502
+      },
+      {
+        "topic": 4.0,
+        "label": "生活感悟与问候",
+        "documents": 885.0,
+        "authors_with_dominant_topic": 72.0,
+        "post_equal_share": 0.3582995951417004,
+        "author_equal_share": 0.38156431483255826,
+        "difference_percentage_points": 2.326471969085786
+      }
+    ],
+    "method": "至少3个过滤后有效词；TF-IDF+NMF，五主题在首次拟合前固定。拟合2,478条，排除8条近零贡献文档后描述/回归2,470条，86作者、1,046词。名称依关键词与文本，不看点赞。",
+    "interpretation": "训练52.7%与生活35.8%并存。主导主题占比描述有效正文内容量，不是全平台用户比例，也不是整体社区所有帖子比例。静蹲85帖78帖来自同一作者，按帖3.4%而作者等权0.6%，说明少数作者高频记录可放大主题篇幅。",
+    "next_motivation": "主题常见回答“大家谈什么”，不回答“谈这个是否更获赞”；因此在同一正文子样本中加入连续主题权重，查看新增反馈关联。"
+  },
+  "topic_regression": {
+    "outcome": "ln(1+点赞数)",
+    "sample": "N=2,470有效正文，86作者；标准误按作者聚类。",
+    "parameterization": "回归用每帖归一化连续主题权重。以运动与训练交流(topic2)为基准，仅放其余四项权重；不是根据主导主题生成互斥虚拟变量。",
+    "equation": "ln(1+点赞_iad) = β′X_iad + γ′C*_iad + α_a + δ_d + Σ[k≠训练交流] θ_k w_ik + ε_iad",
+    "controls": "保留词典核心特征、作者和日期固定效应及原控制项；有效正文子样本去掉恒定的has_text。",
+    "reference_topic": {
+      "id": 2,
+      "label": "运动与训练交流"
+    },
+    "unit": "θ_k对应相对训练交流的1单位（100个百分点）主题权重变化，其他主题权重固定。若解释10个百分点，则看exp(.1θ_k)−1。",
+    "coefficients": [
+      {
+        "topic": 0.0,
+        "reference_topic": 2.0,
+        "coef": -0.31541101494868634,
+        "se_cluster": 0.1611518516275527,
+        "p": 0.0536024412814847,
+        "ci_low": -0.6358240697702802,
+        "ci_high": 0.005002039872907482,
+        "pct_likes_plus1_per_10pp": -3.104886970462182,
+        "q_bh": 0.1072048825629694,
+        "label": "靠墙静蹲记录"
+      },
+      {
+        "topic": 1.0,
+        "reference_topic": 2.0,
+        "coef": 0.017753996485593528,
+        "se_cluster": 0.27179735555787105,
+        "p": 0.9480720381450545,
+        "ci_low": -0.5226519629072971,
+        "ci_high": 0.5581599558784841,
+        "pct_likes_plus1_per_10pp": 0.17769766036191356,
+        "q_bh": 0.9480720381450545,
+        "label": "骑行里程记录"
+      },
+      {
+        "topic": 3.0,
+        "reference_topic": 2.0,
+        "coef": -0.47139902091628805,
+        "se_cluster": 0.2901420998918769,
+        "p": 0.10792529905936793,
+        "ci_low": -1.048279246739357,
+        "ci_high": 0.10548120490678092,
+        "pct_likes_plus1_per_10pp": -4.6046071895600615,
+        "q_bh": 0.14390039874582392,
+        "label": "跑步与训练打卡"
+      },
+      {
+        "topic": 4.0,
+        "reference_topic": 2.0,
+        "coef": -0.14415160243400196,
+        "se_cluster": 0.06735168787211622,
+        "p": 0.03519719316886136,
+        "ci_low": -0.2780648019445534,
+        "ci_high": -0.01023840292345049,
+        "pct_likes_plus1_per_10pp": -1.431175926447569,
+        "q_bh": 0.1072048825629694,
+        "label": "生活感悟与问候"
+      }
+    ],
+    "joint_p": 0.16567261471075317,
+    "r_squared": 0.6122953430600628,
+    "interpretation": [
+      "生活感悟与问候θ=−.144，原始95%CI[−.278,−.010]，p=.035，四项BH q=.107；单项负向线索经多重比较后仍不够强。",
+      "静蹲θ=−.315，CI[−.636,.005]；跑步θ=−.471，CI[−1.048,.105]；骑行θ=.018，CI[−.523,.558]。区间较宽，不能用点估计硬排高赞主题。",
+      "四项主题权重联合p=.165673，所有BH q>.05。主题揭示内容构成，但尚不足以说明某主题稳定提高或降低点赞。",
+      "主题回归R²=.612与全样本M3 R²=.688来自不同样本，不能相减当主题增量；应依据同子样本联合检验。",
+      "区间以已估计的主题特征为给定输入，未纳入主题模型本身估计不确定性。"
+    ],
+    "next_motivation": "内容文字和主题尚未给出稳定的高赞模板，继续看评论中的反馈具体怎样发生：谁说什么、谁回应谁。"
+  },
+  "revision_review": {
+    "reviewed_pages": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "result": "模型、敏感性与主题数值及主要推断通过，未发现数据错误。",
+    "independent_checks": {
+      "likes_bin_counts": [
+        361,
+        2298,
+        977,
+        1089,
+        2203,
+        2019,
+        438,
+        141,
+        6
+      ],
+      "likes_bin_total": 9532,
+      "positive_hit_media": {
+        "img_video": 545,
+        "posts": 574,
+        "percent": 94.94773519163763,
+        "authors": 64
+      },
+      "positive_nohit_media": {
+        "img_video": 6193,
+        "posts": 8958,
+        "percent": 69.13373520875196,
+        "authors": 100
+      },
+      "M3_equation_controls": "与analyze.py的formula()一致",
+      "M3_core_and_sensitivity": "所有系数、原始95%区间、p值与M3 BH q均对应现有CSV且舍入正确",
+      "topic_summary_and_regression": "2,470帖、86作者；主导份额、作者等权份额、回归系数/CI/p/q、联合p=.166均吻合"
+    },
+    "important_edit": {
+      "page": 13,
+      "problem": "“1单位权重变化”对未熟悉主题权重的听众仍不直观。",
+      "suggested_visible_text": "权重取0–1，1单位=100个百分点。生活问候权重相对训练交流增加10个百分点时，1+点赞的条件几何均值点估计约低1.4%；但BH q=0.107，不能视为稳定负向差异。",
+      "note": "以其他主题权重和控制条件不变为前提；1.4%来自既有pct_likes_plus1_per_10pp=-1.431175926447569，不是新拟合。"
+    },
+    "not_needed": "其余页面不建议为了显得更严谨而追加无关指标或重复免责。"
+  }
+}
